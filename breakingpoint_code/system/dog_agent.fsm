@@ -1,0 +1,690 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Breaking Point Dog Agent">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,27.961334,-187.167725,127.961327,-137.167725,0.000000,"init"};
+item1[] = {"preloaded",4,218,25.000000,-100.000000,125.000000,-50.000000,0.000000,"preloaded"};
+item2[] = {"action_init",2,250,25.586182,4.103299,125.586182,54.103298,0.000000,"action init"};
+item3[] = {"true",8,218,25.000000,100.000000,125.000000,150.000000,0.000000,"true"};
+item4[] = {"Waiting",2,250,25.000000,225.000000,125.000000,275.000000,0.000000,"Waiting"};
+item5[] = {"",7,210,192.646271,472.767181,200.646271,480.767181,0.000000,""};
+item6[] = {"dead",4,218,-100.000000,450.000000,0.000000,500.000000,10.000000,"dead"};
+item7[] = {"End",1,250,-100.000000,175.000000,0.000000,225.000000,0.000000,"End"};
+item8[] = {"",7,210,196.057312,375.776337,204.057343,383.776337,0.000000,""};
+item9[] = {"",7,210,1020.999878,470.999969,1029.000000,479.000031,0.000000,""};
+item10[] = {"",7,210,196.000000,-454.000000,204.000000,-446.000000,0.000000,""};
+item11[] = {"",7,210,196.000000,220.999985,204.000000,229.000000,0.000000,""};
+item12[] = {"",7,210,195.999985,-854.000000,204.000015,-846.000000,0.000000,""};
+item13[] = {"",7,210,1017.381226,-8.469868,1025.381348,-0.469865,0.000000,""};
+item14[] = {"",7,210,-54.000000,120.999992,-46.000000,129.000000,0.000000,""};
+item15[] = {"",7,210,-54.000000,-379.000000,-46.000000,-371.000000,0.000000,""};
+item16[] = {"",7,210,-41.500011,-1291.499878,-33.499989,-1283.500000,0.000000,""};
+item17[] = {"",7,210,195.999985,-1291.499878,204.000015,-1283.500000,0.000000,""};
+item18[] = {"",7,210,1021.000000,571.000000,1029.000000,579.000000,0.000000,""};
+item19[] = {"",7,210,71.000000,470.999969,79.000000,479.000031,0.000000,""};
+item20[] = {"",7,210,1020.999878,-854.000000,1029.000244,-846.000000,0.000000,""};
+item21[] = {"",7,210,-154.000046,571.000061,-145.999969,579.000000,0.000000,""};
+item22[] = {"",7,210,-154.000000,120.999992,-146.000000,129.000000,0.000000,""};
+item23[] = {"",7,210,196.000000,-654.000000,204.000000,-646.000000,0.000000,""};
+item24[] = {"",7,210,196.000000,-966.500000,204.000000,-958.500000,0.000000,""};
+item25[] = {"",7,210,196.000000,-1091.500000,204.000000,-1083.500000,0.000000,""};
+item26[] = {"",7,210,1020.999878,-1104.000000,1029.000244,-1096.000000,0.000000,""};
+item27[] = {"",7,210,1020.999878,-979.000000,1029.000244,-971.000000,0.000000,""};
+item28[] = {"",7,210,196.000000,-1216.500000,204.000000,-1208.500000,0.000000,""};
+item29[] = {"",7,210,1020.999878,-1229.000000,1029.000244,-1221.000000,0.000000,""};
+item30[] = {"",7,210,1021.000122,-654.000000,1029.000000,-646.000000,0.000000,""};
+item31[] = {"",7,210,1020.999573,-1304.000000,1029.000488,-1295.999878,0.000000,""};
+item32[] = {"",7,210,196.000000,121.000000,204.000000,129.000000,0.000000,""};
+item33[] = {"",7,210,196.479202,-6.246673,204.479202,1.753327,0.000000,""};
+item34[] = {"Moving",2,250,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
+item35[] = {"",7,210,1019.979187,394.763733,1027.979370,402.763763,0.000000,""};
+item36[] = {"Breaking_Point_Dog",-1,250,-450.000000,-75.000000,-100.000000,-25.000000,0.000000,"Breaking Point Dog Agent FSM"};
+item37[] = {"Created_By_Death",-1,250,-400.000000,-25.000000,-175.000000,0.000000,0.000000,"Created By Deathlyrage"};
+item38[] = {"ARMA_3",-1,250,-375.000000,-125.000000,-200.000000,-75.000000,0.000000,"ARMA 3"};
+item39[] = {"combat",4,218,226.827850,356.798065,326.827850,406.798065,2.000000,"combat"};
+item40[] = {"Checking",2,250,351.827850,356.798065,451.827850,406.798065,0.000000,"Checking"};
+item41[] = {"has_target",4,218,501.498138,277.928223,601.498169,327.928192,1.000000,"has target"};
+item42[] = {"no_target",4,218,518.538574,358.047485,618.538574,408.047485,4.000000,"no target"};
+item43[] = {"",7,210,760.327759,252.798019,768.328003,260.798096,0.000000,""};
+item44[] = {"Chase",2,250,503.063477,205.150543,603.063477,255.150528,0.000000,"Chase"};
+item45[] = {"close",4,218,503.279022,123.244926,603.279053,173.244919,1.000000,"close"};
+item46[] = {"Stop",2,250,712.189453,355.843048,812.189453,405.843048,0.000000,"Stop"};
+item47[] = {"reorientate",4,218,376.827850,206.798050,476.827850,256.798035,0.000000,"reorientate"};
+item48[] = {"target_lost",4,218,632.302979,238.086563,732.302979,288.086609,0.000000,"target lost"};
+item49[] = {"target_dead",4,218,632.962402,179.379395,732.962402,229.379395,0.000000,"target dead"};
+item50[] = {"",7,210,760.327759,202.798019,768.328003,210.798080,0.000000,""};
+item51[] = {"commanded",4,218,631.754761,56.505501,731.754761,106.505501,0.000000,"commanded"};
+item52[] = {"dead",4,218,630.543701,119.221046,730.543701,169.221039,9.000000,"dead"};
+item53[] = {"",7,210,760.327759,152.798035,768.328003,160.798096,0.000000,""};
+item54[] = {"",7,210,760.327759,102.798027,768.328003,110.798126,0.000000,""};
+item55[] = {"master_follow",4,218,237.558075,451.506622,337.558044,501.506744,5.000000,"master follow"};
+item56[] = {"track_animal",4,218,234.822937,-27.112068,334.822937,22.887932,0.000000,"track" \n "animal"};
+item57[] = {"Checking_1",2,250,359.822937,-27.112068,459.822937,22.887932,0.000000,"Checking"};
+item58[] = {"has_target",4,218,359.822937,-102.112068,459.822937,-52.112068,1.000000,"has target"};
+item59[] = {"no_target",4,218,484.822876,-27.112068,584.822998,22.887932,4.000000,"no target"};
+item60[] = {"commanded",4,218,509.822876,-77.112068,609.822998,-27.112068,0.000000,"commanded"};
+item61[] = {"Tracking",2,250,434.822937,-152.112045,534.822998,-102.112068,0.000000,"Tracking"};
+item62[] = {"at_target",4,218,609.822998,-152.112045,709.822998,-102.112068,1.000000,"at target"};
+item63[] = {"Stop_1",2,250,609.822998,-27.112068,709.822998,22.887932,0.000000,"Stop"};
+item64[] = {"reorientate",4,218,309.822937,-152.112045,409.822937,-102.112068,0.000000,"reorientate"};
+version=1;
+class LayoutItems
+{
+	class Item36
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=19;
+			FontWeight=700;
+			lStyle=1;
+			lColor=-1;
+		};
+	};
+	class Item37
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=16;
+			FontWeight=700;
+			lStyle=1;
+			lColor=-1;
+		};
+	};
+	class Item38
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=29;
+			FontWeight=700;
+			lStyle=1;
+			lColor=-1;
+		};
+	};
+};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,19};
+link5[] = {5,8};
+link6[] = {5,55};
+link7[] = {6,7};
+link8[] = {8,11};
+link9[] = {8,39};
+link10[] = {9,18};
+link11[] = {10,23};
+link12[] = {11,32};
+link13[] = {12,24};
+link14[] = {13,35};
+link15[] = {14,3};
+link16[] = {15,14};
+link17[] = {16,15};
+link18[] = {17,16};
+link19[] = {18,21};
+link20[] = {19,5};
+link21[] = {19,6};
+link22[] = {20,30};
+link23[] = {21,22};
+link24[] = {22,14};
+link25[] = {23,12};
+link26[] = {24,25};
+link27[] = {25,28};
+link28[] = {26,27};
+link29[] = {27,20};
+link30[] = {28,17};
+link31[] = {29,26};
+link32[] = {30,13};
+link33[] = {31,29};
+link34[] = {32,33};
+link35[] = {33,10};
+link36[] = {33,56};
+link37[] = {34,9};
+link38[] = {35,9};
+link39[] = {39,40};
+link40[] = {40,41};
+link41[] = {40,42};
+link42[] = {41,44};
+link43[] = {42,46};
+link44[] = {43,46};
+link45[] = {44,45};
+link46[] = {44,47};
+link47[] = {44,48};
+link48[] = {44,49};
+link49[] = {44,51};
+link50[] = {44,52};
+link51[] = {45,44};
+link52[] = {46,35};
+link53[] = {47,44};
+link54[] = {48,43};
+link55[] = {49,50};
+link56[] = {50,43};
+link57[] = {51,54};
+link58[] = {52,53};
+link59[] = {53,50};
+link60[] = {54,53};
+link61[] = {55,34};
+link62[] = {56,57};
+link63[] = {57,58};
+link64[] = {57,59};
+link65[] = {58,61};
+link66[] = {59,63};
+link67[] = {60,63};
+link68[] = {61,60};
+link69[] = {61,62};
+link70[] = {61,64};
+link71[] = {62,63};
+link72[] = {63,13};
+link73[] = {64,61};
+globals[] = {0.000000,0,0,0,0,640,480,1,578,6316128,1,-117.300667,999.988770,617.891907,-150.923584,1337,920,1};
+window[] = {2,-1,-1,-1,-1,870,208,1168,208,3,1355};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "Breaking Point Dog Agent";
+  class States
+  {
+    /*%FSM<STATE "init">*/
+    class init
+    {
+      name = "init";
+      init = /*%FSM<STATEINIT""">*/"params [""_dog"",""_type""];" \n
+       "" \n
+       "_command = ""none"";" \n
+       "_forceWalk = false;" \n
+       "_target = objNull;" \n
+       "_attackTarget = objNull;" \n
+       "_animation = ""Default"";" \n
+       "" \n
+       "_blood = 8000;" \n
+       "_hunger = 0;" \n
+       "_thrist = 0;" \n
+       "" \n
+       "_combatTime = diag_tickTime;" \n
+       "_waitTime = diag_tickTime;" \n
+       "" \n
+       "" \n
+       "" \n
+       "_standing = true;" \n
+       "_maxSpeed = 2;" \n
+       "_maxSpeedInit = _maxSpeed;" \n
+       "_forceChange = false;" \n
+       "_staySkill = 30;" \n
+       "_senseSkill = 300;	//x3 for tracking?" \n
+       "_target setVariable ['forceWalk',false];" \n
+       "_pos = position _dog;" \n
+       "_lastPos = _pos;" \n
+       "_move = """";" \n
+       "_movePos = [];" \n
+       "_watchDog = true;" \n
+       "_idlediag_tickTime = 5;" \n
+       "_coolDown = 0;" \n
+       "_actionLieDown = false;" \n
+       "_stayPosition = getPosATL _dog;" \n
+       "_character = player;" \n
+       "" \n
+       "_speedVal = [1,8,-1,60];" \n
+       "" \n
+       "_dog setVariable [""state"", ""passive"", true];" \n
+       "_dog setVariable [""currentSpeed"", _maxSpeed];" \n
+       "" \n
+       "//aggressive = 2" \n
+       "//defensive = 1" \n
+       "//passive = 0"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "preloaded">*/
+        class preloaded
+        {
+          priority = 0.000000;
+          to="action_init";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"BP_clientPreload and (_dog getVariable [""created"",false])"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "action_init">*/
+    class action_init
+    {
+      name = "action_init";
+      init = /*%FSM<STATEINIT""">*/"_heartbeat = [_dog,_thisFSM] spawn" \n
+       "{" \n
+       "	params [""_dog"",""_handle""];" \n
+       "" \n
+       "	sleep 2;" \n
+       "	" \n
+       "	_lastAnimation = ""Stop"";" \n
+       "" \n
+       "	while {alive _dog} do" \n
+       "	{" \n
+       "		_hunger = _handle getFSMVariable ""_hunger"";" \n
+       "		_thirst = _handle getFSMVariable ""_thirst"";" \n
+       "		_blood = _handle getFSMVariable ""_blood""; " \n
+       "		_zombieKills = _handle getFSMVariable ""_zombieKills""; " \n
+       "		_playerKills = _handle getFSMVariable ""_playerKills""; " \n
+       "		_animation = _handle getFSMVariable ""_animation""; " \n
+       "" \n
+       "		if (_blood <= 0) then { _dog setHitPointDamage [""HitHead"", 1]; };" \n
+       "		" \n
+       "		if (_animation != _lastAnimation) then" \n
+       "		{" \n
+       "			_dog playActionNow _animation;" \n
+       "			_lastAnimation = _animation;" \n
+       "		};" \n
+       "		" \n
+       "		sleep 0.5;" \n
+       "	};" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Waiting">*/
+    class Waiting
+    {
+      name = "Waiting";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 10.000000;
+          to="End";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "master_follow">*/
+        class master_follow
+        {
+          priority = 5.000000;
+          to="Moving";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((_command == ""none"" or _command == ""return"") and ((vehicle player) distance _dog > 3))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "combat">*/
+        class combat
+        {
+          priority = 2.000000;
+          to="Checking";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_combat > 0 and ((diag_tickTime - _combatTime) >1.5)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "track_animal">*/
+        class track_animal
+        {
+          priority = 0.000000;
+          to="Checking_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_command == ""trackAnimal"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "End">*/
+    class End
+    {
+      name = "End";
+      init = /*%FSM<STATEINIT""">*/"terminate _heartbeat;" \n
+       "player setVariable [""dogID"", 0];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Moving">*/
+    class Moving
+    {
+      name = "Moving";
+      init = /*%FSM<STATEINIT""">*/"_dog setDestination [(getPosATL player), ""LEADER PLANNED"", false];" \n
+       "_dog setSpeedMode ""FULL"";" \n
+       "_waitTime = diag_tickTime;" \n
+       "_animation = ""FastF"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Checking">*/
+    class Checking
+    {
+      name = "Checking";
+      init = /*%FSM<STATEINIT""">*/"_lastPos = position _dog;" \n
+       "_attackTarget = [_dog,_combat] call BP_fnc_dogFindTargetAgent;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "no_target">*/
+        class no_target
+        {
+          priority = 4.000000;
+          to="Stop";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull _attackTarget"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "has_target">*/
+        class has_target
+        {
+          priority = 1.000000;
+          to="Chase";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!isNull _attackTarget and (alive _attackTarget)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_lastPos = position _dog;" \n
+           "_dog enableAI ""MOVE"";" \n
+           "//_dog playMoveNow ""Dog_StopV2"";" \n
+           "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Chase">*/
+    class Chase
+    {
+      name = "Chase";
+      init = /*%FSM<STATEINIT""">*/"_dog setDestination [(getPosATL _attackTarget), ""LEADER PLANNED"", false];" \n
+       "_dog forceSpeed (_speedVal select _maxSpeed);" \n
+       "_forceChange = false;" \n
+       "_waitTime = diag_tickTime;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 9.000000;
+          to="Stop";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+           "_lostTarget = true;" \n
+           "detach _dog;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "close">*/
+        class close
+        {
+          priority = 1.000000;
+          to="Chase";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(((diag_tickTime - _combatTime) > 0.75) and (_dog distance _attackTarget < 2))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;" \n
+           "" \n
+           "_dog doTarget _attackTarget;" \n
+           "_dog lookAt _attackTarget;" \n
+           "_dir = [_dog,_attackTarget] call BIS_fnc_dirTo;" \n
+           "_dog setDir _dir;" \n
+           "" \n
+           "if (isPlayer _attackTarget) then" \n
+           "{" \n
+           "	[""medBite"",(netID _attackTarget),(netID player)] remoteExecCall [""BPServer_fnc_medicalUpdate"",2];" \n
+           "} else {" \n
+           "	_attackTarget setDamage ( damage _attackTarget + 0.35);" \n
+           "	_attackTarget sethit [""legs"", 1];" \n
+           "	//_dog attachTo [_attackTarget,[0,0.8,0],""hrudnik""];" \n
+           "	//_dog setDir 180;" \n
+           "};" \n
+           "" \n
+           "_dog setVelocity [0, 0, 2.5];" \n
+           "_dog playActionNow ""BP_Dog_Act_Attack1"";" \n
+           "[_dog,""dog_bite"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "target_dead">*/
+        class target_dead
+        {
+          priority = 0.000000;
+          to="Stop";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive _attackTarget)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+           "_lostTarget = true;" \n
+           "detach _dog;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "commanded">*/
+        class commanded
+        {
+          priority = 0.000000;
+          to="Stop";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_combat < 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+           "_lostTarget = true;" \n
+           "detach _dog;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "target_lost">*/
+        class target_lost
+        {
+          priority = 0.000000;
+          to="Stop";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(isNull _attackTarget)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+           "_lostTarget = true;" \n
+           "detach _dog;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "reorientate">*/
+        class reorientate
+        {
+          priority = 0.000000;
+          to="Chase";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
+           "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
+           "};"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Stop">*/
+    class Stop
+    {
+      name = "Stop";
+      init = /*%FSM<STATEINIT""">*/"_waitTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Checking_1">*/
+    class Checking_1
+    {
+      name = "Checking_1";
+      init = /*%FSM<STATEINIT""">*/"_lastPos = position _dog;" \n
+       "" \n
+       "_list = (position _dog) nearEntities [""Animal"",(_senseSkill * 3)];" \n
+       "_list = _list - [_dog];" \n
+       "" \n
+       "if (count _list > 0) then {" \n
+       "	_target = _list select 0;" \n
+       "} else {" \n
+       "	_target = objNull;" \n
+       "};" \n
+       "" \n
+       "_dog playActionNow ""GestureSniff"";" \n
+       "_waitTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "no_target">*/
+        class no_target
+        {
+          priority = 4.000000;
+          to="Stop_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull _target and ((diag_tickTime - _waitTime) > 2)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_command = ""none"";" \n
+           "" \n
+           "_dog playMoveNow ""Dog_StopV2"";" \n
+           "[_dog,""dog_fail"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "has_target">*/
+        class has_target
+        {
+          priority = 1.000000;
+          to="Tracking";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!isNull _target and ((diag_tickTime - _waitTime) > 2)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_lastPos = position _dog;" \n
+           "" \n
+           "_dog playMoveNow ""Dog_StopV2"";" \n
+           "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Tracking">*/
+    class Tracking
+    {
+      name = "Tracking";
+      init = /*%FSM<STATEINIT""">*/"//_pos = [(getPos _target),1,2,4,0,5,0] call BIS_fnc_findSafePos;" \n
+       "_dog setDestination [(getPosATL _target), ""LEADER PLANNED"", false];" \n
+       "_dog forceSpeed (_speedVal select _maxSpeed);" \n
+       "_forceChange = false;" \n
+       "_waitTime = diag_tickTime;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "at_target">*/
+        class at_target
+        {
+          priority = 1.000000;
+          to="Stop_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_dog distance _target < 5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_dog playActionNow ""GestureBark"";" \n
+           "[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "reorientate">*/
+        class reorientate
+        {
+          priority = 0.000000;
+          to="Tracking";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 5)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
+           "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
+           "};"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "commanded">*/
+        class commanded
+        {
+          priority = 0.000000;
+          to="Stop_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_command != ""trackAnimal"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"if (_command == ""return"") then {" \n
+           "	if (player distance _dog > 5) then {" \n
+           "		_dog playActionNow ""GestureBark"";" \n
+           "		[_dog,""dog_bark"",0,false] call BP_fnc_objSpeak;" \n
+           "	};" \n
+           "};"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Stop_1">*/
+    class Stop_1
+    {
+      name = "Stop_1";
+      init = /*%FSM<STATEINIT""">*/"_command = ""return"";" \n
+       "_waitTime = diag_tickTime;" \n
+       "_standing = true;" \n
+       "_actionLieDown = false;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="Waiting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="init";
+  finalStates[] =
+  {
+    "End",
+  };
+};
+/*%FSM</COMPILE>*/

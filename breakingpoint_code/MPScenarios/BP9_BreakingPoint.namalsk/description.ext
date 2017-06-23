@@ -1,0 +1,358 @@
+/*
+  Breaking Point Mod for Arma 3
+
+  Released under Arma Public Share Like Licence (APL-SA)
+  https://www.bistudio.com/community/licenses/arma-public-license-share-alike
+
+  Alderon Games Pty Ltd
+*/
+
+showGroupIndicator = 0;
+disableRandomization[] = {"All"};
+joinUnassigned = 0;
+enableDebugConsole = 0;
+allowFunctionsLog = 0;
+author = "Deathlyrage";
+dev = "Deathlyrage";
+onLoadName = "Breaking Point";
+respawn = "BASE";
+respawnTemplates[] = {"BP_Base","Counter"};
+respawndelay = 45;
+respawnDialog = 0;
+onLoadMission= "";
+OnLoadIntro = "Welcome to Arma 3 Breaking Point!";
+OnLoadIntroTime = False;
+OnLoadMissionTime = False;
+disabledAI = true;
+disableChannels[]=
+{
+	{0,true,true},	// Global
+	{1,true,true},	// Side
+	{2,true,true},	// Command
+	{3,true,true}	// Group
+};
+enableItemsDropping = 0;
+showUAVFeed = 0;
+corpseLimit = 9999;
+onPauseScript = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";
+loadScreen = "\breakingpoint_ui\general\BP_screen_title.jpg";
+corpseManagerMode = 0;
+class CfgRemoteExecCommands {};
+
+class BreakingPoint 
+{	
+	class CfgSettings 
+	{
+		class SpawnPos 
+		{		
+			//Enable Spawn Selection Screen
+			enabled = false;
+		
+			Namalsk[] = {{116.736,{8256.18,6214.25,0.00179577}},{73.5176,{8261.9,6267.5,0.00161743}},{122.294,{8240.74,6167.92,0.00171804}},{177.992,{7838.58,5932.27,0.00199938}},{109.805,{7868.91,6002.22,0.00276589}},{204.741,{7779.69,5931.3,0.00181782}},{175.819,{7142.41,5493.11,0.00201273}},{180.894,{7086.82,5485.55,0.00188804}},{218.209,{7037.94,5497.9,0.00209951}},{87.7491,{8064.25,6730.54,0.00180149}},{83.6295,{8055.16,6788.41,0.00182247}},{82.8036,{8039.55,6843.74,0.00215864}},{98.7846,{8051.33,8493.48,0.00203753}},{99.6208,{8061.09,8567.38,0.00184965}},{109.136,{8065.21,8624.46,0.00189257}},{349.752,{7779.97,9480.15,0.00139737}},{82.5293,{7814.51,9385.79,0.00180566}},{282.671,{7664.62,9374.51,0.001598}},{287.078,{6452.15,7070.4,0.00175941}},{262.788,{6452.65,7007.23,0.00190902}},{180.804,{6497.48,6982.38,0.00139844}},{55.8843,{4875.88,10151.7,0.00204515}},{93.4507,{4834.76,10051.3,0.0019536}},{347.978,{4712.58,10171.6,0.00186872}},{74.0083,{5828.25,9396.1,0.00168395}},{161.602,{5803.36,9344.36,0.00167561}},{85.4913,{5877.38,9561.9,0.00234675}},{154.9,{5961.11,10095.2,0.00155354}},{149.94,{6044.81,10147.7,0.00173259}},{163.856,{8729.34,9858.14,0.00217772}},{242.779,{8611.78,9899.23,0.00222898}},{60.1598,{8010.21,11610.5,0.00240982}},{28.1415,{8091.21,11535.7,0.0020752}}};
+		};
+		
+		class HeliCrash 
+		{
+			//Enable Heli Crashes
+			enabled = true;
+			
+			//Random Start Position (x,y,z) {Can Have Multible Coords}
+			RandStartPos[] = {{2263.14,2252.9,47.8067},{3935.81,1298.7,47.8082},{1351.33,1320.27,47.8146}};
+
+			//Backup Waypoint (x,y) {One Point Only}
+			BackupWaypoint[] = {{3935.81,1298.7,47.8082}};
+
+			//Centre Marker (x,y) {One Point Only}
+			CentreMarker[] = {{6068.18,7902.56,0.00176239}};
+			centreRadius = 9500;
+		};
+		class Debug {
+			marker = "respawn_west";
+			radius = 100;
+		};
+		
+		class Loot 
+		{
+			//Enable or Disable Loot
+			enabled = true;
+			
+			//Min Number Of Loot Items Per Box (Includes Weapons,Magazines,Items)
+			minItems = 2;
+			
+			//Max Number Of Loot Items per Box (Includes Weapons,Magazines,Items)
+			maxItems = 8;
+			
+			//Spawn Spawn Box If Under Minimum Items
+			minSpawn = false;
+			
+			//Override All Loot Boxes with a Specific Loot Class
+			lootOverride = false;
+			lootOverrideClass = "Brick";
+			
+			//Custom Loot Box Coords
+			customLoot[] =
+			{
+				{1,1,2,"MilitaryRanger",{5111.59,6103.56,0.0017252},0.10}, //Brensk Railway Station - Bridge
+				{1,1,2,"MilitaryRanger",{6109.3,10782.8,0.00126648},0.25}, //Old Yard
+				{1,1,2,"GhostHotelWpn",{4166.64,5365.39,0.00165558},0.40}, // Brensk - North 650m
+				{1,1,2,"MilitaryRanger",{3686.86,6298.62,1.67305},0.25}, //Southern Army Base - South 450m
+				{1,1,2,"MilitaryRanger",{4133.2,8105.1,0.00132751},0.25}, //Object A1
+				{1,1,2,"GhostHotelAcc",{3592.2,7152.93,1.49663},0.20}, //Norinsk
+				{1,1,2,"MilitaryRanger",{5107.64,7948.94,0.00165558},0.05}, //Sebjan Mine South 300m
+				{1,1,2,"GhostHotelAcc",{5256.24,8370.76,0.00242233},0.10}, //Sebjan Mine North 200m
+				{1,1,2,"GhostHotelAcc",{4654.3,7045.32,0.000671387},0.25}, //Norinsk Pass South 200m
+				{1,1,2,"AmmoPallet4",{2832.96,7171.62,0.023016},0.05}, //BMP Crash 028-055
+				{1,1,2,"AmmoPallet4",{4900.57,5437.84,0.00184202},0.05}, //BMP Crash 049-072
+				{1,1,2,"AmmoPallet4",{6257.61,11907,0.00118828},0.05}, //BMP Crash 062-008
+				{1,1,2,"AmmoPallet4",{4717.52,10749.3,0.0316591}, 0.05}, //BMP Crash 047-015.5
+				{1,1,2,"AmmoPallet4",{4748.17,8969.82,0.00206184},0.05}, //BMP Crash 047.6-037.3
+				{1,1,2,"AmmoPallet4",{5678.54,7148.47,-0.000228882},0.05}, //Nitija West 400m
+				{1,1,2,"GhostHotelWpn",{5714.57,7018.32,0.00244141},0.05}, //Nitija West 550m
+				{1,1,2,"MilitaryRanger",{4723.95,5393.86,0.00175095},0.10}, //Brensk Railway Station south 900m
+				{1,1,2,"GhostHotelWpn",{6003.57,11518.2,0.000963211},0.05}, //Old Yard North 800m
+				{1,1,2,"MilitaryRanger",{6405.85,11657.1,0.00190163},0.05}, //Old Yard North East 700m
+				{1,1,2,"GhostHotelWpn",{7324.47,11136.7,0.00140572},0.10}, //Vorkuta East 200m
+				{1,1,2,"GhostHotelWpn",{6361.98,10789.2,0.00152588},0.25}, //Old Yard South 200m
+				{1,1,2,"MilitaryRanger",{5744.53,7263.96,0.846729},0.25}, //Nitija East Flipped Ural 400m
+				{1,1,2,"GhostHotelWpn",{5726.59,7283.27,-0.000289917},0.25}, //Nitija East Flipped Ural 400m
+				{1,1,2,"GhostHotelAcc",{5720.03,7268.86,0.000144958},0.25}, //Nitija East Flipped Ural 400m
+				{1,1,2,"MilitaryRanger",{3322.7,7165.85,0.000869751},0.10}, //Southern Army Base North Flipped Ural 500m
+				{1,1,2,"GhostHotelWpn",{2289.39,6334.44,0.00177956},0.10}, //Ledjanaja West 700m
+				{1,1,2,"MilitaryRanger",{4893.14,6774.87,0.00143051},0.10}, //Object A2 North West 200m
+				{1,1,2,"MilitaryRanger",{4043.94,7504.09,0.00117874},0.10}, //Norinsk
+				{1,1,2,"GhostHotelAcc",{4041.07,7524.4,0.00154877},0.10}, //Norinsk
+				{1,1,2,"MilitaryRanger",{7255.34,11098.8,0.00132084},0.10}, //Vorkuta South East 150m
+				{1,1,2,"MilitaryRanger",{4983.53,6608.44,16.3824}}, //Object A2 Catacombs
+				{1,1,2,"GhostHotelAcc",{4974.76,6622.96,16.3977}}, //Object A2 Catacombs
+				{1,1,2,"MilitaryRanger",{7255.02,11105.6,0.00151825},0.10}, //Vorkuta South 200m
+				{1,1,2,"GhostHotelWpn",{7189.57,11212.4,0.00153542},0.10}, //Vorkuta
+				{1,1,2,"GhostHotelAcc",{7196.14,11216.2,0.00167084},0.10}, //Vorkuta
+				{1,1,2,"GhostHotelAcc",{4927.48,8147.79,0.00153351},0.10}, //Sebjan Mine West 200m
+				{1,1,2,"MilitaryRanger",{4950.45,8125.48,0.00137711},0.10}, //Sebjan Mine West 250m
+				{1,1,2,"MilitaryRanger",{4969.59,8112.44,0.00111771},0.10}, //Sebjan Mine West 300m
+				{1,1,2,"MilitaryRanger",{2812.64,6392.2,0.000946045},0.20}, //MI-8 Crash Ledjanaja West 100m
+				{1,1,2,"GhostHotelWpn",{2806.55,6379.58,0.000396729},0.20}, //MI-8 Crash Ledjanaja West 150m
+				{1,1,2,"GhostHotelWpn",{4336.49,6425.25,0.00143433},0.20}, //MI-8 Crash Seraja Army Base 250m
+				{1,1,2,"GhostHotelAcc",{4332.28,6425.91,0.00143433},0.20}, //MI-8 Crash Seraja Army Base 250m
+				{1,1,2,"MilitaryRanger",{5365.64,7163.45,0.00143433},0.20}, //MI-8 Crash Nitija
+				{1,1,2,"MilitaryRanger",{5364.29,7170.42,0.00125122},0.20}, //MI-8 Crash Nitija
+				{1,1,2,"GhostHotelWpn",{5646.55,7975.09,0.00138855},0.20}, //MI-8 Sebian Mine East 700m
+				{1,1,2,"GhostHotelAcc",{5645.27,7986.28,0.00229645},0.20}, //MI-8 Serbian Mine East 750m
+				{1,1,2,"MilitaryRanger",{5491.07,5974.2,0.00201416},0.20}, //MI-8 Serbian Mine West 100m
+				{1,1,2,"GhostHotelAcc",{5503.06,5969.94,0.00227356},0.20}, //MI-8 Serbian Mine West 100m
+				{1,1,2,"GhostHotelWpn",{5447.84,9291.85,0.000930786},0.20}, //MI-8 Sebjan Warehouse North West 750m
+				{1,1,2,"MilitaryRanger",{5430.8,9270.97,0.00132751},0.20} //MI-8 Sebjan Warehouse North West 750m			
+			};
+
+		};
+		
+		class Factions
+		{
+			//Enable or Disable Faction System
+			enabled = true;
+			
+			//Enable or Disable Point Gain and Loss
+			class Points
+			{
+				//Enable or Disable All Point gain or loss
+				enabled = true;
+				//Point Gain / Loss Ratios
+				// 1.00 = 100% Point Gain/Loss
+				// 0.75 = 75% Point Gain/Loss
+				// 0.25 = 25% Point Gain/Loss
+				ratio = 1.00;
+			};
+			
+			//Enable or Disable Specific Classes
+			class Classes
+			{
+				none = true;
+				ranger = true;
+				outlaw = true;
+				hunter = true;
+				nomad = true;
+				survivalist = true;
+			};
+		};
+
+		class Cleanup 
+		{
+			class Dead 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 2 Mins )
+				interval = 120;
+				//Distance A Player Is Nearby That Will Prevent Cleanup ( 250 Meters )
+				nearby = 250;
+				//Time of Player Body Cleanup ( 10 Mins )
+				player = 600;
+			};
+			class Sync 
+			{
+				enabled = true;
+				interval = 300; // 5 Mins
+			};
+			class Loot 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 15 Mins )
+				interval = 900;
+				//Distance A Player is Nearby That Will Prevent Cleanup ( 125 Meters )
+				nearby = 125;
+			};
+			class Entities 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 20 Mins )
+				interval = 1200;
+				//Distance A Player Is Nearby That Will Prevent Cleanup ( 5 Meters )
+				nearby = 5;
+			};
+			class GlobalLoot 
+			{
+				enabled = true;
+				interval = 3600; // 60 Mins
+			};
+			class Restart 
+			{
+				enabled = true;
+				interval = 6900; //115 Mins
+			};
+		};
+
+		class Time 
+		{
+			dawn = 6;
+			dusk = 18;
+		};
+
+		class Zombies 
+		{
+			enabled = true;
+			maxLocal = 40; //Total Local
+			maxNearby = 30; //Total Nearby
+			maxGlobal = 125; //Total Alive
+			max = 150; // Total Alive + Dead
+			distance = 1000;
+		};
+
+		class Animals
+		{
+			enabled = true;
+			max = 10;
+			distance = 1000;
+		};
+
+		class Survival 
+		{
+			food = 3240; //2160 Minutes (48 hours)
+			water = 2160; //1440 Minutes (24 hours)
+			temperature = 90 / 100; //First Value = Minutes until Player reaches the coldest Point at night (without other effects! night factor expected to be -1)
+		};
+
+		class Temperature 
+		{
+			default = 36;
+			normal = 36;
+			min = 27;
+			max = 42;
+		};
+	};
+};
+
+class Params 
+{
+	class instance
+	{
+		title = "Instance";
+		values[] = {0};
+		texts[] = {"Unknown"};
+		default = 0;
+	};
+	class debug
+	{
+		title = "Debug";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class hc
+	{
+		title = "Headless Client";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class vip
+	{
+		title = "VIP";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class dynamicWeather
+	{
+		title = "Dynamic Weather";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class clientSimulationManager
+	{
+		title = "Client Simulation Manager";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class serverSimulationManager
+	{
+		title = "Server Simulation Manager";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class threadedCleanup
+	{
+		title = "Threaded Cleanup";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class lootMax
+	{
+		title = "Loot Max";
+		values[] = {0};
+		texts[] = {"0"};
+		default = 2000;
+	};
+	class lootServer
+	{
+		title = "Server Loot";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class legionOnly
+	{
+		title = "Legion Only";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class fastLoad
+	{
+		title = "Fast Load";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+};
+
+class Header
+{
+	gameType = Survive;
+	minPlayers = 1;
+	maxPlayers = 100;
+};
+
+aiKills = 1;

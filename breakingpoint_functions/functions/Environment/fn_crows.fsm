@@ -1,0 +1,133 @@
+/*%FSM<COMPILE "C:\BIS\fsmeditor\scriptedFSM.cfg, Crows">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"START",0,250,100.000000,-50.000000,200.000000,0.000000,0.000000,"START"};
+item1[] = {"Ready",4,218,225.000000,100.000000,325.000000,150.000000,0.000000,"Ready"};
+item2[] = {"Move",2,250,100.000000,100.000000,200.000000,150.000000,0.000000,"Move"};
+item3[] = {"True",8,218,100.000000,25.000000,200.000000,75.000000,0.000000,"True"};
+item4[] = {"Null_crow",4,4314,-25.000000,100.000000,75.000000,150.000000,0.000000,"Null crow"};
+item5[] = {"Create_new",2,250,-25.000000,25.000000,75.000000,75.000000,0.000000,"Create" \n "new"};
+link0[] = {0,3};
+link1[] = {1,2};
+link2[] = {2,1};
+link3[] = {2,4};
+link4[] = {3,2};
+link5[] = {4,5};
+link6[] = {5,3};
+globals[] = {25.000000,1,0,0,16777215,640,480,1,10,6316128,1,-213.662506,386.337708,382.941315,-217.059067,528,616,1};
+window[] = {0,-1,-1,-1,-1,773,-1256,-296,24,1,545};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "Crows";
+  class States
+  {
+    /*%FSM<STATE "START">*/
+    class START
+    {
+      name = "START";
+      itemno = 0;
+      init = /*%FSM<STATEINIT""">*/"_crow = _this select 0;" \n
+       "_wp0 = _this select 1;" \n
+       "_wp1 = _this select 2;" \n
+       "_wp2 = _this select 3;" \n
+       "_wp3 = _this select 4;" \n
+       "_flockArea = (_this select 5) / 2;" \n
+       "_completionDis = _flockArea / 2;" \n
+       "_wps = [_wp0,_wp1,_wp2,_wp3];" \n
+       "_i = 0;" \n
+       "" \n
+       "_time = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          itemno = 3;
+          priority = 0.000000;
+          to="Move";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Move">*/
+    class Move
+    {
+      name = "Move";
+      itemno = 2;
+      init = /*%FSM<STATEINIT""">*/"_id = _i % 4;" \n
+       "_wp = _wps select _id;" \n
+       "_wp = [" \n
+       "	(_wp select 0) - _flockArea + (random _flockArea)*2," \n
+       "	(_wp select 1) - _flockArea + (random _flockArea)*2," \n
+       "	(_wp select 2) - 10 + random 20" \n
+       "];" \n
+       "_dis = _crow distance _wp;" \n
+       "_time = (_dis);" \n
+       "_crow camsetpos _wp;" \n
+       "_crow camcommit _time;" \n
+       "_i = _i + 1;" \n
+       "_time = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Null_crow">*/
+        class Null_crow
+        {
+          itemno = 4;
+          priority = 0.000000;
+          to="Create_new";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isnull _crow"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Ready">*/
+        class Ready
+        {
+          itemno = 1;
+          priority = 0.000000;
+          to="Move";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"speed _crow < 1 && (time - _time > 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Create_new">*/
+    class Create_new
+    {
+      name = "Create_new";
+      itemno = 5;
+      init = /*%FSM<STATEINIT""">*/"_crow = ""crow"" camcreate _wp;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "True">*/
+        class True
+        {
+          itemno = 3;
+          priority = 0.000000;
+          to="Move";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="START";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/
