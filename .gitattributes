@@ -6,3 +6,4 @@
 *.wav filter=lfs diff=lfs merge=lfs -text
 *.wrp filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text

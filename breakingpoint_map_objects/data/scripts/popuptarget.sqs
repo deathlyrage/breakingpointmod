@@ -1,0 +1,9 @@
+_target= _this select 0
+_target setdammage 0
+?_target animationPhase "terc" > 0: goto "end"
+_target animate["terc",1]
+?nopop: exit
+~3
+?nopop: exit
+?alive _target: _target animate["terc",0]
+exit

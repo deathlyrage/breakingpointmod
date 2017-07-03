@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Fri Mar 21 15:21:42 2014 : Source 'file' date Fri Mar 21 15:21:42 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class plants_pmc : Bush\data\b_amygdalusn1s_ep1_4.rvmat{
+ambient[] = {0.09800004,0.48799992,0.36799997,0.34};
+diffuse[] = {0.9430001,0.473,0.26499993,1};
+forcedDiffuse[] = {0.65,0.2,0.5,0.5};
+emmisive[] = {1,1,1,0};
+specular[] = {0.058000326,0.058,0.05800028,0.5};
+specularPower = 30;
+PixelShaderID = "TreeAdv";
+VertexShaderID = "TreeAdv";
+class Stage1
+{
+	texture = "ca\plants_pmc\bush\data\b_amygdalusn1s_ep1_4_no.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(1,1,1,0.5,MCA)";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,0};
+		pos[] = {0,0,0};
+	};
+};
+//};

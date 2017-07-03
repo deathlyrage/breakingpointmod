@@ -1,0 +1,17 @@
+_reb = vehicle player
+_pos = _this select 1
+_dir = _this select 2
+_instr = _this select 3
+hint localize "STR_TRh01"
+_instr say "TRv01"
+~10
+?!rebel: exit
+TitleCut ["","BLACK faded", 1]
+~1
+_reb setVelocity [0,0,0]
+_reb setpos _pos
+_reb setdir _dir
+TitleCut [localize "STR_TRt01","BLACK faded", 0]
+~3
+TitleCut ["","BLACK in", 1]
+exit

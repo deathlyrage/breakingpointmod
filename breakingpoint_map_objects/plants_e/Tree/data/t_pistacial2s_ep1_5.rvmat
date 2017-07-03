@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Sun Mar 16 21:56:02 2014 : Source 'file' date Sun Mar 16 21:56:02 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class plants_e : Tree\data\t_pistacial2s_ep1_5.rvmat{
+ambient[] = {0.7,0.65,0.35,0.15};
+diffuse[] = {0.11,0.12,0.08,0.65};
+forcedDiffuse[] = {0.25,0.15,0.79,0.59};
+emmisive[] = {0.5,0.5,0.9,2.0};
+specular[] = {0.002,0.003,0.004,35.0};
+specularPower = 1;
+PixelShaderID = "TreeAdv";
+VertexShaderID = "TreeAdv";
+class Stage1
+{
+	texture = "ca\plants_e\tree\data\t_pistacial2s_ep1_5_no.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,MCA)";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+//};

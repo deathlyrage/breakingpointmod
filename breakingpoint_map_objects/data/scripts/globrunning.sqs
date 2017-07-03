@@ -1,0 +1,38 @@
+; Script for Russians running away
+; Run when the player approaches the final area
+; (Viktor)
+
+
+; Things to be defined in mission:
+; IN:
+; trigger GlobEndArea ... "East - present" at the tested ending area
+; <param1> ... how many Russians acceptable (run as: >>5 exec "GlobRunning.sqs"<< for 5 Russians)
+
+; OUT:
+; GlobFinish ... script sets this to true when outro should run
+
+_TimeToWait = 5;
+_i = 0;
+
+#LOOP
+~1
+? (count list GlobEndArea <= _this) && ("Tank" countType list GlobEndArea == 0) && ("Air" countType list GlobEndArea == 0) : goto "Countdown"
+_i = 0;
+goto "LOOP";
+
+#Countdown
+_i = _i + 1;
+? _i >= _TimeToWait : goto "Done"
+goto "LOOP";
+
+#DONE
+
+{[group _x, 0] setWPPos [1,1,1]} forEach list GlobEndArea;
+{_x allowFleeing 1} forEach list GlobEndArea;
+
+_now = time;
+@((count list GlobEndArea) == 0) or ((time - _now) > 20)
+
+GlobFinish = true;
+; Done. Create trigger that waits for GlobFinish with some timeout.
+; Don't forget to create Russian Ambulance far from fighting area

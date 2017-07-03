@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Fri Mar 21 15:21:47 2014 : Source 'file' date Fri Mar 21 15:21:47 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class plants_pmc : Clutter\data\c_grassyellow_small_02.rvmat{
+mainLight = "Sun";
+fogMode = "Fog";
+renderFlags[] = {"AlphaTest32"};
+VertexShaderID = "Grass";
+PixelShaderID = "Grass";
+ambient[] = {1.25,1.25,1.25,1.3};
+diffuse[] = {0.75,0.75,0.75,1};
+forcedDiffuse[] = {0,0,0,0};
+//};

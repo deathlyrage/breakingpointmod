@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Mon Mar 17 11:58:31 2014 : Source 'file' date Mon Mar 17 11:58:31 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class wheeled2 : Kamaz\Data\kamaz_panel_shine.rvmat{
+ambient[] = {1.0,1.0,1.0,1.0};
+diffuse[] = {1.0,1.0,1.0,1.0};
+forcedDiffuse[] = {1.0,1.0,1.0,0.0};
+emmisive[] = {1.0,1.0,1.0,0.0};
+specular[] = {0.0,0.0,0.0,0.0};
+specularPower = 50.0;
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";
+//};
