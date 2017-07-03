@@ -1,0 +1,32 @@
+ambient[]={0.36000016,0.36000046,0.36000034,1};
+diffuse[]={0.36000016,0.36000046,0.36000034,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0.62899983,0.61299986,0.505,1};
+specularPower=100;
+PixelShaderID="NormalMapSpecularMap";
+VertexShaderID="NormalMap";
+class Stage1
+{
+	texture="breakingpoint\textures\items\crate1_nohq.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage2
+{
+	texture="breakingpoint\textures\items\crate1_smdi.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};

@@ -1,0 +1,32 @@
+ambient[]={0.38200057,0.38200045,0.38700056,1};
+diffuse[]={0.38200057,0.38200045,0.38700056,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0.57499993,0.56999993,0.56999999,0.99999976};
+specularPower=200;
+PixelShaderID="NormalMapSpecularMap";
+VertexShaderID="NormalMap";
+class Stage1
+{
+	texture="breakingpoint\textures\items\Guncab_nohq.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage2
+{
+	texture="breakingpoint\textures\items\Guncab_smdi.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
