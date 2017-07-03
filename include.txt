@@ -1,0 +1,1 @@
+*.pac;*.paa;*.sqf;*.sqs;*.bikb;*.fsm;*.wss;* .ogg;*.wav;*.fxy;*.csv;*.jpg;*.lip;*.txt;*.bisurf ;*.sqm;*.ext;*.dbf;*.prj;*.shx
