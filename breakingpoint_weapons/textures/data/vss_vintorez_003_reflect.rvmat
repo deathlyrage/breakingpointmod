@@ -1,0 +1,18 @@
+ambient[]={1,1,1,0};
+diffuse[]={1,1,1,0};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,0};
+specular[]={1,1,1,0};
+specularPower=100;
+PixelShaderID="Glass";
+VertexShaderID="Glass";
+class Stage1
+{
+	texture="#(argb,8,8,3)color(1,1,1,1)";
+	uvSource="none";
+};
+class Stage2
+{
+	texture="breakingpoint_weapons\textures\data\vss_vintorez_003_env_CO.paa";
+	uvSource="none";
+};

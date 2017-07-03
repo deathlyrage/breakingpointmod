@@ -1,0 +1,9 @@
+surfaceInfo="breakingpoint_weapons\textures\data\Penetration\wood.bisurf";
+ambient[]={0.99999988,1,0.99999982,1};
+diffuse[]={0.39799997,0.25299999,0.18300004,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0,0,0,1};
+specularPower=1;
+PixelShaderID="Normal";
+VertexShaderID="Basic";
