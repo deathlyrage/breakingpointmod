@@ -1,0 +1,82 @@
+class StageTI
+{
+	texture="a3\soft_f_beta\truck_02\data\truck_02_kab_ti_ca.paa";
+};
+ambient[]={1,0.99999988,0.9999997,1};
+diffuse[]={0.55899996,0.55899996,0.55400002,1};
+forcedDiffuse[]={0,0,0,1};
+emmisive[]={0,0,0,1};
+specular[]={0.15100004,0.1510001,0.15100008,1};
+specularPower=100;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="breakingpoint_vehicles\textures\truck_02_kab_nohq.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage2
+{
+	texture="a3\data_f\destruct\damage_metal_basicarmor_dt.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={3,0,0};
+		up[]={0,3,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,MC)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage4
+{
+	texture="a3\soft_f_beta\truck_02\data\truck_02_kab_as.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage5
+{
+	texture="a3\soft_f_beta\truck_02\data\truck_02_kab_smdi.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnel(0.45,0.35)";
+	uvSource="none";
+};
+class Stage7
+{
+	texture="a3\data_f\env_land_co.paa";
+	uvSource="none";
+};
