@@ -55,9 +55,10 @@ if !(BP_FastBoot) then
 };
 
 //Setup Detected Antihack Data
-call BPServer_fnc_updateWeapons;
-call BPServer_fnc_updateMagazines;
-call BPServer_fnc_updateScripts;
+// DISABLED: Not functional in open source version yet
+// call BPServer_fnc_updateWeapons;
+// call BPServer_fnc_updateMagazines;
+// call BPServer_fnc_updateScripts;
 
 //Connected Default Value
 BP_HC_Connected = false;
