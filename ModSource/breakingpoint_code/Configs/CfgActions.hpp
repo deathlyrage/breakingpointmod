@@ -7,10 +7,10 @@
 	Alderon Games Pty Ltd
 */
 
-class CfgActions 
+class CfgActions
 {
 	class None; //External Class Ref
-	
+
 	// Disable Unused Actions */
 	class Repair : None {
 		show = 0;
@@ -79,15 +79,27 @@ class CfgActions
 		text = "";
 		showWindow = 0;
 	};
-	
+
 	/*
 		This is only a workaround. It will not solve the core
 		problem. It will only prevent players from grabbing
 		backpacks that lay on the ground. I advice you to
 		remove this once Bohemia Interactive has fixed the
-		problem in the engine, as the "Take Bag" action is 
+		problem in the engine, as the "Take Bag" action is
 		a nice shortcut.
 	*/
 	class TakeBag: None { show = 0; };
 	class AddBag: None { show = 0; };
+
+	/*
+		Remove the scroll wheel options for left/right panel (was added in jets DLC).
+	*/
+	class ListRightVehicleDisplay: None { show = 0; };
+	class ListLeftVehicleDisplay: None { show = 0; };
+	class ListPrevRightVehicleDisplay: None { show = 0; };
+	class ListPrevLeftVehicleDisplay: None { show = 0; };
+	class CloseRightVehicleDisplay: None { show = 0; };
+	class CloseLeftVehicleDisplay: None { show = 0; };
+	class NextModeRightVehicleDisplay: None { show = 0; };
+	class NextModeLeftVehicleDisplay: None { show = 0; };
 };

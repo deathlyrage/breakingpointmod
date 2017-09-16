@@ -30,7 +30,7 @@ set server_serverMods=@BreakingPointServer;
 :start_loop
 CLS
 echo. Launching BreakingPoint server now!
-start /wait arma3server.exe -port=%server_port% "-config=%server_config%" "-cfg=%server_basic%" "-profiles=%server_profiledir%" -name=%server_profile% "-mod=%server_clientMods%" "-servermod=%server_serverMods%" -noSound -autoInit
+start /wait arma3server_x64.exe -port=%server_port% "-config=%server_config%" "-cfg=%server_basic%" "-profiles=%server_profile%" -name=%server_profile% "-mod=%server_clientMods%" "-servermod=%server_serverMods%" -noSound -autoInit
 
 echo. Server closed, restarting in 10 seconds.
 timeout /t 10
