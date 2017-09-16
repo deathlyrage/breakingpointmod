@@ -60,6 +60,57 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 	username = root
 	password = 
 	```
+* Open the config.cfg in ServerConfig directory and setup your instance, this is important to remember for each server you host.
+	```
+	class Params
+	{
+		instance = 1;
+		debug = false;
+	};
+	```
+* Set the correct mission file for the map you'd like to run.
+	```
+	/*
+	List of mission names.
+	"BP1_BreakingPoint.Altis" //Altis
+	"BP2_BreakingPoint.Stratis" //Stratis	
+	"BP4_BreakingPoint.Thirsk" //Thirsk
+	"BP3_BreakingPoint.ThirskW" //Thirsk Winter
+	"BP5_BreakingPoint.Tanoa" //Tanoa	
+	"BP6_BreakingPoint.newhaven" //Newhaven
+	"BP7_BreakingPoint.Esseker" //Esseker
+	"BP8_BreakingPoint.Chernarus" //Chernarus
+	"BP9_BreakingPoint.namalsk" //Namalsk
+	*/
+	class Missions
+	{
+	  class BreakingPoint
+	  {
+		  template = "BP1_BreakingPoint.Altis";
+		  difficulty = "Regular";
+		  class Params
+		  {
+			  instance = 1;
+			  debug = false;
+		  };
+	  };
+	};
+	```
+* Open your database manager and go to the instance table and set the world id for instance 1 to what map you intend on running, here's a list of possible values.
+	```
+	World ID | Map
+	1 | Altis
+	2 | Stratis
+	3 | Thirsk
+	4 | Bornholm
+	5 | Newhaven
+	6 | Esseker
+	8 | Chernarus;
+	9 | Namalsk
+	11 | Legion
+	12 | Tanoa
+	```
+* Remember if you open more servers increment the instance = x; by one in your server's config.cfg and then in the database set the world id correctly for that instance id
 * Copy the included server_start.bat file from the Tools folder to your server directory and edit as necessary (The defaults provided will work for a 32Bit server running on port 2302).
 * Double click the batch file and wait for the server to start, if everything went successfully you should see the server start and a console displayed saying the following.
 	```
