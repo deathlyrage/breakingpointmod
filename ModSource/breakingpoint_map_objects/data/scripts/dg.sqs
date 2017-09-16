@@ -1,0 +1,32 @@
+;//Defining the colors of the particles based on designer input.
+_dbase = [[[0.85,0.85,0.85,0],[0.85,0.85,0.85,0.15],[0.85,0.85,0.85,0]], [[0.77,0.68,0.55,0],[0.77,0.68,0.55,0.4],[0.77,0.68,0.55,0]], [[1,1,1,0],[1,1,1,0.9],[1,1,1,0]]]
+_color = _dbase select 0
+if ((_this select 5) == 1) then {_color = _dbase select 1} else {if ((_this select 5) == 2) then {_color = _dbase select 2}}
+
+_source = "#particlesource" createVehicleLocal [position (_this select 0) select 0, position (_this select 0) select 1, 0]
+_source setParticleRandom [(_this select 4), [5, 5, 0.5], [0, (_this select 3), 0], 0, 0.5, [0, 0, 0, 0], 0, 0]
+_source setParticleParams ["\ca\data\cl_basic", "", "Billboard", 1, (_this select 4), [0, 0, 0], [0, (_this select 3), 0], 1, 1.275, 1, 0, [(_this select 1), ((_this select 1) * 2)], _color, [0,1], 0, 0, "", "", (_this select 0)]
+_source setDropInterval (_this select 2)
+
+_source1 = "#particlesource" createVehicleLocal [position (_this select 0) select 0, position (_this select 0) select 1, 0]
+_source1 setParticleRandom [(_this select 4), [5, 5, 0.5], [0, (_this select 3), 0], 0, 0.5, [0, 0, 0, 0], 0, 0]
+_source1 setParticleParams ["\ca\data\cl_basic", "", "Billboard", 1, (_this select 4), [0, 0, 0], [0, (_this select 3), 0], 1, 1.275, 1, 0, [(_this select 1), ((_this select 1) * 2)], _color, [0,1], 0, 0, "", "", (_this select 0)]
+_source1 setDropInterval (_this select 2)
+
+_source2 = "#particlesource" createVehicleLocal [position (_this select 0) select 0, position (_this select 0) select 1, 0]
+_source2 setParticleRandom [(_this select 4), [5, 5, 0.5], [0, (_this select 3), 0], 0, 0.5, [0, 0, 0, 0], 0, 0]
+_source2 setParticleParams ["\ca\data\cl_basic", "", "Billboard", 1, (_this select 4), [0, 0, 0], [0, (_this select 3), 0], 1, 1.275, 1, 0, [(_this select 1), ((_this select 1) * 2)], _color, [0,1], 0, 0, "", "", (_this select 0)]
+_source2 setDropInterval (_this select 2)
+
+;//Main particle spawning loop, running until the attached object is deleted.
+#Loop
+
+	~2
+	
+if (alive (_this select 0)) then {goto "Loop"}
+
+deleteVehicle _source
+deleteVehicle _source1
+deleteVehicle _source2
+
+exit

@@ -1,0 +1,70 @@
+;//This delay will stagger the PC load when more than one FG scripts are started at the same time.
+~(random 1)
+
+;//Several variables are initialized.
+_object = ObjNull
+_isObject = (_this select 1)
+_intensity = (_this select 2)
+_density = (_this select 3)
+_mode = (_this select 4)
+_lifetime = (_this select 5)
+
+;//Move constants.
+;//Add fire/spark dependency.
+
+_adjX = 0; _adjY = 0; _adjZ = 0
+if ((count _this) == 7) then {_adjust = (_this select 6); _adjX = _adjust select 0; _adjY = _adjust select 1; _adjZ = _adjust select 2}
+
+_pos = []
+_velocity = [0, 0, 0]
+
+;//The script checks whether the user used a direct location or an object.
+if (_isObject) then {_object = (_this select 0); _pos = (position _object)} else {_pos = (_this select 0)}
+
+;//Add a lightsource.
+_light = "#lightpoint" createVehicleLocal _pos
+_light setLightColor [1.5, 0.75, 0]
+_light setLightAmbient [0.45, 0.22, 0]
+_light setLightBrightness (_intensity / 100)
+
+;//Attach light source to object and trap the 0 height exception.
+if (_isObject) then {_light lightAttachObject [_object, [0 + _adjX, 0 + _adjY, -0.5 + _adjZ]]} else {_lightPos = position _light; if (_lightPos select 2 == 0) then {_light setPos [_lightPos select 0, _lightPos select 1, 0.01]}}
+
+;//The timer is set up.
+_i = 0
+_maxI = _lifetime
+
+;//The spark particle.
+_source1 = "#particlesource" createVehicleLocal _pos
+_source1 setParticleRandom [0.5, [0, 0, 0], [0.5, 0.5, 0.5], 0, 0.01, [0, 0, 0, 0], 0, 0]
+_source1 setDropInterval _density
+if (_isObject) then {_source1 setParticleParams ["\ca\data\cl_fire", "", "Billboard", 1, 3 + (random 10), [0 + _adjX, 0 + _adjY, -0.5 + _adjZ], [0, 0, 0], 1, 0.005, 0.0042, 0.2, [random 0.05], [[1,1,1,1],[0,0,0,0]], [0,1,0], 0.5, 0.5, "", "", _object]} else {_source1 setParticleParams ["\ca\data\cl_fire", "", "Billboard", 1, 3 + (random 10), [0, 0, 0], [0, 0, 0], 1, 0.005, 0.0042, 0.2, [random 0.05], [[1,1,1,1],[0,0,0,0]], [0,1,0], 0.5, 0.5, "", "", ""]}
+
+;//The smoke particle.
+_source2 = "#particlesource" createVehicleLocal _pos
+_source2 setParticleRandom [1.5, [0, 0, 0], [0.3, 0.3, 0.3], 0, 0, [0, 0, 0, 0], 0, 0]
+_source2 setDropInterval _density
+if (_isObject) then {_source2 setParticleParams ["\ca\data\cl_basic", "", "Billboard", 1, _intensity, [0 + _adjX, 0 + _adjY, -0.5 + _adjZ], [0, 0, 0], 1, 0.004, 0.004, 0.2, [0.2,(_intensity * 2)], [[0,0,0,0], [0.3,0.3,0.3,1], [0.6,0.6,0.6,0.1], [0.6,0.6,0.6,0]], [0,1,0,1,0,1], 0.2, 0.3, "", "", _object]} else {_source2 setParticleParams ["\ca\data\cl_basic", "", "Billboard", 1, _intensity, [0, 0, 0], [0, 0, 0], 1, 0.004, 0.004, 0.2, [0.2,(_intensity * 2)], [[0,0,0,0], [0.3,0.3,0.3,1], [0.6,0.6,0.6,0.1], [0.6,0.6,0.6,0]], [0,1,0,1,0,1], 0.2, 0.3, "", "", ""]}
+
+;//The main fire particle.
+_source3 = "#particlesource" createVehicleLocal _pos
+_source3 setParticleRandom [0.2, [0, 0, 0], [0.3, 0.3, 0.3], 0, 0, [0, 0, 0, 0], 0, 0]
+_source3 setDropInterval _density
+if (_isObject) then {_source3 setParticleParams ["\ca\data\cl_fire", "", "Billboard", 1, (0.4 * (_intensity / 2)), [0 + _adjX, 0 + _adjY, -1 + _adjZ], [0, 0, 0], 1, 0.004, 0.004, 0.2, [(0.1 + 0.05 * _intensity), (0.1 + 0.3 * _intensity), (0.1 + 0.02 * _intensity)], [[1,1,1,0], [1,1,1,1], [1,1,1,0.6], [1,1,1,0]], [0,1,0], 0.5, 0.05, "", "", _object]} else {_source3 setParticleParams ["\ca\data\cl_fire", "", "Billboard", 1, (0.4 * (_intensity / 2)), [0, 0, 0], [0, 0, 0], 1, 0.004, 0.004, 0.2, [(0.1 + 0.05 * _intensity), (0.1 + 0.3 * _intensity), (0.1 + 0.02 * _intensity)], [[1,1,1,0], [1,1,1,1], [1,1,1,0.6], [1,1,1,0]], [0,1,0], 0.5, 0.05, "", "", ""]}
+
+;//The main FG loop which generates several particles every cycle.
+#Loop
+
+~1
+
+_i = _i + 1
+
+;//The mode is checked and the script decided whether there should be another cycle of the script.
+if (_mode == 1) then {goto "Loop"} else {if (_mode == 2) then {if ((alive _object) && _isObject) then {goto "Loop"}} else {if (_mode == 3) then {if (_i < _maxI) then {goto "Loop"}} else {if ((alive _object) && (_i < _maxI) && _isObject) then {goto "Loop"}}}}
+
+deleteVehicle _source1
+deleteVehicle _source2
+deleteVehicle _source3
+deleteVehicle _light
+
+exit

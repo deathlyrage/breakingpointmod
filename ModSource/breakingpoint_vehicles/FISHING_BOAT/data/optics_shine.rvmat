@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 5.31
+//Produced on Wed Sep 30 16:10:18 2015 : Created on Wed Sep 30 16:10:18 2015
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class data_f : optics_shine.rvmat{
+ambient[] = {1.0,1.0,1.0,1.0};
+diffuse[] = {1.0,1.0,1.0,1.0};
+forcedDiffuse[] = {0.1,0.1,0.1,0.0};
+emmisive[] = {0.1,0.1,0.1,1.0};
+specular[] = {0.0,0.0,0.0,0.0};
+specularPower = 0.0;
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";
+//};

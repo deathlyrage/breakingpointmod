@@ -1,0 +1,181 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Sun Mar 16 15:21:44 2014 : Source 'file' date Sun Mar 16 15:21:44 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class Roads2 : bridge\data\bridge_asf1_25_multi.rvmat{
+ambient[] = {1.0,1.0,1.0,1.0};
+diffuse[] = {1.0,1.0,1.0,1.0};
+forcedDiffuse[] = {0.0,0.0,0.0,0.0};
+emmisive[] = {0.0,0.0,0.0,1.0};
+specular[] = {1.0,1.0,1.0,1.0};
+specularPower = 30.0;
+PixelShaderID = "Multi";
+VertexShaderID = "Multi";
+class TexGen0
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen1
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen2
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen3
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen4
+{
+	uvSource = "tex1";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen5
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen6
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {14.0,0.0,0.0};
+		up[] = {0.0,14.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class TexGen7
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,1.0};
+	};
+};
+class Stage0
+{
+	texture = "ca\structures\data\concrete\concrete_wall_co.paa";
+	texGen = "0";
+};
+class Stage1
+{
+	texture = "ca\roads2\data\asf1_dashedline_ca.paa";
+	texGen = "1";
+};
+class Stage2
+{
+	texture = "ca\roads2\data\runwayold_main_co.paa";
+	texGen = "2";
+};
+class Stage3
+{
+	texture = "#(argb,8,8,3)color(1,1,1,0,CO)";
+	texGen = "3";
+};
+class Stage4
+{
+	texture = "ca\roads2\bridge\data\bridge_asf1_25_mask.paa";
+	texGen = "4";
+};
+class Stage5
+{
+	texture = "#(argb,8,8,3)color(0.5,0,1,1,DTSMDI)";
+	texGen = "5";
+};
+class Stage6
+{
+	texture = "ca\roads2\data\asfalt_basic_dtsmdi.paa";
+	texGen = "6";
+};
+class Stage7
+{
+	texture = "#(argb,8,8,3)color(0.5,0,1,1,DTSMDI)";
+	texGen = "7";
+};
+class Stage8
+{
+	texture = "#(argb,8,8,3)color(0.5,0,1,1,DTSMDI)";
+	texGen = "3";
+};
+class Stage9
+{
+	texture = "ca\roads2\bridge\data\bridge_asf1_25_mc.paa";
+	texGen = "4";
+};
+class Stage10
+{
+	texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
+	texGen = "4";
+};
+class Stage11
+{
+	texture = "ca\structures\data\concrete\concretewall_nohq.paa";
+	texGen = "0";
+};
+class Stage12
+{
+	texture = "ca\roads2\data\asf1_dashedline_nohq.paa";
+	texGen = "1";
+};
+class Stage13
+{
+	texture = "ca\roads2\data\runwayold_main_nohq.paa";
+	texGen = "2";
+};
+class Stage14
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,1,1,NOHQ)";
+	texGen = "3";
+};
+//};

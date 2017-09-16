@@ -1,0 +1,96 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Formation">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-240.000000,-140.000000,-150.000000,-90.000000,0.000000,"Init"};
+item1[] = {"Always",8,218,-240.000000,-60.000000,-150.000000,-10.000000,0.000000,"Always"};
+item2[] = {"Return_to__forma",2,4346,-240.000000,240.000000,-150.000000,290.000000,0.000000,"Return to " \n "formation"};
+item3[] = {"Always",8,218,-170.000000,130.000000,-80.000000,180.000000,0.000000,"Always"};
+item4[] = {"Start",2,250,-240.000000,30.000000,-150.000000,80.000000,0.000000,"Start"};
+item5[] = {"Always",8,218,-310.000000,130.000000,-220.000000,180.000000,0.000000,"Always"};
+link0[] = {0,1};
+link1[] = {1,4};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {5,2};
+globals[] = {10.000000,1,0,1,16777215,640,480,1,143,6316128,1,-554.173462,172.179810,388.589355,-203.301712,1129,920,1};
+window[] = {2,-1,-1,-1,-1,912,26,1437,26,3,1147};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "Formation";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Always">*/
+        class Always
+        {
+          priority = 0.000000;
+          to="Start";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Return_to__forma">*/
+    class Return_to__forma
+    {
+      name = "Return_to__forma";
+      init = /*%FSM<STATEINIT""">*/"_pos = getPosATL player;" \n
+       "_move = [_pos,""DoNotPlanFormation"",false];" \n
+       "_this setDestination _move;" \n
+       """debug_console"" callExtension format [""%1"",_move];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Always">*/
+        class Always
+        {
+          priority = 0.000000;
+          to="Start";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Always">*/
+        class Always
+        {
+          priority = 0.000000;
+          to="Return_to__forma";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/

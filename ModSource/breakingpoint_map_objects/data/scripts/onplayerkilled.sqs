@@ -1,0 +1,8 @@
+;	File: onPlayerKilled.sqs
+;	Author: Karel Moricky
+
+;	Description:
+;	You were killed!
+
+_this execvm "onplayerkilled.sqf";
+exit;

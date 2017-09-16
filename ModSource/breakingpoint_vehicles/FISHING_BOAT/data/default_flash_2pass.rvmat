@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 5.31
+//Produced on Tue Sep 29 08:15:37 2015 : Created on Tue Sep 29 08:15:37 2015
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class data_f : default_flash_2pass.rvmat{
+ambient[] = {0,0,0,5};
+diffuse[] = {0,0,0,1};
+forcedDiffuse[] = {0.005,0.005,0.005,0};
+emmisive[] = {0.5,0.5,0.5,1};
+specular[] = {0,0,0,0};
+specularPower = 0;
+renderFlags[] = {"NoZWrite","AddBlend"};
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";
+//};
