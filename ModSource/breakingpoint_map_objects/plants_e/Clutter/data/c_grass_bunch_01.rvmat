@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Sun Mar 16 21:55:57 2014 : Source 'file' date Sun Mar 16 21:55:57 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class plants_e : Clutter\data\c_grass_bunch_01.rvmat{
+mainLight = "Sun";
+renderFlags[] = {"AlphaTest32"};
+fogMode = "Fog";
+VertexShaderID = "Grass";
+PixelShaderID = "Grass";
+ambient[] = {2.3,2.3,2.3,1.5};
+diffuse[] = {0.0,0.0,0.0,0.0};
+forcedDiffuse[] = {0.65,0.65,0.65,1.0};
+//};

@@ -1,0 +1,423 @@
+version=11;
+class Mission
+{
+	addOns[]=
+	{
+		"chernarus",
+		"ca_animals2_dogs_pastor",
+		"cawheeled2_kamaz",
+		"ca_animals2_rabbit",
+		"cacharacters2"
+	};
+	addOnsAuto[]=
+	{
+		"cacharacters2",
+		"chernarus"
+	};
+	randomSeed=2943491;
+	class Intel
+	{
+		startWeather=0.091034003;
+		forecastWeather=1;
+		year=2008;
+		month=4;
+		day=11;
+		hour=5;
+		minute=45;
+	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6143.9302,192.78458,4790.5137};
+					azimut=393.15283;
+					id=0;
+					side="CIV";
+					vehicle="Citizen1";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"chernarus",
+		"cacharacters",
+		"ca_animals2_rabbit",
+		"CAWheeled3_TT650",
+		"cacharacters2",
+		"ca_missions_garbagecollector",
+		"ca_modules_functions",
+		"ca_animals2_wildboar",
+		"ca_animals2_dogs_pastor",
+		"ca_animals2_chicken",
+		"ca_animals2_cow",
+		"CAWheeled",
+		"cadata",
+		"ca_animals2_sheep"
+	};
+	addOnsAuto[]=
+	{
+		"cacharacters2",
+		"ca_animals2_wildboar",
+		"ca_animals2_dogs_pastor",
+		"ca_animals2_chicken",
+		"ca_animals2_cow",
+		"CAWheeled",
+		"cadata",
+		"ca_animals2_sheep",
+		"chernarus"
+	};
+	randomSeed=4682243;
+	class Intel
+	{
+		startWeather=0.40802503;
+		startFog=0.29748401;
+		forecastWeather=0.23246098;
+		year=2008;
+		month=8;
+		day=11;
+	};
+	class Groups
+	{
+		items=3;
+		class Item0
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6860.7642,202.74365,4510.0078};
+					azimut=274.55042;
+					id=0;
+					side="CIV";
+					vehicle="Woodlander2";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="this exec ""initintro.sqs""";
+				};
+			};
+		};
+		class Item1
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2303.2124,195.99017,5415.6548};
+					azimut=150.358;
+					id=11;
+					side="CIV";
+					vehicle="Villager1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=4;
+				class Item0
+				{
+					position[]={2330.7739,184.62354,5316.9165};
+					id=12;
+					type="GETIN";
+					speed="LIMITED";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={2568.6191,193.1407,5236.0903};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={2006.7145,177.98747,5292.1572};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={2569.4819,193.20879,5235.4619};
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item2
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6497.147,243.96982,4596.5054};
+					azimut=150.358;
+					id=13;
+					side="CIV";
+					vehicle="Sportswoman5";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+			class Waypoints
+			{
+				items=2;
+				class Item0
+				{
+					position[]={7098.9385,203.72112,4512.4502};
+					speed="FULL";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={6502.5679,243.02837,4583.6587};
+					type="CYCLE";
+					speed="FULL";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=17;
+		class Item0
+		{
+			position[]={6807.2026,197.63702,4485.8906};
+			id=1;
+			side="AMBIENT LIFE";
+			vehicle="WildBoar";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={2270.7305,183.93689,5334.8008};
+			azimut=150.358;
+			id=2;
+			side="AMBIENT LIFE";
+			vehicle="Pastor";
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={2270.4338,187.22107,5362.8325};
+			azimut=150.358;
+			id=3;
+			side="AMBIENT LIFE";
+			vehicle="Cock";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={2279.0852,187.4684,5361.2046};
+			azimut=150.358;
+			id=4;
+			side="AMBIENT LIFE";
+			vehicle="Hen";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={2274.8721,187.29199,5361.5415};
+			azimut=150.358;
+			id=5;
+			side="AMBIENT LIFE";
+			vehicle="Hen";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={2274.3665,187.88608,5366.4814};
+			azimut=150.358;
+			id=6;
+			side="AMBIENT LIFE";
+			vehicle="Hen";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={2222.7427,183.57341,5342.3652};
+			azimut=280.41141;
+			id=7;
+			side="AMBIENT LIFE";
+			vehicle="Cow03";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={2202.0833,183.68187,5343.6606};
+			azimut=183.71228;
+			id=8;
+			side="AMBIENT LIFE";
+			vehicle="Cow02";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={2219.3735,185.15729,5361.1831};
+			azimut=150.358;
+			id=9;
+			side="AMBIENT LIFE";
+			vehicle="Cow01";
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={2215.2993,183.95981,5347.3701};
+			azimut=276.95416;
+			id=10;
+			side="AMBIENT LIFE";
+			vehicle="Cow03";
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={2330.7739,184.62354,5316.9165};
+			azimut=150.358;
+			id=12;
+			side="EMPTY";
+			vehicle="Tractor";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={6518.6523,322.00787,6142.9575};
+			azimut=116.13323;
+			id=14;
+			side="AMBIENT LIFE";
+			vehicle="Sheep";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={6520.9604,322.0054,6139.2671};
+			azimut=150.358;
+			id=15;
+			side="AMBIENT LIFE";
+			vehicle="Sheep";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item13
+		{
+			position[]={6525.5771,322,6136.4995};
+			azimut=325.32321;
+			id=16;
+			side="AMBIENT LIFE";
+			vehicle="Sheep";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item14
+		{
+			position[]={6516.2983,322.01746,6136.9087};
+			azimut=229.38243;
+			id=17;
+			side="AMBIENT LIFE";
+			vehicle="Sheep";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item15
+		{
+			position[]={6512.1895,322.00894,6143.3037};
+			azimut=155.98697;
+			id=18;
+			side="AMBIENT LIFE";
+			vehicle="Sheep";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item16
+		{
+			position[]={6512.6504,322.01355,6136.1533};
+			azimut=150.358;
+			id=19;
+			side="AMBIENT LIFE";
+			vehicle="Sheep";
+			leader=1;
+			skill=0.60000002;
+		};
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"chernarus"
+	};
+	addOnsAuto[]=
+	{
+		"chernarus"
+	};
+	randomSeed=1623043;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"chernarus"
+	};
+	addOnsAuto[]=
+	{
+		"chernarus"
+	};
+	randomSeed=8674307;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};

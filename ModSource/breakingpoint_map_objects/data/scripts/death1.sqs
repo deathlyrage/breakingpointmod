@@ -1,0 +1,121 @@
+;init
+enableEndDialog
+
+_player = _this select 0
+_killer = _this select 1
+
+_preload = _player spawn {waitUntil {(preloadCamera getPos _this) and (2 preloadObject _this)}}
+@scriptDone _preload
+
+_camera = "camera" camCreate [9578.59,3540.29,1.66]
+_camera cameraEffect ["internal","back"]
+
+0 fadeMusic 0.5
+_music = ["Track06_Abandoned_Battlespace","Track21_Rise_Of_The_Fallen", "Ambient02_Vague_Shapes", "Ambient08_Reforger"]
+playMusic ( _music select floor(random((count _music) - 0.5 )))
+
+? (_killer != _killer or _killer == _player) : goto "suicide"
+
+
+
+;pohled na hrace
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [2.88,2.41,2.17]
+_camera camSetFOV 0.9
+_camera camCommit 0
+@camCommitted _camera
+titleCut["", "BLACK IN",1]
+
+_preload = _killer spawn {waitUntil {(preloadCamera getPos _this) and (2 preloadObject _this)}}
+
+_camera camSetRelPos [3,2.5,4]
+_camera camSetFOV 0.4
+_camera camCommit 4
+@camCommitted _camera
+
+@scriptDone _preload
+
+_camera camSetRelPos [-8,2,4]
+_camera camSetFOV 0.9
+_camera camCommit 3
+@camCommitted _camera
+
+;na vraha
+_camera camSetTarget vehicle _killer
+_camera camSetRelPos [5,4,5.11]
+_camera camSetFOV 0.700
+_camera camCommit 7
+@camCommitted _camera
+_camera camSetFOV 0.5
+_camera camCommit 13
+~1
+terminate _preload
+_preload = _player spawn {waitUntil {(preloadCamera getPos _this) and (2 preloadObject _this)}}
+@camCommitted _camera
+
+#zoom
+
+;do nebe
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [-30.20,-141.07,149.99]
+_camera camSetFOV 0.851
+_camera camCommit 120
+@camCommitted _camera
+
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [0.88,0.41,1.17]
+_camera camSetFOV 1.1
+_camera camCommit 0
+@camCommitted _camera
+
+goto "zoom"
+
+goto "exit"
+
+#suicide
+
+;pohled na hrace
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [0.88,0.41,1.17]
+_camera camSetFOV 1.0
+_camera camCommit 0
+@camCommitted _camera
+titleCut["", "BLACK IN",1]
+
+
+0 fadeMusic 0.5
+playMusic "Track06_Abandoned_Battlespace"
+
+_camera camSetFOV 0.65
+_camera camCommit 4
+@camCommitted _camera
+
+
+_camera camSetRelPos [3,-2,2]
+_camera camSetFOV 0.7
+_camera camCommit 0
+@camCommitted _camera
+~2
+#zoom
+
+;do nebe
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [-30.20,-141.07,149.99]
+_camera camSetFOV 0.851
+_camera camCommit 120
+@camCommitted _camera
+
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [0.88,0.41,1.17]
+_camera camSetFOV 1.1
+_camera camCommit 0
+@camCommitted _camera
+
+goto "zoom"
+
+#exit
+;exit
+playMusic ""
+_player cameraEffect ["terminate","back"]
+camDestroy _camera
+exit

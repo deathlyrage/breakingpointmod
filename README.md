@@ -14,3 +14,59 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 ## Conflicts & Problems
 
 * Fragmentation: Everyone using a custom version of Breaking Point and hosting vastly different servers and configurations. If we can work together and merge fixes into Breaking Point as a community.
+
+## Server Configuration
+## Prerequisites
+
+* These steps assume you already know how to setup/install a MySQL database and basic ArmA server yourself, so do this first.
+* Make sure you install the Visual C++ 2015 Redistributables from microsoft.
+	* https://www.microsoft.com/en-gb/download/details.aspx?id=48145
+
+## Configuration
+
+* Download the BreakingPoint Client + Server files to your server (A batch file will be included in a tools folder for steam cmd users).
+	##### If downloading using the steam client and uploading to your server.
+	* Subscribe to the following mods on the workshop and copy each to your ArmA server directory.
+	* Make sure the folders have the correct names on your server (@BreakingPoint and @BreakingPointServer).
+	* BreakingPoint Client: http://steamcommunity.com/sharedfiles/filedetails/?id=426629791
+	* BreakingPoint Server: http://steamcommunity.com/sharedfiles/filedetails/?id=1133182382
+	
+	##### If using the provided batch tool.
+	* Copy the batch file to your server directory (or wherever you like), open it and make the following changes.
+	* Make sure you set the correct username and password for steam (The workshop disallows downloads if you're not using a account that owns ArmA 3).
+	```
+	set steam_username=MySteamUser
+	set steam_password=MySteamPassword
+	```
+	* Make sure you set the correct path to your SteamCMD install.
+	```
+	set "steamcmd_dir=C:\Path\To\SteamCMD"
+	```
+	* Make sure you set the correct path to your ArmA server directory.
+	```
+	set "arma_serverdir=C:\Path\To\Server\"
+	```
+	* Save the file once all the above changes have been made, remember to keep the quotes around the file path settings or you will get errors
+	* Double click the batch file and will do everything else for you (you may need to input a steam guard code as you would when using the steam client).
+
+* Import the included breakingpoint.sql file from the SQL folder to a clean database and make sure you have a sql account that has full access to that database.
+* Copy the ServerConfig folder to your ArmA server directory.
+* Open the BreakingPointExt.ini in ServerConfig and change the database name, username and password to the ones you setup earlier.
+	```
+	[Database]
+	dbname = BPA3_1
+	user = root
+	pass =
+	```
+* Copy the included server_start.bat file from the Tools folder to your server directory and edit as necessary (The defaults provided will work for a 32Bit server running on port 2302).
+* Double click the batch file and wait for the server to start, if everything went successfully you should see the server start and a console displayed saying the following.
+	```
+	Starting Connection To Databases...
+	Database Connection Success (Game DB)
+	```
+
+## Credits/Notable mentions.
+* DeathlyRage - For tirelessly working hard over the years to maintain and develop such a high quality mod.
+* KamikazeXeX - Writing the server configuration guide and providing the tools for server owners to use.
+* The BP Community - For standing by BreakingPoint over the years helping to keep the mod alive.
+

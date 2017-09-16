@@ -1,0 +1,11 @@
+Density=200;
+bulletPenetrability=150;
+soundEnviron=Empty;
+isWater=false;
+impact = Hit_Rubber;
+soundHit = body;
+
+rough=0.1;
+dust=0;
+friction=0.9;
+restitution=0.5;

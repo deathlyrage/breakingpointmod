@@ -1,0 +1,116 @@
+;init
+
+setAccTime 1;
+enableEndDialog
+
+_player = _this select 0
+_killer = _this select 1
+
+_preload = _player spawn {waitUntil {(preloadCamera getPos _this) and (2 preloadObject _this)}}
+@scriptDone _preload
+
+_camera = "camera" camCreate getPos _player
+_camera cameraEffect ["internal","back"]
+showCinemaBorder false
+
+0 fadeMusic 0.5
+_music = ["Track06_Abandoned_Battlespace","Track21_Rise_Of_The_Fallen", "Ambient02_Vague_Shapes", "Ambient08_Reforger"]
+playMusic ( _music select floor(random((count _music) - 0.5 )))
+
+? (_killer != _killer or _killer == _player) : goto "suicide"
+
+;=== 14:30:26
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [5.80,2.29,3.07]
+_camera camSetFOV 0.200
+_camera camCommit 0
+@camCommitted _camera
+titleCut["","BLACK IN",1]
+
+_preload = _killer spawn {waitUntil {(preloadCamera getPos _this) and (5 preloadObject _this)}}
+
+;=== 14:30:54
+_camera camSetRelPos [-2.71,4.55,3.94]
+_camera camSetFOV 0.700
+_camera camCommit 5
+@camCommitted _camera
+@scriptDone _preload
+
+
+;=== 14:31:29
+_camera camSetTarget vehicle _killer
+_camera camSetRelPos [-8.66,18.99,2.59]
+_camera camSetFOV 0.700
+_camera camCommit 12
+@camCommitted _camera
+
+;=== 14:32:05
+_camera camSetRelPos [-5.17,-10.71,3.07]
+_camera camSetFOV 0.400
+_camera camCommit 10
+~2
+terminate _preload
+_preload = _player spawn {waitUntil {(preloadCamera getPos _this) and (5 preloadObject _this)}}
+@camCommitted _camera
+
+
+;=== 14:30:26
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [5.80,1.29,3.07]
+_camera camSetFOV 0.700
+_camera camCommit 0.0
+@camCommitted _camera
+
+;=== 14:30:54
+_camera camSetRelPos [2.71,19.55,12.94]
+_camera camCommit 60
+@camCommitted _camera
+
+#zoom
+_camera camSetFOV 0.01
+_camera camCommit 50
+@camCommitted _camera
+
+_camera camSetFOV 1.1
+_camera camCommit 50
+@camCommitted _camera
+goto "zoom"
+
+goto "exit"
+
+#suicide
+
+0 fadeMusic 0.5
+playMusic "Track06_Abandoned_Battlespace"
+
+;=== 14:30:26
+_camera camSetTarget vehicle _player
+_camera camSetRelPos [5.80,1.29,3.07]
+_camera camSetFOV 0.700
+_camera camCommit 0.0
+@camCommitted _camera
+titleCut["","BLACK IN",1]
+
+;=== 14:30:54
+_camera camSetRelPos [2.71,19.55,12.94]
+_camera camCommit 60
+@camCommitted _camera
+
+
+
+#zoom
+_camera camSetFOV 0.01
+_camera camCommit 50
+@camCommitted _camera
+_camera camSetFOV 1.1
+_camera camCommit 50
+@camCommitted _camera
+goto "zoom"
+
+
+#exit
+;exit
+playMusic ""
+_player cameraEffect ["terminate","back"]
+if !(isNil("_camera")) then { camDestroy _camera };
+exit

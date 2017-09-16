@@ -1,0 +1,244 @@
+/*%FSM<COMPILE "C:\BIS\FSMEditor\scriptedFSM.cfg, BIS_fnc_moduleHandle">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"INIT",0,250,150.000000,-150.000000,250.000000,-100.000000,0.000000,"INIT"};
+item1[] = {"Continue",8,218,150.000000,-75.000000,250.000000,-25.000000,0.000000,"Continue"};
+item2[] = {"Loop_start",2,250,150.000000,75.000000,250.000000,125.000000,0.000000,"Loop" \n "start"};
+item3[] = {"Cycle_modules",4,218,150.000000,150.000000,250.000000,200.000000,1.000000,"Cycle" \n "modules"};
+item4[] = {"Module_init",2,4346,-100.000000,150.000000,0.000000,200.000000,0.000000,"Module" \n "init"};
+item5[] = {"No_functions_log",4,218,275.000000,75.000000,375.000000,125.000000,3.000000,"No" \n "functions" \n "logic"};
+item6[] = {"EXIT",1,250,275.000000,-150.000000,375.000000,-100.000000,0.000000,"EXIT"};
+item7[] = {"Activate",4,218,25.000000,75.000000,125.000000,125.000000,2.000000,"Activate"};
+item8[] = {"Activate",2,250,25.000000,0.000000,125.000000,50.000000,0.000000,"Activate"};
+item9[] = {"",7,210,-54.000000,-54.000000,-46.000000,-46.000000,0.000000,""};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,5};
+link4[] = {2,7};
+link5[] = {3,4};
+link6[] = {4,3};
+link7[] = {4,7};
+link8[] = {4,9};
+link9[] = {5,6};
+link10[] = {7,8};
+link11[] = {8,1};
+link12[] = {9,1};
+globals[] = {25.000000,1,0,0,16777215,640,480,1,24,6316128,1,-141.847321,408.745972,432.199524,-376.211304,467,925,1};
+window[] = {2,-1,-1,-1,-1,839,-1370,-410,89,3,484};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "BIS_fnc_moduleHandle";
+        class States
+        {
+                /*%FSM<STATE "INIT">*/
+                class INIT
+                {
+                        name = "INIT";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_logicMain = missionnamespace getvariable [""bis_functions_mainscope"",objnull];" \n
+                         "" \n
+                         "_modulesActivate = [];" \n
+                         "_activateIndex = -1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Loop_start";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Loop_start">*/
+                class Loop_start
+                {
+                        name = "Loop_start";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_modules = (_logicMain getvariable [""bis_fnc_moduleInit_modules"",[]]);" \n
+                         "_modules = _modules - [-1];" \n
+                         "_modulesCount = count _modules;" \n
+                         "_m = 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No_functions_log">*/
+                                class No_functions_log
+                                {
+                                        itemno = 5;
+                                        priority = 3.000000;
+                                        to="EXIT";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isnull _logicMain"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Activate">*/
+                                class Activate
+                                {
+                                        itemno = 7;
+                                        priority = 2.000000;
+                                        to="Activate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count _modulesActivate > 0 && _m == (_activateIndex min (_modulesCount - 1))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Cycle_modules">*/
+                                class Cycle_modules
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Module_init";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_m < _modulesCount"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Module_init">*/
+                class Module_init
+                {
+                        name = "Module_init";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"private [""_module"",""_logic"",""_function"",""_params""];" \n
+                         "" \n
+                         "#define ACTIVATED_ID	3" \n
+                         "" \n
+                         "_module = _modules select _m;" \n
+                         "_logic = _module select 0;" \n
+                         "if !(isnull _logic) then {" \n
+                         "	_function = _module select 1;" \n
+                         "	_params = _module select 2;" \n
+                         "	_activated = _module select ACTIVATED_ID;" \n
+                         "" \n
+                         "	//--- Check synced triggers" \n
+                         "	_allTriggersActivated = true;" \n
+                         "	{" \n
+                         "		if (_x iskindof ""emptydetector"") then {_allTriggersActivated = _allTriggersActivated && triggerActivated _x;};" \n
+                         "	} foreach (synchronizedobjects _logic);" \n
+                         "" \n
+                         "	//--- Activate module" \n
+                         "	if (_allTriggersActivated) then {" \n
+                         "		if !(_activated) then {" \n
+                         "" \n
+                         "			//--- Activate" \n
+                         "			_logic setvariable [""bis_fnc_initModules_activate"",false];" \n
+                         "			_modulesActivate set [count _modulesActivate,_logic];" \n
+                         "			_activateIndex = _m;" \n
+                         "			[_logic,_function,_params,true] spawn bis_fnc_moduleExecute;" \n
+                         "" \n
+                         "			//--- Mark as executed" \n
+                         "			_module set [ACTIVATED_ID,true];" \n
+                         "		};" \n
+                         "	} else {" \n
+                         "		if (_activated) then {" \n
+                         "" \n
+                         "			//--- Deactivate" \n
+                         "			_logic setvariable [""bis_fnc_initModules_activate"",false];" \n
+                         "			_modulesActivate set [count _modulesActivate,_logic];" \n
+                         "			_activateIndex = _m;" \n
+                         "			[_logic,_function,_params,false] spawn bis_fnc_moduleExecute;" \n
+                         "" \n
+                         "		};" \n
+                         "		_module set [ACTIVATED_ID,false];" \n
+                         "	};" \n
+                         "} else {" \n
+                         "	_modules set [_m,-1];" \n
+                         "};" \n
+                         "" \n
+                         "_m = _m + 1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Activate">*/
+                                class Activate
+                                {
+                                        itemno = 7;
+                                        priority = 2.000000;
+                                        to="Activate";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count _modulesActivate > 0 && _m == (_activateIndex min (_modulesCount - 1))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Cycle_modules">*/
+                                class Cycle_modules
+                                {
+                                        itemno = 3;
+                                        priority = 1.000000;
+                                        to="Module_init";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_m < _modulesCount"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Loop_start";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "EXIT">*/
+                class EXIT
+                {
+                        name = "EXIT";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"""Functions logic 'BIS_functions_mainscope' is missing"" call bis_fnc_error;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Activate">*/
+                class Activate
+                {
+                        name = "Activate";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_modulesActivate spawn bis_fnc_initmodules;" \n
+                         "_modulesActivate = [];" \n
+                         "_activateIndex = -1;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Loop_start";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="INIT";
+        finalStates[] =
+        {
+                "EXIT",
+        };
+};
+/*%FSM</COMPILE>*/

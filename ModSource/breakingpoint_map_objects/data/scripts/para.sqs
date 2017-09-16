@@ -1,0 +1,20 @@
+; Parachute
+; start as: [para_leader, para_vehicle] exec "para.sqs"
+_who = group (_this select 0)
+_veh = _this select 1
+
+_aunits = units _who
+
+_i = 0
+_j = count _aunits
+
+#Loop
+(_aunits select _i) action ["EJECT",_veh]
+unassignvehicle (_aunits select _i)
+_i=_i+1
+~1
+?_j>_i:goto "Loop"
+
+{unassignvehicle _x} forEach _aunits
+
+_veh flyInHeight 50
