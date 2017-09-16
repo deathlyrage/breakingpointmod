@@ -51,12 +51,14 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 
 * Import the included breakingpoint.sql file from the SQL folder to a clean database and make sure you have a sql account that has full access to that database.
 * Copy the ServerConfig folder to your ArmA server directory.
-* Open the BreakingPointExt.ini in ServerConfig and change the database name, username and password to the ones you setup earlier.
+* Open the BreakingPointExt.ini in ServerConfig and change the database ip, name, username, password and port to the ones you setup earlier.
 	```
-	[Database]
-	dbname = BPA3_1
-	user = root
-	pass =
+	[DATABASE]
+	ip = 127.0.0.1
+	port = 3306
+	database = breakingpointmod
+	username = root
+	password = 
 	```
 * Copy the included server_start.bat file from the Tools folder to your server directory and edit as necessary (The defaults provided will work for a 32Bit server running on port 2302).
 * Double click the batch file and wait for the server to start, if everything went successfully you should see the server start and a console displayed saying the following.
