@@ -10,7 +10,7 @@
 class CfgActions
 {
 	class None; //External Class Ref
-
+  
 	// Disable Unused Actions */
 	class Repair : None {
 		show = 0;
@@ -79,7 +79,7 @@ class CfgActions
 		text = "";
 		showWindow = 0;
 	};
-
+  
 	/*
 		This is only a workaround. It will not solve the core
 		problem. It will only prevent players from grabbing
