@@ -54,7 +54,6 @@ if !(BP_FastBoot) then
 	
 };
 
-//Setup Detected Antihack Data
 // DISABLED: Not functional in open source version yet
 // call BPServer_fnc_updateWeapons;
 // call BPServer_fnc_updateMagazines;

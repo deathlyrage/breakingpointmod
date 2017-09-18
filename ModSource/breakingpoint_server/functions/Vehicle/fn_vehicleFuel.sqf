@@ -48,7 +48,7 @@ if (_vehicle isKindOf "BP_BarrelFuel") exitWith
 		_objectFuelCargo = getFuelCargo _vehicle;
 		["CHILD:398:%1:%2:",_objectUID,_objectFuelCargo] call BPServer_fnc_callExtensionAsyncLow;
 	};
-}
+};
 
 // Handle Refueling Based Upon Owner
 if (local _vehicle) then

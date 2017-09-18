@@ -30,7 +30,7 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 	* Make sure the folders have the correct names on your server (@BreakingPoint and @BreakingPointServer).
 	* BreakingPoint Client: http://steamcommunity.com/sharedfiles/filedetails/?id=426629791
 	* BreakingPoint Server: http://steamcommunity.com/sharedfiles/filedetails/?id=1133182382
-	
+
 	##### If using the provided batch tool.
 	* Copy the batch file to your server directory (or wherever you like), open it and make the following changes.
 	* Make sure you set the correct username and password for steam (The workshop disallows downloads if you're not using a account that owns ArmA 3).
@@ -58,7 +58,7 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 	port = 3306
 	database = breakingpointmod
 	username = root
-	password = 
+	password =
 	```
 * Open the config.cfg in ServerConfig directory and setup your instance, this is important to remember for each server you host.
 	```
@@ -73,10 +73,10 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 	/*
 	List of mission names.
 	"BP1_BreakingPoint.Altis" //Altis
-	"BP2_BreakingPoint.Stratis" //Stratis	
+	"BP2_BreakingPoint.Stratis" //Stratis
 	"BP4_BreakingPoint.Thirsk" //Thirsk
 	"BP3_BreakingPoint.ThirskW" //Thirsk Winter
-	"BP5_BreakingPoint.Tanoa" //Tanoa	
+	"BP5_BreakingPoint.Tanoa" //Tanoa
 	"BP6_BreakingPoint.newhaven" //Newhaven
 	"BP7_BreakingPoint.Esseker" //Esseker
 	"BP8_BreakingPoint.Chernarus" //Chernarus
@@ -111,7 +111,7 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 	12 | Tanoa
 	```
 * Remember if you open more servers increment the instance = x; by one in your server's config.cfg and then in the database set the world id correctly for that instance id
-* Copy the included server_start.bat file from the Tools folder to your server directory and edit as necessary (The defaults provided will work for a 32Bit server running on port 2302).
+* Copy the included server_start.bat file from the Tools folder to your server directory and edit as necessary (The defaults provided will work for a 64 Bit server running on port 2302).
 * Double click the batch file and wait for the server to start, if everything went successfully you should see the server start and a console displayed saying the following.
 	```
 	Starting Connection To Databases...
