@@ -48,7 +48,7 @@ BP_Cleanup_Loot_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "C
 BP_Cleanup_Loot_Nearby = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Loot" >> "nearby");
 //Entities
 BP_Cleanup_Entities_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Entities" >> "interval");
-BP_Cleanup_Entities_Nearby = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Entities" >> "nearby");	
+BP_Cleanup_Entities_Nearby = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Entities" >> "nearby");
 //Global Loot
 BP_Cleanup_GlobalLoot_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "GlobalLoot" >> "interval");
 //Restart
@@ -66,14 +66,13 @@ BP_RadioChannels = [BP_Radio_Ranger,BP_Radio_Outlaw,BP_Radio_Nomad];
 _extra = ["ItemKnife"];
 BP_RemoteAllowedMags = BP_FuelFull + BP_FuelEmpty + BP_Throwables + BP_MeleeAmmo + AllFood + AllDrinks + AllMedical + food_output + drink_output + _extra;
 
-BP_Devs = 
+BP_Devs =
 {
 	[
-		"76561198034785754" //Deathly
 	]
 };
 
-BP_SeniorAdmins = 
+BP_SeniorAdmins =
 {
 	[
 	]
@@ -85,23 +84,23 @@ BP_NinjaAdmins =
 	]
 };
 
-BP_JuniorAdmins = 
+BP_JuniorAdmins =
 {
 	[
 	]
 };
 
-BP_Moderators = 
+BP_Moderators =
 {
 	[
 	]
 };
 
-BP_fnc_playerRank = 
+BP_fnc_playerRank =
 {
 	_playerID = _this;
 	_return = 0;
-	
+
 	//Developer
 	if (_playerID in call BP_Devs) then { _return = 4; };
 	//Senior Admin
