@@ -15,12 +15,12 @@
 _worldObjects = 
 [
 	//Soda Machines
-	["BP_SodaMachine",135,[14615.2,16801.5,0.150148],false],
-	["BP_SodaMachine",90,[3774.5,13002.1,0.171234],false],
-	["BP_SodaMachine",271,[3748.32,13461.2,0.270191],false],
-	["BP_SodaMachine",113,[14165.6,16240.1,0.460176],false],
-	["BP_SodaMachine",246,[5050.75,14436.1,0.652636],false],
-	["BP_SodaMachine",36,[5436.9,15038.4,7.51263],false],
+	["BP_SodaMachine",135,[14615.2,16801.5,0.150148],true],
+	["BP_SodaMachine",90,[3774.5,13002.1,0.171234],true],
+	["BP_SodaMachine",271,[3748.32,13461.2,0.270191],true],
+	["BP_SodaMachine",113,[14165.6,16240.1,0.460176],true],
+	["BP_SodaMachine",246,[5050.75,14436.1,0.652636],true],
+	["BP_SodaMachine",36,[5436.9,15038.4,7.51263],true],
 	
 	//Altis Ranger Barracks:
 
