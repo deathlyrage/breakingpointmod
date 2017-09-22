@@ -12,7 +12,7 @@
 //if (!BP_FactionStrongholds) exitWith {};
 
 //Spawn Soda Machines
-_worldObjects = 
+_worldObjects =
 [
 	//Soda Machines
 	["BP_SodaMachine",135,[14615.2,16801.5,0.150148],true],
@@ -21,7 +21,7 @@ _worldObjects =
 	["BP_SodaMachine",113,[14165.6,16240.1,0.460176],true],
 	["BP_SodaMachine",246,[5050.75,14436.1,0.652636],true],
 	["BP_SodaMachine",36,[5436.9,15038.4,7.51263],true],
-	
+
 	//Altis Ranger Barracks:
 
 	//Eginio
@@ -29,7 +29,7 @@ _worldObjects =
 	["Land_HBarrier_5_F",318.299,[10271.5,7462.37,-1.22324],false],
 	["Land_HBarrier_5_F",227.723,[10263.9,7467.7,-0.220543],false],
 	["Land_HBarrier_5_F",138.523,[10271.5,7462.34,0.0514297],false],
-	["Land_i_Barracks_V1_F",48.4663,[10269.3,7485.48,0.112045],false],
+	["Land_i_Barracks_V1_F",48.4663,[10269.3,7485.48,0.112045],true],
 	["Land_HBarrier_5_F",51.0306,[10285.9,7488.65,1.02602],false],
 	["Land_HBarrier_5_F",50.9114,[10286,7488.63,-0.0742569],false],
 	["Land_HBarrier_5_F",50.0069,[10277,7499.31,0.469086],false],
@@ -45,7 +45,7 @@ _worldObjects =
 	["Land_HBarrier_5_F",319.868,[10290.2,7480.19,-0.357674],false],
 
 	//Kavala
-	["Land_i_Barracks_V1_F",234.888,[3118.06,12515,0.0205836],false],
+	["Land_i_Barracks_V1_F",234.888,[3118.06,12515,0.0205836],true],
 	["Land_HBarrier_5_F",141.878,[3138.67,12505.5,-0.0211494],false],
 	["Land_HBarrier_5_F",141.878,[3134.28,12502,-0.0211494],false],
 	["Land_HBarrier_5_F",234.415,[3123.81,12531.2,-0.121149],false],
@@ -54,20 +54,20 @@ _worldObjects =
 
 
 	//Magos
-	["Land_i_Barracks_V1_F",114.811,[4552,15422.9,0.24411],false],
+	["Land_i_Barracks_V1_F",114.811,[4552,15422.9,0.24411],true],
 	["Land_HBarrier_1_F",297.295,[4563.25,15433.6,1.07471],false],
 	["Land_HBarrier_1_F",115.482,[4567.71,15430.3,-0.244263],false],
 	["Land_HBarrier_1_F",115.746,[4563.25,15433.6,-0.153381],false],
 
 	//Sideras
-	["Land_i_Barracks_V1_F",352.65,[23345.8,24161.3,-0.153916],false],
+	["Land_i_Barracks_V1_F",352.65,[23345.8,24161.3,-0.153916],true],
 
 	//Molos Airfield
-	["Land_i_Barracks_V1_F",38.9139,[26746.1,24573.6,0.0759449],false],
+	["Land_i_Barracks_V1_F",38.9139,[26746.1,24573.6,0.0759449],true],
 
 	//Cap Thelos
-	["Land_i_Barracks_V1_F",58.6248,[24018.4,15460.8,-0.152293],false],
-	
+	["Land_i_Barracks_V1_F",58.6248,[24018.4,15460.8,-0.152293],true],
+
 	//Base 1 - Outlaw
 	/*
 	["BP_Sign_Outlaw",34.1093,[4754.14,17697.1,-0.117416],false],
@@ -909,22 +909,17 @@ _worldObjects =
 ];
 
 {
-	_worldspace = _x;
-	_classname = (_x select 0);
-	_dir = (_x select 1);
-	_posATL = (_x select 2);
-	_random = (_x select 3);
-	
-	_obj = createVehicle [_classname, _posATL, [], 0, "CAN_COLLIDE"];
+	_x params ["_classname","_dir","_posATL","_simulated"];
+	_obj = _classname createVehicle [0,0,0];
 	_obj setDir _dir;
 	_obj setPosATL _posATL;
 	_obj allowDamage false;
-	_obj enableSimulationGlobal false;
+	_obj enableDynamicSimulation true;
 } count _worldObjects;
 
 
 private ["_objs"];
-_objs = 
+_objs =
 [
 	["Land_Cargo_Tower_V2_F",[19379.9,9728.48,-0.191238],0,[[0,1,0],[0,0,1]],false],
 	["Land_Cargo_Tower_V2_F",[19384,9633.13,0.443756],357.727,[[-0.0396551,0.999213,0],[0,0,1]],false],
@@ -1013,14 +1008,15 @@ _objs =
 ];
 
 {
-	private ["_obj"];
-	_obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
-	if (_x select 4) then {
-		_obj setDir (_x select 2);
-		_obj setPos (_x select 1);
+	_x params ["_classname","_position","_dir","_vectorDirAndUp","_useSetDir"];
+	private _obj = _classname createVehicle [0,0,0];
+	if (_useSetDir) then {
+		_obj setDir _dir;
+		_obj setPos _position;
 	} else {
-		_obj setPosATL (_x select 1);
-		_obj setVectorDirAndUp (_x select 3);
+		_obj setPosATL _position;
+		_obj setVectorDirAndUp _vectorDirAndUp;
 	};
 	_obj enableDynamicSimulation true;
 } count _objs;
+true
