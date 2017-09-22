@@ -92,5 +92,11 @@ class CfgMissions
 			briefingName = "Breaking Point Dev";
 			directory = "breakingpoint_code\MPScenarios\BP9_BreakingPoint_Dev.namalsk";
 		};
+		
+		// Bornholm
+		class BP10_BreakingPoint {
+			briefingName = "Breaking Point";
+			directory = "breakingpoint_code\MPScenarios\BP10_BreakingPoint.Bornholm";
+		};
 	};
 };
