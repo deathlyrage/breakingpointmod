@@ -7,7 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-params ["_vehicle","_hitpoint","_damage"];
+params ["_vehicle","_hitpoint","_damage","_hitpoints"];
 
 ["vehicleHandleRepair: Vehicle: %1 | Hitpoint: %2 | Damage: %3",_vehicle,_hitpoint,_damage] call BP_fnc_debugConsoleFormat;
 
@@ -17,12 +17,11 @@ if (isNull _vehicle) exitWith {};
 // Repairing doesn't work on remote vehicles
 if (!local _vehicle) exitWith {};
 
+// Set Hit Points Damage Values Back
+{ _vehicle setHitPointDamage [(_x select 0),(_x select 1)]; } count _hitpoints;
+
 // Repair HitPoint
 _vehicle setHitPointDamage [_hitpoint,_damage];
-
-// Set Hit Points Damage Values Back
-_hitpoints = _vehicle call BP_fnc_vehicleHitpointsDmg;
-{ _vehicle setHitPointDamage [(_x select 0),(_x select 1)]; } count _hitpoints;
 
 // Bump Vehicle to Sync It Over Network
 _vehicle setVelocity [0,0,1];
