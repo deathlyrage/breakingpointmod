@@ -38,7 +38,7 @@ if (_isAdmin) then {
 _primary = _loginTicket call BPServer_fnc_callExtensionResult;
 
 //Hive Error Checking
-if ((_primary select 0) == "ERROR") exitWith {	
+if ((_primary select 0) == "ERROR") exitWith {
     diag_log format ["LOGIN FAILED: %3 (%2) Unable to load _primary: %1 ",_primary,_playerID,_playerName];
 	[_clientID,[_playerID,"ERROR","Login Failure: Critical Hive Failure #1"]] call BPServer_fnc_sendLogin;
 };
@@ -92,11 +92,11 @@ _setupTicket = ["CHILD:202:%1:",_charID] call BPServer_fnc_callExtensionTicket;
 _primary = _setupTicket call BPServer_fnc_callExtensionResult;
 
 //Error Checking
-if ((_primary select 0) == "ERROR") exitWith {	
+if ((_primary select 0) == "ERROR") exitWith {
 	//Return Hive Extension Error
 	diag_log format ["LOGIN FAILED: %3 (%2) Critical Hive Failure #2: %1 ",_primary,_playerID,_playerName];
 	[_clientID,[_playerID,"ERROR","Login Failure: Critical Hive Failure #2"]] call BPServer_fnc_sendLogin;
-	
+
 	//Handle Cleanup
 	deleteVehicle _body;
 	deleteGroup _group;
@@ -129,20 +129,27 @@ if (_undead < POINTMIN or _undead > POINTMAX) then { _undead = 0; };
 
 //Persistent Groups
 _validLegion = false;
-if (_clan != "0") then 
+_squadData = squadParams _player;
+if !(_squadData isEqualTo []) then
 {
-	_squadData = squadParams _player;
-	if !(_squadData isEqualTo []) then
+	_squadData params ["_squadDetails","_memberDetails"];
+	_squadDetails params ["_squadNick","_squadName","_squadEmail"];
+	if !(_squadEmail isEqualTo "") then
 	{
-		_squadData params ["_squadDetails","_memberDetails"];
-		_squadDetails params ["_squadNick","_squadName","_squadEmail"];
-		if (_squadEmail == _clan) then
+		_legionDataVarName = format["BP_LegionData:%1:%2", _squadName, _squadEmail];
+		if !((missionNamespace getVariable [_legionDataVarName, ""]) isEqualTo "") then
 		{
-			_validLegion = true;
-			_body setVariable ["group",_clan,true];
-			_body setVariable ["groupTag",_squadNick,false];
-			_body setVariable ["groupName",_squadName,false];
+			_clan = missionNamespace getVariable [_legionDataVarName, ""];
+		}
+		else
+		{
+			_clan = call BP_fnc_groupCreateUID;
+			missionNamespace setVariable [_legionDataVarName, _clan];
 		};
+		_body setVariable ["group", _clan, true];
+		_body setVariable ["groupTag", _squadNick, false];
+		_body setVariable ["groupName", _squadName, false];
+		_validLegion = true;
 	};
 };
 
@@ -150,7 +157,7 @@ if (BP_LegionOnly and !_validLegion) exitWith
 {
 	["playerLoegion: REJECTED: Player %1 (%2) Login Failure: Error ID: 7",_playerName,_playerID] call BP_fnc_debugConsoleFormat;
 	[_clientID,[_playerID,"ERROR","7"]] call BPServer_fnc_sendLogin;
-	
+
 	//Handle Cleanup
 	deleteVehicle _body;
 	deleteGroup _group;
@@ -168,17 +175,17 @@ if !(_worldspace isEqualTo []) then
 
 		//Ensure Player Has Valid Position
 		if (count _position < 3) exitWith { _randomSpot = true; };
-		
+
 		//Ensure Player Isn't In Debug
 		if (((getMarkerPos BP_DebugMarker) distance _position) < BP_DebugRadius) exitWith { _randomSpot = true; };
-		
+
 		//Ensure Player Isn't Near [0,0,0]
 		if (([0,0,0] distance _position) < 500) exitWith { _randomSpot = true; };
-		
+
 		//Ensure Player Isn't Inside A Building
 		_inside = [_position] call BP_fnc_isInsideBuildingPos;
 		if (_inside) exitWith { _randomSpot = true; };
-		
+
 	} else {
 		_randomSpot = true;
 	};
@@ -292,7 +299,7 @@ if !(_dogData isEqualTo []) then
 	_dog setVariable ["CharacterID",_charID,true];
 	_dog setVariable ['BIS_noCoreConversations',true];
 	_dog setVariable ['BIS_fnc_animalBehaviour_disable',true];
-	_body setVariable ["dog",_dog,true];	
+	_body setVariable ["dog",_dog,true];
 };
 */
 
