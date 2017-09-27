@@ -40,9 +40,9 @@ _vehicle setDamage _totalDamage;
 // Handle Locality Specific Repair
 if (local _vehicle) then
 {
-	[_vehicle,_hitpoint,_damage] call BP_fnc_vehicleHandleRemove;
+	[_vehicle,_hitpoint,_damage,_hitpoints] call BP_fnc_vehicleHandleRemove;
 } else {
-	[_vehicle,_hitpoint,_damage] remoteExecCall ["BP_fnc_vehicleHandleRemove", _vehicle];
+	[_vehicle,_hitpoint,_damage,_hitpoints] remoteExecCall ["BP_fnc_vehicleHandleRemove", _vehicle];
 };
 
 // Create Removed Part
