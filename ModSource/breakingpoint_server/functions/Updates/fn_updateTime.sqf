@@ -13,32 +13,32 @@
 if (BP_Dev) exitWith {};
 
 // Check time multiplier -server start-
-if (BP_Weather_Current == BP_Weather_None) then 
+if (BP_Weather_Current == BP_Weather_None) then
 {
 	_config = (configFile >> "CfgTime" >> worldName);
 	_startDateInfo = getArray (_config >> "date");
 	_startDateInfo params ["_day","_month","_year"];
-	
+
 	_timeState = profileNameSpace getVariable ["timeState",true];
 	if (_timeState) then { _timeState = false; } else { _timeState = true; };
 	profileNameSpace setVariable ["timeState",_timeState];
 	saveProfileNamespace;
-	
+
 	_startTimeInfo = [0,0];
 	if (!_timeState) then {
 		_startTimeInfo = getArray (_config >> "first");
 	} else {
 		_startTimeInfo = getArray (_config >> "second");
 	};
-	
+
 	_startTimeInfo params ["_hour","_minute"];
 
 	//Update Date
 	setDate [_year,_month,_day,_hour,_minute];
-	
+
 	//Set Initial Weather
 	BP_Weather_Current = BP_Weather_Sunny;
-	
+
 	//Thirsk Snow
 	//if (worldName == "thirskw" || {worldName == "namalsk"}) then
 	//{
@@ -48,77 +48,84 @@ if (BP_Weather_Current == BP_Weather_None) then
 	//	setWind [0.201112*2,0.204166*2,false];
 	//	simulWeatherSync;
 	//};
-	
+
 	[] spawn
 	{
-		_weatherTemplates = 
+		_weatherTemplates =
 		[
 			//Clear and Sunny
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			["Clear",[0.30,0,0,0,0]],
-			
-			
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+			["Clear", [0.30,0,0,0,0]],
+
 			//Stormy
-			["Rainstorm",[0.80,0.9,0.1,0,0,1]],
-			["Rainstorm",[0.632,0.513,0,0,0,0]],
-			["Rainstorm",[0.722,0.513,0,0,0,0]],
-			["Rainstorm",[0.786,0.513,0,0,0,1]],
-			["Rainstorm",[0.722,0.626,0,0,0,0]],
-			["Rainstorm",[0.786,0.626,0,0,0,0]],
-			
-			["Rainstorm",[0.8827,0.626,0,0,0,1]],
-			["Rainstorm",[0.786,0.782,0,0,0,0]],
-			["Rainstorm",[0.8827,0.782,0,0,0,0]],
-			["Rainstorm",[0.927,0.920,0,0,0,1]],
-			
-			["Rainstorm",[1,1,0,0,0,1]],		
-			["Rainstorm",[0.544,0.422,0,0,0,0]],
-			["Rainstorm",[0.632,0.422,0,0,0,0]],
-			["Rainstorm",[0.544,0.3,0,0,0,0]],
-			
+			["Rainstorm", [0.80,0.9,0.1,0,0,1]],
+			["Rainstorm", [0.632,0.513,0,0,0,0]],
+			["Rainstorm", [0.722,0.513,0,0,0,0]],
+			["Rainstorm", [0.786,0.513,0,0,0,1]],
+			["Rainstorm", [0.722,0.626,0,0,0,0]],
+			["Rainstorm", [0.786,0.626,0,0,0,0]],
+
+			["Rainstorm", [0.8827,0.626,0,0,0,1]],
+			["Rainstorm", [0.786,0.782,0,0,0,0]],
+			["Rainstorm", [0.8827,0.782,0,0,0,0]],
+			["Rainstorm", [0.927,0.920,0,0,0,1]],
+
+			["Rainstorm", [1,1,0,0,0,1]],
+			["Rainstorm", [0.544,0.422,0,0,0,0]],
+			["Rainstorm", [0.632,0.422,0,0,0,0]],
+			["Rainstorm", [0.544,0.3,0,0,0,0]],
+
 			//Rainy
-			["Overcast",[0.50,0,0,0,0]],
-			["Light Rain",[0.60,0.3,0.05,0,0]],
-			["Medium Rain",[0.70,0.5,0.05,0,0]],
-			
-			["Medium Rain",[0.55,0.0344,0,0,0,0]],
-			["Medium Rain",[0.557,0.0530,0,0,0,0]],
-			["Medium Rain",[0.557,0.0800,0,0,0,0]],
-			["Medium Rain",[0.568,0.1230,0,0,0,0]],
-			["Medium Rain",[0.572,0.2130,0,0,0,0]],
-			
-			
-			
+			["Overcast", [0.50,0,0,0,0,0]],
+			["Light Rain", [0.60,0.3,0.05,0,0]],
+			["Medium Rain", [0.70,0.5,0.05,0,0]],
+
+			["Medium Rain", [0.55,0.0344,0,0,0,0]],
+			["Medium Rain", [0.557,0.0530,0,0,0,0]],
+			["Medium Rain", [0.557,0.0800,0,0,0,0]],
+			["Medium Rain", [0.568,0.1230,0,0,0,0]],
+			["Medium Rain", [0.572,0.2130,0,0,0,0]],
+
 			//Foggy
-			["Light Fog",[0.4,0,[0.2,0.01,15],0,0]],
-			["Medium Fog",[0.4,0,[0.4,0.005,25],0,0]],
-			["Dense Fog",[0.5,0,[0.4,0.0025,30],0,0]]
+			["Light Fog", [0.4,0,[0.2,0.01,15],0,0]],
+			["Medium Fog", [0.4,0,[0.4,0.005,25],0,0]],
+			["Dense Fog", [0.5,0,[0.4,0.0025,30],0,0]]
 		];
-		
+
 		_weatherTemplate = selectRandom _weatherTemplates;
-		(_weatherTemplate select 1) params ["_weatherInitialOvercast","_weatherInitialRainSnow","_weatherInitialFog","_weatherInitialWindEW","_weatherInitialWindNS","_weatherInitialLightning"];
+		(_weatherTemplate select 1) params
+		[
+			["_weatherInitialOvercast", 0, [0]],
+			["_weatherInitialRainSnow", 0, [0]],
+			["_weatherInitialFog", 0, [0, []]],
+			["_weatherInitialWindEW", 0, [0]],
+			["_weatherInitialWindNS", 0, [0]],
+			["_weatherInitialLightning", 0, [0]]
+		];
+
+		["updateTime: Setting weather to %1: %2.", (_weatherTemplate select 0), (_weatherTemplate select 1)] call BP_fnc_debugConsoleFormat;
 
 		skipTime -24;
 		86400 setOvercast _weatherInitialOvercast;

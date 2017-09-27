@@ -12,7 +12,7 @@
 //if (!BP_FactionStrongholds) exitWith {};
 
 //Spawn Soda Machines
-_worldObjects = 
+_worldObjects =
 [
 	//Soda Machines
 	["BP_SodaMachine",135,[14615.2,16801.5,0.150148],true],
@@ -21,7 +21,7 @@ _worldObjects =
 	["BP_SodaMachine",113,[14165.6,16240.1,0.460176],true],
 	["BP_SodaMachine",246,[5050.75,14436.1,0.652636],true],
 	["BP_SodaMachine",36,[5436.9,15038.4,7.51263],true],
-	
+
 	//Altis Ranger Barracks:
 
 	//Eginio
@@ -67,7 +67,7 @@ _worldObjects =
 
 	//Cap Thelos
 	["Land_i_Barracks_V1_F",58.6248,[24018.4,15460.8,-0.152293],true],
-	
+
 	//Base 1 - Outlaw
 	/*
 	["BP_Sign_Outlaw",34.1093,[4754.14,17697.1,-0.117416],false],
@@ -516,7 +516,7 @@ _worldObjects =
 	["Land_WaterTank_F",235.119,[16892.4,21857.7,0.000183105],false],
 	["MapBoard_altis_F",266.141,[16894.3,21855.5,-0.00176907],false],
 	["Land_BarrelWater_F",270.739,[16890.9,21859.3,0.000171661],false],
-	["Land_i_House_Small_03_V1_dam_F",235.232,[16903.5,21882.5,0.254699],true],
+	["Land_i_House_Small_03_V1_dam_F",235.232,[16903.5,21882.5,0.254699],false],
 	["Land_IndPipe2_bigL_L_F",233.863,[16905.4,21872.1,0.291951],false],
 	["Land_IndPipe2_big_ground1_F",234.169,[16908.6,21876,0.441319],false],
 	//["Land_Cargo40_military_green_F",320.88,[16893.4,21897.9,2.49135],false],
@@ -656,7 +656,7 @@ _worldObjects =
 
 	//Base 4 - Nomad
 
-	["Land_Slum_House03_F",154.307,[14710.4,10859.5,-0.0253153],true],
+	["Land_Slum_House03_F",154.307,[14710.4,10859.5,-0.0253153],false],
 	["Land_Lighthouse_small_F",180.861,[14744.2,11154.6,-0.0211434],false],
 	["Land_BeachBooth_01_F",110.614,[14808.8,10998.2,-0.00511003],false],
 	["Land_i_Addon_03_V1_F",110.172,[14806.6,11012.3,0.0416448],false],
@@ -691,7 +691,7 @@ _worldObjects =
 	["Land_Razorwire_F",42.4707,[14890.1,10980.5,-0.113884],false],
 	["Land_Razorwire_F",32.7592,[14900.6,10980.4,-0.0660915],false],
 	["Land_Razorwire_F",40.7036,[14887,10990.2,-0.0720205],false],
-	["Land_i_House_Big_01_V1_F",43.9168,[14896.5,11063.5,-0.000742912],true],
+	["Land_i_House_Big_01_V1_F",43.9168,[14896.5,11063.5,-0.000742912],false],
 	["Land_City_Gate_F",44.8957,[14880.5,11064.1,-0.0230389],false],
 	["Land_Razorwire_F",38.6648,[14914.5,10971.2,-0.158106],false],
 	["Land_HBarrier_5_F",31.9508,[14921.3,10965,-0.309544],false],
@@ -700,7 +700,7 @@ _worldObjects =
 	["Land_CncBarrier_stripes_F",44.4422,[14928.9,10985.7,-0.0728674],false],
 	["Land_CncBarrier_stripes_F",1.3726,[14921.4,10990.7,-0.0881853],false],
 	["Land_CncBarrier_stripes_F",44.4422,[14924.8,10989.6,-0.0949535],false],
-	["Land_i_House_Small_01_V1_F",314.401,[14914.5,11090.1,0.0143204],true],
+	["Land_i_House_Small_01_V1_F",314.401,[14914.5,11090.1,0.0143204],false],
 	["Land_PowerPoleWooden_L_F",129.749,[14943.6,11084.9,0.0141206],false],
 	["Land_u_Addon_02_V1_F",15.7023,[14945.2,11190,0.0325909],false],
 	["Land_BeachBooth_01_F",297.245,[15023.1,11068.4,-0.00235915],false],
@@ -713,7 +713,7 @@ _worldObjects =
 	["Land_i_Addon_03_V1_F",91.7498,[15156.8,10985.8,0.0173254],false],
 
 	["BP_Sign_Nomad",186.715,[14759.1,10811.7,0.25247],false],
-	["Land_Slum_House03_F",154.307,[14710.4,10859.5,-0.0253153],true],
+	["Land_Slum_House03_F",154.307,[14710.4,10859.5,-0.0253153],false],
 	["Land_Shed_Big_F",184.609,[14746,10769.4,-1.70015],false],
 	["Land_Metal_Shed_F",3.07758,[14757.4,10760.2,-0.43627],false],
 	["Land_Mound01_8m_F",97.4479,[14757.7,10751.5,0.267392],false],
@@ -817,7 +817,7 @@ _worldObjects =
 	["Land_Pallets_stack_F",87.6248,[14774.2,10774.1,0.00148535],false],
 	["Land_Sack_F",40.8666,[14781.5,10770.1,0.0619946],false],
 	["Land_Sack_F",12.617,[14781.1,10770.7,0.108471],false],
-	["Land_BarGate_F",11.2379,[14771,10816.5,-0.163774],true],
+	["Land_BarGate_F",11.2379,[14771,10816.5,-0.163774],false],
 	["Land_GH_Stairs_F",98.3658,[14784.8,10805.6,-0.88069],false],
 	["Land_BagBunker_Small_F",191.6,[14764.5,10814.9,-0.0291739],false],
 	["Land_BagBunker_Small_F",190.434,[14775.8,10812.7,-0.0428123],false],
@@ -905,34 +905,21 @@ _worldObjects =
 	["Land_Wreck_Truck_F",325,[14820.5,10905.4,-0.187699],false],
 	["Land_d_Stone_Shed_V1_F",3.08,[14875,10732.8,0.00773048],false],
 	["Land_Kiosk_gyros_F",41.5643,[14867.4,11065.8,0.35342],false],
-	["Land_City_Gate_F",44.8957,[14880.5,11064.1,-0.0230389],true]
+	["Land_City_Gate_F",44.8957,[14880.5,11064.1,-0.0230389],false]
 ];
 
 {
-	_worldspace = _x;
-	_classname = (_x select 0);
-	_dir = (_x select 1);
-	_posATL = (_x select 2);
-	_simulation = (_x select 3);
-	
-	_obj = createVehicle [_classname, _posATL, [], 0, "CAN_COLLIDE"];
+	_x params ["_classname","_dir","_posATL","_simulated"];
+	_obj = _classname createVehicle [0,0,0];
 	_obj setDir _dir;
 	_obj setPosATL _posATL;
 	_obj allowDamage false;
-
-	if (_simulation) then
-	{
-		_obj enableDynamicSimulation true;
-	}
-	else
-	{
-		_obj enableSimulationGlobal false;
-	};
+	_obj enableDynamicSimulation true;
 } count _worldObjects;
 
 
 private ["_objs"];
-_objs = 
+_objs =
 [
 	["Land_Cargo_Tower_V2_F",[19379.9,9728.48,-0.191238],0,[[0,1,0],[0,0,1]],false],
 	["Land_Cargo_Tower_V2_F",[19384,9633.13,0.443756],357.727,[[-0.0396551,0.999213,0],[0,0,1]],false],
@@ -1021,14 +1008,15 @@ _objs =
 ];
 
 {
-	private ["_obj"];
-	_obj = createVehicle [_x select 0, [0,0,0], [], 0, "CAN_COLLIDE"];
-	if (_x select 4) then {
-		_obj setDir (_x select 2);
-		_obj setPos (_x select 1);
+	_x params ["_classname","_position","_dir","_vectorDirAndUp","_useSetDir"];
+	private _obj = _classname createVehicle [0,0,0];
+	if (_useSetDir) then {
+		_obj setDir _dir;
+		_obj setPos _position;
 	} else {
-		_obj setPosATL (_x select 1);
-		_obj setVectorDirAndUp (_x select 3);
+		_obj setPosATL _position;
+		_obj setVectorDirAndUp _vectorDirAndUp;
 	};
 	_obj enableDynamicSimulation true;
 } count _objs;
+true
