@@ -329,9 +329,10 @@ _numVehicles =
 		_object setDir _dir;
 			
 		//Set Exact Position
-		if(_object isKindOf "Ship")then{
+		if (_object isKindOf "Ship") then 
+		{
 			_object setPosASL [(_pos select 0),(_pos select 1),0];
-		}else{
+		} else {
 			_object setPosATL _pos;
 			//Set Vector Update on Cars and Helicopters
 			_object setVectorUp (surfaceNormal _pos);		

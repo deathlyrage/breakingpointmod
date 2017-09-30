@@ -227,10 +227,12 @@ _player call BPServer_fnc_radioCheck;
 //Set Player Position and Direction
 _player setDir (_worldspace select 0);
 _player setPosATL (_worldspace select 1);
-if(((eyePos _player)select 2 < 0)  && ((_worldspace select 1)select 2 == 0))then
-	{
-		_player setPosASL [(_worldspace select 1)select 0,(_worldspace select 1)select 1,0];
-	};
+
+if (((eyePos _player) select 2 < 0) && ((_worldspace select 1) select 2 == 0)) then
+{
+	_player setPosASL [(_worldspace select 1) select 0, (_worldspace select 1) select 1, 0];
+};
+
 _player enableSimulationGlobal true;
 
 //Send Login Result
