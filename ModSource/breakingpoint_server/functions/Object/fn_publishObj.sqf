@@ -21,7 +21,7 @@ if (_pos isEqualTo [0,0,0]) exitWith {};
 _valid = true;
 
 //Check Object Limit
-_limit = 7;
+_limit = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "StorageObjects" >> "StorageLimit");
 _storageCount = 0;
 {
 	if (!isNull _x) then {
