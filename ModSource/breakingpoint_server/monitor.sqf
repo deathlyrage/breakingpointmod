@@ -329,10 +329,13 @@ _numVehicles =
 		_object setDir _dir;
 			
 		//Set Exact Position
-		_object setPosATL _pos;
-			
-		//Set Vector Update on Cars and Helicopters
-		_object setVectorUp (surfaceNormal _pos);
+		if(_object isKindOf "Ship")then{
+			_object setPosASL [(_pos select 0),(_pos select 1),0];
+		}else{
+			_object setPosATL _pos;
+			//Set Vector Update on Cars and Helicopters
+			_object setVectorUp (surfaceNormal _pos);		
+		};
 
 		//Fix for Helicopters Exploding when you enter them - Agent Rev
 		// https://github.com/A3Wasteland/ArmA3_Wasteland.Altis/blob/ae57a23489c4fb733cee3deb51a45f65bfcbebf1/server/spawning/staticHeliCreation.sqf#L26-L27
