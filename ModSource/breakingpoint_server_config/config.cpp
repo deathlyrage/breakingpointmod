@@ -13,7 +13,7 @@ class CfgBreakingPointServerSettings
 {
 	class StorageObjects
 	{
-		StorageLimit = 7;		// Storage object Limit
+		storageLimit = 7;		// Storage object Limit
 	};
 };
 
