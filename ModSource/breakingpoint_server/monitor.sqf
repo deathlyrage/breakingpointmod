@@ -104,16 +104,14 @@ call BPServer_fnc_updateTime;
 call compile preprocessFileLineNumbers format ["\breakingpoint_server\maps\%1.sqf",worldName];
 
 //Spawn In Loot 3.0 Coords
-if(getNumber(configFile >> "CfgBreakingPointServerSettings" >> "CustomLoot" >> "customLootSetting") > 0) then
+_customLootSetting = getNumber(configFile >> "CfgBreakingPointServerSettings" >> "CustomLoot" >> "customLootSetting");
+if(_customLootSetting > 0) then
 {
 	{
 		_x params ["_minLoot","_maxLoot","_radius","_lootType","_lootPos",["_chance",1]];
-		if(getNumber(configFile >> "CfgBreakingPointServerSettings" >> "CustomLoot" >> "customLootSetting") == 2) then
+		if(_customLootSetting == 2 && _lootType == "AmmoPallet4") then
 		{
-			if (_lootType == "AmmoPallet4" then
-			{
-				_lootType = "GhostHotelWpn";
-			};
+			_lootType = "GhostHotelWpn";
 		};
 		_rnd = random 1;
 		if (_rnd < _chance) then
