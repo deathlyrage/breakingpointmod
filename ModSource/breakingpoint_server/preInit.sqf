@@ -37,7 +37,6 @@ if (isArray (_cfgHelicrash >> "World" >> worldName)) then
 	BP_HeliCrash = true;
 	BP_HeliCrashModels = getArray (_cfgHelicrash >> "models");
 	BP_HeliCrashPos = getArray (_cfgHelicrash >> "World" >> worldName);
-	BP_HeliCrashPos = BP_HeliCrashPos call BIS_fnc_arrayShuffle;
 } else {
 	BP_HeliCrash = false;
 	BP_HeliCrashModels = [];
@@ -55,7 +54,6 @@ if (isClass (_cfgCargocrash >> "World" >> worldName)) then
 	BP_CargoCrashCrashpoints = getArray (_cfgCargocrash >> "World" >> worldName >> "crashpoints");
 	BP_CargoCrashWaypoints = BP_CargoCrashWaypoints call BIS_fnc_arrayShuffle;
 	BP_CargoCrashDroppoints = BP_CargoCrashDroppoints call BIS_fnc_arrayShuffle;
-	BP_CargoCrashCrashpoints = BP_CargoCrashCrashpoints call BIS_fnc_arrayShuffle;
 	
 } else {
 	BP_CargoCrash = false;
