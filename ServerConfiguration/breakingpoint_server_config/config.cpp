@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"breakingpoint_code"};
+		requiredAddons[] = {"breakingpoint_server"};
 	};
 };
 ////////////////////////////////////////////////////////////////////////////////////
@@ -24,9 +24,9 @@ class CfgDifficultyPresets
 		class Options
 		{
 			waypoints=0;		// Waypoints Regular(3PP) (0 = never, 1 = fade out, 2 = always)
-		};		
+		};
 	};
-	
+
 	class Veteran
 	{
 		class Options
