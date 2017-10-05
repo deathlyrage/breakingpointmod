@@ -41,6 +41,10 @@ class CfgBreakingPointServerSettings
 	{
 		storageLimit = 7;		// Storage object Limit
 	};
+	class CustomLoot
+	{
+		customLootSetting = 1;	// 0 = SC off 	1 = SC on 	2 = ghosthotel weapon insted of SC
+	};
 };
 
 class CfgDifficultyPresets
