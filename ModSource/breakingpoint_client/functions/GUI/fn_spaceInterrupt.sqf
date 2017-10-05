@@ -745,6 +745,17 @@ if (_dikCode in actionKeys "User11") then
 	_handled = true;
 };
 
+if (_dikCode in actionKeys "User12") then {
+		_rangerPoints = player getVariable ["Ranger",0];
+		_nomadPoints = player getVariable ["Nomad",0];
+		_survivalistPoints = player getVariable ["Survivalist",0];
+		_hunterPoints = player getVariable ["Hunter",0];
+		_outlawPoints = player getVariable ["Outlaw",0];
+		_undeadPoints = player getVariable ["Undead",0];
+		hint format ["Ranger Points: %1\nNomad Points: %2\nSurvivalist Points: %3\nHunter Points: %4\nOutlaw Points: %5\nUndead Points: %6",_rangerPoints,_nomadPoints,_survivalistPoints,_hunterPoints,_outlawPoints,_undeadPoints];
+	_handled = true;
+};
+
 if (_dikCode in actionKeys "User19") then {
 	if (time - BP_lastCheckBit > 1) then
 	{
