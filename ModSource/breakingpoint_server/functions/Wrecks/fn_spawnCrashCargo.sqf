@@ -7,7 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-private ["_position","_preWaypointPos","_wp","_index","_itemType","_lootPos","_nearby","_RandStartPos","_BackupWaypoint","_CentreMarker","_CentreRadius","_CentreMarkerPos","_CentreVehicleID","_CentreVehicle","_preWaypoints","_guaranteedLoot","_randomizedLoot","_spawnFire","_fadeFire","_crashDamage","_heliModel","_crashModel","_exploRange","_lootRadius","_heliStart","_safetyPoint","_crashName","_lootTable","_position","_startTime","_crashwreck","_landingzone","_aigroup","_helipilot","_wp2","_wp3","_pos","_crash","_num","_config","_itemTypes","_weights","_cntWeights","_endTime"];
+private ["_position","_preWaypointPos","_wp","_index","_itemType","_lootPos","_nearby","_RandStartPos","_BackupWaypoint","_CentreMarker","_CentreRadius","_CentreMarkerPos","_CentreVehicleID","_CentreVehicle","_preWaypoints","_guaranteedLoot","_randomizedLoot","_spawnFire","_fadeFire","_crashDamage","_heliModel","_crashModel","_exploRange","_lootRadius","_heliStart","_safetyPoint","_crashName","_lootTable","_roll","_position","_startTime","_crashwreck","_landingzone","_aigroup","_helipilot","_wp2","_wp3","_pos","_crash","_num","_config","_itemTypes","_weights","_cntWeights","_endTime"];
 
 if (!BP_CargoCrash) exitWith {};
 
@@ -42,8 +42,9 @@ _crashName = getText (configFile >> "CfgVehicles" >> _heliModel >> "displayName"
 _lootTables = getArray (configFile >> "CfgHelicrash" >> "loots");
 _lootTable = selectRandom _lootTables;
 
-//Select Random Position (Already Shuffled) and Delete it out of the array
-_position = BP_CargoCrashCrashpoints deleteAt 0;
+//Select Random Position and Delete it out of the array
+_roll = floor random (count BP_CargoCrashCrashpoints);
+_position = BP_CargoCrashCrashpoints deleteAt _roll;
 
 ["spawnCrashSite: %1 started flying from %2 to %3 NOW!(TIME:%4||LT:%5)~0001", _crashName, _heliStart, _position, round(time), _lootTable] call BP_fnc_debugConsoleFormat;
 
