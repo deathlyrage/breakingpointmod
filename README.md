@@ -119,9 +119,9 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 	```
 
 ## Custom Server Configfile
-* download from Github "breakingpointmod/ServerConfiguration" the folder "breakingpoint_server_config" to your server 
-* edit the config.cpp in the "breakingpoint_server_config" to your server liking
-* pack the folder "breakingpoint_server_config" to a .pbo and put it in your server root directory inside "@BreakingPointServer/addons"
+* Download from Github "breakingpointmod/ServerConfiguration" the folder "breakingpoint_server_config" to your server 
+* Edit the config.cpp in the "breakingpoint_server_config" to your server liking
+* Pack the folder "breakingpoint_server_config" to a .pbo and put it in your server root directory inside "@BreakingPointServer/addons"
 
 ## Credits/Notable mentions.
 * DeathlyRage - For tirelessly working hard over the years to maintain and develop such a high quality mod.
