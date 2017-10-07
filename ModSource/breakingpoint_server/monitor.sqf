@@ -104,19 +104,26 @@ call BPServer_fnc_updateTime;
 call compile preprocessFileLineNumbers format ["\breakingpoint_server\maps\%1.sqf",worldName];
 
 //Spawn In Loot 3.0 Coords
+_customLootSetting = getNumber(configFile >> "CfgBreakingPointServerSettings" >> "CustomLoot" >> "customLootSetting");
+if(_customLootSetting > 0) then
 {
-	_x params ["_minLoot","_maxLoot","_radius","_lootType","_lootPos",["_chance",1]];
-
-	_rnd = random 1;
-	if (_rnd < _chance) then
 	{
-		_logic = createVehicle ["Land_House_Logic", _lootPos, [], 0, "NONE"];
-		_logic setVariable ["minLoot",_minLoot,true];
-		_logic setVariable ["maxLoot",_maxLoot,true];
-		_logic setVariable ["lootRadius",_radius,true];
-		_logic setVariable ["lootType",_lootType,true];
-	};
-} count (getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Loot" >> "customLoot"));
+		_x params ["_minLoot","_maxLoot","_radius","_lootType","_lootPos",["_chance",1]];
+		if(_customLootSetting == 2 && _lootType == "AmmoPallet4") then
+		{
+			_lootType = "GhostHotelWpn";
+		};
+		_rnd = random 1;
+		if (_rnd < _chance) then
+		{
+			_logic = createVehicle ["Land_House_Logic", _lootPos, [], 0, "NONE"];
+			_logic setVariable ["minLoot",_minLoot,true];
+			_logic setVariable ["maxLoot",_maxLoot,true];
+			_logic setVariable ["lootRadius",_radius,true];
+			_logic setVariable ["lootType",_lootType,true];
+		};
+	} count (getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Loot" >> "customLoot"));
+};
 
 //Lock The Houses
 {
