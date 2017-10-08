@@ -73,6 +73,18 @@ class RscStructuredTextGUI: RscStructuredText
 		valign = "middle";
 	};
 };
+class RscStructuredTextStats: RscStructuredText
+{
+		colorBackground[]={0,0,0,0};
+	class Attributes: Attributes
+	{
+		font="sketch";
+		size="2 * 	(0.04)";
+		color="#A82B14";
+		align="center";
+		valign="bottom";
+	};
+};
 
 class CA_TextLanguage;
 class RscXListBox;
@@ -1460,7 +1472,7 @@ class BP_InfoText : RscText
 
 class RscTitles
 {
-	titles[] = {"RscBPTimer","RscDisplayInfoScreen"};
+	titles[] = {"RscBPTimer","RscDisplayInfoScreen","RscDisplayInfoScreenStats"};
 	
 	class Default
 	{
@@ -1665,7 +1677,184 @@ class RscTitles
 			};
 		};
 	};
-	
+	class RscDisplayInfoScreenStats
+	{
+		idd=6942;
+		enableSimulation=1;
+		movingEnable=0;
+		duration=1e+011;
+		fadein=1;
+		fadeout=1;
+		onLoad="_this call BP_fnc_factionStatsDiary";
+		class controlsBackground
+		{
+			class MainbackStats: RscPicture
+			{
+				idc=1020;
+				text="\breakingpoint_ui\info\InfoScreen.paa";
+				x="0.783594 * safezoneW + safezoneX";
+				y="0.401 * safezoneH + safezoneY";
+				w="0.262969 * safezoneW";
+				h="0.77 * safezoneH";
+			};
+		};
+		class controls
+		{
+			class BP_MapStats: BP_InfoText
+			{
+				idc=1021;
+				text="New Haven";
+				x="0.807500 * safezoneW + safezoneX";
+				y="0.442 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_Map2Stats: BP_InfoText
+			{
+				idc=1022;
+				text="New Haven";
+				x="0.925000 * safezoneW + safezoneX";
+				y="0.523 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_DayStats: BP_InfoText
+			{
+				idc=1023;
+				text="35";
+				x="0.937500 * safezoneW + safezoneX";
+				y="0.442 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_LocationStats: BP_InfoText
+			{
+				idc=1024;
+				text="AAC Airfield";
+				x="0.834383 * safezoneW + safezoneX";
+				y="0.480 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_RangerStats: RscStructuredTextStats
+			{
+				idc=1025;
+				text="9999";
+				x="0.768000 * safezoneW + safezoneX";
+				y="0.625 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_NomadStats: RscStructuredTextStats
+			{
+				idc=1026;
+				text="9999";
+				x="0.820500 * safezoneW + safezoneX";
+				y="0.625 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_SurvivalistStats: RscStructuredTextStats
+			{
+				idc=1027;
+				text="9999";
+				x="0.872500 * safezoneW + safezoneX";
+				y="0.625 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_EngineerStats: RscStructuredTextStats
+			{
+				idc=1028;
+				text="9999";
+				x="0.926000 * safezoneW + safezoneX";
+				y="0.625 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_HunterStats: RscStructuredTextStats
+			{
+				idc=1029;
+				text="9999";
+				x="0.768000 * safezoneW + safezoneX";
+				y="0.715 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_OutlawStats: RscStructuredTextStats
+			{
+				idc=1030;
+				text="9999";
+				x="0.820500 * safezoneW + safezoneX";
+				y="0.715 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_IndependentStats: RscStructuredTextStats
+			{
+				idc=1031;
+				text="9999";
+				x="0.872500 * safezoneW + safezoneX";
+				y="0.715 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_UndeadStats: RscStructuredTextStats
+			{
+				idc=1032;
+				text="9999";
+				x="0.926000 * safezoneW + safezoneX";
+				y="0.715 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_UndeadKilledStats: BP_InfoText
+			{
+				idc=1033;
+				text="98";
+				x="0.811000 * safezoneW + safezoneX";
+				y="0.760 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_ZombiesKilledStats: BP_InfoText
+			{
+				idc=1034;
+				text="99";
+				x="0.811500 * safezoneW + safezoneX";
+				y="0.790 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_HumansKilledStats: BP_InfoText
+			{
+				idc=1035;
+				text="99";
+				x="0.811500 * safezoneW + safezoneX";
+				y="0.8225 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_HeadshotsStats: BP_InfoText
+			{
+				idc=1036;
+				text="99";
+				x="0.811500 * safezoneW + safezoneX";
+				y="0.855 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+			class BP_TraveledStats: BP_InfoText
+			{
+				idc=1037;
+				text="99";
+				x="0.811500 * safezoneW + safezoneX";
+				y="0.885 * safezoneH + safezoneY";
+				w="0.104988 * safezoneW";
+				h="0.042 * safezoneH";
+			};
+		};
+	};
 	/* Anti Ghosting Timer */
 	class RscRespawnCounter;
 	class RscBPTimer : RscRespawnCounter {

@@ -616,4 +616,4 @@ BP_ObjectPreload =
 	"BP_Skip5"
 ];
 
-
+BP_IsInfoScreenActive = false;
