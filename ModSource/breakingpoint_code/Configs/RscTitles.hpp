@@ -1682,9 +1682,9 @@ class RscTitles
 		idd=6942;
 		enableSimulation=1;
 		movingEnable=0;
-		duration=1e+011;
-		fadein=1;
-		fadeout=1;
+		duration=10;
+		fadein=0;
+		fadeout=0;
 		onLoad="_this call BP_fnc_factionStatsDiary";
 		class controlsBackground
 		{
