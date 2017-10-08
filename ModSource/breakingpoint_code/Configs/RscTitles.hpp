@@ -75,7 +75,7 @@ class RscStructuredTextGUI: RscStructuredText
 };
 class RscStructuredTextStats: RscStructuredText
 {
-		colorBackground[]={0,0,0,0};
+	colorBackground[]={0,0,0,0};
 	class Attributes: Attributes
 	{
 		font="sketch";
