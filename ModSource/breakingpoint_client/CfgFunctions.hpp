@@ -161,7 +161,7 @@ class CfgFunctions
 			class vonEvent {};
 			class loginUI {};
 			class loginUILoaded {};
-			class loadFSD{};
+			class loadFactionStatsDiary{};
 			class factionStatsDiary{};
 		};
 		class Inventory {

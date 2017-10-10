@@ -30,23 +30,17 @@ _ctrlHKills = (_displayFSD displayCtrl 1035);
 _ctrlHeadshots = (_displayFSD displayCtrl 1036);
 _ctrlDistTravel = (_displayFSD displayCtrl 1037);
 
-
 //World
 _worldName = worldName;
 
-//Player name
-//_playerName = name player;
-_playerName = "";
-
+//Set Text for Top 2 Lines
+_textTopL1 = ""; //not used
 _textTopL2 = "Faction Points";
 
 
 //Survival Time
 _totalMins = _survival select 0;
 _days = floor (_totalMins / 1440);
-_totalMins = (_totalMins - (_days * 1440));
-_hours = floor (_totalMins / 60);
-_mins =  (_totalMins - (_hours * 60));
 
 //Stats
 _zombieKills = player getVariable ["zombieKills",0];
@@ -65,7 +59,7 @@ _undeadPoints = player getVariable ["undead",0];
 
 
 //Set Text
-_ctrlMap1 ctrlSetText _playerName;
+_ctrlMap1 ctrlSetText _textTopL1;
 _ctrlMap2 ctrlSetText _worldName;
 _ctrlLocation ctrlSetText _textTopL2;
 _ctrlDay ctrlSetText (str _days);

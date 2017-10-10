@@ -746,7 +746,7 @@ if (_dikCode in actionKeys "User11") then
 };
 
 if (_dikCode in actionKeys "User12") then {
-	call BP_fnc_loadFSD;
+	call BP_fnc_loadFactionStatsDiary;
 	_handled = true;
 };
 
