@@ -161,6 +161,8 @@ class CfgFunctions
 			class vonEvent {};
 			class loginUI {};
 			class loginUILoaded {};
+			class loadFactionStatsDiary{};
+			class factionStatsDiary{};
 		};
 		class Inventory {
 			file = "\breakingpoint_client\functions\Inventory";
