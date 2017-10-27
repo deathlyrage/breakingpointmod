@@ -12,7 +12,7 @@
 params ["_event","_unitNetID","_medicEventID"];
 
 _unit = objectFromNetID _unitNetID;
-_medic = objectFromNetID _medicEventID;													  
+_medic = objectFromNetID _medicEventID;
 
 if (isNull _unit) exitWith {};
 if (isNull _medic) exitWith {};
