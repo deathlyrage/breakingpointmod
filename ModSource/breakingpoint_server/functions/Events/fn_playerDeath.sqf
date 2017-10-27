@@ -85,7 +85,7 @@ if (!isNull _killer) then
 	[_playerID,_playerName,_killerID,_killerName,_killWeapon,_killDistance] call BPServer_fnc_killLog;
 	
 	// Headshot Check
-	if (_deathType == 16) then
+	if (_deathType == 16 && !_isHostageKill) then
 	{
 		//Fetch Current Headshot Count
 		_headshots = _killer getVariable ["headShots",0];
@@ -146,12 +146,52 @@ if (!isNull _killer) then
 
 	//Zombie Walking Player Killing
 	if ((_playerUniform in BP_ZombieClothing) || {_killerUniform in BP_ZombieClothing}) then {
-		if (_pointsChange < 0) then { _pointsChange = 0; };
+		if (!_isHostageKill && _pointsChange < 0) then { _pointsChange = 0; };
 	};
 	
 	//Mission Config Custom Points Division
 	_pointsChange = _pointsChange * BP_Factions_PointsRatio;
 	
+			//Check if mixed group points off for gutting
+		_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
+		_pointsOff = false;
+		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0) then {
+			_killerGroupID = _killer getVariable ["group","0"];
+			if(_killerGroupID != "0") then {
+				_groupMembers = [];
+				_groupMemberClass = -1;
+				{
+					_groupID = _x getVariable ["group","0"];
+						if(_groupID == _killerGroupID) then {
+							0 = _groupMembers pushBack _x;
+						};
+				} count allPlayers;		
+				["dMGPG_death GM %1", _groupMembers] call BP_fnc_debugConsoleFormat;
+				if (count _groupMembers > 1) then {
+					_friendlyClass = [1,4,5];
+					["dMGPG_death: GMC cnt: %1",(count _groupMembers)] call BP_fnc_debugConsoleFormat;
+					for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
+						["dMGPG_death: GMC2sel: %1",_groupMembers select _i] call BP_fnc_debugConsoleFormat;
+						_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
+						if(((_groupMemberClass in _friendlyClass) && (_playerClass in _friendlyClass)) || ((_groupMemberClass == 2) && (_playerClass == 2))) then {
+							_pointsOff = true;
+							["dMGPG_death: PO: %1",_pointsOff] call BP_fnc_debugConsoleFormat;
+						} else {
+							_pointsOff = false;
+							["dMGPG_death: else PO"] call BP_fnc_debugConsoleFormat;
+						};
+					};
+					
+				};
+				["dMGPG_death: GMC: %1 PO: %2",_groupMemberClass, _pointsOff] call BP_fnc_debugConsoleFormat;
+			};
+		};
+	
+	//Check if mixed group points off for killing
+	if(_pointsOff) then	{
+		_pointsChange = 0;
+	};
+	["dMGPG_death pointsChange: %1",_pointsChange] call BP_fnc_debugConsoleFormat;
 	//Add Points (Global)
 	[_killer,_pointsChange] call BPServer_fnc_addFactionPoints;
 	

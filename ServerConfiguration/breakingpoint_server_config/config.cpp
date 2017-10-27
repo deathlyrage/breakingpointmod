@@ -19,6 +19,14 @@ class CfgBreakingPointServerSettings
 	{
 		customLootSetting = 1;	// 0 = SC off, 	1 = SC on (default),	2 = ghosthotel weapon insted of SC
 	};
+	class MixedGroupPointsGain
+	{
+		disableMixedGroupPointsGain = 1;	//tunrs point gain for mixed group off, point lose still on 0 = off , 1 = on
+	};
+	class groupLeaveTimer
+	{
+		groupLeaveTimeOut = 600;	//time in seconds between leaving group and joining new one
+	};
 };
 
 class CfgDifficultyPresets

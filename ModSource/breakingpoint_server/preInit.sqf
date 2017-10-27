@@ -90,6 +90,7 @@ BP_DupeSelfMagIDs = [];
 BP_AntiDisconnectIDs = [];
 BP_AntiDisconnectObjs = [];
 BP_HackMagIDs = [];
+BP_groupLeaveTimers = [];
 
 //Preload Code
 call compile preprocessFileLineNumbers "\breakingpoint_server\publicEH.sqf";

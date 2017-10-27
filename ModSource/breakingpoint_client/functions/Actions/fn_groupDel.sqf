@@ -27,4 +27,6 @@ if (_leaveReturn) then {
 
 	player setVariable ["group","0",true];
 	BP_Group = [];
+	//leave group timer
+	[(netID player)] remoteExecCall ["BPServer_fnc_groupLeaveTimer",2];
 };

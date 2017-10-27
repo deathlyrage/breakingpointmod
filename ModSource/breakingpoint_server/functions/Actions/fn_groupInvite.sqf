@@ -25,6 +25,20 @@ if (!isPlayer _p2) exitWith {};
 if (!alive _p1) exitWith {};
 if (!alive _p2) exitWith {};
 
-//Tell Player 2 he has been invited.
-BP_GroupInvite = [(netID _p1),_groupID];
-(owner _p2) publicVariableClient "BP_GroupInvite";
+//check if player left group recently
+_playerUID = getPlayerUID _p2;
+_groupTimerActive = false;
+for [{_i=0}, {_i < (count BP_groupLeaveTimers) && !_groupTimerActive}, {_i = _i + 1}] do {
+	_checkPlayer = BP_groupLeaveTimers select _i;
+	if((_checkPlayer select 0) == _playerUID && ((_checkPlayer select 1) > time)) then 
+	{
+		_groupTimerActive = true;
+	};
+};
+
+if(!_groupTimerActive) then 
+{
+	//Tell Player 2 he has been invited.
+	BP_GroupInvite = [(netID _p1),_groupID];
+	(owner _p2) publicVariableClient "BP_GroupInvite";
+};

@@ -91,6 +91,7 @@ class CfgRemoteExec
 		class BPServer_fnc_playerGive { allowedTargets=2; };		//BP_PlayerGive
 		class BPServer_fnc_setLocalVar { allowedTargets=2; };		//BP_SetLocalVar
 		class BPServer_fnc_simulationToggle { allowedTargets=2; };	//BP_Simulation
+		class BPServer_fnc_groupLeaveTimer { allowedTargets=2; };	//BP_leaveGroupTimer
 		
 		// Traps
 		class BPServer_fnc_publishTrap { allowedTargets=2; };		//BP_PublishTrap
