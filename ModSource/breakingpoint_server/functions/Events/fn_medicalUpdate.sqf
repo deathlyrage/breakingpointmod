@@ -298,20 +298,16 @@ switch (_event) do {
 									0 = _groupMembers pushBack _x;
 								};
 						} count allPlayers;		
-						["dMGPG_gut GM %1", _groupMembers] call BP_fnc_debugConsoleFormat;
 						if (count _groupMembers > 1) then {
 							_friendlyClass = [1,4,5];
-							["dMGPG_gut: GMC cnt: %1",(count _groupMembers)] call BP_fnc_debugConsoleFormat;
 							for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
 								_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
 								if(((_groupMemberClass in _friendlyClass) && (_unitClassID in _friendlyClass)) || ((_groupMemberClass == 2) && (_unitClassID == 2))) then {
 									_pointsOff = true;
-									["dMGPG_gut: PO: %1",_pointsOff] call BP_fnc_debugConsoleFormat;
 								};
 							};
 							
 						};
-						["dMGPG_gut: GMC: %1 PO: %2",_groupMemberClass, _pointsOff] call BP_fnc_debugConsoleFormat;
 					};
 				};
 				
@@ -319,7 +315,6 @@ switch (_event) do {
 				if(_pointsOff) then {
 					_pointsChange = 0;
 				};
-				["dMGPG_gut pointsChange: %1", _pointsChange] call BP_fnc_debugConsoleFormat;
 			};
 		} else {
 			//Delete Body / Object If It Isn't a Player
