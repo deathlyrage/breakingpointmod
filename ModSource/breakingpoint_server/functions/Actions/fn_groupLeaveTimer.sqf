@@ -1,6 +1,10 @@
 /*
-	Breaking Point Arma 3 Public-Alpha Build
-	Created By Th3Dilli
+	Breaking Point Mod for Arma 3
+	fn_groupLeaveTimer.sqf created by Th3Dilli
+	Released under Arma Public Share Like Licence (APL-SA)
+	https://www.bistudio.com/community/licenses/arma-public-license-share-alike
+
+	Alderon Games Pty Ltd
 */
 
 params ["_playerNetID"];
