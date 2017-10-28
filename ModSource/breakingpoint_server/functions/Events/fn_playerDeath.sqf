@@ -16,6 +16,23 @@ params [["_characterID","0",[""]],"_playerNetID",["_playerID","",[""]],["_player
 // Resolve Player & Killer Objects from Net ID's
 _player = (objectFromNetID _playerNetID);
 _killer = (objectFromNetID _killerNetID);
+_isHostage = _player getVariable ["med_hostage", false];
+_perpetrator = _player getVariable ["hostage_perpetrator", "0"];
+_isHostageKill = (_player != _killer && _isHostage && _perpetrator != "0");
+
+if (_isHostageKill) then
+{
+	_perpetrator = objectFromNetID _perpetrator;
+
+	if (_killer == _perpetrator) then
+	{
+		_isHostageKill = false;
+	}
+	else
+	{
+		_killer = _perpetrator;
+	};
+};
 
 // Invalid Character ID
 if (_characterID == "0" or _playerID == "") exitWith { [_player] call BPServer_fnc_unitCleanup; };
@@ -85,7 +102,7 @@ if (!isNull _killer) then
 	[_playerID,_playerName,_killerID,_killerName,_killWeapon,_killDistance] call BPServer_fnc_killLog;
 	
 	// Headshot Check
-	if (_deathType == 16) then
+	if (_deathType == 16 && !_isHostageKill) then
 	{
 		//Fetch Current Headshot Count
 		_headshots = _killer getVariable ["headShots",0];
@@ -146,7 +163,7 @@ if (!isNull _killer) then
 
 	//Zombie Walking Player Killing
 	if ((_playerUniform in BP_ZombieClothing) || {_killerUniform in BP_ZombieClothing}) then {
-		if (_pointsChange < 0) then { _pointsChange = 0; };
+		if (!_isHostageKill && _pointsChange < 0) then { _pointsChange = 0; };
 	};
 	
 	//Mission Config Custom Points Division
