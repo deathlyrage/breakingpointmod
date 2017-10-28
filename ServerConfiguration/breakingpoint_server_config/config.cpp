@@ -25,7 +25,7 @@ class CfgBreakingPointServerSettings
 	};
 	class groupLeaveTimer
 	{
-		groupLeaveTimeOut = 600;	//time in seconds between leaving group and joining new one
+		groupLeaveTimeOut = 600;	//time in seconds between leaving group and joining new/old one if  0 => Off
 	};
 };
 

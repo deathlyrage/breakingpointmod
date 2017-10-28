@@ -155,18 +155,22 @@ if (!isNull _killer) then
 			//Check if mixed group points off for gutting
 		_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
 		_pointsOff = false;
-		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0) then {
+		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0) then
+		{
 			_killerGroupID = _killer getVariable ["group","0"];
-			if(_killerGroupID != "0") then {
+			if(_killerGroupID != "0") then
+			{
 				_groupMembers = [];
 				_groupMemberClass = -1;
 				{
 					_groupID = _x getVariable ["group","0"];
-						if(_groupID == _killerGroupID) then {
+						if(_groupID == _killerGroupID) then
+						{
 							0 = _groupMembers pushBack _x;
 						};
 				} count allPlayers;		
-				if (count _groupMembers > 1) then {
+				if (count _groupMembers > 1) then
+				{
 					_friendlyClass = [1,4,5];
 					for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
 						_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
@@ -176,7 +180,6 @@ if (!isNull _killer) then
 							_pointsOff = false;
 						};
 					};
-					
 				};
 			};
 		};
