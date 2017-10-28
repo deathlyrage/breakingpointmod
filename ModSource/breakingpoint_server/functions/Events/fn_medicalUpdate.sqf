@@ -287,7 +287,7 @@ switch (_event) do {
 				//Check if mixed group points off for gutting
 				_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
 				_pointsOff = false;
-				if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0) then {
+				if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0 && !_playerTraitorFlag) then {
 					_medicGroupID = _medic getVariable ["group","0"];
 					if(_medicGroupID != "0") then {
 						_groupMembers = [];

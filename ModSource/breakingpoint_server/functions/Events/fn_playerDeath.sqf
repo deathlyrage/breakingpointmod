@@ -155,7 +155,7 @@ if (!isNull _killer) then
 			//Check if mixed group points off for gutting
 		_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
 		_pointsOff = false;
-		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0) then
+		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0 && !_playerTraitorFlag) then
 		{
 			_killerGroupID = _killer getVariable ["group","0"];
 			if(_killerGroupID != "0") then
