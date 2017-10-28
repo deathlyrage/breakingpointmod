@@ -140,7 +140,8 @@ if(_customLootSetting > 0) then
 		if (!isNull _building && {_buildingName == (typeOf _building)}) then
 		{
 			//Make Building Immortal
-			//_building allowDamage false;
+			_immortalHaven = getNumber(configfile "CfgBreakingPointServerSettings" >> "StorageObjects" >> "immortalHavens")
+			if(_immortalHaven == 1) then {_building allowDamage false;};
 		
 			//Get Building Config Data
 			//_buildingType = typeOf _building;
