@@ -1312,7 +1312,7 @@ class CfgObjectLoot {
 			0.08,   //WOODEN POLES
 			0.09,   //CEMENT BAG
 			0.07,	//WHEEL
-			0.05,	//ENGINE
+			0.07,	//ENGINE
 			0.13,	//CRISTAL
 			0.14,	//JERRY CAN
 			0.03,	//JERRY CAN
