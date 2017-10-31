@@ -29,7 +29,7 @@ _fireObj setVectorDirAndUp [ [0.5, 0.5, 0], [-0.5, 0.5, 0] ];
 _object setVariable ["fire",_fireObj,true];
 
 //Faction Point Loss
-_pointsChange = [_player,_killer] call BP_fnc_getFactionKillPoints;
+_pointsChange = [_player,_object] call BP_fnc_getFactionKillPoints;
 
 //Mission Config Custom Points Division
 _pointsChange = _pointsChange * BP_Factions_PointsRatio;

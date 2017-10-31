@@ -127,21 +127,42 @@ if (_survivalist < POINTMIN or _survivalist > POINTMAX) then { _survivalist = 0;
 if (_engineer < POINTMIN or _engineer > POINTMAX) then { _engineer = 0; };
 if (_undead < POINTMIN or _undead > POINTMAX) then { _undead = 0; };
 
+_groupTimerActive = false;
+_groupLeaveTimerOn = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "groupLeaveTimer" >> "groupLeaveTimeOut");
+if(_groupLeaveTimerOn > 0) then
+{
+	//check if player left group recently
+	_playerUID = getPlayerUID _player;
+	for [{_i=0}, {_i < (count BP_groupLeaveTimers) && !_groupTimerActive}, {_i = _i + 1}] do
+	{
+		_checkPlayer = BP_groupLeaveTimers select _i;
+		if((_checkPlayer select 0) == _playerUID && ((_checkPlayer select 1) > time)) then
+		{
+			_groupTimerActive = true;
+		};
+	};
+};
+
 //Persistent Groups
 _validLegion = false;
-if (_clan != "0") then 
+
+if(!_groupTimerActive) then
 {
-	_squadData = squadParams _player;
-	if !(_squadData isEqualTo []) then
+	//Persistent Groups
+	if (_clan != "0") then
 	{
-		_squadData params ["_squadDetails","_memberDetails"];
-		_squadDetails params ["_squadNick","_squadName","_squadEmail"];
-		if (_squadEmail == _clan) then
+		_squadData = squadParams _player;
+		if !(_squadData isEqualTo []) then
 		{
-			_validLegion = true;
-			_body setVariable ["group",_clan,true];
-			_body setVariable ["groupTag",_squadNick,false];
-			_body setVariable ["groupName",_squadName,false];
+			_squadData params ["_squadDetails","_memberDetails"];
+			_squadDetails params ["_squadNick","_squadName","_squadEmail"];
+			if (_squadEmail == _clan) then
+			{
+				_validLegion = true;
+				_body setVariable ["group",_clan,true];
+				_body setVariable ["groupTag",_squadNick,false];
+				_body setVariable ["groupName",_squadName,false];
+			};
 		};
 	};
 };

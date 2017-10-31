@@ -169,6 +169,42 @@ if (!isNull _killer) then
 	//Mission Config Custom Points Division
 	_pointsChange = _pointsChange * BP_Factions_PointsRatio;
 	
+			//Check if mixed group points off for gutting
+		_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
+		_pointsOff = false;
+		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0 && !_playerTraitorFlag) then
+		{
+			_killerGroupID = _killer getVariable ["group","0"];
+			if(_killerGroupID != "0") then
+			{
+				_groupMembers = [];
+				_groupMemberClass = -1;
+				{
+					_groupID = _x getVariable ["group","0"];
+						if(_groupID == _killerGroupID) then
+						{
+							0 = _groupMembers pushBack _x;
+						};
+				} count allPlayers;		
+				if (count _groupMembers > 1) then
+				{
+					_friendlyClass = [1,4,5];
+					for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
+						_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
+						if(((_groupMemberClass in _friendlyClass) && (_playerClass in _friendlyClass)) || ((_groupMemberClass == 2) && (_playerClass == 2))) then {
+							_pointsOff = true;
+						} else {
+							_pointsOff = false;
+						};
+					};
+				};
+			};
+		};
+	
+	//Check if mixed group points off for killing
+	if(_pointsOff) then	{
+		_pointsChange = 0;
+	};
 	//Add Points (Global)
 	[_killer,_pointsChange] call BPServer_fnc_addFactionPoints;
 	

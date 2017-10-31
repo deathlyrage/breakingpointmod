@@ -100,6 +100,7 @@ class CfgFunctions
 			class hostageAdd {};
 			class playerGive {};
 			class groupInvite {};
+			class groupLeaveTimer {};
 		};
 		class Traps {
 			file = "\breakingpoint_server\functions\Traps";

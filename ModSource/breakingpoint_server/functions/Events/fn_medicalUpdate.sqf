@@ -275,7 +275,6 @@ switch (_event) do {
 		if (_isPlayer) then
 		{
 			_level = _unit call BP_fnc_getFactionLevel;
-			
 			//Override Level to 0 if Player has a Traitor Flag
 			_isTraitor = _unit getVariable ["traitorFlag",false];
 			if (_isTraitor) then { _level = 0; };
@@ -291,6 +290,38 @@ switch (_event) do {
 				
 				//Mission Config Custom Points Division
 				_pointsChange = _pointsChange * BP_Factions_PointsRatio;
+				
+				//Check if mixed group points off for gutting
+				_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
+				_pointsOff = false;
+				if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0 && !_playerTraitorFlag) then {
+					_medicGroupID = _medic getVariable ["group","0"];
+					if(_medicGroupID != "0") then {
+						_groupMembers = [];
+						_groupMemberClass = -1;
+						{
+							_groupID = _x getVariable ["group","0"];
+								if(_groupID == _medicGroupID) then {
+									0 = _groupMembers pushBack _x;
+								};
+						} count allPlayers;		
+						if (count _groupMembers > 1) then {
+							_friendlyClass = [1,4,5];
+							for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
+								_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
+								if(((_groupMemberClass in _friendlyClass) && (_unitClassID in _friendlyClass)) || ((_groupMemberClass == 2) && (_unitClassID == 2))) then {
+									_pointsOff = true;
+								};
+							};
+							
+						};
+					};
+				};
+				
+				//No points if misxed group points off for gutting
+				if(_pointsOff) then {
+					_pointsChange = 0;
+				};
 			};
 		} else {
 			//Delete Body / Object If It Isn't a Player
