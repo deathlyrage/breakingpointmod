@@ -13,6 +13,13 @@ params ["_event","_unitNetID","_medicEventID"];
 
 _unit = objectFromNetID _unitNetID;
 _medic = objectFromNetID _medicEventID;
+_isHostage = _unit getVariable ["med_hostage", false];
+_perpetrator = _unit getVariable ["hostage_perpetrator", "0"];
+
+if (_isHostage && _perpetrator != "0" && _event == "medGut") then
+{
+	_medic = objectFromNetID _perpetrator;
+};
 
 if (isNull _unit) exitWith {};
 if (isNull _medic) exitWith {};

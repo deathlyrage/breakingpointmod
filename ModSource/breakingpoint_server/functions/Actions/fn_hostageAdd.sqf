@@ -24,6 +24,7 @@ if (!alive _player) exitWith {};
 if (!alive _hostage) exitWith {};
 
 _hostage setVariable ["med_hostage",true,true];
+_hostage setVariable ["hostage_perpetrator", _playerNetID, true];
 
 BP_HostageAdd = [_playerNetID,_hostageNetID];
 (owner _hostage) publicVariableClient "BP_HostageAdd";
