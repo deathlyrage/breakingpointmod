@@ -40,7 +40,6 @@ class CfgBreakingPointServerSettings
 	class StorageObjects
 	{
 		storageLimit = 7;		// Storage object Limit
-		immortalHavens = 0;		// make havens immortal 0 = Off
 	};
 	class CustomLoot
 	{

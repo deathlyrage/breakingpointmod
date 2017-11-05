@@ -125,9 +125,6 @@ if(_customLootSetting > 0) then
 	} count (getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Loot" >> "customLoot"));
 };
 
-// get config if buildings are immortal
-_immortalHaven = getNumber(configfile "CfgBreakingPointServerSettings" >> "StorageObjects" >> "immortalHavens")
-
 //Lock The Houses
 {
 	_x params ["_header","_playerID","_buildingUID","_buildingID","_buildingName","_worldSpace","_lock","_explosive","_reinforcement"];
@@ -143,7 +140,7 @@ _immortalHaven = getNumber(configfile "CfgBreakingPointServerSettings" >> "Stora
 		if (!isNull _building && {_buildingName == (typeOf _building)}) then
 		{
 			//Make Building Immortal
-			if(_immortalHaven == 1) then {_building allowDamage false;};
+			//_building allowDamage false;
 		
 			//Get Building Config Data
 			//_buildingType = typeOf _building;
