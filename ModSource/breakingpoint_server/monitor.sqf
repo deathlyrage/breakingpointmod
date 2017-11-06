@@ -143,7 +143,10 @@ _immortalHaven = getNumber(configfile >> "CfgBreakingPointServerSettings" >> "St
 		if (!isNull _building && {_buildingName == (typeOf _building)}) then
 		{
 			//Make Building Immortal
-			if(_immortalHaven == 1) then {_building allowDamage false;};
+			if(_immortalHaven == 1) then
+			{
+				_building allowDamage false;
+			};
 		
 			//Get Building Config Data
 			//_buildingType = typeOf _building;
