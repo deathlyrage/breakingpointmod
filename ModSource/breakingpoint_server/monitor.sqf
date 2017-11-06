@@ -126,7 +126,7 @@ if(_customLootSetting > 0) then
 };
 
 // get config if buildings are immortal
-_immortalHaven = getNumber(configfile >> "CfgBreakingPointServerSettings" >> "StorageObjects" >> "immortalHavens")
+_immortalHaven = getNumber(configfile >> "CfgBreakingPointServerSettings" >> "StorageObjects" >> "immortalHavens");
 
 //Lock The Houses
 {
