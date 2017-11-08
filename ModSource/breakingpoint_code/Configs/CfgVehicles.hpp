@@ -6047,7 +6047,122 @@ class CfgVehicles
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
 	
-	class BP_Hatchback_02_F: C_Hatchback_01_F 
+	class   BP_Ifrit_02_F: C_Ifrit_01_F 
+	{
+		scope = 2;
+		side = 3;
+		crew = "";
+		displayName = "Rusty Ifrit";
+		typicalCargo[] = {};
+		hiddenSelections[]= {"camo1"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\hatchback_01_ext_base01_co.paa"};
+		hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\hatchback_02_paint.rvmat"};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems {};
+		commanderCanSee = 2 + 4 + 8;
+		gunnerCanSee = 2 + 4 + 8;
+		driverCanSee = 2 + 4 + 8;
+		maximumLoad = 1000;
+		transportMaxMagazines = 25;
+		transportMaxWeapons = 3;
+		transportMaxBackpacks = 3;
+		
+		class HitPoints {
+			class HitGlass1 {
+				armor = 0;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			
+			class HitGlass2 {
+				armor = 0;
+				material = -1;
+				name = "glass2";
+				visual = "glass2";
+				passThrough = 0;
+			};
+			
+			class HitGlass3 {
+				armor = 0;
+				material = -1;
+				name = "glass3";
+				visual = "glass3";
+				passThrough = 0;
+			};
+			
+			class HitGlass4 {
+				armor = 0;
+				material = -1;
+				name = "glass4";
+				visual = "glass4";
+				passThrough = 0;
+			};
+			
+			class HitBody {
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0.2;
+			};
+			
+			class HitFuel {
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			
+			class HitLFWheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitLF2Wheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitRFWheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitRF2Wheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitEngine {
+				armor = 1;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 0.2;
+			};
+		};
+		
+		class EventHandlers : BP_VehicleEventHandlers {};
+	};
+	
+	
+/*	class   BP_Hatchback_02_F: C_Hatchback_01_F 
 	{
 		scope = 2;
 		side = 3;
@@ -6160,6 +6275,8 @@ class CfgVehicles
 		
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
+	
+	*/
 	
 	class BP_Hatchback_01_sport_F: C_Hatchback_01_sport_F 
 	{
