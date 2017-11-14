@@ -52,7 +52,7 @@ class CfgMods
 		author = "Deathlyrage";
 		hidePicture = 1;
 		hideName = 1;
-		version = "0.1723";
+		version = "0.1724";
 	};
 };
 
