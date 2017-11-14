@@ -21,19 +21,19 @@ if (_playerObj isKindOf "HeadlessClient_F") exitWith {
 	//Flag HC as Disconnected
 	BP_HC_Connected = false;
 	publicVariable "BP_HC_Connected";
-	
+
 	//Remove ID, Object and Cleanup
 	BP_HC_ID = 0;
 	BP_HC_PID = "0";
 	BP_HC_OBJ = objNull;
-	
+
 	_group = (group _playerObj);
 	deleteVehicle _playerObj;
 	deleteGroup _group;
-	
+
 	//Remove Stronghold AI
 	{ deleteVehicle _x; } count entities "BP_Stronghold_AI";
-	
+
 	true
 };
 */
@@ -54,12 +54,12 @@ if (_playerObj isKindOf "BP_PlayerLogic") exitWith
 		_group = (group _body);
 		deleteVehicle _body;
 		deleteGroup _group;
-		
+
 		//Check Body Isn't In Undead Queue
 		_index = BP_UndeadQueue find (netID _body);
 		if (_index >= 0) then { BP_UndeadQueue deleteAt _index; };
 	};
-	
+
 	//Check Logic Isn't In Undead Queue
 	_index = BP_UndeadQueue find (netID _playerObj);
 	if (_index >= 0) then { BP_UndeadQueue deleteAt _index; };
@@ -108,7 +108,7 @@ _playerObj setVariable ["bodyName",_playerName,true];
 _playerObj setVariable ["playerID",_playerID];
 
 //Handle Combat Logging (Hostage,Unconscious,Traitor)
-if (!_isDead || {alive _playerObj}) then 
+if (!_isDead || {alive _playerObj}) then
 {
 	//Backup Inventory
 	_inventory = _playerObj call BP_fnc_getFullInventory;
@@ -119,18 +119,19 @@ if (!_isDead || {alive _playerObj}) then
 	_isUnconcious = _playerObj getVariable ["med_unconscious",false];
 	_isTraitorFlag = _playerObj getVariable ["traitorFlag",false];
 	_isUndead = (_playerObj getVariable ["class",0] == 7);
-	
-	if (_isHostage || {_isUnconcious} || {_isTraitorFlag} || {_isUndead}) then 
+	_needsSurgery = (_playerObj getVariable ["med_bleedingLevel",0] > 2);
+
+	if (_isHostage || {_isUnconcious} || {_isTraitorFlag} || {_isUndead} || {_needsSurgery}) then
 	{
 		//Logging
 		["handleDisconnect: Combat Log: %1 ~0001", _playerName] call BP_fnc_debugConsoleFormat;
-		
+
 		//Save Stats
 		_playerObj call BPServer_fnc_statsSync;
 
 		// Keep A Cache List Of All Dead People In Case Hive Extension is Failing
 		BP_DeadCharacters pushBack _characterID;
-		
+
 		//Register Combat Logger Death
 		BP_DeadTickets pushBack (["CHILD:301:%1:",_characterID] call BPServer_fnc_callExtensionTicket);
 
@@ -146,7 +147,7 @@ if (!_isDead || {alive _playerObj}) then
 		//clearMagazineCargoGlobal (backpackContainer _playerObj);
 		//clearMagazineCargoGlobal (vestContainer _playerObj);
 		//clearMagazineCargoGlobal (uniformContainer _playerObj);
-		
+
 		//Remove Stuff
 		removeUniform _playerObj;
 		removeVest _playerObj;
@@ -156,7 +157,7 @@ if (!_isDead || {alive _playerObj}) then
 		removeHeadgear _playerObj;
 		removeGoggles _playerObj;
 		removeAllAssignedItems _playerObj;
-		
+
 		//Register Combat Logger Death Entry
 		[_playerID,_playerName,_characterID] call BPServer_fnc_combatLog;
 	} else {
