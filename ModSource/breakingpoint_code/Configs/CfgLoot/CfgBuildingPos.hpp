@@ -2251,5 +2251,139 @@
 	  lootMax = 6;
 	  lootPos[] = {{1.936,5.2774,-4.38292},{-6.28259,8.10419,-4.27865},{-4.30713,1.29462,-4.22514},{-12.0403,-4.92523,-3.55208},{-5.64526,-11.5303,-3.69648},{-2.72067,-5.99091,-4.0125},{-5.15765,-16.8342,-3.52923},{9.97238,-24.4118,-3.76867},{9.50751,-14.2923,-4.06245},{6.68307,-7.01849,-4.29121},{8.45764,1.06281,-4.32564},{9.77118,11.36,-4.34763},{14.7074,5.39496,-4.29012},{16.9778,-3.75232,-4.24202},{20.4492,14.1458,-4.31509},{5.48044,23.6175,-4.01903},{-28.5232,6.09955,-2.32732},{-30.229,-8.43988,-1.85176},{-21.4947,-18.5224,-2.34182},{-13.0705,-28.8453,-2.62291},{1.39407,-32.9947,-3.1781},{17.7483,-27.7422,-3.94915}};
 	};
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////---Malden Loot Cords---/////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	class Land_i_House_Small_01_b_brown_F : Land_i_House_Small_01_V1_F {};
+
+	class Land_i_House_Small_01_b_yellow_F : Land_i_House_Small_01_V1_F {};
+
+	class Land_i_House_Small_01_b_whiteblue_F : Land_i_House_Small_01_V1_F {};
+
+	class Land_i_House_Small_01_b_blue_F : Land_i_House_Small_01_V1_F {};
+
+	class Land_i_House_Small_01_b_pink_F : Land_i_House_Small_01_V1_F {};
+
+	class Land_i_House_Small_01_b_white_F : Land_i_House_Small_01_V1_F {};
+
+
+
+	class Land_i_House_Small_02_brown_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_yellow_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_whiteblue_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_blue_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_pink_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_white_F : Land_i_House_Small_02_V2_F {};
+
+
+
+	class Land_i_House_Small_02_c_brown_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_c_yellow_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_c_whiteblue_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_c_blue_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_c_pink_F : Land_i_House_Small_02_V2_F {};
+
+	class Land_i_House_Small_02_c_white_F : Land_i_House_Small_02_V2_F {};
+
+
+
+	class Land_i_Shop_02_b_brown_F : Land_i_Shop_02_V2_F {};
+
+	class Land_i_Shop_02_b_yellow_F : Land_i_Shop_02_V2_F {};
+
+	class Land_i_Shop_02_b_whiteblue_F : Land_i_Shop_02_V2_F {};
+
+	class Land_i_Shop_02_b_blue_F : Land_i_Shop_02_V2_F {};
+
+	class Land_i_Shop_02_b_pink_F : Land_i_Shop_02_V2_F {};
+
+	class Land_i_Shop_02_b_white_F : Land_i_Shop_02_V2_F {};
+
+
+
+	class Land_i_House_Big_01_b_brown_F : Land_i_House_Big_01_V2_F {};
+
+	class Land_i_House_Big_01_b_yellow_F : Land_i_House_Big_01_V2_F {};
+
+	class Land_i_House_Big_01_b_whiteblue_F : Land_i_House_Big_01_V2_F {};
+
+	class Land_i_House_Big_01_b_blue_F : Land_i_House_Big_01_V2_F {};
+
+	class Land_i_House_Big_01_b_pink_F : Land_i_House_Big_01_V2_F {};
+
+	class Land_i_House_Big_01_b_white_F : Land_i_House_Big_01_V2_F {};
+
+
+
+
+	class Land_i_House_Big_02_b_brown_F : Land_i_House_Big_02_V2_F {};
+
+	class Land_i_House_Big_02_b_yellow_F : Land_i_House_Big_02_V2_F {};
+
+	class Land_i_House_Big_02_b_whiteblue_F : Land_i_House_Big_02_V2_F {};
+
+	class Land_i_House_Big_02_b_blue_F : Land_i_House_Big_02_V2_F {};
+
+	class Land_i_House_Big_02_b_pink_F : Land_i_House_Big_02_V2_F {};
+
+	class Land_i_House_Big_02_b_white_F : Land_i_House_Big_02_V2_F {};
+
+	class Land_i_Addon_02_b_white_F : Farm {
+		lootMin = 0;
+		lootMax = 1;
+		lootPos[] = {{4.79688,2.12256,0.16449},{0.583984,2.2251,0.16449}};
+		zombiePos[] = {{2.69336,0.814453,0.16449}};
+	};
+
+	class Land_i_Stone_Shed_01_c_clay_F : Residential {
+		lootMin = 0;
+		lootMax = 1;
+		lootPos[] = {{5.06738,1.77734,-0.0226288},{2.53711,3.12402,-0.0246887},{0.197266,2.52539,-0.0266113}};
+		zombiePos[] = {{2.54492,0.183594,-0.0246887}};
+	};
+
+
+
+	class Land_i_Stone_Shed_01_c_raw_F : Land_i_Stone_Shed_01_c_clay_F {};
+
+	class Land_i_Stone_Shed_01_c_white_F : Land_i_Stone_Shed_01_c_clay_F {};
+
+	class Land_i_Stone_Shed_01_b_clay_F : Land_i_Stone_Shed_01_c_clay_F {};
+
+	class Land_i_Stone_Shed_01_b_raw_F : Land_i_Stone_Shed_01_c_clay_F {};
+
+	class Land_i_Stone_Shed_01_b_white_F : Land_i_Stone_Shed_01_c_clay_F {};
+
+	class Land_Barn_01_grey_F : Farm {
+		lootMin = 0;
+		lootMax = 5;
+		lootPos[] = {{-7.39258,-2.50342,-0.682266},{-2.79883,-2.78857,-0.680542},{-0.125,2.69922,-0.713684},{7.05078,-2.82813,-0.680237},{4.75488,-2.80225,-0.68045}};
+		zombiePos[] = {{1.57227,-0.046875,-0.697052}};
+	};
+
+	class Land_Shed_08_grey_F : Farm {
+		lootMin = 0;
+		lootMax = 4;
+		lootPos[] = {{3.80176,1.54541,-0.885696},{0.436523,-1.26074,-0.892288},{-3.98242,-1.5332,-0.885635},{-3.9707,1.4126,-0.885635}};
+		zombiePos[] = {{2.42188,-0.550293,-0.885666}};
+	};
+	
+	class Land_Supermarket_01_malden_F : Supermarket {
+		lootMin = 0;
+		lootMax = 7;
+		lootPos[] = {{1.04297,-7.88086,-1.44994},{6.69824,-7.44189,-1.44994},{7.12109,-1.93677,-1.41737},{0.376953,1.68433,-1.44994},{-0.157227,-2.65527,-1.44994},{-5.0332,-7.55322,-1.44994},{-4.18164,-2.25879,-1.44994}};
+		zombiePos[] = {{4.22656,-4.4458,-1.44994}};
+	};
+	
 	#include "CfgBuildingPosBornholm.hpp"
