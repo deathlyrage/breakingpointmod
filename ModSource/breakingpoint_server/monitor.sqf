@@ -197,10 +197,7 @@ publicVariable "BP_Traps";
 //Spawn The Objects
 {
 	//Fetch Object Data
-	_x params ["","_uniqueID","_type","_ownerID","_playerID","_worldspace","_inventory","_lock","_buildingID"];
-	
-	//Temp Fix:
-	_fuel = 0;
+	_x params ["","_uniqueID","_type","_ownerID","_playerID","_worldspace","_inventory","_fuel","_lock","_buildingID"];
 
 	if (_uniqueID != "0") then
 	{
@@ -294,7 +291,12 @@ publicVariable "BP_Traps";
 				_object setDamage 1;
 			};
 		};
-		
+
+		// Restore fuel value on fuel barrels
+		if (_type in ["BP_BarrelFuel"]) then {
+			_object setFuelCargo _fuel;
+		};
+
 		//Object has not been deleted or removed
 		if (!isNull _object) then
 		{

@@ -48,7 +48,7 @@ BP_Cleanup_Loot_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "C
 BP_Cleanup_Loot_Nearby = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Loot" >> "nearby");
 //Entities
 BP_Cleanup_Entities_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Entities" >> "interval");
-BP_Cleanup_Entities_Nearby = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Entities" >> "nearby");	
+BP_Cleanup_Entities_Nearby = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Entities" >> "nearby");
 //Global Loot
 BP_Cleanup_GlobalLoot_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "GlobalLoot" >> "interval");
 //Restart
