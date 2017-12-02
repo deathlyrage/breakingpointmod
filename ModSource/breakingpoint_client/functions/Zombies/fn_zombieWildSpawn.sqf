@@ -21,7 +21,13 @@ if (BP_RemoteZeds > BP_GlobalZeds) exitWith {};
 if (BP_GlobalZeds > BP_ZedMaxGlobal) exitWith {};
 
 _player = _this select 0;
-_unitTypes = 	[]+ getArray (configFile >> "CfgBuildingLoot" >> "Default" >> "zombieClass");
+
+_config = configFile >> "CfgBuildingLoot";
+if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot";
+};
+_unitTypes = 	[]+ getArray (_config >> "Default" >> "zombieClass");
 _doLoiter = 	true;
 
 _loot = 	"";

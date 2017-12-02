@@ -15,6 +15,10 @@ _buildingPos = getPosATL _building;
 _buildingType = 	typeOf _building;
 _buildingSize = ((sizeOf _buildingType)+5);
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
 
 //Exit If Loot Is Disabled
 if (!BP_Loot) exitWith {};
@@ -83,19 +87,19 @@ _positionsShuffle = _positions call BIS_fnc_arrayShuffle;
 //Loop Through Each Position and Calculate the spawn.
 {
 	//Exit If Ran Out Of Spawn Count
-	if (_lootRnd < 1) exitWith {}; 
+	if (_lootRnd < 1) exitWith {};
 
 	//Calculate Item Position in World Space
 	_iPos = _building modelToWorld _x;
-	
+
 	//Check If Any Loot Boxes are in that world position
 	_nearby = nearestObjects [_iPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
 
-	if (_nearby isEqualTo []) then 
+	if (_nearby isEqualTo []) then
 	{
 		//Find Index Of Building Type
 		_index = BP_CBLBase find _buildingType;
-		
+
 		//Check Index Building Type is Valid
 		if (_index != -1) then
 		{

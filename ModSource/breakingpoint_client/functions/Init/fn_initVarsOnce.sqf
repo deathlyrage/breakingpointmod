@@ -121,11 +121,16 @@ BP_TraitorClothing = ["BP_Guardian_F","BP_Rebel_F","BP_Refugee_F","BP_Survivalis
 BP_Threads = [];
 
 //Zombie Types
-BP_baseTypes = getArray (configFile >> "CfgBuildingLoot" >> "Default" >> "zombieClass");
+_config = configFile >> "CfgBuildingLoot";
+if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot";
+};
+BP_baseTypes = getArray (_config >> "Default" >> "zombieClass");
 
 ////////////////////////////////////////////////////////////////////////
 
-BP_LoadObject = 
+BP_LoadObject =
 [
  "BP_Heli_Transport_01", //Heli
  "BP_Offroad_03_armed_F", //Pickup
@@ -163,7 +168,7 @@ BP_FuelEmpty =
 	"ItemFuelcanLargeEmpty"
 ];
 
-BP_VehicleHorns = 
+BP_VehicleHorns =
 [
 	"CarHorn",
 	"MiniCarHorn",
@@ -211,7 +216,7 @@ BP_CustomItems = BP_ToolbeltItems + BP_AllVests + BP_AllSkins + BP_NormalClothin
 
 BP_Constructables = ["BP_Crate1","BP_Safe","BP_RockStash","BP_CamoNet"];
 
-BP_Blueprints = 
+BP_Blueprints =
 [
 	//Haven Objects
 	"BlueprintHaven", //ItemBlueprint_Haven
@@ -276,7 +281,7 @@ BP_Houses =
 	"Land_i_House_Big_01_V1_dam_F"
 ];
 
-Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"]; 
+Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];
 Attachments_Primary_Light = ["BP_CPad","BP_AFG","BP_Handle","BP_flashlight","acc_pointer_IR","BP_mk12covers","BP_m16covers","BP_m4covers"];
 Attachments_Primary_Sight = ["BP_ZF42","BP_SOS","BP_M8","BP_Unertl8x","BP_Unertl32x","BP_PSOP","BP_OldComp","BP_MRT","BP_VX2","BP_VX3","BP_L14x","BP_M3AMRAD","BP_PS22","BP_M3A","BP_M3A2","BP_NXS","BP_EnfieldOptic2","BP_compm4s","BP_m3lr","optic_Arco","optic_Hamr","optic_Aco","optic_ACO_grn","optic_Aco_smg","optic_ACO_grn_smg","optic_Holosight","optic_Holosight_smg","optic_MRCO","BP_optic_ACOG"];
 Attachments_Primary_Sound = ["BP_762Muzzle","BP_R7P","BP_R7S","BP_CZSup_br","BP_762Sup2","BP_Sup22","BP_muzzle_snds_408","BP_muzzle_snds_M12","BP_muzzle_snds_M2","BP_muzzle_snds_M","BP_muzzle_snds_B","BP_muzzle_snds_H_MG","BP_muzzle_snds_H","BP_muzzle_snds_H_SN","BP_m110_suppr","BP_Sup417_DES","BP_milSpec_suppr","BP_M24Int_suppr","BP_308Int_suppr","BP_AWSMInt_suppr","BP_CZmod_br","BP_CZst_br","BP_CZol_br","BP_300Sup"];
@@ -353,7 +358,7 @@ BP_Helicrashes = (getNumber (_cfgSettings >> "HeliCrash" >> "enabled") == 1);
 //BP_FactionStronghold_SurvivalistPos = getArray (_cfgSettings >> "Factions" >> "Bases" >> "Survivalist" >> "position");
 //BP_FactionStronghold_SurvivalistRadius = getNumber (_cfgSettings >> "Factions" >> "Bases" >> "Survivalist" >> "radius");
 
-med_woundHit = 
+med_woundHit =
 [
 	"",
 	"body",
@@ -362,7 +367,7 @@ med_woundHit =
 	"head"
 ];
 
-BP_woundHit 	= 
+BP_woundHit 	=
 [
 	[
 		"body",
@@ -373,7 +378,7 @@ BP_woundHit 	=
 	[ 0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2,3]
 ];
 
-BP_woundHit_ok = 
+BP_woundHit_ok =
 [
 	[
 		"body",
@@ -383,7 +388,7 @@ BP_woundHit_ok =
 	[0,0,0,0,0,1,1,1,2,2]
 ];
 
-med_MinorWounds = 
+med_MinorWounds =
 [
 	"hands",
 	"legs"
@@ -397,7 +402,7 @@ med_woundPoint	= [
 	["neck","pilot"]
 ];
 
-med_typeOfWounds = 
+med_typeOfWounds =
 [
 	"Pelvis",
 	"aimpoint",
@@ -406,7 +411,7 @@ med_typeOfWounds =
 	"neck","pilot"
 ];
 
-BP_partClasses = 
+BP_partClasses =
 [
 	//"PartGeneric",	//No need to add, it is default for everything
 	"PartFueltank",
@@ -422,7 +427,7 @@ BP_explosiveParts = [
 ];
 
 //Cooking
-meatraw = 
+meatraw =
 [
     "FoodSteakRaw",
     "FoodMeatRaw",
@@ -435,7 +440,7 @@ meatraw =
     "FoodBaconRaw"
 ];
 
-meatcooked = 
+meatcooked =
 [
     "FoodSteakCooked",
     "FoodMeatCooked",
@@ -524,7 +529,7 @@ BP_InventorySkins =
 
 BP_PreloadTitleObj = [];
 
-BP_PreloadTitleRsc = 
+BP_PreloadTitleRsc =
 [
 	"TitleScreen",
 	"BP_Ghosting",
@@ -579,7 +584,7 @@ BP_ObjectPreload =
 	"BPZombie_Hunter2",
 	"BPZombie_Hunter3",
 	//Storage Objects
-	
+
 	//Loot Boxes
 	"BP_Medicalbox",
 	"BP_AmmoBoxNew",
@@ -615,3 +620,5 @@ BP_ObjectPreload =
 	"BP_Skip4",
 	"BP_Skip5"
 ];
+
+

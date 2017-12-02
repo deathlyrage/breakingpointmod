@@ -51,7 +51,7 @@ if !(BP_FastBoot) then
 
 	//Request Traps
 	[_spawnTraps,["CHILD:104:"],"TrapStreamStart"] call BPServer_fnc_callExtensionArray;
-	
+
 };
 
 // DISABLED: Not functional in open source version yet
@@ -73,12 +73,12 @@ call BPServer_fnc_updateTime;
 //{
 //	_cfgBases = (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Factions" >> "Bases");
 //	_factionsList = getArray (configFile >> "CfgFactions" >> "factions");
-//	for "_c" from 0 to (count _cfgBases - 1) do 
+//	for "_c" from 0 to (count _cfgBases - 1) do
 //	{
 //		private ["_currentBase","_baseName"];
 //		_currentBase = _cfgBases select _c;
 //		_baseName = configName _currentBase;
-//		if (isClass _currentBase) then 
+//		if (isClass _currentBase) then
 //		{
 //			_basePosition = getArray (_cfgBases >> _baseName >> "position");
 //			_baseRadius = getNumber (_cfgBases >> _baseName >> "radius");
@@ -138,7 +138,7 @@ _immortalHaven = getNumber(configfile >> "CfgBreakingPointServerSettings" >> "St
 		_objects = [];
 		_unlockAttempts = 0;
 		["updateBuildings: Header: %1 Building: %2 | Building ID: %3 | Player ID: %4 | Unique ID: %5",_header,_building,_buildingID,_playerID,_buildingUID] call BP_fnc_debugConsoleFormat;
-		
+
 		//Handle Haven Locking
 		if (!isNull _building && {_buildingName == (typeOf _building)}) then
 		{
@@ -147,15 +147,22 @@ _immortalHaven = getNumber(configfile >> "CfgBreakingPointServerSettings" >> "St
 			{
 				_building allowDamage false;
 			};
-		
+
 			//Get Building Config Data
 			//_buildingType = typeOf _building;
+
+			// Mission config file loot table override.
 			//_buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+			//if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+			//{
+			//	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+			//};
+
 			//_buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "numberOfDoors");
-			
+
 			_building addEventHandler ["HandleDamage",{_this call BPServer_fnc_houseHandleDamage;}];
 			_building addEventHandler ["Killed",{_this call BPServer_fnc_houseKilled;}];
-			
+
 			//Add Building To Array
 			0 = BP_Buildings pushBack (netID _building);
 			0 = BP_BuildingsData pushBack [_objects,_buildingID,_buildingUID,_playerID,_lock,_unlockAttempts,_explosive,_reinforcement];
@@ -203,10 +210,10 @@ publicVariable "BP_Traps";
 	{
 		_object = objNull;
 		_building = objNull;
-		
+
 		//Get Worldspace Dir and Pos
 		_worldspace params ["_dir","_pos"];
-		
+
 		//Check for Valid Haven Objects in Buildings
 		if (_buildingID != "0") then
 		{
@@ -239,19 +246,19 @@ publicVariable "BP_Traps";
 		//Create Object
 		_object = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
 		_object enableDynamicSimulation true;
-		
+
 		//Wait for Object Creation
 		waitUntil {!isNil "_object" && {!isNull _object}};
-		
+
 		//Make Object Immortal
 		_object allowDamage false;
-		
+
 		//Position Fixes If Glitched Underground
 		if ((_pos select 2) < 0) then { _pos set [2,0]; };
-		
+
 		//Set Direction
 		_object setDir _dir;
-		
+
 		//Set Exact Position
 		_object setPosATL _pos;
 
@@ -260,7 +267,7 @@ publicVariable "BP_Traps";
 
 		//Set Owner ID
 		if (_ownerID != "0") then { _object setVariable ["CharacterID",_ownerID]; };
-		
+
 		//Set Player ID
 		if (_playerID != "0") then { _object setVariable ["PlayerID",_playerID]; };
 
@@ -274,10 +281,10 @@ publicVariable "BP_Traps";
 		};
 
 		//Setup Object Inventory
-		if !(_inventory isEqualTo [] || {_inventory isEqualTo [[],[],[],[[],[]],[[],[]]]}) then 
+		if !(_inventory isEqualTo [] || {_inventory isEqualTo [[],[],[],[[],[]],[[],[]]]}) then
 		{
 			//Don't Add Inventory on Safes
-			if !(_object isKindOf "BP_Safe") then 
+			if !(_object isKindOf "BP_Safe") then
 			{
 				//Set Object Inventory
 				[_object,_inventory] call BP_fnc_setObjectInventory;
@@ -302,10 +309,10 @@ publicVariable "BP_Traps";
 		{
 			//Add Object to Server Monitor
 			0 = BP_serverObjectMonitor pushBack (netID _object);
-			
+
 			//Check Object
 			[_object] call BPServer_fnc_checkObject;
-			
+
 			//Simulation Mgr
 			_object enableSimulationGlobal false;
 		};
@@ -319,7 +326,7 @@ _numVehicles =
 {
 	//Fetch Vehicle Data
 	_x params ["","_uniqueID","_type","_worldspace","_inventory","_hitpoints","_fuel","_damage"];
-	
+
 	if (_uniqueID != "0") then
 	{
 		_worldspace params ["_dir","_pos"];
@@ -330,27 +337,27 @@ _numVehicles =
 		//Create Object
 		_object = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
 		_object enableDynamicSimulation true;
-			
+
 		//Wait for Object Creation
 		waitUntil {!isNil "_object" && {!isNull _object}};
-			
+
 		//Make Object Immortal
 		_object allowDamage false;
-		
+
 		//Set Unique IDs
 		_object setVariable ["ObjectUID",str(_uniqueID)];
-			
+
 		//Set Direction
 		_object setDir _dir;
-			
+
 		//Set Exact Position
-		if (_object isKindOf "Ship") then 
+		if (_object isKindOf "Ship") then
 		{
 			_object setPosASL [(_pos select 0),(_pos select 1),0];
 		} else {
 			_object setPosATL _pos;
 			//Set Vector Update on Cars and Helicopters
-			_object setVectorUp (surfaceNormal _pos);		
+			_object setVectorUp (surfaceNormal _pos);
 		};
 
 		//Fix for Helicopters Exploding when you enter them - Agent Rev
@@ -359,7 +366,7 @@ _numVehicles =
 			//_object setPos [_pos select 0, _pos select 1, 0.01];
 			_object setVelocity [0,0,0.01];
 		};
-			
+
 		//Make Object Mortal
 		_object allowDamage true;
 
@@ -374,7 +381,7 @@ _numVehicles =
 		_object setDamage _damage;
 
 		//Setup Object Inventory
-		if !(_inventory isEqualTo []) then 
+		if !(_inventory isEqualTo []) then
 		{
 			//Set Object Inventory
 			[_object,_inventory] call BP_fnc_setObjectInventory;
@@ -382,7 +389,7 @@ _numVehicles =
 			//Update Local Inventory for Gear Saving Checks
 			_object setVariable ["lastInventory",_inventory];
 		};
-			
+
 		//Set Object Hitpoints
 		{
 			_x params ["_selection","_dam"];
@@ -396,11 +403,11 @@ _numVehicles =
 
 		//Add Object to Server Monitor
 		0 = BP_serverObjectMonitor pushBackUnique (netID _object);
-			
+
 		//Check Object
 		[_object] call BPServer_fnc_checkObject;
 	};
-	
+
 	//Return True
 	true
 } count _spawnVehicles;

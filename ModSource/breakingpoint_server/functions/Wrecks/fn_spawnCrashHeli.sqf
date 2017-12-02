@@ -14,7 +14,7 @@ _RandStartPos = getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" 
 _BackupWaypoint = getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "HeliCrash" >> "BackupWaypoint");
 _CentreMarker = getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "HeliCrash" >> "CentreMarker");
 _CentreRadius = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "HeliCrash" >> "CentreRadius");
-_CentreMarkerPos = (_CentreMarker select 0);	
+_CentreMarkerPos = (_CentreMarker select 0);
 _preWaypoints = 1;
 
 _guaranteedLoot = 6;
@@ -96,7 +96,7 @@ _crashwreck setSpeedMode "LIMITED";
 
 _crashwreck engineOn false;
 _crashwreck setFuel 0;
-	
+
 sleep 5;
 
 //Giving the crashed Heli some time to find its "Parkingposition"
@@ -123,12 +123,19 @@ deleteVehicle _landingzone;
 
 ["spawnCrashSite: Cleaned up Crash Site, Creating Crash Model %1 @ %2...~0001",_crashModel,_pos] call BP_fnc_debugConsoleFormat;
 
-//Animation is done, lets create the actual Crashside	
+//Animation is done, lets create the actual Crashside
 _crash = createVehicle [_crashModel, _pos, [], 0, "CAN_COLLIDE"];
 
 //Calculate loot
 _num	 = round(random _randomizedLoot) + _guaranteedLoot;
+
+// Mission config file loot table override.
 _config = configFile >> "CfgBuildingLoot" >> _lootTable;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _lootTable)) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot" >> _lootTable;
+};
+
 _itemTypes =	[] + getArray (_config >> "itemType");
 _index = BP_CBLBase  find _lootTable;
 _weights = BP_CBLChances select _index;
@@ -140,7 +147,7 @@ _cntWeights = count _weights;
 //Creating the Lootpiles outside of the _crashModel
 //Loop that creates loot piles around a Helicrash
 _lootObjects = [];
-for "_x" from 1 to _num do 
+for "_x" from 1 to _num do
 {
 	//Create loot
 	_index = floor(random _cntWeights);

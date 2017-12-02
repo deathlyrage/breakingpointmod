@@ -15,6 +15,10 @@ if (isNull _building) exitWith {};
 //Get Type and Config
 _type = typeOf _building;
 _config = configFile >> "CfgBuildingLoot" >> _type;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
+};
 
 //Check Building has class in config
 if !(isClass _config) exitWith {};
@@ -54,7 +58,7 @@ _positions = getArray (_config >> "zombiePos");
 if (_positions isEqualTo []) exitWith {};
 
 _chanceRnd = (floor random 100);
-if (_chanceRnd > 75) then 
+if (_chanceRnd > 75) then
 {
 	_unitTypes = getArray (_config >> "zombieClass");
 	_position = selectRandom _positions;

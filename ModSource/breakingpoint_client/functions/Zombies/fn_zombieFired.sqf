@@ -8,17 +8,17 @@
 */
 
 params ["_ammo","_distance","_audible","_unit","_unitPos"];
-	
+
 if ((diag_tickTime - BP_FiredTime) > 10 || {_ammo != BP_FiredAmmo}) then
 {
 	BP_FiredTime = diag_tickTime;
 	BP_FiredAmmo = _ammo;
-	
+
 	_chance = 0;
 	_zombieMin = 0;
 	_zombieMax = 0;
 	_sprint = false;
-	
+
 	if (_audible > 0 && {_audible < 5}) then
 	{
 		_chance = 10;
@@ -58,13 +58,13 @@ if ((diag_tickTime - BP_FiredTime) > 10 || {_ammo != BP_FiredAmmo}) then
 		_zombieMax = 10;
 		_sprint = true;
 	};
-	
+
 	_spawnZombies = true;
 	_nearHaven = false;
 
 	//Limit Zombie Spawning to 20 Local Zombies Per Player and 30 per 300m Bubble
 	if (BP_LocalZeds > 20 or BP_NearbyZombies > 30) then { _spawnZombies = false; };
-	
+
 	if (_spawnZombies) then
 	{
 		if (_chance > (floor random 100)) then
@@ -77,19 +77,23 @@ if ((diag_tickTime - BP_FiredTime) > 10 || {_ammo != BP_FiredAmmo}) then
 			//Remove Nearest Building
 			_nearestBuilding = nearestObject [player, "HouseBase"];
 			[_nearbyBuildings,_nearestBuilding] call BP_fnc_arrayDelete;
-			
+
 			for "_i" from 1 to _zombies do
 			{
 				if (count _nearbyBuildings > 0) then
 				{
 					_building = selectRandom _nearbyBuildings;
 					if (!isNull _building) then
-					{						
+					{
 						_buildingPos = getPosATL _building;
 						_type = typeOf _building;
 						_config = configFile >> "CfgBuildingLoot" >> _type;
+						if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+						{
+							_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
+						};
 						_canLoot = isClass (_config);
-						if ((netID _building) in BP_Buildings) exitWith { 
+						if ((netID _building) in BP_Buildings) exitWith {
 							_canLoot = false;
 							_nearHaven = true;
 						};

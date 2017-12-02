@@ -20,9 +20,13 @@ if (BP_LocalZeds > 20 || {BP_NearbyZombies > 30}) then { _spawnZombies = false; 
 {
 	_type = typeOf _x;
 	_config = configFile >> "CfgBuildingLoot" >> _type;
+	if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+	{
+		_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
+	};
 	_canLoot = isClass (_config);
 	_dis = _x distance player;
-	
+
 	if (_x isKindOf "Land_House_Logic") then
 	{
 		if (_dis > 4) then
@@ -42,7 +46,7 @@ if (BP_LocalZeds > 20 || {BP_NearbyZombies > 30}) then { _spawnZombies = false; 
 					//waitUntil {scriptDone _handle};
 				};
 			};
-			
+
 			//Zombies
 			if ((_dis < 75) && {_dis > 15} && {_spawnZombies}) then {
 				[_x] call BP_fnc_buildingSpawnZombies;

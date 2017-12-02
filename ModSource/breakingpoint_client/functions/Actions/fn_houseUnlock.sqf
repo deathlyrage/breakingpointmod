@@ -11,7 +11,14 @@ private ["_building","_buildingType","_buildingConfig","_buildingLockable","_com
 disableSerialization;
 _building = _this select 3;
 _buildingType = 	typeOf _building;
+
+// Mission config file loot table override.
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
+
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "numberOfDoors");
 _combo = "";
@@ -48,61 +55,61 @@ while {!isNull _display and dialog} do
 		//Process Button
 		_button = BP_SafeButton;
 		BP_SafeButton = nil;
-		
+
 		//Add Button Press to Total Combo
 		_combo = _combo + _button;
 
 		_attemptArray = toArray _combo;
 		_attemptCount = count _attemptArray;
-		
+
 		//Update IEDs based on how many numbers have been entered
 		switch (_attemptCount) do {
-			case 0: 
+			case 0:
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_4_off.jpg";
 			};
-			case 1: 
+			case 1:
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_1.jpg";
 			};
-			case 2: 
+			case 2:
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_2.jpg";
 			};
-			case 3: 
+			case 3:
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_3.jpg";
 			};
-			case 4: 
+			case 4:
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_4.jpg";
 			};
-			default 
+			default
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_4_off.jpg";
 			};
 		};
-		
+
 		//4 Numbers have been entered, check the result
-		if (_attemptCount == 4) then 
+		if (_attemptCount == 4) then
 		{
 			BP_HavenUnlockResult = nil;
-			
+
 			[(netID _building),_combo,(netID player)] remoteExecCall ["BPServer_fnc_unlockHouse",2];
-			
+
 			waitUntil {!isNil "BP_HavenUnlockResult"};
-			
+
 			if (BP_HavenUnlockResult) then
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_4.jpg";
-				
+
 				//_buildingLogic setVariable ['bis_disabled_Door',0,true];
 
 				sleep 1;
 				closeDialog 0;
-				
+
 				cutText ["Building Unlocked.", "PLAIN DOWN"];
-				
+
 				//Remove Action to Prevent Spam
 				player removeAction s_player_lockHouse;
 				s_player_lockHouse = -1;

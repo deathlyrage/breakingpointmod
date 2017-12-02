@@ -26,7 +26,14 @@ if (_lock == "") exitWith {};
 if (_blueprint == "") exitWith {};
 
 _buildingType = 	typeOf _building;
+
+// Mission config file loot table override.
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
+
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "numberOfDoors");
 _buildingID = _building call BP_fnc_getBuildingID;
@@ -40,7 +47,7 @@ _buildingCount = 0;
 {
 	_build = objectFromNetID _x;
 	if (!isNull _build) then {
-		_buildingPID = _build getVariable ["PlayerID","0"]; 
+		_buildingPID = _build getVariable ["PlayerID","0"];
 		if (_playerID == _buildingPID) then { _buildingCount = _buildingCount + 1; };
 	};
 } count BP_Buildings;

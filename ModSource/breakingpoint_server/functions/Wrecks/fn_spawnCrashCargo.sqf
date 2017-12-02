@@ -15,7 +15,7 @@ _RandStartPos = getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" 
 _BackupWaypoint = getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "HeliCrash" >> "BackupWaypoint");
 _CentreMarker = getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "HeliCrash" >> "CentreMarker");
 _CentreRadius = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "HeliCrash" >> "CentreRadius");
-_CentreMarkerPos = (_CentreMarker select 0);	
+_CentreMarkerPos = (_CentreMarker select 0);
 _preWaypoints = 3;
 
 _guaranteedLoot = 6;
@@ -73,9 +73,9 @@ _helipilot allowDamage false;
 sleep 0.5;
 
 //Add Waypoints, Drop Care Pkgs
-if (_preWaypoints > 0) then 
+if (_preWaypoints > 0) then
 {
-	for "_x" from 1 to _preWaypoints do 
+	for "_x" from 1 to _preWaypoints do
 	{
 		//Add Waypoint
 		_preWaypointPos = selectRandom BP_CargoCrashDroppoints;
@@ -87,20 +87,20 @@ if (_preWaypoints > 0) then
 			_carePkg allowDamage false;
 			_carePkg setVariable ["permaLoot",true,true];
 			_crashwreck setSlingLoad _carePkg;
-		
+
 			["spawnCrashSite: Adding Pre-POC-Waypoint #%1 on %2~0001", _x,str(_preWaypointPos)] call BP_fnc_debugConsoleFormat;
 			_wp = _aigroup addWaypoint [_preWaypointPos,0];
 			_wp setWaypointType "MOVE";
 			_wp setWaypointBehaviour "CARELESS";
-			
+
 			//Wait Until Near Waypoint
 			["spawnCrashSite: Waiting Until Reached Waypoint Pos %1",_preWaypointPos] call BP_fnc_debugConsoleFormat;
 			waituntil {((getPosATL _crashwreck) distance _preWaypointPos) <= 150};
 			["spawnCrashSite: Reached Waypoint Pos %1",_preWaypointPos] call BP_fnc_debugConsoleFormat;
-			
+
 			//Delay 2 Seconds to get to a closer position to the waypoint
 			sleep 2;
-			
+
 			//Drop Care Pkg
 			_cargo = (getSlingLoad _crashwreck);
 			_cargoPos = (getPos _cargo);
@@ -110,32 +110,32 @@ if (_preWaypoints > 0) then
 				//Cut The Ropes Of Sling Load
 				["spawnCrashSite: Cutting Ropes %1",(ropes _crashwreck)] call BP_fnc_debugConsoleFormat;
 				{ ropeCut [_x, 5]; } count (ropes _crashwreck);
-				
+
 				//Delay a Second
 				sleep 1;
-				
+
 				//Create Parachute
 				["spawnCrashSite: Deploying Parachute"] call BP_fnc_debugConsoleFormat;
 				//_para = "B_Parachute_02_F" createVehicle [0, 0, 10000];
-				_para = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "FLY"];  
+				_para = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "FLY"];
 				_para setDir getDir _cargo;
 				_para setPos getPos _cargo;
-				//_cargo attachTo [_para, [0,2,0]]; 
-				_cargo attachTo [_para, [0,1,0]]; 
-				
+				//_cargo attachTo [_para, [0,2,0]];
+				_cargo attachTo [_para, [0,1,0]];
+
 				//Handle Parachute Cleanup when Crate Hits Ground
 				_handle = [_para,_cargo] spawn {
 					_para = _this select 0;
 					_cargo = _this select 1;
-					
+
 					//Wait Until Cargo Touching Ground
 					_fallTime = diag_tickTime;
 					waitUntil {isTouchingGround _cargo || ((diag_tickTime - _fallTime) > 15)};
-					
+
 					//Deattach Crate and Delete Parachute
 					detach _cargo;
 					deleteVehicle _para;
-					
+
 					//Start Smoke
 					_smokePos = getPosATL _cargo;
 					_smokeObj = createVehicle ["BP_SmokeShell", _smokePos, [], 0, "CAN_COLLIDE"];
@@ -164,7 +164,7 @@ _crashwreck setSpeedMode "LIMITED";
 
 _crashwreck engineOn false;
 _crashwreck setFuel 0;
-	
+
 sleep 5;
 
 //Giving the crashed Heli some time to find its "Parkingposition"
@@ -191,12 +191,19 @@ deleteVehicle _landingzone;
 
 ["spawnCrashSite: Cleaned up Crash Site, Creating Crash Model %1 @ %2...~0001",_crashModel,_pos] call BP_fnc_debugConsoleFormat;
 
-//Animation is done, lets create the actual Crashside	
+//Animation is done, lets create the actual Crashside
 _crash = createVehicle [_crashModel, _pos, [], 0, "CAN_COLLIDE"];
 
 //Calculate loot
 _num	 = round(random _randomizedLoot) + _guaranteedLoot;
+
+// Mission config file loot table override.
 _config = configFile >> "CfgBuildingLoot" >> _lootTable;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _lootTable)) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot" >> _lootTable;
+};
+
 _itemTypes =	[] + getArray (_config >> "itemType");
 _index = BP_CBLBase  find _lootTable;
 _weights = BP_CBLChances select _index;
@@ -208,7 +215,7 @@ _cntWeights = count _weights;
 //Creating the Lootpiles outside of the _crashModel
 //Loop that creates loot piles around a helicrash
 _lootObjects = [];
-for "_x" from 1 to _num do 
+for "_x" from 1 to _num do
 {
 	//Create loot
 	_index = floor(random _cntWeights);

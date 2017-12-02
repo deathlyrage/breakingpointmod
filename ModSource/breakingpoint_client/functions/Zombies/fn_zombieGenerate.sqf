@@ -14,7 +14,12 @@ if (speed (vehicle player) >= 140) exitWith {};
 if (!BP_Zeds) exitWith {};
 if (BP_GlobalZeds > BP_ZedMaxGlobal) exitWith {};
 
-if (_unitTypes isEqualTo []) then { _unitTypes = []+ getArray (configFile >> "CfgBuildingLoot" >> "Default" >> "zombieClass"); };
+_config = configFile >> "CfgBuildingLoot";
+if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot";
+};
+if (_unitTypes isEqualTo []) then { _unitTypes = []+ getArray (_config >> "Default" >> "zombieClass"); };
 _type = selectRandom _unitTypes;
 
 BP_NearbyZombies = BP_NearbyZombies + 1;
@@ -45,7 +50,7 @@ _zombie addRating -2500;
 
 //Add some loot
 _rnd = random 1;
-if (_rnd < 0.10) then 
+if (_rnd < 0.10) then
 {
 	_backpack = selectRandom BP_RandomZombie_Backpack;
 	//_weapon = selectRandom BP_RandomZombie_Gun;
@@ -58,6 +63,7 @@ if (_rnd < 0.10) then
 	//_zombie addWeaponGlobal _weapon;
 	//_zombie switchMove "";
 };
+
 
 _fsmid = [_position,_zombie] execFSM "\breakingpoint_code\system\zombie_agent.fsm";
 _fsmid setFSMVariable ["_handle", _fsmid];

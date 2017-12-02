@@ -17,7 +17,14 @@ _building = _this select 0;
 if (isNull _building) exitWith {};
 
 _buildingType = 	typeOf _building;
+
+// Mission config file loot table override.
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
+
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "numberOfDoors");
 

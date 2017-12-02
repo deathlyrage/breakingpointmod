@@ -15,6 +15,10 @@ if (!_isActive) exitWith {};
 _building = nearestObject [player, "HouseBase"];
 _buildingType = 	typeOf _building;
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingClaimed = ((netID _building) in BP_Buildings);
 _buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
@@ -68,7 +72,7 @@ _pipcam camCommit 1;
 
 [_pipcam,_modHeight,0] call bis_fnc_setpitchbank;
 
-waitUntil {camCommitted _pipcam}; 
+waitUntil {camCommitted _pipcam};
 
 _television setObjectTexture [1, format ["#(argb,512,512,1)r2t(%1,1)",_renderTargetName]];
 
