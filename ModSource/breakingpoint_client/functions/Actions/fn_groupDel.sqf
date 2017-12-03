@@ -18,7 +18,7 @@ if (s_player_groupDel > -1) then {
 if (vehicle player != player) exitWith { cutText ["You can't leave a group inside a vehicle.", "PLAIN DOWN"]; };
 
 //Leave Group Dialog Message
-_leaveReturn = ["Are you sure you would like to leave your current group?","Leave Group",nil,true] call BIS_fnc_guiMessage;
+_leaveReturn = ["Are you sure you would like to leave your current group? This will add a (default 10 mins) rejoin timout!!!","Leave Group",nil,true] call BIS_fnc_guiMessage;
 if (_leaveReturn) then {
 	[player] joinSilent grpNull;
 	_group = createGroup civilian;
