@@ -73,7 +73,7 @@ if (_hasMedBackpack and _canDo) then {
 	s_player_medPack = -1;
 };
 
-// Build 
+// Build
 _object = player getVariable ["constructionObject", objNull];
 if (!isNull _object) then {
 	if (s_player_buildComplete < 0) then {
@@ -93,6 +93,10 @@ if (!isNull _object) then {
 _building = nearestObject [player, "HouseBase"];
 _buildingType = 	typeOf _building;
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingClaimed = ((netID _building) in BP_Buildings);
 _buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
@@ -123,7 +127,7 @@ if (!isNull _building && {!_inVehicle} && {_canDo} && {_buildingLockable} && {_b
 		if (s_player_infoHouse < 0) then {
 			s_player_infoHouse = player addAction ["Building Info",{ _this spawn BP_fnc_houseInfo; },_building, 0, false, true,"",""];
 		};
-			
+
 		//Check for Adding an IED
 		if (_hasIED) then {
 			if (s_player_explosiveHouseAdd < 0) then {
@@ -169,7 +173,7 @@ if (BP_NearStorage != _storage) then
 };
 
 //Check Storage Conditions
-if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 2)) then 
+if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 2)) then
 {
 	_isHarvested = _storage getVariable["gutted",false];
 	_storageName = getText (configFile >> "CfgVehicles" >> (typeOf _storage) >> "displayName");
@@ -178,7 +182,7 @@ if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 
 	_isHouse = ((_storage isKindOf "BP_HouseStorage") or (_storage isKindOf "BP_HouseObject"));
 	_isSafe = (_storage isKindOf "BP_Safe");
 	_isTele = (_storage isKindOf "BP_Television");
-	
+
 	//Save Object ( Storage Objects Only )
 	if (_isStorage) then
 	{
@@ -194,7 +198,7 @@ if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 
 		player removeAction s_player_inventoryObject;
 		s_player_inventoryObject = -1;
 	};
-	
+
 	//Haven Television
 	if (_isTele) then
 	{
@@ -240,7 +244,7 @@ if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 
 		player removeAction s_player_teleCam2;
 		s_player_teleCam2 = -1;
 	};
-	
+
 	//Ignite Object ( World Objects Only and Not Safe )
 	if (_hasMatches and _isWorld and !_isSafe and !_isHarvested) then
 	{
@@ -251,7 +255,7 @@ if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 
 		player removeAction s_player_igniteObject;
 		s_player_igniteObject = -1;
 	};
-	
+
 	//Destroy Safe
 	if (_hasIED and _isSafe and !_isHarvested) then
 	{
@@ -262,7 +266,7 @@ if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 
 		player removeAction s_player_destroySafe;
 		s_player_destroySafe = -1;
 	};
-	
+
 	//Destroy Object ( House Objects Only )
 	if (_isHouse) then
 	{
@@ -279,10 +283,10 @@ if (!isNull _storage and !_inVehicle and _canDo and (player distance _storage < 
 	player removeAction s_player_inventoryObject;
 	s_player_inventoryObject = -1;
 	player removeAction s_player_destroyObject;
-	s_player_destroyObject = -1;	
+	s_player_destroyObject = -1;
 	player removeAction s_player_igniteObject;
 	s_player_igniteObject = -1;
-	
+
 	player removeAction s_player_destroySafe;
 	s_player_destroySafe = -1;
 
@@ -343,25 +347,25 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	_lowBlood = _cursorTarget getVariable ["med_lowBlood", false];
 	_isUndead = (player getVariable ["class",0] == 7);
 	_targetUndead = (_cursorTarget getVariable ["class",0] == 7);
-	
+
 	//Dog
 	_isDog = (_cursorTarget isKindOf "BP_Dog");
-	
+
 	//Safe
 	_isSafe = _cursorTarget isKindOf "BP_Safe";
 	_safeLocked = (_cursorTarget getVariable ["locked",false]);
 
 	_rawmeat = meatraw;
 	_hasRawMeat = false;
-	{ if (_x in magazines player) exitWith { _hasRawMeat = true; }; } count _rawmeat; 
-	
+	{ if (_x in magazines player) exitWith { _hasRawMeat = true; }; } count _rawmeat;
+
 	if (_hasFuelE) then {
 		_isFuel = false;
 		if (_cursorTarget isKindOf "Land_FuelStation_Feed_F") then { _isFuel = true };
 		if (_cursorTarget isKindOf "Land_Tank_rust_F") then { _isFuel = true };
 		if (_cursorTarget isKindOf "Land_fs_feed_F") then { _isFuel = true };
 	};
-	
+
 	// Dog
 	if (_isDog and _isAlive and (_hasRawMeat) and _canDo and _ownerID == "0" and player getVariable ["dogID", 0] == 0) then {
 		if (s_player_dog_tame < 0) then {
@@ -371,7 +375,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_dog_tame;
 		s_player_dog_tame = -1;
 	};
-	
+
 	// Dog
 	if (_isDog and _isAlive and _lowBlood and _canDo) then {
 		if (s_player_dog_heal < 0) then {
@@ -382,7 +386,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		s_player_dog_heal = -1;
 	};
 
-	if (_isDog and _ownerID == BP_characterID and _isAlive and _canDo) then 
+	if (_isDog and _ownerID == BP_characterID and _isAlive and _canDo) then
 	{
 		_dogHandle = player getVariable ["dogID", 0];
 		if (s_player_dog_food < 0 and _hasRawMeat) then {
@@ -400,7 +404,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		//if (s_player_dog_warn < 0) then {
 		//	_warn = _dogHandle getFSMVariable "_watchDog";
 		//	if (_warn) then { _text = "Quiet"; _warn = false; } else { _text = "Alert"; _warn = true; };
-		//	s_player_dog_warn = player addAction [format["%1",_text],{ _this spawn BP_fnc_dogWarn; },[_cursorTarget,_dogHandle, _warn], 2, false, true,"",""];		
+		//	s_player_dog_warn = player addAction [format["%1",_text],{ _this spawn BP_fnc_dogWarn; },[_cursorTarget,_dogHandle, _warn], 2, false, true,"",""];
 		//};
 		if (s_player_dog_follow < 0) then {
 			s_player_dog_follow = player addAction ["Dog: Follow",{ _this spawn BP_fnc_dogFollow; },[_cursorTarget,_dogHandle,true], 6, false, true,"",""];
@@ -453,33 +457,33 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		//player removeAction s_player_dog_survivalist_heal;
 		//s_player_dog_survivalist_heal = -1;
 	};
-	
+
 	//Towing
 	/*
-	if ((_isVehicle) and _canDo and !_isMan and _isNotDestroyed) then 
+	if ((_isVehicle) and _canDo and !_isMan and _isNotDestroyed) then
 	{
 		//Set Tow Source
 		if (isNull BP_TowSource) then
 		{
 			if (s_player_towSource < 0) then {
 				s_player_towSource = player addAction [format ["Tow Vehicle: Source (%1)",_targetName], { _this call BP_fnc_towSource; },_cursorTarget, 1, false, true, "", ""];
-			};	
+			};
 		} else {
 			player removeAction s_player_towSource;
 			s_player_towSource = -1;
 		};
-		
+
 		//Set Tow Target
 		if (isNull BP_TowTarget) then
 		{
 			if (s_player_towTarget < 0) then {
 				s_player_towTarget = player addAction [format ["Tow Vehicle: Target (%1)",_targetName], { _this call BP_fnc_towTarget; },_cursorTarget, 1, false, true, "", ""];
-			};	
+			};
 		} else {
 			player removeAction s_player_towTarget;
 			s_player_towTarget = -1;
 		};
-		
+
 		_towRope = _cursorTarget getVariable ["tow",objNull];
 		if (isNull _towRope) then
 		{
@@ -506,7 +510,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		s_player_towEnd = -1;
 	};
 	*/
-	
+
 	// Force Save (Vehicle)
 	if (_isVehicle and _canDo and !_isMan and _isNotDestroyed) then {
 		if (s_player_saveVehicle < 0) then {
@@ -516,7 +520,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_saveVehicle;
 		s_player_saveVehicle = -1;
 	};
-	
+
 	// Push Vehicle
 	if (_isVehicle and _canDo and !_isMan and _isNotDestroyed) then {
 		if (s_player_pushBoat < 0) then {
@@ -526,8 +530,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_pushBoat;
 		s_player_pushBoat = -1;
 	};
-	
-	
+
+
 	//Destroy Vehicle
 	if (_hasIED and _isVehicle and _isNotDestroyed) then
 	{
@@ -538,7 +542,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_destroyVehicle;
 		s_player_destroyVehicle = -1;
 	};
-	
+
 	// Safe Actions
 	if (_isSafe and _canDo) then
 	{
@@ -555,7 +559,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_safeLock;
 		s_player_safeLock = -1;
 	};
-	
+
 	/* Add To Group */
 	if (_isPlayer and !_isInMyGroup and !_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo) then {
 		if (s_player_groupAdd < 0) then {
@@ -565,7 +569,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_groupAdd;
 		s_player_groupAdd = -1;
 	};
-	
+
 	/* Take Hostage */
 	if (_isPlayer and !_isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isHostage and _hasTape and !_isUnconscious and _isPlayerChar and _canDo) then {
 		if (s_player_hostageAdd < 0) then {
@@ -575,7 +579,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_hostageAdd;
 		s_player_hostageAdd = -1;
 	};
-	
+
 	/* Release Hostage */
 	if (_isPlayer and _isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_hostageDel < 0) then {
@@ -585,7 +589,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_hostageDel;
 		s_player_hostageDel = -1;
 	};
-	
+
 	/* Hostage Food */
 	if (_isPlayer and _isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_hostageFood < 0) then {
@@ -595,7 +599,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_hostageFood;
 		s_player_hostageFood = -1;
 	};
-	
+
 	/* Hostage Water */
 	if (_isPlayer and _isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_hostageWater < 0) then {
@@ -605,7 +609,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_hostageWater;
 		s_player_hostageWater = -1;
 	};
-	
+
 	/* Player Food */
 	if (_isPlayer and !_isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_playerFood < 0) then {
@@ -615,7 +619,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_playerFood;
 		s_player_playerFood = -1;
 	};
-	
+
 	/* Player Water */
 	if (_isPlayer and !_isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_playerWater < 0) then {
@@ -625,17 +629,17 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_playerWater;
 		s_player_playerWater = -1;
 	};
-	
+
 	/* Flip Vehicle */
 	if ((_isVehicletype) and !_canmove and _canDo and _isAlive and !_isWater and !_isHostage and (player distance _cursorTarget >= 2) and (count (crew _cursorTarget))== 0 and ((vectorUp _cursorTarget) select 2) < 0.5) then {
 		if (s_player_flipveh  < 0) then {
-			s_player_flipveh = player addAction [format["Flip %1",_targetName], { [_this] spawn BP_fnc_flipVehicle; },_cursorTarget, 1, false, true, "", ""];		
+			s_player_flipveh = player addAction [format["Flip %1",_targetName], { [_this] spawn BP_fnc_flipVehicle; },_cursorTarget, 1, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_flipveh;
 		s_player_flipveh = -1;
 	};
-	
+
 	// Fill Fuel Can
 	if (_isFuel && {_hasFuelE} && {!_isZombie} && {!_isAnimal} && {!_isHostage} && {!_isMan} && {_canDo} && {damage _cursorTarget < 1}) then {
 		if (s_player_fillfuel < 0) then {
@@ -659,10 +663,10 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			};
 		} else {
 			player removeAction s_player_siphonfuel;
-			s_player_siphonfuel = -1;		
+			s_player_siphonfuel = -1;
 		};
 	};
-	
+
 	//Refuel Vehicles
 	if (_isVehicle && {_hasFuel} && {!(_cursorTarget isKindOf "Bicycle_F")} && {fuel _cursorTarget < 1} && {damage _cursorTarget < 1} && {!(count (crew _cursorTarget)> 0)}) then {
 		if (s_player_refuelVeh < 0) then {
@@ -676,12 +680,12 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			};
 		} else {
 			player removeAction s_player_refuelVeh;
-			s_player_refuelVeh = -1;		
+			s_player_refuelVeh = -1;
 		};
 	};
-	
+
 	/* Med Pack */
-	
+
 	/* Gut Player / Animal / Hostage / Zombie */
 	_canGut = (!_isAlive or _isTargetUnconscious or _isTargetHostage);
 	if (_canGut and (_isAnimal or _isZombie or _isPlayer) and !_isHarvested and _hasKnife and _canDo) then {
@@ -697,7 +701,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_butcher;
 		s_player_butcher = -1;
 	};
-	
+
 	/* Cooking */
 	if (_isCookable && {_hasRawMeat} && {!_isHostage} && {_canDo}) then {
 		if (s_player_cook < 0) then {
@@ -707,7 +711,17 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_cook;
 		s_player_cook = -1;
 	};
-	
+
+	// Boil water
+	if (_isCookable && {("Waterbot" in magazines player)} && {!_isHostage} && {_canDo}) then {
+		if (s_player_boil < 0) then {
+			s_player_boil = player addAction ["Boil Water", { _this spawn BP_fnc_boil; },_cursorTarget, 3, false, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_boil;
+		s_player_boil = -1;
+	};
+
 	//Destroy Fire
 	if (_cursorTarget == BP_hasFire && {_canDo}) then {
 		if ((s_player_fireout < 0) and !(inflamed _cursorTarget) and !_isUndead and !_targetUndead and _canDo and (player distance _cursorTarget < 4)) then {
@@ -717,7 +731,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_fireout;
 		s_player_fireout = -1;
 	};
-	
+
 	// Vehicle Repar / Replace / Remove
 	if ((BP_myCursorTarget != _cursorTarget) and _isVehicle and !_isUndead and _canDo and !_isMan and _hasToolbox and (count (crew _cursorTarget))== 0 and (damage _cursorTarget < 1)) then
 	{
@@ -728,7 +742,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 		{BP_myCursorTarget removeAction _x} count s_player_removeActions;
 		s_player_removeActions = [];
-		
+
 		BP_myCursorTarget = _vehicle;
 
 		_hitpoints = _vehicle call BP_fnc_vehicleHitpoints;
@@ -736,7 +750,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			_damage = _vehicle getHitPointDamage _x;
 			_part = "";
 			_repair = "";
-			
+
 			//change "HitPart" to " - Part" rather than complicated string replace
 			_cmpt = toArray (_x);
 			_cmpt set [0,20];
@@ -778,12 +792,12 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 				_part = "ItemFuelhoseKit";
 				_repair = "ItemWaterTape";
 			};
-			
+
 			if(["Wheel",_x,false] call BP_fnc_inString) then {
 				_part = "PartWheel";
 				_repair = "ItemPunctureKit";
 			};
-					
+
 			if(["Glass",_x,false] call BP_fnc_inString) then {
 				_part = "PartGlass";
 				_repair = "ItemLiquidResin";
@@ -792,20 +806,20 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 				_part = "ItemBattery";
 				_repair = "ItemBattery"; //ItemChargerKit
 			};
-			
+
 			//_color = "color='#ffffff'"; //White
 			_color = "color='#ff8800'";
 			if (_damage >= 0.4) then {_color = "color='#ff8800'";}; //orange
 			if (_damage >= 0.6) then {_color = "color='#ff0000'";}; //red
-			
-			if (_damage > 0) then 
+
+			if (_damage > 0) then
 			{
 				_allFixed = false;
-				
+
 				// Repair
-				if (_damage < 0.6) then 
+				if (_damage < 0.6) then
 				{
-					if !(_repair == "") then 
+					if !(_repair == "") then
 					{
 						_string = format["<t %2>Repair%1</t>",_cmpt,_color]; //Repair - Part
 						_handle = BP_myCursorTarget addAction [_string, { _this spawn BP_fnc_repair; },[_vehicle,_repair,_x], 0, false, true, "",""];
@@ -814,7 +828,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 				};
 
 				// Replace
-				if !(_part == "") then 
+				if !(_part == "") then
 				{
 					_string = format["<t %2>Replace%1</t>",_cmpt,_color]; //Replace - Part
 					_handle = BP_myCursorTarget addAction [_string, { _this spawn BP_fnc_repair; },[_vehicle,_part,_x], 0, false, true, "",""];
@@ -823,7 +837,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 			} else {
 				if (_canRemove) then {
-					_invalidVehicle = (_vehicle isKindOf "Motorcycle") or (_vehicle isKindOf "Tractor"); 
+					_invalidVehicle = (_vehicle isKindOf "Motorcycle") or (_vehicle isKindOf "Tractor");
 					if (!_invalidVehicle) then {
 						_string = format["<t color='#00b34a'>Remove%1</t>",_cmpt,_color]; //Remove - Part
 						_handle = BP_myCursorTarget addAction [_string, { _this spawn BP_fnc_partRemove; },[_vehicle,_part,_x], 0, false, true, "",""];
@@ -833,7 +847,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			};
 		} count _hitpoints;
 	};
-	
+
 	if (!_isMan && {_cursorTarget isKindOf "BP_DeadBody"} && {_canDo} && {!_isUndead}) then
 	{
 		if (s_player_destroyGrave < 0) then {
@@ -843,7 +857,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_destroyGrave;
 		s_player_destroyGrave = -1;
 	};
-	
+
 	//Hide Bodies
 	if (_isMan && {!_isAlive} && {_canDo} && {!_isAnimal} && {!_isUndead}) then {
 		if (s_player_hidebody < 0) then {
@@ -856,10 +870,10 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 	//Ignite Entites
 	_manOrVehicle = (_isMan or _isVehicle);
-	if (_manOrVehicle && {_canDo} && {_hasFuel} && {_hasMatches} && {!_isHarvested}) then 
+	if (_manOrVehicle && {_canDo} && {_hasFuel} && {_hasMatches} && {!_isHarvested}) then
 	{
 		_text = "Person";
-		
+
 		call
 		{
 			if (_isZombie) exitWith { _text = "Zombie"; };
@@ -868,7 +882,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			if (_isTargetHostage) exitWith { _text = "Hostage"; };
 			if (_isVehicle) exitWith { _text = "Vehicle"; };
 		};
-	
+
 		if (s_player_igniteEntity < 0) then {
 			s_player_igniteEntity = player addAction [format ["Ignite %1",_text], { _this spawn BP_fnc_entityIgnite; },_cursorTarget, 0, false, true, "",""];
 		};
@@ -876,7 +890,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_igniteEntity;
 		s_player_igniteEntity = -1;
 	};
-	
+
 	//_canGut = (!_isAlive or _isTargetUnconscious or _isTargetHostage);
 	//if (_canGut and (_isAnimal or _isZombie or _isPlayer) and !_isHarvested and _hasKnife and _canDo) then {
 	//	if (s_player_butcher < 0) then {
@@ -906,7 +920,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		player removeAction s_player_lootbody;
 		s_player_lootbody = -1;
 	};
-	
+
 	//Harvest Remains (Undead)
 	if (_isMan and !_isAlive and _canDo and !_isZombie and !_isAnimal and _isUndead and !_targetUndead) then
 	{
@@ -958,6 +972,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	s_player_butcher = -1;
 	player removeAction s_player_cook;
 	s_player_cook = -1;
+	player removeAction s_player_boil;
+	s_player_boil = -1;
 	player removeAction s_player_fireout;
 	s_player_fireout = -1;
 	player removeAction s_player_fillfuel;
@@ -986,15 +1002,15 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	//s_player_towStart = -1;
 	//player removeAction s_player_towEnd;
 	//s_player_towEnd = -1;
-	
+
 	//Ignite
 	player removeAction s_player_igniteEntity;
 	s_player_igniteEntity = -1;
-	
+
 	//Destroy Vehicle
 	player removeAction s_player_destroyVehicle;
 	s_player_destroyVehicle = -1;
-	
+
 	//Dog
 	player removeAction s_player_dog_tame;
 	s_player_dog_tame = -1;
@@ -1033,7 +1049,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 //Air Actions (Eject / Parachute)
 _inAirVehicle = ((vehicle player) isKindOf "Air");
-if (_inAirVehicle) then 
+if (_inAirVehicle) then
 {
 	if (s_player_ejectParacute < 0) then {
 		s_player_ejectParacute = player addAction ["Eject (Parachute)", { _this spawn BP_fnc_ejectParachute; },_cursorTarget, 1, false, true, "", ""];
@@ -1045,12 +1061,12 @@ if (_inAirVehicle) then
 
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];
-if (_dogHandle > 0 and !_inVehicle) then 
+if (_dogHandle > 0 and !_inVehicle) then
 {
 	_dog = player getVariable ["dog",objNull];
 	_ownerID = _dog getVariable ["CharacterID","0"];
 
-	if (_canDo and alive _dog and _ownerID == BP_characterID) then 
+	if (_canDo and alive _dog and _ownerID == BP_characterID) then
 	{
 		if (s_player_dog_call < 0) then {
 			s_player_dog_call = player addAction ["Dog: Call", { _this spawn BP_fnc_dogFollow; },[_dog,_dogHandle,true], 2, false, true, "", ""];
@@ -1077,7 +1093,7 @@ if (_dogHandle > 0 and !_inVehicle) then
 				_text = "Passive";
 				_nextMode = 1;
 			};
-			s_player_dog_combat = player addAction [format["Dog: Combat: %1",_text],{ _this spawn BP_fnc_dogCombatMode; },[_dog,_dogHandle,_nextMode], 2, false, true,"",""];		
+			s_player_dog_combat = player addAction [format["Dog: Combat: %1",_text],{ _this spawn BP_fnc_dogCombatMode; },[_dog,_dogHandle,_nextMode], 2, false, true,"",""];
 		};
 	} else {
 		player removeAction s_player_dog_call;

@@ -24,6 +24,10 @@ _lootMax = _x getVariable ["maxLoot",1];
 if (_lootMax > 4) then { _lootMax = 4; };
 
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
 _itemTypes =	[] + getArray (_config >> "itemType");
 
 //Check Valid Logic Data
@@ -52,7 +56,7 @@ for "_i" from 1 to _lootRnd do
 {
 	//Find Index Of Building Type
 	_index = BP_CBLBase find _buildingType;
-	
+
 	//Check Index Building Type is Valid
 	if (_index != -1) then
 	{
@@ -61,7 +65,7 @@ for "_i" from 1 to _lootRnd do
 		_index = floor(random _cntWeights);
 		_index = _weights select _index;
 		_itemType = _itemTypes select _index;
-		
+
 		private "_iPos";
 		if (_lootRnd == 1) then {
 			_iPos = _buildingPos;

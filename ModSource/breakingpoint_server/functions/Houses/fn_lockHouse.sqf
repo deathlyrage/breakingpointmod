@@ -13,7 +13,14 @@ private ["_buildingNetID","_building","_buildingType","_buildingConfig","_buildi
 _buildingNetID = _this select 0;
 _building = objectFromNetID _buildingNetID;
 _buildingType = typeOf _building;
+
+// Mission config file loot table override.
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
+
 _buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "numberOfDoors");
 
 //Null Checking
@@ -57,21 +64,21 @@ _databasePos = [(round(direction _building)),(_buildingPos select 0),(_buildingP
 {
 	//Fetch Object
 	_object = _x select 0;
-	
+
 	if (!isNull _object) then
 	{
 		//Save Object
 		if (_object isKindOf "BP_BarrelFuel") then {
 			//Fuel ( Barrel )
 			//_object call BPServer_fnc_updateObjectPosition;
-			
+
 			//Update Local Variable Fuel
 			_fuel = getFuelCargo _object;
 			_x set [7,_fuel];
 		} else {
 			//Inventory
 			_object call BPServer_fnc_updateObjectInventory;
-			
+
 			//Update Local Variable Inventory
 			_inventory = _object getVariable ["lastInventory",[]];
 			_x set [6,_inventory];
@@ -80,10 +87,10 @@ _databasePos = [(round(direction _building)),(_buildingPos select 0),(_buildingP
 		//Remove Object From Server Monitor
 		_index = BP_serverObjectMonitor find (netID _object);
 		if (_index >= 0) then { BP_serverObjectMonitor deleteAt _index; };
-		
+
 		//Delete Storage
 		deleteVehicle _object;
-		
+
 		//Update Variable
 		_objects set [_forEachIndex,_x];
 	} else {

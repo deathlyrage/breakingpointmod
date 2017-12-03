@@ -3,13 +3,13 @@
 
 	Description:
 	Function for a player to create a storage component and sumbit it for creation server side.
-	
+
 	Parameter(s):
 	-_this select 0: Classname Of Blueprint
-	
+
 	Returns:
 	None
-	
+
 	Todo:
 	-Custom Sounds, Animations, Effects
 */
@@ -111,11 +111,11 @@ _dis=20;
 _finished = call BP_fnc_medicAnim;
 if (!_finished) exitWith {};
 
-if (_blueprint == "BlueprintIED1") exitWith 
+if (_blueprint == "BlueprintIED1") exitWith
 {
 	//Remove Materials
 	{ player removeMagazine _x; } count _Materials;
-	
+
 	//Remove Tools
 	{ player removeItem _x; } count _Tools;
 
@@ -133,7 +133,14 @@ if (_blueprint == "BlueprintHaven") exitWith
 	_inside = [player,_building] call BP_fnc_isInsideBuilding;
 	_type = typeOf _building;
 	_size = ((sizeOf _type)+5);
+
+	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
+	if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+	{
+		_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
+	};
+
 	_lockable = (_type in BP_Houses);
 	_locked = (_building getVariable ['bis_disabled_Door',0] == 1);
 	_weaponHolderTypes = ["BP_LootBox","GroundWeaponHolder","WeaponHolderSimulated"];
@@ -141,7 +148,7 @@ if (_blueprint == "BlueprintHaven") exitWith
 	_storage = false;
 	_nearByObj = nearestObjects [_buildingPos, ["BP_SaveObject"],_size];
 	if (count _nearByObj > 0) then { _storage = true; };
-	
+
 	//Error Add / Blueprint
 	if (!_inside or !_lockable or _locked or _storage or _weaponHolder) exitWith
 	{
@@ -152,30 +159,30 @@ if (_blueprint == "BlueprintHaven") exitWith
 			{deleteVehicle _x} count (_building nearEntities ["BP_LootBox",40]);
 			{deleteVehicle _x} count (_building nearEntities ["GroundWeaponHolder",40]);
 			{deleteVehicle _x} count (_building nearEntities ["WeaponHolderSimulated",40]);
-			
+
 			//Message
 			cutText ["Unable to detect building. Please try again in a different spot.", "PLAIN DOWN"];
 		};
-		
+
 		//Not In Building
 		if (!_inside) then { cutText ["You need to be inside the building.", "PLAIN DOWN"]; };
 
 		//Not Lockable
 		if (!_lockable) then { cutText ["You need to be in a valid building.", "PLAIN DOWN"]; };
-		
+
 		//Already Locked
 		if (_locked) then { cutText ["This building is already locked.", "PLAIN DOWN"]; };
-		
+
 		//Already Storage
 		if (_storage) then { cutText ["You need to remove the nearby storage objects before constructing a haven.", "PLAIN DOWN"]; };
 	};
-	
+
 	//Get Building Passcode
 	BP_SafeSet = nil;
 	_safeKeyThread = [] spawn BP_fnc_safeKeypadSet;
 	[_safeKeyThread] call BP_fnc_addThreadHandle;
 	waitUntil {scriptDone _safeKeyThread};
-	
+
 	//Check If Passcode Is Correct
 	if (isNil "BP_SafeSet") then { BP_SafeSet = "0"; };
 	_keyArray = toArray BP_SafeSet;
@@ -183,14 +190,14 @@ if (_blueprint == "BlueprintHaven") exitWith
 	{
 		//Rest Code
 		BP_SafeSet = nil;
-		
+
 		//Error Message
 		cutText ["Invalid Lock Code. It must be 4 numbers.", "PLAIN DOWN"];
 	};
-	
+
 	//Claim House
 	[(netID player),BP_characterID,(netID _building),BP_SafeSet,_blueprint] remoteExecCall ["BPServer_fnc_publishHouse",2];
-	
+
 	//Remove Zombies / Loot
 	{deleteVehicle _x} count (_building nearEntities ["zZombie_Base",40]);
 	{deleteVehicle _x} count (_building nearEntities ["BP_LootBox",40]);
@@ -207,13 +214,20 @@ if (_blueprint == "BlueprintHavenReinforce") exitWith
 	_inside = [player,_building] call BP_fnc_isInsideBuilding;
 	_type = typeOf _building;
 	_size = ((sizeOf _type)+5);
+
+	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
+	if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+	{
+		_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
+	};
+
 	_lockable = (_type in BP_Houses);
 	_locked = (_building getVariable ['bis_disabled_Door',0] == 1);
-	
+
 	_weaponHolderTypes = ["BP_LootBox","GroundWeaponHolder","WeaponHolderSimulated"];
 	_weaponHolder = (_type in _weaponHolderTypes);
-	
+
 	//Error Add / Blueprint
 	if (!_inside or !_lockable or _locked or _weaponHolder) exitWith
 	{
@@ -224,21 +238,21 @@ if (_blueprint == "BlueprintHavenReinforce") exitWith
 			{deleteVehicle _x} count (_building nearEntities ["BP_LootBox",40]);
 			{deleteVehicle _x} count (_building nearEntities ["GroundWeaponHolder",40]);
 			{deleteVehicle _x} count (_building nearEntities ["WeaponHolderSimulated",40]);
-			
+
 			//Message
 			cutText ["Unable to detect building. Please try again in a different spot.", "PLAIN DOWN"];
 		};
-		
+
 		//Not In Building
 		if (!_inside) then { cutText ["You need to be inside the building.", "PLAIN DOWN"]; };
 
 		//Not Lockable
 		if (!_lockable) then { cutText ["You need to be in a valid building.", "PLAIN DOWN"]; };
-		
+
 		//Already Locked
 		if (_locked) then { cutText ["This building is locked. You need to unlock it.", "PLAIN DOWN"]; };
 	};
-	
+
 	[(netID _building),(netID player),"reinforcement"] remoteExecCall ["BPServer_fnc_upgradeHouse",2];
 };
 
@@ -279,12 +293,12 @@ player setVariable ["constructionObject",_object];
 player setVariable ["constructionClassname",_ObjClass];
 player setVariable ["constructionBlueprint",_blueprint];
 
-while {!isNull (player getVariable "constructionObject")} do 
+while {!isNull (player getVariable "constructionObject")} do
 {
 	if (vehicle player != player) then {
 		player action ["eject", vehicle player];
 	};
-	
+
 	private "_valid";
 	_valid = _object call BP_fnc_objCheck;
 	if (_valid) then {
@@ -295,7 +309,7 @@ while {!isNull (player getVariable "constructionObject")} do
 		_object setObjectTexture [3,'#(argb,8,8,3)color(0,1,0,1)'];
 		_object setObjectTexture [4,'#(argb,8,8,3)color(0,1,0,1)'];
 		_object setObjectTexture [5,'#(argb,8,8,3)color(0,1,0,1)'];
-		
+
 	} else {
 		//Red
 		_object setObjectTexture [0,'#(argb,8,8,3)color(1,0,0,1)'];
@@ -305,7 +319,7 @@ while {!isNull (player getVariable "constructionObject")} do
 		_object setObjectTexture [4,'#(argb,8,8,3)color(1,0,0,1)'];
 		_object setObjectTexture [5,'#(argb,8,8,3)color(1,0,0,1)'];
 	};
-	
+
 	sleep 0.1;
 };
 

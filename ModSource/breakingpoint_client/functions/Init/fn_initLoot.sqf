@@ -15,9 +15,9 @@ for "_i" from 0 to ((count _config) - 1) do {
 	_classname = configName (_config select _i);
 	_itemChances = [] + getArray (_config >> _classname >> "ItemChance");
 	_itemCount = count _itemChances;
-	if (_itemCount > 0) then 
+	if (_itemCount > 0) then
 	{
-		if (BP_COLBase find _classname < 0) then 
+		if (BP_COLBase find _classname < 0) then
 		{
 			_weighted = [];
 			_j = 0;
@@ -42,13 +42,17 @@ BP_CBLChances = [];
 BP_CBLBase = [];
 
 _config = configFile >> "CfgBuildingLoot";
+if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
+{
+	_config = missionConfigFile >> "CfgBuildingLoot";
+};
 for "_i" from 0 to ((count _config) - 1) do {
 	_classname = configName (_config select _i);
 	_itemChances = [] + getArray (_config >> _classname >> "ItemChance");
 	_itemCount = count _itemChances;
-	if (_itemCount > 0) then 
+	if (_itemCount > 0) then
 	{
-		if (BP_CBLBase find _classname < 0) then 
+		if (BP_CBLBase find _classname < 0) then
 		{
 			_weighted = [];
 			_j = 0;
@@ -71,9 +75,9 @@ for "_i" from 0 to ((count _config) - 1) do {
 //Loop Through All Buildings and Generate a List that spawn Loot and can Spawn Zombies
 BP_ZombieBuildings = [];
 BP_LootBuildings = [];
-for "_i" from 0 to (count (configFile >> "CfgBuildingLoot") - 1) do 
+for "_i" from 0 to ((count _config) - 1) do
 {
-	_type = (configFile >> "CfgBuildingLoot") select _i;
+	_type = _config select _i;
 	_canZombie = 	getNumber (_type >> "zombieChance") > 0;
 	_canLoot = 		getNumber (_type >> "lootChance") > 0;
 	if (_canZombie) then {

@@ -10,7 +10,14 @@
 private ["_building","_buildingType","_buildingConfig","_buildingLockable","_buildingDoors","_buildingExplosive"];
 _building = _this select 3;
 _buildingType = 	typeOf _building;
+
+// Mission config file loot table override.
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
+
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "numberOfDoors");
 

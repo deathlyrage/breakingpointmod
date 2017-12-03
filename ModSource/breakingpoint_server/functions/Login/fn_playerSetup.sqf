@@ -28,28 +28,28 @@ _combatAI = _player getVariable ["combatAI",false];
 
 //Handle Spawn Selection and Class Selection
 if (count _this > 2) then
-{	
+{
 	_spawnLocation = _this select 2;
 	_class = _this select 3;
-	
+
 	//Exit If Already Setup
 	if (_isSetup) exitWith {};
-	
+
 	//Flag as Already Setup
 	_player setVariable ["classSetup",true];
-	
+
 	//Publish Class Selection
 	_player setVariable ["class",_class,true];
 
 	//Spawn Class Gear
 	[_player,_class] call BPServer_fnc_factionGear;
-	
+
 	//Handle Spawn Selection
 	call
 	{
 		//Fetch WorldName
 		_worldName = worldName;
-		
+
 		//Random
 		if (_spawnLocation == -1) exitWith
 		{
@@ -57,7 +57,7 @@ if (count _this > 2) then
 			_worldspace = selectRandom _spawnPoints;
 			_player setVariable ["worldspace",_worldspace];
 		};
-		
+
 		//Stronghold
 		if (_spawnLocation == 0) exitWith
 		{
@@ -66,7 +66,7 @@ if (count _this > 2) then
 			_worldspace = selectRandom _spawnPoints;
 			_player setVariable ["worldspace",_worldspace];
 		};
-		
+
 		//Spawn Selection
 		if (_spawnLocation == 1) then { _worldName = "West"; };
 		if (_spawnLocation == 2) then { _worldName = "East" };
@@ -89,7 +89,7 @@ if (count _this > 2) then
 //if (!isNull _dog) then { _dog setPosATL (_worldspace select 1); };
 
 //Zombie Queue Spawning System
-if (_class == 7) exitWith 
+if (_class == 7) exitWith
 {
 	//Ensure Player Is In The Queue
 	_index = BP_UndeadQueue find _logicNetID;
@@ -97,14 +97,14 @@ if (_class == 7) exitWith
 		_index = BP_UndeadQueue pushBack _logicNetID;
 	};
 	_queueTotal = count BP_UndeadQueue;
-	
+
 	//Check and Count Players
 	_nonUndeadPlayers = [];
-	_zombieCount = 
+	_zombieCount =
 	{
 		_valid = false;
 		//Not In Debug
-		if !(_x call BP_fnc_isInDebug) then 
+		if !(_x call BP_fnc_isInDebug) then
 		{
 			//Alive
 			if (alive _x) then {
@@ -125,16 +125,16 @@ if (_class == 7) exitWith
 	} count allPlayers;
 	_playerCount = (count allPlayers) - _zombieCount;
 	_maxZombies = (BP_maxPlayers / 5);
-	
+
 	//Ensure There Is More Then One Non-Zombie Player
 	if (_playerCount == 1) exitWith {
 		_player setDir (_worldspace select 0);
 		_player setPosATL (_worldspace select 1);
 		_player enableSimulationGlobal true;
-		
+
 		//Remove From Queue
 		BP_UndeadQueue deleteAt _index;
-		
+
 		//Send Packet
 		bpSetupResult = [_worldspace];
 		_clientID publicVariableClient "bpSetupResult";
@@ -142,16 +142,16 @@ if (_class == 7) exitWith
 		//bpSetupResult = ["Waiting For More Players",true];
 		//_clientID publicVariableClient "bpSetupResult";
 	};
-	
+
 	if (_zombieCount < _maxZombies && {_index == 0}) then
 	{
 		//Locate Random Player
 		_foundSpawn = false;
 		_randomPlayer = selectRandom _nonUndeadPlayers;
-		
+
 		//Find Zombie Spawn Position
 		_nearbyZombies = _randomPlayer nearEntities ["zZombie_Base", 250];
-		if !(_nearbyZombies isEqualTo []) then 
+		if !(_nearbyZombies isEqualTo []) then
 		{
 			_zombie = selectRandom _nearbyZombies;
 			if !(isNull _zombie) then
@@ -163,12 +163,12 @@ if (_class == 7) exitWith
 		} else {
 			//Fetch Nearby Buildings
 			_nearbyBuildings = (getPosATL _randomPlayer) nearObjects ["Building",200];
-			
+
 			//Delete Nearest Building from Player
 			_nearestBuilding = nearestObject [_randomPlayer, "HouseBase"];
 			_index = _nearbyBuildings find _nearestBuilding;
 			if (_index >= 0) then { 0 = _nearbyBuildings deleteAt _index;};
-			
+
 			//Shuffle Buildings Randomly
 			_nearbyBuildings = _nearbyBuildings call BIS_fnc_arrayShuffle;
 
@@ -178,9 +178,15 @@ if (_class == 7) exitWith
 				{
 					//Don't Spawn In Havens
 					if ((netID _x) in BP_Buildings) exitWith {};
-					
+
 					//Handle Spawning
+					// Mission config file loot table override.
 					_config = configFile >> "CfgBuildingLoot" >> (typeOf _x);
+					if (isClass (missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x))) then
+					{
+						_config = missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x);
+					};
+
 					if (isClass _config) then {
 						_unitTypes = getArray (_config >> "zombieClass");
 						_positions =	getArray (_config >> "zombiePos");
@@ -192,24 +198,24 @@ if (_class == 7) exitWith
 						};
 					};
 				};
-			} count _nearbyBuildings;	
+			} count _nearbyBuildings;
 		};
-		
+
 		["playerSetup: foundSpawn: %1 | Worldspace: %2",_foundSpawn,_worldspace] call BP_fnc_debugConsoleFormat;
-		
+
 		if (!_foundSpawn) exitWith {
 			//Send Queue Packet
 			bpSetupResult = ["Waiting For Suitable Spawn Location.",true];
 			_clientID publicVariableClient "bpSetupResult";
 		};
-		
+
 		_player setDir (_worldspace select 0);
 		_player setPosATL (_worldspace select 1);
 		_player enableSimulationGlobal true;
-		
+
 		//Remove From Queue
 		BP_UndeadQueue deleteAt _index;
-		
+
 		//Send Packet
 		bpSetupResult = [_worldspace];
 		_clientID publicVariableClient "bpSetupResult";

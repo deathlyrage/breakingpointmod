@@ -21,7 +21,14 @@ _nearby = _position nearObjects ["building",_radius];
 _buildingCount = {
 	//Check Building and Spawn Loot
 	_type = (typeOf _x);
+
+	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
+	if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+	{
+		_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
+	};
+
 	_spawnLoot = isClass (_config);
 	if (_spawnLoot) then {
 		["loot: Spawning Loot For Building %1.",_type] call BP_fnc_debugConsoleFormat;

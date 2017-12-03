@@ -16,6 +16,10 @@ if (!_isActive) exitWith {};
 _building = nearestObject [player, "HouseBase"];
 _buildingType = 	typeOf _building;
 _buildingConfig = configFile >> "CfgBuildingLoot" >> _buildingType;
+if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+{
+	_buildingConfig = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
+};
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingClaimed = ((netID _building) in BP_Buildings);
 _buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
