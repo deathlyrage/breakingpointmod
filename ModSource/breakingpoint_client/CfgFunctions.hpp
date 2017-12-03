@@ -66,6 +66,7 @@ class CfgFunctions
 			class houseUnlock {};
 			class houseReset {};
 			class cook {};
+			class boil {};
 			class drink {};
 			class eat {};
 			class sprayCan {};
@@ -94,7 +95,7 @@ class CfgFunctions
 			class dogLocal {};
 			class dogHandleDamage {};
 			class dogKilled {};
-			
+
 			//Utility Functions
 			class dogFindTargetAgent {};
 			class dogNameSet {};

@@ -712,6 +712,16 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		s_player_cook = -1;
 	};
 
+	// Boil water
+	if (_isCookable && {("Waterbot" in magazines player)} && {!_isHostage} && {_canDo}) then {
+		if (s_player_boil < 0) then {
+			s_player_boil = player addAction ["Boil Water", { _this spawn BP_fnc_boil; },_cursorTarget, 3, false, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_boil;
+		s_player_boil = -1;
+	};
+
 	//Destroy Fire
 	if (_cursorTarget == BP_hasFire && {_canDo}) then {
 		if ((s_player_fireout < 0) and !(inflamed _cursorTarget) and !_isUndead and !_targetUndead and _canDo and (player distance _cursorTarget < 4)) then {
@@ -962,6 +972,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	s_player_butcher = -1;
 	player removeAction s_player_cook;
 	s_player_cook = -1;
+	player removeAction s_player_boil;
+	s_player_boil = -1;
 	player removeAction s_player_fireout;
 	s_player_fireout = -1;
 	player removeAction s_player_fillfuel;
