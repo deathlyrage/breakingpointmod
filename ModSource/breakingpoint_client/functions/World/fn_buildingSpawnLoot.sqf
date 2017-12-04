@@ -82,7 +82,10 @@ _nearByObj = nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponH
 if (count _nearByObj >= _lootMax) exitWith {};
 
 //Shuffle Building Loot Positions
-_positionsShuffle = _positions call BIS_fnc_arrayShuffle;
+_positionsShuffle = [];
+for "_i" from 1 to (count _positions) do {
+	_positionsShuffle pushBack (_positions deleteAt (floor (random (count _positions))));
+};
 
 //Loop Through Each Position and Calculate the spawn.
 {
