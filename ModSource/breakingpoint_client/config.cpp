@@ -139,4 +139,19 @@ class CfgWorlds
 			//};
 		};
 	};
+	
+	class Malden : CAWorld
+	{
+		class Ambient {};
+		
+		class AmbientA3 
+		{
+			maxCost = 500;
+			delete Radius440_500; //Kestrel / Seagull / Rabbit
+			delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
+			delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
+			delete Radius15_20; //FX / Wind / Paper / Pollen
+			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
+		};
+	};
 };
