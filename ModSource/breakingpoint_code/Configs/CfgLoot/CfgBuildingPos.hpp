@@ -2270,17 +2270,17 @@
 
 
 
-	class Land_i_House_Small_02_brown_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_brown_F : Land_i_House_Small_02_V2_F {};
 
-	class Land_i_House_Small_02_yellow_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_yellow_F : Land_i_House_Small_02_V2_F {};
 
-	class Land_i_House_Small_02_whiteblue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_whiteblue_F : Land_i_House_Small_02_V2_F {};
 
-	class Land_i_House_Small_02_blue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_blue_F : Land_i_House_Small_02_V2_F {};
 
-	class Land_i_House_Small_02_pink_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_pink_F : Land_i_House_Small_02_V2_F {};
 
-	class Land_i_House_Small_02_white_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_white_F : Land_i_House_Small_02_V2_F {};
 
 
 
