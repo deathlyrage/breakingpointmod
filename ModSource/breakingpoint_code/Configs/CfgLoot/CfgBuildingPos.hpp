@@ -2270,31 +2270,48 @@
 
 
 
-	class Land_i_House_Small_02_b_brown_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_brown_F : Residential {
+		lootMin = 1;
+		lootMax = 4;
+		lootPos[] = 
+		{
+			{-2.18506,-2.89746,-0.515881},
+			{-4.39844,1.25195,-0.515877},
+			{4.20215,1.06055,-0.515877},
+			{0.592285,-2.4668,-0.515881},
+			{2.45996,-0.849609,-0.515877},
+			{-3.3042,-0.579102,-0.515877}
+		};
+		zombiePos[] = 
+		{
+			{2.99951,-2.13281,-0.515877},
+			{-2.01709,1.28516,-0.515881}
+		};
+	};
 
-	class Land_i_House_Small_02_b_yellow_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_yellow_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_b_whiteblue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_whiteblue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_b_blue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_blue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_b_pink_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_pink_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_b_white_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_white_F : Land_i_House_Small_02_b_brown_F {};
 
 
 
-	class Land_i_House_Small_02_c_brown_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_brown_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_yellow_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_yellow_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_whiteblue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_whiteblue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_blue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_blue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_pink_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_pink_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_white_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_white_F : Land_i_House_Small_02_b_brown_F {};
 
 
 

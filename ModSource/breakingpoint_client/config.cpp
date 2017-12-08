@@ -27,7 +27,7 @@ class CfgPatches
 		units[] = {"Altis","Stratis","Bornholm","newhaven"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","A3_Map_Altis","A3_Map_Stratis","breakingpoint_infected"};
+		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","A3_Map_Altis","A3_Map_Stratis","A3_Map_Malden","breakingpoint_infected"};
 	};
 };
 
