@@ -53,7 +53,7 @@ _startTime = time;
 _crashwreck = createVehicle [_heliModel,_heliStart, [], 0, "FLY"];
 _crashwreck setVariable ["permaLoot",true];
 _crashwreck engineOn true;
-_crashwreck flyInHeight 60;
+_crashwreck flyInHeight 80;
 _crashwreck forceSpeed 360;
 _crashwreck setSpeedMode "FULL";
 _crashwreck allowDamage false;
@@ -111,8 +111,8 @@ if (_preWaypoints > 0) then
 				["spawnCrashSite: Cutting Ropes %1",(ropes _crashwreck)] call BP_fnc_debugConsoleFormat;
 				{ ropeCut [_x, 5]; } count (ropes _crashwreck);
 
-				//Delay a Second
-				sleep 1;
+				//Delay deployment of parachute to allow the package to gain some distance from the chopper
+				sleep 2.5;
 
 				//Create Parachute
 				["spawnCrashSite: Deploying Parachute"] call BP_fnc_debugConsoleFormat;
@@ -121,7 +121,7 @@ if (_preWaypoints > 0) then
 				_para setDir getDir _cargo;
 				_para setPos getPos _cargo;
 				//_cargo attachTo [_para, [0,2,0]];
-				_cargo attachTo [_para, [0,1,0]];
+				_cargo attachTo [_para, [0,0,0.9]];
 
 				//Handle Parachute Cleanup when Crate Hits Ground
 				_handle = [_para,_cargo] spawn {
@@ -130,15 +130,15 @@ if (_preWaypoints > 0) then
 
 					//Wait Until Cargo Touching Ground
 					_fallTime = diag_tickTime;
-					waitUntil {isTouchingGround _cargo || ((diag_tickTime - _fallTime) > 15)};
+					waitUntil {((getPosATL _cargo) select 2 < 0.5 || (isTouchingGround _cargo) || ((diag_tickTime - _fallTime) > 30))};
 
 					//Deattach Crate and Delete Parachute
 					detach _cargo;
 					deleteVehicle _para;
 
 					//Start Smoke
-					_smokePos = getPosATL _cargo;
-					_smokeObj = createVehicle ["BP_SmokeShell", _smokePos, [], 0, "CAN_COLLIDE"];
+					_smokeObj = createVehicle ["BP_SmokeShell", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+					_smokeObj attachTo [_cargo, [0,0.4,0]];
 					_smokeObj setVariable ["permaLoot",true];
 				};
 			};
