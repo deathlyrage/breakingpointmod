@@ -1196,7 +1196,7 @@
 	class Land_i_House_Small_03_V1_F: Residential {
 	  lootMin = 0;
 	  lootMax = 3;
-	  lootPos[] = {{3.72803,2.6582,-0.371611},{3.70215,-0.348877,-0.371611},{3.68506,-3.08643,-0.371611},{3.77783,-5.17163,-0.371611},{0.0654297,-1.07813,-0.371609},{-2.31836,-1.03247,-0.371609},{-4.37158,-1.08643,-0.37161},{-4.42969,1.30811,-0.37161},{-2.49365,1.3457,-0.371609},{-2.53857,3.62476,-0.37161},{-4.36475,3.58984,-0.371609},{0.436035,3.9624,-0.371611},{0.307129,2.22656,-0.37161}};
+	  lootPos[] = {{3.72803,2.6582,0.0643158},{3.70215,-0.348877,0.0643158},{3.68506,-3.08643,0.0643158},{3.77783,-5.17163,0.0643158},{0.0654297,-1.07813,0.0643158},{-2.31836,-1.03247,0.0643158},{-4.37158,-1.08643,0.0643158},{-4.42969,1.30811,0.0643158},{-2.49365,1.3457,0.0643158},{-2.53857,3.62476,0.0643158},{-4.36475,3.58984,0.0643158},{0.436035,3.9624,0.06431581},{0.307129,2.22656,0.0643158}};
 	 zombiePos[] = {{-5.03589,4.26025,-0.371631},{3.18823,4.29395,-0.37163}};
 	camPos[] =
 	  {
@@ -2270,31 +2270,48 @@
 
 
 
-	class Land_i_House_Small_02_brown_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_brown_F : Residential {
+		lootMin = 1;
+		lootMax = 4;
+		lootPos[] = 
+		{
+			{-2.18506,-2.89746,-0.515881},
+			{-4.39844,1.25195,-0.515877},
+			{4.20215,1.06055,-0.515877},
+			{0.592285,-2.4668,-0.515881},
+			{2.45996,-0.849609,-0.515877},
+			{-3.3042,-0.579102,-0.515877}
+		};
+		zombiePos[] = 
+		{
+			{2.99951,-2.13281,-0.515877},
+			{-2.01709,1.28516,-0.515881}
+		};
+	};
 
-	class Land_i_House_Small_02_yellow_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_yellow_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_whiteblue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_whiteblue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_blue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_blue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_pink_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_pink_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_white_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_b_white_F : Land_i_House_Small_02_b_brown_F {};
 
 
 
-	class Land_i_House_Small_02_c_brown_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_brown_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_yellow_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_yellow_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_whiteblue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_whiteblue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_blue_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_blue_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_pink_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_pink_F : Land_i_House_Small_02_b_brown_F {};
 
-	class Land_i_House_Small_02_c_white_F : Land_i_House_Small_02_V2_F {};
+	class Land_i_House_Small_02_c_white_F : Land_i_House_Small_02_b_brown_F {};
 
 
 
@@ -2341,14 +2358,14 @@
 
 	class Land_i_Addon_02_b_white_F : Farm {
 		lootMin = 0;
-		lootMax = 1;
+		lootMax = 2;
 		lootPos[] = {{4.79688,2.12256,0.16449},{0.583984,2.2251,0.16449}};
 		zombiePos[] = {{2.69336,0.814453,0.16449}};
 	};
 
 	class Land_i_Stone_Shed_01_c_clay_F : Residential {
 		lootMin = 0;
-		lootMax = 1;
+		lootMax = 3;
 		lootPos[] = {{5.06738,1.77734,-0.0226288},{2.53711,3.12402,-0.0246887},{0.197266,2.52539,-0.0266113}};
 		zombiePos[] = {{2.54492,0.183594,-0.0246887}};
 	};
@@ -2366,24 +2383,89 @@
 	class Land_i_Stone_Shed_01_b_white_F : Land_i_Stone_Shed_01_c_clay_F {};
 
 	class Land_Barn_01_grey_F : Farm {
-		lootMin = 0;
+		lootMin = 1;
 		lootMax = 5;
-		lootPos[] = {{-7.39258,-2.50342,-0.682266},{-2.79883,-2.78857,-0.680542},{-0.125,2.69922,-0.713684},{7.05078,-2.82813,-0.680237},{4.75488,-2.80225,-0.68045}};
+		lootPos[] = {{-7.39258,-2.5034201,-0.682266},{-2.79883,-2.7885699,-0.68054199},{-0.125,2.6992199,-0.71368402},{7.0507798,-2.82813,-0.680237},{4.75488,-2.8022499,-0.68045002}};
 		zombiePos[] = {{1.57227,-0.046875,-0.697052}};
 	};
-
+	
+	class Land_Barn_01_brown_F : Land_Barn_01_grey_F {};
+	
 	class Land_Shed_08_grey_F : Farm {
-		lootMin = 0;
+		lootMin = 1;
 		lootMax = 4;
-		lootPos[] = {{3.80176,1.54541,-0.885696},{0.436523,-1.26074,-0.892288},{-3.98242,-1.5332,-0.885635},{-3.9707,1.4126,-0.885635}};
-		zombiePos[] = {{2.42188,-0.550293,-0.885666}};
+		lootPos[] = {{3.80176,1.54541,-0.88569599},{0.43652299,-1.26074,-0.89228803},{-3.98242,-1.5332,-0.88563502},{-3.9707,1.4126,-0.88563502}};
+		zombiePos[] = {{2.42188,-0.55029303,-0.88566601}};
 	};
 	
+	class Land_Shed_08_brown_F : Land_Shed_08_grey_F{};
+	
 	class Land_Supermarket_01_malden_F : Supermarket {
-		lootMin = 0;
+		lootMin = 2;
 		lootMax = 7;
 		lootPos[] = {{1.04297,-7.88086,-1.44994},{6.69824,-7.44189,-1.44994},{7.12109,-1.93677,-1.41737},{0.376953,1.68433,-1.44994},{-0.157227,-2.65527,-1.44994},{-5.0332,-7.55322,-1.44994},{-4.18164,-2.25879,-1.44994}};
 		zombiePos[] = {{4.22656,-4.4458,-1.44994}};
 	};
+
+	class Land_Bunker_01_HQ_F : MilitarySpecial {
+		lootMin=1;
+		lootMax=3;
+		lootPos[]=
+		{
+			{-4.03125,-2.01758,-0.89785},
+			{-0.905273,0.316895,-0.897842},
+			{1.42969,-0.00244141,-0.897842}
+		};
+		zombiePos[]=
+		{
+			{2.50488,4.06934,-0.897842}
+		};
+	};
+		
+	class Land_Bunker_01_big_F : MilitarySpecial {
+		lootMin=1;
+		lootMax=4;
+		lootPos[]=
+		{
+			{1.54883,-2.70313,0.0865173},
+			{0.161133,-5.94482,0.0877075},
+			{-1.51172,-2.98193,0.0889664},
+			{-3.47266,1.2749,0.0867081}
+		};
+		zombiePos[]=
+		{
+			{0.355469,1.21143,0.0870285}
+		};
+	};
+		
+	class Land_Bunker_01_small_F : MilitarySpecial {
+		lootMin=1;
+		lootMax=3;
+		lootPos[]=
+		{
+			{-1.36035,0.237793,0.289917},
+			{0.792969,0.355957,0.289917}
+		};
+		zombiePos[]=
+		{
+			{0.119141,-1.27173,0.289925}
+		};
+	};
+		
+	class Land_Bunker_01_tall_F : MilitarySpecial {
+		lootMin=1;
+		lootMax=3;
+		lootPos[]=
+		{
+			{1.54199,-0.233398,1.52953},
+			{-1.13574,-0.22998,1.52953},
+			{-2.35645,0.968262,-3.33868}
+		};
+		zombiePos[]=
+		{
+			{-1.3252,1.4292,-3.33868}
+		};
+	};
+		
 	
 	#include "CfgBuildingPosBornholm.hpp"

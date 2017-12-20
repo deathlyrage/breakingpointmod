@@ -10,7 +10,7 @@
 private ["_dis","_qty","_item","_playerPos","_canUse","_finished"];
 _item = 		_this select 0;
 _playerPos = 	getPosATL player;
-_canUse = count nearestObjects [_playerPos, ["Land_FuelStation_02_pump_F","Land_FuelStation_01_pump_F","Land_Ind_TankSmall","land_fuelstation_w","Land_FuelStation_Feed_F","Land_A_FuelStation_Feed","Land_Tank_rust_F","Land_fs_feed_F","Land_Ind_FuelStation_Feed_EP1"], 4] > 0;
+_canUse = count nearestObjects [_playerPos, ["Land_FuelStation_02_pump_F","Land_FuelStation_01_pump_F","Land_Ind_TankSmall","land_fuelstation_w","Land_FuelStation_Feed_F","Land_A_FuelStation_Feed","Land_Tank_rust_F","Land_fs_feed_F","Land_Ind_FuelStation_Feed_EP1","Land_FuelStation_01_pump_malevil_F"], 4] > 0;
 
 if (!_canUse) exitWith { cutText ["You must be near a fuel source to fill fuel cans." , "PLAIN DOWN"]; };
 

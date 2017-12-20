@@ -111,6 +111,13 @@ class CfgLoadingScreens
 			"\breakingpoint_ui\loading\Tanoa\loading_2.jpg",
 			"\breakingpoint_ui\loading\Tanoa\loading_3.jpg"
 		};
+		malden[] =
+		{
+			"\breakingpoint_ui\loading\Malden\loading_1.jpg",
+			"\breakingpoint_ui\loading\Malden\loading_2.jpg",
+			"\breakingpoint_ui\loading\Malden\loading_3.jpg",
+			"\breakingpoint_ui\loading\Malden\loading_4.jpg"
+		};
 	};
 };
 
