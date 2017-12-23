@@ -8,7 +8,6 @@ shows faction stats on "breakingpoint_ui\info\InfoScreen.paa"
 */
 
 _survival = BP_LocalSurvivalData;
-BP_LocalSurvivalData = nil;
 _displayFSD = _this select 0;
 
 //Grab Controls

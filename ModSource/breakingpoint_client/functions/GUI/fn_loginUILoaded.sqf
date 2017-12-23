@@ -10,7 +10,6 @@
 _loginWnd = _this select 0;
 
 _survival = BP_LocalSurvivalData;
-BP_LocalSurvivalData = nil;
 
 hint str _display;
 
