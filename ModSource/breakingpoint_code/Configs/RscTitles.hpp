@@ -1542,7 +1542,7 @@ class RscTitles
 				text = "AAC Airfield";
 				x = 0.834383 * safezoneW + safezoneX;
 				y = 0.480 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
+				w = 0.13 * safezoneW;
 				h = 0.042 * safezoneH;
 			};
 			
@@ -1733,7 +1733,7 @@ class RscTitles
 				text="AAC Airfield";
 				x="0.834383 * safezoneW + safezoneX";
 				y="0.480 * safezoneH + safezoneY";
-				w="0.104988 * safezoneW";
+				w="0.13 * safezoneW";
 				h="0.042 * safezoneH";
 			};
 			class BP_RangerStats: RscStructuredTextStats
