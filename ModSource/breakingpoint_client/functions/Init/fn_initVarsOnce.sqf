@@ -278,7 +278,39 @@ BP_Houses =
 	//New Damage Model Support
 	"Land_i_House_Big_01_V3_dam_F",
 	"Land_i_House_Big_01_V2_dam_F",
-	"Land_i_House_Big_01_V1_dam_F"
+	"Land_i_House_Big_01_V1_dam_F",
+	//Malden
+	"Land_i_House_Big_02_b_blue_F",
+	"Land_i_House_Big_02_b_pink_F",
+	"Land_i_House_Big_02_b_whiteblue_F",
+	"Land_i_House_Big_02_b_white_F",
+	"Land_i_House_Big_02_b_brown_F",
+	"Land_i_House_Big_02_b_yellow_F",
+
+	"Land_i_House_Big_01_b_blue_F",
+	"Land_i_House_Big_01_b_pink_F",
+	"Land_i_House_Big_01_b_whiteblue_F",
+	"Land_i_House_Big_01_b_white_F",
+	"Land_i_House_Big_01_b_brown_F",
+	"Land_i_House_Big_01_b_yellow_F",
+	
+	"Land_i_House_Small_01_b_blue_F",
+	"Land_i_House_Small_01_b_pink_F",
+	"Land_i_House_Small_01_b_whiteblue_F",
+	"Land_i_House_Small_01_b_white_F",
+	"Land_i_House_Small_01_b_brown_F",
+	"Land_i_House_Small_01_b_yellow_F",
+
+	"Land_i_House_Small_02_b_blue_F",
+	"Land_i_House_Small_02_b_pink_F",
+	"Land_i_House_Small_02_b_whiteblue_F",
+	"Land_i_House_Small_02_b_white_F",
+	"Land_i_House_Small_02_b_brown_F",
+	"Land_i_House_Small_02_b_yellow_F",
+
+	"Land_i_Stone_Shed_01_b_clay_F",
+	"Land_i_Stone_Shed_01_b_raw_F",
+	"Land_i_Stone_Shed_01_b_white_F"
 ];
 
 Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];
