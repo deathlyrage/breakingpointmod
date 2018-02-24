@@ -12,7 +12,13 @@ params [["_object",objNull,[objNull]],["_iLootType","",[""]],["_min",0,[0]],["_m
 if (isNull _object) exitWith {};
 if (_iLootType == "") exitWith {};
 
-_config = 	configFile >> "CfgObjectLoot" >> _iLootType;
+// Mission config file loot table override.
+_config = configFile >> "CfgObjectLoot" >> _iLootType;
+if (isClass (missionConfigFile >> "CfgObjectLoot" >> _iLootType)) then
+{
+	_config = missionConfigFile >> "CfgObjectLoot" >> _iLootType;
+};
+
 _itemTypes =	[] + getArray (_config >> "itemType");
 _numItems = floor(random _max);
 if (_numItems < _min) then { _numItems = _min; };
