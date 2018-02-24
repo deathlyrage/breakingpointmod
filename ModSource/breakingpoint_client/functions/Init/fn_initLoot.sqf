@@ -10,7 +10,13 @@
 BP_COLChances = [];
 BP_COLBase = [];
 
+// Mission config file loot table override.
 _config = configFile >> "CfgObjectLoot";
+if (isClass (missionConfigFile >> "CfgObjectLoot")) then
+{
+	_config = missionConfigFile >> "CfgObjectLoot";
+};
+
 for "_i" from 0 to ((count _config) - 1) do {
 	_classname = configName (_config select _i);
 	_itemChances = [] + getArray (_config >> _classname >> "ItemChance");
