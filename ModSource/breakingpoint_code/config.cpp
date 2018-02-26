@@ -38,7 +38,16 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {}; 
 		requiredVersion = 0.1;
-		requiredAddons[] = {"breakingpoint_functions","breakingpoint","A3_Characters_F","A3_Structures_F_Households","A3_Structures_F_Ind","A3_Structures_F_Mil_Barracks","A3_Weapons_F_Ammoboxes"};
+		requiredAddons[] = {
+										"breakingpoint_functions",
+										"breakingpoint",
+										"A3_Characters_F",
+										"A3_Structures_F_Households",
+										"A3_Structures_F_Ind",
+										"A3_Structures_F_Mil_Barracks",
+										"A3_Weapons_F_Ammoboxes",
+										"A3_Structures_F_Argo"
+									};
 	};
 };
 
