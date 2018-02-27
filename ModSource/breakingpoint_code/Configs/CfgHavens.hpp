@@ -8826,7 +8826,7 @@ class Land_i_Stone_HouseSmall_V2_F : Land_i_Stone_HouseSmall_V1_F
 				statement="([this, 'Door_Handle_6_rot_1', 'Door_Locked_6_rot'] spawn BIS_fnc_LockedDoorOpen)";
 			};
 
-		}
+		};
 	};
 	class Land_i_House_Big_02_b_blue_F: i_House_Big_02_b_base_F {};
 	class Land_i_House_Big_02_b_brown_F: i_House_Big_02_b_base_F {};
