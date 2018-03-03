@@ -45,8 +45,7 @@ class CfgPatches {
 										"A3_Structures_F_Households",
 										"A3_Structures_F_Ind",
 										"A3_Structures_F_Mil_Barracks",
-										"A3_Weapons_F_Ammoboxes",
-										"A3_Structures_F_Argo"
+										"A3_Weapons_F_Ammoboxes"
 									};
 	};
 };
