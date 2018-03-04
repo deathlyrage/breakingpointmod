@@ -27,7 +27,7 @@ class CfgPatches
 		units[] = {"Altis","Stratis","Bornholm","newhaven"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","A3_Map_Altis","A3_Map_Stratis","A3_Map_Malden","breakingpoint_infected"};
+		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","A3_Map_Altis","A3_Map_Stratis","breakingpoint_infected"};
 	};
 };
 
@@ -140,18 +140,4 @@ class CfgWorlds
 		};
 	};
 	
-	class Malden : CAWorld
-	{
-		class Ambient {};
-		
-		class AmbientA3 
-		{
-			maxCost = 500;
-			delete Radius440_500; //Kestrel / Seagull / Rabbit
-			delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
-			delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
-			delete Radius15_20; //FX / Wind / Paper / Pollen
-			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
-		};
-	};
 };

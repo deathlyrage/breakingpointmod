@@ -45,12 +45,9 @@ _databasePos = [(round(direction _building)),(_buildingPos select 0),(_buildingP
 //Check Building Limit
 _buildingCount = 0;
 {
-	_build = objectFromNetID _x;
-	if (!isNull _build) then {
-		_buildingPID = _build getVariable ["PlayerID","0"];
-		if (_playerID == _buildingPID) then { _buildingCount = _buildingCount + 1; };
-	};
-} count BP_Buildings;
+	_x params ["","","","_playerIDBuilding","","","",""];
+	if (_playerID == _playerIDBuilding) then { _buildingCount = _buildingCount + 1; };
+} count BP_BuildingsData;
 
 //Check Building Isn't Already Claimed
 if (netID _building in BP_Buildings) then { _buildingLockable = false; };
