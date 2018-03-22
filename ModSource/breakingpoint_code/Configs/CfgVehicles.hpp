@@ -15,6 +15,24 @@ class WeaponCloudsMGun;
 class CfgVehicles 
 {
 	class Logic;
+	class VirtualMan_F;
+	
+	class BP_Player_Unit: VirtualMan_F
+	{
+		scope=2;
+		author= "Deathlyrage modified by Th3Dilli";
+		displayName="Breaking Point Player Unit";
+		side=3;
+		modelSides[]={3};
+		faction="CIV_F";
+		vehicleClass="Men";
+		class EventHandlers
+		{
+			init = "";
+			local = "";
+		};
+	};
+	
 	class BP_ServerLogic : Logic {
 		displayName = "SERVER";
 		
