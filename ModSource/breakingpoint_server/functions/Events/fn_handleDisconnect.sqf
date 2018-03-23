@@ -46,7 +46,7 @@ _isDead = _playerObj getVariable ["med_isDead",false];
 ["CHILD:203:%1:%2:",_characterID,_playerID] call BPServer_fnc_callExtensionAsyncLow;
 
 //Handle Player Logic Disconnection
-if (_playerObj isKindOf "BP_PlayerLogic") exitWith
+if (_playerObj isKindOf "BP_PlayerLogic" || _playerObj isKindOf "BP_Player_Unit") exitWith
 {
 	//Cleanup Body
 	_body = _playerObj getVariable ["body",objNull];
