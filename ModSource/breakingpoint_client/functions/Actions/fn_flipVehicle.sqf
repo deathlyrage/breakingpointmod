@@ -9,12 +9,18 @@
 
 private["_object","_position"];
 _object = _this select 3;
-_position = [position _object,0,0,0,0,0,0,position player] call BIS_fnc_findSafePos;
+
+player removeAction s_player_flipveh;
+s_player_flipveh = -1;
+
+//_position = [position _object,0,0,0,0,0,0,position player] call BIS_fnc_findSafePos;
 player playMove "amovpknlmstpslowwrfldnon_amovpercmstpsraswrfldnon";
+[player,"repair",0,true] call BP_fnc_objSpeak;
 waitUntil { animationState player != "amovpknlmstpslowwrfldnon_amovpercmstpsraswrfldnon"};
+_position = getPosATL _object;
 sleep 2;
 _object setVectorUp [0,0,1];
-[player,"scream",0,true] call BP_fnc_objSpeak;
+_object setPosATL [_position select 0,_position select 1,0];
 _handle = [player,20,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 [_handle] call BP_fnc_addThreadHandle;
 sleep 3;

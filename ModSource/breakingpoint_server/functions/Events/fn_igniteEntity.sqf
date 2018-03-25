@@ -28,6 +28,9 @@ _fireObj attachTo [_object, [-0.1, 0.1, 0.15], "Pelvis"];
 _fireObj setVectorDirAndUp [ [0.5, 0.5, 0], [-0.5, 0.5, 0] ];
 _object setVariable ["fire",_fireObj,true];
 
+//if killer == victim no points change (zombie fire bolt kill) both objects are the same > fn_damageHandlerZ
+if (_player isEqualTo _object) exitWith {};
+
 //Faction Point Loss
 _pointsChange = [_player,_object] call BP_fnc_getFactionKillPoints;
 
