@@ -327,7 +327,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	_targetName = getText (configFile >> "CfgVehicles" >> (typeOf _cursorTarget) >> "displayName");
 	_isHarvested = _cursorTarget getVariable ["gutted",false];
 	_isVehicle = _cursorTarget isKindOf "AllVehicles";
-	_isVehicletype = typeOf _cursorTarget in ["ATV_US_EP1","ATV_CZ_EP1"];
+	_isVehicletype = typeOf _cursorTarget isEqualTo "BP_Quadbike_01";
 	_isMan = _cursorTarget isKindOf "Man";
 	_ownerID = _cursorTarget getVariable ["CharacterID","0"];
 	_isAnimal = ((_cursorTarget isKindOf "Animal") or (_cursorTarget isKindOf "Animal_Base_F") or (_cursorTarget isKindOf "BP_Dog"));
@@ -633,7 +633,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	/* Flip Vehicle */
 	if ((_isVehicletype) and !_canmove and _canDo and _isAlive and !_isWater and !_isHostage and (player distance _cursorTarget >= 2) and (count (crew _cursorTarget))== 0 and ((vectorUp _cursorTarget) select 2) < 0.5) then {
 		if (s_player_flipveh  < 0) then {
-			s_player_flipveh = player addAction [format["Flip %1",_targetName], { [_this] spawn BP_fnc_flipVehicle; },_cursorTarget, 1, false, true, "", ""];
+			s_player_flipveh = player addAction [format["Flip %1",_targetName], {_this spawn BP_fnc_flipVehicle; },_cursorTarget, 1, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_flipveh;

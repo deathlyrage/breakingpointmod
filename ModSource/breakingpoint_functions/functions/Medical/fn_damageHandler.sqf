@@ -67,7 +67,7 @@ if (_ammo == "BP_Arrow_Ball_Fire") exitWith
 	if (isNull _fire) then
 	{
 		_unit setVariable ["fire",_unit];
-		[(netID _unit),(netID _unit)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+		[(netID _source),(netID _unit)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 	};
 };
 
