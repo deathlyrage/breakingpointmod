@@ -170,19 +170,19 @@ if(!_groupTimerActive) then
 					{
 						if (_class in [0,3]) then
 						{													//Legion Data Database
-							_legionDataVarName = format["BP_LDDB_Bandit:%1", _clanDB];//None-Hunter
+							_legionDataVarName = format["BP_LDDB_Bandit:%1", _clan];//None-Hunter
 						}
 						else
 						{
 							if (_class in [1,4,5]) then
 							{
-								_legionDataVarName = format["BP_LDDB_Friendly:%1", _clanDB];//Nomad-Ranger-Survialist
+								_legionDataVarName = format["BP_LDDB_Friendly:%1", _clan];//Nomad-Ranger-Survialist
 							}
 							else
 							{
 								if(_class == 2) then
 								{
-									_legionDataVarName = format["BP_LDDB_Outlaw:%1", _clanDB];//Outlaw
+									_legionDataVarName = format["BP_LDDB_Outlaw:%1", _clan];//Outlaw
 								};
 							};
 						};
