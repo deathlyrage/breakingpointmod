@@ -347,6 +347,39 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	_lowBlood = _cursorTarget getVariable ["med_lowBlood", false];
 	_isUndead = (player getVariable ["class",0] == 7);
 	_targetUndead = (_cursorTarget getVariable ["class",0] == 7);
+	_sameFaction = false;
+	if(BP_Factions_disableMixedgrouping) then
+	{
+		_playerClass = player getVariable ["class",0];
+		_cursorTargetClass =_cursorTarget getVariable ["class",0];
+		if (_playerClass in [0,3] && _cursorTargetClass in [0,3]) then
+		{
+			_sameFaction = true;
+		}
+		else
+		{
+			if (_playerClass in [1,4,5] && _cursorTargetClass in [1,4,5]) then
+			{
+				_sameFaction = true;
+			}
+			else
+			{
+				if (_playerClass == 2 && _cursorTargetClass == 2) then
+				{
+					_sameFaction = true;
+				}
+				else
+				{
+					_sameFaction = false;
+				};
+			};
+		};
+	}
+	else
+	{
+		_sameFaction = true;
+	};
+	
 
 	//Dog
 	_isDog = (_cursorTarget isKindOf "BP_Dog");
@@ -561,7 +594,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Add To Group */
-	if (_isPlayer and !_isInMyGroup and !_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo) then {
+	if (_isPlayer and !_isInMyGroup and !_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo and _sameFaction) then {
 		if (s_player_groupAdd < 0) then {
 			s_player_groupAdd = player addAction ["Add To Group", { _this call BP_fnc_groupAdd; },_cursorTarget, 1, false, true, "", ""];
 		};

@@ -148,20 +148,82 @@ _validLegion = false;
 
 if(!_groupTimerActive) then
 {
-	//Persistent Groups
-	if (_clan != "0") then
+	if(BP_Factions_disableMixedgrouping) then
 	{
-		_squadData = squadParams _player;
-		if !(_squadData isEqualTo []) then
+		_legionDataVarName="";
+		_groupID="";
+		if (_clan != "0") then //DB Groups
 		{
-			_squadData params ["_squadDetails","_memberDetails"];
-			_squadDetails params ["_squadNick","_squadName","_squadEmail"];
-			if (_squadEmail == _clan) then
+			_squadData = squadParams _player;
+			if !(_squadData isEqualTo []) then
 			{
-				_validLegion = true;
-				_body setVariable ["group",_clan,true];
-				_body setVariable ["groupTag",_squadNick,false];
-				_body setVariable ["groupName",_squadName,false];
+				_squadData params ["_squadDetails","_memberDetails"];
+				_squadDetails params ["_squadNick","_squadName","_squadEmail"];
+				if (!(_squadNick isEqualTo []) && !(_squadName isEqualTo "")) then
+				{
+					if(_class == -1) then
+					{
+						_body setVariable ["clan", _clan];//when there is no class to process (respawn) it will be handeled in the fn_playerSetup.sqf
+						_validLegion = true;
+					}
+					else
+					{
+						if (_class in [0,3]) then
+						{													//Legion Data Database
+							_legionDataVarName = format["BP_LDDB_Bandit:%1", _clanDB];//None-Hunter
+						}
+						else
+						{
+							if (_class in [1,4,5]) then
+							{
+								_legionDataVarName = format["BP_LDDB_Friendly:%1", _clanDB];//Nomad-Ranger-Survialist
+							}
+							else
+							{
+								if(_class == 2) then
+								{
+									_legionDataVarName = format["BP_LDDB_Outlaw:%1", _clanDB];//Outlaw
+								};
+							};
+						};
+						if !(_legionDataVarName isEqualTo "") then
+						{
+							if !((missionNamespace getVariable [_legionDataVarName, ""]) isEqualTo "") then
+							{
+								_groupID = missionNamespace getVariable [_legionDataVarName, ""];
+							}
+							else
+							{
+								_groupID = call BP_fnc_groupCreateUID;
+								missionNamespace setVariable [_legionDataVarName, _groupID];
+							};
+							_body setVariable ["group", _groupID, true];
+							_body setVariable ["groupTag", _squadNick];
+							_body setVariable ["groupName", _squadName];
+							_validLegion = true;
+						};
+					};
+				};
+			};
+		};
+	}
+	else
+	{
+		//Persistent Groups
+		if (_clan != "0") then
+		{
+			_squadData = squadParams _player;
+			if !(_squadData isEqualTo []) then
+			{
+				_squadData params ["_squadDetails","_memberDetails"];
+				_squadDetails params ["_squadNick","_squadName","_squadEmail"];
+				if (_squadEmail == _clan) then
+				{
+					_validLegion = true;
+					_body setVariable ["group",_clan,true];
+					_body setVariable ["groupTag",_squadNick,false];
+					_body setVariable ["groupName",_squadName,false];
+				};
 			};
 		};
 	};
