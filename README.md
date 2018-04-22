@@ -125,7 +125,7 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 
 ### Missionconfig
 * in each Mission provided with the mod there is a missionconfig file called "description.ext" change it to your liking
-* New Feature : only allied factions are able to group
+* New Feature : only allied factions are able to group.
 To enable this feature use one of the build in missions in the client files and edit the
 description.ext
 Look for 
