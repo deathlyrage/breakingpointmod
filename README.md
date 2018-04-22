@@ -128,6 +128,7 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 * New Feature : only allied factions are able to group.
 To enable this feature use one of the build in missions in the client files and edit the
 description.ext
+
 Look for 
 ```
 class Factions
@@ -137,7 +138,7 @@ class Factions
 	...
 };	
 ```
-If disableMixedgrouping does not exist in the description file it will be automaticaly disabled => false
+If disableMixedgrouping does not exist in the description file it will be automaticaly disabled => false.
 By default this feature is disabled.
 
 
