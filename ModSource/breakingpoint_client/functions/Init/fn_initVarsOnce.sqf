@@ -354,6 +354,16 @@ BP_Factions_Hunter = (getNumber (_cfgSettings >> "Factions" >> "Classes" >> "hun
 BP_Factions_Nomad = (getNumber (_cfgSettings >> "Factions" >> "Classes" >> "nomad") == 1);
 BP_Factions_Survivalist = (getNumber (_cfgSettings >> "Factions" >> "Classes" >> "survivalist") == 1);
 
+BP_Factions_disableMixedgrouping = false;
+
+if(isText (_cfgSettings >> "Factions" >> "disableMixedgrouping")) then
+{
+	if(getNumber (_cfgSettings >> "Factions" >> "disableMixedgrouping") == 1) then
+	{
+		BP_Factions_disableMixedgrouping = true;
+	};
+};
+
 BP_Factions_Points = (getNumber (_cfgSettings >> "Factions" >> "Points" >> "enabled") == 1);
 BP_Factions_PointsRatio = getNumber (_cfgSettings >> "Factions" >> "Points" >> "ratio");
 

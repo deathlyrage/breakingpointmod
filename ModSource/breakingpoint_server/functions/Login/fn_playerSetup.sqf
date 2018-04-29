@@ -44,6 +44,54 @@ if (count _this > 2) then
 	//Spawn Class Gear
 	[_player,_class] call BPServer_fnc_factionGear;
 
+	//Handle Groups
+	if(BP_Factions_disableMixedgrouping) then
+	{
+		_legionDataVarName="";
+		_groupID="";
+		_clanDB = _player getVariable ["clan","0"];
+		if (_clanDB != "0") then //DB Groups
+		{
+			_squadData = squadParams _logic;
+			_squadData params ["_squadDetails","_memberDetails"];
+			_squadDetails params ["_squadNick","_squadName","_squadEmail"];
+			if (_class in [0,3]) then
+			{													//Legion Data Database
+				_legionDataVarName = format["BP_LDDB_Bandit:%1", _clanDB];//None-Hunter
+			}
+			else
+			{
+				if (_class in [1,4,5]) then
+				{
+					_legionDataVarName = format["BP_LDDB_Friendly:%1", _clanDB];//Nomad-Ranger-Survialist
+				}
+				else
+				{
+					if(_class == 2) then
+					{
+						_legionDataVarName = format["BP_LDDB_Outlaw:%1", _clanDB];//Outlaw
+					};
+				};
+			};
+			if !(_legionDataVarName isEqualTo "") then
+			{
+				if !((missionNamespace getVariable [_legionDataVarName, ""]) isEqualTo "") then
+				{
+					_groupID = missionNamespace getVariable [_legionDataVarName, ""];
+				}
+				else
+				{
+					_groupID = call BP_fnc_groupCreateUID;
+					missionNamespace setVariable [_legionDataVarName, _groupID];
+				};
+				_player setVariable ["group", _groupID, true];
+				_player setVariable ["groupTag", _squadNick];
+				_player setVariable ["groupName", _squadName];
+				_validLegion = true;
+			};
+		};
+	};
+	
 	//Handle Spawn Selection
 	call
 	{

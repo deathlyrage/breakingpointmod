@@ -123,6 +123,24 @@ Breaking Point Mod is a total conversion mod for Arma 3. Source is provided for 
 * Edit the config.cpp in the "breakingpoint_server_config" to your server liking
 * Pack the folder "breakingpoint_server_config" to a .pbo and put it in your server root directory inside "@BreakingPointServer/addons"
 
+### Missionconfig
+* in each Mission provided with the mod there is a missionconfig file called "description.ext" change it to your liking
+* New Feature : only allied factions are able to group.
+To enable this feature use one of the build in missions in the client files and edit the
+description.ext
+
+Look for 
+```
+class Factions
+{
+	...
+	disableMixedgrouping = true; // true = enabled => only allied factions are allowed to group
+	...
+};	
+```
+If disableMixedgrouping does not exist in the description file it will be automaticaly disabled => false.
+By default this feature is disabled.
+
 
 ## Credits/Notable mentions.
 * DeathlyRage - For tirelessly working hard over the years to maintain and develop such a high quality mod.

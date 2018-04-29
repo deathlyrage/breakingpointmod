@@ -144,6 +144,14 @@ class BreakingPoint
 			//Enable or Disable Faction System
 			enabled = true;
 			
+			/*
+			disable groups of different classes/faction , only players of the same faction will be able to group
+			[Ranger Nomads and Survivallists] , [Outlaw] , [Hunter, Independent/None] are able to group each other in the []
+			false => normal grouping is active
+			true => only players of the same class/faction are allowed to group 
+			*/
+			disableMixedgrouping = false;
+			
 			//Enable or Disable Point Gain and Loss
 			class Points
 			{
