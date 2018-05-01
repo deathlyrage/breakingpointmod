@@ -726,7 +726,7 @@ class CfgMagazines
 		descriptionUse = "Electric Stove Top";
 		model = "\breakingpoint\models\bp_ovenItem.p3d";
 		picture = "\breakingpoint\textures\icons\bp_stovetop_ca.paa";
-		descriptionShort = "Allow boil water and cook meat in a Haven/";
+		descriptionShort = "Allow boil water and cook meat in a Haven.";
 		mass = 20;
 	};
 
