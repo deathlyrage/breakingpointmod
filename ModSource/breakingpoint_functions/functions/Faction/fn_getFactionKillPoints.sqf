@@ -19,7 +19,7 @@ params [["_victim",objNull,[objNull]],["_killer",objNull,[objNull]]];
 if (isNull _victim) exitWith {0};
 if (isNull _killer) exitWith {0};
 
-if (_killer isEqualTo _victim) exitWith {["getFactionKillPoints: Victim == Killer: no points change"] BP_fnc_debugConsoleFormat};
+if (_killer isEqualTo _victim) exitWith {["getFactionKillPoints: Victim == Killer: no points change"] call BP_fnc_debugConsoleFormat};
 
 _nearbyStronghold = [_victim] call BP_fnc_strongholdNearby;
 
