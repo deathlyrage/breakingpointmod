@@ -726,7 +726,7 @@ class CfgMagazines
 		descriptionUse = "Electric Stove Top";
 		model = "\breakingpoint\models\bp_ovenItem.p3d";
 		picture = "\breakingpoint\textures\icons\bp_stovetop_ca.paa";
-		descriptionShort = "Allow boil water and coock meat in Haven";
+		descriptionShort = "Allow boil water and cook meat in a Haven/";
 		mass = 20;
 	};
 
@@ -762,7 +762,7 @@ class CfgMagazines
 		descriptionUse = "Sheeps Wool";
 		model = "\breakingpoint\models\bp_wool.p3d";
 		picture = "\breakingpoint\textures\icons\wool_ca.paa";
-		descriptionShort = "Sheeps wool used for Beds";
+		descriptionShort = "Sheeps wool used for Beds.";
 		mass = 20;
 	};
 	
