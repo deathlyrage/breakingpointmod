@@ -301,14 +301,7 @@ _body setVariable ["messing",(_medical select 10)];
 
 //Misc ( No Need to Init Because Default Fetch Values )
 //_body setVariable ["recentKills",[]];
-//_body setVariable ["medBandage",[]];
-//_body setVariable ["medSurgery",[]];
-//_body setVariable ["medMorphine",[]];
-//_body setVariable ["medPainK",[]];
-//_body setVariable ["medBandageReset",diag_tickTime];
-//_body setVariable ["medSurgeryReset",diag_tickTime];
-//_body setVariable ["medMorphineReset",diag_tickTime];
-//_body setVariable ["medPainKReset",diag_tickTime];
+
 
 if (_isNew) then {
 	_body setVariable ["freshSpawn",true];

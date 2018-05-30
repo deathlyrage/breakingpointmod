@@ -91,6 +91,10 @@ BP_AntiDisconnectIDs = [];
 BP_AntiDisconnectObjs = [];
 BP_HackMagIDs = [];
 BP_groupLeaveTimers = [];
+BP_applyBandage = [];
+BP_applyPainkiller = [];
+BP_applySurgery = [];
+BP_applyMorphine = [];
 
 //Preload Code
 call compile preprocessFileLineNumbers "\breakingpoint_server\publicEH.sqf";

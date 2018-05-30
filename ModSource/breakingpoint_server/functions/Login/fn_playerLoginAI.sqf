@@ -49,15 +49,7 @@ _body setVariable ["dogID",0];
 _body setVariable ["recentKills",[]];
 _body setVariable ["med_BloodQty",(_medical select 8)];
 _body setVariable ["messing",(_medical select 10)];
-_body setVariable ["medBandage",[]];
-_body setVariable ["medSurgery",[]];
-_body setVariable ["medMorphine",[]];
-_body setVariable ["medPainK",[]];
-_body setVariable ["medBandageReset",diag_tickTime];
-_body setVariable ["medSurgeryReset",diag_tickTime];
-_body setVariable ["medMorphineReset",diag_tickTime];
-_body setVariable ["medPainKReset",diag_tickTime];
-_body setVariable ["medBandageReset",diag_tickTime];
+
 
 //Remove Player from disconnection list, because we terminated the script early due to hot reloading
 _index = BP_AntiDisconnectIDs find _playerID;

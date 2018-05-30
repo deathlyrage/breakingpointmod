@@ -44,15 +44,19 @@ class CfgBreakingPointServerSettings
 	};
 	class CustomLoot
 	{
-		customLootSetting = 1;	// 0 = SC off 	1 = SC on 	2 = ghosthotel weapon insted of SC
+		customLootSetting = 1;	// 0 = SC off 		1 = SC on (default)	 	2 = ghosthotel weapon insted of SC
 	};
 	class MixedGroupPointsGain
 	{
-		disableMixedGroupPointsGain = 1;	//tunrs point gain for mixed group off, point lose still on 0 = off , 1 = on
+		disableMixedGroupPointsGain = 1;	//turns point gain for mixed group off, point lose still on 0 = off , 1 = on
 	};
 	class groupLeaveTimer
 	{
 		groupLeaveTimeOut = 600;	//time in seconds between leaving group and joining new/old one if  0 => Off
+	};
+	class applyMedicine
+	{
+		medicalCooldown = 900;	//time in seconds for point gain on medical assistance
 	};
 };
 

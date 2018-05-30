@@ -12,7 +12,9 @@
 params ["_event","_unitNetID","_medicEventID"];
 
 _unit = objectFromNetID _unitNetID;
+_unitUID = getplayerUID _unit;
 _medic = objectFromNetID _medicEventID;
+_medicUID = getplayerUID _medic;
 _isHostage = _unit getVariable ["med_hostage", false];
 _perpetrator = _unit getVariable ["hostage_perpetrator", "0"];
 
@@ -35,6 +37,7 @@ _pointsChange = 0;
 _valid = false;
 _addPoints = true;
 _selfHeal = (_unit == _medic);
+_healedRecently = false;
 
 switch (_event) do {
 	case "medBandage": {
@@ -43,7 +46,7 @@ switch (_event) do {
 			_valid = true;
 			_medic removeMagazineGlobal "ItemBandage";
 			
-			if (!_selfHeal) then {
+			/*if (!_selfHeal) then {
 				_recentBandage = _medic getVariable ["medBandage",[]];
 				if (getPlayerUID _unit in _recentBandage) then {
 					BP_GameError = 4;
@@ -53,7 +56,20 @@ switch (_event) do {
 					_medic setVariable ["medBandage",_recentBandage];
 					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "bandage");
 				};
+			};*/
+			
+			
+			if(!_selfHeal) then
+			{
+				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+				if (_healedRecently) then {
+					BP_GameError = 4;
+					(owner _medic) publicVariableClient "BP_GameError";
+				} else {
+					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "bandage");
+				};
 			};
+			
 		};
 	};
 	case "medFieldDressing": {
@@ -62,14 +78,13 @@ switch (_event) do {
 			_valid = true;
 			_medic removeMagazineGlobal "ItemFieldDressing";
 			
-			if (!_selfHeal) then {
-				_recentBandage = _medic getVariable ["medBandage",[]];
-				if (getPlayerUID _unit in _recentBandage) then {
+			if(!_selfHeal) then
+			{
+				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+				if (_healedRecently) then {
 					BP_GameError = 4;
 					(owner _medic) publicVariableClient "BP_GameError";
 				} else {
-					_recentBandage pushBack (getPlayerUID _unit);
-					_medic setVariable ["medBandage",_recentBandage];
 					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "bandage");
 				};
 			};
@@ -81,14 +96,13 @@ switch (_event) do {
 			_medic removeMagazineGlobal "ItemPainkiller";
 			_valid = true;
 	
-			if (!_selfHeal) then {
-				_recentPainkiller = _medic getVariable ["medPainK",[]];
-				if (getPlayerUID _unit in _recentPainkiller) then {
+			if(!_selfHeal) then
+			{
+				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+				if (_healedRecently) then {
 					BP_GameError = 4;
 					(owner _medic) publicVariableClient "BP_GameError";
 				} else {
-					_recentPainkiller pushBack (getPlayerUID _unit);
-					_medic setVariable ["medPainK",_recentPainkiller];
 					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "bandage");
 				};
 			};
@@ -175,17 +189,17 @@ switch (_event) do {
 	};
 	case "medSurgery": {
 		_valid = true;
-		_recentSurgery = _medic getVariable ["medSurgery",[]];
-		if (getPlayerUID _unit in _recentSurgery) then {
-			BP_GameError = 4;
-			(owner _medic) publicVariableClient "BP_GameError";
-		} else {
-			if (!_selfHeal) then {
-				_recentSurgery pushBack (getPlayerUID _unit);
-				_medic setVariable ["medSurgery",_recentSurgery];
-				_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
+		
+		if(!_selfHeal) then
+			{
+				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+				if (_healedRecently) then {
+					BP_GameError = 4;
+					(owner _medic) publicVariableClient "BP_GameError";
+				} else {
+					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
+				};
 			};
-		};
 	};
 	case "medSurgeryDog": {
 		_valid = true;
@@ -200,20 +214,21 @@ switch (_event) do {
 		_valid = true;
 		_addPoints = false;
 	};
-	case "medMorphine": {
-		_recentMorphine = _medic getVariable ["medMorphine",[]];
-		if (getPlayerUID _unit in _recentMorphine) then {
-			BP_GameError = 4;
-			(owner _medic) publicVariableClient "BP_GameError";
-		} else {
-			if ("ItemMorphine" in magazines _medic) then {
-				_medic removeMagazineGlobal "ItemMorphine";
-				_valid = true;
-				if (!_selfHeal) then {
-					_recentMorphine pushBack (getPlayerUID _unit);
-					_medic setVariable ["medMorphine",_recentMorphine];
-					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "morphine");
-				};
+	case "medMorphine":
+	{
+		if ("ItemMorphine" in magazines _medic) then
+		{
+			_medic removeMagazineGlobal "ItemMorphine";
+			_valid = true;
+			if(!_selfHeal) then
+			{
+					_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+					if (_healedRecently) then {
+						BP_GameError = 4;
+						(owner _medic) publicVariableClient "BP_GameError";
+					} else {
+						_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "morphine");
+					};
 			};
 		};
 	};

@@ -233,6 +233,7 @@ class CfgFunctions
 			class containerSpawn {};
 			class simulationToggle {};
 			class igniteEntity {};
+			class checkHealRecent {};
 		};
 		class Wrecks {
 			file = "\breakingpoint_server\functions\Wrecks";
