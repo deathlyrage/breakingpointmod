@@ -1,0 +1,1 @@
+["Function BIS_fnc_call has been disabled."] call bis_fnc_error;

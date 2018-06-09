@@ -1,0 +1,327 @@
+/*
+		Breaking Point - Description.ext
+			Created By Deathlyrage
+		DO NOT USE WITHOUT PERMISSION
+*/
+//forceRotorLibSimulation = 1;
+joinUnassigned = 0;
+enableDebugConsole = 0;
+allowFunctionsLog = 0;
+author = "Deathlyrage";
+dev = "Deathlyrage";
+onLoadName = "Breaking Point";
+respawn = "BASE";
+respawnTemplates[] = {"BP_Base","Counter"};
+respawndelay = 45;
+respawnDialog = 0;
+onLoadMission= "";
+OnLoadIntro = "Welcome to Arma 3 Breaking Point!";
+OnLoadIntroTime = False;
+OnLoadMissionTime = False;
+disabledAI = true;
+disableChannels[]={0,1,2,3};
+enableItemsDropping = 0;
+showUAVFeed = 0;
+corpseLimit = 9999;
+onPauseScript = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";
+loadScreen = "\breakingpoint_ui\general\BP_screen_title.jpg";
+corpseManagerMode = 0;
+class CfgRemoteExecCommands {};
+
+class BreakingPoint
+{
+	class CfgSettings
+	{
+	
+		class SpawnPos 
+		{
+			//Enable Spawn Selection Screen
+			enabled = false;
+
+			Bornholm[] = {{141.223,{15354.3,6748.33,0.00177002}},{40.0715,{15351.9,6989.96,0.00114441}},{40.032,{15351.2,7200.83,0.000343323}},{39.9888,{15362.1,7394.24,0.00128174}},{51.0652,{15340.8,7580.73,0.00154877}},{6.06897,{15355,7827.22,0.00144958}},{4.78748,{14940.3,7783.95,0.00201416}},{4.74684,{14964.7,7604.54,0.00179291}},{152.517,{14940.8,7373.18,0.00174713}},{152.503,{14966.5,6875.67,0.00161743}},{152.513,{14907.3,6633.03,0.00111389}},{152.494,{14440.3,6316.06,0.00131226}},{152.443,{14450.3,6505.07,0.00157166}},{152.461,{14424.4,6709.97,0.0018158}},{184.58,{14458.5,6906.06,0.00131989}},{183.421,{14453.2,7171.14,0.00121307}},{236.152,{14439.1,7495,0.0014267}},{269.676,{14453,7776.12,0.00166321}},{47.3267,{14049.4,7486.71,0.00165558}},{294.595,{14066.3,7172.7,0.00144958}},{48.4076,{14082.6,6873.25,0.00151062}},{48.4076,{14044.5,6585.53,0.00132751}},{48.4076,{14051.2,6310.81,0.00159454}},{48.2854,{14066.2,5990.43,0.00143433}},{48.2854,{13653.7,5773.9,0.00144196}},{48.209,{13651.2,6104.04,0.00154114}},{48.209,{13654.2,6399.31,0.00144958}},{48.2069,{13647.4,6680.76,0.0015564}},{48.3627,{13651.8,6969.01,0.00146484}},{48.3627,{13661.8,7295.18,0.00150299}},{48.3627,{13655.1,7584.25,0.00132751}},{209.821,{13269,7584.83,0.00152588}},{209.821,{13269.5,7290.04,0.0014801}},{209.821,{13226.9,6755.61,0.00128937}},{209.067,{13249,6573.11,0.00143433}},{134.574,{13256.4,6084.07,0.00183868}},{134.558,{13261.1,5778.76,0.00143433}},{134.558,{13265.8,5577.03,0.00134277}},{134.558,{12957.5,6075.51,0.00160217}},{134.558,{12937.3,6401.73,0.001297}},{134.558,{12918,6720.26,0.00140381}},{134.558,{12924.3,7011.85,0.0016861}},{134.558,{12929.2,7276.73,0.000869751}},{121.443,{12525.6,7308.91,0.00137329}},{169.21,{12541.8,6960.66,0.00148773}},{169.21,{12529.7,6692.24,0.00148773}},{169.345,{12525.5,6367.85,0.00144196}},{169.333,{12149.9,6372.11,0.00157166}},{169.294,{12153.8,6704.74,0.00147247}},{169.294,{12129.4,7009.56,0.00145721}},{169.265,{12148.3,7402.2,0.00145721}},{169.265,{12120.9,7717,0.00140381}},{151.15,{11841.7,7811.01,0.00166321}},{151.15,{11846.7,7477.75,0.00149536}},{151.15,{11831.6,7156.12,0.00137329}},{145.538,{11815.4,6905.87,0.00128937}},{145.538,{11837.9,6579.4,0.0015564}},{185.015,{11456.6,6565.38,0.00164032}},{185.015,{11446.6,6898.13,0.00130463}},{185.061,{11445.4,7583.61,0.00196075}},{185.061,{11434.3,7905.72,0.00150299}},{185.061,{11456.9,8169.02,0.00151825}},{184.808,{11447.6,8477.75,0.00118256}},{184.779,{11450.5,8789.28,0.00161743}},{184.779,{11442.5,9085.73,0.00148773}},{184.856,{11464.2,9413.58,0.00148773}},{184.835,{11154.7,9610.34,0.00176239}},{184.648,{11160.1,9280.69,0.00157166}},{184.721,{11147.3,8978.59,0.00156403}},{184.625,{11154,8672.16,0.0013504}},{184.623,{11138.8,8247.96,0.00124359}},{184.623,{11141.2,7760.49,0.00190735}},{186.145,{11137.8,7479.35,0.00145721}},{186.186,{11165.7,7162.38,0.00157928}},{186.146,{11164.1,6883.94,0.00137329}},{186.118,{10859.6,6869.22,0.00130463}},{195.957,{10842.6,7139.37,0.00154114}},{195.957,{10842.8,7476.38,0.00154877}},{195.919,{10850.2,7801.4,0.00171661}},{195.917,{10893,8093.8,0.00141907}},{195.891,{10859.8,8390.35,0.0014801}},{196.081,{10864.4,8915.23,0.00137329}},{195.847,{10825.8,9206,0.00133514}},{355.265,{10851.7,9507.82,0.00172424}},{86.4323,{10821.8,9763.9,0.00161743}},{82.2781,{10428.8,9783.15,0.00134277}},{227.915,{10445,9499.56,0.000930786}},{349.152,{10437.8,8957,0.000953674}},{349.136,{10436.6,8675.23,0.00138092}},{339.789,{10462.7,8379.53,0.00138855}},{286.456,{10458.5,8048.52,0.00147247}},{286.452,{10457.2,7792.96,0.0011673}},{123.945,{10457.6,7476.21,0.0014267}},{313.652,{9948.75,7791.46,0.0011673}},{47.7017,{9966.59,8081.35,0.00122833}},{125.913,{8760.78,8121.54,0.00174713}},{222.905,{8715.46,8382.65,0.00134277}},{256.691,{8732.71,8672.09,0.00128174}},{11.0398,{8726.3,9008.41,0.0015564}},{241.88,{8741.16,9279.33,0.00154114}},{241.878,{8748.41,9584.6,0.00131226}},{8.74803,{8710.04,9840.63,0.00137329}},{334.184,{8756.08,10181.6,0.00141144}},{175.605,{8763.43,10492.2,0.00139618}},{255.589,{8573.46,10802.3,0.00166321}},{290.689,{8567.3,10379,0.00151062}},{341.92,{8554.65,10049.1,0.00146484}},{283.372,{8567.82,9761.47,0.00135803}},{247.768,{8524.3,9487.24,0.00140381}},{208.014,{8499.36,9272.25,0.00128174}},{6.82458,{8470.48,8966.5,0.00146484}},{30.3832,{8479.2,8671.12,0.0015564}},{53.4678,{8487.98,8346.9,0.00154114}},{53.4221,{8474.21,8049.88,0.00135803}},{66.1096,{8463.78,7751.81,0.00170135}}};
+		};
+		
+		class HeliCrash 
+		{
+			//Enable Heli Crashes
+			enabled = true;
+		
+			//Random Start Position (x,y,z) {Can Have Multible Coords}
+			randStartPos[] = {{19697.5,22127,0.00160789}};
+
+			//Backup Waypoint (x,y) {One Point Only}
+			backupWaypoint[] = {{4543.18,9276.33,0.00134277}};
+
+			//Centre Marker (x,y) {One Point Only}
+			centreMarker[] = {{9520.78,9247.39,0.00144958}};
+			centreRadius = 9500;
+		};
+
+		class Debug 
+		{
+			marker = "respawn_west";
+			radius = 3000;
+		};
+
+		class Loot 
+		{
+			//Enable or Disable Loot
+			enabled = true;
+			
+			//Min Number Of Loot Items Per Box (Includes Weapons,Magazines,Items)
+			minItems = 2;
+			
+			//Max Number Of Loot Items per Box (Includes Weapons,Magazines,Items)
+			maxItems = 8;
+			
+			//Spawn Spawn Box If Under Minimum Items
+			minSpawn = false;
+			
+			//Override All Loot Boxes with a Specific Loot Class
+			lootOverride = false;
+			lootOverrideClass = "Brick";
+		};
+
+		class Factions
+		{
+			//Enable or Disable Faction System
+			enabled = true;
+			
+			/*
+			disable groups of different classes/faction , only players of the same faction will be able to group
+			[Ranger Nomads and Survivallists] , [Outlaw] , [Hunter, Independent/None] are able to group each other in the []
+			false => normal grouping is active
+			true => only players of the same class/faction are allowed to group 
+			*/
+			disableMixedgrouping = false;
+			
+			//Enable or Disable Point Gain and Loss
+			class Points
+			{
+				//Enable or Disable All Point gain or loss
+				enabled = true;
+				//Point Gain / Loss Ratios
+				// 1.00 = 100% Point Gain/Loss
+				// 0.75 = 75% Point Gain/Loss
+				// 0.25 = 25% Point Gain/Loss
+				ratio = 1.00;
+			};
+			
+			//Enable or Disable Specific Classes
+			class Classes
+			{
+				none = true;
+				ranger = true;
+				outlaw = true;
+				hunter = true;
+				nomad = true;
+				survivalist = true;
+			};
+			
+			/*
+			//Base Positions
+			class Bases
+			{
+				class Ranger
+				{
+					spawn[] = {{0,{3315.33,18829.6,0.12838}},{0,{16911.8,21866.2,0.00136948}},{0,{3316.11,18819.4,0.0248642}},{0,{3321.2,18845,0.025032}}};
+					position[] = {3315.33,18829.6,0.12838};
+					radius = 1050;
+					waypoints[] = 
+					{
+						
+					};
+				};
+				
+				class Nomad
+				{
+					spawn[] = {{0,{16187.3,10518.5,0.727386}},{0,{16194.8,10517.2,0.741428}},{0,{16163.4,10544.4,0.490643}},{0,{16166.5,10553.2,0.974354}}};
+					position[] = {16181.4,10536.5,0.00143433};
+					radius = 1050;
+					waypoints[] = 
+					{
+						
+					};
+				};
+				
+				class Outlaw
+				{
+					spawn[] = {{0,{15631.9,219.441,0.828196}},{0,{15636.9,213.808,0.0252564}},{0,{15652.2,206.122,0.0250244}},{0,{15646.6,182.552,0.155747}},{0,{15644.5,179.118,0.265191}},{0,{15642.5,182.048,0.190047}}};
+					position[] = {15634.2,202.677,0.0251842};
+					radius = 1050;
+					waypoints[] = 
+					{
+						
+					};
+				};
+			};
+			*/
+		};
+
+		class Cleanup 
+		{
+			class Dead 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 2 Mins )
+				interval = 120;
+				//Distance A Player Is Nearby That Will Prevent Cleanup ( 250 Meters )
+				nearby = 250;
+				//Time of Player Body Cleanup ( 10 Mins )
+				player = 600;
+			};
+			class Sync 
+			{
+				enabled = true;
+				interval = 300; // 5 Mins
+			};
+			class Loot 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 15 Mins )
+				interval = 900;
+				//Distance A Player is Nearby That Will Prevent Cleanup ( 125 Meters )
+				nearby = 125;
+			};
+			class Entities 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 20 Mins )
+				interval = 1200;
+				//Distance A Player Is Nearby That Will Prevent Cleanup ( 5 Meters )
+				nearby = 5;
+			};
+			class GlobalLoot 
+			{
+				enabled = true;
+				interval = 3600; // 60 Mins
+			};
+			class Restart 
+			{
+				enabled = true;
+				interval = 6900; //115 Mins
+			};
+		};
+
+		class Time 
+		{
+			dawn = 6;
+			dusk = 18;
+		};
+
+		class Zombies 
+		{
+			enabled = true;
+			maxLocal = 40; //Total Local
+			maxNearby = 30; //Total Nearby
+			maxGlobal = 125; //Total Alive
+			max = 150; // Total Alive + Dead
+			distance = 1000;
+		};
+
+		class Animals
+		{
+			enabled = true;
+			max = 10;
+			distance = 1000;
+		};
+
+		class Survival 
+		{
+			food = 3240; //2160 Minutes (48 hours)
+			water = 2160; //1440 Minutes (24 hours)
+			temperature = 90 / 100; //First Value = Minutes until Player reaches the coldest Point at night (without other effects! night factor expected to be -1)
+		};
+
+		class Temperature 
+		{
+			default = 36;
+			normal = 36;
+			min = 27;
+			max = 42;
+		};
+	};
+};
+
+class Params 
+{
+	class instance
+	{
+		title = "Instance";
+		values[] = {0};
+		texts[] = {"Unknown"};
+		default = 0;
+	};
+	class debug
+	{
+		title = "Debug";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class hc
+	{
+		title = "Headless Client";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class vip
+	{
+		title = "VIP";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class dynamicWeather
+	{
+		title = "Dynamic Weather";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class clientSimulationManager
+	{
+		title = "Client Simulation Manager";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class serverSimulationManager
+	{
+		title = "Server Simulation Manager";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class threadedCleanup
+	{
+		title = "Threaded Cleanup";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class lootMax
+	{
+		title = "Loot Max";
+		values[] = {0};
+		texts[] = {"0"};
+		default = 2000;
+	};
+	class lootServer
+	{
+		title = "Server Loot";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+};
+
+class Header
+{
+	gameType = DM;
+	minPlayers = 1;
+	maxPlayers = 101;
+};
+
+aiKills = 1;

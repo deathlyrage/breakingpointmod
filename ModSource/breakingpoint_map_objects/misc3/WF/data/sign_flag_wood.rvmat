@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Sun Mar 16 15:22:09 2014 : Source 'file' date Sun Mar 16 15:22:09 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class misc3 : WF\data\sign_flag_wood.rvmat{
+ambient[] = {1.0,1.0,1.0,1.0};
+diffuse[] = {1.0,1.0,1.0,1.0};
+forcedDiffuse[] = {0.0,0.0,0.0,0.0};
+emmisive[] = {0.0,0.0,0.0,1.0};
+specular[] = {1.0,1.0,1.0,1.0};
+specularPower = 20.1;
+PixelShaderID = "Super";
+VertexShaderID = "Super";
+class Stage1
+{
+	texture = "ca\structures\data\wood\woodpainted_02_nohq.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,1.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage2
+{
+	texture = "ca\data\detail_maps\woodfloor_512_dt.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {-0.0,5.0,0.0};
+		up[] = {-5.0,-0.0,0.0};
+		dir[] = {0.0,0.0,1.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage3
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,1.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage4
+{
+	texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,1.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage5
+{
+	texture = "#(argb,8,8,3)color(0,0,1,1,SMDI)";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,1.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage6
+{
+	texture = "#(ai,32,128,1)fresnel(0.001,0.001)";
+	uvSource = "none";
+};
+class Stage7
+{
+	texture = "#(argb,8,8,3)color(0,0,0,1,CO)";
+	uvSource = "none";
+};
+//};

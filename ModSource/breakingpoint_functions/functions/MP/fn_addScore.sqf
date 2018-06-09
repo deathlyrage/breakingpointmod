@@ -1,0 +1,1 @@
+["Function BIS_fnc_addScore has been disabled."] call bis_fnc_error;

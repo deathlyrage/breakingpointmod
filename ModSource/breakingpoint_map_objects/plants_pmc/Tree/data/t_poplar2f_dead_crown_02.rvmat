@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Fri Mar 21 15:21:49 2014 : Source 'file' date Fri Mar 21 15:21:49 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class plants_pmc : Tree\data\t_poplar2f_dead_crown_02.rvmat{
+ambient[] = {0.05,0.52,0.3,0.3};
+diffuse[] = {0.43,0.43,0.4,0.9};
+forcedDiffuse[] = {2.0,0.0,1.0,1.0};
+emmisive[] = {0.5,0.5,0.5,1.0};
+specular[] = {0.0,0.0,0.0,0.0};
+specularPower = 300;
+PixelShaderID = "TreeAdv";
+VertexShaderID = "TreeAdvTrunk";
+class Stage1
+{
+	texture = "ca\plants_pmc\tree\data\t_poplar2f_dead_01_no.paa";
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,MCA)";
+	uvSource = "tex1";
+	class uvTransform
+	{
+		aside[] = {1.0,0.0,0.0};
+		up[] = {0.0,1.0,0.0};
+		dir[] = {0.0,0.0,0.0};
+		pos[] = {0.0,0.0,0.0};
+	};
+};
+//};

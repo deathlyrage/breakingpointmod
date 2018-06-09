@@ -1,0 +1,1849 @@
+/*%FSM<COMPILE "D:\Games\Steam\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Breaking Point Player Login">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-75.000000,-225.000000,25.000000,-175.000000,0.000000,"init"};
+item1[] = {"Delay",2,250,-75.000000,-75.000000,25.000000,-25.000000,0.000000,"Delay"};
+item2[] = {"Client",4,218,-75.000000,-150.000000,25.000000,-100.000000,0.000000,"Client"};
+item3[] = {"Collect",2,250,-75.000000,25.000000,25.000000,75.000000,0.000000,"Collect"};
+item4[] = {"Has_PlayerID",4,218,-175.000000,75.000000,-75.000000,125.000000,1.000000,"Has PlayerID"};
+item5[] = {"Invalid_ID",4,218,50.000000,25.000000,150.000000,75.000000,2.000000,"Invalid" \n "ID"};
+item6[] = {"Response",4,218,-250.000000,450.000000,-150.000000,500.000000,0.000000,"Response"};
+item7[] = {"Read_Response",2,250,-75.000000,450.000000,25.000000,500.000000,0.000000,"Read" \n "Response"};
+item8[] = {"Character_Transf",2,250,-75.000000,950.000000,25.000000,1000.000000,0.000000,"Character" \n "Transfer"};
+item9[] = {"End_Mission",1,250,750.000000,225.000000,850.000000,275.000000,0.000000,"End" \n "Mission"};
+item10[] = {"Preload_Position",2,250,-75.000000,1150.000000,25.000000,1200.000000,0.000000,"Preload Position"};
+item11[] = {"Load_Position",2,250,-75.000000,1250.000000,25.000000,1300.000000,0.000000,"Load Position"};
+item12[] = {"Display_Ready",4,218,-175.000000,1300.000000,-75.000000,1350.000000,0.000000,"Display" \n "Ready"};
+item13[] = {"Preload_Display",2,250,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Preload" \n "Display"};
+item14[] = {"Display_Preloade",4,218,-175.000000,1400.000000,-75.000000,1450.000000,0.000000,"Display" \n "Preloaded"};
+item15[] = {"Initialize",2,250,-75.000000,1650.000000,25.000000,1700.000000,0.000000,"Initialize"};
+item16[] = {"Finish",1,250,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"Finish"};
+item17[] = {"True",8,218,-175.000000,1675.000000,-75.000000,1725.000000,0.000000,"True"};
+item18[] = {"Initialized",4,218,-175.000000,-25.000000,-75.000000,25.000000,0.000000,"Initialized"};
+item19[] = {"Preloaded",4,218,-175.000000,1200.000000,-75.000000,1250.000000,0.000000,"Preloaded"};
+item20[] = {"Retry",4,218,50.000000,375.000000,150.000000,425.000000,0.000000,"Retry"};
+item21[] = {"Retry",4,218,50.000000,325.000000,150.000000,375.000000,0.000000,"Retry"};
+item22[] = {"Retry",2,250,175.000000,350.000000,275.000000,400.000000,0.000000,"Retry"};
+item23[] = {"Auth_Failed",4,218,300.000000,350.000000,400.000000,400.000000,0.000000,"Auth" \n "Failed"};
+item24[] = {"Breaking_Point_Login",-1,250,-550.000000,-375.000000,-250.000000,-325.000000,0.000000,"Breaking Point Login FSM"};
+item25[] = {"Request_Login",2,250,-75.000000,350.000000,25.000000,400.000000,0.000000,"Request" \n "Login"};
+item26[] = {"Failed___Error",4,218,-400.000000,350.000000,-300.000000,400.000000,0.000000,"Failed: " \n "Error"};
+item27[] = {"Handle_Failure",2,250,-525.000000,350.000000,-425.000000,400.000000,0.000000,"Handle" \n "Failure"};
+item28[] = {"Timeout",4,218,-650.000000,350.000000,-550.000000,400.000000,0.000000,"Timeout"};
+item29[] = {"Server_Ready",2,250,-75.000000,125.000000,25.000000,175.000000,0.000000,"Server Ready"};
+item30[] = {"Server_Ready",4,218,-175.000000,175.000000,-75.000000,225.000000,0.000000,"Server Ready"};
+item31[] = {"Created_By_Death",-1,250,-500.000000,-325.000000,-275.000000,-300.000000,0.000000,"Created By Deathlyrage"};
+item32[] = {"Failed__Timer",4,218,-350.000000,425.000000,-250.000000,475.000000,0.000000,"Failed:" \n "Timer"};
+item33[] = {"Handle_Timer",2,250,-475.000000,425.000000,-375.000000,475.000000,0.000000,"Handle" \n "Timer"};
+item34[] = {"Request",2,250,-350.000000,500.000000,-250.000000,550.000000,0.000000,"Request"};
+item35[] = {"Timer_Completed",4,218,-475.000000,500.000000,-375.000000,550.000000,0.000000,"Timer" \n "Completed"};
+item36[] = {"",7,210,-241.500000,371.000031,-233.500000,378.999969,0.000000,""};
+item37[] = {"",7,210,796.000000,371.000031,804.000000,378.999969,0.000000,""};
+item38[] = {"",7,210,796.000000,46.000000,803.999939,54.000000,0.000000,""};
+item39[] = {"",7,210,796.000000,171.000000,804.000000,179.000000,0.000000,""};
+item40[] = {"ARMA_3",-1,250,-475.000000,-425.000000,-300.000000,-375.000000,0.000000,"ARMA 3"};
+item41[] = {"True",8,218,-175.000000,600.000000,-75.000000,650.000000,0.000000,"True"};
+item42[] = {"Server_Not_Ready",4,218,50.000000,125.000000,150.000000,175.000000,2.000000,"Server Not" \n "Ready"};
+item43[] = {"Invalid_Whitelis",4,218,-650.000000,275.000000,-550.000000,325.000000,0.000000,"Invalid" \n "Whitelist"};
+item44[] = {"",7,210,-479.000000,221.000046,-471.000000,228.999969,0.000000,""};
+item45[] = {"ERROR_0__WHITELI",2,250,-800.000000,275.000000,-700.000000,325.000000,0.000000,"ERROR 0:" \n "WHITELIST"};
+item46[] = {"End_Mission_1",1,250,-650.000000,425.000000,-550.000000,475.000000,0.000000,"End" \n "Mission"};
+item47[] = {"Version_Check",2,250,-75.000000,225.000000,25.000000,275.000000,0.000000,"Version" \n "Check"};
+item48[] = {"Valid",4,218,-175.000000,275.000000,-75.000000,325.000000,0.000000,"Valid"};
+item49[] = {"",7,210,208.500031,246.000015,216.499969,254.000000,0.000000,""};
+item50[] = {"Server_Not_Ready",4,218,-650.000000,200.000000,-550.000000,250.000000,0.000000,"Server Not" \n "Ready"};
+item51[] = {"ERROR_1__NOT_REA",2,250,-800.000000,200.000000,-700.000000,250.000000,0.000000,"ERROR 1:" \n "NOT READY"};
+item52[] = {"",7,210,-904.000000,221.000046,-896.000000,228.999969,0.000000,""};
+item53[] = {"",7,210,-479.000000,296.000031,-471.000000,303.999939,0.000000,""};
+item54[] = {"True",8,218,-175.000000,800.000000,-75.000000,850.000000,0.000000,"True"};
+item55[] = {"Spawn_Dialog",2,250,-75.000000,750.000000,25.000000,800.000000,0.000000,"Spawn Dialog"};
+item56[] = {"Faction_Dialog",2,4346,-75.000000,650.000000,25.000000,700.000000,0.000000,"Faction Dialog"};
+item57[] = {"True",8,218,-175.000000,700.000000,-75.000000,750.000000,0.000000,"True"};
+item58[] = {"Rejected",4,218,-650.000000,125.000000,-550.000000,175.000000,0.000000,"Rejected"};
+item59[] = {"",7,210,-479.000000,146.000031,-471.000000,153.999954,0.000000,""};
+item60[] = {"ERROR_2__REJECTE",2,250,-800.000000,125.000000,-700.000000,175.000000,0.000000,"ERROR 2:" \n "REJECTED"};
+item61[] = {"ERROR_3__NO_HC",2,250,-800.000000,50.000000,-700.000000,100.000000,0.000000,"ERROR 3:" \n "NO HC"};
+item62[] = {"No_HC",4,218,-650.000000,50.000000,-550.000000,100.000000,0.000000,"No HC"};
+item63[] = {"",7,210,-479.000000,71.000038,-471.000000,78.999954,0.000000,""};
+item64[] = {"",7,210,-904.000000,146.000046,-896.000000,153.999969,0.000000,""};
+item65[] = {"",7,210,-904.000000,71.000038,-896.000000,78.999954,0.000000,""};
+item66[] = {"",7,210,-904.000000,296.000061,-896.000000,303.999969,0.000000,""};
+item67[] = {"Exit",1,250,-950.000000,425.000000,-850.000000,475.000000,0.000000,"Exit"};
+item68[] = {"True",8,218,-950.000000,350.000000,-850.000000,400.000000,0.000000,"True"};
+item69[] = {"ERROR_4__SHUTDOW",2,250,-800.000000,-25.000000,-700.000000,25.000000,0.000000,"ERROR 4:" \n "SHUTDOWN"};
+item70[] = {"Shutdown",4,218,-650.000000,-25.000000,-550.000000,25.000000,0.000000,"Shutdown"};
+item71[] = {"",7,210,-479.000000,-3.999956,-471.000000,3.999956,0.000000,""};
+item72[] = {"",7,210,-904.000000,-3.999956,-896.000000,3.999956,0.000000,""};
+item73[] = {"ERROR_5__HIVE_FA",2,250,-800.000000,-100.000000,-700.000000,-50.000000,0.000000,"ERROR 5:" \n "HIVE FAILURE"};
+item74[] = {"Failure",4,218,-650.000000,-100.000000,-550.000000,-50.000000,0.000000,"Failure"};
+item75[] = {"",7,210,-479.000000,-78.999954,-471.000000,-71.000046,0.000000,""};
+item76[] = {"",7,210,-904.000000,-78.999954,-896.000000,-71.000046,0.000000,""};
+item77[] = {"ERROR_6__CHAR_AC",2,250,-800.000000,-175.000000,-700.000000,-125.000000,0.000000,"ERROR 6:" \n "CHAR ACTIVE"};
+item78[] = {"Character_Active",4,218,-650.000000,-175.000000,-550.000000,-125.000000,0.000000,"Character" \n "Active"};
+item79[] = {"",7,210,-479.000000,-153.999954,-471.000000,-146.000046,0.000000,""};
+item80[] = {"",7,210,-904.000000,-153.999954,-896.000000,-146.000046,0.000000,""};
+item81[] = {"Client_Outdated",4,218,50.000000,200.000000,150.000000,250.000000,0.000000,"Client" \n "Outdated"};
+item82[] = {"Server_Outdated",4,218,50.000000,250.000000,150.000000,300.000000,0.000000,"Server" \n "Outdated"};
+item83[] = {"Timeout",4,218,50.000000,1200.000000,150.000000,1250.000000,0.000000,"Timeout"};
+item84[] = {"Timeout",4,218,50.000000,1300.000000,150.000000,1350.000000,0.000000,"Timeout"};
+item85[] = {"True",8,218,-175.000000,1100.000000,-75.000000,1150.000000,0.000000,"True"};
+item86[] = {"Preload_Objects",2,250,-75.000000,1550.000000,25.000000,1600.000000,0.000000,"Preload" \n "Objects"};
+item87[] = {"Objects_Preloade",8,218,-175.000000,1600.000000,-75.000000,1650.000000,0.000000,"Objects" \n "Preloaded"};
+item88[] = {"Preload_Loot___Z",2,250,-75.000000,1450.000000,25.000000,1500.000000,0.000000,"Preload" \n "Loot / Zeds"};
+item89[] = {"Loot___Zeds_Prel",4,218,-175.000000,1500.000000,-75.000000,1550.000000,0.000000,"Loot / Zeds" \n "Preloaded"};
+item90[] = {"Timeout",4,218,50.000000,1600.000000,150.000000,1650.000000,0.000000,"Timeout"};
+item91[] = {"Load_Medical",2,250,-75.000000,1050.000000,25.000000,1100.000000,0.000000,"Load Medical"};
+item92[] = {"Request_Setup",2,250,-75.000000,850.000000,25.000000,900.000000,0.000000,"Request" \n "Setup"};
+item93[] = {"Response",4,218,-175.000000,900.000000,-75.000000,950.000000,0.000000,"Response"};
+item94[] = {"True",8,218,-175.000000,1000.000000,-75.000000,1050.000000,0.000000,"True"};
+item95[] = {"Retry",4,218,50.000000,900.000000,150.000000,950.000000,0.000000,"Retry"};
+item96[] = {"Retry",4,218,50.000000,850.000000,150.000000,900.000000,0.000000,"Retry"};
+item97[] = {"Retry_1",2,250,175.000000,850.000000,275.000000,900.000000,0.000000,"Retry"};
+item98[] = {"Auth_Failed",4,218,300.000000,850.000000,400.000000,900.000000,0.000000,"Auth" \n "Failed"};
+item99[] = {"Update_Msg",4,218,50.000000,800.000000,150.000000,850.000000,0.000000,"Update" \n "Msg"};
+item100[] = {"Load_Faction_Dat",2,250,-75.000000,550.000000,25.000000,600.000000,0.000000,"Load Faction" \n "Data"};
+item101[] = {"Body_Ready",4,218,-175.000000,500.000000,-75.000000,550.000000,0.000000,"Body Ready"};
+item102[] = {"Legion_Only",4,218,-650.000000,-250.000000,-550.000000,-200.000000,0.000000,"Legion" \n "Only"};
+item103[] = {"",7,210,-479.000000,-228.999954,-471.000000,-221.000046,0.000000,""};
+item104[] = {"ERROR_7__LEGION",2,250,-800.000000,-250.000000,-700.000000,-200.000000,0.000000,"ERROR 7:" \n "LEGION ONLY"};
+item105[] = {"",7,210,-904.000000,-228.999954,-896.000000,-221.000046,0.000000,""};
+item106[] = {"____FAKE____",9,0,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+version=1;
+class LayoutItems
+{
+	class Item24
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=19;
+			FontWeight=700;
+			lStyle=1;
+			lColor=-1;
+		};
+	};
+	class Item31
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=16;
+			FontWeight=700;
+			lStyle=1;
+			lColor=-1;
+		};
+	};
+	class Item40
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=29;
+			FontWeight=700;
+			lStyle=1;
+			lColor=-1;
+		};
+	};
+};
+link0[] = {0,2};
+link1[] = {1,18};
+link2[] = {2,1};
+link3[] = {3,4};
+link4[] = {3,5};
+link5[] = {4,29};
+link6[] = {5,38};
+link7[] = {6,7};
+link8[] = {7,101};
+link9[] = {8,94};
+link10[] = {10,19};
+link11[] = {10,83};
+link12[] = {11,12};
+link13[] = {11,84};
+link14[] = {12,13};
+link15[] = {13,14};
+link16[] = {14,88};
+link17[] = {15,17};
+link18[] = {17,16};
+link19[] = {18,3};
+link20[] = {19,11};
+link21[] = {20,22};
+link22[] = {21,25};
+link23[] = {22,21};
+link24[] = {22,23};
+link25[] = {23,37};
+link26[] = {25,20};
+link27[] = {25,36};
+link28[] = {26,27};
+link29[] = {27,28};
+link30[] = {27,53};
+link31[] = {28,46};
+link32[] = {29,30};
+link33[] = {29,42};
+link34[] = {30,47};
+link35[] = {32,33};
+link36[] = {33,35};
+link37[] = {34,6};
+link38[] = {35,34};
+link39[] = {36,6};
+link40[] = {36,26};
+link41[] = {36,32};
+link42[] = {37,9};
+link43[] = {38,39};
+link44[] = {39,9};
+link45[] = {41,56};
+link46[] = {42,39};
+link47[] = {43,45};
+link48[] = {44,50};
+link49[] = {44,59};
+link50[] = {45,66};
+link51[] = {47,48};
+link52[] = {47,81};
+link53[] = {47,82};
+link54[] = {48,25};
+link55[] = {49,9};
+link56[] = {50,51};
+link57[] = {51,52};
+link58[] = {52,66};
+link59[] = {53,43};
+link60[] = {53,44};
+link61[] = {54,92};
+link62[] = {55,54};
+link63[] = {56,57};
+link64[] = {57,55};
+link65[] = {58,60};
+link66[] = {59,58};
+link67[] = {59,63};
+link68[] = {60,64};
+link69[] = {61,65};
+link70[] = {62,61};
+link71[] = {63,62};
+link72[] = {63,71};
+link73[] = {64,52};
+link74[] = {65,64};
+link75[] = {66,68};
+link76[] = {68,67};
+link77[] = {69,72};
+link78[] = {70,69};
+link79[] = {71,70};
+link80[] = {71,75};
+link81[] = {72,65};
+link82[] = {73,76};
+link83[] = {74,73};
+link84[] = {75,74};
+link85[] = {75,79};
+link86[] = {76,72};
+link87[] = {77,80};
+link88[] = {78,77};
+link89[] = {79,78};
+link90[] = {79,103};
+link91[] = {80,76};
+link92[] = {81,49};
+link93[] = {82,49};
+link94[] = {83,11};
+link95[] = {84,13};
+link96[] = {85,10};
+link97[] = {86,87};
+link98[] = {86,90};
+link99[] = {87,15};
+link100[] = {88,89};
+link101[] = {89,86};
+link102[] = {90,15};
+link103[] = {91,85};
+link104[] = {92,93};
+link105[] = {92,95};
+link106[] = {92,99};
+link107[] = {93,8};
+link108[] = {94,91};
+link109[] = {95,97};
+link110[] = {96,92};
+link111[] = {97,96};
+link112[] = {97,98};
+link113[] = {99,97};
+link114[] = {100,41};
+link115[] = {101,100};
+link116[] = {102,104};
+link117[] = {103,102};
+link118[] = {104,105};
+link119[] = {105,80};
+link120[] = {98,106};
+globals[] = {0.000000,0,0,0,0,640,480,1,248,6316128,1,-377.392334,241.103027,1287.708740,468.317627,939,1244,1};
+window[] = {2,-1,-1,-1,-1,1107,208,1837,208,3,957};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "Breaking Point Player Login";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"BP_versionNo = getText(configFile >> ""CfgMods"" >> ""BreakingPoint"" >> ""version"");" \n
+                         "(format [ ""-= Breaking Point Arma 3 (Client) By Deathlyrage v%1 =-~0101"",BP_versionNo]) call BP_fnc_DebugConsole;" \n
+                         "" \n
+                         "_AuthAttempt = 0;" \n
+                         "0 fadeSound 0;" \n
+                         "" \n
+                         "progressLoadingScreen 0.1;" \n
+                         "_timeStart = diag_tickTime; " \n
+                         "_myTime = diag_tickTime;" \n
+                         "" \n
+                         "//Preload Title Screens" \n
+                         "{" \n
+                         "	preloadTitleRsc [_x, ""PLAIN""];" \n
+                         "	preloadTitleRsc [_x, ""BLACK OUT""]; " \n
+                         "} count BP_PreloadTitleRsc;" \n
+                         "" \n
+                         "//Preload Title Objects" \n
+                         "{ " \n
+                         "	preloadTitleObj [_x, ""PLAIN""]; " \n
+                         "} count BP_PreloadTitleObj;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Client">*/
+                                class Client
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="Delay";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Delay">*/
+                class Delay
+                {
+                        name = "Delay";
+                        itemno = 1;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Loading...""; " \n
+                         "progressLoadingScreen 0.2;" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Initialized">*/
+                                class Initialized
+                                {
+                                        itemno = 18;
+                                        priority = 0.000000;
+                                        to="Collect";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _myTime) > 7) and (!isnil ""bis_fnc_init"") and (!isNull player) and (player == player)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"enableSaving [false, false];" \n
+                                         "//enableRadio false;" \n
+                                         "enableSentences false;" \n
+                                         "showSubtitles false;" \n
+                                         "0 fadeRadio 0;" \n
+                                         "enableEngineArtillery false;" \n
+                                         "enableTeamSwitch false;" \n
+                                         "enableSatNormalOnDetail false;" \n
+                                         "disableUserInput true;" \n
+                                         "player allowDamage false;" \n
+                                         "player enableSimulation false;" \n
+                                         "player disableConversation true;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Collect">*/
+                class Collect
+                {
+                        name = "Collect";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Checking Player ID and Network ID""; " \n
+                         "progressLoadingScreen 0.3;" \n
+                         "" \n
+                         "_playerUID = getPlayerUID player;" \n
+                         "BP_NetID = NetID player;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Invalid_ID">*/
+                                class Invalid_ID
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="End_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_playerUID == """""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""BP_NoPlayerID""] call BP_fnc_loginError;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Has_PlayerID">*/
+                                class Has_PlayerID
+                                {
+                                        itemno = 4;
+                                        priority = 1.000000;
+                                        to="Server_Ready";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isNil ""_playerUID"") and (typeName (getPlayerUID player) == ""STRING"") and ((getPlayerUID player) != """")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Read_Response">*/
+                class Read_Response
+                {
+                        name = "Read_Response";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg =  ""Transfering Character From Server"";" \n
+                         "" \n
+                         "_msg params [""_requestID"",""_bodyID"",""_charID"",""_isNew"",""_randomSpot"",""_medical"",""_survival"",""_faction"",""_dog""];" \n
+                         "" \n
+                         "//Check For Valid Login Request" \n
+                         "if (_requestID != _playerUID) then {" \n
+                         "	_isHiveOk = false;" \n
+                         "	[""Request ID Mismatch: Request ID 1: %1 | Player ID 2: %2~1001"",_requestID,_playerUID] call BP_fnc_DebugConsoleFormat;" \n
+                         "	[""BP_ServerFailure""] call BP_fnc_loginError;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Body_Ready">*/
+                                class Body_Ready
+                                {
+                                        itemno = 101;
+                                        priority = 0.000000;
+                                        to="Load_Faction_Dat";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/"_body = objectFromNetID _bodyID;"/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull _body"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Character_Transf">*/
+                class Character_Transf
+                {
+                        name = "Character_Transf";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg =  ""Transfering Character From Server"";" \n
+                         "" \n
+                         "//Fetch Worldspace" \n
+                         "_worldspace = _msg select 0;" \n
+                         "" \n
+                         "//Backup Old Unit" \n
+                         "_oldUnit = player;" \n
+                         "_oldGroup = (group _oldUnit);" \n
+                         "" \n
+                         "//Transfer Player Object To Body" \n
+                         "selectPlayer _body;" \n
+                         "" \n
+                         "//Make Player Immortal" \n
+                         "player allowDamage false;" \n
+                         "" \n
+                         "//Delete Old Unit" \n
+                         "deleteVehicle _oldUnit;" \n
+                         "deleteGroup _oldGroup;" \n
+                         "" \n
+                         "//Process Gear" \n
+                         "BP_playerName = name player;" \n
+                         "r_player_gearSet = true;" \n
+                         "BP_myMagazines = [];" \n
+                         "BP_myWeapons = [];" \n
+                         "BP_myBackpack = objNull;" \n
+                         "BP_myBackpackMags = [];" \n
+                         "BP_myBackpackWpns = [];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 94;
+                                        priority = 0.000000;
+                                        to="Load_Medical";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_Mission">*/
+                class End_Mission
+                {
+                        name = "End_Mission";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"player enableSimulation false;" \n
+                         "disableUserInput false;" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Preload_Position">*/
+                class Preload_Position
+                {
+                        name = "Preload_Position";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"(""Character Setup Completed....~0001"") call BP_fnc_DebugConsole;" \n
+                         "" \n
+                         "player enableSimulation true;" \n
+                         "" \n
+                         "BP_loadScreenMsg = ""Character Setup Completed..."";" \n
+                         "progressLoadingScreen 0.9;" \n
+                         "" \n
+                         "_worldspace params [""_setDir"",""_setPos""];" \n
+                         "" \n
+                         "//Load Dog" \n
+                         "_dog call BP_fnc_loadDog;" \n
+                         "" \n
+                         "//Update Local Vars" \n
+                         "call BP_fnc_updateVars;" \n
+                         "" \n
+                         "//Set Preload Flag and Enable Sound" \n
+                         "BP_clientPreload = true;" \n
+                         "3 fadeSound 1;" \n
+                         "1 cutText ["""", ""PLAIN""];" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
+                                {
+                                        itemno = 83;
+                                        priority = 0.000000;
+                                        to="Load_Position";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 8"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Preloaded">*/
+                                class Preloaded
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Load_Position";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"preloadCamera _setPos"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Load_Position">*/
+                class Load_Position
+                {
+                        name = "Load_Position";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
+                                {
+                                        itemno = 84;
+                                        priority = 0.000000;
+                                        to="Preload_Display";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 8"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Display_Ready">*/
+                                class Display_Ready
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Preload_Display";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/"(isTouchingGround player)"/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isNull (findDisplay 46))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Preload_Display">*/
+                class Preload_Display
+                {
+                        name = "Preload_Display";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"BP_lastCheckBit = 0;" \n
+                         "(findDisplay 46) displayAddEventHandler [""KeyDown"",""_this call BP_fnc_spaceInterrupt""];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Display_Preloade">*/
+                                class Display_Preloade
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="Preload_Loot___Z";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Initialize">*/
+                class Initialize
+                {
+                        name = "Initialize";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"//Medical" \n
+                         "_medicalHandle = [] spawn BP_fnc_initMedical;" \n
+                         "[_medicalHandle] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "[player] call BP_fnc_medicalDamageHandle;" \n
+                         "" \n
+                         "//Music" \n
+                         "_musicHandle = [] execVM ""\breakingpoint_code\threads\BP_Music.sqf"";" \n
+                         "[_musicHandle] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "if (r_player_unconscious) then {" \n
+                         "	r_player_timeout = player getVariable[""unconsciousTime"",0];" \n
+                         "	player playActionNow ""Die"";" \n
+                         "};" \n
+                         "" \n
+                         "0 cutText ["""", ""BLACK IN"",3];" \n
+                         "" \n
+                         "//load in medical details" \n
+                         "r_player_dead = 		      player getVariable[""med_isDead"",false];" \n
+                         "r_player_unconscious = 	player getVariable[""med_unconscious"", false];" \n
+                         "r_player_infected =		player getVariable[""med_infected"",false];" \n
+                         "r_player_injured = 		player getVariable[""med_injured"",false];" \n
+                         "r_player_inpain = 		      player getVariable[""med_inPain"",false];" \n
+                         "r_player_cardiac = 		player getVariable[""med_isCardiac"",false];" \n
+                         "r_player_lowblood =		player getVariable[""med_lowBlood"",false];" \n
+                         "r_player_blood = 		      player getVariable[""med_BloodQty"",r_player_bloodTotal];" \n
+                         "" \n
+                         """colorCorrections"" ppEffectEnable true;" \n
+                         """colorCorrections"" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [1, 1, 1, 0.0]];" \n
+                         """colorCorrections"" ppEffectCommit 0;" \n
+                         "" \n
+                         "player setOxygenRemaining 1;" \n
+                         "" \n
+                         "//Work out survival time" \n
+                         "/*" \n
+                         "_totalMins = _survival select 0;" \n
+                         "_days = floor (_totalMins / 1440);" \n
+                         "_totalMins = (_totalMins - (_days * 1440));" \n
+                         "_hours = floor (_totalMins / 60);" \n
+                         "_mins =  (_totalMins - (_hours * 60));" \n
+                         "" \n
+                         "_world = toUpper(worldName); //toUpper(getText (configFile >> ""CfgWorlds"" >> (worldName) >> ""description""));" \n
+                         "_nearestCity = nearestLocations [getPos player, [""NameCityCapital"",""NameCity"",""NameVillage"",""NameLocal""],1000];" \n
+                         "_town = ""Wilderness"";" \n
+                         "if (count _nearestCity > 0) then {_town = text (_nearestCity select 0)};" \n
+                         "*/" \n
+                         "" \n
+                         "call BP_fnc_initUpdateUI;" \n
+                         "" \n
+                         "_playerCtrl = [] execVM ""\breakingpoint_code\threads\BP_playerCtrl.sqf"";" \n
+                         "[_playerCtrl] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "_spawn1 = [] execVM ""\breakingpoint_code\threads\BP_playerSpawn1.sqf"";" \n
+                         "[_spawn1] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "_spawn2 = [] execVM ""\breakingpoint_code\threads\BP_playerSpawn2.sqf"";" \n
+                         "[_spawn2] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "disableUserInput false;" \n
+                         "" \n
+                         "// Anti Debug" \n
+                         "//_position = getPosATL player;" \n
+                         "//_debug = getMarkerPos BP_DebugMarker;" \n
+                         "//_distance = _debug distance _position;" \n
+                         "//if (_distance < BP_DebugRadius) then {" \n
+                         "//	[""BP_ServerFailure""] call BP_fnc_loginError;" \n
+                         "//};" \n
+                         "(""Login Complete.~0001"") call BP_fnc_DebugConsole;" \n
+                         "" \n
+                         "//Group System Init" \n
+                         "call BP_fnc_groupIconInit;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Finish";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!dialog"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Finish">*/
+                class Finish
+                {
+                        name = "Finish";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"BP_AuthPaused = false;" \n
+                         "BP_authed = true;" \n
+                         "player allowDamage true;" \n
+                         "bpLoginResult = nil;" \n
+                         "bpSetupResult = nil;" \n
+                         "" \n
+                         "//Call Init Script On All Vehicles." \n
+                         "{" \n
+                         "	[_x] call BP_fnc_vehicleInit;" \n
+                         "} count vehicles;" \n
+                         "" \n
+                         "//Magazine / Weapon Check" \n
+                         "call BP_fnc_magazineCheck;" \n
+                         "" \n
+                         "call BP_fnc_trapUpdate;" \n
+                         "" \n
+                         "player triggerDynamicSimulation true;" \n
+                         "" \n
+                         "if (worldName == ""thirskw"") then {" \n
+                         "	call BP_fnc_thirskSnow;" \n
+                         "};" \n
+                         "" \n
+                         "if (_class == 7) then {" \n
+                         "	BP_isUndead = true;" \n
+                         "	setViewDistance 200;" \n
+                         "	player setVariable [""lastFeed"",diag_tickTime];" \n
+                         "} else {" \n
+                         "	setViewDistance -1;" \n
+                         "	//[""Breaking Point"",_town,""Day"" + str(_days)] spawn BIS_fnc_infoText;" \n
+                         "	[_survival] spawn BP_fnc_loginUI;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Retry">*/
+                class Retry
+                {
+                        name = "Retry";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"diag_log (""PLOGIN: Retrying Character Data ("" + _playerUID + "")"");" \n
+                         "BP_loadScreenMsg = (""Retrying Character Data ("" + _playerUID + "")"");" \n
+                         "" \n
+                         "_AuthAttempt = _AuthAttempt +1;" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Auth_Failed">*/
+                                class Auth_Failed
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="End_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_AuthAttempt > 6"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"diag_log (""PLOGIN: Character Data Failed ("" + _playerUID + "")"");" \n
+                                         "BP_loadScreenMsg = (""Character Data Failed ("" + _playerUID + "")"");" \n
+                                         "(""LOGIN ERROR: Auth Failed!~1001"") call BP_fnc_DebugConsole;" \n
+                                         "[""BP_AuthFailed""] call BP_fnc_loginError;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Retry">*/
+                                class Retry
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="Request_Login";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 30"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Request_Login">*/
+                class Request_Login
+                {
+                        name = "Request_Login";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Requesting Authentication..."";" \n
+                         "" \n
+                         "_msg = [];" \n
+                         "bpLoginResult = [];" \n
+                         "" \n
+                         "[(netID player)] remoteExecCall [""BPServer_fnc_checkLogin"",2];" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Response">*/
+                                class Response
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="Read_Response";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (bpLoginResult) > 3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;" \n
+                                         "_msg = bpLoginResult;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Failed___Error">*/
+                                class Failed___Error
+                                {
+                                        itemno = 26;
+                                        priority = 0.000000;
+                                        to="Handle_Failure";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (bpLoginResult) == 3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_msg = bpLoginResult;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Failed__Timer">*/
+                                class Failed__Timer
+                                {
+                                        itemno = 32;
+                                        priority = 0.000000;
+                                        to="Handle_Timer";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (bpLoginResult) == 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_msg = bpLoginResult;" \n
+                                         "BP_AuthTimer = true;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Retry">*/
+                                class Retry
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="Retry";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 30"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Handle_Failure">*/
+                class Handle_Failure
+                {
+                        name = "Handle_Failure";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"_msg params [""_requestID"",""_type"",""_message""];" \n
+                         "" \n
+                         "diag_log (""PLOGIN: ("" + _message + "")"");" \n
+                         "BP_loadScreenMsg = (_message);" \n
+                         "" \n
+                         "(format [ ""LOGIN ERROR: %1~1001"",_message]) call BP_fnc_DebugConsole;" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No_HC">*/
+                                class No_HC
+                                {
+                                        itemno = 62;
+                                        priority = 0.000000;
+                                        to="ERROR_3__NO_HC";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""3"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Invalid_Whitelis">*/
+                                class Invalid_Whitelis
+                                {
+                                        itemno = 43;
+                                        priority = 0.000000;
+                                        to="ERROR_0__WHITELI";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""0"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Server_Not_Ready">*/
+                                class Server_Not_Ready
+                                {
+                                        itemno = 50;
+                                        priority = 0.000000;
+                                        to="ERROR_1__NOT_REA";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""1"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Rejected">*/
+                                class Rejected
+                                {
+                                        itemno = 58;
+                                        priority = 0.000000;
+                                        to="ERROR_2__REJECTE";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""2"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="End_Mission_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 15"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Shutdown">*/
+                                class Shutdown
+                                {
+                                        itemno = 70;
+                                        priority = 0.000000;
+                                        to="ERROR_4__SHUTDOW";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""4"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Failure">*/
+                                class Failure
+                                {
+                                        itemno = 74;
+                                        priority = 0.000000;
+                                        to="ERROR_5__HIVE_FA";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""5"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Character_Active">*/
+                                class Character_Active
+                                {
+                                        itemno = 78;
+                                        priority = 0.000000;
+                                        to="ERROR_6__CHAR_AC";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""6"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Legion_Only">*/
+                                class Legion_Only
+                                {
+                                        itemno = 102;
+                                        priority = 0.000000;
+                                        to="ERROR_7__LEGION";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_message == ""7"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Server_Ready">*/
+                class Server_Ready
+                {
+                        name = "Server_Ready";
+                        itemno = 29;
+                        init = /*%FSM<STATEINIT""">*/"//Wait For Server Auth" \n
+                         "BP_loadScreenMsg = (""Waiting for Server to Start Authentication."");" \n
+                         "diag_log ""PLOGIN: Waiting for Server to Start Authentication."";" \n
+                         "(""Waiting for Server to Start Authentication.~0001"") call BP_fnc_DebugConsole;" \n
+                         "progressLoadingScreen 0.5;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Server_Not_Ready">*/
+                                class Server_Not_Ready
+                                {
+                                        itemno = 42;
+                                        priority = 2.000000;
+                                        to="End_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 50"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"[""BP_ServerNotReady""] call BP_fnc_loginError;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Server_Ready">*/
+                                class Server_Ready
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="Version_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Handle_Timer">*/
+                class Handle_Timer
+                {
+                        name = "Handle_Timer";
+                        itemno = 33;
+                        init = /*%FSM<STATEINIT""">*/"BP_AuthTimer = true;" \n
+                         "_timerThread = [] execVM ""\breakingpoint_code\threads\BP_Timer.sqf"";" \n
+                         "[_timerThread] call BP_fnc_addThreadHandle;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Timer_Completed">*/
+                                class Timer_Completed
+                                {
+                                        itemno = 35;
+                                        priority = 0.000000;
+                                        to="Request";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptdone _timerThread;"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_AuthTimer = false;" \n
+                                         "_authThread = [] execVM ""\breakingpoint_code\threads\BP_Authentication.sqf"";" \n
+                                         "[_authThread] call BP_fnc_addThreadHandle;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Request">*/
+                class Request
+                {
+                        name = "Request";
+                        itemno = 34;
+                        init = /*%FSM<STATEINIT""">*/"diag_log (""PLOGIN: Requesting Authentication... ("" + _playerUID + "")"");" \n
+                         "BP_loadScreenMsg = (""Requesting Authentication..."");" \n
+                         "progressLoadingScreen 0.5;" \n
+                         "" \n
+                         "_msg = [];" \n
+                         "" \n
+                         "BP_playerUID = _playerUID;" \n
+                         "" \n
+                         "[(netID player),true] remoteExecCall [""BPServer_fnc_checkLogin"",2];" \n
+                         "" \n
+                         "(format [""Requesting Authentication..(%1)~0001"",BP_Login]) call BP_fnc_DebugConsole;" \n
+                         "" \n
+                         "bpLoginResult = [];" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Response">*/
+                                class Response
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="Read_Response";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (bpLoginResult) > 3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;" \n
+                                         "_msg = bpLoginResult;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_0__WHITELI">*/
+                class ERROR_0__WHITELI
+                {
+                        name = "ERROR_0__WHITELI";
+                        itemno = 45;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_Whitelist""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_Mission_1">*/
+                class End_Mission_1
+                {
+                        name = "End_Mission_1";
+                        itemno = 46;
+                        init = /*%FSM<STATEINIT""">*/"endLoadingScreen;" \n
+                         "player enableSimulation false;" \n
+                         "disableUserInput false;" \n
+                         "endMission ""END6"";" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Version_Check">*/
+                class Version_Check
+                {
+                        name = "Version_Check";
+                        itemno = 47;
+                        init = /*%FSM<STATEINIT""">*/"_myTime = diag_tickTime;" \n
+                         "" \n
+                         "//Loading Screen Message" \n
+                         "BP_loadScreenMsg = (""Checking Version Data..."");" \n
+                         "" \n
+                         "//Fetch Version Information" \n
+                         "BP_versionNo = getText(configFile >> ""CfgMods"" >> ""BreakingPoint"" >> ""version"");" \n
+                         "_clientVer = parseNumber BP_VersionNo;" \n
+                         "_serverVer = parseNumber sm_done;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Client_Outdated">*/
+                                class Client_Outdated
+                                {
+                                        itemno = 81;
+                                        priority = 0.000000;
+                                        to="End_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_clientVer < _serverVer)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"(""WARNING: Client <-> Server Version Mismatch!~1001"") call BP_fnc_DebugConsole;" \n
+                                         "(format[""Client is running v%1. Server is running v%2.#1000"",BP_versionNo,sm_done]) call BP_fnc_DebugConsole;" \n
+                                         "[""BP_InvalidVersion""] call BP_fnc_loginError;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Server_Outdated">*/
+                                class Server_Outdated
+                                {
+                                        itemno = 82;
+                                        priority = 0.000000;
+                                        to="End_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_clientVer > _serverVer)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"(""WARNING: Client <-> Server Version Mismatch!~1001"") call BP_fnc_DebugConsole;" \n
+                                         "(format[""Client is running v%1. Server is running v%2.#1000"",BP_versionNo,sm_done]) call BP_fnc_DebugConsole;" \n
+                                         "[""BP_OutdatedServer""] call BP_fnc_loginError;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Valid">*/
+                                class Valid
+                                {
+                                        itemno = 48;
+                                        priority = 0.000000;
+                                        to="Request_Login";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(sm_done == BP_versionNo)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_1__NOT_REA">*/
+                class ERROR_1__NOT_REA
+                {
+                        name = "ERROR_1__NOT_REA";
+                        itemno = 51;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_ServerNotReady""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spawn_Dialog">*/
+                class Spawn_Dialog
+                {
+                        name = "Spawn_Dialog";
+                        itemno = 55;
+                        init = /*%FSM<STATEINIT""">*/"_posThread = [_randomSpot,_class] spawn" \n
+                         "{" \n
+                         "	//Zombies Don't Have Spawn Selection Dialog" \n
+                         "	params [""_randomSpot"",""_class""];" \n
+                         "	" \n
+                         "	if (_class == 7) exitWith " \n
+                         "	{" \n
+                         "		//BP_Strongholds = -1;" \n
+                         "		BP_spawnLocation = -1;" \n
+                         "	};" \n
+                         "" \n
+                         "	private [""_dialogSpawn"",""_playerClass"",""_playerFactionName"",""_playerFactionPoints""];" \n
+                         "	//_dialogStronghold = format [""RscDisplayStronghold%1"",worldName];" \n
+                         "	_dialogSpawn = format [""RscDisplaySpawnSelect%1"",worldName];" \n
+                         "	_playerClass = player getVariable [""class"",0];" \n
+                         "	_playerFactionName = _playerClass call BP_fnc_getFactionName;" \n
+                         "	_playerFactionPoints = player call BP_fnc_getFactionPoints;" \n
+                         "" \n
+                         "	if (_randomSpot) then " \n
+                         "	{" \n
+                         "		//BP_Strongholds = -1;" \n
+                         "		BP_spawnLocation = 0;" \n
+                         "" \n
+                         "		//Pause Auth" \n
+                         "		BP_PauseAuth = true;" \n
+                         "		endLoadingScreen;" \n
+                         "		disableUserInput false;" \n
+                         "		" \n
+                         "		//Disabled: Stronghold Spawning Code" \n
+                         "		//if (_playerFactionPoints > -1) then" \n
+                         "		//{" \n
+                         "		//	if (isClass (missionConfigFile >> ""BreakingPoint"" >> ""CfgSettings"" >> ""Factions"" >> ""Bases"" >> _playerFactionName)) then" \n
+                         "		//	{" \n
+                         "		//		if (BP_FactionStrongholds) then" \n
+                         "		//		{" \n
+                         "		//			//Show Dialog" \n
+                         "		//			createDialog _dialogStronghold;" \n
+                         "		//			while {BP_Strongholds < 0} do {" \n
+                         "		//				waitUntil {!dialog}; " \n
+                         "		//				if (BP_Strongholds < 0) then {" \n
+                         "		//					createDialog _dialogStronghold;" \n
+                         "		//				};" \n
+                         "		//			};" \n
+                         "		//		};" \n
+                         "		//	};" \n
+                         "		//};" \n
+                         "		" \n
+                         "		//Show Random Spawn Selection Screen" \n
+                         "		if (BP_SpawnSelect) then //if (BP_SpawnSelect and BP_Strongholds < 1) then" \n
+                         "		{" \n
+                         "			createDialog _dialogSpawn;" \n
+                         "			while {BP_spawnLocation < 1} do {" \n
+                         "				waitUntil {!dialog};" \n
+                         "				if (BP_spawnLocation < 1) then {" \n
+                         "					createDialog _dialogSpawn;" \n
+                         "				};" \n
+                         "			};" \n
+                         "		};" \n
+                         "" \n
+                         "		//Resume Auth" \n
+                         "		BP_PauseAuth = false;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 54;
+                                        priority = 0.000000;
+                                        to="Request_Setup";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _posThread"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_loadScreenMsg = ""Requesting Character Setup..."";"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Faction_Dialog">*/
+                class Faction_Dialog
+                {
+                        name = "Faction_Dialog";
+                        itemno = 56;
+                        init = /*%FSM<STATEINIT""">*/"_factionThread = [_class,_hunter,_outlaw] spawn " \n
+                         "{" \n
+                         "	//Class Needs To be Selected" \n
+                         "	private ""_level"";" \n
+                         "	params [""_class"",""_hunter"",""_outlaw""];" \n
+                         "" \n
+                         "	if  (!BP_Factions) then " \n
+                         "	{ " \n
+                         "		_class = 0; " \n
+                         "		player setVariable [""class"",_class,true];" \n
+                         "		_class call BP_fnc_faction;" \n
+                         "	 };" \n
+                         "" \n
+                         "	if (_class == -1) then " \n
+                         "	{" \n
+                         "		//Pause Auth" \n
+                         "		BP_PauseAuth = true;" \n
+                         "		endLoadingScreen;" \n
+                         "		disableUserInput false;" \n
+                         "" \n
+                         "		//Show Dialog" \n
+                         "		BP_selectClass = -1;" \n
+                         "		createDialog ""RscDisplayFactionSystem"";" \n
+                         "		while {BP_selectClass < 0} do {" \n
+                         "			waitUntil {!dialog}; " \n
+                         "			if (BP_selectClass < 0) then {" \n
+                         "				createDialog ""RscDisplayFactionSystem"";" \n
+                         "			} else {" \n
+                         "				//Undead Locked	" \n
+                         "				if (BP_selectClass == 7) then" \n
+                         "				{" \n
+                         "					if (_hunter < 5000 or _outlaw < 5000 || count allplayers < 2) then" \n
+                         "					{" \n
+                         "						BP_selectClass = -1;" \n
+                         "						createDialog ""RscDisplayFactionSystem"";" \n
+                         "					};" \n
+                         "				};" \n
+                         "			};" \n
+                         "		};" \n
+                         "" \n
+                         "		player setVariable [""class"",BP_selectClass];" \n
+                         "		//Resume Auth" \n
+                         "		BP_PauseAuth = false;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 57;
+                                        priority = 0.000000;
+                                        to="Spawn_Dialog";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _factionThread"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (!isNil ""BP_selectClass"") then { _class = BP_selectClass; };"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_2__REJECTE">*/
+                class ERROR_2__REJECTE
+                {
+                        name = "ERROR_2__REJECTE";
+                        itemno = 60;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_Rejected""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_3__NO_HC">*/
+                class ERROR_3__NO_HC
+                {
+                        name = "ERROR_3__NO_HC";
+                        itemno = 61;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_NoHC""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Exit">*/
+                class Exit
+                {
+                        name = "Exit";
+                        itemno = 67;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_4__SHUTDOW">*/
+                class ERROR_4__SHUTDOW
+                {
+                        name = "ERROR_4__SHUTDOW";
+                        itemno = 69;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_Shutdown""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_5__HIVE_FA">*/
+                class ERROR_5__HIVE_FA
+                {
+                        name = "ERROR_5__HIVE_FA";
+                        itemno = 73;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_HiveFailure""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_6__CHAR_AC">*/
+                class ERROR_6__CHAR_AC
+                {
+                        name = "ERROR_6__CHAR_AC";
+                        itemno = 77;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_Combatlog""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Preload_Objects">*/
+                class Preload_Objects
+                {
+                        name = "Preload_Objects";
+                        itemno = 86;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Preloading Objects..."";" \n
+                         "" \n
+                         "_objectPreloadThread = [] spawn" \n
+                         "{" \n
+                         "	//Preload All Listed Objects" \n
+                         "	{" \n
+                         "		waitUntil {5 preloadObject _x};" \n
+                         "		waitUntil {15 preloadObject _x};" \n
+                         "	} count BP_ObjectPreload;" \n
+                         "" \n
+                         "	//Preload / Reveal All Nearby Objects" \n
+                         "	_nearbyObjects = nearestObjects [player, [""AllVehicles"",""GroundWeaponHolder"",""WeaponHolderSimulated"",""BP_Object"",""BP_LootBox""], 50];" \n
+                         "	{" \n
+                         "		//Preload Objects" \n
+                         "		_dist = (_x distance player);" \n
+                         "		waitUntil {_dist preloadObject _x};" \n
+                         "		" \n
+                         "		//Reveal Object" \n
+                         "		player reveal _x;" \n
+                         "	} count _nearbyObjects;" \n
+                         "};" \n
+                         "" \n
+                         "[_objectPreloadThread] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
+                                {
+                                        itemno = 90;
+                                        priority = 0.000000;
+                                        to="Initialize";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 8"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Objects_Preloade">*/
+                                class Objects_Preloade
+                                {
+                                        itemno = 87;
+                                        priority = 0.000000;
+                                        to="Initialize";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _objectPreloadThread"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Preload_Loot___Z">*/
+                class Preload_Loot___Z
+                {
+                        name = "Preload_Loot___Z";
+                        itemno = 88;
+                        init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Preloading Loot & Zombies..."";" \n
+                         "" \n
+                         "_lootZedPreloadThread = [] spawn" \n
+                         "{" \n
+                         "	//Zombie / Loot Spawns" \n
+                         "	call BP_fnc_spawnCheck;" \n
+                         "" \n
+                         "	//Animal Spawns" \n
+                         "	call BP_fnc_animalCheck;" \n
+                         "};" \n
+                         "" \n
+                         "[_lootZedPreloadThread] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Loot___Zeds_Prel">*/
+                                class Loot___Zeds_Prel
+                                {
+                                        itemno = 89;
+                                        priority = 0.000000;
+                                        to="Preload_Objects";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _lootZedPreloadThread"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Load_Medical">*/
+                class Load_Medical
+                {
+                        name = "Load_Medical";
+                        itemno = 91;
+                        init = /*%FSM<STATEINIT""">*/"if !(_medical isEqualTo []) then " \n
+                         "{" \n
+                         "	player setVariable [""med_isDead"",(_medical select 0),true];" \n
+                         "	player setVariable [""med_unconscious"", (_medical select 1), true];" \n
+                         "	player setVariable [""med_infected"",(_medical select 2),true];" \n
+                         "	player setVariable [""med_injured"",(_medical select 3),true];" \n
+                         "	player setVariable [""med_inPain"",(_medical select 4),true];" \n
+                         "	player setVariable [""med_isCardiac"",(_medical select 5),true];" \n
+                         "	player setVariable [""med_lowBlood"",(_medical select 6),true];" \n
+                         "	player setVariable [""med_bleedingLevel"",(_medical select 7),true];" \n
+                         "	player setVariable [""med_BloodQty"",(_medical select 8),false]; //Local" \n
+                         "	" \n
+                         "	//Add fractures" \n
+                         "	_fractures = (_medical select 9);" \n
+                         "       if !(_fractures isEqualTo []) then" \n
+                         "	 {" \n
+                         "		_fractures params [""_legs"",""_arms""];" \n
+                         "		r_hit_legs = _legs;" \n
+                         "		r_hit_hands = _arms;" \n
+                         "		if (_legs > 0.9) then {" \n
+                         "			r_fracture_legs = true;" \n
+                         "			r_hit_legs = 1;" \n
+                         "		};" \n
+                         "		if (_arms > 0.9) then {" \n
+                         "			r_fracture_arms = true;" \n
+                         "			r_hit_hands = 1;" \n
+                         "		};" \n
+                         "		player setHitPointDamage [""HitLegs"", r_hit_legs];" \n
+                         "		player setHitPointDamage [""HitHands"", r_hit_hands];" \n
+                         "" \n
+                         "	} else {" \n
+                         "		player setHitPointDamage [""HitLegs"", 0];" \n
+                         "		player setHitPointDamage [""HitHands"", 0];" \n
+                         "	};" \n
+                         "" \n
+                         "	player setVariable [""messing"",(_medical select 10),false];" \n
+                         "	player setVariable [""unconsciousTime"",(_medical select 11),false];" \n
+                         "" \n
+                         "} else {" \n
+                         "	//Reset Fractures" \n
+                         "	player setHitPointDamage [""HitLegs"", 0];" \n
+                         "	player setHitPointDamage [""HitHands"", 0];" \n
+                         "	player setVariable [""med_injured"",false,true];" \n
+                         "	player setVariable [""med_inPain"",false,true];" \n
+                         "	player setVariable [""messing"",[0,0],false];" \n
+                         "};" \n
+                         "" \n
+                         "//set Char ID" \n
+                         "player setVariable[""CharacterID"",_charID];" \n
+                         "" \n
+                         "//Work out survival time" \n
+                         "_totalMins = _survival select 0;" \n
+                         "_days = floor (_totalMins / 1440);" \n
+                         "_totalMins = (_totalMins - (_days * 1440));" \n
+                         "_hours = floor (_totalMins / 60);" \n
+                         "_mins =  (_totalMins - (_hours * 60));" \n
+                         "" \n
+                         "//player variables" \n
+                         "BP_characterID =		_charID;" \n
+                         "BP_hasFire = 			objNull;		//records players Fireplace object" \n
+                         "BP_myCursorTarget = 	objNull;" \n
+                         "BP_zombiesLocal = 	0;			//Used to record how many local zombies being tracked" \n
+                         "BP_skilllevel = _days;  //total alive days" \n
+                         "" \n
+                         "//load in medical details" \n
+                         "r_player_dead = 		player getVariable[""med_isDead"",false];" \n
+                         "r_player_unconscious = 	player getVariable[""med_unconscious"", false];" \n
+                         "r_player_infected =	player getVariable[""med_infected"",false];" \n
+                         "r_player_injured = 	player getVariable[""med_injured"",false];" \n
+                         "r_player_inpain = 		player getVariable[""med_inPain"",false];" \n
+                         "r_player_cardiac = 	player getVariable[""med_isCardiac"",false];" \n
+                         "r_player_lowblood =	player getVariable[""med_lowBlood"",false];" \n
+                         "r_player_blood = 		player getVariable[""med_BloodQty"",r_player_bloodTotal];" \n
+                         "" \n
+                         "//Hunger/Thirst" \n
+                         "_messing = player getVariable[""messing"",[0,0]];" \n
+                         "BP_hunger = 	_messing select 0;" \n
+                         "BP_thirst = _messing select 1;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 85;
+                                        priority = 0.000000;
+                                        to="Preload_Position";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Request_Setup">*/
+                class Request_Setup
+                {
+                        name = "Request_Setup";
+                        itemno = 92;
+                        init = /*%FSM<STATEINIT""">*/"_data = [(netID player),(netID _body)];" \n
+                         "" \n
+                         "if (_isNew or _randomSpot) then" \n
+                         "{" \n
+                         "	_spawnLocation = -1;	" \n
+                         "	//if (BP_FactionStrongholds and BP_Strongholds == 1) then" \n
+                         "	//{" \n
+                         "	//	_spawnLocation = 0;" \n
+                         "	//} else {" \n
+                         "	if (BP_SpawnSelect) then {" \n
+                         "		_spawnLocation = BP_spawnLocation;" \n
+                         "	};" \n
+                         "	//};" \n
+                         "" \n
+                         "	_data pushBack _spawnLocation;" \n
+                         "	_data pushBack _class;" \n
+                         "};" \n
+                         "" \n
+                         "bpSetupResult = [];" \n
+                         "_myTime = diag_tickTime;" \n
+                         "" \n
+                         "_data remoteExecCall [""BPServer_fnc_playerSetup"",2];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Retry">*/
+                                class Retry
+                                {
+                                        itemno = 95;
+                                        priority = 0.000000;
+                                        to="Retry_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 30"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Update_Msg">*/
+                                class Update_Msg
+                                {
+                                        itemno = 99;
+                                        priority = 0.000000;
+                                        to="Retry_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (bpSetupResult) > 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_loadScreenMsg = (bpSetupResult select 0);" \n
+                                         "BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Response">*/
+                                class Response
+                                {
+                                        itemno = 93;
+                                        priority = 0.000000;
+                                        to="Character_Transf";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count (bpSetupResult) == 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;" \n
+                                         "_msg = bpSetupResult;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Retry_1">*/
+                class Retry_1
+                {
+                        name = "Retry_1";
+                        itemno = 97;
+                        init = /*%FSM<STATEINIT""">*/"_AuthAttempt = _AuthAttempt +1;" \n
+                         "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Auth_Failed">*/
+                                class Auth_Failed
+                                {
+                                        itemno = 98;
+                                        priority = 0.000000;
+                                        to="____FAKE____";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_AuthAttempt > 100"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"diag_log (""PLOGIN: Character Data Failed ("" + _playerUID + "")"");" \n
+                                         "BP_loadScreenMsg = (""Character Data Failed ("" + _playerUID + "")"");" \n
+                                         "(""LOGIN ERROR: Auth Failed!~1001"") call BP_fnc_DebugConsole;" \n
+                                         "[""BP_AuthFailed""] call BP_fnc_loginError;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Retry">*/
+                                class Retry
+                                {
+                                        itemno = 96;
+                                        priority = 0.000000;
+                                        to="Request_Setup";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 30"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Load_Faction_Dat">*/
+                class Load_Faction_Dat
+                {
+                        name = "Load_Faction_Dat";
+                        itemno = 100;
+                        init = /*%FSM<STATEINIT""">*/"//Select Faction Data" \n
+                         "_faction params [""_class"",""_ranger"",""_outlaw"",""_hunter"",""_nomad"",""_survivalist"",""_engineer"",""_undead""];" \n
+                         "" \n
+                         "//Load Factions" \n
+                         "_body setVariable [""class"",_class];" \n
+                         "_body setVariable [""ranger"",_ranger];" \n
+                         "_body setVariable [""outlaw"",_outlaw];" \n
+                         "_body setVariable [""hunter"",_hunter];" \n
+                         "_body setVariable [""nomad"",_nomad];" \n
+                         "_body setVariable [""survivalist"",_survivalist];" \n
+                         "_body setVariable [""engineer"",_engineer];" \n
+                         "_body setVariable [""undead"",_undead];" \n
+                         "" \n
+                         "//Dog Var Inits" \n
+                         "_body setVariable [""dog"",objNull];" \n
+                         "_body setVariable [""dogID"", 0];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 41;
+                                        priority = 0.000000;
+                                        to="Faction_Dialog";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "ERROR_7__LEGION">*/
+                class ERROR_7__LEGION
+                {
+                        name = "ERROR_7__LEGION";
+                        itemno = 104;
+                        init = /*%FSM<STATEINIT""">*/"[""BP_LegionOnly""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "True">*/
+                                class True
+                                {
+                                        itemno = 68;
+                                        priority = 0.000000;
+                                        to="Exit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "____FAKE____">*/
+                class ____FAKE____
+                {
+                        name = "____FAKE____";
+                        itemno = 106;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "End_Mission",
+                "Finish",
+                "End_Mission_1",
+                "Exit",
+        };
+};
+/*%FSM</COMPILE>*/

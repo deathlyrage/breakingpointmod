@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.32
+//Sun Mar 16 15:22:03 2014 : Source 'file' date Sun Mar 16 15:22:03 2014
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class misc3 : WF\data\default.rvmat{
+ambient[] = {1,1,1,1};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,1};
+specular[] = {0,0,0,0};
+specularPower = 0;
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";
+//};

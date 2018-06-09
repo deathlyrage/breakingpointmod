@@ -1,0 +1,96 @@
+class StageTI
+{
+	texture="a3\data_f\default_vehicle_ti_ca.paa";
+};
+ambient[]={0.99999976,1,0.99999958,1};
+diffuse[]={0.43500006,0.44100016,0.43500006,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,0};
+specular[]={0.32800019,0.317,0.31200004,1};
+specularPower=60;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="breakingpoint_vehicles\textures\heli_light_01_detail_nohq.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage2
+{
+	texture="a3\data_f\destruct\damage_metal_basicarmor_dt.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={3,0,0};
+		up[]={0,3,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,MC)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage4
+{
+	texture="#(argb,8,8,3)color(1,1,1,1,AS)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage5
+{
+	texture="a3\air_f\heli_light_01\data\heli_light_01_detail_smdi.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage6
+{
+	texture="#(ai,32,128,1)fresnel(9.7,3.1)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};
+class Stage7
+{
+	texture="a3\data_f\env_land_ca.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+	};
+};

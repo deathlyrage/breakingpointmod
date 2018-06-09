@@ -1,0 +1,13 @@
+if (isNil "globroerun") then {globroerun = false;};
+
+?globroerun: exit
+globroerun=true
+~1
+player say "TRv04"
+~4
+TitleCut ["","BLACK faded", 1]
+~1
+TitleCut [localize "STR_TRt02","BLACK faded", 0]
+~3
+rulesofengagement=true
+exit

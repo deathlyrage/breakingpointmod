@@ -1,0 +1,32 @@
+//Common conversation topics:
+
+class Sentences
+{};
+
+class Arguments{};
+
+class UI
+{
+	//Sentences - selection in UI
+	class Responses
+	{
+		class Default
+		{};
+	};
+	class Arguments{};
+};
+
+//Language exceptions
+class Special
+{
+	class Article
+	{
+		textBeforeVocal = "an";
+		speechBeforeVocal[] = {KB_An};
+		textBeforeConsonant = "a";
+		speechBeforeConsonant[] = {KB_A};
+	};
+};
+
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe, university};
