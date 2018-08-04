@@ -235,6 +235,8 @@ class BreakingPoint
 			true => only players of the same class/faction are allowed to group 
 			*/
 			disableMixedgrouping = false;
+
+			undeadDisabled = true;
 			
 			//Enable or Disable Point Gain and Loss
 			class Points

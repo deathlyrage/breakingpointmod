@@ -29,8 +29,8 @@ class Undead : BP_BaseFaction
 					"BP_Guardian_1_Z",
 					"BP_Rebel_1_Z",
 					"BP_Hunter_1_Z",
-					"BP_Survivalist_1_Z",
-					"BP_Engineer_1_Z"
+					"BP_Survivalist_1_Z"/*,
+					"BP_Engineer_1_Z"*/
 				};
 				backpack[] = {};
 				vest[] = {};
@@ -60,8 +60,8 @@ class Undead : BP_BaseFaction
 					"BP_Guardian_F_Z",
 					"BP_Rebel_F_Z",
 					"BP_Hunter_F_Z",
-					"BP_Survivalist_F_Z",
-					"BP_Engineer_F_Z"
+					"BP_Survivalist_F_Z"/*,
+					"BP_Engineer_F_Z"*/
 				};
 			};
 		};
@@ -78,8 +78,8 @@ class Undead : BP_BaseFaction
 					"BP_Guardian_1_Z",
 					"BP_Rebel_1_Z",
 					"BP_Hunter_1_Z",
-					"BP_Survivalist_1_Z",
-					"BP_Engineer_1_Z"
+					"BP_Survivalist_1_Z"/*,
+					"BP_Engineer_1_Z"*/
 				};
 			};
 		};
@@ -96,8 +96,8 @@ class Undead : BP_BaseFaction
 					"BP_Guardian_2_Z",
 					"BP_Rebel_2_Z",
 					"BP_Hunter_2_Z",
-					"BP_Survivalist_2_Z",
-					"BP_Engineer_2_Z"
+					"BP_Survivalist_2_Z"/*,
+					"BP_Engineer_2_Z"*/
 				};
 			};
 		};
@@ -114,8 +114,8 @@ class Undead : BP_BaseFaction
 					"BP_Guardian_3_Z",
 					"BP_Rebel_3_Z",
 					"BP_Hunter_3_Z",
-					"BP_Survivalist_3_Z",
-					"BP_Engineer_3_Z"
+					"BP_Survivalist_3_Z"/*,
+					"BP_Engineer_3_Z"*/
 				};
 			};
 		};
