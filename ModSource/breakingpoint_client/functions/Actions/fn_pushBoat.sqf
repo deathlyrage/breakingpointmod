@@ -18,7 +18,7 @@ s_player_pushBoat = -1;
 
 if (player in _vehicle) exitwith {titleText ["You can't push from inside the vehicle","PLAIN DOWN",1];};
 
-player setOwner (owner player);
+if (!local _vehicle) exitwith {titleText ["Get in driver seat first!","PLAIN DOWN",1];};
 
 player playMove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
 

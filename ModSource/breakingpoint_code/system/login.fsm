@@ -266,8 +266,8 @@ link117[] = {103,102};
 link118[] = {104,105};
 link119[] = {105,80};
 link120[] = {98,106};
-globals[] = {0.000000,0,0,0,0,640,480,1,248,6316128,1,-377.392334,241.103027,1287.708740,468.317627,939,1244,1};
-window[] = {2,-1,-1,-1,-1,1107,208,1837,208,3,957};
+globals[] = {0.000000,0,0,0,0,640,480,1,248,6316128,1,-377.392334,241.103027,1211.934326,391.669739,938,1244,1};
+window[] = {2,-1,-1,-32000,-32000,1120,660,2289,221,3,956};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -1279,6 +1279,17 @@ class FSM
                          "	private ""_level"";" \n
                          "	params [""_class"",""_hunter"",""_outlaw""];" \n
                          "" \n
+                         "	private _undeadDisabled = true;" \n
+                         "	if(isText (missionConfigFile >> ""BreakingPoint"" >> ""CfgSettings"" >> ""Factions"" >> ""undeadDisabled"")) then" \n
+                         "	{" \n
+                         "		if(getNumber(missionConfigFile >> ""BreakingPoint"" >> ""CfgSettings"" >> ""Factions"" >> ""undeadDisabled"") == 1) then" \n
+                         "		{" \n
+                         "			_undeadDisabled = true;" \n
+                         "		} else {" \n
+                         "			_undeadDisabled = false;" \n
+                         "		};" \n
+                         "	};" \n
+                         "" \n
                          "	if  (!BP_Factions) then " \n
                          "	{ " \n
                          "		_class = 0; " \n
@@ -1304,7 +1315,7 @@ class FSM
                          "				//Undead Locked	" \n
                          "				if (BP_selectClass == 7) then" \n
                          "				{" \n
-                         "					if (_hunter < 5000 or _outlaw < 5000 || count allplayers < 2) then" \n
+                         "					if (_hunter < 5000 or _outlaw < 5000 or _undeadDisabled) then" \n
                          "					{" \n
                          "						BP_selectClass = -1;" \n
                          "						createDialog ""RscDisplayFactionSystem"";" \n
