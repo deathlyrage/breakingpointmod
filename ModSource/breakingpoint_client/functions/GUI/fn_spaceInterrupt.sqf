@@ -643,9 +643,6 @@ if (_dikCode in actionKeys "User8") then {
 };
 */
 
-_terrainGradientMaxIncline = 30;
-_terrainGradientMaxDecline = -30;
-
 if (_dikCode in actionKeys "User9") then 
 {
 	if (BP_isUndead) exitWith {};
