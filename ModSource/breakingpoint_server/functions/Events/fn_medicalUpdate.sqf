@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Breaking Point Arma 3 Public-Alpha Build
 	Created By Deathlyrage, Valtiel and Nohrt
 
@@ -189,8 +189,14 @@ switch (_event) do {
 	};
 	case "medSurgery": {
 		_valid = true;
+
+		if (round(random(10)=10) then
+		{
+			_medic removeItemGlobal "ItemSurgeryKit";
+			cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
+		} else {
 		
-		if(!_selfHeal) then
+			if(!_selfHeal) then
 			{
 				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
 				if (_healedRecently) then {
@@ -200,11 +206,18 @@ switch (_event) do {
 					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
 				};
 			};
+		};
 	};
 	case "medSurgeryDog": {
-		_valid = true;
-		_addPoints = false;
-		_unit setDamage 0;
+		if (round(random(10)=10) then
+		{
+			_medic removeItemGlobal "ItemSurgeryKit";
+			cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
+		} else {
+			_valid = true;
+			_addPoints = false;
+			_unit setDamage 0;
+		};
 	};
 	case "medBite": {
 		_valid = true;
