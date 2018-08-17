@@ -188,14 +188,14 @@ switch (_event) do {
 		} count _itemsUniform;
 	};
 	case "medSurgery": {
-		_valid = true;
-
-		if (round(random(10)=10) then
+		if (round(random 100)<=10) then
 		{
-			_medic removeItemGlobal "ItemSurgeryKit";
+			_addPoints = false;
+			_medic removeItem "ItemSurgeryKit";
 			cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
 		} else {
-		
+
+			_valid = true;	
 			if(!_selfHeal) then
 			{
 				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
@@ -209,13 +209,13 @@ switch (_event) do {
 		};
 	};
 	case "medSurgeryDog": {
-		if (round(random(10)=10) then
+		_addPoints = false;
+		if (round(random 100)<=10) then
 		{
-			_medic removeItemGlobal "ItemSurgeryKit";
+			_medic removeItem "ItemSurgeryKit";
 			cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
 		} else {
 			_valid = true;
-			_addPoints = false;
 			_unit setDamage 0;
 		};
 	};
