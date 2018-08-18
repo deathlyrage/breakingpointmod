@@ -61,6 +61,36 @@ switch (_type) do {
 		r_fracture_legs = false;
 		r_fracture_arms = false;
 		r_player_inpain = false;
+
+		
+		if ("ItemMorphine" in magazines _medic) then
+		{
+			_medic removeMagazineGlobal "ItemMorphine"; 
+		} else {
+			r_player_inpain = true;
+			if (round(random 100) <= 80) then
+			{
+				call BP_fnc_medicalUnconscious;
+			};
+		};
+
+		if ("ItemFieldDressing" in magazines _medic) then
+		{
+			_medic removeMagazineGlobal "ItemFieldDressing"; 
+		} else {
+			r_player_injured = true;
+			if (round(random 100) <= 30) then
+			{
+				sleep 5;
+				[15] call BP_fnc_death;
+			} else {
+				r_player_bleedingLevel = 2;
+				if (round(random 100) <= 50) then
+				{
+					r_player_infected = true;
+				};
+			};
+		};
 	};
 	case "medSurgeryDog": {
 		_dog = player getVariable ["dog",objNull];

@@ -188,40 +188,39 @@ switch (_event) do {
 		} count _itemsUniform;
 	};
 	case "medSurgery": {
-
-		if ("ItemFieldDressing" in magazines _medic && "ItemMorphine" in magazines _medic) then
-		{
-			_medic removeMagazineGlobal "ItemMorphine";
-			_medic removeMagazineGlobal "ItemFieldDressing";
-			if (round(random 100)<=10) then
-			{
-				_addPoints = false;
-				_medic removeItem "ItemSurgeryKit";
-				cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
-			} else {
-				_valid = true;	
-				if(!_selfHeal) then
-				{
-					_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
-					if (_healedRecently) then {
-						BP_GameError = 4;
-						(owner _medic) publicVariableClient "BP_GameError";
-					} else {
-						_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
-					};
-				};
-			};
-		};
-	};
-	case "medSurgeryDog": {
-		_addPoints = false;
 		if (round(random 100)<=10) then
 		{
+			_addPoints = false;
 			_medic removeItem "ItemSurgeryKit";
 			cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
 		} else {
-			_valid = true;
-			_unit setDamage 0;
+			_valid = true;	
+			if(!_selfHeal) then
+			{
+				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+				if (_healedRecently) then
+				{
+					BP_GameError = 4;
+					(owner _medic) publicVariableClient "BP_GameError";
+				} else {
+					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
+				};
+			};
+		};
+		
+	};
+	case "medSurgeryDog": {
+		_addPoints = false;
+		if ("ItemFieldDressing" in magazines _medic && "ItemMorphine" in magazines _medic) then
+		{
+			if (round(random 100)<=10) then
+			{
+				_medic removeItem "ItemSurgeryKit";
+				cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
+			} else {
+				_valid = true;
+				_unit setDamage 0;
+			};
 		};
 	};
 	case "medBite": {
