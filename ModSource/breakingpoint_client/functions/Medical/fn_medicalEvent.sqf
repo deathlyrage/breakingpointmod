@@ -79,16 +79,10 @@ switch (_type) do {
 			_medic removeMagazineGlobal "ItemFieldDressing"; 
 		} else {
 			r_player_injured = true;
-			if (round(random 100) <= 30) then
+			r_player_bleedingLevel = 2;
+			if (round(random 100) <= 50) then
 			{
-				sleep 5;
-				[15] call BP_fnc_death;
-			} else {
-				r_player_bleedingLevel = 2;
-				if (round(random 100) <= 50) then
-				{
-					r_player_infected = true;
-				};
+				r_player_infected = true;
 			};
 		};
 	};
