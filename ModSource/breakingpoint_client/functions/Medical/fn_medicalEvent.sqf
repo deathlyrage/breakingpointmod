@@ -79,6 +79,7 @@ switch (_type) do {
 			_medic removeMagazineGlobal "ItemFieldDressing"; 
 		} else {
 			r_player_injured = true;
+			r_player_cardiac = true;
 			r_player_bleedingLevel = 2;
 			if (round(random 100) <= 50) then
 			{
