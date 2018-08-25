@@ -188,7 +188,7 @@ switch (_event) do {
 		} count _itemsUniform;
 	};
 	case "medSurgery": {
-		if (round(random 100)<=10) then
+		if (true) then
 		{
 			_addPoints = false;
 			_medic removeItem "ItemSurgeryKit";
