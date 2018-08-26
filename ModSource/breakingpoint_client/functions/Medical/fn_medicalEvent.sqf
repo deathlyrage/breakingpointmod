@@ -70,7 +70,7 @@ switch (_type) do {
 			r_player_inpain = true;
 			if (round(random 100) <= 80) then
 			{
-				call BP_fnc_medicalUnconscious;
+				r_player_unconscious = true;
 			};
 		};
 
