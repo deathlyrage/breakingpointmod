@@ -17,7 +17,7 @@ _buildingData params ["_objects","_buildingID","_buildingUID","_playerID","_lock
 
 if (_reinforcement > 0) then
 {
-	_reinforcement = _reinforcement - 1
+	_reinforcement = _reinforcement - 1;
 	_buildingData set [7,_reinforcement];
 	BP_BuildingsData set [_buildingIndex,_buildingData];
 	cutText["Explosives were not effective. Come back later and try once more", "PLAIN DOWN"];	
