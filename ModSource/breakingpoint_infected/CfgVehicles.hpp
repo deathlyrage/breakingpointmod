@@ -26,6 +26,11 @@ class CfgVehicles
 	class CAManBase;
 	class zZombie_Base : CAManBase 
 	{
+		armor = 360; // total hit points (meaning global "health") of the object.
+		armorStructural = 0.4; // divides all damage taken to total hit point, either directly or through hit point passThrough coefficient. must be adjusted for each model to achieve consistent total damage results
+		explosionShielding = 0.04; // for consistent explosive damage after adjusting = ( armorStructural / 10 )
+		minTotalDamageThreshold	= 0.001; // minimalHit for total damage
+		impactDamageMultiplier = 0.5; // multiplier for falling damage
 		scope = private;
 		side = EAST;
 		modelSides[] = {NO_SIDE, EAST, WEST, CIVILIAN};
@@ -126,31 +131,47 @@ class CfgVehicles
 		
 		//Hit Points / Damage
 		class HitPoints {
-			class HitHead {
-				armor = 0.3;
-				material = -1;
-				name = "head_hit";
-				passThrough = true;
-				memoryPoint = "pilot";
+			class HitHead
+			{
+				armor = 3.30000001;
+				material=-1;
+				minimalHit = 0.001;
+				passThrough = 0.01;
+				radius = 0.01;
+				name="head_hit";
+				//passThrough="true";
+				memoryPoint="pilot";
 			};
 			
-			class HitBody : HitHead {
-				armor = 2;
-				name = "body";
-				memoryPoint = "aimPoint";
+			class HitBody: HitHead
+			{
+				armor = 50;
+				minimalHit = 10;
+				passThrough = 0.001;
+				radius = 0.01;
+				name="body";
+				memoryPoint="aimPoint";
 			};
 			
-			class HitSpine : HitHead {
-				armor = 2;
-				name = "Spine2";
-				memoryPoint = "aimPoint";
+			class HitSpine: HitHead
+			{
+				armor = 50;
+				minimalHit = 10;
+				passThrough = 0.001;
+				radius = 0.01;
+				name="Spine2";
+				memoryPoint="aimPoint";
 			};
 			
-			class HitHands : HitHead {
-				armor = 0.5;
-				material = -1;
-				name = "hands";
-				passThrough = true;
+			class HitHands: HitHead
+			{
+				armor = 50.5;
+				minimalHit = 25;
+				passThrough = 0.001;
+				radius = 0.01;
+				material=-1;
+				name="hands";
+				//passThrough="true";
 			};
 			
 			class HitLArm : HitHands {
