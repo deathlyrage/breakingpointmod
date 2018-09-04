@@ -70,7 +70,9 @@ switch (_type) do {
 			r_player_inpain = true;
 			if (round(random 100) <= 80) then
 			{
-				r_player_unconscious = true;
+			    [player,"dog_damage",0,false] call BP_fnc_objSpeak;
+			    r_player_unconscious = true;
+			    r_player_unconsciousWeapon = true;
 			};
 		};
 
