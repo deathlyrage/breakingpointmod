@@ -9,6 +9,13 @@
 
 params ["_zed","_selection","_damage","_source","_projectile"];
 
+//Handle Damage being Applied
+//_hitpoint = "HitBody";
+if (_selection == "head_hit") then { 
+//_hitpoint = "HitHead"; 
+_zed setDamage 1;
+};
+
 ["damageHandlerZ: Zed: %1 | Selection: %2 | Damage: %3 | Source: %4 | Projectile: %5",_zed,_selection,_damage,_source,_projectile] call BP_fnc_debugConsoleFormat;
 
 /*
