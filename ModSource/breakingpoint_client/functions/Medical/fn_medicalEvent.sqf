@@ -15,8 +15,8 @@
 private ["_type","_unit","_medic","_data"];
 _type = _this select 0;
 _data = [(_this select 1),(_this select 2)];
-_unit = objectFromNetID (_data select 0);
-_medic = objectFromNetID (_data select 1);
+_unit = objectFromNetId (_data select 0);
+_medic = objectFromNetId (_data select 1);
 
 ["medicalEvent: %1",_this] call BP_fnc_debugConsoleFormat;
 
@@ -70,7 +70,7 @@ switch (_type) do {
 			r_player_inpain = true;
 			if (round(random 100) <= 80) then
 			{
-			    [player,"dog_damage",0,false] call BP_fnc_objSpeak;
+			    [player,"scream",0,false] call BP_fnc_objSpeak;
 			    r_player_unconscious = true;
 			    r_player_unconsciousWeapon = true;
 			};
