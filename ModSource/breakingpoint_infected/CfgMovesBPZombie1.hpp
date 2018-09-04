@@ -154,10 +154,10 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = -0.7;
-			relSpeedMin = 1.0;
-			relSpeedMax = 1.2;
+			relSpeedMin = 1.2;
+			relSpeedMax = 1.4;
 			walkcycles = 2;
-			speed = 0.910000;
+			speed = 1.110000;
 			looped = true;
 		};
 		
@@ -174,10 +174,10 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = -0.5;
-			relSpeedMin = 1.1;
-			relSpeedMax = 1.4;
+			relSpeedMin = 1.3;
+			relSpeedMax = 1.6;
 			walkcycles = 2;
-			speed = 1.22000;
+			speed = 1.42000;
 			onLandEnd = 1;
 			looped = true;
 			headBobStrength = 0.3;
@@ -200,10 +200,10 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = 0.5;
-			relSpeedMin = 1.5;
-			relSpeedMax = 1.6;
+			relSpeedMin = 2.5;
+			relSpeedMax = 2.6;
 			walkcycles = 2;
-			speed = 1.11;
+			speed = 2.11;
 			onLandEnd = 1;
 			looped = true;
 			static = 1;
