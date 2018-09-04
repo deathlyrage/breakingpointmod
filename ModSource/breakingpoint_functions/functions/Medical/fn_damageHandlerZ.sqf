@@ -104,4 +104,4 @@ if (isBurning _zed) then
 //_currentDmg = _currentDmg + _damage;
 //_unit setHitPointDamage [_hitpoint,_currentDmg];
 
-_damage
+//_damage
