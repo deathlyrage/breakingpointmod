@@ -852,7 +852,7 @@ class CfgVehicles
 			mat[] = {};
 		};
 	};
-		
+	
 	
 	class CAManBase;
 	class BP_Man : CAManBase
