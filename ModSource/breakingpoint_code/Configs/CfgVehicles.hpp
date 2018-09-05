@@ -852,18 +852,9 @@ class CfgVehicles
 			mat[] = {};
 		};
 	};
+		
 	
-	class CAManBase: Man
-	{
-		class HitPoints
-		{
-			class HitHead;
-			class HitBody;
-			class HitHands;
-			class HitLegs;
-		};
-	};
-	
+	class CAManBase;
 	class BP_Man : CAManBase
 	{
 		class HitPoints 
