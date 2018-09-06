@@ -154,10 +154,10 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = -0.7;
-			relSpeedMin = 1.2;
-			relSpeedMax = 1.4;
+			relSpeedMin = 1.0;
+			relSpeedMax = 1.2;
 			walkcycles = 2;
-			speed = 1.110000;
+			speed = 0.910000;
 			looped = true;
 		};
 		
@@ -174,10 +174,10 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = -0.5;
-			relSpeedMin = 1.3;
-			relSpeedMax = 1.6;
+			relSpeedMin = 1.1;
+			relSpeedMax = 1.4;
 			walkcycles = 2;
-			speed = 1.42000;
+			speed = 1.22000;
 			onLandEnd = 1;
 			looped = true;
 			headBobStrength = 0.3;
@@ -200,10 +200,10 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = 0.5;
-			relSpeedMin = 2.5;
-			relSpeedMax = 2.6;
+			relSpeedMin = 1.5;
+			relSpeedMax = 1.6;
 			walkcycles = 2;
-			speed = 2.11;
+			speed = 1.11;
 			onLandEnd = 1;
 			looped = true;
 			static = 1;
@@ -319,5 +319,164 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 		aimingUpLauncher[] = {"weapon", 1, "Camera", 1, "launcher", 1, "Head", 1, "Neck", 1, "Neck1", 1, "LeftShoulder", 1, "LeftArm", 1, "LeftArmRoll", 1, "LeftForeArm", 1, "LeftForeArmRoll", 1, "LeftHand", 1, "LeftHandRing", 1, "LeftHandPinky1", 1, "LeftHandPinky2", 1, "LeftHandPinky3", 1, "LeftHandRing1", 1, "LeftHandRing2", 1, "LeftHandRing3", 1, "LeftHandMiddle1", 1, "LeftHandMiddle2", 1, "LeftHandMiddle3", 1, "LeftHandIndex1", 1, "LeftHandIndex2", 1, "LeftHandIndex3", 1, "LeftHandThumb1", 1, "LeftHandThumb2", 1, "LeftHandThumb3", 1, "RightShoulder", 1, "RightArm", 1, "RightArmRoll", 1, "RightForeArm", 1, "RightForeArmRoll", 1, "RightHand", 1, "RightHandRing", 1, "RightHandPinky1", 1, "RightHandPinky2", 1, "RightHandPinky3", 1, "RightHandRing1", 1, "RightHandRing2", 1, "RightHandRing3", 1, "RightHandMiddle1", 1, "RightHandMiddle2", 1, "RightHandMiddle3", 1, "RightHandIndex1", 1, "RightHandIndex2", 1, "RightHandIndex3", 1, "RightHandThumb1", 1, "RightHandThumb2", 1, "RightHandThumb3", 1, "spine3", 0.95, "spine2", 0.9, "spine1", 0.8, "spine", 0.7};
 		legsDefault[] = {"LeftUpLeg", 0.9, "LeftUpLegRoll", 0.9, "LeftLeg", 0.95, "LeftLegRoll", 0.95, "LeftFoot", 1, "LeftToeBase", 1, "RightUpLeg", 0.9, "RightUpLegRoll", 0.9, "RightLeg", 0.95, "RightLegRoll", 0.95, "RightFoot", 1, "RightToeBase", 1};
 		idleDefault[] = {"Pelvis", 1, "Spine", 1, "Spine1", 1, "Spine2", 1, "Spine3", 1, "Camera", 1, "weapon", 1, "launcher", 1, "neck", 1, "neck1", 1, "head", 1, "LeftShoulder", 1, "LeftArm", 1, "LeftArmRoll", 1, "LeftForeArm", 1, "LeftForeArmRoll", 1, "LeftHand", 1, "LeftHandRing", 1, "LeftHandRing1", 1, "LeftHandRing2", 1, "LeftHandRing3", 1, "LeftHandPinky1", 1, "LeftHandPinky2", 1, "LeftHandPinky3", 1, "LeftHandMiddle1", 1, "LeftHandMiddle2", 1, "LeftHandMiddle3", 1, "LeftHandIndex1", 1, "LeftHandIndex2", 1, "LeftHandIndex3", 1, "LeftHandThumb1", 1, "LeftHandThumb2", 1, "LeftHandThumb3", 1, "RightShoulder", 1, "RightArm", 1, "RightArmRoll", 1, "RightForeArm", 1, "RightForeArmRoll", 1, "RightHand", 1, "RightHandRing", 1, "RightHandRing1", 1, "RightHandRing2", 1, "RightHandRing3", 1, "RightHandPinky1", 1, "RightHandPinky2", 1, "RightHandPinky3", 1, "RightHandMiddle1", 1, "RightHandMiddle2", 1, "RightHandMiddle3", 1, "RightHandIndex1", 1, "RightHandIndex2", 1, "RightHandIndex3", 1, "RightHandThumb1", 1, "RightHandThumb2", 1, "RightHandThumb3", 1, "LeftUpLeg", 1, "LeftUpLegRoll", 1, "LeftLeg", 1, "LeftLegRoll", 1, "LeftFoot", 1, "LeftToeBase", 1, "RightUpLeg", 1, "RightUpLegRoll", 1, "RightLeg", 1, "RightLegRoll", 1, "RightFoot", 1, "RightToeBase", 1};
+	};
+};
+class CfgMovesBPZombieImp1: CfgMovesBPZombie1
+{
+	class States
+	{
+		class Zombie_Stop: StandBase
+		{
+			enableDirectControl=1;
+			actions="BPZombieActions";
+			duty=-1;
+			file="\breakingpoint_anim\zmb\BP_Zombie_Runner_Idle.rtm";
+			connectTo[]=
+			{
+				"Zombie_Walk",
+				0.1,
+				"Zombie_Run",
+				0.1,
+				"Zombie_Sprint",
+				0.1
+			};
+			interpolateTo[]=
+			{
+				"Zombie_Die",
+				0.1,
+				"Zombie_Attack",
+				0.1,
+				"Zombie_Sprint",
+				0.1,
+				"Zombie_Run",
+				0.1,
+				"Zombie_Walk",
+				0.1,
+				"Zombie_Stop",
+				0.1
+			};
+			headBobStrength=0.30000001;
+			headBobMode=2;
+			canPullTrigger=0;
+			disableWeapons=1;
+			disableWeaponsLong=1;
+			enableOptics=0;
+			speed=0.090000004;
+			soundEnabled="false";
+			preload="true";
+			looped="true";
+			Walkcycles=2;
+			interpolationSpeed=1;
+			relSpeedMin=1.1;
+			relSpeedMax=1.1;
+		};
+		class Zombie_Walk: Zombie_Stop
+		{
+			actions="BPZombieWalk";
+			file="\breakingpoint_anim\zmb\BP_Zombie_Runner_Walk.rtm";
+			head="headDefault";
+			connectTo[]={};
+			soundOverride="walk";
+			soundEnabled="true";
+			canPullTrigger="false";
+			duty=-0.69999999;
+			relSpeedMin=1.2;
+			relSpeedMax=1.4;
+			walkcycles=2;
+			speed=1.11;
+			looped="true";
+		};
+		class Zombie_Run: Zombie_Stop
+		{
+			actions="BPZombieRun";
+			file="\breakingpoint_anim\zmb\BP_Zombie_Runner_Run.rtm";
+			head="headDefault";
+			connectTo[]={};
+			soundOverride="run";
+			soundEnabled="true";
+			canPullTrigger="false";
+			duty=-0.5;
+			relSpeedMin=1.3;
+			relSpeedMax=1.6;
+			walkcycles=2;
+			speed=1.42;
+			onLandEnd=1;
+			looped="true";
+			headBobStrength=0.30000001;
+			headBobMode=2;
+			enableDirectControl=0;
+			interpolationRestart=1;
+			interpolationSpeed=2.5;
+		};
+		class Zombie_Sprint: Zombie_Stop
+		{
+			actions="BPZombieSprint";
+			file="\breakingpoint_anim\zmb\BP_Zombie_Runner_Sprint_V3.rtm";
+			head="headDefault";
+			connectTo[]={};
+			interpolateTo[]=
+			{
+				"Zombie_Die",
+				0.050000001,
+				"Zombie_Attack",
+				0.050000001,
+				"Zombie_Sprint",
+				0.050000001
+			};
+			soundOverride="sprint";
+			soundEnabled="true";
+			canPullTrigger="false";
+			duty=0.5;
+			relSpeedMin=2.5;
+			relSpeedMax=2.6;
+			walkcycles=2;
+			speed=2.1099999;
+			onLandEnd=1;
+			looped="true";
+			static=1;
+			enableDirectControl=0;
+			interpolationRestart=1;
+			interpolationSpeed=2.5;
+		};
+		class Zombie_Attack: Zombie_Stop
+		{
+			actions="BPZombieActions";
+			file="\breakingpoint_anim\zmb\BPZombie2_Attack1.rtm";
+			speed=1.3;
+			soundEnabled=0;
+			interpolateTo[]=
+			{
+				"Zombie_Die",
+				0.02
+			};
+			looped="false";
+		};
+		class Zombie_Die: DefaultDie
+		{
+			file="\A3\anims_f\Data\Anim\Sdr\dth\pne\stp\ras\Rfl\AdthPpneMstpSrasWrflDnon_1";
+			speed=0.69999999;
+			looped=0;
+			onLandBeg=1;
+			onLandEnd=1;
+			soundEnabled=0;
+			ragdoll=1;
+			headBobMode=2;
+			disableWeapons=1;
+			disableWeaponsLong=1;
+			actions="NoActions";
+			variantsPlayer[]={};
+			variantsAI[]={};
+			variantAfter[]={0,0,0};
+			interpolateFrom[]=
+			{
+				"Zombie_Stop",
+				0.1,
+				"Zombie_Walk",
+				0.1,
+				"Zombie_Sprint",
+				0.1
+			};
+			terminal="true";
+		};
 	};
 };
