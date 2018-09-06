@@ -24,197 +24,188 @@
 class CfgVehicles 
 {
 	class CAManBase;
-	class zZombie_Base: CAManBase
+	class zZombie_Base : CAManBase 
 	{
-		scope=0;
-		side=0;
-		modelSides[]={-1,0,1,3};
-		glassesEnabled=0;
-		model="\A3\characters_F\OPFOR\o_soldier_01.p3d";
-		vehicleClass="Zombie";
-		displayName="Zombie";
-		moves="CfgMovesBPZombie1";
-		fsmFormation="";
-		fsmDanger="";
-		maxSpeed=24;
-		formationX=1;
-		formationZ=1;
-		precision=1;
-		canHideBodies=0;
-		canDeactivateMines=0;
-		hideUnitInfo=1;
-		enableGPS=0;
-		isMan="false";
-		weapons[]={};
-		magazines[]={};
-		respawnWeapons[]={};
-		respawnMagazines[]={};
-		Items[]={};
-		respawnItems[]={};
-		linkedItems[]={};
-		respawnlinkedItems[]={};
-		sensitivity=4;
-		sensitivityEar=2;
-		faceType="Man_A3";
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
-		class TalkTopics
-		{
-		};
-		languages[]=
-		{
-			"EN"
-		};
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\breakingpoint_infected\textures\clothing\BP_Zombie_Clothes2.paa",
-			"\A3\Characters_F\OPFOR\Data\tech_CO.paa"
-		};
-		class SoundEquipment
-		{
+		scope = private;
+		side = EAST;
+		modelSides[] = {NO_SIDE, EAST, WEST, CIVILIAN};
+		glassesEnabled = 0;
+		model = "\A3\characters_F\OPFOR\o_soldier_01.p3d";
+		vehicleClass = "Zombie";
+		displayName = "Zombie";
+		
+		//Zombie Move Animations
+		moves = "CfgMovesBPZombie1";
+       
+		//Vanilla FSMs
+		//fsmFormation = "Formation";
+		
+		//Custom FSMs
+		//fsmFormation = "breakingpoint_infected\scripts\formation.fsm";
+        //fsmDanger = "breakingpoint_infected\scripts\formationDanger.fsm";
+		
+		//Disable FSMs
+		fsmFormation = "";
+		fsmDanger = "";
+		
+		maxSpeed = 24;
+        formationX = 1;
+        formationZ = 1;
+        precision = 1;
+	
+		canHideBodies = 0;
+		canDeactivateMines = 0;
+		hideUnitInfo = 1;
+		enableGPS = 0;
+		isMan = false;
+		weapons[] = {};
+		magazines[] = {};
+		respawnWeapons[] = {};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		sensitivity = 4;	// sensor sensitivity
+		sensitivityEar = 2;
+		faceType = "Man_A3";
+		identityTypes[] = {"BP_Zombie1"};
+		class TalkTopics {};
+		languages[] = {"EN"};
+
+		//Hidden Selection Textures
+		hiddenSelections[] = {"Camo1", "Camo2"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_infected\textures\clothing\BP_Zombie_Clothes2.paa", "\A3\Characters_F\OPFOR\Data\tech_CO.paa"};
+
+		//Remove Zombies Making Normal Human Sounds on These Effects
+        class SoundEquipment {
 			civilian[]={};
 			soldier[]={};
 		};
-		class SoundGear
-		{
+        class SoundGear {
 			primary[]={};
 			secondary[]={};
 		};
-		class SoundBreath
-		{
+        class SoundBreath {
 			breath[]={};
 		};
-		class SoundDrown
-		{
+        class SoundDrown {
 			breath[]={};
-		};
-		class SoundInjured
-		{
+        };
+        class SoundInjured {
 			breath[]={};
-		};
-		class SoundBleeding
-		{
+        };
+        class SoundBleeding {
 			breath[]={};
-		};
-		class SoundBurning
-		{
+        };
+        class SoundBurning {
 			breath[]={};
-		};
-		class SoundChoke
-		{
+        };
+        class SoundChoke {
 			breath[]={};
-		};
-		class SoundRecovered
-		{
+        };
+        class SoundRecovered {
 			breath[]={};
+        };
+		
+		//Zombie Event Handlers
+		class Eventhandlers {
+			init = "_this call BP_fnc_zombieInitialize;";
+			local = "_this call BP_fnc_zombieLocal;";
+			handledamage = "_this call BP_fnc_damageHandlerZ;";
+			killed = "_this call BP_fnc_zombieKilled;";
 		};
-		class Eventhandlers
-		{
-			init="_this call BP_fnc_zombieInitialize;";
-			local="_this call BP_fnc_zombieLocal;";
-			handledamage="_this call BP_fnc_damageHandlerZ;";
-			killed="_this call BP_fnc_zombieKilled;";
+		
+		//Wounds / Blood Textures
+		class Wounds {
+			tex[] = {};
+			//mat[] = {};
+			//mat[] = {"\breakingpoint\textures\custom.rvmat", "\breakingpoint\textures\custom.rvmat", "\breakingpoint\textures\custom.rvmat"};
+			mat[] = {"A3\Characters_F\OPFOR\Data\clothing_injury.rvmat", "A3\Characters_F\OPFOR\Data\clothing_injury.rvmat", "A3\Characters_F\OPFOR\Data\clothing_injury.rvmat"};
 		};
-		class Wounds
-		{
-			tex[]={};
-			mat[]=
-			{
-				"A3\Characters_F\OPFOR\Data\clothing_injury.rvmat",
-				"A3\Characters_F\OPFOR\Data\clothing_injury.rvmat",
-				"A3\Characters_F\OPFOR\Data\clothing_injury.rvmat"
+		
+		//Hit Points / Damage
+		class HitPoints {
+			class HitHead {
+				armor = 0.3;
+				material = -1;
+				name = "head_hit";
+				passThrough = true;
+				memoryPoint = "pilot";
 			};
-		};
-		class HitPoints
-		{
-			class HitHead
-			{
-				armor=0.30000001;
-				material=-1;
-				name="head_hit";
-				passThrough="true";
-				memoryPoint="pilot";
+			
+			class HitBody : HitHead {
+				armor = 2;
+				name = "body";
+				memoryPoint = "aimPoint";
 			};
-			class HitBody: HitHead
-			{
-				armor=2;
-				name="body";
-				memoryPoint="aimPoint";
+			
+			class HitSpine : HitHead {
+				armor = 2;
+				name = "Spine2";
+				memoryPoint = "aimPoint";
 			};
-			class HitSpine: HitHead
-			{
-				armor=2;
-				name="Spine2";
-				memoryPoint="aimPoint";
+			
+			class HitHands : HitHead {
+				armor = 0.5;
+				material = -1;
+				name = "hands";
+				passThrough = true;
 			};
-			class HitHands: HitHead
-			{
-				armor=0.5;
-				material=-1;
-				name="hands";
-				passThrough="true";
+			
+			class HitLArm : HitHands {
+				name = "LeftArm";
+				memoryPoint = "lelbow";
 			};
-			class HitLArm: HitHands
-			{
-				name="LeftArm";
-				memoryPoint="lelbow";
+			
+			class HitRArm : HitHands {
+				name = "RightArm";
+				memoryPoint = "relbow";
 			};
-			class HitRArm: HitHands
-			{
-				name="RightArm";
-				memoryPoint="relbow";
+			
+			class HitLForeArm : HitHands {
+				name = "LeftForeArm";
+				memoryPoint = "lwrist";
 			};
-			class HitLForeArm: HitHands
-			{
-				name="LeftForeArm";
-				memoryPoint="lwrist";
+			
+			class HitRForeArm : HitHands {
+				name = "RightForeArm";
+				memoryPoint = "rwrist";
 			};
-			class HitRForeArm: HitHands
-			{
-				name="RightForeArm";
-				memoryPoint="rwrist";
+			
+			class HitLHand : HitHands {
+				name = "LeftHand";
+				memoryPoint = "LeftHandMiddle1";
 			};
-			class HitLHand: HitHands
-			{
-				name="LeftHand";
-				memoryPoint="LeftHandMiddle1";
+			
+			class HitRHand : HitHands {
+				name = "RightHand";
+				memoryPoint = "RightHandMiddle1";
 			};
-			class HitRHand: HitHands
-			{
-				name="RightHand";
-				memoryPoint="RightHandMiddle1";
+			
+			class HitLegs : HitHands {
+				name = "legs";
+				memoryPoint = "pelvis";
 			};
-			class HitLegs: HitHands
-			{
-				name="legs";
-				memoryPoint="pelvis";
+			
+			class HitLLeg : HitHands {
+				name = "LeftLeg";
+				memoryPoint = "lknee";
 			};
-			class HitLLeg: HitHands
-			{
-				name="LeftLeg";
-				memoryPoint="lknee";
+			
+			class HitLLegUp : HitHands {
+				name = "LeftUpLeg";
+				memoryPoint = "lfemur";
 			};
-			class HitLLegUp: HitHands
-			{
-				name="LeftUpLeg";
-				memoryPoint="lfemur";
+			
+			class HitRLeg : HitHands {
+				name = "RightLeg";
+				memoryPoint = "rknee";
 			};
-			class HitRLeg: HitHands
-			{
-				name="RightLeg";
-				memoryPoint="rknee";
-			};
-			class HitRLegUp: HitHands
-			{
-				name="RightUpLeg";
-				memoryPoint="rfemur";
+			
+			class HitRLegUp : HitHands {
+				name = "RightUpLeg";
+				memoryPoint = "rfemur";
 			};
 		};
 	};
@@ -226,7 +217,7 @@ class CfgVehicles
 		minTotalDamageThreshold=0.001;
 		impactDamageMultiplier=0.5;
 		moves="CfgMovesBPZombieImp1";
-	class HitPoints
+		class HitPoints
 		{
 			class HitHead
 			{
@@ -322,224 +313,122 @@ class CfgVehicles
 			};
 		};
 	};
-	class BPZombie_Rebel1: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Rebel1.p3d";
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+	
+	class BPZombie_Rebel1 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Rebel1.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Rebel2: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Rebel2.p3d";
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+
+	class BPZombie_Rebel2 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Rebel2.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Rebel3: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Rebel3.p3d";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\breakingpoint\textures\clothing\loc_opfor01_1_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie2"
-		};
+	
+	class BPZombie_Rebel3 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Rebel3.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\loc_opfor01_1_co.paa"};
+		identityTypes[] = {"BP_Zombie2"};
+	};	
+
+	class BPZombie_Guardian1 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Guardian1.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"breakingpoint\textures\clothing\gracenko_co.paa"};
+		identityTypes[] = {"BP_Zombie1"};
+	};	
+
+	class BPZombie_Guardian2 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Guardian4.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Guardian1: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Guardian1.p3d";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"breakingpoint\textures\clothing\gracenko_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+
+	class BPZombie_Guardian3 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Guardian3.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		identityTypes[] = {"BP_Zombie2"};
+	};		
+
+	class BPZombie_Survivalist1 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Survivalist1.p3d";
+	    hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+	    identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Guardian2: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Guardian4.p3d";
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+
+	class BPZombie_Survivalist2 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Survivalist2.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\ghillie_top_desert_co.paa"};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Guardian3: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Guardian3.p3d";
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		identityTypes[]=
-		{
-			"BP_Zombie2"
-		};
+
+	class BPZombie_Survivalist3 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_ghillie\models\ghilliegrass.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures2\ghillie_4_co.paa"};
+		identityTypes[] = {"BP_Zombie2"};
 	};
-	class BPZombie_Survivalist1: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Survivalist1.p3d";
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+	
+	class BPZombie_Refugee1 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Refugee1.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\overall_co.paa"};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Survivalist2: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Survivalist2.p3d";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\breakingpoint_classes\textures\ghillie_top_desert_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+
+	class BPZombie_Refugee2 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Refugee2.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"breakingpoint\textures\clothing\worker_co.paa"};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Survivalist3: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_ghillie\models\ghilliegrass.p3d";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\breakingpoint_ghillie\textures2\ghillie_4_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie2"
-		};
+
+	class BPZombie_Refugee3 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Refugee3.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		identityTypes[] = {"BP_Zombie2"};
 	};
-	class BPZombie_Refugee1: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Refugee1.p3d";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"breakingpoint_classes\textures\overall_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+	class BPZombie_Hunter1 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Hunter1.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\acr_soldier_nic_co.paa"};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Refugee2: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Refugee2.p3d";
-		hiddenSelections[]=
-		{
-			"Camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"breakingpoint\textures\clothing\worker_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
+	class BPZombie_Hunter2 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Hunter2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\acr_soldier_nic_co.paa"};
+		identityTypes[] = {"BP_Zombie1"};
 	};
-	class BPZombie_Refugee3: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Refugee3.p3d";
-		hiddenSelections[]={};
-		hiddenSelectionsTextures[]={};
-		identityTypes[]=
-		{
-			"BP_Zombie2"
-		};
-	};
-	class BPZombie_Hunter1: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Hunter1.p3d";
-		hiddenSelections[]=
-		{
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"breakingpoint_classes\textures\acr_soldier_nic_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
-	};
-	class BPZombie_Hunter2: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Hunter2.p3d";
-		hiddenSelections[]=
-		{
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"breakingpoint_classes\textures\acr_soldier_nic_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie1"
-		};
-	};
-	class BPZombie_Hunter3: zZombie_Base
-	{
-		scope=1;
-		model="\breakingpoint_classes\models\BP_Hunter3.p3d";
-		hiddenSelections[]=
-		{
-			"Camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"breakingpoint_classes\textures\acr_soldier_nic_co.paa"
-		};
-		identityTypes[]=
-		{
-			"BP_Zombie2"
-		};
+	class BPZombie_Hunter3 : zZombie_Base {
+		scope = protected;
+		model = "\breakingpoint_classes\models\BP_Hunter3.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\acr_soldier_nic_co.paa"};
+		identityTypes[] = {"BP_Zombie2"};
 	};
 	class BPZombie_RebelImp1: zZombie_Imp
 	{
