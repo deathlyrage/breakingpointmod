@@ -27055,9 +27055,9 @@ class CfgAmmo {
 	    hit = 55;
 		cartridge = "FxCartridge_127";
 		typicalSpeed = 995;
-		//indirectHit = 15;
+		indirectHit = 15;
 		simulationStep = 0.09;
-		//indirectHitRange = 0.400000;
+		indirectHitRange = 0.400000;
 		audibleFire = 47;
 		visibleFire = 10;
 		airFriction = -0.00056;
