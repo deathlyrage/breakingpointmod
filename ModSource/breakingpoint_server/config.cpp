@@ -58,6 +58,10 @@ class CfgBreakingPointServerSettings
 	{
 		medicalCooldown = 900;	//time in seconds for point gain on medical assistance
 	};
+	class HardcoreZombies
+	{
+		enableHardcoreZombies=0;
+	};
 };
 
 class CfgDifficultyPresets
