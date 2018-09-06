@@ -124,10 +124,10 @@ class CfgMovesBPZombie2 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = -0.7;
-			relSpeedMin = 1.00;
-			relSpeedMax = 1.20;
+			relSpeedMin = 1.20;
+			relSpeedMax = 1.40;
 			walkcycles = 10;
-			speed = 0.82;
+			speed = 1.02;
 			looped = true;
 		};
 		
@@ -141,10 +141,10 @@ class CfgMovesBPZombie2 : CfgMovesAnimal_Base_F
 			soundEnabled = true;
 			canPullTrigger = false;
 			duty = 0.6;
-			relSpeedMin = 1.15;
-			relSpeedMax = 1.65;
+			relSpeedMin = 1.45;
+			relSpeedMax = 1.95;
 			walkcycles = 10;
-			speed = 1.07;
+			speed = 1.37;
 			onLandEnd = 1;
 			looped = true;
 			
