@@ -18369,6 +18369,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{"BP_Harris",0.05},
 			{"",0.50}
         };
+	drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
+	reloadMagazineSound[] = {"A3\Sounds_F\weapons\Khaybar\reload_khaibar", 0.462341, 1, 30};
 	};
 	
 	class BP_SVD_WDL: BP_SVD 
@@ -18487,6 +18489,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{"BP_Harris",0.07},
 			{"",0.50}
         };
+	drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
+	reloadMagazineSound[] = {"A3\Sounds_F\weapons\Khaybar\reload_khaibar", 0.462341, 1, 30};
 	};
 	
 	class BP_SVDK_WDL: BP_SVDK 
