@@ -643,9 +643,6 @@ if (_dikCode in actionKeys "User8") then {
 };
 */
 
-_terrainGradientMaxIncline = 30;
-_terrainGradientMaxDecline = -30;
-
 if (_dikCode in actionKeys "User9") then 
 {
 	if (BP_isUndead) exitWith {};
@@ -680,20 +677,24 @@ if (_dikCode in actionKeys "User9") then
 					//No Resting While Autorunning
 					if (r_action_rest) then { r_action_rest = false; };
 					
-					//No Autorun on steep gradients.
-					_gradient = player call BP_fnc_getTerrainGradient;
-					if (_gradient > 30) exitWith {true};
-					if (_gradient < -30) exitWith {true};
-					
 					//No Autorun While Hostage
 					if (player getVariable ["med_hostage",false]) exitWith {true};
 					
 					//Don't Autorun While TranQ
 					if (r_player_unconscious) exitWith {true};
 					
-					//Play Animation
-					player playActionNow "FastF";
-					
+					//Autorun speed depends on terrain gradient
+					_gradient = player call BP_fnc_getTerrainGradient;
+					if (_gradient <= 15 && _gradient >= -15) then {
+						player playActionNow "FastF";
+					} else {
+						if (_gradient >= 30 || _gradient <= -30) then {
+							player playActionNow "WalkF";
+						} else {
+							player playActionNow "SlowF";
+						};
+					};
+
 					//Delay
 					sleep 0.01;
 				
