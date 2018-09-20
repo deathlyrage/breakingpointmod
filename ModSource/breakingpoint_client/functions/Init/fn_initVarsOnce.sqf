@@ -279,6 +279,7 @@ BP_Houses =
 	"Land_i_House_Big_01_V3_dam_F",
 	"Land_i_House_Big_01_V2_dam_F",
 	"Land_i_House_Big_01_V1_dam_F",
+	"Land_i_Stone_HouseSmall_V3_dam_F",
 	//Malden
 	"Land_i_House_Big_02_b_blue_F",
 	"Land_i_House_Big_02_b_pink_F",
