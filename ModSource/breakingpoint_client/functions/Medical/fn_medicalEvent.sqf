@@ -70,7 +70,6 @@ switch (_type) do {
 			r_player_inpain = true;
 			if (round(random 100) <= 80) then
 			{
-			    playSound "z_dog_damage_0";
 			    r_player_unconscious = true;
 			    r_player_unconsciousWeapon = true;
 			};
