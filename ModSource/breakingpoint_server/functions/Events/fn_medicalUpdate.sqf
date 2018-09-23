@@ -197,11 +197,7 @@ switch (_event) do {
 				BP_GameError = 4;
 				(owner _medic) publicVariableClient "BP_GameError";
 			} else {
-			    if (!"ItemMorphine" in magazines _medic) then
-			    {
-			        _unit say3D ["z_dog_damage_0", 100];
-			    };
-				_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
+			    _pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
 			};
 		};		
 	};

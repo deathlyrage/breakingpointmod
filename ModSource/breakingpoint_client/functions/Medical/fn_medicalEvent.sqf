@@ -68,8 +68,12 @@ switch (_type) do {
 			_medic removeMagazineGlobal "ItemMorphine"; 
 		} else {
 			r_player_inpain = true;
+			r_hit_legs = 0.5;
+			r_fracture_legs = true;
+			player setVariable ["hit_legs",0.5];
 			if (round(random 100) <= 80) then
 			{
+			    player say3D ["z_dog_damage_0", 100];
 			    r_player_unconscious = true;
 			    r_player_unconsciousWeapon = true;
 			};
