@@ -205,14 +205,8 @@ switch (_event) do {
 		_addPoints = false;
 		if ("ItemFieldDressing" in magazines _medic && "ItemMorphine" in magazines _medic) then
 		{
-			if (round(random 100)<=10) then
-			{
-				_medic removeItem "ItemSurgeryKit";
-				cutText ["Your surgery kit has broken", "PLAIN DOWN"];	
-			} else {
 				_valid = true;
 				_unit setDamage 0;
-			};
 		};
 	};
 	case "medBite": {
