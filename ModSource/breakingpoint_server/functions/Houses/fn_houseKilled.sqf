@@ -20,7 +20,6 @@ if (_reinforcement > 0) then
 	_reinforcement = _reinforcement - 1;
 	_buildingData set [7,_reinforcement];
 	BP_BuildingsData set [_buildingIndex,_buildingData];
-	cutText["Explosives were not effective. Come back later and try once more", "PLAIN DOWN"];	
 } else {
 	//Delete House
 	[_buildingNetID] call BPServer_fnc_deleteHouse;
@@ -37,3 +36,4 @@ if (_reinforcement > 0) then
 			if (_rnd < 75) then { _x setDamage 1; };
 		};
 	} count _nearbyStorage;
+};
