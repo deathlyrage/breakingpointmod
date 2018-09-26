@@ -12,17 +12,13 @@ _buildingData = BP_BuildingsData select _buildingIndex;
 _buildingData params ["_objects","_buildingID","_buildingUID","_playerID","_lock","_unlockAttempts","_explosive","_reinforcement"]; 
 
 //Logging
-["houseKilled: %1: %2", _buildingIndex, _building] call BP_fnc_debugConsoleFormat;
+["houseKilled: %1", _building] call BP_fnc_debugConsoleFormat;
 
 
 if (_reinforcement > 0) then
 {
-    ["KilledBuilding Reinforcement Level Before: %1",_reinforcement] call BP_fnc_debugConsoleFormat;
-	_reinforcement = _reinforcement - 1;
-	["Reinforcement level decreased by 1"] call BP_fnc_debugConsoleFormat;
-	_buildingData set [7,_reinforcement];
+	_buildingData set [7,_reinforcement-1];
 	BP_BuildingsData set [_buildingIndex,_buildingData];
-	["KilledBuilding Reinforcement Level After: %1",_reinforcement] call BP_fnc_debugConsoleFormat;
 } else {
 	//Delete House
 	[_buildingNetID] call BPServer_fnc_deleteHouse;
