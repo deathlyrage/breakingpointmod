@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Breaking Point Arma 3 Public-Alpha Build
 	Created By Deathlyrage, Valtiel and Nohrt
 
@@ -188,23 +188,26 @@ switch (_event) do {
 		} count _itemsUniform;
 	};
 	case "medSurgery": {
-		_valid = true;
-		
+		_valid = true;	
 		if(!_selfHeal) then
+		{
+			_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
+			if (_healedRecently) then
 			{
-				_healedRecently = [_event,_unitUID,_medicUID] call BPServer_fnc_checkHealRecent;
-				if (_healedRecently) then {
-					BP_GameError = 4;
-					(owner _medic) publicVariableClient "BP_GameError";
-				} else {
-					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
-				};
+				BP_GameError = 4;
+				(owner _medic) publicVariableClient "BP_GameError";
+			} else {
+			    _pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "surgery");
 			};
+		};		
 	};
 	case "medSurgeryDog": {
-		_valid = true;
 		_addPoints = false;
-		_unit setDamage 0;
+		if ("ItemFieldDressing" in magazines _medic && "ItemMorphine" in magazines _medic) then
+		{
+				_valid = true;
+				_unit setDamage 0;
+		};
 	};
 	case "medBite": {
 		_valid = true;

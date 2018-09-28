@@ -15,8 +15,8 @@
 private ["_type","_unit","_medic","_data"];
 _type = _this select 0;
 _data = [(_this select 1),(_this select 2)];
-_unit = objectFromNetID (_data select 0);
-_medic = objectFromNetID (_data select 1);
+_unit = objectFromNetId (_data select 0);
+_medic = objectFromNetId (_data select 1);
 
 ["medicalEvent: %1",_this] call BP_fnc_debugConsoleFormat;
 
@@ -61,6 +61,36 @@ switch (_type) do {
 		r_fracture_legs = false;
 		r_fracture_arms = false;
 		r_player_inpain = false;
+
+		
+		if ("ItemMorphine" in magazines _medic) then
+		{
+			_medic removeMagazineGlobal "ItemMorphine"; 
+		} else {
+			r_player_inpain = true;
+			r_hit_legs = 0.5;
+			r_fracture_legs = true;
+			player setVariable ["hit_legs",0.5];
+			if (round(random 100) <= 80) then
+			{
+			    player say3D ["z_dog_damage_0", 100];
+			    r_player_unconscious = true;
+			    r_player_unconsciousWeapon = true;
+			};
+		};
+
+		if ("ItemFieldDressing" in magazines _medic) then
+		{
+			_medic removeMagazineGlobal "ItemFieldDressing"; 
+		} else {
+			r_player_injured = true;
+			r_player_cardiac = true;
+			r_player_bleedingLevel = 2;
+			if (round(random 100) <= 50) then
+			{
+				r_player_infected = true;
+			};
+		};
 	};
 	case "medSurgeryDog": {
 		_dog = player getVariable ["dog",objNull];
