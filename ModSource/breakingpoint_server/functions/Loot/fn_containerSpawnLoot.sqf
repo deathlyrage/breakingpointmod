@@ -18,7 +18,12 @@ _container setVariable ["lootItems",nil];
 _container setVariable ["lootType",nil];
 
 //Spawn In Loot
+//Mission config file loot table override.
 _config = 	configFile >> "CfgObjectLoot" >> _boxLootType;
+if (isClass (missionConfigFile >> "CfgObjectLoot" >> _boxLootType)) then
+{
+	_config = missionConfigFile >> "CfgObjectLoot" >> _boxLootType;
+};
 _itemTypes =	[] + getArray (_config >> "itemType");
 _cfgWeapons = configFile >> "CfgWeapons";
 
