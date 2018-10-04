@@ -19818,7 +19818,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.07143;
 					opticsZoomMax = 0.07143;
 					opticsZoomInit = 0.07143;
-					distanceZoomMin = 400;
+					distanceZoomMin = 100;
 					distanceZoomMax = 400;
 					memoryPointCamera = "opticView";
 					visionMode[] = {"Normal"};
@@ -19831,11 +19831,11 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					useModelOptics = 0;
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0.5;
-					opticsZoomMin = 0.250000;
+					opticsZoomMin = 0.425000;
 					opticsZoomMax = 1.100000;
-					opticsZoomInit = 0.250000;
-					distanceZoomMin = 400;
-					distanceZoomMax = 400;
+					opticsZoomInit = 0.750000;
+					distanceZoomMin = 100;
+					distanceZoomMax = 200;
 					memoryPointCamera = "eye";
 					visionMode[] = {};
 				};
