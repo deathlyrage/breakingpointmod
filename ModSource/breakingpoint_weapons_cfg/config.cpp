@@ -18483,7 +18483,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 		
-		linkedAttach[] = {"BP_PSOP"};
+		linkedAttach[] = {"BP_PSO35"};
 		chanceAttach[] = 
         {
 			{"BP_Harris",0.07},
@@ -19818,6 +19818,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.07143;
 					opticsZoomMax = 0.07143;
 					opticsZoomInit = 0.07143;
+					discreteDistance[] = {100,200,300,400};
+					discreteDistanceInitIndex = 1;
 					distanceZoomMin = 100;
 					distanceZoomMax = 400;
 					memoryPointCamera = "opticView";
@@ -19831,11 +19833,11 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					useModelOptics = 0;
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0.5;
-					opticsZoomMin = 0.425000;
+					opticsZoomMin = 0.375000;
 					opticsZoomMax = 1.100000;
 					opticsZoomInit = 0.750000;
 					distanceZoomMin = 100;
-					distanceZoomMax = 200;
+					distanceZoomMax = 100;
 					memoryPointCamera = "eye";
 					visionMode[] = {};
 				};
