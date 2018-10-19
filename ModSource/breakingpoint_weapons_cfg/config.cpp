@@ -18034,7 +18034,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04", 0.707946, 1, 45};
 		soundBullet[] = {"bullet1", 0.083000, "bullet2", 0.083000, "bullet3", 0.083000, "bullet4", 0.083000, "bullet5", 0.083000, "bullet6", 0.083000, "bullet7", 0.083000, "bullet8", 0.083000, "bullet9", 0.083000, "bullet10", 0.083000, "bullet11", 0.083000, "bullet12", 0.083000};
 		initSpeed = -1.04;
-		recoil = "recoil_mxm";
+		recoil = "recoil_ebr";
 		inertia = 0.33500;
 		modes[] = {"Single"};		
 		class Single : Mode_SemiAuto 
@@ -18369,6 +18369,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{"BP_Harris",0.05},
 			{"",0.50}
         };
+	drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
+	reloadMagazineSound[] = {"A3\Sounds_F\weapons\Khaybar\reload_khaibar", 0.462341, 1, 30};
 	};
 	
 	class BP_SVD_WDL: BP_SVD 
@@ -18423,7 +18425,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.085000;
 			//recoil = "recoil_single_ebr";
 			//recoilProne = "recoil_single_prone_ebr";
-			dispersion = 0.000777;
+			dispersion = 0.000977;
 			minRange = 2;
 			minRangeProbab = 1.000000;
 			midRange = 250;
@@ -18481,12 +18483,14 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 		
-		linkedAttach[] = {"BP_PSOP"};
+		linkedAttach[] = {"BP_PSO35"};
 		chanceAttach[] = 
         {
 			{"BP_Harris",0.07},
 			{"",0.50}
         };
+	drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
+	reloadMagazineSound[] = {"A3\Sounds_F\weapons\Khaybar\reload_khaibar", 0.462341, 1, 30};
 	};
 	
 	class BP_SVDK_WDL: BP_SVDK 
@@ -19814,7 +19818,9 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.07143;
 					opticsZoomMax = 0.07143;
 					opticsZoomInit = 0.07143;
-					distanceZoomMin = 400;
+					discreteDistance[] = {100,200,300,400};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 100;
 					distanceZoomMax = 400;
 					memoryPointCamera = "opticView";
 					visionMode[] = {"Normal"};
@@ -19827,11 +19833,11 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					useModelOptics = 0;
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0.5;
-					opticsZoomMin = 0.250000;
+					opticsZoomMin = 0.375000;
 					opticsZoomMax = 1.100000;
-					opticsZoomInit = 0.250000;
-					distanceZoomMin = 400;
-					distanceZoomMax = 400;
+					opticsZoomInit = 0.750000;
+					distanceZoomMin = 100;
+					distanceZoomMax = 100;
 					memoryPointCamera = "eye";
 					visionMode[] = {};
 				};
@@ -22218,7 +22224,7 @@ class CfgMagazines {
 		ammo = "BP_93x64_Ball";
 		count = 10;
 		mass = 18;
-		initSpeed = 719;
+		initSpeed = 762;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
 		descriptionShort = "10Rnd 9.3x64mmR magazine";
@@ -26655,16 +26661,16 @@ class CfgAmmo {
 
     class BP_93x64_Ball: BulletBase 
 	{
-		hit = 26;
+		hit = 33.07;
 		cartridge = "FxCartridge_762";
 		visibleFire = 22;
 		audibleFire = 55;
 		simulationStep = 0.10;
 		visibleFireTime = 3;
-		typicalSpeed = 719;
-		caliber = 1.970000;
+		typicalSpeed = 762;
+		caliber = 3.410000;
 		legFracture = true;
-		airFriction = -0.000925;
+		airFriction = -0.001175;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 		class Medical
 		{
@@ -26694,14 +26700,14 @@ class CfgAmmo {
 		};		
 		class CamShakeFire 
 		{
-			power = 2;
+			power = 4;
 			duration = 0.500000;
 			frequency = 20;
 			distance = 10;
 		};
 		class CamShakeHit 
 		{
-			power = 7;
+			power = 14;
 			duration = 1;
 			frequency = 20;
 		};
@@ -26709,15 +26715,15 @@ class CfgAmmo {
 
 	class BP_93x64_OVPBall: BulletBase 
 	{
-		hit = 27.5;
+		hit = 33.07;
 		cartridge = "FxCartridge_762";
 		visibleFire = 22;
 		audibleFire = 55;
 		visibleFireTime = 3;
 		typicalSpeed = 785;
-		caliber = 2.170000;
+		caliber = 3.410000;
 		legFracture = true;
-		airFriction = -0.000925;
+		airFriction = -0.001175;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 		class Medical
 		{
@@ -26754,7 +26760,7 @@ class CfgAmmo {
 		};
 		class CamShakeHit 
 		{
-			power = 7;
+			power = 14;
 			duration = 1;
 			frequency = 20;
 		};
@@ -26999,12 +27005,12 @@ class CfgAmmo {
 		cartridge = "FxCartridge_127";
 		typicalSpeed = 883;
 		simulationStep = 0.12;
-		indirectHit = 20;
-		indirectHitRange = 0.500000;
+		//indirectHit = 20;
+		//indirectHitRange = 0.500000;
 		audibleFire = 45;
 		visibleFire = 10;
 		airFriction = -0.00056;
-		caliber = 2.700000;
+		caliber = 3.100000;
 		legFracture = true;
 		muzzleEffect = "BIS_Effects_HeavySniper";
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_762x51_Ball", 0.424813, 1, 50};
@@ -27055,9 +27061,9 @@ class CfgAmmo {
 	    hit = 55;
 		cartridge = "FxCartridge_127";
 		typicalSpeed = 995;
-		indirectHit = 15;
+		//indirectHit = 15;
 		simulationStep = 0.09;
-		indirectHitRange = 0.400000;
+		//indirectHitRange = 0.400000;
 		audibleFire = 47;
 		visibleFire = 10;
 		airFriction = -0.00056;
@@ -27109,7 +27115,7 @@ class CfgAmmo {
 	
 	class BP_300_WinMag: B_762x51_Ball  
 	{
-	    hit = 22.65;
+	    hit = 26.19;
 		typicalSpeed = 874;
 		indirectHit = 0;
 		indirectHitRange = 0.000000;
@@ -27205,7 +27211,7 @@ class CfgAmmo {
 	
 	class BP_300M_WinMag: B_408_Ball  
 	{
-	    hit = 24.75;
+	    hit = 28.95;
 		cartridge = "FxCartridge_127";
 		typicalSpeed = 993;
 		simulationStep = 0.12;

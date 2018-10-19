@@ -62,6 +62,9 @@ player setVariable ["parachute",false];
 //Open Parachute
 player action ["openParachute",player];
 
+//people abused this to land from very low high without damage/dying
+player allowdamage true;
+
 //Wait Until Landing
 waitUntil { isTouchingGround player || (position player select 2) < 1 };
 
@@ -253,6 +256,7 @@ _player = player;
 		};
 	} count _partialMags;
 
-player allowdamage true; 
+//people abused this to land from very low high without damage/dying
+//player allowdamage true; 
 
 
