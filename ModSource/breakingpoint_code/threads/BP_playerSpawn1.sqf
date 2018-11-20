@@ -45,6 +45,13 @@ waitUntil
 	{ player reveal _x } forEach entities "Car";
 	{ player reveal _x } forEach entities "Helicopter";
 	
+	_class = player getVariable ["class",0];
+	_factionName = _class call BP_fnc_getFactionName;
+	_isHunter = (_factionName == "Hunter");
+	_factionLevel = player call BP_fnc_getFactionLevel;
+	if (_isHunter and _factionLevel > 2) then {
+	player setAnimSpeedCoef 1.07;
+	};
 	//Inside Buildings
 	//_building = nearestObject [player, "HouseBase"];
 	//_buildingLogic = nearestObject [player,"BP_Haven"];
