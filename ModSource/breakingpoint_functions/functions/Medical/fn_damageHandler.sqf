@@ -113,6 +113,121 @@ if (_ammo != "zombie") then {
 			if (_isHeadHit) then { _scale = _scale + 500; };
 			switch (_type) do {
 				case 1: { _scale = _scale + 200 };
+/*
+	Breaking Point Mod for Arma 3
+
+	Released under Arma Public Share Like Licence (APL-SA)
+	https://www.bistudio.com/community/licenses/arma-public-license-share-alike
+
+	Alderon Games Pty Ltd
+*/
+
+scriptName "BP_fnc_damageHandler";
+
+params ["_unit","_hit","_damage","_source","_ammo","_hitPartIndex","_instigator","_hitPoint"];
+
+//Only Handle Damage On Valid Units
+if (isNull _unit) exitWith {};
+
+//Damage Events are only called on local units
+if (!local _unit) exitWith {};
+
+//Player Damage Handler Only
+if (_unit != player) exitWith {};
+
+//Fetch Related Data
+_unconscious = _unit getVariable ["med_unconscious", false];
+_type = [_damage,_ammo] call BP_fnc_medicalDamageType;
+_isMinor = (_hitpoint in med_MinorWounds);
+_isHeadHit = (_hit == "head");
+_isHeartHit = (_hit == "spine3");
+_isPlayer = (isPlayer _source);
+_inVehicle = ((vehicle _unit) != _unit);
+_inVehicleSource = ((vehicle _source) != _source);
+_isMelee = _ammo isKindOf "Melee";
+_selfDamage = (_unit == _source);
+
+//Melee Self Damage
+if (_selfDamage && {_isMelee}) exitWith {};
+
+// Loot Damage
+if (_source isKindOf "BP_LootBox") exitWith {};
+
+["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 Type: %6 isMinor: %7 isHeadHit: %8 isPlayer: %9 HitPoint: %10 #1000",_unit,_hit,_damage,_source,_ammo,_type,_isMinor,_isHeadHit,_isPlayer,_hitPoint] call BP_fnc_debugConsoleFormat;
+
+// Fuck Hackers
+//if (_source == player) exitWith {};
+//if (isNull _source) exitWith {};
+//if (_ammo == "") exitWith {};
+
+// Heart Hit
+//if (_isHeartHit and (_damage > 1)) exitWith
+//{
+//	[18] call BP_fnc_death;
+//};
+
+// Non-Lethal Rounds
+if (_ammo isKindOf "BP_NonLethal" || {_ammo isKindOf "BP_Arrow_Tranq"}) exitWith
+{
+	if (_hit == "" && {!_inVehicle}) then {
+		r_player_unconscious = true;
+		r_player_unconsciousWeapon = true;
+	};
+};
+
+//Fire Arrows
+if (_ammo == "BP_Arrow_Ball_Fire") exitWith
+{
+	_fire = _unit getVariable ["fire",objNull];
+	if (isNull _fire) then
+	{
+		_unit setVariable ["fire",_unit];
+		[(netID _source),(netID _unit)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+	};
+};
+
+// Fire Damage
+if (isBurning _unit) exitWith 
+{
+	_scale = 30;
+	_burnRate = (getBurningValue _unit);
+	["Burn Value: %1 | Hit: %2 | Damage: %3 | Source: %4~1001",_burnRate,_hit,_damage,_source] call BP_fnc_debugConsoleFormat;
+	r_player_blood = r_player_blood - (_damage * _scale);
+};
+
+// PVP Damage
+_scale = 200;
+
+// Zombie Damage
+if (_ammo == "zombie") then {
+	if (_damage > 0.4) then {
+		_scale = _scale + 1125;
+		if (_isHeadHit) then { _scale = _scale + 375; };
+	};
+	
+	//Zombie Hit Overlay
+	_randomMin = 1;
+	_randomMax = 5;
+	_random = floor (random _randomMax);
+	if (_random > _randomMax) then { _random = _randomMax; };
+	if (_random < _randomMin) then { _random = _randomMin; };
+	_titleRscImg = format ["BP_Scratch_%1",_random];
+	titleRsc [_titleRscImg,"PLAIN",_random];
+};
+
+/// Player Damage
+if (_ammo != "zombie") then {
+	_scale = _scale + 50; //50
+	if (_damage > 0.01) then {
+		//Headshot
+		if (_isHeadHit) then { _scale = _scale + 750; };
+		//Damage Was Caused By Another Player who isn't you.
+		if (isPlayer _source && {!(player == _source)}) then 
+		{
+			_scale = _scale + 5; //5
+			if (_isHeadHit) then { _scale = _scale + 500; };
+			switch (_type) do {
+				case 1: { _scale = _scale + 200 };
 				case 2: { _scale = _scale + 200 };
 			};
 
@@ -335,17 +450,17 @@ if (_damage > 0.01) then
 };
 
 //Record Damage to Minor parts (legs, arms)
-if (_hit in med_MinorWounds) then 
+if (_hitpoint in med_MinorWounds) then 
 {
 	//Fall Damage
 	if (_ammo == "") then 
 	{
 		//Leg DAMAGE
-		if (_hit == "legs") then
+		if (_hitPoint == "hitlegs") then
 		{
 			if (_damage > 0.67) then 
 			{
-				[_unit,_hit,1] call BP_fnc_objProcessHit;
+				[_unit,_hit,1,_hitPoint] call BP_fnc_objProcessHit;
 				
 				if (_selfDamage) then
 				{
@@ -373,10 +488,9 @@ if (_hit in med_MinorWounds) then
 				if (!_inVehicle) then
 				{
 					//Fetch Hitpoint Name
-					_hitpoint = "";
 					_currentDamage = 0;
-					if (_hit == "hands") then { _hitpoint = "HitHands"; _currentDamage = r_hit_hands; };
-					if (_hit == "legs") then { _hitpoint = "HitLegs"; _currentDamage = r_hit_legs; };
+					if ((_hitPoint == "hithands") or (_hitPoint == "hitarms")) then { _currentDamage = r_hit_hands; };
+					if (_hitPoint == "hitlegs") then { _currentDamage = r_hit_legs; };
 		
 					//Calculate Hitpoint Damage
 					_cfgAmmo = configFile >> "CfgAmmo" >> _ammo;
@@ -384,15 +498,15 @@ if (_hit in med_MinorWounds) then
 					_limbDamage = (0.5 * _cal) + _currentDamage;
 		
 					//Apply Damage (Stacking)
-					if (_hit == "hands") then { r_hit_hands = _limbDamage; };
-					if (_hit == "legs") then { r_hit_legs = _limbDamage; };
+					if ((_hitPoint == "hithands") or (_hitPoint == "hitarms")) then { r_hit_hands = _limbDamage; };
+					if (_hitPoint == "hitlegs") then { r_hit_legs = _limbDamage; };
 					
 					//Value Limiting
 					if (r_hit_hands > 1) then { r_hit_hands = 1; };
 					if (r_hit_legs > 1) then { r_hit_legs = 1; };
 					
 					//Hands
-					if (_hit == "hands") then
+					if ((_hitPoint == "hithands") or (_hitPoint == "hitarms")) then
 					{
 						if (r_hit_hands > 0.4) then
 						{
@@ -402,7 +516,7 @@ if (_hit in med_MinorWounds) then
 						};
 					};
 					//Legs
-					if (_hit == "legs") then
+					if (_hitPoint == "hitlegs") then
 					{
 						if (r_hit_legs > 0.4) then
 						{
