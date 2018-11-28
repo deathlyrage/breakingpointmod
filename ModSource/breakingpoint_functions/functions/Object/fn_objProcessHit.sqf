@@ -7,22 +7,23 @@
 	Alderon Games Pty Ltd
 */
 
-private ["_unit","_selection","_damage","_dam","_total","_break","_selection","_total"];
+private ["_unit","_selection","_damage","_hitPoint","_dam","_total","_break","_selection","_total"];
 _unit =	_this select 0;
 _selection =	_this select 1;
 _damage = _this select 2;
+_hitPoint = _this select 3;
 
 if (local _unit) then {
 	_dam = _unit getHitPointDamage "HitLegs";
 	_total = (_dam + _damage);
 	_break = false;
-	if (_selection in med_MinorWounds and _total >= 1 and _unit == player) then 
+	if (_hitPoint in med_MinorWounds and _total >= 1 and _unit == player) then 
 	{
-		if ((_selection == "legs") and !r_fracture_legs) then {
+		if ((_hitPoint == "hitlegs") and !r_fracture_legs) then {
 			r_fracture_legs = true;
 			_break = true;
 		};
-		if ((_selection == "arms") and !r_fracture_arms) then {
+		if (((_hitPoint == "hitarms") or (_hitPoint == "hithands")) and !r_fracture_arms) then {
 			r_fracture_arms = true;
 			_break = true;
 		};
