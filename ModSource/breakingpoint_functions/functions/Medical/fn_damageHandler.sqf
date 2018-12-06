@@ -351,16 +351,20 @@ if (_hitpoint in med_MinorWounds) then
 				{
 					if (_damage > 0.98) then 
 					{
-						titleRsc ["BP_BloodsprayLarge","PLAIN",0];
-						if (_damage > 1.4) then 
+						if (_damage < 1.4) then 
 						{
-							if (!BP_isUndead) then {
-								[0] call BP_fnc_death;
-							};
-						} else {
-							r_player_blood = r_player_blood - 10000;
+							titleRsc ["BP_BloodsprayLarge","PLAIN",0];
+							r_player_blood = r_player_blood - 8000;
 							if (r_player_blood <= 0) then { [17] call BP_fnc_death; };
 						};
+						if (_damage < 3.3) then 
+						{
+							if (!BP_isUndead) then {
+							[0] call BP_fnc_death;
+							};
+						} else {
+							r_fracture_legs = true;
+							};
 					};
 				};
 			};
