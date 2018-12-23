@@ -9,7 +9,7 @@
 
 scriptName "BP_fnc_damageHandler";
 
-params ["_unit","_hit","_damage","_source","_ammo"];
+params ["_unit","_hit","_damage","_source","_ammo","_hitPartIndex","_instigator","_hitPoint"];
 
 //Only Handle Damage On Valid Units
 if (isNull _unit) exitWith {};
@@ -23,7 +23,7 @@ if (_unit != player) exitWith {};
 //Fetch Related Data
 _unconscious = _unit getVariable ["med_unconscious", false];
 _type = [_damage,_ammo] call BP_fnc_medicalDamageType;
-_isMinor = (_hit in med_MinorWounds);
+_isMinor = (_hitpoint in med_MinorWounds);
 _isHeadHit = (_hit == "head");
 _isHeartHit = (_hit == "spine3");
 _isPlayer = (isPlayer _source);
@@ -38,7 +38,7 @@ if (_selfDamage && {_isMelee}) exitWith {};
 // Loot Damage
 if (_source isKindOf "BP_LootBox") exitWith {};
 
-["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 Type: %6 isMinor: %7 isHeadHit: %8 isPlayer: %9 #1000",_unit,_hit,_damage,_source,_ammo,_type,_isMinor,_isHeadHit,_isPlayer] call BP_fnc_debugConsoleFormat;
+["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 Type: %6 isMinor: %7 isHeadHit: %8 isPlayer: %9 HitPoint: %10 #1000",_unit,_hit,_damage,_source,_ammo,_type,_isMinor,_isHeadHit,_isPlayer,_hitPoint] call BP_fnc_debugConsoleFormat;
 
 // Fuck Hackers
 //if (_source == player) exitWith {};
@@ -335,32 +335,36 @@ if (_damage > 0.01) then
 };
 
 //Record Damage to Minor parts (legs, arms)
-if (_hit in med_MinorWounds) then 
+if (_hitpoint in med_MinorWounds) then 
 {
 	//Fall Damage
 	if (_ammo == "") then 
 	{
 		//Leg DAMAGE
-		if (_hit == "legs") then
+		if (_hitPoint == "hitlegs") then
 		{
 			if (_damage > 0.67) then 
 			{
-				[_unit,_hit,1] call BP_fnc_objProcessHit;
+				[_unit,_hit,1,_hitPoint] call BP_fnc_objProcessHit;
 				
 				if (_selfDamage) then
 				{
 					if (_damage > 0.98) then 
 					{
-						titleRsc ["BP_BloodsprayLarge","PLAIN",0];
-						if (_damage > 1.4) then 
+						if (_damage < 1.4) then 
 						{
-							if (!BP_isUndead) then {
-								[0] call BP_fnc_death;
-							};
-						} else {
-							r_player_blood = r_player_blood - 10000;
+							titleRsc ["BP_BloodsprayLarge","PLAIN",0];
+							r_player_blood = r_player_blood - 8000;
 							if (r_player_blood <= 0) then { [17] call BP_fnc_death; };
 						};
+						if (_damage < 3.3) then 
+						{
+							if (!BP_isUndead) then {
+							[0] call BP_fnc_death;
+							};
+						} else {
+							r_fracture_legs = true;
+							};
 					};
 				};
 			};
@@ -373,10 +377,9 @@ if (_hit in med_MinorWounds) then
 				if (!_inVehicle) then
 				{
 					//Fetch Hitpoint Name
-					_hitpoint = "";
 					_currentDamage = 0;
-					if (_hit == "hands") then { _hitpoint = "HitHands"; _currentDamage = r_hit_hands; };
-					if (_hit == "legs") then { _hitpoint = "HitLegs"; _currentDamage = r_hit_legs; };
+					if ((_hitPoint == "hithands") or (_hitPoint == "hitarms")) then { _currentDamage = r_hit_hands; };
+					if (_hitPoint == "hitlegs") then { _currentDamage = r_hit_legs; };
 		
 					//Calculate Hitpoint Damage
 					_cfgAmmo = configFile >> "CfgAmmo" >> _ammo;
@@ -384,15 +387,15 @@ if (_hit in med_MinorWounds) then
 					_limbDamage = (0.5 * _cal) + _currentDamage;
 		
 					//Apply Damage (Stacking)
-					if (_hit == "hands") then { r_hit_hands = _limbDamage; };
-					if (_hit == "legs") then { r_hit_legs = _limbDamage; };
+					if ((_hitPoint == "hithands") or (_hitPoint == "hitarms")) then { r_hit_hands = _limbDamage; };
+					if (_hitPoint == "hitlegs") then { r_hit_legs = _limbDamage; };
 					
 					//Value Limiting
 					if (r_hit_hands > 1) then { r_hit_hands = 1; };
 					if (r_hit_legs > 1) then { r_hit_legs = 1; };
 					
 					//Hands
-					if (_hit == "hands") then
+					if ((_hitPoint == "hithands") or (_hitPoint == "hitarms")) then
 					{
 						if (r_hit_hands > 0.4) then
 						{
@@ -402,7 +405,7 @@ if (_hit in med_MinorWounds) then
 						};
 					};
 					//Legs
-					if (_hit == "legs") then
+					if (_hitPoint == "hitlegs") then
 					{
 						if (r_hit_legs > 0.4) then
 						{

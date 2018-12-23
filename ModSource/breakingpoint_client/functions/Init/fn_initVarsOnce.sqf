@@ -434,7 +434,10 @@ BP_woundHit_ok =
 med_MinorWounds =
 [
 	"hands",
-	"legs"
+	"legs",
+	"hitlegs",
+	"hitarms",
+	"hithands"
 ];
 
 med_woundPoint	= [
