@@ -235,6 +235,7 @@ class BreakingPoint
 			food = 3240; //2160 Minutes (48 hours)
 			water = 2160; //1440 Minutes (24 hours)
 			temperature = 90 / 100; //First Value = Minutes until Player reaches the coldest Point at night (without other effects! night factor expected to be -1)
+			useNewMedSurgery = 0;	//use the old/new  0/1  surgary feature https://github.com/deathlyrage/breakingpointmod/pull/111
 		};
 
 		class Temperature 

@@ -42,42 +42,62 @@ switch (_type) do {
 		};
 	};
 	case "medSurgery": {
-		_rndInfection = (random 10);
-		_TransfusionInfection = (_rndInfection < 0.3);
-		if (_TransfusionInfection) then { r_player_infected = true; };
-		if ("ItemFieldDressing" in magazines _medic) then
-		{
-		_medic removeMagazineGlobal "ItemFieldDressing"; 
-		r_player_blood = r_player_bloodTotal;
-		r_player_lowblood = false;
-		10 fadeSound 1;
-		"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
-		"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5;
-		r_player_injured = false;
-		r_player_bleedingLevel = 0;
-		r_player_handler = false;
-		player setVariable ["med_lowBlood",false,true];
+		if(getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Survival" >> "useNewMedSurgery") == 0) then {
+			_rndInfection = (random 10);
+			_TransfusionInfection = (_rndInfection < 0.3);
+			r_player_blood = r_player_bloodTotal;
+			r_player_lowblood = false;
+			10 fadeSound 1;
+			"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
+			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5;
+			if (_TransfusionInfection) then { r_player_infected = true; };
+			r_player_injured = false;
+			r_player_bleedingLevel = 0;
+			r_player_handler = false;
+			player setVariable ["med_lowBlood",false,true];
+			player setVariable ["hit_legs",0];
+			player setVariable ["hit_hands",0];
+			r_hit_legs = 0;
+			r_hit_hands = 0;
+			r_fracture_legs = false;
+			r_fracture_arms = false;
+			r_player_inpain = false;
 		} else {
-		if (_rndInfection <= 5) then
-			{
-				r_player_infected = true;
+			_rndInfection = (random 10);
+			_TransfusionInfection = (_rndInfection < 0.3);
+			if (_TransfusionInfection) then { r_player_infected = true; };
+			if ("ItemFieldDressing" in magazines _medic) then {
+				_medic removeMagazineGlobal "ItemFieldDressing"; 
+				r_player_blood = r_player_bloodTotal;
+				r_player_lowblood = false;
+				10 fadeSound 1;
+				"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
+				"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5;
+				r_player_injured = false;
+				r_player_bleedingLevel = 0;
+				r_player_handler = false;
+				player setVariable ["med_lowBlood",false,true];
+			} else {
+				if (_rndInfection <= 5) then {
+						r_player_infected = true;
+				};
 			};
-		};
-		
-		if ("ItemMorphine" in magazines _medic) then
-		{
-		_medic removeMagazineGlobal "ItemMorphine"; 
-		player setVariable ["hit_legs",0];
-		player setVariable ["hit_hands",0];
-		r_hit_legs = 0;
-		r_hit_hands = 0;
-		r_fracture_legs = false;
-		r_fracture_arms = false;
-		r_player_inpain = false;
-		} else {
-		player say3D ["z_dog_damage_0", 100];
-		r_player_unconscious = true;
-		r_player_unconsciousWeapon = true;
+			
+			if ("ItemMorphine" in magazines _medic) then
+			{
+				_medic removeMagazineGlobal "ItemMorphine"; 
+				player setVariable ["hit_legs",0];
+				player setVariable ["hit_hands",0];
+				r_hit_legs = 0;
+				r_hit_hands = 0;
+				r_fracture_legs = false;
+				r_fracture_arms = false;
+				r_player_inpain = false;
+			} else {
+				player say3D ["z_dog_damage_0", 100];
+				r_player_unconscious = true;
+				r_player_unconsciousWeapon = true;
+			};
 		};
 	};
 	case "medSurgeryDog": {
