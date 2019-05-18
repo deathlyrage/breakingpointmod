@@ -34,6 +34,6 @@ start /wait arma3server_x64.exe -port=%server_port% "-config=%server_config%" "-
 
 echo. Server closed, restarting in 10 seconds.
 timeout /t 10
-goto start
+goto start_loop
 
 exit
