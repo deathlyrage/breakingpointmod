@@ -33,10 +33,6 @@ _vehicle setDamage _damage;
 //Enable Rope Attachment
 _vehicle enableRopeAttach true;
 
-//["MineDetectorDisplayComponent","MinimapDisplayComponent","CrewDisplayComponent","TransportFeedDisplayComponent","SensorsDisplayComponent","SlingLoadDisplayComponent"]
-
-_vehicle enableInfoPanelComponent ["right", "SensorsDisplayComponent", false];
-
 //Generate Data
 _databasePos = _vehicle call BP_fnc_databasePos;
 _vehicle setVariable ["ObjectUID","0"];
