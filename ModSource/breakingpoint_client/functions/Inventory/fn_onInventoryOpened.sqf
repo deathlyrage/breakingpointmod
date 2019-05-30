@@ -306,7 +306,6 @@ if (!_return) then
 		_controlDogWater = (_inventoryWindow displayCtrl 1236);
 		
 		//Set Crate and Ground Tab Texture Images
-		_controlGroundTab = (_inventoryWindow displayCtrl 6321);
 		_controlCrateTab = (_inventoryWindow displayCtrl 6401);
 		_controlGroundImg = (_inventoryWindow displayCtrl 6320);
 		_controlCrateImg = (_inventoryWindow displayCtrl 6400);
@@ -314,8 +313,6 @@ if (!_return) then
 		_controlCrateImg ctrlCommit 0;
 		
 		(findDisplay 602) displayAddEventHandler ["KeyDown", {_this call BP_fnc_spaceInterruptInv}];
-		
-		//_inventoryWindow displayAddEventHandler ["KeyDown","_this call BP_fnc_spaceInterruptInv"];
 		
 		waitUntil
 		{

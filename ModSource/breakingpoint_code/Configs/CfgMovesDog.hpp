@@ -238,14 +238,14 @@ class CfgMovesDog_BP : CfgMovesAnimal_Base_F
 		};
 		
 		class Dog_TurnL : Dog_Stop {
-			file = "\A3\animals_f_beta\Dog\data\anim\dog_rotateL.rtm";
+			file = "\a3\animals_f_beta\Dog\Data\anim\dogTurnL.rtm";
 			connectTo[] = {"Dog_Stop", 0.1};
 			interpolateTo[] = {"Dog_Stop", 0.1};
 			speed = 1;
 		};
 		
 		class Dog_TurnR : Dog_TurnL {
-			file = "\A3\animals_f_beta\Dog\data\anim\dog_rotateR.rtm";
+			file = "\a3\animals_f_beta\Dog\Data\anim\dogTurnR.rtm";
 		};
 		
 		class Dog_Bark : Dog_Stop {

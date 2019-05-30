@@ -37,6 +37,7 @@ class CfgFunctions
 			class effectFiredLongSmoke {};
 			class effectFiredRifle {};
 			class effectFiredArtillery {};
+			class effectFiredCruiseMissile {};
 			class effectFiredRocket {};
 			class effectFiredSmokeLauncher {};
 			class effectFiredSmokeLauncher_boat {};

@@ -19,12 +19,6 @@ class CfgMusic
 		name = "Death";
 		sound[] = {"\breakingpoint_sfx\tracks\BP_DeathScreen.wss", db+0, 1.0};
 	};
-	class BP_track_intro_1
-	{
-		name = "Intro";
-		sound[] = {"\breakingpoint_sfx\tracks\track_intro_1.ogg", db+0, 1.0};
-		duration = ;
-	};
 	class bp_val_0 //NIGHT ONLY
 	{
 		name = "";

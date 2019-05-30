@@ -424,16 +424,7 @@ class RscDisplayInventory
 		*/
 		
 		delete BackgroundSlotPrimaryMagazine;
-		/*
-		class BackgroundSlotPrimaryMagazine : BackgroundSlotPrimary {
-			idc = 1246;
-			x = "35.6 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
-			y = "9.1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "2.9 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		*/
-		
+		delete BackgroundSlotPrimaryUnderBarrel;
 		delete BackgroundSlotSecondary;
 		/*
 		class BackgroundSlotSecondary : BackgroundSlotPrimary {
@@ -446,16 +437,6 @@ class RscDisplayInventory
 		*/
 		
 		delete BackgroundSlotSecondaryMuzzle;
-		/*
-		class BackgroundSlotSecondaryMuzzle : BackgroundSlotPrimary {
-			idc = 1248;
-			x = "26.6 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
-			y = "14.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "2.9 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		*/
-		
 		delete BackgroundSlotSecondaryFlashlight;
 		/*
 		class BackgroundSlotSecondaryFlashlight : BackgroundSlotPrimary {
@@ -479,16 +460,7 @@ class RscDisplayInventory
 		*/
 		
 		delete BackgroundSlotSecondaryMagazine;
-		/*
-		class BackgroundSlotSecondaryMagazine : BackgroundSlotPrimary {
-			idc = 1251;
-			x = "35.6 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
-			y = "14.6 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "2.9 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		*/
-		
+		delete BackgroundSlotSecondaryUnderBarrel;
 		delete BackgroundSlotHandgun;
 		/*
 		class BackgroundSlotHandgun : BackgroundSlotPrimary {
@@ -512,16 +484,6 @@ class RscDisplayInventory
 		*/
 		
 		delete BackgroundSlotHandgunFlashlight;
-		/*
-		class BackgroundSlotHandgunFlashlight : BackgroundSlotPrimary {
-			idc = 1254;
-			x = "29.6 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
-			y = "20.1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "2.9 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		*/
-		
 		delete BackgroundSlotHandgunOptics;
 		/*
 		class BackgroundSlotHandgunOptics : BackgroundSlotPrimary {
@@ -534,6 +496,7 @@ class RscDisplayInventory
 		*/
 		
 		delete BackgroundSlotHandgunMagazine;
+		delete BackgroundSlotHandgunUnderBarrel;
 		/*
 		class BackgroundSlotHandgunMagazine : BackgroundSlotPrimary {
 			idc = 1256;
@@ -701,7 +664,6 @@ class RscDisplayInventory
 		
 		class GroundTab : BaseGroundTab {
 			idc = 6321;
-			style = 48;
 			x = 0.146281 * safezoneW + safezoneX;
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0670312 * safezoneW;
@@ -716,7 +678,6 @@ class RscDisplayInventory
 		
 		class SoldierTab : BaseGroundTab {
 			idc = 6401;
-			style = 48;
 			x = 0.214347 * safezoneW + safezoneX;
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;

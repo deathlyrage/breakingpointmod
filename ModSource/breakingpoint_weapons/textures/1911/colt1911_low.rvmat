@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture="CA\weapons_E\Data\Default_TI_CA.tga";
+	texture="breakingpoint_weapons\textures\empty.paa";
 };
 ambient[]={1,1,1,1};
 diffuse[]={1,1,1,1};

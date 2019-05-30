@@ -24,7 +24,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.02;
-		requiredAddons[] = {};
+		requiredAddons[] = {"A3_Anims_F_Config_Sdr","A3_Weapons_F"};
 	};
 };
 

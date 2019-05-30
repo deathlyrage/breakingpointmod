@@ -411,7 +411,7 @@ class CfgMagazines
 		displayName = "Wool";
 		descriptionUse = "Wool";
 		model = "\breakingpoint\models\bp_wool.p3d";
-		picture = "\breakingpoint\textures\icons\bp_wool_ca.paa";
+		picture = "\breakingpoint\textures\icons\wool_ca.paa";
 		descriptionShort = "Used For: Building a bed inside a haven.";
 		mass = 1;
 	};

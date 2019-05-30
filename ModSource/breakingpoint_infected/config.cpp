@@ -316,30 +316,6 @@ class CfgGesturesMale {
 			canPullTrigger = 0;
 			//soundOverride = "rifle_to_handgun"; <<<--- Insert here attack sound class
 		};
-		class BP_Dog_Attack1 : Default 
-		{
-			file = "\breakingpoint_anim\dogs\dogAttack";
-			speed = 1;
-			soundOverride = "";
-			soundEnabled = 0;
-			looped = false;
-			duty = 1.0;
-			aimingBody = "aimingUpDefault";
-			mask = "handsWeapon";
-			leftHandIKBeg = false;
-			leftHandIKCurve[] = {1};
-			leftHandIKEnd = false;
-			rightHandIKBeg = false;
-			rightHandIKCurve[] = {1};
-			rightHandIKEnd = false;
-			weaponIK = 0;
-			enableOptics = false;
-			showWeaponAim = false;
-			disableWeapons = true;
-			disableWeaponsLong = true;
-			canPullTrigger = 0;
-			//soundOverride = "rifle_to_handgun"; <<<--- Insert here attack sound class
-		};
 	};
 	class BlendAnims {
 		handsWeapon[] = {"head",1,"neck1",1,"neck",1,"weapon",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",1,"Spine1",1,"Spine2",1,"Spine3",1,"pelvis","MaskStart"};

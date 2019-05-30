@@ -36,7 +36,7 @@ class Stage2
 };
 class Stage3
 {
-	texture="breakingpoint_ghillie\Ghillies\textures\hhl_white_SDM.paa";
+	texture="breakingpoint\textures\clothing\hhl_white_SDM.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -60,7 +60,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="breakingpoint_ghillie\Ghillies\textures\hhl_SMDI.paa";
+	texture="breakingpoint\textures\clothing\hhl_SMDI.paa";
 	uvSource="tex";
 	class uvTransform
 	{

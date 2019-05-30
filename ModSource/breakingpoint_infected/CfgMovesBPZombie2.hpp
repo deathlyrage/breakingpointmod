@@ -154,7 +154,7 @@ class CfgMovesBPZombie2 : CfgMovesAnimal_Base_F
 		
 		class Zombie_Attack: Zombie_Stop {
 			actions = "BPZombieActions";
-			file = "\breakingpoint_anim\zmb\BPZombie2_Attack.rtm";
+			file = "\breakingpoint_anim\zmb\BPZombie2_Attack1.rtm";
 			speed = 1;
 			soundOverride = "";
 			soundEnabled = 0;
@@ -360,7 +360,7 @@ class CfgMovesBPZombieImp2: CfgMovesBPZombie2
 		class Zombie_Attack: Zombie_Stop
 		{
 			actions="BPZombieActions";
-			file="\breakingpoint_anim\zmb\BPZombie2_Attack.rtm";
+			file="\breakingpoint_anim\zmb\BPZombie2_Attack1.rtm";
 			speed=1;
 			soundOverride="";
 			soundEnabled=0;

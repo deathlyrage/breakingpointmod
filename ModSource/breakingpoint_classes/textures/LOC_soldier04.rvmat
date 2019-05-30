@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture="ca\characters_e\LOC\Data\LOC_ind04_TI_CA.tga";
+	//texture="breakingpoint_classes\textures\loc_soldier04_ti.paa";
 };
 ambient[]={1,1,1,1};
 diffuse[]={1,1,1,1};
