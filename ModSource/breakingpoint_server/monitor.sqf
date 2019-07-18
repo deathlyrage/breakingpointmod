@@ -7,9 +7,22 @@
 	Alderon Games Pty Ltd
 */
 
+_BreakingPointExtServer = getText(configFile >> "CfgBreakingPointServerSettings" >> "BreakingPointExt" >> "version");
+
 //Init Hive
-["CHILD:100:%1:",BP_ServerInstance] call BPServer_fnc_callExtension;
+_BreakingPointExt = ["CHILD:100:%1:",BP_ServerInstance] call BPServer_fnc_callExtension;
+_BreakingPointExt = _BreakingPointExt#0;
+["Hive: BreakingPointExt Version: %1",_BreakingPointExt] call BP_fnc_debugConsoleFormat;
 ["Hive: Starting Connection Process with Instance ID: %1",BP_ServerInstance] call BP_fnc_debugConsoleFormat;
+
+if!(_BreakingPointExtServer isEqualTo _BreakingPointExt) exitWith
+{
+	for "_i" from 0 to 99 do
+	{
+		["Hive version missmatch: BreakingPointExt Version: %1 != BreakingPointExtServer version: %2",_BreakingPointExt, _BreakingPointExtServer] call BP_fnc_debugConsoleFormat;
+	};
+	call BPServer_fnc_rconLock;
+};
 
 //Send Client Functions Over Network
 _clientFunctionsList = ["Client_Init"];

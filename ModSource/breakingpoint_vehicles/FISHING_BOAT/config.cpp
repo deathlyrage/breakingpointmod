@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[]= {};
+		requiredAddons[]= {"A3_Anims_F_Config_Sdr","A3_Boat_F_Gamma_Boat_Civil_01"};
 	};
 };
 class CfgMovesBasic
@@ -321,12 +321,12 @@ class CfgVehicles
 		{
 			tex[]={};
 			mat[]={
-				"breakingpoint_vehicles\FISHING_BOAT\fishboat_001.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\fishboat_001_damage.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\fishboat_001_destruct.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\fishboat_002.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\fishboat_002_damage.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\fishboat_002_destruct.rvmat"
+				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_001.rvmat",
+				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_001_damage.rvmat",
+				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_001_destruct.rvmat",
+				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_002.rvmat",
+				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_002_damage.rvmat",
+				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_002_destruct.rvmat"
 			};
 		};
 	};

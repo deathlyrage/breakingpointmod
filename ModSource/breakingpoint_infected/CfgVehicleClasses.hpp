@@ -11,4 +11,5 @@ class CfgVehicleClasses
 {
 	//Zombies
 	class zombie { displayName = "Zombie"; };
+	class Survival { displayName = "Survival"; };
 };

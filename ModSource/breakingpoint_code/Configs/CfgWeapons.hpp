@@ -36,7 +36,7 @@ class CfgWeapons
 	class Uniform_Base;
 	class H_MilCap_ocamo;
 	class ItemCore;
-	class ItemInfo;
+	// class ItemInfo;
 	class H_Cap_red;
 	class U_B_FullGhillie_lsh;
 	class U_BG_leader;
@@ -84,7 +84,7 @@ class CfgWeapons
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Civilian1.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_infected\textures\clothing\BP_Zombie_Civilian1.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -102,7 +102,7 @@ class CfgWeapons
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Civilian2.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_infected\textures\clothing\BP_Zombie_Civilian2.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -120,7 +120,7 @@ class CfgWeapons
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		hiddenSelections[] = {"Camo1", "Camo2"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Clothes2.paa", "\A3\Characters_F\OPFOR\Data\tech_CO.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_infected\textures\clothing\BP_Zombie_Clothes2.paa", "\A3\Characters_F\OPFOR\Data\tech_CO.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -138,7 +138,7 @@ class CfgWeapons
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Clothes1.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_infected\textures\clothing\BP_Zombie_Clothes1.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -940,8 +940,8 @@ class CfgWeapons
 	
 	class BP_Engineer_1: Uniform_Base {
 		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Engineer level 1";
+		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -955,8 +955,8 @@ class CfgWeapons
 	
 	class BP_Engineer_1_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Engineer level 1 Zombie";
+		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -970,8 +970,8 @@ class CfgWeapons
 	
 	class BP_Engineer_2: Uniform_Base {
 		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Engineer level 2";
+		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -985,8 +985,8 @@ class CfgWeapons
 	
 	class BP_Engineer_2_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Engineer level 2 Zombie";
+		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -1000,8 +1000,8 @@ class CfgWeapons
 	
 	class BP_Engineer_3: Uniform_Base {
 		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Engineer level 3";
+		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -1015,8 +1015,8 @@ class CfgWeapons
 	
 	class BP_Engineer_3_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Engineer level 3 Zombie";
+		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -1641,7 +1641,7 @@ class CfgWeapons
 		model = "\A3\Characters_F_Exp\Common\equip_TacChestrig.p3d";
 		picture = "\A3\Characters_F_Exp\Data\UI\icon_V_TacChestrig_grn_ca.paa";
 		scope = 2;
-		class ItemInfo : ItemInfo {
+		class ItemInfo  {
 			containerClass = "Supply140";
 			hiddenSelections[] = {"camo"};
 			mass = 20;
@@ -1797,7 +1797,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa","\A3\Characters_F\OPFOR\Data\tech_oucamo_co"};
 		model = "\A3\Characters_F\OPFOR\equip_o_vest01";
 		picture = "\A3\characters_f_beta\Data\UI\icon_V_HarnessOU_gry_CA.paa";
-		class ItemInfo : ItemInfo {
+		class ItemInfo  {
 			containerClass = "Supply160";
 			hiddenSelections[] = {"Camo1","Camo2"};
 			mass = 40;
@@ -2301,7 +2301,7 @@ class CfgWeapons
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillies\ghillie1_ca.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
 		
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
@@ -2319,7 +2319,7 @@ class CfgWeapons
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillies\ghillie1_ca.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
 		
 		class ItemInfo: UniformItem {
 			uniformModel = "-";

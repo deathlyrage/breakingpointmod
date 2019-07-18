@@ -1251,14 +1251,4 @@ class OutroLoose
 
 
 
-		    items=1;
-		    class Item1
-            {
-			position[]={1653.8374,5.5,5004.2847};
-			azimut=554.84705;
-			id=1;
-			side="EMPTY";
-			vehicle="Land_i_Barracks_V1_F";
-			skill=0.60000002;
-		};
-	};
+	

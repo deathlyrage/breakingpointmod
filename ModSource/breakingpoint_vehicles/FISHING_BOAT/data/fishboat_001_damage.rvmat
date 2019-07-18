@@ -20,7 +20,7 @@ class Stage1
 };
 class Stage2
 {
-	texture="CA\data\Destruct\destruct_plech_half_dt.paa";
+	texture="a3\data_f\Destruct\destruct_plech_half_dt.paa";
 	uvSource="tex";
 	class uvTransform
 	{

@@ -106,18 +106,6 @@ class CfgSounds
 		titles[] = {};
 	};
 	
-	class z_dog_pain_0 {
-		name = "";
-		sound[]={"breakingpoint_sfx\dogs\pain0.ogg",1,1};
-		titles[] = {};
-	};
-	
-	class z_dog_pain_1 {
-		name = "";
-		sound[]={"breakingpoint_sfx\dogs\pain0.ogg",1,1};
-		titles[] = {};
-	};
-	
 	class z_dog_whistleFind_0 {
 		name = "";
 		sound[]={"breakingpoint_sfx\dogs\whistleFind.ogg",0.6,1};
@@ -242,12 +230,6 @@ class CfgSounds
 		sound[] = {"breakingpoint_sfx\player_effects\BP_Hunger_0.ogg",1.0,1,80};
 		titles[] = {};
 	};
-
-	class breath_1 {
-		name = "";
-		sound[] = {"breakingpoint_sfx\effects\breath_1",0.1,1,100};
-		titles[] = {};
-	};
 	class z_chopwood_0 {
 		name = "";
 		sound[] = {"breakingpoint_sfx\effects\chopwood.ogg", 0.1, 1,100};
@@ -283,19 +265,9 @@ class CfgSounds
 		sound[] = {"breakingpoint_sfx\effects\heartbeat_fear2.ogg",1.5,1,50};
 		titles[] = {};
 	};
-	class gore_1 {
+	class gore_short_loop {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\gore_1",0.1,1,140};
-		titles[] = {};
-	};
-	class gore_2 {
-		name = "";
-		sound[] = {"breakingpoint_sfx\effects\gore_2",0.1,1,140};
-		titles[] = {};
-	};
-	class gore_3 {
-		name = "";
-		sound[] = {"breakingpoint_sfx\effects\gore_3",0.1,1,140};
+		sound[] = {"breakingpoint_sfx\gore\gore_short_loop.ogg",0.1,1,140};
 		titles[] = {};
 	};
 	class panic_0 {
@@ -547,41 +519,26 @@ class CfgSounds
 	class z_hit_6 : z_hit_0 {
 		sound[] = {"breakingpoint_sfx\action\z_hit_6.ogg",0.1,1,30};
 	};
-	class z_hit_7 : z_hit_0 {
-		sound[] = {"breakingpoint_sfx\action\z_hit_7.ogg",0.1,1,30};
-	};
-	class z_hit_8 : z_hit_0 {
-		sound[] = {"breakingpoint_sfx\action\z_hit_8.ogg",0.1,1,30};
-	};
-	class z_hit_9 : z_hit_0 {
-		sound[] = {"breakingpoint_sfx\action\z_hit_9.ogg",0.1,1,30};
-	};
-	class z_hit_10 : z_hit_0 {
-		sound[] = {"breakingpoint_sfx\action\z_hit_10.ogg",0.1,1,30};
-	};
-	class z_hit_11 : z_hit_0 {
-		sound[] = {"breakingpoint_sfx\action\z_hit_11.ogg",0.1,1,30};
-	};
 
-	class z_fracture_0 : gore_1 {
+	class z_fracture_0 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\fracture_0.ogg",1,1,80};
 	};
-	class z_fracture_1 : gore_1 {
+	class z_fracture_1 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\fracture_0.ogg",1,1,80};
 	};
-	class z_scream_0 : gore_1 {
+	class z_scream_0 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\scream_short_0.ogg",0.1,1,80};
 	};
-	class z_scream_1 : gore_1 {
+	class z_scream_1 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\scream_short_1.ogg",0.1,1,80};
 	};
-	class z_scream_2 : gore_1 {
+	class z_scream_2 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\scream_short_2.ogg",0.1,1,80};
 	};
-	class z_scream_3 : gore_1 {
+	class z_scream_3 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\scream_short_3.ogg",0.1,1,80};
 	};
-	class z_scream_4 : gore_1 {
+	class z_scream_4 : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\scream_short_4.ogg",0.1,1,80};
 	};
 	class z_panic_0 {
@@ -598,7 +555,7 @@ class CfgSounds
 	class z_panic_1 : z_panic_0 {
 		sound[] = {"breakingpoint_sfx\gore\panic_1.ogg",0.1,1,50};
 	};
-	class z_gore_short_loop : gore_1 {
+	class z_gore_short_loop : gore_short_loop {
 		sound[] = {"breakingpoint_sfx\gore\gore_short_loop.ogg",0.1,1,30};
 	};
 

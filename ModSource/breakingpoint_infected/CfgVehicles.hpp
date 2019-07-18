@@ -420,14 +420,14 @@ class CfgVehicles
 		scope = protected;
 		model = "\breakingpoint_classes\models\BP_Hunter2.p3d";
 		hiddenSelections[] = {"Camo1"};
-		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\acr_soldier_nic_co.paa"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\aziz_co.paa"};
 		identityTypes[] = {"BP_Zombie1"};
 	};
 	class BPZombie_Hunter3 : zZombie_Base {
 		scope = protected;
 		model = "\breakingpoint_classes\models\BP_Hunter3.p3d";
 		hiddenSelections[] = {"Camo1"};
-		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\acr_soldier_nic_co.paa"};
+		hiddenSelectionsTextures[] = {"breakingpoint\textures\clothing\sf_gear_khaky_co.paa"};
 		identityTypes[] = {"BP_Zombie2"};
 	};
 	class BPZombie_RebelImp1: zZombie_Imp

@@ -34,20 +34,22 @@ _vehicle setDamage _damage;
 _vehicle enableRopeAttach true;
 
 //Generate Data
-_uniqueID = [(getDir _vehicle),(getPosATL _vehicle)] call BPServer_fnc_objectUID;
 _databasePos = _vehicle call BP_fnc_databasePos;
-_vehicle setVariable ["ObjectUID",_uniqueID];
+_vehicle setVariable ["ObjectUID","0"];
 _databasePos = _vehicle call BP_fnc_databasePos;
 _inventory = [];
 _hitPoints = [];
 
-if (_uniqueID == "0") exitWith {objNull};
 
 //Add Vehicle to Server Monitor
 0 = BP_serverObjectMonitor pushBack (netID _vehicle);
 
 //Put Vehicle In Database
-["CHILD:500:%1:%2:%3:%4:%5:%6:%7:",_type,_damage,_databasePos,_inventory,_hitPoints,_fuel,_uniqueID] call BPServer_fnc_callExtensionAsyncLow;
+_id = ["CHILD:500:%1:%2:%3:%4:%5:%6:",_type,_damage,_databasePos,_inventory,_hitPoints,_fuel] call BPServer_fnc_callExtension;
+_id = str(_id#0);
+_vehicle setVariable ["ObjectUID",_id];
+
+if (_id == "0") exitWith {objNull};
 
 //Return Vehicle
 _vehicle

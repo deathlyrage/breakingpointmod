@@ -21017,7 +21017,7 @@ class CfgMovesZombieSdr: CfgMovesZombie {
 		};
 
 		class AmovPercMwlkSlowWrflDf_v3: AmovPercMwlkSlowWrflDf_v1 {
-			file = "\A3\anims_f\Data\Anim\Sdr\Mov\Erc\Wlk\Low\Rfl\AmovPercMwlkSlowWrflDf_ver3";
+			file = "\A3\anims_f\Data\Anim\Sdr\Mov\Erc\Wlk\Low\Rfl\AmovPercMwlkSlowWrflDf_v3";
 			speed = 0.206897;
 			leftHandIKCurve[] = {1};
 			VariantsPlayer[] = {"AmovPercMwlkSlowWrflDf_v1", 0.100000, "AmovPercMwlkSlowWrflDf_v2", 0.100000, "AmovPercMwlkSlowWrflDf_v3", 0.800000};
@@ -44833,7 +44833,7 @@ class CfgGesturesZombie {
 		
 		class BP_Zomb_Attack1 : Default 
 		{
-			file = "\breakingpoint_anim\zmb\BPZombie1_Attack1.rtm";
+			file = "\breakingpoint_anim\zmb\BPZombie2_Attack1.rtm";
 			speed = 1;
 			soundOverride = "";
 			soundEnabled = 0;

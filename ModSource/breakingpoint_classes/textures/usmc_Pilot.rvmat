@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="breakingpoint_classes\textures\US_Pilot_NOHQ.paa";
+	//texture="breakingpoint_classes\textures\US_Pilot_NOHQ.paa";
 	uvSource="tex";
 	class uvTransform
 	{

@@ -47,7 +47,7 @@ class RscDisplayMain : RscStandardDisplay
 			y = 0;
 			w = 0;
 			h = 0;
-		}
+		};
 		
 		class BackgroundBarLeft : RscPicture
 		{

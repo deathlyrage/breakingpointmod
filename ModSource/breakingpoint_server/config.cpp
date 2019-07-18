@@ -58,6 +58,11 @@ class CfgBreakingPointServerSettings
 	{
 		medicalCooldown = 900;	//time in seconds for point gain on medical assistance
 	};
+	class BreakingPointExt
+	{
+		//Do not change this number unless you really know what you are doing!!!
+		version = "0.001";
+	};
 };
 
 class CfgDifficultyPresets
