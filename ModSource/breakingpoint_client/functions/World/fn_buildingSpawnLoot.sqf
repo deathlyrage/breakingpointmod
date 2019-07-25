@@ -27,7 +27,7 @@ if (!BP_Loot) exitWith {};
 if (BP_LootGlobal > BP_LootMax) exitWith {};
 
 //Check Building Isn't Locked
-_locked = (_building getVariable ['bis_disabled_Door',0] == 1);
+_locked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 if (_locked) exitWith {};
 
 //Check If Building Is A Haven

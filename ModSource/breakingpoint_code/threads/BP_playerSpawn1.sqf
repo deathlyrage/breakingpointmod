@@ -57,7 +57,7 @@ waitUntil
 	//_buildingLogic = nearestObject [player,"BP_Haven"];
 	//_buildingLogicResult = _buildingLogic getVariable ["building",objNull];
 	//_validBuildingLogic = (_building == _buildingLogicResult); 
-	//_buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
+	//_buildingLocked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 	//_inside = [player,_building] call BP_fnc_isInsideBuilding;
 	//if (_inside) then
 	//{

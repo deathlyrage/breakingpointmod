@@ -15,8 +15,11 @@ if (isNil "BP_BuildingsLocks") exitWith {};
 	_building = objectFromNetID _x;
 	if (!isNull _building) then
 	{
+		_buildingDoors = getNumber (configFile >> "CfgVehicles" >> typeof _building >> "numberOfDoors");
 		_disabledDoor = BP_BuildingsLocks select _forEachIndex;
-		_building setVariable ["bis_disabled_Door",_disabledDoor];
+		for "_i" from 1 to _buildingDoors do {
+			_building setVariable ["bis_disabled_Door_" + str _i,_disabledDoor];
+		};
 	};
 } forEach BP_Buildings;
 
