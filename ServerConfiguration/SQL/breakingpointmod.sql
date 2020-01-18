@@ -15,6 +15,10 @@ Date: 2017-09-16 02:06:59
 
 SET FOREIGN_KEY_CHECKS=0;
 
+CREATE DATABASE IF NOT EXISTS `breakingpointmod` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `breakingpointmod`;
+
+
 -- ----------------------------
 -- Table structure for buildings
 -- ----------------------------
