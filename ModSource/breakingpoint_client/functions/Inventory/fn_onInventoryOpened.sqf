@@ -113,7 +113,7 @@ if !(isNull _container) then
 	//	{
 	//		if ((_building distance _unit) < 30) then
 	//		{
-	//			_buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
+	//			_buildingLocked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 	//			if (_buildingLocked) then 
 	//			{
 	//				cutText ["This object is locked. Unlock the Building to access it.","PLAIN DOWN"];

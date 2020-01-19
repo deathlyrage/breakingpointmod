@@ -19,7 +19,7 @@ _building = nearestObject [player, "HouseBase"];
 
 if (isNull _building) exitWith {};
 
-_buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
+_buildingLocked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 if (_buildingLocked) exitWith { cutText ["This object is locked. You need to unlock the building first.","PLAIN DOWN"]; };
 
 _leaveReturn = ["Are you sure you would like to destroy this object?","Destroy Object",nil,true] call BIS_fnc_guiMessage;

@@ -142,7 +142,7 @@ if (_blueprint == "BlueprintHaven") exitWith
 	};
 
 	_lockable = (_type in BP_Houses);
-	_locked = (_building getVariable ['bis_disabled_Door',0] == 1);
+	_locked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 	_weaponHolderTypes = ["BP_LootBox","GroundWeaponHolder","WeaponHolderSimulated"];
 	_weaponHolder = (_type in _weaponHolderTypes);
 	_storage = false;
@@ -223,7 +223,7 @@ if (_blueprint == "BlueprintHavenReinforce") exitWith
 	};
 
 	_lockable = (_type in BP_Houses);
-	_locked = (_building getVariable ['bis_disabled_Door',0] == 1);
+	_locked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 
 	_weaponHolderTypes = ["BP_LootBox","GroundWeaponHolder","WeaponHolderSimulated"];
 	_weaponHolder = (_type in _weaponHolderTypes);

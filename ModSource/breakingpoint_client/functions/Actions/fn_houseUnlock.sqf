@@ -103,7 +103,7 @@ while {!isNull _display and dialog} do
 			{
 				_control ctrlSetText "\breakingpoint_ui\safe\lights_4.jpg";
 
-				//_buildingLogic setVariable ['bis_disabled_Door',0,true];
+				//_buildingLogic setVariable ['bis_disabled_Door_1',0,true];
 
 				sleep 1;
 				closeDialog 0;

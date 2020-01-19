@@ -22,7 +22,7 @@ if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
 };
 _buildingLockable = (_buildingType in BP_Houses);
 _buildingClaimed = ((netID _building) in BP_Buildings);
-_buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
+_buildingLocked = (_building getVariable ['bis_disabled_Door_1',0] == 1);
 
 if (isNull _building) exitWith {};
 if (_buildingLocked) exitWith {};

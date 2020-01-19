@@ -28,13 +28,16 @@ if (_buildingIndex == -1) exitWith {}; // Building not found
 _buildingData = BP_BuildingsData select _buildingIndex;
 
 _buildingData params ["_objects","_buildingID","_buildingUID","_playerID","_lock","_unlockAttempts","_explosive","_reinforcement"];
-
+_buildingDoors = getNumber (configFile >> "CfgVehicles" >> typeof _building >> "numberOfDoors");
 BP_HavenUnlockResult = (_combo == _lock);
 
 if (BP_HavenUnlockResult) then 
 {
 	//Unlock House
-	_building setVariable ["bis_disabled_Door",0];
+	// _building setVariable ["bis_disabled_Door_1",0];
+	for "_i" from 1 to _buildingDoors do {
+		_building setVariable ["bis_disabled_Door_"+ str _i,0];
+	};
 	BP_BuildingsLocks set [_buildingIndex,0];
 	publicVariable "BP_BuildingsLocks";
 	

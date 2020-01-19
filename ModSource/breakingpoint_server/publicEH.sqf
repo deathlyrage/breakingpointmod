@@ -73,7 +73,7 @@
 	if (_object isKindOf "Building") exitWith
 	{
 		_logic = _object getVariable ["logic",objNull];
-		_locked = _logic getVariable ["bis_disabled_Door",0];
+		_locked = _logic getVariable ["bis_disabled_Door_1",0];
 		
 		//Admin Log
 		_action = format ["Building ID %1 UID %2 PID %3 LOCK %4",_objectID,_objectUID,_objectPlayerID,_locked];

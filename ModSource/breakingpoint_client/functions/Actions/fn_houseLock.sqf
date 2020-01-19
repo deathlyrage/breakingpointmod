@@ -24,7 +24,7 @@ _buildingDoors = getNumber (configFile >> "CfgVehicles" >> _buildingType >> "num
 //Exit If Null Building
 if (isNull _building) exitWith {};
 
-//_buildingLogic setVariable ['bis_disabled_Door',1,true];
+//_buildingLogic setVariable ['bis_disabled_Door_1',1,true];
 
 //Ensure Player Isn't Inside Building
 //_inside = [player] call BP_fnc_isInsideBuilding;

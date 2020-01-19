@@ -342,7 +342,6 @@ class CfgMovesBasic
 			GestureLegPush[] = {"GestureLegPush", "Gesture"};
 			GestureNod[] = {"GestureNod", "Gesture"};
 			GestureAgonyCargo[] = {"GestureAgonyCargo", "Gesture"};
-			access = 3;
 			ladderOnDown = "LadderCivilOn_Top";
 			ladderOnUp = "LadderCivilOn_Top";
 			turnSpeed = 1;
@@ -18661,7 +18660,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor LMG (6.5 mm, Black)";
 		model = "\A3\Weapons_F\Machineguns\M200\lmg_suppressor";
-		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_acca_snds_lmg_blk_F_ca.paa";
+		picture = "\a3\Weapons_F\acc\Data\UI\icon_muzzle_snds_M_ca.paa";
 	};
 	class BP_muzzle_snds_H_MG_khk_F : muzzle_snds_H_MG { //Sound Suppressor LMG (6.5 mm, Khaki)
 		_generalMacro = "muzzle_snds_H_MG_khk_F";
@@ -18681,7 +18680,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor (5.56 mm, Sand)";
 		model = "\A3\Weapons_F\Acc\acca_snds_lmg_blk_F.p3d";
-		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_acca_snds_lmg_blk_F_ca.paa";
+		picture = "\a3\weapons_f_exp\acc\data\ui\icon_muzzle_snds_m_snd_f_ca.paa";
 	};
 	
 	class BP_muzzle_snds_B_khk_F : BP_muzzle_snds_m_khk_F { //Sound Suppressor (7.62 mm, Khaki)
@@ -21227,7 +21226,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    scope = 2;                                                                   
 	    displayName = "Light Bipod";  
 		descriptionShort = "Bipod for intermediate Rifle use";		
-	    picture = "\A3\Weapons_F_Mark\Data\UI\gear_accu_bipod_01_snd_CA.paa";          
+	    picture = "\a3\Weapons_F_Mark\Data\UI\icon_bipod_01_F_snd_ca.paa";         
 	    model = "\breakingpoint_weapons\models\Harris\BP_Harris.p3d";                      
    
 	    class ItemInfo: InventoryUnderItem_Base_F
@@ -21246,7 +21245,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    scope = 2;                                                                   
 	    displayName = "Heavy Bipod";
 		descriptionShort = "Bipod for LMG and Sniper applications";		
-	    picture = "\A3\Weapons_F_Mark\Data\UI\gear_accu_bipod_01_snd_CA.paa";          
+	    picture = "\a3\Weapons_F_Mark\Data\UI\icon_bipod_01_F_snd_ca.paa";         
 	    model = "\breakingpoint_weapons\models\Harris\BP_Harris2.p3d";                      
    
 	    class ItemInfo: InventoryUnderItem_Base_F
@@ -21560,6 +21559,7 @@ class CfgMagazines {
 		ammo = "BP_AlarmClock_Ammo";
 		type = 256;
 		mass = 2;
+		//scope = 3;
 		value = 1;
 		maxLeadSpeed = 7;
 		initSpeed = 18;

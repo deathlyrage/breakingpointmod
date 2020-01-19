@@ -14,7 +14,7 @@ BP_ZombieClasses = ["zZombie_Base","z_villager1","z_villager2","z_villager3","z_
 BP_LootClasses = [];
 BP_StorageClasses = [];
 
-bis_disabled_Door = nil;
+bis_disabled_Door_1 = nil;
 
 BP_SprayCans =
 [
