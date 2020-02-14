@@ -65,8 +65,8 @@ class Mission
 		wavesForced=0;
 		windForced=0;
 		year=2035;
-		month=6;
-		day=24;
+		month=3;
+		day=27;
 		hour=12;
 		minute=0;
 	};
