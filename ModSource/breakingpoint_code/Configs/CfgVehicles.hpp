@@ -7,6 +7,11 @@
 	Alderon Games Pty Ltd
 */
 
+class SmallFire;
+class Thing;
+class UniformSlotInfo;
+class WeaponCloudsMGun;
+
 class CfgVehicles
 {
 	class Logic;
