@@ -59,6 +59,7 @@ class CfgVehicles
 			local = "";
 		};
 	};
+	class Thing;
 	class BP_Haven: Thing
 	{
 		scope = 2;
@@ -681,6 +682,7 @@ class CfgVehicles
 		selectionDamage = "DamT_1";
 	};
 	class BP_LootBox;
+	class SmallFire;
 	class BP_CampfireBase: BP_LootBox
 	{
 		scope = 0;
@@ -5730,6 +5732,7 @@ class CfgVehicles
 				passThrough = 1;
 			};
 		};
+		
 		class EventHandlers: BP_VehicleEventHandlers{};
 	};
 };
