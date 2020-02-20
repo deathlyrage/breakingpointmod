@@ -15,7 +15,7 @@
 //closeDialog 0;
 
 //Undead Players Can't Access Inventory
-if (BP_isUndead) exitWith {true};
+//if (BP_isUndead) exitWith {true};
 
 //Players who have Inventory Disallowed Can't Access Inventory
 //if (!BP_AllowInventory) exitWith {true};
