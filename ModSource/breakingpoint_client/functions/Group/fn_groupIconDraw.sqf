@@ -19,7 +19,7 @@ if (isNull player) exitWith {};
 if (r_player_blood <= 0) exitWith { [17] call BP_fnc_death; };
 
 if (BP_isUndead) then {
-	if (cameraView != "internal") then { cameraOn switchCamera "internal"; };
+//	if (cameraView != "internal") then { cameraOn switchCamera "internal"; };
 } else {
 	//Draw Group Icons
 	{ if (count _x > 3) then { drawIcon3D _x; }; } count r_group_membersIcons;
