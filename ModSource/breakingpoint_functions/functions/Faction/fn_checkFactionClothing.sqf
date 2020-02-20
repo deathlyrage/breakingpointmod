@@ -8,7 +8,7 @@
 */
 
 //Don't Check Clothing if Undead
-if (BP_isUndead) exitWith {};
+//if (BP_isUndead) exitWith {};
 
 //Check Clothing
 private ["_class","_factionName","_factionLevel","_levelStr","_clothingArray","_clothing","_oldUniform","_weaponsUniform","_magsUniform","_itemsUniform"];
@@ -16,7 +16,7 @@ private ["_class","_factionName","_factionLevel","_levelStr","_clothingArray","_
 _class = player getVariable ["class",0];
 
 //Doesn't Apply To Undead Classes
-if (_class == 7) exitWith {};
+//if (_class == 7) exitWith {};
 
 //None Class Can't Wear Faction Clothing
 if (_class < 1) exitWith
