@@ -55,10 +55,6 @@ if (_isHostage and _hasKnife and !_inVehicle) then {
 // Undead Attack
 //if (BP_isUndead) then
 //{
-//	if (s_player_undeadAttack < 0) then {
-//		s_player_undeadAttack = player addAction ["", { _this call BP_fnc_undeadAttack; }, "", 0, false, true, "DefaultAction"];
-//	};
-//} else {
 //	player removeAction s_player_undeadAttack;
 //	s_player_undeadAttack = -1;
 //};

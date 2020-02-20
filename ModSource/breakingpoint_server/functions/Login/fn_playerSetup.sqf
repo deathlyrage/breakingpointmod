@@ -1,4 +1,5 @@
 
+
 params ["_logicNetID","_playerNetID"];
 _logic = objectFromNetID _logicNetID;
 _player = objectFromNetID _playerNetID;

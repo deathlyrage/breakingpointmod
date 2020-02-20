@@ -141,7 +141,8 @@ waitUntil
 		} else {
 			r_player_blood = _newHealth;
 		};
-	} else {
+	}
+	else {
 		r_player_blood = (r_player_blood + _regenRate);
 	};
 
