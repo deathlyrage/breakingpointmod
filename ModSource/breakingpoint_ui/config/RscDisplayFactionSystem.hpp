@@ -1,4 +1,3 @@
-
 class RscDisplayFactionSystem
 {
 	idd = 6910;

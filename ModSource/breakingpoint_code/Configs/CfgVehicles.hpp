@@ -54,6 +54,7 @@ class CfgVehicles
 			local = "";
 		};
 	};
+	class Thing;
 	class BP_Haven: Thing
 	{
 		scope = 2;
@@ -676,6 +677,7 @@ class CfgVehicles
 		selectionDamage = "DamT_1";
 	};
 	class BP_LootBox;
+	class SmallFire;
 	class BP_CampfireBase: BP_LootBox
 	{
 		scope = 0;
@@ -2591,38 +2593,6 @@ class CfgVehicles
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
-	class BP_Undead1_F: BP_Man
-	{
-		scope = 2;
-		displayName = "Watcher Level 1";
-		uniformClass = "BP_Undead_1";
-		model = "\breakingpoint_classes\models\BP_RefugeeF.p3d";
-		side = 3;
-		backpack = "";
-		weapons[] = {"Throw","Put"};
-		magazines[] = {};
-		respawnWeapons[] = {"Throw","Put"};
-		respawnMagazines[] = {};
-		Items[] = {};
-		respawnItems[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
-		canHideBodies = 0;
-		class SpeechVariants
-		{
-			class Default
-			{
-				speechSingular[] = {""};
-				speechPlural[] = {""};
-			};
-		};
-		textSingular = "";
-		textPlural = "";
-		nameSound = "";
-		hiddenSelections[] = {};
-		hiddenSelectionsTextures[] = {};
-	};
 	class BP_Undead2_F: BP_Man
 	{
 		scope = 2;
@@ -2655,7 +2625,6 @@ class CfgVehicles
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
-
 	class BP_Undead3_F: BP_Man
 	{
 		scope = 2;
@@ -2687,7 +2656,7 @@ class CfgVehicles
 		nameSound = "";
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
-	};
+	};	
 	class BP_Optout_F: BP_Man
 	{
 		scope = 2;
@@ -5726,6 +5695,7 @@ class CfgVehicles
 				passThrough = 1;
 			};
 		};
+		
 		class EventHandlers: BP_VehicleEventHandlers{};
 	};
 };
