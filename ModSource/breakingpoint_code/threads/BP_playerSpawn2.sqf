@@ -231,13 +231,6 @@ waitUntil
 			player setVariable ["messing",[BP_hunger,BP_thirst]];
 			call BP_fnc_medSave;
 		};
-
-		//Save Medical Data - Every 1 Minute
-		if ((diag_tickTime - BP_lastSaveMed) > _saveTimeMed) then {
-			["playerSpawn2: Medical Sync"] call BP_fnc_debugConsoleFormat;
-			player setVariable ["messing",[BP_hunger,BP_thirst]];
-			call BP_fnc_medSave;
-		};
 		
 		//Hunger
 //		_hunger = player getVariable ["lastFeed",0];
