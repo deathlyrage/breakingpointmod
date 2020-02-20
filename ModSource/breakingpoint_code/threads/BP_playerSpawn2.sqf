@@ -138,44 +138,135 @@ waitUntil
 		};
 	
 	} else {
+
 		//Disable Chat
 		showChat false;
+
+		//Calculate Hunger
+		if !(_inVehicle) then {
+			_hunger = +((((r_player_bloodTotal - r_player_blood) / r_player_bloodTotal) * 5) + (_speed / 2)) * 4;
+		} else {
+			_hunger = +((((r_player_bloodTotal - r_player_blood) / r_player_bloodTotal) * 5)) * 4;
+		};
+		BP_hunger = BP_hunger + ((_hunger / 60) * 2);
+
+		//Calculate Thirst
+		_thirst = 27;
+		if !(_inVehicle) then { _thirst = ((_speed / 2) + 4) * 5; };
+		BP_thirst = BP_thirst + (_thirst / 60);
+
+		//Player is Infected
+		if (r_player_infected and !r_player_adrenaline) then
+		{
+			//Random Chance
+			_rnd = ceil (random 8);
+			
+			//Coughing Sounds
+			[player,"cough",_rnd,false,9] call BP_fnc_objSpeak;
+			
+			//Random Camera Shakes if Infected
+			if (_rnd < 3) then { addCamShake [2, 1, 25]; };
+			
+			//Lower Health as a result of infection
+			if (r_player_blood > 2500) then { r_player_blood = r_player_blood - 5; };
+		};
+
+		//Pain Shake Effects
+		if (r_player_inpain and !r_player_unconscious and !r_player_adrenaline) then {
+			addCamShake [2, 1, 25];
+		};
+
+		_foodVal = 1 - (BP_hunger / SleepFood);
+		_thirstVal = 1 - (BP_thirst / SleepWater);
+		
+		//Thirst Effects
+		if (_thirstVal < 0.3) then {
+			_thirstSound = "thirst_0";
+			if (_thirstVal < 0.2) then { _thirstSound = "thirst_1"; };
+			if (_thirstVal < 0.1) then {
+				_thirstSound = "thirst_2";
+				cutText ["You are on the verge of dehydration.", "PLAIN DOWN"];
+			};
+			_rnd = ceil (random 8);
+			[player,_thirstSound,_rnd,false,9] call BP_fnc_objSound;
+		};
+
+		//Hunger Damage
+		if (_foodVal < 0.3) then {
+			_foodSound = "hunger_0";
+			if (_foodVal < 0.2) then { _foodSound = "hunger_1"; };
+			if (_foodVal < 0.1) then {
+				_foodSound = "hunger_2";
+				cutText ["You are on the verge of starvation.", "PLAIN DOWN"];
+			};
+			_rnd = ceil (random 8);
+			[player,_foodSound,_rnd,false,9] call BP_fnc_objSound;
+		};
+		
+		//Thirst Damage
+		if (_thirstVal <= 0) then {
+			_newHealth = r_player_blood - 35;
+			if (_newHealth < 1) then {
+				//Death From Dehydration
+				[10] call BP_fnc_death;
+			} else {
+				r_player_blood = _newHealth;
+			};
+		};
+		
+		//Hunger Damage
+		if (_foodVal <= 0) then {
+			_newHealth = r_player_blood - 35;
+			if (_newHealth < 1) then {
+				//Death From Starvation
+				[9] call BP_fnc_death;
+			} else {
+				r_player_blood = _newHealth;
+			};
+		};
+
+		//Save Medical Data - Every 1 Minute
+		if ((diag_tickTime - BP_lastSaveMed) > _saveTimeMed) then {
+			["playerSpawn2: Medical Sync"] call BP_fnc_debugConsoleFormat;
+			player setVariable ["messing",[BP_hunger,BP_thirst]];
+			call BP_fnc_medSave;
+		};
 		
 		//Hunger
-		_hunger = player getVariable ["lastFeed",0];
-		if ((diag_tickTime - _hunger) > 240) then
-		{
-			cutText ["You are on the verge of starvation.", "PLAIN DOWN"];
-			if (!BP_isHungryUndead) then { BP_isHungryUndead = true; };
-		};
-		
-		//No Legions
-		_groupID = player getVariable ["group","0"];
-		if (_groupID != "0") then { player setVariable ["group","0",true]; };
+//		_hunger = player getVariable ["lastFeed",0];
+//		if ((diag_tickTime - _hunger) > 240) then
+//		{
+//			cutText ["You are on the verge of starvation.", "PLAIN DOWN"];
+//			if (!BP_isHungryUndead) then { BP_isHungryUndead = true; };
+//		};
+//		
+//		//No Legions
+//		_groupID = player getVariable ["group","0"];
+//		if (_groupID != "0") then { player setVariable ["group","0",true]; };
 		
 		//Force Zombie Face
-		if (face player != "BP_Zombie1") then 
-		{ 
-			//player setFace "BP_Zombie1";
-			removeHeadgear player;
-			removeGoggles player;
-			player setIdentity "BP_Zombie1";
-		};
+//		if (face player != "BP_Zombie1") then 
+//		{ 
+//			//player setFace "BP_Zombie1";
+//			removeHeadgear player;
+//			removeGoggles player;
+//			player setIdentity "BP_Zombie1";
+//		};
 	
 		//Heartbeat Sounds
-		_nearestPlayer = objNull;
-		{
-			if (alive _x && {!(_x getVariable ["class",0] == 7)} && {_x != player} && {isPlayer _x}) then
-			{
-				if ((player distance _x) < 250) then
-				{
-					if (isNull _nearestPlayer) exitWith { _nearestPlayer = _x; };
-					if ((player distance _x) < (_nearestPlayer distance player)) exitWith { _nearestPlayer = _x; };
-				};
-			};
-		} count allPlayers;
-
-		if (!isNull _nearestPlayer) then { _nearestPlayer say ["heartbeat_undead",250]; };
+//		_nearestPlayer = objNull;
+//		{
+//			if (alive _x && {!(_x getVariable ["class",0] == 7)} && {_x != player} && {isPlayer _x}) then
+//			{
+//				if ((player distance _x) < 250) then
+//				{
+//					if (isNull _nearestPlayer) exitWith { _nearestPlayer = _x; };
+//					if ((player distance _x) < (_nearestPlayer distance player)) exitWith { _nearestPlayer = _x; };
+//				};
+//			};
+//		} count allPlayers;
+//
+//		if (!isNull _nearestPlayer) then { _nearestPlayer say ["heartbeat_undead",250]; };
 	};
 
 	//Exit Thread If Player Is Dead

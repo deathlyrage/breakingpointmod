@@ -8,58 +8,62 @@
 */
 
 class CfgTime
-{	
+{
+
 	class Base
 	{
-		date[] = {8,12,2035};
 	};
-
-	class Altis : Base
+	class Altis: Base
 	{
-		first[] = {7,00};
+        date[] = {24,6,2035};
+		first[] = {7,0};
 		second[] = {14,30};
 	};
-	
-	class Stratis : Base
+	class Stratis: Base
 	{
-		first[] = {7,00};
+        date[] = {06,7,2035};
+		first[] = {7,0};
 		second[] = {14,30};
 	};
-	
-	class newhaven : Base
+	class newhaven: Base
 	{
-		first[] = {7,00};
-		second[] = {13,30};
+        date[] = {10,1,2035};
+		first[] = {14,00};
+		second[] = {22,00};
 	};
-
-	class Esseker : Base
+	class Esseker: Base
 	{
-		first[] = {7,00};
-		second[] = {15,00};
-	};
-	
-	class Thirsk : Base
-	{
-		first[] = {9,45};
-		second[] = {11,30};
-	};
-	
-	class ThirskW : Thirsk {};
-	
-	class Chernarus : Base
-	{
-		first[] = {7,30};
-		second[] = {14,00};
-	};
-	
-	class namalsk : Base
-	{
+        date[] = {10,6,2035};
 		first[] = {7,0};
 		second[] = {15,0};
 	};
-	
-	class Tanoa : Base
+	class Thirsk: Base
 	{
+        date[] = {10,6,2035};
+		first[] = {9,00};
+		second[] = {12,00};
+	};
+	class ThirskW: Base
+	{
+        date[] = {11,5,2035};
+        first[] = {04,00};
+        second[] = {10,00};
+	}
+	class Chernarus: Base
+	{
+        date[] = {10,6,2035};
+		first[] = {9,00};
+		second[] = {12,00};
+	};
+	class namalsk: Base
+	{
+        date[] = {10,1,2035};
+		first[] = {9,0};
+		second[] = {12,0};
+	};
+	class Tanoa: Base
+	{
+        date[] = {06,6,2035};
 		first[] = {5,30};
 		second[] = {16,30};
 	};

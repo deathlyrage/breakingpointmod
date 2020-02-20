@@ -55,6 +55,9 @@ BP_NormalClothing =
 	"BP_Engineer_1",
 	"BP_Engineer_2",
 	"BP_Engineer_3",
+	"BP_Undead_1",
+	"BP_Undead_2",
+	"BP_Undead_3",
 	"BP_OptOut",
 	"BP_OptOut2",
 	"BP_OptOut3",
@@ -116,7 +119,7 @@ BP_ZombieClothing =
 
 BP_Group = [];
 
-BP_TraitorClothing = ["BP_Guardian_F","BP_Rebel_F","BP_Refugee_F","BP_Survivalist_F","BP_Engineer_F"];
+BP_TraitorClothing = ["BP_Guardian_F","BP_Rebel_F","BP_Refugee_F","BP_Survivalist_F","BP_Engineer_F","BP_Undead_F"];
 
 BP_Threads = [];
 
@@ -666,5 +669,3 @@ BP_ObjectPreload =
 	"BP_Skip4",
 	"BP_Skip5"
 ];
-
-
