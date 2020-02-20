@@ -28,27 +28,27 @@ waitUntil
 	_regenRateSitting = getNumber (_configFile >> "Levels" >> _levelStr >> "regenRateSitting");
 
 	//Handle Undead Health
-	if (BP_isUndead) then
-	{
-		if (r_player_bloodTotal < _maxHealth) then
-		{
-			r_player_bloodTotal = _maxHealth;
-			r_player_blood = _maxHealth;
-		};
-
-		//Bypass Medical Effects
-		r_player_inpain = false;
-		r_player_infected = false;
-		r_player_injured = false;
-		r_action_rest = false;
-		r_player_unconscious = false;
-		r_fracture_legs = false;
-		r_hit_hands = 0;
-		r_hit_legs = 0;
-		player enableStamina false;
-		player enableFatigue false;
-		player SetStamina 60;
-	};
+//	if (BP_isUndead) then
+//	{
+//		if (r_player_bloodTotal < _maxHealth) then
+//		{
+//			r_player_bloodTotal = _maxHealth;
+//			r_player_blood = _maxHealth;
+//		};
+//
+//		//Bypass Medical Effects
+//		r_player_inpain = false;
+//		r_player_infected = false;
+//		r_player_injured = false;
+//		r_action_rest = false;
+//		r_player_unconscious = false;
+//		r_fracture_legs = false;
+//		r_hit_hands = 0;
+//		r_hit_legs = 0;
+//		player enableStamina false;
+//		player enableFatigue false;
+//		player SetStamina 60;
+//	};
 	
 	//Max Blood
 	if (r_player_blood > r_player_bloodTotal) then { r_player_blood = r_player_bloodTotal; };
@@ -141,7 +141,8 @@ waitUntil
 		} else {
 			r_player_blood = _newHealth;
 		};
-	} else {
+	}
+	else {
 		r_player_blood = (r_player_blood + _regenRate);
 	};
 
@@ -281,7 +282,7 @@ waitUntil
 	
 	//Screen FX Based on Health / Max Health
 	if (BP_isUndead) then {
-		"colorCorrections" ppEffectAdjust [1, 1, 0, [0.1, 0.5, 0.5, -1.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
+		"colorCorrections" ppEffectAdjust [1, 1, 0, [0.1, 0.1, 0.1, 0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
 	} else {
 		if (r_player_adrenaline) then {
 			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_bloodTotal/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
