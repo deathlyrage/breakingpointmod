@@ -148,7 +148,7 @@ _launcher = secondaryWeapon player;
 if (_dikCode == 2) then {
 	if (time - BP_lastCheckBit > 1) then
 	{
-		if (BP_isUndead) exitWith {};
+//		if (BP_isUndead) exitWith {};
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
@@ -168,7 +168,7 @@ if (_dikCode == 2) then {
 if (_dikCode == 3) then {
 	if (time - BP_lastCheckBit > 1) then
 	{
-		if (BP_isUndead) exitWith {};
+//		if (BP_isUndead) exitWith {};
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
@@ -189,7 +189,7 @@ if (_dikCode == 4) then
 {
 	if (time - BP_lastCheckBit > 1) then
 	{
-		if (BP_isUndead) exitWith {};
+//		if (BP_isUndead) exitWith {};
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
@@ -210,7 +210,7 @@ if (_dikCode == 5) then
 {
 	if (time - BP_lastCheckBit > 1) then
 	{
-		if (BP_isUndead) exitWith {};
+//		if (BP_isUndead) exitWith {};
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
@@ -238,7 +238,7 @@ if (_dikCode == 5) then
 if (_dikCode == 6) then {
 	if (time - BP_lastCheckBit > 1) then
 	{
-		if (BP_isUndead) exitWith {};
+//		if (BP_isUndead) exitWith {};
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
@@ -261,7 +261,7 @@ if (_dikCode == 6) then {
 if (_dikCode == 7) then {
 	if (time - BP_lastCheckBit > 1) then
 	{
-		if (BP_isUndead) exitWith {};
+//		if (BP_isUndead) exitWith {};
 		BP_lastCheckBit = time;
 		[] spawn BP_fnc_windCheck;
 	};
@@ -350,29 +350,29 @@ if (_dikCode in actionKeys "reloadMagazine") then {
 	r_interrupt = true;
 	r_action_rest = false;
 	
-	if (BP_isUndead) then
-	{
-		//Sound FX
-		[player,"spotted",0,false] call BP_fnc_objSpeak;
-		
-		//Handle Perk
-		_lastHordeTime = player getVariable ["lastHorde",0];
-		if ((diag_tickTime - _lastHordeTime) > 60) then
-		{
-			player setVariable ["lastHorde",diag_tickTime];
-			//Horde Perk Distance
-			_factionLevel = player call BP_fnc_getFactionLevel;
-			_distance = 50;
-			if (_factionLevel == 2) then { _distance = 100; };
-			if (_factionlevel == 3) then { _distance = 250; };
-			[player,_distance,false,(getPosATL player)] spawn BP_fnc_zombieAlert;
-			cutText ["Zombie Horde Perk Activated","PLAIN DOWN"];
-		} else {
-			cutText ["Zombie Horde Perk on Cooldown.","PLAIN DOWN"];
-		};
-		
-		_handled = true;
-	};
+//	if (BP_isUndead) then
+//	{
+//		//Sound FX
+//		[player,"spotted",0,false] call BP_fnc_objSpeak;
+//		
+//		//Handle Perk
+//		_lastHordeTime = player getVariable ["lastHorde",0];
+//		if ((diag_tickTime - _lastHordeTime) > 60) then
+//		{
+//			player setVariable ["lastHorde",diag_tickTime];
+//			//Horde Perk Distance
+//			_factionLevel = player call BP_fnc_getFactionLevel;
+//			_distance = 50;
+//			if (_factionLevel == 2) then { _distance = 100; };
+//			if (_factionlevel == 3) then { _distance = 250; };
+//			[player,_distance,false,(getPosATL player)] spawn BP_fnc_zombieAlert;
+//			cutText ["Zombie Horde Perk Activated","PLAIN DOWN"];
+//		} else {
+//			cutText ["Zombie Horde Perk on Cooldown.","PLAIN DOWN"];
+//		};
+//		
+//		_handled = true;
+//	};
 	
 	if (r_player_unconscious and !_isHostage) then {
 		_handled = true;
@@ -645,7 +645,7 @@ if (_dikCode in actionKeys "User8") then {
 
 if (_dikCode in actionKeys "User9") then 
 {
-	if (BP_isUndead) exitWith {};
+//	if (BP_isUndead) exitWith {};
 	
 	if (_isHostage) exitWith {};
 	
