@@ -53,15 +53,15 @@ if (_isHostage and _hasKnife and !_inVehicle) then {
 };
 
 // Undead Attack
-if (BP_isUndead) then
-{
-	if (s_player_undeadAttack < 0) then {
-		s_player_undeadAttack = player addAction ["", { _this call BP_fnc_undeadAttack; }, "", 0, false, true, "DefaultAction"];
-	};
-} else {
-	player removeAction s_player_undeadAttack;
-	s_player_undeadAttack = -1;
-};
+//if (BP_isUndead) then
+//{
+//	if (s_player_undeadAttack < 0) then {
+//		s_player_undeadAttack = player addAction ["", { _this call BP_fnc_undeadAttack; }, "", 0, false, true, "DefaultAction"];
+//	};
+//} else {
+//	player removeAction s_player_undeadAttack;
+//	s_player_undeadAttack = -1;
+//};
 
 // Allow Level 3 Ranger to Use Med Backpack
 if (_hasMedBackpack and _canDo) then {
@@ -940,7 +940,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	//};
 
 	//Study / Loot / Hide Bodies
-	if (_isMan && {!_isAlive} && {_canDo} && {!_isZombie} && {!_isAnimal} && {!_isUndead} && {!_targetUndead}) then {
+	if (_isMan && {!_isAlive} && {_canDo} && {!_isZombie} && {!_isAnimal} && {!_targetUndead}) then {
 		if (s_player_studybody < 0) then {
 			s_player_studybody = player addAction ["Study Remains", { _this spawn BP_fnc_studyBody; },_cursorTarget, 0, false, true, "",""];
 		};
