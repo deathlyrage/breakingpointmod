@@ -7,281 +7,340 @@
   Alderon Games Pty Ltd
 */
 
-class Undead : BP_BaseFaction
-{
-	name = "Undead";
-		
-	class Levels : Levels
+	class Undead: BP_BaseFaction
 	{
-		class Level_Base : Level_Base 
+		name = "Engineer";
+		class Levels: Levels
 		{
-			class Spawn 
+			class Level_Base: Level_Base
 			{
-				//Array Of Toolbelt Items
-				toolbelt[] = {};
-				//Array Of Random (Clothing,Backpack,Vest)
-				primary[] = {};
-				launcher[] = {};
-				handgun[] = {};
-				clothing[] = 
+				class Spawn
 				{
-					"BP_Refugee_1_Z",
-					"BP_Guardian_1_Z",
-					"BP_Rebel_1_Z",
-					"BP_Hunter_1_Z",
-					"BP_Survivalist_1_Z"/*,
-					"BP_Engineer_1_Z"*/
+					toolbelt[] = {};
+					primary[] = {};
+					launcher[] = {};
+					handgun[] = {};
+					clothing[] = {};
+					backpack[] = {};
+					vest[] = {};
 				};
-				backpack[] = {};
-				vest[] = {};
-			};
-			class Uniform : BP_BaseGear 
-			{
-				//Array Of Weapons Inside Uniform
-				weapons[] = {};
-				//Array Of Magazines Inside Uniform
-				magazines[] = {};
-				//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
-				items[] = {};
-			};
-			class Vest : BP_BaseGear {};
-			class Backpack : BP_BaseGear {};
-		};
-		
-		class Level_0 : Level_Base 
-		{
-			maxHealth = 21000;
-			regenRate = 60;
-			class Spawn : Spawn
-			{
-				clothing[] = 
+				class Uniform: BP_BaseGear
 				{
-					"BP_Refugee_F_Z",
-					"BP_Guardian_F_Z",
-					"BP_Rebel_F_Z",
-					"BP_Hunter_F_Z",
-					"BP_Survivalist_F_Z"/*,
-					"BP_Engineer_F_Z"*/
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
 				};
+				class Vest: BP_BaseGear{};
+				class Backpack: BP_BaseGear{};
 			};
-		};
-		
-		class Level_1 : Level_Base 
-		{
-			maxHealth = 21000;
-			regenRate = 60;
-			class Spawn : Spawn
+			class Level_0: Level_Base
 			{
-				clothing[] = 
+				class Spawn
 				{
-					"BP_Refugee_1_Z",
-					"BP_Guardian_1_Z",
-					"BP_Rebel_1_Z",
-					"BP_Hunter_1_Z",
-					"BP_Survivalist_1_Z"/*,
-					"BP_Engineer_1_Z"*/
+					toolbelt[] = {};
+					primary[] = {};
+					launcher[] = {};
+					handgun[] = {};
+					clothing[] = {"BP_Guardian_F"};
+					backpack[] = {};
+					vest[] = {};
 				};
-			};
-		};
-		
-		class Level_2 : Level_Base 
-		{
-			maxHealth = 36000;
-			regenRate = 90;
-			class Spawn : Spawn
-			{
-				clothing[] = 
+				class Uniform: BP_BaseGear
 				{
-					"BP_Refugee_2_Z",
-					"BP_Guardian_2_Z",
-					"BP_Rebel_2_Z",
-					"BP_Hunter_2_Z",
-					"BP_Survivalist_2_Z"/*,
-					"BP_Engineer_2_Z"*/
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
+				};
+				class Vest: BP_BaseGear{};
+				class Backpack: BP_BaseGear{};
+			};
+			class Level_1: Level_Base
+			{
+				class Spawn
+				{
+					toolbelt[] = {};
+					primary[] = {};
+					launcher[] = {};
+					handgun[] = {};
+					clothing[] = {"BP_Undead_1"};
+					backpack[] = {};
+					vest[] = {};
+				};
+				class Uniform: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {"ItemKnife"};
+					items[] = {};
+				};
+				class Vest: BP_BaseGear{};
+				class Backpack: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
 				};
 			};
-		};
-		
-		class Level_3 : Level_Base 
-		{
-			maxHealth = 48000;
-			regenRate = 120;
-			class Spawn : Spawn
+			class Level_2: Level_Base
 			{
-				clothing[] = 
+				class Spawn
 				{
-					"BP_Refugee_3_Z",
-					"BP_Guardian_3_Z",
-					"BP_Rebel_3_Z",
-					"BP_Hunter_3_Z",
-					"BP_Survivalist_3_Z"/*,
-					"BP_Engineer_3_Z"*/
+					toolbelt[] = {"ItemMap"};
+					primary[] = {};
+					launcher[] = {};
+					handgun[] = {};
+					clothing[] = {"BP_Undead_2"};
+					backpack[] = {};
+					vest[] = {};
+				};
+				class Uniform: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {"ItemKnife"};
+					items[] = {};
+				};
+				class Vest: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
+				};
+				class Backpack: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
+				};
+			};
+			class Level_3: Level_Base
+			{
+				class Spawn
+				{
+					toolbelt[] = {"ItemMap"};
+					primary[] = {};
+					launcher[] = {};
+					handgun[] = {};
+					clothing[] = {"BP_Undead_3"};
+					backpack[] = {};
+					vest[] = {};
+				};
+				class Uniform: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {"ItemKnife"};
+					items[] = {};
+				};
+				class Vest: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
+				};
+				class Backpack: BP_BaseGear
+				{
+					weapons[] = {};
+					magazines[] = {};
+					items[] = {};
 				};
 			};
 		};
-		
-	};
-	
-	class Points
-	{
-		base = 0;
-		min = -3000;
-		max = 6000;
-		//Dont Include Level 0 ( Evil ) It's auto detected if < base value.
-		levels[] = {0,2000,5000};
-		class Aid {
-			class Ranger 
-			{
-				food = 10;
-				drink = 10;
-				bandage = 10;
-				dressing = 25;
-				morphine = 25;
-				surgery = 50;
-				gut = 0;
-			};
-			class Nomad 
-			{
-				food = 10;
-				drink = 10;
-				bandage = 10;
-				dressing = 25;
-				morphine = 25;
-				surgery = 50;
-				gut = 0;
-			};
-			class Survivalist 
-			{
-				food = 25;
-				drink = 25;
-				bandage = 10;
-				dressing = 25;
-				morphine = 25;
-				surgery = 75;
-				gut = 0;
-			};
-			class Outlaw
-			{
-				food = 0;
-				drink = 0;
-				bandage = 0;
-				dressing = 0;
-				morphine = 0;
-				surgery = 0;
-				gut = 100;
-			};
-			class Hunter 
-			{
-				food = -5;
-				drink = -5;
-				bandage = -5;
-				dressing = -10;
-				morphine = -25;
-				surgery = -50;
-				gut = 100;
-			};
-		};
-		class Destroy {
-			class None {
-				vehicle = 50;
-				storage = 50;
-			};
-			class Ranger {
-				vehicle = 0;
-				storage = 0;
-			};
-			class Nomad {
-				vehicle = 0;
-				storage = 0;
-			};
-			class Survivalist {
-				vehicle = 0;
-				storage = 0;
-			};
-			class Outlaw {
-				vehicle = 0;
-				storage = 50;
-			};
-			class Hunter {
-				vehicle = 100;
-				storage = 50;
-			};
-			class Engineer {
-				vehicle = 100;
-				storage = 50;
-			};
-		};
-		class Hunt
+		class Points
 		{
-			//Animal Classname = Points Gained / Lost
+			base = 0;
+			min = -3000;
+			max = 6000;
+			levels[] = {0,2000,5000};
+			class Aid
+			{
+				class Ranger
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 00;
+					gut = 100;
+				};
+				class Nomad
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 0;
+					gut = 100;
+				};
+				class Survivalist
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 0;
+					gut = 100;
+				};
+				class Outlaw
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 0;
+					gut = 100;
+				};
+				class Hunter
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 0;
+					gut = 100;
+				};
+				class Engineer
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 0;
+					gut = 100;
+				};
+				class Undead
+				{
+					food = 0;
+					drink = 0;
+					bandage = 0;
+					dressing = 0;
+					morphine = 0;
+					surgery = 0;
+					gut = 100;
+				};
+			};
+			class Destroy
+			{
+				class None
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Ranger
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Nomad
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Survivalist
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Outlaw
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Hunter
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Engineer
+				{
+					vehicle = 50;
+					storage = 50;
+				};
+				class Undead
+				{
+					vehicle = 0;
+					storage = 0;
+				};
+			};
+			class Hunt
+			{
+				class Kill
+				{
+					BP_Chicken = 0;
+					BP_Sheep = 0;
+					BP_Dog = 0;
+					BP_Dog_Ranger = 0;
+					BP_Dog_Nomad = 0;
+					BP_Dog_Hunter = 0;
+					BP_Dog_Outlaw = 0;
+					BP_Dog_Survivalist = 0;
+				};
+				class Gut
+				{
+					BP_Chicken = 0;
+					BP_Sheep = 0;
+					BP_Dog = 0;
+					BP_Dog_Ranger = 0;
+					BP_Dog_Nomad = 0;
+					BP_Dog_Hunter = 0;
+					BP_Dog_Outlaw = 0;
+					BP_Dog_Survivalist = 0;
+				};
+			};
 			class Kill
 			{
-				BP_Chicken = 0;
-				BP_Sheep = 0;
-				BP_Dog = 0;
-				BP_Dog_Ranger = 0;
-				BP_Dog_Nomad = 0;
-				BP_Dog_Hunter = 0;
-				BP_Dog_Outlaw = 0;
-				BP_Dog_Survivalist = 0;
-				BP_Dog_Engineer = 0;
-			};
-			
-			class Gut
-			{
-				BP_Chicken = 0;
-				BP_Sheep = 0;
-				BP_Dog = 0;
-				BP_Dog_Ranger = 0;
-				BP_Dog_Nomad = 0;
-				BP_Dog_Hunter = 0;
-				BP_Dog_Outlaw = 0;
-				BP_Dog_Survivalist = 0;
-				BP_Dog_Engineer = 0;
-			};
-		};
-		class Kill {
-			class Ranger {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 100;
-				Level_3 = 100;
-			};
-			class Outlaw {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 100;
-				Level_3 = 100;
-			};
-			class Hunter {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 100;
-				Level_3 = 100;
-			};
-			class Nomad {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 100;
-				Level_3 = 100;
-			};
-			class Survivalist {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 100;
-				Level_3 = 100;
-			};
-			class Engineer {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 100;
-				Level_3 = 100;
-			};
-			class Undead {
-				Level_0 = 0;
-				Level_1 = 0;
-				Level_2 = 0;
-				Level_3 = 0;
+				class Ranger
+				{
+					Level_0 = 100;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+				};
+				class Outlaw
+				{
+					Level_0 = 100;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+				};
+				class Hunter
+				{
+					Level_0 = 0;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+				};
+				class Nomad
+				{
+					Level_0 = 100;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+				};
+				class Survivalist
+				{
+					Level_0 = 100;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+				};
+				class Engineer
+				{
+					Level_0 = 100;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+				};
+				class Undead
+				{
+					Level_0 = 0;
+					Level_1 = 0;
+					Level_2 = 0;
+					Level_3 = 0;
+				};
 			};
 		};
 	};
