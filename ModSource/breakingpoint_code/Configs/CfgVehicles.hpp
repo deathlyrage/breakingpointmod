@@ -2593,38 +2593,6 @@ class CfgVehicles
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
-	class BP_UndeadF_F: BP_Man
-	{
-		scope = 2;
-		displayName = "Watcher Level 1";
-		uniformClass = "BP_Undead_1";
-		model = "\breakingpoint_classes\models\BP_GuardianF.p3d";
-		side = 3;
-		backpack = "";
-		weapons[] = {"Throw","Put"};
-		magazines[] = {};
-		respawnWeapons[] = {"Throw","Put"};
-		respawnMagazines[] = {};
-		Items[] = {};
-		respawnItems[] = {};
-		linkedItems[] = {};
-		respawnlinkedItems[] = {};
-		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
-		canHideBodies = 0;
-		class SpeechVariants
-		{
-			class Default
-			{
-				speechSingular[] = {""};
-				speechPlural[] = {""};
-			};
-		};
-		textSingular = "";
-		textPlural = "";
-		nameSound = "";
-		hiddenSelections[] = {};
-		hiddenSelectionsTextures[] = {};
-	};
 	class BP_Undead2_F: BP_Man
 	{
 		scope = 2;
