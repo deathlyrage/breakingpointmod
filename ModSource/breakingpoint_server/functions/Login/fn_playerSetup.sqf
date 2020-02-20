@@ -1,4 +1,5 @@
 
+
 params ["_logicNetID","_playerNetID"];
 _logic = objectFromNetID _logicNetID;
 _player = objectFromNetID _playerNetID;
@@ -137,143 +138,143 @@ if (count _this > 2) then
 //if (!isNull _dog) then { _dog setPosATL (_worldspace select 1); };
 
 //Zombie Queue Spawning System
-if (_class == 7) exitWith
-{
-	//Ensure Player Is In The Queue
-	_index = BP_UndeadQueue find _logicNetID;
-	if (_index == -1) then {
-		_index = BP_UndeadQueue pushBack _logicNetID;
-	};
-	_queueTotal = count BP_UndeadQueue;
-
-	//Check and Count Players
-	_nonUndeadPlayers = [];
-	_zombieCount =
-	{
-		_valid = false;
-		//Not In Debug
-		if !(_x call BP_fnc_isInDebug) then
-		{
-			//Alive
-			if (alive _x) then {
-				//Undead
-				if (_x getVariable ["class",0] == 7) then {
-					_valid = true;
-				} else {
-					_inVehicle = ((vehicle _x) != _x);
-					_isFreshSpawn = (_x getVariable ["freshSpawn",false]);
-					_survivalist = (_x getVariable ["class",0] == 5);
-					if (!_inVehicle and !_isFreshSpawn and !_survivalist) then {
-						_nonUndeadPlayers pushBack _x;
-					};
-				};
-			};
-		};
-		_valid
-	} count allPlayers;
-	_playerCount = (count allPlayers) - _zombieCount;
-	_maxZombies = (BP_maxPlayers / 5);
-
-	//Ensure There Is More Then One Non-Zombie Player
-	if (_playerCount == 1) exitWith {
-		_player setDir (_worldspace select 0);
-		_player setPosATL (_worldspace select 1);
-		_player enableSimulationGlobal true;
-
-		//Remove From Queue
-		BP_UndeadQueue deleteAt _index;
-
-		//Send Packet
-		bpSetupResult = [_worldspace];
-		_clientID publicVariableClient "bpSetupResult";
-
-		//bpSetupResult = ["Waiting For More Players",true];
-		//_clientID publicVariableClient "bpSetupResult";
-	};
-
-	if (_zombieCount < _maxZombies && {_index == 0}) then
-	{
-		//Locate Random Player
-		_foundSpawn = false;
-		_randomPlayer = selectRandom _nonUndeadPlayers;
-
-		//Find Zombie Spawn Position
-		_nearbyZombies = _randomPlayer nearEntities ["zZombie_Base", 250];
-		if !(_nearbyZombies isEqualTo []) then
-		{
-			_zombie = selectRandom _nearbyZombies;
-			if !(isNull _zombie) then
-			{
-				_worldspace = [(getDir _zombie),(getPosATL _zombie)];
-				deleteVehicle _zombie;
-				_foundSpawn = true;
-			};
-		} else {
-			//Fetch Nearby Buildings
-			_nearbyBuildings = (getPosATL _randomPlayer) nearObjects ["Building",200];
-
-			//Delete Nearest Building from Player
-			_nearestBuilding = nearestObject [_randomPlayer, "HouseBase"];
-			_index = _nearbyBuildings find _nearestBuilding;
-			if (_index >= 0) then { 0 = _nearbyBuildings deleteAt _index;};
-
-			//Shuffle Buildings Randomly
-			_nearbyBuildings = _nearbyBuildings call BIS_fnc_arrayShuffle;
-
-			//Go Thru Nearby Buildings for Valid Spawn
-			{
-				if (!isNull _x) then
-				{
-					//Don't Spawn In Havens
-					if ((netID _x) in BP_Buildings) exitWith {};
-
-					//Handle Spawning
-					// Mission config file loot table override.
-					_config = configFile >> "CfgBuildingLoot" >> (typeOf _x);
-					if (isClass (missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x))) then
-					{
-						_config = missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x);
-					};
-
-					if (isClass _config) then {
-						_unitTypes = getArray (_config >> "zombieClass");
-						_positions =	getArray (_config >> "zombiePos");
-						if !(_positions isEqualTo []) then
-						{
-							_position = selectRandom _positions;
-							_worldspace = [0,(_x modelToWorld _position)];
-							_foundSpawn = true;
-						};
-					};
-				};
-			} count _nearbyBuildings;
-		};
-
-		["playerSetup: foundSpawn: %1 | Worldspace: %2",_foundSpawn,_worldspace] call BP_fnc_debugConsoleFormat;
-
-		if (!_foundSpawn) exitWith {
-			//Send Queue Packet
-			bpSetupResult = ["Waiting For Suitable Spawn Location.",true];
-			_clientID publicVariableClient "bpSetupResult";
-		};
-
-		_player setDir (_worldspace select 0);
-		_player setPosATL (_worldspace select 1);
-		_player enableSimulationGlobal true;
-
-		//Remove From Queue
-		BP_UndeadQueue deleteAt _index;
-
-		//Send Packet
-		bpSetupResult = [_worldspace];
-		_clientID publicVariableClient "bpSetupResult";
-	} else {
-		//Send Queue Packet
-		_text = format ["Waiting In Undead Queue. Position %1 Of %2.",(_index + 1),_queueTotal];
-		bpSetupResult = [_text,true];
-		_clientID publicVariableClient "bpSetupResult";
-	};
-};
+//if (_class == 7) exitWith
+//{
+//	//Ensure Player Is In The Queue
+//	_index = BP_UndeadQueue find _logicNetID;
+//	if (_index == -1) then {
+//		_index = BP_UndeadQueue pushBack _logicNetID;
+//	};
+//	_queueTotal = count BP_UndeadQueue;
+//
+//	//Check and Count Players
+//	_nonUndeadPlayers = [];
+//	_zombieCount =
+//	{
+//		_valid = false;
+//		//Not In Debug
+//		if !(_x call BP_fnc_isInDebug) then
+//		{
+//			//Alive
+//			if (alive _x) then {
+//				//Undead
+//				if (_x getVariable ["class",0] == 7) then {
+//					_valid = true;
+//				} else {
+//					_inVehicle = ((vehicle _x) != _x);
+//					_isFreshSpawn = (_x getVariable ["freshSpawn",false]);
+//					_survivalist = (_x getVariable ["class",0] == 5);
+//					if (!_inVehicle and !_isFreshSpawn and !_survivalist) then {
+//						_nonUndeadPlayers pushBack _x;
+//					};
+//				};
+//			};
+//		};
+//		_valid
+//	} count allPlayers;
+//	_playerCount = (count allPlayers) - _zombieCount;
+//	_maxZombies = (BP_maxPlayers / 5);
+//
+//	//Ensure There Is More Then One Non-Zombie Player
+//	if (_playerCount == 1) exitWith {
+//		_player setDir (_worldspace select 0);
+//		_player setPosATL (_worldspace select 1);
+//		_player enableSimulationGlobal true;
+//
+//		//Remove From Queue
+//		BP_UndeadQueue deleteAt _index;
+//
+//		//Send Packet
+//		bpSetupResult = [_worldspace];
+//		_clientID publicVariableClient "bpSetupResult";
+//
+//		//bpSetupResult = ["Waiting For More Players",true];
+//		//_clientID publicVariableClient "bpSetupResult";
+//	};
+//
+//	if (_zombieCount < _maxZombies && {_index == 0}) then
+//	{
+//		//Locate Random Player
+//		_foundSpawn = false;
+//		_randomPlayer = selectRandom _nonUndeadPlayers;
+//
+//		//Find Zombie Spawn Position
+//		_nearbyZombies = _randomPlayer nearEntities ["zZombie_Base", 250];
+//		if !(_nearbyZombies isEqualTo []) then
+//		{
+//			_zombie = selectRandom _nearbyZombies;
+//			if !(isNull _zombie) then
+//			{
+//				_worldspace = [(getDir _zombie),(getPosATL _zombie)];
+//				deleteVehicle _zombie;
+//				_foundSpawn = true;
+//			};
+//		} else {
+//			//Fetch Nearby Buildings
+//			_nearbyBuildings = (getPosATL _randomPlayer) nearObjects ["Building",200];
+//
+//			//Delete Nearest Building from Player
+//			_nearestBuilding = nearestObject [_randomPlayer, "HouseBase"];
+//			_index = _nearbyBuildings find _nearestBuilding;
+//			if (_index >= 0) then { 0 = _nearbyBuildings deleteAt _index;};
+//
+//			//Shuffle Buildings Randomly
+//			_nearbyBuildings = _nearbyBuildings call BIS_fnc_arrayShuffle;
+//
+//			//Go Thru Nearby Buildings for Valid Spawn
+//			{
+//				if (!isNull _x) then
+//				{
+//					//Don't Spawn In Havens
+//					if ((netID _x) in BP_Buildings) exitWith {};
+//
+//					//Handle Spawning
+//					// Mission config file loot table override.
+//					_config = configFile >> "CfgBuildingLoot" >> (typeOf _x);
+//					if (isClass (missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x))) then
+//					{
+//						_config = missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x);
+//					};
+//
+//					if (isClass _config) then {
+//						_unitTypes = getArray (_config >> "zombieClass");
+//						_positions =	getArray (_config >> "zombiePos");
+//						if !(_positions isEqualTo []) then
+//						{
+//							_position = selectRandom _positions;
+//							_worldspace = [0,(_x modelToWorld _position)];
+//							_foundSpawn = true;
+//						};
+//					};
+//				};
+//			} count _nearbyBuildings;
+//		};
+//
+//		["playerSetup: foundSpawn: %1 | Worldspace: %2",_foundSpawn,_worldspace] call BP_fnc_debugConsoleFormat;
+//
+//		if (!_foundSpawn) exitWith {
+//			//Send Queue Packet
+//			bpSetupResult = ["Waiting For Suitable Spawn Location.",true];
+//			_clientID publicVariableClient "bpSetupResult";
+//		};
+//
+//		_player setDir (_worldspace select 0);
+//		_player setPosATL (_worldspace select 1);
+//		_player enableSimulationGlobal true;
+//
+//		//Remove From Queue
+//		BP_UndeadQueue deleteAt _index;
+//
+//		//Send Packet
+//		bpSetupResult = [_worldspace];
+//		_clientID publicVariableClient "bpSetupResult";
+//	} else {
+//		//Send Queue Packet
+//		_text = format ["Waiting In Undead Queue. Position %1 Of %2.",(_index + 1),_queueTotal];
+//		bpSetupResult = [_text,true];
+//		_clientID publicVariableClient "bpSetupResult";
+//	};
+//};
 
 //Check Radio
 _player call BPServer_fnc_radioCheck;
