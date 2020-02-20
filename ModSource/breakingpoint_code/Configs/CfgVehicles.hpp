@@ -54,6 +54,7 @@ class CfgVehicles
 			local = "";
 		};
 	};
+	class Thing;
 	class BP_Haven: Thing
 	{
 		scope = 2;
