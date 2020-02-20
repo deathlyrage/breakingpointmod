@@ -7435,14 +7435,6 @@ class CfgWorldList {
 	class Chernarus {};
 };
 
-class CfgMissions {
-	class Cutscenes {
-		class ChernarusIntro1 {
-			directory = "ca\chernarus\data\scenes\intro.Chernarus";
-		};
-	};
-};
-
 class CfgSurfaces {
 	class Default;	// External class reference
 	
