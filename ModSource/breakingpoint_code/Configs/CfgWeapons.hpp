@@ -937,16 +937,31 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
-	
-	class BP_Engineer_1: Uniform_Base {
+	class BP_Engineer_F: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Traitor Engineer";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "C_man_w_worker_F";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 40;
+		};
+	};	
+	class BP_Engineer_1: Uniform_Base
+	{
 		scope = 2;
 		displayName = "Engineer level 1";
-		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
+		class ItemInfo: UniformItem
+		{
 			uniformModel = "-";
-			uniformClass = "BP_Engineer1_F";
+			uniformClass = "I_helipilot_F";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -955,8 +970,8 @@ class CfgWeapons
 	
 	class BP_Engineer_1_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "Engineer level 1 Zombie";
-		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Fallen Engineer";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -968,15 +983,16 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Engineer_2: Uniform_Base {
+	class BP_Engineer_2: Uniform_Base
+	{
 		scope = 2;
 		displayName = "Engineer level 2";
-		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
+		class ItemInfo: UniformItem
+		{
 			uniformModel = "-";
-			uniformClass = "BP_Engineer2_F";
+			uniformClass = "B_Helipilot_F";
 			allowedSlots[] = {};
 			containerClass = "Supply40";
 			mass = 40;
@@ -985,8 +1001,8 @@ class CfgWeapons
 	
 	class BP_Engineer_2_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "Engineer level 2 Zombie";
-		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Fallen Engineer";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -998,15 +1014,16 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Engineer_3: Uniform_Base {
+	class BP_Engineer_3: Uniform_Base
+	{
 		scope = 2;
 		displayName = "Engineer level 3";
-		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
+		class ItemInfo: UniformItem
+		{
 			uniformModel = "-";
-			uniformClass = "BP_Engineer3_F";
+			uniformClass = "I_pilot_F";
 			allowedSlots[] = {};
 			containerClass = "Supply60";
 			mass = 40;
@@ -1015,8 +1032,8 @@ class CfgWeapons
 	
 	class BP_Engineer_3_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "Engineer level 3 Zombie";
-		picture = "breakingpoint_weapons\icons\icon_f_b_combatuniform_ocam_ca.paa";
+		displayName = "Fallen Engineer";
+		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
 		class ItemInfo: UniformItem {
@@ -1127,7 +1144,68 @@ class CfgWeapons
 			mass = 60;
 		};
 	};
+	class BP_Undead_F: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Watchers Level 1";
+		picture = "\breakingpoint_ui\icons\UndeadIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Undead1_F";
+			allowedSlots[] = {};
+			containerClass = "Supply10";
+			mass = 40;
+		};
+	};
+	class BP_Undead_1: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Watchers Level 1";
+		picture = "\breakingpoint_ui\icons\UndeadIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Undead1_F";
+			allowedSlots[] = {};
+			containerClass = "Supply10";
+			mass = 40;
+		};
+	};
+
+	class BP_Undead_2: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Watchers Level 2";
+		picture = "\breakingpoint_ui\icons\UndeadIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Undead2_F";
+			allowedSlots[] = {};
+			containerClass = "Supply10";
+			mass = 40;
+		};
+	};
 	
+	class BP_Undead_3: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Watchers Level 3";
+		picture = "\breakingpoint_ui\icons\UndeadIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Undead3_F";
+			allowedSlots[] = {};
+			containerClass = "Supply10";
+			mass = 40;
+		};
+	};	
 	class BP_Shemag_bandit: H_HelmetB {
 	    scope = 2;
 		displayName = "Bandit Leader Shemag";
