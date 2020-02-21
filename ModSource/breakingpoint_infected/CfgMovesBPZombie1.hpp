@@ -20,7 +20,6 @@ class CfgMovesBPZombie1 : CfgMovesAnimal_Base_F
 		weaponLowered = 0;
 		canBlendStep = 0;
 		idle = "idleDefault";
-		access = 3;
 		actions = "NoActions";
 		file = "";
 		looped = true;
