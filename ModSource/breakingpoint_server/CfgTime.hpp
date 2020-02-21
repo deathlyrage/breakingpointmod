@@ -48,7 +48,7 @@ class CfgTime
         date[] = {11,5,2035};
         first[] = {04,00};
         second[] = {10,00};
-	}
+	};
 	class Chernarus: Base
 	{
         date[] = {10,6,2035};

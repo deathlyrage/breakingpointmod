@@ -9,7 +9,6 @@
 
 class CfgMovesDog_BP : CfgMovesAnimal_Base_F 
 {
-	access = ReadAndCreate;
 	enableDirectControl = 0;
 	skeletonName = "Dog_F";
 	collisionVertexPattern[] = {"1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "13a", "14a", "15a", "16a", "17a", "18a", "19a", "20a", "21a", "22a", "23a", "24a", "25a", "26a", "27a", "28a", "29a", "30a", "31a", "32a", "33a", "34a"};
@@ -20,7 +19,6 @@ class CfgMovesDog_BP : CfgMovesAnimal_Base_F
 		weaponLowered = 0;
 		canBlendStep = 0;
 		idle = "idleDefault";
-		access = 3;
 		actions = "NoActions";
 		file = "";
 		looped = true;
@@ -105,7 +103,6 @@ class CfgMovesDog_BP : CfgMovesAnimal_Base_F
 		weaponLowered = 0;
 		adjstance = "m";
 		//End Of Bonus
-		access = ReadOnlyVerified;
 		file = "";
 		looped = true;
 		speed = 0.5;

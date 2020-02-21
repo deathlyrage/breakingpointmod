@@ -41,12 +41,10 @@ class CfgPatches {
 #include "CfgMovesZombieSdr.hpp"
 
 class CfgMovesAnimal_Base_F {
-	access = ReadAndCreate;
 	collisionVertexPattern[] = {};
 	collisionGeomCompPattern[] = {1};
 	
 	class Default {
-		access = ReadOnlyVerified;
 		file = "";
 		looped = true;
 		speed = 0.5;
@@ -324,7 +322,6 @@ class CfgGesturesMale {
 };
 
 class CfgMovesBasic {
-	access = 1;//0
 	skeletonName = "";
 	class Default;
 
@@ -356,7 +353,6 @@ class CfgMovesBasic {
 			BP_ZWalk[] = {"BP_ZWalk", "Gesture"};
 			BP_ZRun[] = {"BP_ZRun", "Gesture"};
 			BP_ZSprint[] = {"BP_ZSprint", "Gesture"};
-			access = 3;//!!!
 		};
 	};
 };

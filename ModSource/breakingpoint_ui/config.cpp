@@ -820,7 +820,6 @@ class RscGroupRootMenu {
 
 
 class RscHCMainMenu {
-	access = ReadAndWrite;
 	title = "";
 	atomic = 0;
 	vocabulary = "";

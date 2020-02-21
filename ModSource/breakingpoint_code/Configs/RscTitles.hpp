@@ -44,7 +44,6 @@ class RscEdit;
 
 class RscPictureGUI
 {
-	access = 0;
 	type = 0;
 	idc = -1;
 	colorBackground[] = {0,0,0,0};
@@ -2040,7 +2039,6 @@ class RscUAVUAV {
 };
 
 class RscUAVMainMenu {
-	access = ReadAndWrite;
 	title = "$STR_hc_hc";
 	atomic = 0;
 	vocabulary = "";
@@ -2064,7 +2062,6 @@ class RscUAVTeam {};
 
 class RscUAVFormations {
 	title = $STR_FORMATION;
-	access = ReadAndWrite;
 	atomic = 0;
 	vocabulary = "";
 	
