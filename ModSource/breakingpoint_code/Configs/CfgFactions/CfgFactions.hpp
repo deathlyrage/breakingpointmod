@@ -80,5 +80,5 @@ class CfgFactions
 	#include "Nomad.hpp"
 	#include "Survivalist.hpp"
 	#include "Engineer.hpp"
-	//#include "Undead.hpp"
+	#include "Undead.hpp"
 };
