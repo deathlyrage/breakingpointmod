@@ -9,7 +9,7 @@
 
 	class Undead: BP_BaseFaction
 	{
-		name = "Engineer";
+		name = "Undead";
 		class Levels: Levels
 		{
 			class Level_Base: Level_Base
