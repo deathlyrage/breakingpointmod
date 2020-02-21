@@ -23,7 +23,7 @@ class None : BP_BaseFaction
 				primary[] = {};
 				launcher[] = {};
 				handgun[] = {};
-				clothing[] = {"BP_OptOut","BP_OptOut2","BP_OptOut3","BP_Guarilla_Camo","BP_Guarilla_Faded"};
+				clothing[] = {"BP_OptOut","BP_OptOut2","BP_OptOut3"};
 				backpack[] = {};
 				vest[] = {};
 			};

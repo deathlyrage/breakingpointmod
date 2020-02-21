@@ -19,7 +19,6 @@ class CfgMovesBPZombie2 : CfgMovesAnimal_Base_F
 		weaponLowered = 0;
 		canBlendStep = 0;
 		idle = "idleDefault";
-		access = ReadOnlyVerified;
 		actions = "BPZombieActions";
 		file = "";
 		looped = true;

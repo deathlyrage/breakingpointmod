@@ -8,7 +8,6 @@
 */
 
 class CfgMovesPlayer {
-	access = 0;
 	skeletonName = "";
 	collisionVertexPattern[] = {"1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "13a", "14a", "15a", "16a", "17a", "18a", "19a", "20a", "21a", "22a", "23a", "24a", "25a", "26a", "27a", "28a", "29a", "30a", "31a", "32a", "33a", "34a", "1c", "2c", "3c", "4c", "5c", "6c", "7c", "8c"};
 	collisionGeomCompPattern[] = {1, 3};
@@ -18,7 +17,6 @@ class CfgMovesPlayer {
 		weaponLowered = 0;
 		canBlendStep = 0;
 		idle = "idleDefault";
-		access = 3;
 		useIdles = 0;
 		actions = "NoActions";
 		file = "";
@@ -395,7 +393,6 @@ class CfgMovesPlayer {
 			GestureLegPush[] = {"GestureLegPush", "Gesture"};
 			GestureNod[] = {"GestureNod", "Gesture"};
 			GestureAgonyCargo[] = {"GestureAgonyCargo", "Gesture"};
-			access = 3;
 			ladderOnDown = "LadderCivilOn_Top";
 			ladderOnUp = "LadderCivilOn_Top";
 			turnSpeed = 1;
@@ -20607,7 +20604,6 @@ class CfgMovesPlayerSdr: CfgMovesPlayer {
 		class c4coming2cdf_genericstani1: InBaseMoves_assemblingVehicleErc {
 			file = "A3\anims_f\data\Anim\sdr\cts\arma2\c4coming2cdf_genericstani1.rtm";
 			speed = -25;
-			access = 1;
 			InterpolateTo[] = {};
 		};
 
@@ -20621,7 +20617,6 @@ class CfgMovesPlayerSdr: CfgMovesPlayer {
 			file = "A3\anims_f\data\Anim\sdr\cts\arma2\c4coming2cdf_genericstani4.rtm";
 			speed = 0.024666;
 			InterpolateTo[] = {};
-			access = 1;
 		};
 
 		class c5efe_HonzaLoop: InBaseMoves_assemblingVehicleErc {

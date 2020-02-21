@@ -18,13 +18,13 @@ class CfgSurfaces {
 	class GdtDirt;	// External class reference
 	
 	//class CRGrass1 : GdtStratisDryGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_trava1_*";
 	//	character = "CRGrassClutter";
 	//};
 	
 	//class CRGrass2 : GdtStratisGreenGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_trava2_*";
 	//	rough = 0.11;
 	//	soundEnviron = "grass";
@@ -33,7 +33,7 @@ class CfgSurfaces {
 	class GdtGrassWild;	// External class reference
 	
 	//class CRGrassW1 : GdtGrassWild {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_travad1_*";
 	//	rough = 0.11;
 	//	soundEnviron = "grass";
@@ -41,7 +41,7 @@ class CfgSurfaces {
 	//};
 	
 	//class CRGrassW2 : GdtGrassWild {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_travad2_*";
 	//	rough = 0.11;
 	//	soundEnviron = "grass";
@@ -50,7 +50,7 @@ class CfgSurfaces {
 	class GdtStratisForestPine;	// External class reference
 	
 	//class CRForest1 : GdtStratisForestPine {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_les1_*";
 	//	rough = 0.2;
 	//	dust = 0.2;
@@ -59,7 +59,7 @@ class CfgSurfaces {
 	//};
 	
 	//class CRForest2 : GdtStratisForestPine {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_les2_*";
 	//	rough = 0.2;
 	//	dust = 0.15;
@@ -69,7 +69,6 @@ class CfgSurfaces {
 	class GdtMud;	// External class reference
 	
 	class CRMudGround : GdtMud {
-		access = ReadOnly;
 		files = "cr_pole_*";
 		rough = 0.09;
 		dust = 0.1;
@@ -79,7 +78,6 @@ class CfgSurfaces {
 	class GdtWildField;	// External class reference
 	
 	class CRField1 : GdtWildField {
-		access = ReadOnly;
 		files = "cr_oranice_*";
 		rough = 0.15;
 		dust = 0.25;
@@ -88,7 +86,7 @@ class CfgSurfaces {
 	};
 	
 	//class CRField2 : GdtWildField {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_strniste_*";
 	//	rough = 0.13;
 	//	dust = 0.3;
@@ -98,7 +96,6 @@ class CfgSurfaces {
 	class GdtRubble;	// External class reference
 	
 	class CRGrit1 : GdtRubble {
-		access = ReadOnly;
 		files = "cr_sterk_*";
 		rough = 0.1;
 		dust = 0.25;
@@ -106,7 +103,7 @@ class CfgSurfaces {
 	};
 	
 	//class CRHeather : GdtStratisForestPine {
-	//	access = ReadOnly;
+	//		
 	//	files = "cr_vres_*";
 	//	rough = 0.14;
 	//	dust = 0.1;
@@ -116,7 +113,6 @@ class CfgSurfaces {
 	class GdtStratisRocky;	// External class reference
 	
 	class CRRock : GdtStratisRocky {
-		access = ReadOnly;
 		files = "cr_skala_*";
 		rough = 0.2;
 		dust = 0.07;
@@ -126,7 +122,6 @@ class CfgSurfaces {
 	class GdtStratisConcrete;	// External class reference
 	
 	class CRTarmac : GdtStratisConcrete {
-		access = ReadOnly;
 		files = "cr_asfalt_*";
 		rough = 0.08;
 		dust = 0.05;
@@ -135,7 +130,6 @@ class CfgSurfaces {
 	};
 	
 	class CRConcrete : GdtStratisConcrete {
-		access = ReadOnly;
 		files = "cr_beton_*";
 		rough = 0.08;
 		dust = 0.05;
@@ -175,7 +169,6 @@ class CfgSurfaces {
 	class wavyMetal;	// External class reference
 	
 	class Roadway : road {
-		access = ReadOnly;
 		files = "silnice*";
 		rough = 0.005;
 		dust = 0.01;
@@ -184,7 +177,6 @@ class CfgSurfaces {
 	};
 	
 	class Parkety : parquet {
-		access = ReadOnly;
 		files = "parkety*";
 		rough = 0.005;
 		dust = 0.001;
@@ -193,7 +185,6 @@ class CfgSurfaces {
 	};
 	
 	class Lepenka : cardboard {
-		access = ReadOnly;
 		files = "lepenka*";
 		rough = 0.001;
 		dust = 0.001;
@@ -202,7 +193,6 @@ class CfgSurfaces {
 	};
 	
 	class Tasky : tiling {
-		access = ReadOnly;
 		files = "Tasky*";
 		rough = 0.001;
 		dust = 0.001;
@@ -211,7 +201,6 @@ class CfgSurfaces {
 	};
 	
 	class Rost : grid {
-		access = ReadOnly;
 		files = "Rost*";
 		rough = 0.001;
 		dust = 0.001;
@@ -220,7 +209,6 @@ class CfgSurfaces {
 	};
 	
 	class Asfalt : Roadway {
-		access = ReadOnly;
 		files = "asfalt*";
 		rough = 0.01;
 		dust = 0.05;
@@ -229,7 +217,6 @@ class CfgSurfaces {
 	};
 	
 	class Cesta : Roadway {
-		access = ReadOnly;
 		files = "cesta*";
 		rough = 0.08;
 		dust = 0.15;
@@ -238,7 +225,6 @@ class CfgSurfaces {
 	};
 	
 	class Sterk : rubble {
-		access = ReadOnly;
 		files = "sterk*";
 		rough = 0.08;
 		dust = 0.15;
@@ -247,7 +233,6 @@ class CfgSurfaces {
 	};
 	
 	class SterkBIG : Default {
-		access = ReadOnly;
 		files = "sterkBIG*";
 		rough = 0.08;
 		dust = 0.15;
@@ -256,7 +241,6 @@ class CfgSurfaces {
 	};
 	
 	class Sutiny : BuildingRubble {
-		access = ReadOnly;
 		files = "sutiny*";
 		rough = 0.08;
 		dust = 0.15;
@@ -265,7 +249,6 @@ class CfgSurfaces {
 	};
 	
 	class Wood : Default {
-		access = ReadOnly;
 		files = "podlaha_prkna*";
 		rough = 0.1;
 		dust = 0.1;
@@ -274,7 +257,6 @@ class CfgSurfaces {
 	};
 	
 	class Wood_ext : Default {
-		access = ReadOnly;
 		files = "prknaOUT*";
 		rough = 0.1;
 		dust = 0.1;
@@ -283,7 +265,6 @@ class CfgSurfaces {
 	};
 	
 	class PrknaINT : Default {
-		access = ReadOnly;
 		files = "prknaIN*";
 		rough = 0.1;
 		dust = 0.1;
@@ -292,7 +273,6 @@ class CfgSurfaces {
 	};
 	
 	class Metal : metalPlate {
-		access = ReadOnly;
 		files = "plechprolis*";
 		rough = 0.1;
 		dust = 0.1;
@@ -302,7 +282,6 @@ class CfgSurfaces {
 	};
 	
 	class Plech : metalPlate {
-		access = ReadOnly;
 		files = "plech*";
 		rough = 0.1;
 		dust = 0.1;
@@ -312,7 +291,6 @@ class CfgSurfaces {
 	};
 	
 	class Iron : steel {
-		access = ReadOnly;
 		files = "ocel*";
 		rough = 0.1;
 		dust = 0.1;
@@ -322,7 +300,6 @@ class CfgSurfaces {
 	};
 	
 	class Wave_plate : wavyMetal {
-		access = ReadOnly;
 		files = "vlnityplech*";
 		rough = 0.1;
 		dust = 0.1;
@@ -332,7 +309,6 @@ class CfgSurfaces {
 	};
 	
 	class Beton : concrete {
-		access = ReadOnly;
 		files = "kameny";
 		rough = 0.1;
 		dust = 0.1;
@@ -341,7 +317,6 @@ class CfgSurfaces {
 	};
 	
 	class CrCarpet : carpet_inside {
-		access = ReadOnly;
 		files = "dum_mesto_koberec*";
 		rough = 0.1;
 		dust = 0.1;
@@ -350,7 +325,6 @@ class CfgSurfaces {
 	};
 	
 	class CrCarpet2 : carpet {
-		access = ReadOnly;
 		files = "koberec*";
 		rough = 0.1;
 		dust = 0.1;
@@ -359,7 +333,6 @@ class CfgSurfaces {
 	};
 	
 	class SandBuilding : Default {
-		access = ReadOnly;
 		files = "pisek01*";
 		rough = 0.1;
 		dust = 0.5;
@@ -368,7 +341,6 @@ class CfgSurfaces {
 	};
 	
 	class MudBuilding : Default {
-		access = ReadOnly;
 		files = "hlinasterk*";
 		rough = 0.1;
 		dust = 0.5;
@@ -377,7 +349,6 @@ class CfgSurfaces {
 	};
 	
 	class Hlina : GdtMud {
-		access = ReadOnly;
 		files = "hlina*";
 		rough = 0.1;
 		dust = 0.5;
@@ -386,7 +357,6 @@ class CfgSurfaces {
 	};
 	
 	class BetonNew : concrete {
-		access = ReadOnly;
 		files = "beton*";
 		rough = 0.005;
 		dust = 0.01;
@@ -395,7 +365,6 @@ class CfgSurfaces {
 	};
 	
 	class BetonIN : concrete {
-		access = ReadOnly;
 		files = "chodba_beton*";
 		rough = 0.005;
 		dust = 0.01;
@@ -404,7 +373,6 @@ class CfgSurfaces {
 	};
 	
 	class DlazbaIN : concrete {
-		access = ReadOnly;
 		files = "dlazbaIN*";
 		rough = 0.005;
 		dust = 0.01;
@@ -413,7 +381,6 @@ class CfgSurfaces {
 	};
 	
 	class CubeRoad : GdtStratisConcrete {
-		access = ReadOnly;
 		files = "sil_kos*";
 		rough = 0.04;
 		dust = 0.15;
@@ -422,7 +389,6 @@ class CfgSurfaces {
 	};
 	
 	class Sil_new : GdtStratisConcrete {
-		access = ReadOnly;
 		files = "sil_new*";
 		rough = 0.005;
 		dust = 0.01;
@@ -431,7 +397,6 @@ class CfgSurfaces {
 	};
 	
 	class Asfalt_New : GdtStratisConcrete {
-		access = ReadOnly;
 		files = "asf_new*";
 		rough = 0.008;
 		dust = 0.025;
@@ -460,7 +425,6 @@ class CfgSurfaces {
 	};
 	
 	class Cesta_new : GdtStratisConcrete {
-		access = ReadOnly;
 		files = "ces_hned*";
 		rough = 0.04;
 		dust = 0.14;
@@ -479,7 +443,6 @@ class CfgSurfaces {
 	};
 	
 	class Pesina : Roadway {
-		access = ReadOnly;
 		files = "pesina*";
 		rough = 0.1;
 		dust = 0.15;
@@ -492,7 +455,6 @@ class CfgSurfaces {
 	};
 	
 	class Hallway : Default {
-		access = ReadOnly;
 		files = "podldlzin02*";
 		rough = 0.1;
 		dust = 0.1;
@@ -501,7 +463,6 @@ class CfgSurfaces {
 	};
 	
 	class Grass : GdtStratisGreenGrass {
-		access = ReadOnly;
 		files = "trava_*";
 		rough = 0.1;
 		dust = 0.1;
@@ -510,7 +471,6 @@ class CfgSurfaces {
 	};
 	
 	class GrassSouth : GdtStratisDryGrass {
-		access = ReadOnly;
 		files = "travajih*";
 		rough = 0.1;
 		dust = 0.2;
@@ -519,7 +479,6 @@ class CfgSurfaces {
 	};
 	
 	class ForestLeaves : GdtStratisForestPine {
-		access = ReadOnly;
 		files = "leslist*";
 		rough = 0.1;
 		dust = 0.2;
@@ -528,7 +487,6 @@ class CfgSurfaces {
 	};
 	
 	class ForestNeedles : GdtStratisForestPine {
-		access = ReadOnly;
 		files = "lesjeh*";
 		rough = 0.1;
 		dust = 0.2;
@@ -537,7 +495,6 @@ class CfgSurfaces {
 	};
 	
 	class RockSouth : Default {
-		access = ReadOnly;
 		files = "skalajih*";
 		rough = 0.1;
 		dust = 0.2;
@@ -546,7 +503,6 @@ class CfgSurfaces {
 	};
 	
 	class RockNorth : Default {
-		access = ReadOnly;
 		files = "skalas*";
 		rough = 0.1;
 		dust = 0.2;
@@ -555,7 +511,6 @@ class CfgSurfaces {
 	};
 	
 	class Mud2 : GdtMud {
-		access = ReadOnly;
 		files = "blato*";
 		rough = 0.1;
 		dust = 0.3;
@@ -564,7 +519,6 @@ class CfgSurfaces {
 	};
 	
 	class CityGround : Default {
-		access = ReadOnly;
 		files = "mesto*";
 		rough = 0.01;
 		dust = 0.05;
@@ -573,7 +527,6 @@ class CfgSurfaces {
 	};
 	
 	class DryGround : GdtGrassDry {
-		access = ReadOnly;
 		files = "mesto2*";
 		rough = 0.05;
 		dust = 0.05;
@@ -582,7 +535,6 @@ class CfgSurfaces {
 	};
 	
 	class Field1 : GdtWildField {
-		access = ReadOnly;
 		files = "pole1*";
 		rough = 0.1;
 		dust = 0.25;
@@ -591,7 +543,6 @@ class CfgSurfaces {
 	};
 	
 	class SandGeneral : Default {
-		access = ReadOnly;
 		files = "pisek*";
 		rough = 0.1;
 		dust = 0.5;
@@ -600,14 +551,12 @@ class CfgSurfaces {
 	};
 	
 	class Odpadky : Default {
-		access = ReadOnly;
 		files = "odpadky*";
 		soundEnviron = "gravel2";
 	};
 	class GdtStratisBeach;	// External class reference
 	
 	class SandDesert : GdtStratisBeach {
-		access = ReadOnly;
 		files = "pisekpoust*";
 		rough = 0.1;
 		dust = 0.8;
@@ -616,7 +565,6 @@ class CfgSurfaces {
 	};
 	
 	class SandBeach : GdtStratisBeach {
-		access = ReadOnly;
 		files = "pisekplaz*";
 		rough = 0.1;
 		dust = 0.5;
@@ -625,7 +573,7 @@ class CfgSurfaces {
 	};
 	
 	//class DBTrava : Default {
-	//	access = ReadOnly;
+	//		
 	//	files = "baf_trava_*";
 	//	rough = 0.08;
 	//	dust = 0.5;
@@ -635,7 +583,7 @@ class CfgSurfaces {
 	//};
 	
 	//class DBPolopoust : Default {
-	//	access = ReadOnly;
+	//		
 	//	files = "baf_polopoust_*";
 	//	rough = 0.05;
 	//	dust = 0.9;
@@ -645,7 +593,7 @@ class CfgSurfaces {
 	//};
 	
 	//class DBSkalniSterk : Default {
-	//	access = ReadOnly;
+	//		
 	//	files = "baf_skalni_sterk_*";
 	//	rough = 0.1;
 	//	dust = 1;
@@ -655,7 +603,6 @@ class CfgSurfaces {
 	//};
 	
 	class DBAsfalt : Default {
-		access = ReadOnly;
 		files = "baf_asfalt_*";
 		rough = 0.005;
 		dust = 0.1;
@@ -665,7 +612,6 @@ class CfgSurfaces {
 	};
 	
 	class TKAsfalt : Default {
-		access = ReadOnly;
 		files = "tk_asfalt_*";
 		rough = 0.001;
 		dust = 0.1;
@@ -675,7 +621,6 @@ class CfgSurfaces {
 	};
 	
 	class TKBeton : Default {
-		access = ReadOnly;
 		files = "tk_beton_*";
 		rough = 0.01;
 		dust = 0.08;
@@ -685,7 +630,6 @@ class CfgSurfaces {
 	};
 	
 	class TKHlina : Default {
-		access = ReadOnly;
 		files = "tk_hlina_*";
 		rough = 0.1;
 		dust = 0.8;
@@ -695,7 +639,7 @@ class CfgSurfaces {
 	};
 	
 	//class TKPlevel : GdtStratisDryGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "tk_plevel_*";
 	//	rough = 0.11;
 	//	dust = 0.7;
@@ -705,7 +649,7 @@ class CfgSurfaces {
 	//};
 	
 	//class TKPole : GdtDesert {
-	//	access = ReadOnly;
+	//		
 	//	files = "tk_pole_*";
 	//	rough = 0.12;
 	//	dust = 0.6;
@@ -715,7 +659,7 @@ class CfgSurfaces {
 	//};
 	
 	//class TKPolopoust : GdtDesert {
-	//	access = ReadOnly;
+	//		
 	//	files = "tk_polopoust_*";
 	//	rough = 0.01;
 	//	dust = 0.9;
@@ -725,7 +669,6 @@ class CfgSurfaces {
 	//};
 	
 	class TKSkala : GdtRock {
-		access = ReadOnly;
 		files = "tk_skala_*";
 		rough = 0.3;
 		dust = 0.5;
@@ -735,7 +678,6 @@ class CfgSurfaces {
 	};
 	
 	class TKSkalniSterk : GdtRock {
-		access = ReadOnly;
 		files = "tk_skalni_sterk_*";
 		rough = 0.15;
 		dust = 1;
@@ -745,7 +687,6 @@ class CfgSurfaces {
 	};
 	
 	class TKSterkNaDno : GdtRock {
-		access = ReadOnly;
 		files = "tk_sterk_na_dno_*";
 		rough = 0.2;
 		dust = 0;
@@ -755,7 +696,6 @@ class CfgSurfaces {
 	};
 	
 	class TKValouny : GdtRock {
-		access = ReadOnly;
 		files = "tk_valouny_*";
 		rough = 0.15;
 		dust = 0.4;
@@ -765,7 +705,7 @@ class CfgSurfaces {
 	};
 	
 	//class TKTrava : GdtStratisDryGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "tk_trava_*";
 	//	rough = 0.11;
 	//	dust = 0.5;
@@ -775,7 +715,6 @@ class CfgSurfaces {
 	//};
 	
 	class TKDlazbaOld : Default {
-		access = ReadOnly;
 		files = "tk_dlazba_old_*";
 		rough = 0.001;
 		dust = 0.1;
@@ -785,7 +724,7 @@ class CfgSurfaces {
 	};
 	
 	//class TKForest : GdtStratisDryGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "tk_forest_*";
 	//	rough = 0.01;
 	//	dust = 0.9;
@@ -795,7 +734,7 @@ class CfgSurfaces {
 	//};
 	
 	//class TKMoutain : GdtRock {
-	//	access = ReadOnly;
+	//		
 	//	files = "tk_mountain_*";
 	//	rough = 0.01;
 	//	dust = 0.9;
@@ -805,7 +744,6 @@ class CfgSurfaces {
 	//};
 	
 	class ZRAsfalt : Default {
-		access = ReadOnly;
 		files = "zr_asfalt_*";
 		rough = 0.001;
 		dust = 0.1;
@@ -815,7 +753,6 @@ class CfgSurfaces {
 	};
 	
 	class ZRBeton : Default {
-		access = ReadOnly;
 		files = "zr_beton_*";
 		rough = 0.01;
 		dust = 0.08;
@@ -825,7 +762,6 @@ class CfgSurfaces {
 	};
 	
 	class ZRHlina : GdtDirt {
-		access = ReadOnly;
 		files = "zr_hlina_*";
 		rough = 0.1;
 		dust = 0.8;
@@ -835,7 +771,7 @@ class CfgSurfaces {
 	};
 	
 	//class ZRPlevel : GdtStratisDryGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "zr_plevel_*";
 	//	rough = 0.11;
 	//	dust = 0.7;
@@ -845,7 +781,7 @@ class CfgSurfaces {
 	//};
 	
 	//class ZRPole : GdtWildField {
-	//	access = ReadOnly;
+	//		
 	//	files = "zr_pole_*";
 	//	rough = 0.12;
 	//	dust = 0.6;
@@ -855,7 +791,7 @@ class CfgSurfaces {
 	//};
 	
 	//class ZRPolopoust : GdtDesert {
-	//	access = ReadOnly;
+	//		
 	//	files = "zr_polopoust_*";
 	//	rough = 0.01;
 	//	dust = 0.9;
@@ -865,7 +801,6 @@ class CfgSurfaces {
 	//};
 	
 	class ZRSkala : GdtRock {
-		access = ReadOnly;
 		files = "zr_skala_*";
 		rough = 0.3;
 		dust = 0.5;
@@ -875,7 +810,6 @@ class CfgSurfaces {
 	};
 	
 	class ZRSkalniSterk : GdtRock {
-		access = ReadOnly;
 		files = "zr_skalni_sterk_*";
 		rough = 0.15;
 		dust = 1;
@@ -885,7 +819,6 @@ class CfgSurfaces {
 	};
 	
 	class ZRSterkNaDno : GdtRock {
-		access = ReadOnly;
 		files = "zr_sterk_na_dno_*";
 		rough = 0.2;
 		dust = 0;
@@ -895,7 +828,6 @@ class CfgSurfaces {
 	};
 	
 	class ZRValouny : GdtRock {
-		access = ReadOnly;
 		files = "zr_valouny_*";
 		rough = 0.15;
 		dust = 0.4;
@@ -905,7 +837,7 @@ class CfgSurfaces {
 	};
 	
 	//class ZRTrava : GdtStratisDryGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "zr_trava_*";
 	//	rough = 0.11;
 	//	dust = 0.5;
@@ -915,7 +847,6 @@ class CfgSurfaces {
 	//};
 	
 	class ZRDlazbaOld : Default {
-		access = ReadOnly;
 		files = "zr_dlazba_old_*";
 		rough = 0.001;
 		dust = 0.1;
@@ -925,7 +856,7 @@ class CfgSurfaces {
 	};
 	
 	//class DEPolopoust : GdtDesert {
-	//	access = ReadOnly;
+	//		
 	//	files = "de_polopoust_*";
 	//	rough = 0.01;
 	//	dust = 0.9;
@@ -935,7 +866,7 @@ class CfgSurfaces {
 	//};
 	
 	//class DESkalniSterk : GdtRock {
-	//	access = ReadOnly;
+	//		
 	//	files = "de_skalni_sterk_*";
 	//	rough = 0.15;
 	//	dust = 1;
@@ -945,7 +876,6 @@ class CfgSurfaces {
 	//};
 	/*
 	class DETrava : GdtStratisDryGrass {
-		access = ReadOnly;
 		files = "de_trava_*";
 		rough = 0.11;
 		dust = 0.5;
@@ -956,7 +886,6 @@ class CfgSurfaces {
 	
 	
 	class WLGrass1 : GdtStratisGreenGrass {
-		access = ReadOnly;
 		files = "wl_trava1_*";
 		rough = 0.11;
 		dust = 0.1;
@@ -966,7 +895,6 @@ class CfgSurfaces {
 	};
 	
 	class WLGrass2 : GdtStratisGreenGrass {
-		access = ReadOnly;
 		files = "wl_trava2_*";
 		rough = 0.11;
 		dust = 0.1;
@@ -976,7 +904,6 @@ class CfgSurfaces {
 	};
 	
 	class WLGrassW1 : GdtStratisDryGrass {
-		access = ReadOnly;
 		files = "wl_travad1_*";
 		rough = 0.11;
 		dust = 0.1;
@@ -986,7 +913,6 @@ class CfgSurfaces {
 	};
 	
 	class WLGrassW2 : GdtStratisDryGrass {
-		access = ReadOnly;
 		files = "wl_travad2_*";
 		rough = 0.11;
 		dust = 0.1;
@@ -996,7 +922,6 @@ class CfgSurfaces {
 	};
 	
 	class WLForest1 : GdtStratisForestPine {
-		access = ReadOnly;
 		files = "wl_les1_*";
 		rough = 0.2;
 		dust = 0.2;
@@ -1006,7 +931,6 @@ class CfgSurfaces {
 	};
 	
 	class WLForest2 : GdtStratisForestPine {
-		access = ReadOnly;
 		files = "wl_les2_*";
 		rough = 0.2;
 		dust = 0.15;
@@ -1017,7 +941,6 @@ class CfgSurfaces {
 	*/
 	
 	class WLMudGround : GdtDirt {
-		access = ReadOnly;
 		files = "wl_pole_*";
 		rough = 0.09;
 		dust = 0.1;
@@ -1027,7 +950,6 @@ class CfgSurfaces {
 	};
 	
 	class WLField1 : GdtWildField {
-		access = ReadOnly;
 		files = "wl_oranice_*";
 		rough = 0.15;
 		dust = 0.25;
@@ -1037,7 +959,6 @@ class CfgSurfaces {
 	};
 	
 	class WLGrit1 : GdtDirt {
-		access = ReadOnly;
 		files = "wl_sterk_*";
 		rough = 0.1;
 		dust = 0.25;
@@ -1047,7 +968,7 @@ class CfgSurfaces {
 	};
 	
 	//class WLHeather : Default {
-	//	access = ReadOnly;
+	//		
 	//	files = "wl_vres_*";
 	//	rough = 0.14;
 	//	dust = 0.1;
@@ -1057,7 +978,6 @@ class CfgSurfaces {
 	//};
 	
 	class WLRock : Default {
-		access = ReadOnly;
 		files = "wl_skala_*";
 		rough = 0.2;
 		dust = 0.07;
@@ -1067,7 +987,6 @@ class CfgSurfaces {
 	};
 	
 	class WLTarmac : Default {
-		access = ReadOnly;
 		files = "wl_asfalt_*";
 		rough = 0.08;
 		dust = 0.05;
@@ -1077,7 +996,6 @@ class CfgSurfaces {
 	};
 	
 	class WLConcrete : Default {
-		access = ReadOnly;
 		files = "wl_beton_*";
 		rough = 0.08;
 		dust = 0.05;
@@ -1087,7 +1005,6 @@ class CfgSurfaces {
 	};
 	
 	class GZHlina : Default {
-		access = ReadOnly;
 		files = "gz_hlina_*";
 		rough = 0.1;
 		dust = 0.8;
@@ -1097,7 +1014,7 @@ class CfgSurfaces {
 	};
 	
 	//class GZTrava : GdtStratisGreenGrass {
-	//	access = ReadOnly;
+	//		
 	//	files = "gz_trava_*";
 	//	rough = 0.12;
 	//	dust = 0.6;
@@ -1107,7 +1024,6 @@ class CfgSurfaces {
 	//};
 	
 	class GZasfalt : Default {
-		access = ReadOnly;
 		files = "gz_asfalt_*";
 		rough = 0.1;
 		dust = 0.8;
@@ -1117,7 +1033,7 @@ class CfgSurfaces {
 	};
 	
 	//class GZforest : GdtStratisForestPine {
-	//	access = ReadOnly;
+	//		
 	//	files = "gz_forest_*";
 	//	rough = 0.1;
 	//	dust = 0.8;
@@ -1127,7 +1043,6 @@ class CfgSurfaces {
 	//};
 	
 	class GZkameny : GdtDirt {
-		access = ReadOnly;
 		files = "gz_kameny_*";
 		rough = 0.1;
 		dust = 0.8;

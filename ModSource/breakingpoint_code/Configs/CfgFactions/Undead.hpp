@@ -9,7 +9,7 @@
 
 	class Undead: BP_BaseFaction
 	{
-		name = "Undead";
+		name = "Engineer";
 		class Levels: Levels
 		{
 			class Level_Base: Level_Base
@@ -41,7 +41,7 @@
 					primary[] = {};
 					launcher[] = {};
 					handgun[] = {};
-					clothing[] = {"BP_Undead_2"};
+					clothing[] = {"BP_Guardian_F"};
 					backpack[] = {};
 					vest[] = {};
 				};
@@ -344,3 +344,4 @@
 			};
 		};
 	};
+

@@ -9,12 +9,10 @@
 
 class CfgMovesAnimal_Base_F 
 {
-	access = ReadAndCreate;
 	collisionVertexPattern[] = {};
 	collisionGeomCompPattern[] = {1};
 	
 	class Default {
-		access = ReadOnlyVerified;
 		file = "";
 		looped = true;
 		speed = 0.5;
@@ -308,7 +306,6 @@ class CfgGesturesDog
 /*
 class CfgMovesDog_BP : CfgMovesAnimal_Base_F 
 {
-	access = ReadAndCreate;
 	enableDirectControl = 0;
 	skeletonName = "BP_DogSkeleton";
 	gestures = "CfgGesturesMale";
@@ -317,7 +314,6 @@ class CfgMovesDog_BP : CfgMovesAnimal_Base_F
 
 	class Default : Default 
 	{
-		access = ReadOnlyVerified;
 		file = "";
 		looped = true;
 		speed = 0.5;

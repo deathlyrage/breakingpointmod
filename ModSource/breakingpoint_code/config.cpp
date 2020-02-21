@@ -81,7 +81,6 @@ class CfgMods
 
 class CfgAddons
 {
-	access = 1;
 	class PreloadBanks
 	{
 	};
