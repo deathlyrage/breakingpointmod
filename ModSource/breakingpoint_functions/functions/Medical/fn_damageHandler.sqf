@@ -359,9 +359,7 @@ if (_hitpoint in med_MinorWounds) then
 						};
 						if (_damage < 3.3) then 
 						{
-							if (!BP_isUndead) then {
 							[0] call BP_fnc_death;
-							};
 						} else {
 							r_fracture_legs = true;
 							};
@@ -457,12 +455,9 @@ if (_damage > 0.4) then //0.25
 	if (_hitInfection) then { r_player_infected = true; };
 	if (_hitPain) then { r_player_inpain = true; };
 	if ((_damage > 1.5) and _isHeadHit) exitWith {
-		if (!BP_isUndead) then 
-		{
-			_unit say ["z_headshot_0", 10];
-			playSound ["z_headshot_0", true];
-			[16] call BP_fnc_death;
-		};
+		_unit say ["z_headshot_0", 10];
+		playSound ["z_headshot_0", true];
+		[16] call BP_fnc_death;
 	};
 };
 
@@ -475,9 +470,7 @@ if (_type == 1) then
 	};
 	if (_damage > 4) then {
 		//serious ballistic damage
-		if (!BP_isUndead) then {
-			[12] call BP_fnc_death;
-		};
+		[12] call BP_fnc_death;
 	} else {
 		if (_damage > 2) then {
 			r_player_cardiac = true;
@@ -490,7 +483,5 @@ if (_type == 1) then
 if (_type == 2) then 
 {
 	//serious ballistic damage
-	if (!BP_isUndead) then {
 		if (_damage > 4) then { [4] call BP_fnc_death; };
-	};
 };

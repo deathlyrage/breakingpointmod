@@ -15,7 +15,7 @@ _characterID = _character getVariable ["CharacterID","0"];
 if (_characterID == "0") exitWith { ["posSync: Cannot Sync Character %1 has no characterID ~1001",(name _character)] call BP_fnc_debugConsoleFormat; };
 
 // Undead Don't Save
-if (_character getVariable ["class",0] == 7) exitWith {};
+// if (_character getVariable ["class",0] == 7) exitWith {};
 
 //Ensure Player Isn't In Debug
 _charPos = getPosATL _character;

@@ -753,7 +753,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 	//Destroy Fire
 	if (_cursorTarget == BP_hasFire && {_canDo}) then {
-		if ((s_player_fireout < 0) and !(inflamed _cursorTarget) and !_isUndead and !_targetUndead and _canDo and (player distance _cursorTarget < 4)) then {
+		if ((s_player_fireout < 0) and !(inflamed _cursorTarget) and _canDo and (player distance _cursorTarget < 4)) then {
 			s_player_fireout = player addAction ["Destroy Fire", { _this spawn BP_fnc_firePack; },_cursorTarget, 0, false, true, "",""];
 		};
 	} else {
@@ -877,7 +877,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		} count _hitpoints;
 	};
 
-	if (!_isMan && {_cursorTarget isKindOf "BP_DeadBody"} && {_canDo} && {!_isUndead}) then
+	if (!_isMan && {_cursorTarget isKindOf "BP_DeadBody"} && {_canDo}) then
 	{
 		if (s_player_destroyGrave < 0) then {
 			s_player_destroyGrave = player addAction ["Destroy Grave", { deleteVehicle (_this select 3); player removeAction s_player_destroyGrave; s_player_destroyGrave = -1; },_cursorTarget, 0, false, true, "",""];
@@ -888,7 +888,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	//Hide Bodies
-	if (_isMan && {!_isAlive} && {_canDo} && {!_isAnimal} && {!_isUndead}) then {
+	if (_isMan && {!_isAlive} && {_canDo} && {!_isAnimal}) then {
 		if (s_player_hidebody < 0) then {
 			s_player_hidebody = player addAction ["Hide Remains", { _this spawn BP_fnc_hideBody; },_cursorTarget, 0, false, true, "",""];
 		};
@@ -936,7 +936,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	//};
 
 	//Study / Loot / Hide Bodies
-	if (_isMan && {!_isAlive} && {_canDo} && {!_isZombie} && {!_isAnimal} && {!_targetUndead}) then {
+	if (_isMan && {!_isAlive} && {_canDo} && {!_isZombie} && {!_isAnimal}) then {
 		if (s_player_studybody < 0) then {
 			s_player_studybody = player addAction ["Study Remains", { _this spawn BP_fnc_studyBody; },_cursorTarget, 0, false, true, "",""];
 		};
@@ -951,15 +951,15 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	//Harvest Remains (Undead)
-	if (_isMan and !_isAlive and _canDo and !_isZombie and !_isAnimal and _isUndead and !_targetUndead) then
-	{
-		if (s_player_eatbody < 0) then {
-			s_player_eatbody = player addAction ["Harvest Remains", { _this spawn BP_fnc_eatBody; },_cursorTarget, 0, false, true, "",""];
-		};
-	} else {
-		player removeAction s_player_eatbody;
-		s_player_eatbody = -1;
-	};
+	// if (_isMan and !_isAlive and _canDo and !_isZombie and !_isAnimal and _isUndead and !_targetUndead) then
+	// {
+	// 	if (s_player_eatbody < 0) then {
+	// 		s_player_eatbody = player addAction ["Harvest Remains", { _this spawn BP_fnc_eatBody; },_cursorTarget, 0, false, true, "",""];
+	// 	};
+	// } else {
+	// 	player removeAction s_player_eatbody;
+	// 	s_player_eatbody = -1;
+	// };
 
 } else {
 	//Vehicle Remove Actions
