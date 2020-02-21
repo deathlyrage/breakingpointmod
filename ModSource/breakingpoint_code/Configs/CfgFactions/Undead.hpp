@@ -41,7 +41,7 @@
 					primary[] = {};
 					launcher[] = {};
 					handgun[] = {};
-					clothing[] = {"BP_Guardian_F"};
+					clothing[] = {"BP_Undead_2"};
 					backpack[] = {};
 					vest[] = {};
 				};
