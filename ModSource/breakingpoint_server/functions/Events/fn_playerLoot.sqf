@@ -25,17 +25,17 @@ if !(simulationEnabled _body) then { _body enableSimulationGlobal true; };
 _isAi = _body getVariable ["ai",false];
 
 //Undead Body Harvesting
-if (_player getVariable ["class",0] == 7) exitWith
-{
-	//Clear Body Inventory
-	_body setVariable ["inv",[]];
-	_body hideObjectGlobal true;
+// if (_player getVariable ["class",0] == 7) exitWith
+// {
+// 	//Clear Body Inventory
+// 	_body setVariable ["inv",[]];
+// 	_body hideObjectGlobal true;
 
-	_body setVariable ["processedDeath",-100 ];
+// 	_body setVariable ["processedDeath",-100 ];
 	
-	//Delete Body
-	deleteVehicle _body;
-};
+// 	//Delete Body
+// 	deleteVehicle _body;
+// };
 
 //Backup Body Data
 _bodyPos = getPosATL _body;

@@ -6,7 +6,6 @@
 
 	Alderon Games Pty Ltd
 */
-
 class SmallFire;
 class Thing;
 class UniformSlotInfo;
@@ -682,7 +681,6 @@ class CfgVehicles
 		selectionDamage = "DamT_1";
 	};
 	class BP_LootBox;
-	class SmallFire;
 	class BP_CampfireBase: BP_LootBox
 	{
 		scope = 0;

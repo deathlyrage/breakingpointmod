@@ -118,10 +118,9 @@ if (!_isDead || {alive _playerObj}) then
 	_isHostage = _playerObj getVariable ["med_hostage",false];
 	_isUnconcious = _playerObj getVariable ["med_unconscious",false];
 	_isTraitorFlag = _playerObj getVariable ["traitorFlag",false];
-	_isUndead = (_playerObj getVariable ["class",0] == 7);
 	_needsSurgery = (_playerObj getVariable ["med_bleedingLevel",0] > 2);
 
-	if (_isHostage || {_isUnconcious} || {_isTraitorFlag} || {_isUndead} || {_needsSurgery}) then
+	if (_isHostage || {_isUnconcious} || {_isTraitorFlag} || {_needsSurgery}) then
 	{
 		//Logging
 		["handleDisconnect: Combat Log: %1 ~0001", _playerName] call BP_fnc_debugConsoleFormat;

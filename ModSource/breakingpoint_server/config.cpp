@@ -61,7 +61,7 @@ class CfgBreakingPointServerSettings
 	class BreakingPointExt
 	{
 		//Do not change this number unless you really know what you are doing!!!
-		version = "0.001";
+		version = "0.002";
 	};
 };
 

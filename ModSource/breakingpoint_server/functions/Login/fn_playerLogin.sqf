@@ -240,7 +240,7 @@ if (BP_LegionOnly and !_validLegion) exitWith
 };
 
 //Kill Corrupt Undead Characters
-if (_class == 7) exitWith { ["CHILD:301:%1:",_charID] call BPServer_fnc_callExtensionAsync; };
+// if (_class == 7) exitWith { ["CHILD:301:%1:",_charID] call BPServer_fnc_callExtensionAsync; };
 
 //Check Valid Positions and Inside Buildings
 if !(_worldspace isEqualTo []) then
