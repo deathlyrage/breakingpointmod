@@ -1303,7 +1303,14 @@ class FSM
                          "			waitUntil {!dialog}; " \n
                          "			if (BP_selectClass < 0) then {" \n
                          "				createDialog ""RscDisplayFactionSystem"";" \n
-                         "			}" \n
+                         "			} else {" \n
+                         "				//Undead Locked	" \n
+                         "				if (BP_selectClass == 7 && _undeadDisabled) then" \n
+                         "				{" \n
+                         "					BP_selectClass = -1;" \n
+                         "					createDialog ""RscDisplayFactionSystem"";" \n
+                         "				};" \n
+                         "			};" \n
                          "		};" \n
                          "" \n
                          "		player setVariable [""class"",BP_selectClass];" \n
