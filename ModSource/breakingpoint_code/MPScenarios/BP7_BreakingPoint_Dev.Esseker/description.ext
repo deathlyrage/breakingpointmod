@@ -221,7 +221,7 @@ class BreakingPoint
 			*/
 			disableMixedgrouping = false;
 
-			undeadDisabled = true;
+			undeadDisabled = false;
 			
 			//Enable or Disable Point Gain and Loss
 			class Points
@@ -244,6 +244,8 @@ class BreakingPoint
 				hunter = true;
 				nomad = true;
 				survivalist = true;
+				engineer = true;
+				undead = true;
 			};
 		};
 
