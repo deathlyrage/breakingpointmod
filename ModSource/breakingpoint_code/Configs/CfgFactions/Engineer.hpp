@@ -96,7 +96,7 @@
 				class Uniform: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemBandage","ItemBandage","ItemFieldDressing"};
 					items[] = {};
 				};
 				class Vest: BP_BaseGear
@@ -108,7 +108,7 @@
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing","ItemAntibiotic"};
 					items[] = {};
 				};
 			};
@@ -133,13 +133,13 @@
 				class Vest: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {};
+					magazines[] = {"ItemAdrenaline"};
 					items[] = {};
 				};
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","ItemFieldDressing","ItemMorphine","BlueprintChest"};
 					items[] = {"Binocular"};
 				};
 			};

@@ -18,12 +18,12 @@ class None : BP_BaseFaction
 		class Level_Base : Level_Base {
 			class Spawn {
 				//Array Of Toolbelt Items
-				toolbelt[] = {};
+				toolbelt[] = {"ItemMap"};
 				//Array Of Random (Clothing,Backpack,Vest)
 				primary[] = {};
 				launcher[] = {};
 				handgun[] = {};
-				clothing[] = {"BP_OptOut","BP_OptOut2","BP_OptOut3"};
+				clothing[] = {"BP_OptOut","BP_OptOut2","BP_OptOut3","BP_Guarilla_Faded","BP_Guarilla_Camo"};
 				backpack[] = {};
 				vest[] = {};
 			};
