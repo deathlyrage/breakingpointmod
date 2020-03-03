@@ -15,6 +15,13 @@ class CfgVehicles
 {
 	class Logic;
 	class VirtualMan_F;
+	class House_F;
+	class Land_House_Logic: House_F
+	{
+		scope=1;
+		armor=400;
+		model="\A3\Weapons_f\dummyweapon.p3d";
+	};
 	class BP_Player_Unit: VirtualMan_F
 	{
 		scope = 2;
