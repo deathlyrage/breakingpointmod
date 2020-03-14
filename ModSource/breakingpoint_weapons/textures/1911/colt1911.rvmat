@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture="breakingpoint_weapons\textures\empty.paa";
+	texture="breakingpoint_weapons\textures\1911\colt1911_body_co.paa";
 };
 ambient[]={1,1,1,1};
 diffuse[]={1,1,1,1};
