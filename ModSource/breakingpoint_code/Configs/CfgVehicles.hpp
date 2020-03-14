@@ -16,11 +16,28 @@ class CfgVehicles
 	class Logic;
 	class VirtualMan_F;
 	class House_F;
+	class House_Small_F: House_F{};
 	class Land_House_Logic: House_F
 	{
 		scope=1;
 		armor=400;
 		model="\A3\Weapons_f\dummyweapon.p3d";
+	};
+	class Land_FuelStation_Feed_F: House_Small_F
+	{
+		transportFuel=0;
+	};
+	class Land_fs_feed_F: House_Small_F
+	{
+		transportFuel=0;
+	};
+	class Land_A_FuelStation_Feed: House_Small_F
+	{
+		transportFuel=0;
+	};
+	class Land_Ind_FuelStation_Feed_EP1: House_Small_F
+	{
+		transportFuel=0;
 	};
 	class BP_Player_Unit: VirtualMan_F
 	{
