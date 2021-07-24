@@ -2112,7 +2112,6 @@ class CfgObjectLoot {
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_545x39_HP_30rnd","magazine"},
 			{"BP_545x39_30rnd_Ball_T","magazine"},
-			{"BP_545x39_7N22","magazine"},
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"BP_762x54_7N1_10rnd","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"},
@@ -2137,7 +2136,6 @@ class CfgObjectLoot {
 			0.02,    //20RND LAPUA
 			0.04,   //30rnd 5.45x39 Hollow Point magazine
 			0.03,    //30rnd 5.45x39 Tracer magazine
-			0.04,   //30rnd 5.45x39 Hollow Point magazine
 			0.03,    //30rnd 5.45x39 Tracer magazine
 			0.03,   //30rnd 5.45x39 Hollow Point magazine
 			0.03,    //30rnd 5.45x39 Tracer magazine
@@ -2371,7 +2369,6 @@ class CfgObjectLoot {
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_10Rnd_65x47_Lapua","magazine"},
 			{"BP_10Rnd_65x39","magazine"},			
-			{"BP_545x39_7N22","magazine"},
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"BP_762x54_7N1_10rnd","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"},
@@ -2432,7 +2429,6 @@ class CfgObjectLoot {
 			0.04,	//20RND LAPUA
 			0.05,	//10RND LAPUA
 			0.07,	//10RND GRENDEL			
-			0.03,   //30rnd 5.45x39 Hollow Point magazine
 			0.02,    //30rnd 5.45x39 Tracer magazine
 			0.02,   //30rnd 5.45x39 Hollow Point magazine
 			0.02,    //30rnd 5.45x39 Tracer magazine
