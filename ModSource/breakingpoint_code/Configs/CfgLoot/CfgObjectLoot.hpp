@@ -879,7 +879,7 @@ class CfgObjectLoot {
 		itemType[] =	{
 			{"BP_Mak_Old","weapon"},
 			{"BP_1886S","weaponA"},
-			{"BP_1886C","weaponA"},
+			{"BP_1866C","weaponA"},
 			{"BP_SW45","weapon"},
 			{"BP_SW44","weapon"},
 			{"BP_1911","weapon"},
