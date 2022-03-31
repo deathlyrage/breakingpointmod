@@ -502,7 +502,7 @@ class CfgBuildingLoot
 			{"Rangefinder","weaponNA"},
 			{"BP_1Rnd_HE_shell","magazine"},
 			{"BP_100Rnd_127x99_box","magazine"},
-			{"BP_Minimi_762CCO","weaponA"},
+			{"BP_Minimi_762","weaponA"},
 			{"BP_M14RIS","weapon"},
 			{"BP_SW44","weaponA"},
 			{"BP_M4_300MK","weaponA"}
