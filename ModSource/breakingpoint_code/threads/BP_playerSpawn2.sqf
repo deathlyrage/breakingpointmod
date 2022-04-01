@@ -277,7 +277,7 @@ waitUntil
 	
 	//VON Check to Ensure Players Don't Speak over VON
 	if (VoN_isOn) then {
-		if ((VoN_currentTxt == "Ranger") or (VoN_currentTxt == "Nomad") or (VoN_currentTxt == "Outlaw") or (VoN_currentTxt == localize "str_channel_group")) then 
+		if ((VoN_currentTxt == "Alliance") or (VoN_currentTxt == "Outlaw") or (VoN_currentTxt == "Hunter") or (VoN_currentTxt == "Engineer") or (VoN_currentTxt == "Watchers") or (VoN_currentTxt == localize "str_channel_group")) then 
 		{
 			cutText ["Don't use VON on Faction Specific or Global Channels.", "PLAIN DOWN"];
 			VoN_Time = VoN_Time + 1;
