@@ -1120,6 +1120,51 @@ class CfgVehicles
 	{
 		scope = 1;
 	};
+	class BP_Rabbit: Animal_Base_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Rabbit_F.jpg";
+		_generalMacro="Rabbit_F";
+		scope=2;
+		displayName="$STR_A3_CfgVehicles_Rabbit_F0";
+		model="\A3\Animals_F\rabbit\rabbit_F.p3d";
+		side=3;
+		moves="CfgMovesRabbit_F";
+		fsmFormation="";
+		fsmDanger="";
+		maxTurnAngularVelocity=30;
+		costTurnCoef=9.9999997e-006;
+		canBleed=0;
+		boneHead="head";
+		bonePrimaryWeapon="head";
+		weaponBone="head";
+		triggerAnim="";
+		class VariablesScalar
+		{
+			_threatMaxRadius=20;
+			_runDistanceMax=50;
+			_movePrefer=0.69999999;
+			_formationPrefer=0.2;
+			_scareLimit=0.2;
+			_dangerLimit=1;
+			_walkSpeed=0.89999998;
+		};
+		class VariablesString
+		{
+			_expSafe="(0.5 * meadow) * (0.5 *  trees) * (1 - forest) * (1 - houses) * (1 - sea)";
+			_expDanger="(trees) * (forest) * (1 - meadow) * (1 - houses) * (1 - sea)";
+		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Animals_F\Rabbit\data\Rabbit.rvmat",
+				"A3\Animals_F\Rabbit\data\W1_Rabbit.rvmat",
+				"A3\Animals_F\Rabbit\data\W2_Rabbit.rvmat"
+			};
+		};
+	};
 	class BP_Chicken: Animal_Base_F
 	{
 		scope = 2;
@@ -1210,6 +1255,57 @@ class CfgVehicles
 	{
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\Sheep\data\tricolor_sheep_co.paa"};
+	};
+	class BP_Goat: Animal_Base_F
+	{
+		scope = 2;
+		displayName = "Goat";
+		model = "\A3\animals_f_beta\Goat\Goat_F.p3d";
+		hasGeometry = 1;
+		moves = "CfgMovesGoat_F";
+		baseClass = "BP_Goat";
+		class Wounds
+		{
+			tex[] = {};
+			mat[] = {"A3\animals_f_beta\Goat\data\goat.rvmat","A3\animals_f_beta\Goat\data\W1_goat.rvmat","A3\animals_f_beta\Goat\data\W2_goat.rvmat"};
+		};
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\Goat\data\white_goat_co.paa"};
+		class EventHandlers: BP_AnimalEventHandlers{};
+		class VariablesScalar
+		{
+			_threatMaxRadius = 10;
+			_runDistanceMax = 25;
+			_movePrefer = 0.7;
+			_formationPrefer = 0.7;
+			_scareLimit = 0.2;
+			_dangerLimit = 12;
+		};
+		class VariablesString
+		{
+			_expSafe = "(0.5 * meadow) * (0.5 *  houses) * (1 - forest) * (1 - trees) * (1 - sea)";
+			_expDanger = "(0.5 * meadow) * (0.5 *  houses) * (1 - forest) * (1 - trees) * (1 - sea)";
+		};
+	};
+	class BP_Goat_1: BP_Goat
+	{
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\Goat\data\white_goat_co.paa"};
+	};
+	class BP_Goat_2: BP_Goat
+	{
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\Goat\data\black_goat_co.paa"};
+	};
+	class BP_Goat_3: BP_Goat
+	{
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\goat\data\dirt_goat_co.paa"};
+	};
+	class BP_Goat_4: BP_Goat
+	{
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\Goat\data\old_goat_co.paa"};
 	};
 	class C_man_polo_1_F;
 	class Underwear_F;

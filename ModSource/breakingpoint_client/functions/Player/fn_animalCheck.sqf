@@ -7,7 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-#define ANIMALS ["BP_Dog","BP_Chicken_1","BP_Chicken_2","BP_Sheep_1","BP_Sheep_2","BP_Sheep_3","BP_Sheep_4"]
+#define ANIMALS ["BP_Dog","BP_Chicken_1","BP_Chicken_2","BP_Sheep_1","BP_Sheep_2","BP_Sheep_3","BP_Sheep_4","BP_Rabbit","BP_Goat_1","BP_Goat_2","BP_Goat_3","BP_Goat_4"]
 #define DOGS ["BP_Dog_1","BP_Dog_2","BP_Dog_3","BP_Dog_4","BP_Dog_5","BP_Dog_6","BP_Dog_7"]
 
 _playerPos = getPosATL player;
