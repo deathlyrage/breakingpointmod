@@ -314,7 +314,18 @@ BP_Houses =
 
 	"Land_i_Stone_Shed_01_b_clay_F",
 	"Land_i_Stone_Shed_01_b_raw_F",
-	"Land_i_Stone_Shed_01_b_white_F"
+	"Land_i_Stone_Shed_01_b_white_F",
+
+	//Tanoa
+	"Land_House_Small_05_F",
+	"Land_Shed_05_F",
+	"Land_Shed_02_F",
+	"Land_GarageShelter_01_F",
+    "Land_House_Small_03_F",
+    "Land_House_Small_04_F",
+    "Land_House_Small_02_F",
+    "Land_Slum_03_F",
+    "Land_Slum_01_F"	
 ];
 
 Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];
