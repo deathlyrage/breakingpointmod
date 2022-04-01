@@ -19,7 +19,15 @@ OnLoadIntro = "Welcome to Arma 3 Breaking Point!";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
-disableChannels[]={0,1,2,3};
+disableChannels[]=
+{
+	{0,true,true},	// Global
+	{1,true,true},	// Side
+	{2,true,true},	// Command
+	{3,true,true},	// Group
+	{4,true,true}, // Vehicle
+	{5,false,false}	// Direct
+};
 enableItemsDropping = 0;
 showUAVFeed = 0;
 corpseLimit = 9999;
