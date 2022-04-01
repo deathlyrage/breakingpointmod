@@ -299,9 +299,9 @@ waitUntil
 	if (_score < 0) then { player addRating (_score * -1); };
 	
 	//Update Chat - Enable / Disable Based on Stream Friendly UI
-	if (!BP_isUndead) then {
-		if (isNull findDisplay 49) then { showChat (!isStreamFriendlyUIEnabled); };
-	};
+//	if (!BP_isUndead) then {
+	if (isNull findDisplay 49) then { showChat (!isStreamFriendlyUIEnabled); };
+//	};
 
 	//Broken Group System Fixes
 	call BP_fnc_groupFix;

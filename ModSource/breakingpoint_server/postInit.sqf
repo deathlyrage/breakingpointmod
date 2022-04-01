@@ -55,10 +55,14 @@ BP_Cleanup_GlobalLoot_Interval = getNumber (missionConfigFile >> "BreakingPoint"
 BP_Cleanup_Restart_Interval = getNumber (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Cleanup" >> "Restart" >> "interval");
 
 // Setup Radio Channels
-BP_Radio_Ranger = radioChannelCreate [[0, 1, 0, 0.8], "Ranger", "%UNIT_NAME", []];
+BP_Radio_Ranger = radioChannelCreate [[0, 1, 0, 0.8], "Alliance", "%UNIT_NAME", []];
 BP_Radio_Outlaw = radioChannelCreate [[1, 0, 0, 0.8], "Outlaw", "%UNIT_NAME", []];
 BP_Radio_Nomad = radioChannelCreate [[0, 0, 1, 0.8], "Nomad", "%UNIT_NAME", []];
-BP_RadioChannels = [BP_Radio_Ranger,BP_Radio_Outlaw,BP_Radio_Nomad];
+BP_Radio_Hunter = radioChannelCreate [[0.5,0.25,0,1], "Hunter", "%UNIT_NAME", []];
+BP_Radio_Engineer = radioChannelCreate [[0,0,1,1], "Engineer", "%UNIT_NAME", []];
+BP_Radio_Survivalist = radioChannelCreate [[0.5,0.6,0.4,1], "Survivalist", "%UNIT_NAME", []];
+BP_Radio_Watchers = radioChannelCreate [[0.5,0.6,0.4,1], "Watchers", "%UNIT_NAME", []];
+BP_RadioChannels = [BP_Radio_Ranger,BP_Radio_Outlaw,BP_Radio_Nomad,BP_Radio_Hunter,BP_Radio_Engineer,BP_Radio_Survivalist,BP_Radio_Watchers];
 
 //Make Server Logic Join Faction Chats
 { _x radioChannelAdd [BP_ServerLogic]; } count BP_RadioChannels;
