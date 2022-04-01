@@ -20,9 +20,10 @@ call BP_fnc_checkFactionClothing;
 
 //Show Points Message
 //if (_points == 2) exitWith {}; //Don't Show Survivalist Point Gain
-if (_points == 0) exitWith { cutText ["<t font='Sketch' color='#ffe000' size='3'>No Points Gained</t><br/>", "PLAIN DOWN", -1, true, true]; };
+if (_points == 0) exitWith { cutText ["<t font='Sketch' color='#ffffff' size='1'>No Points Gained</t><br/>", "PLAIN DOWN", -1, true, true];
+};
 if (_points > 0) then {
-	cutText [format ["<t font='Sketch' color='#ff0000' size='4'>+%1 POINTS</t><br/>",_points], "PLAIN DOWN", -1, true, true];
+    cutText [format ["<t font='Sketch' color='#ffff00' size='3'>+%1 POINTS</t><br/>",_points], "PLAIN DOWN", -1, true, true];
 } else {
-	cutText [format ["<t font='Sketch' color='#ff0000' size='4'>%1 POINTS</t><br/>",_points], "PLAIN DOWN", -1, true, true];
+    cutText [format ["<t font='Sketch' color='#ff0000' size='3'>%1 POINTS</t><br/>",_points], "PLAIN DOWN", -1, true, true];
 };
