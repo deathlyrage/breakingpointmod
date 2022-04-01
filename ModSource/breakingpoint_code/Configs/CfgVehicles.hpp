@@ -134,6 +134,10 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Care Package";
+		hiddenSelectionsTextures[]=
+		{
+			"\a3\Supplies_F_Orange\Ammoboxes\Data\supplydrop_idap_co.paa"
+		};
 		class TransportMagazines{};
 		class TransportWeapons{};
 		class TransportItems{};
