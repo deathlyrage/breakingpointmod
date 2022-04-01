@@ -13,7 +13,7 @@ _player = objectFromNetID (_this select 0);
 if (isNull _player) exitWith {};
 
 //Add Points (Global)
-[_player,-250] call BPServer_fnc_addFactionPoints;
+[_player,-75] call BPServer_fnc_addFactionPoints;
 
 //Sync Stats
 _player call BPServer_fnc_statsSync;
