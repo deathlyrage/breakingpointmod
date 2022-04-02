@@ -2711,7 +2711,7 @@ class CfgObjectLoot {
 			{"BP_SW45","weapon"},
 			{"BP_SUD_AK74M","weapon"},
 			{"BP_AK74U","weapon"},
-			{"BP_SUD_AK105","weapon"},
+			{"BP_SUD_AK107","weapon"},
 			{"BP_M4Old","weapon"},
 			{"BP_M4","weaponA"},
 			{"BP_M4K","weapon"},
