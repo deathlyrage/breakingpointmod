@@ -2707,7 +2707,7 @@ class CfgObjectLoot {
 			{"BP_m9","weapon"},
 			{"BP_FamasSurb_HG","weapon"},	
             {"BP_M16OLD","weapon"},
-			{"BP_m9c","weapon"},
+			{"BP_m9_WDL","weapon"},
 			{"BP_SW45","weapon"},
 			{"BP_SUD_AK74M","weapon"},
 			{"BP_AK74U","weapon"},
@@ -2717,9 +2717,9 @@ class CfgObjectLoot {
 			{"BP_M4K","weapon"},
 			{"BP_Benelli","weapon"},
 			{"BP_g17","weapon"},
-			{"BP_MP7","weapon"},
+			{"BP_MP5","weapon"},
 			{"BP_R300","weaponA"},
-			{"BP_Mp7_urb","weapon"},
+			{"BP_MP5","weapon"},
 			{"BP_LeeEnfield2","weaponA"}
 			
 		};
