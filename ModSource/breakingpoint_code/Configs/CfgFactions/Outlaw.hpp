@@ -194,13 +194,13 @@
 				};
 				class Engineer
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
-					gut = 0;
+					food = -10;
+					drink = -10;
+					bandage = -15;
+					dressing = -20;
+					morphine = -25;
+					surgery = -50;
+					gut = 50;
 				};
 				class Undead
 				{
@@ -321,9 +321,9 @@
 				class Engineer
 				{
 					Level_0 = 50;
-					Level_1 = 0;
-					Level_2 = 0;
-					Level_3 = 0;
+					Level_1 = 150;
+					Level_2 = 200;
+					Level_3 = 300;
 				};
 				class Undead
 				{
