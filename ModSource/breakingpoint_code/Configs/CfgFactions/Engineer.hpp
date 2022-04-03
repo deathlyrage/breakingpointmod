@@ -59,7 +59,7 @@
 			{
 				class Spawn
 				{
-					toolbelt[] = {"ItemToolbox","ItemMap"};
+					toolbelt[] = {"ItemMap"};
 					primary[] = {};
 					launcher[] = {"MeleeCrowbar"};
 					handgun[] = {};
