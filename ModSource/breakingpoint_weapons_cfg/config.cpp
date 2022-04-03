@@ -1811,7 +1811,7 @@ class CfgWeapons
 		modelOptics[] = {"\breakingpoint_weapons\scopes\bek_hbino_r0.p3d", "\breakingpoint_weapons\scopes\bek_hbino_r1.p3d"};
 		opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
 		visionMode[] = {"Normal"};
-		picture = "\A3\Weapons_F\Data\UI\gear_binoculars_CA.paa";
+		picture = "\breakingpoint_ui\updatedimage\huntersbinoculars.paa";
 		value = 5;
 		type = 4096;
 		displayName = "Hunter's Binocular 6x-14X";
@@ -19104,7 +19104,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "ACOG (black)";
-		picture = "\A3\weapons_F\Data\UI\gear_acco_hamr_CA.paa";
+		picture = "\breakingpoint_ui\updatedimage\acog.paa";
 		model = "\breakingpoint_weapons\models\ACOG\BP_ACOG.p3d";
 		descriptionShort = "Rifle Combat Optic (RCO)<br/>ACOG";
 		weaponInfoType = "RscWeaponZeroing";
@@ -19331,7 +19331,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Aimpoint CompM4 red dot";
-		picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
+		picture = "\breakingpoint_ui\updatedimage\gear_acco_arco_CA.paa";
 		model = "\breakingpoint_weapons\models\AIM\BP_AIM.p3d";
 		descriptionShort = "";
 		weaponInfoType = "RscWeaponZeroing";
@@ -21407,7 +21407,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Saddle Cheekpiece";
 		descriptionUse = "Saddle Cheekpiece";
 		model = "\breakingpoint_weapons\models\Cheekpiece\bp_cheek.p3d";
-		picture = "\breakingpoint_weapons\icons\m_cheek_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\m_cheek_ca.paa";
 		descriptionShort = "Stock mounted cheekpiece for increased aiming stability";		
 		class ItemInfo: InventoryFlashLightItem_Base_F 
 		{

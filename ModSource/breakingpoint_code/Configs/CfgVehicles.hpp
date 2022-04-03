@@ -304,6 +304,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_HPack.p3d";
+		picture = "\breakingpoint_ui\updatedimage\alicepack.paa";
 		allowedSlots[] = {};
 		maximumLoad = 260;
 		mass = 200;
@@ -313,6 +314,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_MPack.p3d";
+		picture = "\breakingpoint_ui\updatedimage\medic.paa";
 		allowedSlots[] = {};
 		maximumLoad = 150;
 		mass = 120;
@@ -322,6 +324,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_SPack.p3d";
+		picture = "\breakingpoint_ui\updatedimage\czecksurvival.paa";
 		allowedSlots[] = {};
 		maximumLoad = 330;
 		mass = 250;
@@ -331,6 +334,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_RPack.p3d";
+		picture = "\breakingpoint_ui\updatedimage\outlaw.paa";
 		allowedSlots[] = {};
 		maximumLoad = 180;
 		mass = 90;
@@ -340,6 +344,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_RPack2.p3d";
+		picture = "\breakingpoint_ui\updatedimage\outlaw2.paa";
 		allowedSlots[] = {};
 		maximumLoad = 240;
 		mass = 100;
@@ -348,7 +353,9 @@ class CfgVehicles
 	class BP_KPack: BP_Bag_Base
 	{
 		scope = 2;
-		model = "\A3\Characters_F_EPA\BLUFOR\backpack_kerry.p3d";
+		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Small";
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_oli_co.paa"};
+		picture="\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_oli.paa";
 		allowedSlots[] = {};
 		maximumLoad = 240;
 		mass = 120;
@@ -358,11 +365,13 @@ class CfgVehicles
 	{
 		scope = 2;
 		displayName = "Civilian Bag (Khaki)";
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_AssaultPack_khk_ca.paa";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_khk_co.paa"};
 	};
 	class BP_AssaultPack_dgtl: BP_AssaultPack_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Compact_dgtl_ca.paa";
 		displayName = "Civilian Bag (Digital)";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_digi_co.paa"};
 	};
@@ -390,38 +399,42 @@ class CfgVehicles
 	class BP_AssaultPack_cbr: BP_AssaultPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_AssaultPack_cbr_ca.paa";
 		displayName = "Civilian Bag (Tan)";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	class BP_AssaultPack_mcamo: BP_AssaultPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Compact_mcamo_ca.paa";
 		displayName = "Civilian Bag (Camo)";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_mcamo_co.paa"};
 	};
 	class BP_AssaultPack_drt: BP_AssaultPack_Base
 	{
 		scope = 2;
-		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Compact_sgg_ca.paa";
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_AssaultPack_cbr_ca.paa";
 		displayName = "Civilian Bag (Dirt)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_compact_drt_co.paa"};
 	};
 	class BP_AssaultPack_grs: BP_AssaultPack_Base
 	{
 		scope = 2;
-		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Compact_blk_ca.paa";
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Compact_rgr_ca.paa";
 		displayName = "Civilian Bag (Grass)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_compact_grs_co.paa"};
 	};
 	class BP_AssaultPack_stn: BP_AssaultPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Compact_mcamo_ca.paa";
 		displayName = "Civilian Bag (Stone)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_compact_stn_co.paa"};
 	};
 	class BP_AssaultPack_tre: BP_AssaultPack_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Compact_rgr_ca.paa";
 		displayName = "Civilian Bag (Tree)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_compact_tre_co.paa"};
 	};
@@ -474,18 +487,20 @@ class CfgVehicles
 	class BP_Bergen_sgg: BP_Bergen_Base
 	{
 		scope = 2;
-		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_khk.paa";
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_rgr.paa";
 		displayName = "British Rucksack (Sage)";
 	};
 	class BP_Bergen_mcamo: BP_Bergen_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_mcamo.paa";
 		displayName = "British Rucksack (Camo)";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_mcamo_co.paa"};
 	};
 	class BP_Bergen_rgr: BP_Bergen_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_rgr.paa";
 		displayName = "British Rucksack (Green)";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_rgr_co.paa"};
 	};
@@ -506,36 +521,42 @@ class CfgVehicles
 	class BP_Bergen_grs: BP_Bergen_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_rgr.paa";
 		displayName = "British Rucksack (Grass)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_small_grs_co.paa"};
 	};
 	class BP_Bergen_stn: BP_Bergen_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_mcamo.paa";
 		displayName = "British Rucksack (Stone)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_small_stn_co.paa"};
 	};
 	class BP_Bergen_tre: BP_Bergen_Base
 	{
 		scope = 2;
+		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_hex.paa";
 		displayName = "British Rucksack (Tree)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_small_tre_co.paa"};
 	};
 	class BP_FieldPack_blk: BP_FieldPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F_beta\ammoboxes\bags\data\ui\icon_B_Gorod_blk_ca.paa";
 		displayName = "Activity Rucksack (Black)";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_blk_co.paa"};
 	};
 	class BP_FieldPack_ocamo: BP_FieldPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Gorod_hex_ca.paa";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_hex_co.paa"};
 		displayName = "Activity Rucksack (Hex)";
 	};
 	class BP_FieldPack_oucamo: BP_FieldPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\ui\icon_B_C_Gorod_oucamo_ca.paa";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_oucamo_co.paa"};
 		displayName = "Activity Rucksack (Urban)";
 	};
@@ -549,18 +570,21 @@ class CfgVehicles
 	class BP_FieldPack_drt: BP_FieldPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Gorod_hex_ca.paa";
 		displayName = "Activity Rucksack (Dirt)";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_gorod_drt_co.paa"};
 	};
 	class BP_FieldPack_grs: BP_FieldPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F_beta\ammoboxes\bags\data\ui\icon_B_Gorod_oli_ca.paa";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_gorod_grs_co.paa"};
 		displayName = "Activity Rucksack (Grass)";
 	};
 	class BP_FieldPack_stn: BP_FieldPack_Base
 	{
 		scope = 2;
+		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\ui\icon_B_C_Gorod_oucamo_ca.paa";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_gorod_stn_co.paa"};
 		displayName = "Activity Rucksack (Stone)";
 	};
@@ -691,6 +715,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		displayName = "Coyote (Bandit)";
+		picture = "\A3\Drones_F\Weapons_F_Gamma\ammoboxes\bags\data\ui\icon_B_C_UAV_cbr_ca";
 		model = "\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\UAV_backpack_F.p3d";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_coyote_bandit_co.paa"};
 		allowedSlots[] = {};
