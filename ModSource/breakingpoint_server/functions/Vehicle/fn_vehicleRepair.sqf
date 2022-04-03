@@ -53,5 +53,23 @@ if (local _vehicle) then
 	[_vehicle,_hitpoint,_damage,_hitpoints] remoteExecCall ["BP_fnc_vehicleHandleRepair", _vehicle];
 };
 
+_class = _player getVariable ["class",0];
+// engineer
+if(_class == 6) then {
+	_unitUID = getplayerUID _player;
+	_repairedRecently = [_unitUID] call BPServer_fnc_checkRepairRecent;
+	if (!_repairedRecently) then
+	{
+		//Add Points (Global) - Mission Config Custom Points Division
+		_points = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "Faction" >> "engineerRepairPoints");
+		_pointsChange = _points * BP_Factions_PointsRatio;
+		[_player, _pointsChange] call BPServer_fnc_addFactionPoints;
+		//Sync Stats
+		_player call BPServer_fnc_statsSync;
+		["vehicleRepairPoints: Player: %1  | Points: %2",_player,_pointsChange] call BP_fnc_debugConsoleFormat;
+	}else{
+		["vehicleRepairPoints: Player: %1 | repaired recently" ,_player] call BP_fnc_debugConsoleFormat;
+	};
+};										 
 // Add Vehicle To Update Queue
 [_vehicle] call BPServer_fnc_updateQueueAdd;

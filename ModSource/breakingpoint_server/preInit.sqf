@@ -95,6 +95,7 @@ BP_applyBandage = [];
 BP_applyPainkiller = [];
 BP_applySurgery = [];
 BP_applyMorphine = [];
+BP_applyRepair = [];					
 
 //Preload Code
 call compile preprocessFileLineNumbers "\breakingpoint_server\publicEH.sqf";

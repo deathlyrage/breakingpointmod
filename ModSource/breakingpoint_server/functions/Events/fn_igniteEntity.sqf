@@ -34,11 +34,21 @@ if (_player isEqualTo _object) exitWith {};
 //Faction Point Loss
 _pointsChange = [_player,_object] call BP_fnc_getFactionKillPoints;
 
-//Mission Config Custom Points Division
-_pointsChange = _pointsChange * BP_Factions_PointsRatio;
+
 
 //Don't Add Pos Points for this action
 if (_pointsChange > 0) exitWith {};
-	
+// kill points for destorying vehicles
+if(_object isKindOf "AllVehicles") then {
+	// Outlaw
+	_victimClass = _player getVariable ["class",0];
+	if(_victimClass == 2)then {
+		_pointsChange = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "Faction" >> "outlawDestroyPoints");;
+	};
+};
+
+//Mission Config Custom Points Division
+_pointsChange = _pointsChange * BP_Factions_PointsRatio;									  
+
 //Add Points (Global)
 [_player,_pointsChange] call BPServer_fnc_addFactionPoints;
