@@ -193,7 +193,23 @@ deleteVehicle _landingzone;
 
 //Animation is done, lets create the actual Crashside
 _crash = createVehicle [_crashModel, _pos, [], 0, "CAN_COLLIDE"];
-
+createVehicle ["Land_ClutterCutter_large_F", _pos, [], 0, "CAN_COLLIDE"];
+_newpos = [_pos#0 + 8, _pos#1 + 2, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];  
+_newpos = [_pos#0 - 8, _pos#1 + 2, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];  
+_newpos = [_pos#0 - 8, _pos#1 - 2, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];  
+_newpos = [_pos#0 + 8, _pos#1 - 2, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];
+_newpos = [_pos#0 + 2, _pos#1 + 8, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];  
+_newpos = [_pos#0 - 2, _pos#1 + 8, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];  
+_newpos = [_pos#0 - 2, _pos#1 - 8, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];  
+_newpos = [_pos#0 + 2, _pos#1 - 8, _pos#2];  
+createVehicle ["Land_ClutterCutter_large_F", _newpos, [], 0, "CAN_COLLIDE"];																		 
 //Calculate loot
 _num	 = round(random _randomizedLoot) + _guaranteedLoot;
 
