@@ -33,7 +33,7 @@ _foodTypes =
     "FoodBaconRaw"
 ];
 
-_drinkTypes = ["Waterbot","ItemWaterbotBoiled"];
+_drinkTypes = ["Waterbot","WaterbotBoiled"];
 
 //Go thru all magazines and check for food / water types
 {

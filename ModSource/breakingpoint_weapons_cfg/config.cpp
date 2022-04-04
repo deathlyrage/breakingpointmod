@@ -8330,7 +8330,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Tabuk";
 		descriptionUse = "DMR built from the AK-74 platform";
 		descriptionShort = "5.45x39mm DMR";
-		model = "breakingpoint_weapons\models\AK74\BP_AK74_DMR.p3d";
+		model = "breakingpoint_weapons\models\AK74\BP_AK74.p3d";
 		//magazines[] = {"BP_545x39_AK107", "BP_545x39_HP_30rnd", "BP_545x39_30rnd_Ball_T", "BP_545x39_30rnd_7N22"};
 		//reloadAction = "GestureReloadMX";
 		//handAnim[] = {"OFP2_ManSkeleton", "breakingpoint_weapons\anim\AK.rtm"};
