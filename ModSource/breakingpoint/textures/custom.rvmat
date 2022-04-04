@@ -1,3 +1,4 @@
+#define _ARMA_
 class StageTI
 {
 	texture="a3\characters_f\heads\data\m_ti_ca.paa";
