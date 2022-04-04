@@ -26,9 +26,9 @@ if (!isPlayer _cursorTarget) exitWith {};
 if ((diag_tickTime - BP_LastGroupInvite) < 5) exitWith { cutText ["You are inviting players to groups too quickly. Please try again in 5 seconds.", "PLAIN DOWN"]; };
 
 if (!isStreamFriendlyUIEnabled) then {
-	cutText [format ["You have invited %1 to join your group.",(name _cursorTarget)], "PLAIN DOWN"];
+	cutText [format ["You have invited %1 to join your group.",(name _cursorTarget)], "PLAIN DOWN"]; playsound "FD_Timer_F"
 } else {
-	cutText ["You have invited a player to join your group.", "PLAIN DOWN"];
+	cutText ["You have invited a player to join your group.", "PLAIN DOWN"]; playsound "FD_Timer_F"
 };
 
 BP_LastGroupInvite = diag_tickTime;
