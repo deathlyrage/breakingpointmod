@@ -38,7 +38,7 @@ class BP_MedicalboxHelicrash: BP_LootBox
 {
 	scope = public;
 	displayName = "Medical Box (Helicrash)";
-	model = "\breakingpoint\models\bp_medicalbox.p3d";
+	model="\A3\Props_F_Orange\Humanitarian\Camps\FirstAidKit_01_closed_F.p3d";
 	class transportmagazines {
 		class _xx_ItemBandage {
 			magazine = "ItemBandage";
@@ -96,7 +96,9 @@ class BP_ApexMilBox1 : BP_LootBox {
 
 class BP_ApexMilBox2 : BP_LootBox {
     displayName = "Apex Gear Crate";
-	model = "\A3\Supplies_F_Exp\Ammoboxes\Equipment_Box_F.p3d";
+	model="\A3\Structures_F_Heli\Items\Luggage\PlasticCase_01_large_F.p3d";
+	hiddenSelections[]={"Camo","Camo2"};
+	hiddenSelectionsTextures[]={"a3\Props_F_Enoch\Military\Supplies\Data\PlasticCase_01_olive_CO.paa"};
 };
 	
 /* Military Boxes Very Small (Small Magazine Supply Boxes)*/	
@@ -168,22 +170,30 @@ class BP_CardboardBox_2: BP_CardboardBox_1 {
 	hiddenSelectionsTextures[] = {"breakingpoint\textures\items\box2_co.paa"};
 };
 class BP_CardboardBox_3: BP_LootBox {
-	model = "\breakingpoint\models\bp_cardboardbox.p3d";
-	hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\cardboardbox1_co.paa"};
+	model="\A3\Props_F_Orange\Humanitarian\Supplies\PaperBox_01_small_closed_F.p3d";
+	hiddenSelections[]={"Camo"};
+	hiddenSelectionsTextures[]={"\breakingpoint_ui\updatedimage\boxdirty.paa"};
 };
 class BP_CardboardBox_4: BP_CardboardBox_1 {
 	hiddenSelectionsTextures[] = {"breakingpoint\textures\items\box4_co.paa"};
 };
 
 /* Trashcan */
-class BP_Trashcan : BP_LootBox { model = "\breakingpoint\models\bp_trashcan.p3d"; };
+class BP_Trashcan : BP_LootBox { model = "\A3\props_f_enoch\civilian\garbage\GarbageBin_03_F.p3d"; };
 
 /* Bag */
-class BP_Bag1 : BP_LootBox { model = "\breakingpoint\models\bp_bag1.p3d"; };
+class BP_Bag1 : BP_LootBox {
+	model = "\breakingpoint\models\bp_cardboardbox.p3d";
+	hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\cardboardbox1_co.paa"};
+};
 class BP_Bag2 : BP_LootBox { model = "\breakingpoint\models\bp_bag2.p3d"; };
 class BP_LuggageBags : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_01_F.p3d"; };	
 
-class BP_Packs : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; };
+class BP_Packs : BP_LootBox {
+	model="\A3\Structures_F_Heli\Items\Luggage\PlasticCase_01_medium_F.p3d";
+	hiddenSelections[]={"Camo","Camo2"};
+	hiddenSelectionsTextures[]={"a3\Props_F_Enoch\Military\Supplies\Data\PlasticCase_01_black_CO.paa"};
+};
 class BP_MilPallet : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; };
 
 /* Dumpster */
