@@ -19007,7 +19007,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "C-More Collimated optic";
-		//picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
+		picture = "\a3\Weapons_F\acc\Data\UI\icon_optic_ACO_grn_ca.paa";
 		model = "\A3\weapons_f\acc\acco_aco_OP_smg_F.p3d";
 		descriptionShort = "";
 		weaponInfoType = "RscWeaponZeroing";
@@ -19155,7 +19155,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Zeiss ZF42 Rifle Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_KHS_old_ca.paa";
 		model = "\breakingpoint_weapons\models\Zeiss\BP_Zeiss.p3d";
 		descriptionShort = "Fixed 6x power German rifle scope";
 		weaponInfoType = "RscWeaponZeroing";
@@ -19456,7 +19456,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Weaver K4 Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_KHS_old_ca.paa";
 		model = "\breakingpoint_weapons\models\EnfieldOptic2\BP_Type4.p3d";
 		descriptionShort = "Medium range rifle optic";
 		inertia = 0.032000;
@@ -19495,7 +19495,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Unertl 8x Rifle Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_KHS_old_ca.paa";
 		model = "\breakingpoint_weapons\models\Unertl8x\BP_Unertl8x.p3d";
 		descriptionShort = "Long range rifle optic for the M1903 Springfield";
 		inertia = 0.050000;
@@ -19534,7 +19534,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Unertl 32x Spotting Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_KHS_old_ca.paa";
 		model = "\breakingpoint_weapons\models\Unertl8x\BP_Unertl32x.p3d";
 		descriptionShort = "Long range rifle optic/spotting scope<br/>Used with: Springfield M1903/AR10/Winchester Model 70/Remington Model 7";
 		inertia = 0.050000;
@@ -19616,7 +19616,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Leupold Ultra M3A 10x42mm Rifle Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_khk_ca.paa";
 		model = "\breakingpoint_weapons\models\LeupoldM3A\BP_M3A.p3d";
 		descriptionShort = "Fixed-power MIL-dot optic";
 		weaponInfoType = "RscWeaponZeroing";
@@ -19655,7 +19655,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Leupold Ultra M3A 10x42mm Rifle Scope (Black)";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_ca.paa";
 		model = "\breakingpoint_weapons\models\LeupoldM3A\BP_M3A2.p3d";
 	};
 	
@@ -19663,7 +19663,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Leupold Ultra M3A 10x42mm Camo Rifle Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_khk_ca.paa";
 		model = "\breakingpoint_weapons\models\LeupoldM3A\BP_M3AN.p3d";
 	};
 	
@@ -19671,7 +19671,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "Leupold MRT 1.5-5x20mm Rifle Scope";
-		picture = "\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		picture = "\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_ca.paa";
 		model = "\breakingpoint_weapons\models\LeupoldMRT\BP_MRT.p3d";
 		descriptionShort = "Variable power Short/Medium Range rifle optic";
 		weaponInfoType = "RscWeaponZeroing";
