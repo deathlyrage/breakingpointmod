@@ -335,13 +335,13 @@ class RscDisplayInventory
 		class Button_Help: RscStructuredText
 		{
 			idc = 1232;
-			text = "<a href='https://github.com/deathlyrage/breakingpointmod/wiki/'><img size='1.72' image='\breakingpoint_ui\inventory\button_help_normal.paa'/></a>";
+			text = "<a href='https://discord.com/invite/0bdlQWbX7hbk40Yo'><img size='1.72' image='\breakingpoint_ui\inventory\button_help_normal.paa'/></a>";
 			x = 0.609313 * safezoneW + safezoneX;
 			y = 0.7024 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;
 			h = 0.044 * safezoneH;
-			onMouseEnter = "(_this select 0) ctrlSetStructuredText parseText ""<a href='https://github.com/deathlyrage/breakingpointmod/wiki/'><img size='1.72' image='\breakingpoint_ui\inventory\button_help_hover.paa'/></a>""";
-			onMouseExit = "(_this select 0) ctrlSetStructuredText parseText ""<a href='https://github.com/deathlyrage/breakingpointmod/wiki/'><img size='1.72' image='\breakingpoint_ui\inventory\button_help_normal.paa'/></a>""";
+			onMouseEnter = "(_this select 0) ctrlSetStructuredText parseText ""<a href='https://discord.com/invite/0bdlQWbX7hbk40Yo'><img size='1.72' image='\breakingpoint_ui\inventory\button_help_hover.paa'/></a>""";
+			onMouseExit = "(_this select 0) ctrlSetStructuredText parseText ""<a href='https://discord.com/invite/0bdlQWbX7hbk40Yo'><img size='1.72' image='\breakingpoint_ui\inventory\button_help_normal.paa'/></a>""";
 		};
 
 		class Button_Skin: RscActiveText
