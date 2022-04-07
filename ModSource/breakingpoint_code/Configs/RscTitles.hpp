@@ -1510,7 +1510,7 @@ class RscTitles
 		};
 		class controls
 		{
-			class BP_Map: BP_InfoText
+			class BP_Map: BP_InfoText2
 			{
 				idc = 1002;
 				text = "New Haven";
@@ -1520,7 +1520,7 @@ class RscTitles
 				h = 0.042 * safezoneH;
 			};
 			
-			class BP_Map2: BP_InfoText
+			class BP_Map2: BP_InfoText2
 			{
 				idc = 1003;
 				text = "New Haven";
