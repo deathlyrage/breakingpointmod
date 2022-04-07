@@ -79,7 +79,7 @@ class RscStructuredTextStats: RscStructuredText
 	{
 		font="sketch";
 		size="2 * 	(0.04)";
-		color="#A82B14";
+		color="#FFFFFF";
 		align="center";
 		valign="bottom";
 	};
@@ -1466,9 +1466,14 @@ class BP_InfoText : RscText
 {
 	sizeEx = 2 * GUI_GRID_H;
 	font = "sketch";
-	colorText[] = {0.66,0.168,0.0784,1};
+	colorText[] = {1,1,1,1};
 };
-
+class BP_InfoText2: RscText
+{
+	sizeEx = "1.3 * 	(0.04)";
+	font = "sketch";
+	colorText[] = {1,1,1,1};
+};
 class RscTitles
 {
 	titles[] = {"RscBPTimer","RscDisplayInfoScreen","RscDisplayInfoScreenStats"};
@@ -1708,7 +1713,7 @@ class RscTitles
 				w="0.104988 * safezoneW";
 				h="0.042 * safezoneH";
 			};
-			class BP_Map2Stats: BP_InfoText
+			class BP_Map2Stats: BP_InfoText2
 			{
 				idc=1022;
 				text="New Haven";

@@ -64,7 +64,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "C_man_polo_1_BP";
+			uniformClass = "C_man_polo_BP";
 			allowedSlots[] = {};
 			containerClass = "Supply10";
 			mass = 60;

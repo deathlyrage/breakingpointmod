@@ -1933,7 +1933,7 @@ class CfgWeapons
 		reloadAction = "ReloadRPG";
 		magazines[] = {"Hatchet_Swing"};
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\Hatchet_Idle.rtm"};
-		descriptionShort = "$STR_EQUIP_DESC_41";
+		//descriptionShort = "$STR_EQUIP_DESC_41";
 		modes[] = {"Single"};		
 		class Single : Mode_SemiAuto 
 		{			
@@ -18606,7 +18606,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				displayName = "$STR_A3_CfgWeapons_EBR_base_F_WeaponSlotsInfo_MuzzleSlot0";
+				//displayName = "$STR_A3_CfgWeapons_EBR_base_F_WeaponSlotsInfo_MuzzleSlot0";
 				compatibleItems[] = {};
 				iconScale = 0.1;
 			};
@@ -18732,7 +18732,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				displayName = "$STR_A3_CfgWeapons_EBR_base_F_WeaponSlotsInfo_MuzzleSlot0";
+				//displayName = "$STR_A3_CfgWeapons_EBR_base_F_WeaponSlotsInfo_MuzzleSlot0";
 				compatibleItems[] = {};
 				iconScale = 0.1;
 			};

@@ -594,7 +594,7 @@ class CfgMagazines
 		descriptionUse = "Worn Tire";
 		model = "\breakingpoint\models\bp_tire.p3d";
 		picture = "\breakingpoint\textures\icons\bp_tire_ca.paa";
-		descriptionShort = $STR_EQUIP_DESC_9;
+		//descriptionShort = $STR_EQUIP_DESC_9;
 		mass = 101;
 	};
 	
