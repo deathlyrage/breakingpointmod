@@ -1,6 +1,6 @@
 /*
 	Breaking Point Mod for Arma 3
-
+	
 	Released under Arma Public Share Like Licence (APL-SA)
 	https://www.bistudio.com/community/licenses/arma-public-license-share-alike
 
@@ -9,7 +9,7 @@
 
 class CfgFaces {
 	class Default;	// External class reference
-	
+
 	class Man_A3 : Default {
 		class Default;	// External class reference
 
