@@ -210,20 +210,27 @@ if(!_groupTimerActive) then
 	else
 	{
 		//Persistent Groups
-		if (_clan != "0") then
-		{
-			_squadData = squadParams _player;
-			if !(_squadData isEqualTo []) then
+	_squadData = squadParams _player;
+	if !(_squadData isEqualTo []) then
+	{
+			_squadData params ["_squadDetails","_memberDetails"];
+			_squadDetails params ["_squadNick","_squadName","_squadEmail"];
+            if !(_squadEmail isEqualTo "") then
+            {
+            _legionDataVarName = format["BP_LegionData:%1:%2", _squadName, _squadEmail];
+            if !((missionNamespace getVariable [_legionDataVarName, ""]) isEqualTo "") then
 			{
-				_squadData params ["_squadDetails","_memberDetails"];
-				_squadDetails params ["_squadNick","_squadName","_squadEmail"];
-				if (_squadEmail == _clan) then
-				{
-					_validLegion = true;
-					_body setVariable ["group",_clan,true];
-					_body setVariable ["groupTag",_squadNick,false];
-					_body setVariable ["groupName",_squadName,false];
-				};
+			_clan = missionNamespace getVariable [_legionDataVarName, ""];
+            }
+            else
+            {
+			_clan = call BP_fnc_groupCreateUID;
+			missionNamespace setVariable [_legionDataVarName, _clan];
+            };
+			_body setVariable ["group", _clan, true];
+			_body setVariable ["groupTag", _squadNick, false];
+			_body setVariable ["groupName", _squadName, false];
+			_validLegion = true;
 			};
 		};
 	};
