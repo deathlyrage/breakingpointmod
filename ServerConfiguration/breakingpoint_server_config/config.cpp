@@ -32,6 +32,20 @@ class CfgBreakingPointServerSettings
 	{
 		medicalCooldown = 900;	//time in seconds for point gain on medical assistance
 	};
+	class repairVehicle
+	{
+		repairCooldown = 900; //time in seconds for point gain on vehicle repair
+	};
+	class Faction
+	{
+		engineerRepairPoints = 15;
+		outlawDestroyPoints = 10;
+	};					  
+	class BreakingPointExt
+	{
+		//Do not change this number unless you really know what you are doing!!!
+		version = "0.002";
+	};
 };
 
 class CfgDifficultyPresets
