@@ -491,7 +491,7 @@ class CfgBuildingLoot
 			{"BP_Carryall_blk","backpack"},
 			{"BP_Zafir","weapon"},
 			{"V_RebreatherB","vest"},
-			{"BP_AWSM_338","weapon"},
+			{"BP_AWSM","weapon"},
 			{"BP_MK20_GL","weapon"},
 			{"BP_StoneGhillie","uniform"},
 			{"BP_Wetsuit","uniform"},
