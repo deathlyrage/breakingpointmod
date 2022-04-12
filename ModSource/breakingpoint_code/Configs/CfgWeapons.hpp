@@ -1227,7 +1227,7 @@ class CfgWeapons
 		model = "A3\Characters_F\Common\equip_tacticalvest";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"breakingpoint\textures\backpack\tacticalvest_engineer_co.paa"};
-		descriptionShort = "$STR_A3_SP_AL_IV";
+		descriptionShort = "$STR_A3_SP_AL_III";
 		class ItemInfo: VestItem
 		{
 			uniformModel = "A3\Characters_F\Common\equip_tacticalvest";
