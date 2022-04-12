@@ -698,6 +698,64 @@ class CfgBuildingLoot
 			
 		};
 	};
+	class BodyPile: Default {
+		zombieChance = 0.2;
+		minRoaming = 0;
+		maxRoaming = 1;
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		lootChance = 1;
+		lootPos[] = {};
+		itemType[] =	{
+			{"Meleehatchet","weapon"},
+			{"V_TacVest_oli_BP","vest"},
+			{"V_Rangemaster_belt_BP","vest"},
+			{"V_BandollierB_rgr_BP","vest"},
+			{"ItemMatchbox","magazine"},
+            {"MeleeClub","weapon"},
+			{"BP_StoneGhillie","uniform"},
+			{"BP_TreeGhillie","uniform"},
+			{"BP_DirtGhillie","uniform"},	
+			{"BP_Guarilla_Camo","uniform"},
+			{"BP_Guarilla_Leader","uniform"},
+			{"BP_Guarilla_Faded","uniform"},
+			{"MeleeShovel","weapon"},
+			{"ItemDuctTape","magazine"},
+			{"ItemBrick1","magazine"},
+			{"ItemFuelcanLargeEmpty","magazine"},
+			{"ItemFuelcanEmpty","magazine"},
+			{"ItemNails","magazine"},
+			{"ItemNettingMaterial","magazine"},
+			{"ItemWoodenPoles","magazine"},			
+			{"MeleeHammer","weapon"},
+			{"MeleePickaxe","weapon"},
+			{"BP_flashlight","toolbelt"}
+		};
+		itemChance[] =	{
+			0.10,   //HATCHET
+			0.10,   //TACVEST
+			0.12,	//BELT
+			0.11,	//BANDOLIER
+			0.10,	//MATCHES
+			0.10,	//CLUB
+			0.09,	//STONE
+			0.09,	//TREE
+			0.09,	//DIRT
+			0.12,	//GCAMO
+			0.12,	//GLEADER
+			0.12,	//GFADED
+			0.18,	//SHOVEL
+			0.15,	//DUCTTAPE
+			0.12,	//BRICK
+			0.08,	//FUELCANEMPTYLARGE
+			0.10,	//FUELCANEMPTY
+			0.12,	//NAILS
+			0.12,	//NETTING
+			0.12,	//WOODPOLES
+			0.10,	//HAMMER
+			0.10,	//PICKAXE
+			0.10	//FLASHLIGHT
+		};
+	};
 	class Castle: Default {
 		zombieChance = 0.4;
 		minRoaming = 1;
