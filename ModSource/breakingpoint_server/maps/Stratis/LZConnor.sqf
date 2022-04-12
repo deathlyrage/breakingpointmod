@@ -8,8 +8,3 @@ _building2 = createVehicle ["Land_Cargo_Tower_V2_F", [2948.31,1835.53,0], [], 0,
 _building2 setDir 128.464;
 _building2 setPos [2948.31,1835.53,0];
 _building2 enableDynamicSimulation true;
-
-_building3 = createVehicle ["Land_Carrier_01_base_F", [4764.24,2182.22,27.93], [], 0, "CAN_COLLIDE"];
-_building3 setDir 238.749;
-_building3 setPos [4764.24,2182.22,27.93];
-_building3 enableDynamicSimulation true;
