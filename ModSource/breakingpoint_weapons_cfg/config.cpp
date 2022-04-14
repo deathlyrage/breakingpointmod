@@ -2819,7 +2819,7 @@ class CfgWeapons
 		displayName = "PSE TAC Elite Crossbow Digital Camo";
 		picture = "\breakingpoint_weapons\icons\gear_crossbow_indp_rifle_x_ca.paa";
 		descriptionUse = "Crossbow";
-		linkedAttach[] = {"BP_Compm4s"};
+		linkedAttach[] = {"optic_Aco"};
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\crossbow\crossbow_indp_co.paa"};
 	};    	
@@ -7784,7 +7784,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    displayName = "FN F2000 SpecOps";
 		hiddenSelections[] = {};
 		inertia = 0.22;
-		linkedAttach[] = {"BP_Compm4s", "BP_flashlight", "BP_muzzle_snds_M"};
+		linkedAttach[] = {"optic_Aco", "BP_flashlight", "BP_muzzle_snds_M"};
 	};
 	
 	class BP_MK20Spec_WDL: BP_MK20Spec 
@@ -8042,7 +8042,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 		
-		linkedAttach[] = {"BP_Compm4s", "BP_flashlight"};
+		linkedAttach[] = {"optic_Aco", "BP_flashlight"};
 		chanceAttach[] = 
         {
 			{"BP_muzzle_snds_M",0.01},
@@ -9160,7 +9160,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		scope = 2;
 		maxZeroing = 600;
 		displayName = "VZ.58";
-		descriptionShort = "Modern AK-47 variant";
+		descriptionShort = "Czechoslovakian assault rifle";
 		magazines[] = {"BP_60Rnd_762x39_AKM", "BP_762x39_AKM"};
 		reloadAction = "GestureReloadEBR";
 		model = "breakingpoint_weapons\models\SA58\BP_SA58.p3d";
@@ -9707,7 +9707,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 		
-		linkedAttach[] = {"BP_compm4s"};
+		linkedAttach[] = {"optic_Aco"};
 		chanceAttach[] = 
         {
 			{"BP_Harris",0.03},
@@ -10021,7 +10021,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 		
-		linkedAttach[] = {"BP_compm4s"};
+		linkedAttach[] = {"optic_Aco"};
 		chanceAttach[] = 
         {
 			{"",0.50}
@@ -10466,7 +10466,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 		
-		linkedAttach[] = {"BP_compm4s"};
+		linkedAttach[] = {"optic_Aco"};
 		chanceAttach[] = 
         {
 			{"BP_Harris",0.07},
@@ -12555,7 +12555,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		chanceAttach[] = 
         {
             {"optic_ACO_grn", 0.50},
-			{"BP_compM4s", 0.50},
+			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
 			{"BP_Harris2", 0.10}
         };
@@ -12739,7 +12739,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		chanceAttach[] = 
         {
             {"optic_ACO_grn", 0.50},
-			{"BP_compM4s", 0.50},
+			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
 			{"BP_Harris2", 0.10}
         };
@@ -12987,7 +12987,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		chanceAttach[] = 
         {
             {"optic_ACO_grn", 0.50},
-			{"BP_compM4s", 0.50},
+			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
 			{"BP_Harris2", 0.10},
 			{"BP_AFG", 0.10}
@@ -13195,7 +13195,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		chanceAttach[] = 
         {
             {"optic_ACO_grn", 0.50},
-			{"BP_compM4s", 0.50},
+			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
 			{"BP_Harris2", 0.10},
 			{"BP_AFG", 0.10}

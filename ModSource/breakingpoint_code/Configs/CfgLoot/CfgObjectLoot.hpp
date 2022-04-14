@@ -732,7 +732,7 @@ class CfgObjectLoot {
 			0.02,   //BP_muzzle_snds_B
 			0.02,   //BP_muzzle_snds_H
 			0.02,   //BP_muzzle_snds_M12
-			0.03,   //BP_optic_ACO
+			0.03,   //BP_BP_compm4s
 			0.03,   //BP_SOS
 			0.03,   //optic_Arco
 			0.03,   //BP_PSOP
@@ -2705,7 +2705,7 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_m9","weapon"},
-			{"BP_FamasSurb_HG","weapon"},	
+			{"optic_Aco","toolbelt"},	
             {"BP_M16OLD","weapon"},
 			{"BP_m9_WDL","weapon"},
 			{"BP_SW45","weapon"},
@@ -2725,7 +2725,7 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{
 			0.07,	//M9
-			0.01,	//FAMAS
+			0.01,	//ACO
 			0.10,	//FAMAS
 			0.05,	//M9 CAMO
 			0.02,	//M9 CAMO
@@ -2965,7 +2965,7 @@ class CfgObjectLoot {
 			{"BP_M4","weaponA"},
 			{"BP_CAMO_M4","weapon"},
 			{"BP_KimberNW","weapon"},
-			{"BP_FamasSurb_HG","weapon"},
+			{"optic_Aco","toolbelt"},
 			{"BP_M4DDRP_SPEC","weaponA"},
 			{"BP_DMR_Officer","weaponA"},
 			{"BP_Mk12mod1","weaponA"},

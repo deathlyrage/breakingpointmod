@@ -101,7 +101,13 @@ class BreakingPoint
 				{1,1,2,"MilitaryRanger",{601.296,3736.03,0.00216293},0.10}, //MI-8 Crash site - Central Airfield - West 900m
 				{1,1,2,"GhostHotelWpn",{2549.38,3877.27,0.00143814},0.10}, //Jafarinin Kivi - West 650m
 				{1,1,2,"MilitaryRanger",{455.209,932.596,0.00138903},0.10}, //South West Airfield - North East 450m
-				{1,1,2,"MilitaryRanger",{3440.77,3372.35,0.00138092},0,10} //Jafarinin Kivi - South West 500m	
+				{1,1,2,"MilitaryRanger",{3440.77,3372.35,0.00138092},0,10}, //Jafarinin Kivi - South West 500m
+				{1,1,2,"MilitaryRanger",{1559.6,2048.8,0.001},0,30}, //THIRSK CITY LAKE
+				{1,1,2,"GhostHotelWpn",{1554.65,2024.02,0.001},0,30}, //THIRSK CITY LAKE
+				{1,1,2,"MilitaryRanger",{1542.21,2000.1,0.001},0,30}, //THIRSK CITY LAKE
+				{1,1,2,"GhostHotelAcc",{1483.16,1988.93,0.001},0,30}, //THIRSK CITY LAKE
+				{1,1,2,"MilitaryRanger",{1472.29,2023.81,0.001},0,30}, //THIRSK CITY LAKE
+				{1,1,2,"GhostHotelWpn",{1489.62,2054.64,0.001},0,30} //THIRSK CITY LAKE
 			};	
 		};
 

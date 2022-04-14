@@ -1151,7 +1151,7 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_Bag1","object","Generic"},
-			{"BP_Bag2","object","Generic"},
+			{"BP_Packs","object","CivilianAcc"},
 			{"BP_WeaponCrateOld","object","CastleWpn"},
 			{"BP_AmmoBoxOld","object","CastleAcc"}
 		};
