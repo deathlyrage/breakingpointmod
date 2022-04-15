@@ -82,6 +82,7 @@ if (_hasWater and _hasContainer) then
 			};
 			//Display Qty Cooked Message if Any Successfully Cooked.
 			if (_qtyBoiled > 0) then {
+				playsound "z_fillwater_0";
 				cutText[format["You have boiled %1 bottles of water.", _qty],"PLAIN DOWN"];
 			};
 		} else {

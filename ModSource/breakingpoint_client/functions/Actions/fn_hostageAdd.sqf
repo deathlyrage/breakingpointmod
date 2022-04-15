@@ -29,9 +29,9 @@ if ("ItemDuctTape" in magazines player) then {
 
 if (!isStreamFriendlyUIEnabled) then {
 	_msg = format ["You have taken %1 as a hostage.",(name _cursorTarget)];
-	cutText [_msg, "PLAIN DOWN"];
+	cutText [_msg, "PLAIN DOWN"]; playsound "z_bandage_0"
 } else {
-	cutText ["You have taken a player as a hostage.", "PLAIN DOWN"];
+	cutText ["You have taken a player as a hostage.", "PLAIN DOWN"]; playsound "z_bandage_0"
 };
 
 [(netID player),(netID _cursorTarget)] remoteExecCall ["BPServer_fnc_hostageAdd",2];

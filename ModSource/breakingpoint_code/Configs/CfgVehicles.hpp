@@ -2991,6 +2991,7 @@ class CfgVehicles
 	class B_T_LSV_01_armed_F;
 	class B_T_LSV_01_unarmed_F;
 	class C_Offroad_02_unarmed_F;
+	class C_Van_01_transport_F;
 	class BP_C_Scooter_Transport_01_F: C_Scooter_Transport_01_F
 	{
 		editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\C_Scooter_Transport_01_F.jpg";
@@ -5880,6 +5881,200 @@ class CfgVehicles
 			};
 		};
 		
+		class EventHandlers: BP_VehicleEventHandlers{};
+	};
+	class BP_Van_01_box_F: C_Van_01_box_F
+	{
+		scope = 2;
+		side = 3;
+		crew = "";
+		displayName = "Box Truck";
+		typicalCargo[] = {};
+		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
+		hiddenSelectionsTextures[] = {"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems{};
+		commanderCanSee = "2 + 4 + 8";
+		gunnerCanSee = "2 + 4 + 8";
+		driverCanSee = "2 + 4 + 8";
+		maximumLoad = 2500;
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 10;
+		class HitPoints
+		{
+			class HitGlass1
+			{
+				armor = 0;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			class HitBody
+			{
+				armor = 0.5;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0.2;
+			};
+			class HitFuel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			class HitFuel2
+			{
+				armor = 0;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			class HitLFWheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			class HitLF2Wheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			class HitRFWheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			class HitRF2Wheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			class HitEngine
+			{
+				armor = 0.5;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 0.2;
+			};
+		};
+		class EventHandlers: BP_VehicleEventHandlers{};
+	};
+	class BP_Van_01_transport: C_Van_01_transport_F
+	{
+		scope = 2;
+		side = 3;
+		crew = "";
+		displayName = "Mini Transport Truck";
+		typicalCargo[] = {};
+		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
+		hiddenSelectionsTextures[]=
+		{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_04_CO.paa","\a3\soft_f_gamma\van_01\data\van_01_int_base_co.paa"
+		};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems{};
+		commanderCanSee = "2 + 4 + 8";
+		gunnerCanSee = "2 + 4 + 8";
+		driverCanSee = "2 + 4 + 8";
+		maximumLoad = 1500;
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 10;
+		class HitPoints
+		{
+			class HitGlass1
+			{
+				armor = 0;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			class HitBody
+			{
+				armor = 0.5;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0.2;
+			};
+			class HitFuel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			class HitFuel2
+			{
+				armor = 0;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			class HitLFWheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			class HitLF2Wheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			class HitRFWheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			class HitRF2Wheel
+			{
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			class HitEngine
+			{
+				armor = 0.5;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 0.2;
+			};
+		};
 		class EventHandlers: BP_VehicleEventHandlers{};
 	};
 };

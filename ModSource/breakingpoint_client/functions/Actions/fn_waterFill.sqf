@@ -77,7 +77,7 @@ if (_canFill) then {
 			_sfx = "fillwater";
 			[player,_sfx,0,false,_dis] call BP_fnc_objSpeak;  
 			[player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
-			
+			playsound "z_fillwater_0";			
 			player addMagazine "Waterbot";
 		};
 	};

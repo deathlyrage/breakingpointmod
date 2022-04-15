@@ -43,6 +43,7 @@ class CfgDifficultyPresets
 			cameraShake=0;
 			scoreTable=0;
 			deathMessages=0;
+			tacticalPing = 0;
 			vonID=0;
 			mapContent=0;
 			autoReport=0;
@@ -73,7 +74,8 @@ class CfgDifficultyPresets
 			cameraShake=0;
 			scoreTable=0;
 			deathMessages=0;
-			vonID=0;
+			tacticalPing = 0;
+			vonID = 0;
 			mapContent=0;
 			autoReport=0;
 			multipleSaves=0;
@@ -103,7 +105,8 @@ class CfgDifficultyPresets
 			cameraShake=0;
 			scoreTable=0;
 			deathMessages=0;
-			vonID=1;
+			tacticalPing = 0;					
+			vonID=0;
 			mapContent=0;
 			autoReport=0;
 			multipleSaves=0;
@@ -133,7 +136,8 @@ class CfgDifficultyPresets
 			cameraShake=0;
 			scoreTable=0;
 			deathMessages=0;
-			vonID=0;
+			tacticalPing = 0;
+			vonID = 1;
 			mapContent=0;
 			autoReport=0;
 			multipleSaves=0;

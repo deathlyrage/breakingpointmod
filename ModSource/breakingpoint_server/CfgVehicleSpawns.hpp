@@ -34,7 +34,10 @@ class CfgVehicleSpawns
 			{
 				count = 10;
 			};
-			
+			class BP_Van_01_transport: BaseVehicleSpawn
+			{
+				count = 2;
+			};			
 			class BP_Hatchback_01_F : BaseVehicleSpawn
 			{
 				count = 5;
@@ -72,6 +75,10 @@ class CfgVehicleSpawns
 			class BP_Van_01_Fuel_F : BaseVehicleSpawn
 			{
 				count = 4;
+			};
+			class BP_Van_01_box_F: BaseVehicleSpawn
+			{
+				count = 2;
 			};
 			class BP_C_Offroad_02_unarmed_F : BaseVehicleSpawn
 			{

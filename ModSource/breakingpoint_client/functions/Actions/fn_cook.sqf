@@ -77,6 +77,7 @@ _cookedmeat = meatcooked;
 			};
 			//Display Qty Cooked Message if Any Successfully Cooked.
 			if (_qtyCooked > 0) then {
+				playsound "z_cook_0";
 				cutText [format["You have cooked %1 %2.",_qtyCooked,_text], "PLAIN DOWN"];
 			};
 		} else {

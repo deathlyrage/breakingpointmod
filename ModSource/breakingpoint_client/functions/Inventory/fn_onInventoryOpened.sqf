@@ -188,7 +188,7 @@ if (!_return) then
 	//Play Backpack Sounds Of Opening Things
 	if (_container isKindOf "BP_Bag_Base") then {
 		_isInside = [_unit] call BP_fnc_isInsideBuilding;
-		playSound3D ["a3\sounds_f\characters\stances\concrete_adjust_prone_left.wss", _unit, _isInside, getPosASL _unit,1,1,20];
+		playSound3D ["breakingpoint_sfx\effects\action_tentunpack_0.ogg", _unit, _isInside, getPosASL _unit,20,1,20];
 	};
 	
 	//BP_AllowInventory = false;
