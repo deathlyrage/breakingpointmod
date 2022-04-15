@@ -224,11 +224,11 @@ class BreakingPoint
 		class Zombies 
 		{
 			enabled = true;
-			maxLocal = 40; //Total Local
-			maxNearby = 30; //Total Nearby
-			maxGlobal = 125; //Total Alive
-			max = 150; // Total Alive + Dead
-			distance = 1000;
+			maxLocal = 6; //Total Local
+			maxNearby = 5; //Total Nearby
+			maxGlobal = 40; //Total Alive
+			max = 46; // Total Alive + Dead
+			distance = 800;
 		};
 
 		class Animals

@@ -13,7 +13,7 @@ class RscDisplayConfigure {
 		
 		class Mainback : RscPicture {
 			idc = 2310;
-			text = "\breakingpoint_ui\loading\main_title_01.jpg";
+			text = "\breakingpoint_ui\loading\control.jpg";
 			x = 0 * safezoneW + safezoneX;
 			y = 0 * safezoneH + safezoneY;
 			w = 1 * safezoneW;

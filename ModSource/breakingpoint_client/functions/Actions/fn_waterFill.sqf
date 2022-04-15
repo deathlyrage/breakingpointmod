@@ -10,7 +10,7 @@
 private ["_playerPos","_canFill","_isPond","_isWell","_pondPos","_objectsWell","_onLadder","_hasbottleitem","_config","_item","_text","_objectsPond","_qty","_dis","_sfx"];
 _item = 		_this select 0;
 _playerPos = 	getPosATL player;
-_canFill = 		count nearestObjects [_playerPos, ["Land_StallWater_F","Land_Water_source_F"], 10] > 0;
+_canFill = 		count nearestObjects [_playerPos, ["Land_StallWater_F","Land_Water_source_F","land_pumpa","Land_StoneWell_01_F","Land_ConcreteWell_02_F","Land_Misc_Well_L_EP1","Land_Misc_Well_C_EP1"], 10] > 0;
 _canFill_1 = 	count nearestObjects [_playerPos, ["Land_BarrelWater_F"], 10] > 0;
 _isPond = 		false;
 _isWell = 		false;

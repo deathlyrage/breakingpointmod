@@ -10,7 +10,7 @@ class RscDisplayModLauncher : RscStandardDisplay {
 		
 		class Mainback : RscPicture {
 			idc = 2310;
-			text = "\breakingpoint_ui\loading\main_title_01.jpg";
+			text = "\breakingpoint_ui\loading\dlc.jpg";
 			x = 0 * safezoneW + safezoneX;
 			y = 0 * safezoneH + safezoneY;
 			w = 1 * safezoneW;

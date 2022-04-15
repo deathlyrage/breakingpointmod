@@ -32,3 +32,6 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 
 // Breaking Point - Player Client Integration
 initialized = true;
+
+waitUntil {time > 0};
+enableEnvironment [false,true];
