@@ -1707,8 +1707,9 @@ class CfgObjectLoot {
 			{"BP_LeeEnfield2","weaponA"},
 			{"BP_Crossbow","weapon"},
 			{"BP_Crossbow_DigitCamo","weaponA"},
-			{"BP_MP5","weapon"}
-
+			{"BP_MP5","weapon"},
+			{"BP_Vector","weapon"},
+			{"BP_VSS","weaponA"}
 		};
 		itemChance[] =	{
 			0.07,	//M9
@@ -1728,7 +1729,9 @@ class CfgObjectLoot {
 			0.03,	//ENFIELD SCOPED
 			0.03,	//Crossbow
 			0.03,	//Crossbow
-			0.10	//Mp5
+			0.10,	//Mp5
+			0.09,	//Vector
+			0.05	//VSS
 		};
 	};
 	

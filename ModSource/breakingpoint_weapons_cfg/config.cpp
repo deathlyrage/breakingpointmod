@@ -2719,7 +2719,7 @@ class CfgWeapons
 		descriptionUse = "Crossbow";
 		descriptionShort = "Crossbow";
 		scope = 2;
-		picture = "\breakingpoint_weapons\icons\gear_crossbow_rifle_x_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\gear_crossbow_rifle_x_ca.paa";
 		model = "breakingpoint_weapons\models\crossbow\bp_crossbow.p3d";
 		magazines[] = {"BP_Arrow_Mag","BP_Arrow_Rambo","BP_Arrow_Tranq","BP_Arrow_Poison","BP_Arrow_Fire"};
 		muzzles[] = {"this", "Butt"};
@@ -2817,7 +2817,7 @@ class CfgWeapons
 	class BP_Crossbow_DigitCamo : BP_Crossbow 
 	{
 		displayName = "PSE TAC Elite Crossbow Digital Camo";
-		picture = "\breakingpoint_weapons\icons\gear_crossbow_indp_rifle_x_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\gear_crossbow_indp_rifle_x_ca.paa";
 		descriptionUse = "Crossbow";
 		linkedAttach[] = {"optic_Aco"};
 		hiddenSelections[] = {"camo1"};
@@ -4927,7 +4927,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		model = "\breakingpoint_weapons\models\Lupara\BP_Lupara.p3d";
-		picture = "\breakingpoint_weapons\icons\gear_lupara_rifle_x_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\lupara.paa";
 		displayName = "Lupara Double Barrel";
 		reloadAction = "ReloadMagazine";
 		magazines[] = {"BP_2Rnd_Buckshot", "BP_2Rnd_Slug", "BP_2Rnd_MagBuckshot"};
@@ -5055,7 +5055,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    scope = 2;
 		//type = 2; //enable this for it to go in pistol slot
 		model = "\breakingpoint_weapons\models\Lupara\BP_LuparaS.p3d";
-		picture = "\breakingpoint_weapons\icons\gear_lupara_rifle_x_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\lupara.paa";
 		displayName = "Lupara Double Barrel";
 		reloadAction = "ReloadMagazine";
 		magazines[] = {"BP_2Rnd_MagBuckshot", "BP_2Rnd_Buckshot", "BP_2Rnd_Slug"};
@@ -7445,12 +7445,12 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	
 	class BP_MX_black : BP_MX 
 	{
-		displayName = "MX SpecOps";
+		displayName = "MX Black";
 		descriptionShort = "Customized MX Assault Rifle for special operations";
 		hiddenSelections[] = {"camo1", "camo2"};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa", "\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_short_Black_co.paa"};
-		picture = "\A3\Weapons_F_EPB\Rifles\MX_Black\Data\UI\gear_mx_rifle_black_X_CA.paa";
-		magazines[] = {"BP_20Rnd_65x47_Lapua", "BP_30Rnd_65x39", "BP_30Rnd_65x39_SD", "BP_10Rnd_65x39", "BP_10Rnd_65x47_Lapua", "BP_10Rnd_65x39_SD"};
+		picture = "\breakingpoint_ui\updatedimage\gear_mx_rifle_black_X_CA.paa";
+		magazines[] = {"BP_30Rnd_65x39_black","BP_20Rnd_65x47_Lapua", "BP_30Rnd_65x39", "BP_30Rnd_65x39_SD", "BP_10Rnd_65x39", "BP_10Rnd_65x47_Lapua", "BP_10Rnd_65x39_SD"};
 		changeFiremodeSound[] = {};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		linkedAttach[] = {"BP_muzzle_snds_H", "optic_hamr", "BP_flashlight"};
@@ -7486,8 +7486,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionShort = "Customized MXM DMR for special operations";
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_long_Black_co.paa"};
-		picture = "\A3\Weapons_F_EPB\Rifles\MX_Black\Data\UI\gear_mx_dmr_black_X_CA.paa";
-		magazines[] = {"BP_20Rnd_65x47_Lapua", "BP_30Rnd_65x39", "BP_30Rnd_65x39_SD", "BP_10Rnd_65x39", "BP_10Rnd_65x47_Lapua", "BP_10Rnd_65x39_SD"};
+		picture = "\breakingpoint_ui\updatedimage\gear_mx_dmr_black_X_CA.paa";
+		magazines[] = {"BP_30Rnd_65x39_black","BP_20Rnd_65x47_Lapua", "BP_30Rnd_65x39", "BP_30Rnd_65x39_SD", "BP_10Rnd_65x39", "BP_10Rnd_65x47_Lapua", "BP_10Rnd_65x39_SD"};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		linkedAttach[] = {"BP_muzzle_snds_H", "BP_L14X"}; //removed bipod
 	};
@@ -11260,7 +11260,150 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
         hiddenSelections[] = {"camo1", "camo2"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\mp5\mp5_urb_co.paa", "breakingpoint_weapons\textures\mp5\mp5_sd_urb_co.paa"};
 	};
-	
+	class BP_Vector: Rifle_Base_F_BP
+	{
+		maxZeroing = 200;
+		scope = 2;
+		displayName = "Vector";
+		model = "\A3\Weapons_F_beta\Smgs\SMG_01\SMG_01_F.p3d";
+		picture = "\breakingpoint_ui\updatedimage\vector.paa";
+		hiddenSelections[] = {"camo1","camo2","camo3"};
+		hiddenSelectionsTextures[] = {"\a3\weapons_f_beta\smgs\smg_01\data\smg_01_co.paa","\a3\weapons_f\data\vectoratt_co.paa","\a3\weapons_f\acc\data\battlesight_co.paa"};
+		discreteDistance[] = {50,100,150,200};
+		discreteDistanceInitIndex = 0;
+		descriptionShort = "KRISS 9mm Submachine Gun";
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_01\data\Anim\SMG_01.rtm"};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Vermin\Dry_Vermin",0.5011872,1,10};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Vermin\reload_vermin",1,1,10};
+		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Vermin\firemode_Vermin",0.25118864,1,5};
+		inertia = 0.3;
+		initSpeed = -1.08;
+		recoil = "recoil_smg_01";
+		modes[] = {"Single","Burst","FullAuto"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",1.1,1,300};
+				begin2[] = {"\breakingpoint_jsrs\sounds\P226_s2.wav",1.1,1,300};
+				begin3[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",1,0.7,300};
+				begin4[] = {"\breakingpoint_jsrs\sounds\P226_s2.wav",1.3,0.8,300};
+				begin5[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",1.2,1.3,300};
+				soundBegin[] = {"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\P226SD_s1.wav",1,1,30};
+				begin2[] = {"\breakingpoint_jsrs\sounds\P226SD_s2.wav",1,1,30};
+				begin3[] = {"\breakingpoint_jsrs\sounds\P226SD_s3.wav",1,0.9,30};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+			};
+			reloadTime = 0.05;
+			dispersion = 0.00131;
+		};
+		class Burst: Mode_Burst
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",0.7,1,300};
+				begin2[] = {"\breakingpoint_jsrs\sounds\P226_s2.wav",0.6,1,300};
+				begin3[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",0.75,0.7,300};
+				begin4[] = {"\breakingpoint_jsrs\sounds\P226_s2.wav",0.63,0.8,300};
+				begin5[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",0.82,1.3,300};
+				soundBegin[] = {"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\P226SD_s1.wav",1,1,30};
+				begin2[] = {"\breakingpoint_jsrs\sounds\P226SD_s2.wav",1,1,30};
+				begin3[] = {"\breakingpoint_jsrs\sounds\P226SD_s3.wav",1,0.9,30};
+				begin4[] = {"\breakingpoint_jsrs\sounds\P226SD_s1.wav",1.2,1.2,30};
+				begin5[] = {"\breakingpoint_jsrs\sounds\P226SD_s2.wav",1.1,0.7,30};
+				begin6[] = {"\breakingpoint_jsrs\sounds\P226SD_s3.wav",1.3,0.9,30};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+			};
+			reloadTime = 0.05;
+			dispersion = 0.00131;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",1.1,1,300};
+				begin2[] = {"\breakingpoint_jsrs\sounds\P226_s2.wav",1.1,1,300};
+				begin3[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",1,0.7,300};
+				begin4[] = {"\breakingpoint_jsrs\sounds\P226_s2.wav",1.3,0.8,300};
+				begin5[] = {"\breakingpoint_jsrs\sounds\P226_s1.wav",1.2,1.3,300};
+				soundBegin[] = {"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\P226SD_s1.wav",1,1,30};
+				begin2[] = {"\breakingpoint_jsrs\sounds\P226SD_s2.wav",1,1,30};
+				begin3[] = {"\breakingpoint_jsrs\sounds\P226SD_s3.wav",1,0.9,30};
+				begin4[] = {"\breakingpoint_jsrs\sounds\P226SD_s1.wav",1.2,1.2,30};
+				begin5[] = {"\breakingpoint_jsrs\sounds\P226SD_s2.wav",1.1,0.7,30};
+				begin6[] = {"\breakingpoint_jsrs\sounds\P226SD_s3.wav",1.3,0.9,30};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+			};
+			reloadTime = 0.05;
+			dispersion = 0.00131;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 60;
+			allowedSlots[] = {901};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"BP_m9qd","BP_gemtech9","BP_muzzle_snds_L","BP_Mk12Sup"};
+				iconScale = 0.1;
+			};
+			class CowsSlot: CowsSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {"BP_compm4s","optic_aco","optic_ACO_grn","optic_Holosight"};
+				iconScale = 0.1;
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+		};
+		opticsZoomMin = 0.375;
+		opticsZoomMax = 1.1;
+		opticsZoomInit = 0.75;
+		distanceZoomMin = 300;
+		distanceZoomMax = 300;
+		reloadAction = "GestureReloadSMG_01";
+		magazines[] = {"BP_30Rnd_9x21_Mag","BP_33Rnd_9x19OVP","BP_19Rnd_9x19","BP_16Rnd_9x21_Mag","BP_17Rnd_9x19","BP_33Rnd_9x19","BP_17Rnd_9x19_SD","BP_15Rnd_9x19_M9","BP_15Rnd_9x19OVP"};
+	};	
 	class BP_LeeEnfield: Rifle_Base_F_BP 
 	{
 		scope = 2;
@@ -16300,7 +16443,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Kar98";
 		magazines[] = {"BP_5Rnd_Mauser_Mag"};
 		descriptionShort = "German Bolt action sniper rifle";
-		picture = "\breakingpoint_weapons\icons\gear_kar98_rifle_x_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\gear_kar98_rifle_x_ca.paa";
 		inertia = 0.390000;
 		recoil = "recoil_dmr_01";
 		initSpeed = -0.97;
@@ -16413,7 +16556,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Kar98k";
 		magazines[] = {"BP_5Rnd_Mauser_Mag"};
 		descriptionShort = "German Bolt action sniper rifle";
-		picture = "\breakingpoint_weapons\icons\gear_kar98_rifle_x_ca.paa";
+		picture = "\breakingpoint_ui\updatedimage\gear_kar98_rifle_x_ca.paa";
 		inertia = 0.390000;
 		recoil = "recoil_dmr_01";
 		initSpeed = -0.97;
@@ -18903,6 +19046,155 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				iconScale = 0.1;
 			};
         }; 
+	};
+	class BP_VSS: Rifle_Base_F_BP
+	{
+		scope = 2;
+		maxZeroing = 400;
+		magazines[] = {"BP_9x39_Mag"};
+		reloadAction = "GestureReloadEBR";
+		picture = "\breakingpoint_ui\updatedimage\vss_ui.paa";
+		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\AFGDMR.rtm"};
+		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.891251,1,45};
+		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0.891251,1,45};
+		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0.891251,1,45};
+		bullet4[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_04",0.891251,1,45};
+		bullet5[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_01",0.794328,1,45};
+		bullet6[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_02",0.794328,1,45};
+		bullet7[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_03",0.794328,1,45};
+		bullet8[] = {"A3\sounds_f\weapons\shells\7_62\dirt_762_04",0.794328,1,45};
+		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01",0.707946,1,45};
+		bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0.707946,1,45};
+		bullet11[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_03",0.707946,1,45};
+		bullet12[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_04",0.707946,1,45};
+		soundBullet[] = {"bullet1",0.083,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.083,"bullet6",0.083,"bullet7",0.083,"bullet8",0.083,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
+		displayName = "VSS Vintorez";
+		descriptionShort = "Russian Sniper Thread Cutter";
+		model="\A3\Weapons_F_Mark\LongRangeRifles\DMR_04\DMR_04_F.p3d";
+		DLC="Mark";
+		inertia = 0.257;
+		recoil = "recoil_22lr";
+		initSpeed = -1.03;
+		modes[] = {"Single","FullAuto","far_optic1","far_optic2"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\VSS_s1.wav",1,1,45};
+				begin2[] = {"\breakingpoint_jsrs\sounds\VSS_s2.wav",1,1,45};
+				begin3[] = {"\breakingpoint_jsrs\sounds\VSS_s3.wav",1,1,45};
+				begin4[] = {"\breakingpoint_jsrs\sounds\VSS_s4.wav",1,1,45};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+			};
+			reloadTime = 0.085;
+			dispersion = 0.00173;
+			minRange = 2;
+			minRangeProbab = 1;
+			midRange = 250;
+			midRangeProbab = 1;
+			maxRange = 450;
+			maxRangeProbab = 1;
+			aiRateOfFire = 1e-05;
+			aiRateOfFireDistance = 450;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\VSS_s1.wav",1,1,45};
+				begin2[] = {"\breakingpoint_jsrs\sounds\VSS_s2.wav",1,1,45};
+				begin3[] = {"\breakingpoint_jsrs\sounds\VSS_s3.wav",1,1,45};
+				begin4[] = {"\breakingpoint_jsrs\sounds\VSS_s4.wav",1,1,45};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+			};
+			reloadTime = 0.085;
+			dispersion = 0.00173;
+			minRange = 2;
+			minRangeProbab = 1;
+			midRange = 250;
+			midRangeProbab = 1;
+			maxRange = 450;
+			maxRangeProbab = 1;
+			aiRateOfFire = 1e-05;
+			aiRateOfFireDistance = 450;
+		};
+		class far_optic1: Single
+		{
+			showToPlayer = 0;
+			minRange = 450;
+			minRangeProbab = 1;
+			midRange = 700;
+			midRangeProbab = 1;
+			maxRange = 1000;
+			maxRangeProbab = 1;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 1000;
+		};
+		class far_optic2: far_optic1
+		{
+			minRange = 1000;
+			minRangeProbab = 1;
+			midRange = 1400;
+			midRangeProbab = 1;
+			maxRange = 1700;
+			maxRangeProbab = 1;
+			aiRateOfFire = 1.5;
+			aiRateOfFireDistance = 1700;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 160;
+			allowedSlots[] = {901};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class CowsSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {"optic_MRCO","optic_Arco_blk_F","optic_ERCO_blk_F","optic_DMS_ghex_F","optic_SOS_khk_F","optic_LRPS","optic_LRPS_tna_F","BP_L14X","BP_M3AMRAD","BP_NXS","BP_M3A","BP_M3A2","BP_M3LR","BP_M3AN","BP_MRT","BP_PS22","BP_SOS","optic_Arco","optic_hamr","BP_optic_ACOG","BP_compm4s","BP_OldComp"};
+				iconScale = 0.1;
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class UnderBarrelSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[] = {"BP_Harris"};
+				iconScale = 0.1;
+			};
+		};
+		linkedAttach[] = {"BP_optic_ACOG"};
+		chanceAttach[] = {{"BP_Harris",0.05},{"",0.5}};
+		drySound[] = {"A3\sounds_f\weapons\other\dry1",0.330957,1,130};
+		reloadMagazineSound[] = {"A3\Sounds_F\weapons\Khaybar\reload_khaibar",0.462341,1,30};
+		hiddenSelections[]={"camo1","camo2"};
+		hiddenSelectionsTextures[]={
+			"\breakingpoint_ui\updatedimage\vss1.paa",
+			"\breakingpoint_ui\updatedimage\vss2.paa"
+		};
 	};
 
 //--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -22517,6 +22809,18 @@ class CfgMagazines {
 		lastRoundsTracer = 0;
 		mass = 9;
 	};
+
+	class BP_30Rnd_65x39_black: 30Rnd_65x39_caseless_mag
+	{
+		ammo = "BP_65x39_Grendel";
+		picture = "\a3\Weapons_F\MagazineProxies\data\UI\icon_30Rnd_65x39_caseless_black_mag_CA.paa";
+		initSpeed = 786;
+		displayName = "30Rnd 6.5x39mm Black";
+		descriptionShort = "Caseless intermediate rifle rounds";
+		lastRoundsTracer = 0;
+		mass = 9;
+		hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa"};
+	};
 	
 	class BP_10Rnd_65x39: BP_30Rnd_65x39 
 	{
@@ -23429,6 +23733,20 @@ class CfgMagazines {
 		ammo = "BP_12Gauge_Buck2";
 		descriptionShort = "12ga Magnum 000 Buckshot";
 		mass = 5;
+	};
+
+	class BP_9x39_Mag: CA_Magazine
+	{
+		scope = 2;
+		displayName = "10Rnd 9x39mm";
+		picture = "\breakingpoint_weapons\icons\m_svd_ca.paa";
+		ammo = "BP_9x39_Ball";
+		count = 10;
+		mass = 10;
+		initSpeed = 550;
+		tracersEvery = 0;
+		lastRoundsTracer = 0;
+		descriptionShort = "VSS Subsonic Rounds";
 	};
 	
 	class BP_IED1_Mag: ATMine_Range_Mag 
@@ -26770,7 +27088,39 @@ class CfgAmmo {
 			frequency = 20;
 		};
 	};
-	
+	class BP_9x39_Ball: BulletBase
+	{
+		hit = 20.5;
+		cartridge = "FxCartridge_762";
+		audibleFire = 4.5;
+		simulationStep = 0.09;
+		visibleFireTime = 3;
+		supersonicCrackNear[] = {};
+		supersonicCrackFar[] = {};
+		cost = 1.2;
+		airLock = 1;
+		typicalSpeed = 550;
+		caliber = 1.32;
+		legFracture = 1;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale = 0.6;
+		tracerStartTime = 0.0075;
+		tracerEndTime = 5;
+		airFriction = -0.00076;
+		class Medical
+		{
+			InstantBleeding = 1;
+			MedicalState = 1;
+			MedicalChance = 90;
+			BleedingLevel = 2;
+			BleedingChance = 45;
+			Infection = 0;
+			InfectionChance = 0.5;
+			Knockout = 0;
+			KnockoutChance = 0.2;
+			scale = 0;
+		};
+	};	
 	class BP_762x54_7N1: BulletBase 
 	{
 		hit = 18.25;
