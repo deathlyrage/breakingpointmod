@@ -398,5 +398,5 @@ _objs = [
 	_obj enableDynamicSimulation true;
 } count _objs;
 
-_additions = ["checkpoint","evaccenter","westhaven"];
+_additions = ["checkpoint","evaccenter","westhaven","newhaven"];
 { call compile preprocessFileLineNumbers format ["\breakingpoint_server\maps\newhaven\%1.sqf",_x]; } count _additions;

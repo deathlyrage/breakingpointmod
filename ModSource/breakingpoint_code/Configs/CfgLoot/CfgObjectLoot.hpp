@@ -1322,7 +1322,7 @@ class CfgObjectLoot {
 			0.11,   //PUNCTURE KIT
 			0.09,   //ITEM BATTERY
 			0.12,   //FIBERGLASS
-			0.02,   //STEEL
+			0.05,   //STEEL
 			0.07,   //HYDRAULIC FLUID
 			0.05,   //ELECTRONICS
 			0.07,   //WIRE
@@ -1381,7 +1381,7 @@ class CfgObjectLoot {
 			0.11,   //PUNCTURE KIT
 			0.09,   //ITEM BATTERY
 			0.12,   //FIBERGLASS
-			0.02,   //STEEL
+			0.03,   //STEEL
 			0.07,   //HYDRAULIC FLUID
 			0.05,   //ELECTRONICS
 			0.07,   //WIRE

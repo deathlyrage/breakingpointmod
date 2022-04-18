@@ -24,6 +24,7 @@ class CfgVehicles
 	class Land_Barn_03_large_F;
 	class Land_Barn_03_small_F;
 	class Land_Church_05_F;
+	class Land_OrthodoxChurch_02_F;
 	class Land_Factory_02_F;
 	class Land_House_1B01_F;
 	class Land_House_2B04_F;
@@ -38,7 +39,6 @@ class CfgVehicles
 	class Land_House_1W08_F;
 	class Land_House_1W09_F;
 	class Land_IndustrialShed_01_F;
-	class Land_OrthodoxChurch_02_F;
 	class Land_Shed_14_F;
 	class Land_Shed_10_F;
 	class Land_Shed_11_F;
@@ -52,6 +52,15 @@ class CfgVehicles
 	class Land_House_2W03_F;
 	class Land_Barracks_04_F;
 	class Land_PowerStation_01_F;
+	class Land_FuelStation_03_shop_F;
+	class Land_GarbageBin_03_F;
+	class Land_DeerStand_02_F;
+	class Land_GuardTower_02_F;
+	class Land_WaterTower_02_F;
+	class Land_Hangar_F;
+	class Land_Sawmill_01_F;
+	class Land_HelipadEmpty_F;
+	class Land_Hotel_02_F;
 	class Land_Company3_2;
 	class Land_SignB_Gov: Land_Company3_2
 	{
@@ -22453,8 +22462,7 @@ class CfgVehicles
 		actionBegin10 = "OpenDoor_10";
 		actionEnd10 = "OpenDoor_10";
 	};
-	class Land_Church_02;
-	class Land_Church_02a: Land_Church_02
+	class Land_Church_02a: Land_OrthodoxChurch_02_F
 	{
 		author = "Bohemia Interactive";
 		mapSize = 28.98;
@@ -22471,7 +22479,7 @@ class CfgVehicles
 		_generalMacro = "Land_OrthodoxChurch_02_F";
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "Orthodox Church";
+		displayName = "Orthodox Church2";
 		model = "\a3\Structures_F_Enoch\Cultural\OrthodoxChurches\OrthodoxChurch_02_F.p3d";
 		DLC = "Enoch";
 		icon = "iconObject_2x3";
@@ -22627,7 +22635,7 @@ class CfgVehicles
 		actionBegin3 = "OpenDoor_3";
 		actionEnd3 = "OpenDoor_3";
 	};
-	class Land_Church_01: House
+	class Land_Church_01: Land_Church_05_F
 	{
 		author = "Bohemia Interactive";
 		mapSize = 17.47;
@@ -23179,44 +23187,6 @@ class CfgVehicles
 		actionEnd3 = "OpenDoor_3";
 		actionBegin4 = "OpenDoor_4";
 		actionEnd4 = "OpenDoor_4";
-	};
-	class Haystack: Land_Ind_Timbers
-	{
-		author = "Bohemia Interactive";
-		mapSize = 20.7;
-		class SimpleObject
-		{
-			eden = 0;
-			animate[] = {};
-			hide[] = {};
-			verticalOffset = 1.443;
-			verticalOffsetWorld = 0;
-			init = "''";
-		};
-		editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_StrawStack_01_F.jpg";
-		_generalMacro = "Land_StrawStack_01_F";
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Straw Heap";
-		model = "\A3\Structures_F_Enoch\Industrial\Farms\StrawStack_01_F.p3d";
-		DLC = "Enoch";
-		icon = "iconObject_3x2";
-		editorCategory = "EdCat_Structures_Enoch";
-		editorSubcategory = "EdSubcat_Agricultural";
-		vehicleClass = "Structures_Village";
-		destrType = "DestructNo";
-		cost = 50000;
-		numberOfDoors = 0;
-		numberOfWindows = 0;
-		class DestructionEffects{};
-		class HitPoints{};
-		class Damage
-		{
-			tex[] = {};
-			mat[] = {};
-		};
-		class AnimationSources{};
-		class UserActions{};
 	};
 //NEWADDITIONS//
 	class Land_HouseV2_03: Land_Factory_02_F
@@ -44377,212 +44347,176 @@ class CfgVehicles
 	};
 	class Land_Church_02: Land_OrthodoxChurch_02_F
 	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=28.98;
+		author = "Bohemia Interactive";
+		mapSize = 28.98;
 		class SimpleObject
 		{
-			eden=0;
-			animate[]=
-			{
-				
-				{
-					"door_1_rot",
-					0
-				},
-				
-				{
-					"door_1_locked_rot",
-					0
-				},
-				
-				{
-					"door_2_rot",
-					0
-				},
-				
-				{
-					"door_2_locked_rot",
-					0
-				},
-				
-				{
-					"door_3_rot",
-					0
-				},
-				
-				{
-					"door_3_locked_rot",
-					0
-				}
-			};
-			hide[]={};
-			verticalOffset=11.568;
-			verticalOffsetWorld=0;
-			init="''";
+			eden = 0;
+			animate[] = {{"door_1_rot",0},{"door_1_locked_rot",0},{"door_2_rot",0},{"door_2_locked_rot",0},{"door_3_rot",0},{"door_3_locked_rot",0}};
+			hide[] = {};
+			verticalOffset = 11.568;
+			verticalOffsetWorld = 0;
+			init = "''";
 		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_OrthodoxChurch_02_F.jpg";
-		_generalMacro="Land_OrthodoxChurch_02_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_OrthodoxChurch_02_F0";
-		model="\a3\Structures_F_Enoch\Cultural\OrthodoxChurches\OrthodoxChurch_02_F.p3d";
-		DLC="Enoch";
-		icon="iconObject_2x3";
-		editorCategory="EdCat_Structures_Enoch";
-		editorSubcategory="EdSubcat_Religious";
-		vehicleClass="Structures_Cultural";
-		destrType="DestructNo";
-		armor=400;
-		explosionShielding=0.2;
-		cost=75000;
-		numberOfDoors=3;
-		numberOfWindows=0;
-		class DestructionEffects
-		{
-		};
-		class HitPoints
-		{
-		};
+		editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_OrthodoxChurch_02_F.jpg";
+		_generalMacro = "Land_OrthodoxChurch_02_F";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Orthodox Church";
+		model = "\a3\Structures_F_Enoch\Cultural\OrthodoxChurches\OrthodoxChurch_02_F.p3d";
+		DLC = "Enoch";
+		icon = "iconObject_2x3";
+		editorCategory = "EdCat_Structures_Enoch";
+		editorSubcategory = "EdSubcat_Religious";
+		vehicleClass = "Structures_Cultural";
+		destrType = "DestructNo";
+		armor = 400;
+		explosionShielding = 0.2;
+		cost = 75000;
+		numberOfDoors = 3;
+		numberOfWindows = 0;
+		class DestructionEffects{};
+		class HitPoints{};
 		class Damage
 		{
-			tex[]={};
-			mat[]={};
+			tex[] = {};
+			mat[] = {};
 		};
 		class AnimationSources
 		{
 			class Door_1_sound_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
-				sound="OldWoodDoorsSound";
-				soundPosition="Door_1_trigger";
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
+				sound = "OldWoodDoorsSound";
+				soundPosition = "Door_1_trigger";
 			};
 			class Door_1_noSound_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
 			};
 			class Door_1_locked_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=0.80000001;
+				source = "user";
+				initPhase = 0;
+				animPeriod = 0.8;
 			};
 			class Door_2_sound_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
-				sound="OldWoodDoorsSound";
-				soundPosition="Door_2_trigger";
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
+				sound = "OldWoodDoorsSound";
+				soundPosition = "Door_2_trigger";
 			};
 			class Door_2_noSound_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
 			};
 			class Door_2_locked_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=0.80000001;
+				source = "user";
+				initPhase = 0;
+				animPeriod = 0.8;
 			};
 			class Door_3_sound_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
-				sound="OldWoodDoorsSound";
-				soundPosition="Door_3_trigger";
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
+				sound = "OldWoodDoorsSound";
+				soundPosition = "Door_3_trigger";
 			};
 			class Door_3_noSound_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
+				source = "user";
+				initPhase = 0;
+				animPeriod = 1;
 			};
 			class Door_3_locked_source
 			{
-				source="user";
-				initPhase=0;
-				animPeriod=0.80000001;
+				source = "user";
+				initPhase = 0;
+				animPeriod = 0.8;
 			};
 		};
 		class UserActions
 		{
 			class OpenDoor_1
 			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_O_DOOR";
-				position="Door_1_trigger";
-				priority=11;
-				actionNamedSel="Door_1_action";
-				radius=1.75;
-				aiMaxRange=5.25;
-				onlyForPlayer=0;
-				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 1, 1] call BIS_fnc_Door)";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName = "Open door";
+				position = "Door_1_trigger";
+				priority = 11;
+				actionNamedSel = "Door_1_action";
+				radius = 1.75;
+				aiMaxRange = 5.25;
+				onlyForPlayer = 0;
+				condition = "((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 1, 1] call BIS_fnc_Door)";
 			};
 			class CloseDoor_1: OpenDoor_1
 			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_C_DOOR";
-				priority=11;
-				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 1, 0] call BIS_fnc_Door)";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName = "Close door";
+				priority = 11;
+				condition = "((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 1, 0] call BIS_fnc_Door)";
 			};
 			class OpenDoor_2
 			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_O_DOOR";
-				position="Door_2_trigger";
-				priority=11;
-				actionNamedSel="Door_2_action";
-				radius=1.75;
-				aiMaxRange=5.25;
-				onlyForPlayer=0;
-				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 2, 1] call BIS_fnc_Door)";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName = "Open door";
+				position = "Door_2_trigger";
+				priority = 11;
+				actionNamedSel = "Door_2_action";
+				radius = 1.75;
+				aiMaxRange = 5.25;
+				onlyForPlayer = 0;
+				condition = "((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 2, 1] call BIS_fnc_Door)";
 			};
 			class CloseDoor_2: OpenDoor_2
 			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_C_DOOR";
-				priority=11;
-				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 2, 0] call BIS_fnc_Door)";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName = "Close door";
+				priority = 11;
+				condition = "((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 2, 0] call BIS_fnc_Door)";
 			};
 			class OpenDoor_3
 			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_O_DOOR";
-				position="Door_3_trigger";
-				priority=11;
-				actionNamedSel="Door_3_action";
-				radius=1.75;
-				aiMaxRange=5.25;
-				onlyForPlayer=0;
-				condition="((this animationSourcePhase 'Door_3_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 3, 1] call BIS_fnc_Door)";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName = "Open door";
+				position = "Door_3_trigger";
+				priority = 11;
+				actionNamedSel = "Door_3_action";
+				radius = 1.75;
+				aiMaxRange = 5.25;
+				onlyForPlayer = 0;
+				condition = "((this animationSourcePhase 'Door_3_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 3, 1] call BIS_fnc_Door)";
 			};
 			class CloseDoor_3: OpenDoor_3
 			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_C_DOOR";
-				priority=11;
-				condition="((this animationSourcePhase 'Door_3_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_3', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 3, 0] call BIS_fnc_Door)";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName = "Close door";
+				priority = 11;
+				condition = "((this animationSourcePhase 'Door_3_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_3', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement = "([this, 3, 0] call BIS_fnc_Door)";
 			};
 		};
-		actionBegin1="OpenDoor_1";
-		actionEnd1="OpenDoor_1";
-		actionBegin2="OpenDoor_2";
-		actionEnd2="OpenDoor_2";
-		actionBegin3="OpenDoor_3";
-		actionEnd3="OpenDoor_3";
+		actionBegin1 = "OpenDoor_1";
+		actionEnd1 = "OpenDoor_1";
+		actionBegin2 = "OpenDoor_2";
+		actionEnd2 = "OpenDoor_2";
+		actionBegin3 = "OpenDoor_3";
+		actionEnd3 = "OpenDoor_3";
 	};
 	class Land_HouseV2_01A: Land_House_2W03_F
 	{
@@ -48154,5 +48088,4660 @@ class CfgVehicles
 		actionEnd3="OpenDoor_3";
 		actionBegin4="OpenDoor_4";
 		actionEnd4="OpenDoor_4";
+	};
+//OBJECTS AND PROPS//
+	class Land_popelnice: Land_GarbageBin_03_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.69999999;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.56699997;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBin_03_F.jpg";
+		_generalMacro="Land_GarbageBin_03_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_GarbageBin_03_F0";
+		model="\A3\Props_F_Enoch\Civilian\Garbage\GarbageBin_03_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_circle";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Services";
+		vehicleClass="Structures_Village";
+		destrType="DestructTree";
+		armor=100;
+		explosionShielding=4;
+		class DestructionEffects
+		{
+		};
+	};
+	class Land_popelnice_2: Land_GarbageBin_03_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.69999999;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.56699997;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBin_03_F.jpg";
+		_generalMacro="Land_GarbageBin_03_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_GarbageBin_03_F0";
+		model="\A3\Props_F_Enoch\Civilian\Garbage\GarbageBin_03_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_circle";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Services";
+		vehicleClass="Structures_Village";
+		destrType="DestructTree";
+		armor=100;
+		explosionShielding=4;
+		class DestructionEffects
+		{
+		};
+	};
+	class Land_Misc_deerstand: Land_DeerStand_02_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=7.0700002;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=2.217;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_DeerStand_02_F.jpg";
+		_generalMacro="Land_DeerStand_02_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_DeerStand_02_F0";
+		model="\A3\Props_F_Enoch\Civilian\Forest\DeerStand_02_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_2x1";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Forest";
+		vehicleClass="Structures_Village";
+		armor=100;
+		explosionShielding=10;
+		cost=10000;
+		numberOfDoors=0;
+		numberOfWindows=0;
+		ladders[]=
+		{
+			
+			{
+				"Ladder_1_start",
+				"Ladder_1_end",
+				2.5,
+				"Ladder_1_action"
+			}
+		};
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]={};
+		};
+	};
+	class Land_Vez: Land_GuardTower_02_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=6.2600002;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]=
+			{
+				"light_1_hide",
+				"light_2_hide",
+				"light_3_hide"
+			};
+			verticalOffset=3.421;
+			verticalOffsetWorld=0;
+			init="[this, '', []] call bis_fnc_initVehicle";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GuardTower_02_F.jpg";
+		_generalMacro="Land_GuardTower_02_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_GuardTower_02_F0";
+		model="\A3\Structures_F_Enoch\Military\Barracks\GuardTower_02_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Military";
+		vehicleClass="Structures_Military";
+		armor=1000;
+		explosionShielding=5;
+		cost=50000;
+		numberOfDoors=0;
+		numberOfWindows=0;
+		class DestructionEffects
+		{
+		};
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]={};
+		};
+		class UserActions
+		{
+		};
+		ladders[]=
+		{
+			
+			{
+				"Ladder_1_start",
+				"Ladder_1_end",
+				2.5,
+				"Ladder_1_action"
+			}
+		};
+		class AnimationSources
+		{
+			class Lights_Hide
+			{
+				source="user";
+				initPhase=1;
+				animPeriod=0.001;
+			};
+		};
+		class Reflectors
+		{
+			class Light_1
+			{
+				color[]={1100,1000,1000};
+				ambient[]={10,10,12};
+				intensity=120;
+				size=1;
+				innerAngle=60;
+				outerAngle=130;
+				coneFadeCoef=6;
+				position="Light_1_pos";
+				direction="Light_1_dir";
+				hitpoint="Light_1_hitpoint";
+				selection="Light_1_hide";
+				useFlare=1;
+				flareSize=5;
+				flareMaxDistance=250;
+				class Attenuation
+				{
+					start=0;
+					constant=0;
+					linear=2;
+					quadratic=0.5;
+					hardLimitStart=50;
+					hardLimitEnd=70;
+				};
+			};
+			class Light_2: Light_1
+			{
+				position="Light_2_pos";
+				direction="Light_2_dir";
+				hitpoint="Light_2_hitpoint";
+				selection="Light_2_hide";
+			};
+			class Light_3: Light_1
+			{
+				position="Light_3_pos";
+				direction="Light_3_dir";
+				hitpoint="Light_3_hitpoint";
+				selection="Light_3_hide";
+			};
+		};
+		aggregateReflectors[]={};
+		armorLights=0.001;
+	};
+	class Land_Farm_WTower: Land_WaterTower_02_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=20.77;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=16.16;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_WaterTower_02_F.jpg";
+		_generalMacro="Land_WaterTower_02_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_WaterTower_02_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Farms\WaterTower_02_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Agricultural";
+		vehicleClass="Structures_Village";
+		destrType="DestructDefault";
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Industrial\Farms\WaterTower_02_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		cost=50000;
+		numberOfDoors=0;
+		numberOfWindows=0;
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Farms\Data\farm_wtower.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Farms\Data\destruct_farm_wtower.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Farms\Data\destruct_farm_wtower.rvmat"
+			};
+		};
+		class AnimationSources
+		{
+		};
+		class UserActions
+		{
+		};
+		class MarkerLights
+		{
+			class Light_1
+			{
+				color[]={1,0,0};
+				ambient[]={0.0099999998,0,0};
+				intensity=1000;
+				name="Light_1_pos";
+				useFlare=1;
+				flareSize=0.69999999;
+				flareMaxDistance=1500;
+				activeLight=1;
+				blinking=0;
+				dayLight=0;
+				drawLight=0;
+				class Attenuation
+				{
+					start=0;
+					constant=10;
+					linear=15;
+					quadratic=25;
+					hardLimitStart=5;
+					hardLimitEnd=6;
+				};
+			};
+		};
+	};
+	class Land_A_FuelStation_Build: Land_FuelStation_03_shop_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=10.19;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				},
+				
+				{
+					"glass_2_hide",
+					0
+				},
+				
+				{
+					"glass_2_unhide",
+					0
+				},
+				
+				{
+					"glass_3_hide",
+					0
+				},
+				
+				{
+					"glass_3_unhide",
+					0
+				},
+				
+				{
+					"glass_4_hide",
+					0
+				},
+				
+				{
+					"glass_4_unhide",
+					0
+				},
+				
+				{
+					"glass_5_hide",
+					0
+				},
+				
+				{
+					"glass_5_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.63;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_FuelStation_03_shop_F.jpg";
+		_generalMacro="Land_FuelStation_03_shop_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_FuelStation_03_shop_F0";
+		model="\A3\Structures_F_Enoch\Commercial\FuelStation_03\FuelStation_03_shop_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_1x1";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Services";
+		vehicleClass="Structures_Town";
+		destrType="DestructDefault";
+		keepInEPESceneAfterDeath=1;
+		cost=50000;
+		numberOfDoors=3;
+		numberOfWindows=7;
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Commercial\FuelStation_03\FuelStation_03_shop_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+			class Glass_1_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_1";
+				visual="Glass_1_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_1_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0600_1800";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_2_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_2";
+				visual="Glass_2_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_2_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0600_1800";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_3_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_3";
+				visual="Glass_3_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_3_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_1150_0600";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_4_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_4";
+				visual="Glass_4_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_4_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_1250_2200";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_5_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_5";
+				visual="Glass_5_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_5_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_1250_2200";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+		};
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f\data\windows\window_set_ca.paa",
+				"A3\Structures_F\Data\Windows\destruct_half_window_set_CA.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F_Exp\Data\Glass\window_set_dark.rvmat",
+				"A3\Structures_F_Exp\Data\Glass\destruct_half_window_set_dark.rvmat",
+				"A3\Structures_F_Exp\Data\Glass\destruct_full_window_set_dark.rvmat",
+				"A3\Structures_F_Enoch\Commercial\FuelStation_03\Data\a_fuelstation_build_multi.rvmat",
+				"A3\Structures_F_Enoch\Commercial\FuelStation_03\Data\destruct_a_fuelstation_build_multi.rvmat",
+				"A3\Structures_F_Enoch\Commercial\FuelStation_03\Data\destruct_a_fuelstation_build_multi.rvmat"
+			};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GlassMetalDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_2_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_2_trigger";
+			};
+			class Door_2_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_2_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Glass_1_source
+			{
+				source="Hit";
+				hitpoint="Glass_1_hitpoint";
+				raw=1;
+			};
+			class Glass_2_source
+			{
+				source="Hit";
+				hitpoint="Glass_2_hitpoint";
+				raw=1;
+			};
+			class Glass_3_source
+			{
+				source="Hit";
+				hitpoint="Glass_3_hitpoint";
+				raw=1;
+			};
+			class Glass_4_source
+			{
+				source="Hit";
+				hitpoint="Glass_4_hitpoint";
+				raw=1;
+			};
+			class Glass_5_source
+			{
+				source="Hit";
+				hitpoint="Glass_5_hitpoint";
+				raw=1;
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_2_trigger";
+				priority=11;
+				actionNamedSel="Door_2_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_2: OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		actionBegin2="OpenDoor_2";
+		actionEnd2="OpenDoor_2";
+	};
+	class Land_Ss_hangar: Land_Hangar_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=50.66;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=5.4629998;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_Hangar_F.jpg";
+		_generalMacro="Land_Hangar_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_CfgVehicles_Land_Hangar_F0";
+		model="\A3\Structures_F\Ind\AirPort\Hangar_F.p3d";
+		icon="iconObject_2x3";
+		editorCategory="EdCat_Structures_Altis";
+		editorSubcategory="EdSubcat_Airports";
+		vehicleClass="Structures_Transport";
+		cost=40000;
+	};
+	class Land_Ind_SawMill: Land_Sawmill_01_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=40.32;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				},
+				
+				{
+					"glass_2_hide",
+					0
+				},
+				
+				{
+					"glass_2_unhide",
+					0
+				},
+				
+				{
+					"glass_3_hide",
+					0
+				},
+				
+				{
+					"glass_3_unhide",
+					0
+				},
+				
+				{
+					"glass_4_hide",
+					0
+				},
+				
+				{
+					"glass_4_unhide",
+					0
+				},
+				
+				{
+					"glass_5_hide",
+					0
+				},
+				
+				{
+					"glass_5_unhide",
+					0
+				},
+				
+				{
+					"glass_6_hide",
+					0
+				},
+				
+				{
+					"glass_6_unhide",
+					0
+				},
+				
+				{
+					"glass_7_hide",
+					0
+				},
+				
+				{
+					"glass_7_unhide",
+					0
+				},
+				
+				{
+					"glass_8_hide",
+					0
+				},
+				
+				{
+					"glass_8_unhide",
+					0
+				},
+				
+				{
+					"glass_9_hide",
+					0
+				},
+				
+				{
+					"glass_9_unhide",
+					0
+				},
+				
+				{
+					"glass_10_hide",
+					0
+				},
+				
+				{
+					"glass_10_unhide",
+					0
+				},
+				
+				{
+					"glass_11_hide",
+					0
+				},
+				
+				{
+					"glass_11_unhide",
+					0
+				},
+				
+				{
+					"glass_12_hide",
+					0
+				},
+				
+				{
+					"glass_12_unhide",
+					0
+				},
+				
+				{
+					"glass_13_hide",
+					0
+				},
+				
+				{
+					"glass_13_unhide",
+					0
+				},
+				
+				{
+					"glass_14_hide",
+					0
+				},
+				
+				{
+					"glass_14_unhide",
+					0
+				},
+				
+				{
+					"glass_15_hide",
+					0
+				},
+				
+				{
+					"glass_15_unhide",
+					0
+				},
+				
+				{
+					"glass_16_hide",
+					0
+				},
+				
+				{
+					"glass_16_unhide",
+					0
+				},
+				
+				{
+					"glass_17_hide",
+					0
+				},
+				
+				{
+					"glass_17_unhide",
+					0
+				},
+				
+				{
+					"glass_18_hide",
+					0
+				},
+				
+				{
+					"glass_18_unhide",
+					0
+				},
+				
+				{
+					"glass_19_hide",
+					0
+				},
+				
+				{
+					"glass_19_unhide",
+					0
+				},
+				
+				{
+					"glass_20_hide",
+					0
+				},
+				
+				{
+					"glass_20_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=5.7620001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Sawmill_01_F.jpg";
+		_generalMacro="Land_Sawmill_01_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Sawmill_01_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Sawmills\Sawmill_01_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Industrial";
+		cost=50000;
+		numberOfDoors=1;
+		numberOfWindows=20;
+		destrType="DestructDefault";
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Industrial\Sawmills\Sawmill_01_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+			class Glass_1_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_1";
+				visual="Glass_1_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_1_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_2_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_2";
+				visual="Glass_2_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_2_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_3_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_3";
+				visual="Glass_3_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_3_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_3_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_4_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_4";
+				visual="Glass_4_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_4_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_4_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_5_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_5";
+				visual="Glass_5_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_5_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_5_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_6_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_6";
+				visual="Glass_6_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_6_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_6_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_7_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_7";
+				visual="Glass_7_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_7_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_7_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_8_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_8";
+				visual="Glass_8_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_8_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_8_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_9_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_9";
+				visual="Glass_9_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_9_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_9_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_10_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_10";
+				visual="Glass_10_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_10_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_10_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_11_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_11";
+				visual="Glass_11_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_11_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_11_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_12_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_12";
+				visual="Glass_12_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_12_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_12_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_13_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_13";
+				visual="Glass_13_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_13_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_13_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_14_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_14";
+				visual="Glass_14_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_14_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_14_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_15_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_15";
+				visual="Glass_15_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_15_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_15_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_16_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_16";
+				visual="Glass_16_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_16_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_16_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_17_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_17";
+				visual="Glass_17_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_17_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_17_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_18_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_18";
+				visual="Glass_18_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_18_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_18_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_19_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_19";
+				visual="Glass_19_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_19_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_19_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_20_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_20";
+				visual="Glass_20_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_20_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_20_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Glass_1_source
+			{
+				source="Hit";
+				hitpoint="Glass_1_hitpoint";
+				raw=1;
+			};
+			class Glass_2_source
+			{
+				source="Hit";
+				hitpoint="Glass_2_hitpoint";
+				raw=1;
+			};
+			class Glass_3_source
+			{
+				source="Hit";
+				hitpoint="Glass_3_hitpoint";
+				raw=1;
+			};
+			class Glass_4_source
+			{
+				source="Hit";
+				hitpoint="Glass_4_hitpoint";
+				raw=1;
+			};
+			class Glass_5_source
+			{
+				source="Hit";
+				hitpoint="Glass_5_hitpoint";
+				raw=1;
+			};
+			class Glass_6_source
+			{
+				source="Hit";
+				hitpoint="Glass_6_hitpoint";
+				raw=1;
+			};
+			class Glass_7_source
+			{
+				source="Hit";
+				hitpoint="Glass_7_hitpoint";
+				raw=1;
+			};
+			class Glass_8_source
+			{
+				source="Hit";
+				hitpoint="Glass_8_hitpoint";
+				raw=1;
+			};
+			class Glass_9_source
+			{
+				source="Hit";
+				hitpoint="Glass_9_hitpoint";
+				raw=1;
+			};
+			class Glass_10_source
+			{
+				source="Hit";
+				hitpoint="Glass_10_hitpoint";
+				raw=1;
+			};
+			class Glass_11_source
+			{
+				source="Hit";
+				hitpoint="Glass_11_hitpoint";
+				raw=1;
+			};
+			class Glass_12_source
+			{
+				source="Hit";
+				hitpoint="Glass_12_hitpoint";
+				raw=1;
+			};
+			class Glass_13_source
+			{
+				source="Hit";
+				hitpoint="Glass_13_hitpoint";
+				raw=1;
+			};
+			class Glass_14_source
+			{
+				source="Hit";
+				hitpoint="Glass_14_hitpoint";
+				raw=1;
+			};
+			class Glass_15_source
+			{
+				source="Hit";
+				hitpoint="Glass_15_hitpoint";
+				raw=1;
+			};
+			class Glass_16_source
+			{
+				source="Hit";
+				hitpoint="Glass_16_hitpoint";
+				raw=1;
+			};
+			class Glass_17_source
+			{
+				source="Hit";
+				hitpoint="Glass_17_hitpoint";
+				raw=1;
+			};
+			class Glass_18_source
+			{
+				source="Hit";
+				hitpoint="Glass_18_hitpoint";
+				raw=1;
+			};
+			class Glass_19_source
+			{
+				source="Hit";
+				hitpoint="Glass_19_hitpoint";
+				raw=1;
+			};
+			class Glass_20_source
+			{
+				source="Hit";
+				hitpoint="Glass_20_hitpoint";
+				raw=1;
+			};
+		};
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f\data\windows\window_set_ca.paa",
+				"A3\Structures_F\Data\Windows\destruct_half_window_set_CA.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Sawmills\Data\ind_sawmill_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Sawmills\Data\destruct_ind_sawmill_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Sawmills\Data\destruct_ind_sawmill_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Sawmills\Data\ind_sawmill_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Sawmills\Data\destruct_ind_sawmill_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Sawmills\Data\destruct_ind_sawmill_multi2.rvmat"
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		ladders[]=
+		{
+			
+			{
+				"Ladder_1_start",
+				"Ladder_1_end",
+				2.5,
+				"Ladder_1_action"
+			}
+		};
+	};
+	class Land_Dum_istan4_big: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_istan2_01: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_mesto_in: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Hotel: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_MBG_Killhouse_3: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_istan4_inverse: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_istan4_detaily1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Hotel: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_MBG_Warehouse: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Ikarus: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
 	};
 };
