@@ -353,13 +353,13 @@ class CfgVehicles
 	class BP_KPack: BP_Bag_Base
 	{
 		scope = 2;
+		picture="\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_oli.paa";
 		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Small";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_oli_co.paa"};
-		picture="\A3\weapons_f\ammoboxes\bags\data\ui\icon_B_C_Small_oli.paa";
 		allowedSlots[] = {};
-		maximumLoad = 240;
+		maximumLoad = 230;
 		mass = 120;
-		displayName = "Kerry Pack";
+		displayName = "Tactical Pack";
 	};
 	class BP_AssaultPack_khk: BP_AssaultPack_Base
 	{
