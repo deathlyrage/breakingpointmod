@@ -300,6 +300,70 @@ class CfgVehicles
 		maximumLoad = 350;
 		mass = 120;
 	};
+	class BP_CivilianOneBlack: BP_Bag_Base
+	{
+		scope = 2;
+		DLC = "AoW";
+		displayName = "Civilian One Pack (Black)";
+		model = "\a3\Supplies_F_AoW\Bags\B_CivilianBackpack_01_F.p3d";
+		picture = "\a3\Supplies_F_AoW\Bags\Data\UI\icon_B_CivilianBackpack_01_Everyday_Black_F_ca.paa";
+		hiddenSelectionsTextures[] = {"a3\Supplies_F_AoW\Bags\Data\CivilianBackpack_01_Everyday_Black_F_co.paa"};
+		allowedSlots[] = {};
+		maximumLoad = 200;
+		mass = 60;
+		class ItemInfo: ItemInfo
+		{
+			passThrough = 0.8;
+		};
+	};
+	class BP_CivilianOneBlue: BP_Bag_Base
+	{
+		scope = 2;
+		DLC = "AoW";
+		displayName = "Civilian One Pack (Blue)";
+		model = "\a3\Supplies_F_AoW\Bags\B_CivilianBackpack_01_F.p3d";
+		picture = "\a3\Supplies_F_AoW\Bags\Data\UI\icon_B_CivilianBackpack_01_Sport_Blue_F_ca.paa";
+		hiddenSelectionsTextures[] = {"a3\Supplies_F_AoW\Bags\Data\CivilianBackpack_01_Sport_Blue_F_co.paa"};
+		allowedSlots[] = {};
+		maximumLoad = 200;
+		mass = 60;
+		class ItemInfo: ItemInfo
+		{
+			passThrough = 0.8;
+		};
+	};
+	class BP_CivilianOneGreen: BP_Bag_Base
+	{
+		scope = 2;
+		DLC = "AoW";
+		displayName = "Civilian One Pack (Green)";
+		model = "\a3\Supplies_F_AoW\Bags\B_CivilianBackpack_01_F.p3d";
+		picture = "\a3\Supplies_F_AoW\Bags\Data\UI\icon_B_CivilianBackpack_01_Sport_Green_F_ca.paa";
+		hiddenSelectionsTextures[] = {"a3\Supplies_F_AoW\Bags\Data\CivilianBackpack_01_Sport_Green_F_co.paa"};
+		allowedSlots[] = {};
+		maximumLoad = 200;
+		mass = 60;
+		class ItemInfo: ItemInfo
+		{
+			passThrough = 0.8;
+		};
+	};
+	class BP_CivilianOneRed: BP_Bag_Base
+	{
+		scope = 2;
+		DLC = "AoW";
+		displayName = "Civilian One Pack (Red)";
+		model = "\a3\Supplies_F_AoW\Bags\B_CivilianBackpack_01_F.p3d";
+		picture = "\a3\Supplies_F_AoW\Bags\Data\UI\icon_B_CivilianBackpack_01_Sport_Red_F_ca.paa";
+		hiddenSelectionsTextures[] = {"a3\Supplies_F_AoW\Bags\Data\CivilianBackpack_01_Sport_Red_F_co.paa"};
+		allowedSlots[] = {};
+		maximumLoad = 200;
+		mass = 60;
+		class ItemInfo: ItemInfo
+		{
+			passThrough = 0.8;
+		};
+	};
 	class BP_HPack: BP_Bag_Base
 	{
 		scope = 2;
