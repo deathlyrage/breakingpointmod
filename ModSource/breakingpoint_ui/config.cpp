@@ -68,7 +68,29 @@ class CfgFontFamilies
 		};
 	};
 };
-
+class CfgMarkers
+{
+	class AIHunter
+	{
+	name="Mission";
+	icon="\breakingpoint_ui\icons\huntericon.paa";
+	color[]={1,1,1,1};
+	size=32;
+	shadow = 0;
+	scope = 2;
+	markerClass = "draw";
+	};
+	class AIIndependent
+	{
+	name="Mission";
+	icon="\breakingpoint_ui\icons\noneicon.paa";
+	color[]={1,1,1,1};
+	size=32;
+	shadow = 0;
+	scope = 2;
+	markerClass = "draw";
+	};
+};
 class cfgScriptPaths {
 	default = "breakingpoint_ui\scripts\GUI\";
 	GUI = "breakingpoint_ui\scripts\GUI\";
