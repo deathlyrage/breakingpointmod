@@ -822,29 +822,29 @@ class CfgMagazines
 	class BlueprintHaven : ItemBlueprint {
 		displayName = "Blueprint Haven Locking Kit";
 		descriptionUse = "Blueprint Haven Locking Kit";
-		descriptionShort = "Allows for the creation of a Safe Haven Hideout. Can only be used inside lockable buildings.<br/>Requires- Hammer, 1x Hydraulic Cylinder, 2x Battery, 2x Steel, 2x Electronics, 3x Electrical Wire.";
+		descriptionShort = "Allows for the creation of a Safe Haven Hideout. Can only be used inside lockable buildings.<br/>Requires- Hammer, 1x Hydraulic Cylinder, 1x Battery, 1x Reinforced Steel, 1x Electronics, 2x Electrical Wire.";
 		class Construction {
 			Object = "BP_Haven";  // Not a real object
 			Tools[] = {"ItemHammer"};
-			Materials[] = {"ItemHydraulicCylinder", "ItemBattery", "ItemBattery", "PartSteel", "PartSteel", "ItemElectronics", "ItemElectronics", "ItemElectricalWire", "ItemElectricalWire", "ItemElectricalWire"};
+			Materials[] = {"ItemHydraulicCylinder", "ItemBattery", "PartSteel", "ItemElectronics", "ItemElectricalWire", "ItemElectricalWire"};
 		};
 	};
 	
 	class BlueprintHavenReinforce : ItemBlueprint {
 		displayName = "Blueprint Haven Reinforcement Kit";
 		descriptionUse = "Blueprint Haven Reinforcement Kit";
-		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside a unlocked haven. Haven can be upgraded multible times.<br/>Requires 1x Steel, 4x Cement Bag";
+		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside a unlocked haven. Haven can be upgraded multible times.<br/>Requires 1x Reinforced Steel, 4x Cement Bag";
 		class Construction {
 			Object = "BP_HavenReinforcement";  // Not a real object
 			Tools[] = {};
-			Materials[] = {"PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag", "ItemCementBag"};
+			Materials[] = {"PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag"};
 		};
 	};
 	
 	class BlueprintChest : ItemBlueprint {
 		displayName = "Blueprint Haven Chest";
 		descriptionUse = "Blueprint Haven Chest";
-		descriptionShort = "Allows for the creation of a Safe Haven Storage Chest.<br/>Requires- Hammer, 3x Box of Nails, 3x Palette, 1x Steel.";
+		descriptionShort = "Allows for the creation of a Safe Haven Storage Chest.<br/>Requires- Hammer, 3x Box of Nails, 3x Small Wooden Palette, 1x Steel.";
 		class Construction {
 			Object = "BP_Chest";
 			Tools[] = {"ItemHammer"};
@@ -855,7 +855,7 @@ class CfgMagazines
 	class BlueprintIceBox : ItemBlueprint {
 		displayName = "Blueprint Haven Refrigerator";
 		descriptionUse = "Blueprint Haven Refrigerator";
-		descriptionShort = "Allows for the creation of a Safe Haven Refrigerator.<br/>Requires- Hammer, 2x Fiberglass, 2x Steel, 1x Battery.";
+		descriptionShort = "Allows for the creation of a Safe Haven Refrigerator.<br/>Requires- Hammer, 2x Fiberglass, 2x Reinforced Steel, 1x Battery.";
 		class Construction {
 			Object = "BP_Refrigerator";
 			Tools[] = {"ItemHammer"};
@@ -877,7 +877,7 @@ class CfgMagazines
 	class BlueprintGunCab : ItemBlueprint {
 		displayName = "Blueprint Haven Gun Cabinet";
 		descriptionUse = "Blueprint Haven Gun Cabinet";
-		descriptionShort = "Allows for the creation of a Safe Haven Gun Cabinet.<br/>Requires- Hammer, 4x Box of Nails, 3x Steel, 3x Fiberglass.";
+		descriptionShort = "Allows for the creation of a Safe Haven Gun Cabinet.<br/>Requires- Hammer, 4x Box of Nails, 3x Reinforced Steel, 3x Fiberglass.";
 		class Construction {
 			Object = "BP_GunCabinet";
 			Tools[] = {"ItemHammer"};
@@ -899,7 +899,7 @@ class CfgMagazines
 	class BlueprintTele : ItemBlueprint {
 		displayName = "Blueprint Haven Old Television";
 		descriptionUse = "Blueprint Haven Old Television";
-		descriptionShort = "Allows for the creation of a Old Television with Camera Secruity System.<br/>Requires- Hammer, 1x Box of Nails, 5x Electrical Wire, 3x Electronics Board, 2x Steel.";
+		descriptionShort = "Allows for the creation of a Old Television with Camera Secruity System.<br/>Requires- Hammer, 1x Box of Nails, 5x Electrical Wire, 3x Electronics Board, 2x Reinforced Steel.";
 		class Construction {
 			Object = "BP_Television";
 			Tools[] = {"ItemHammer"};
@@ -978,18 +978,18 @@ class CfgMagazines
 	class BlueprintSafe : ItemBlueprint {
 		displayName = "Blueprint (Cast Iron Safe)";
 		descriptionUse = "Blueprint (Cast Iron Safe)";
-		descriptionShort = "Allows for the construction of a Cast Iron Safe.<br/>Requires- Blowtorch, 4x Cast Iron Sheet.";
+		descriptionShort = "Allows for the construction of a Cast Iron Safe.<br/>Requires- Blowtorch, 6x Reinforced Steel.";
 		class Construction {
 			Object = "BP_Safe";
 			Tools[] = {"ItemBlowtorch"};
-			Materials[] = {"PartSteel","PartSteel","PartSteel","PartSteel"};
+			Materials[] = {"PartSteel","PartSteel","PartSteel","PartSteel","PartSteel","PartSteel"};
 		};
 	};
 
 	class BlueprintRockStash : ItemBlueprint {
 		displayName = "Blueprint (Secret Stash)";
 		descriptionUse = "Blueprint (Secret Stash)";
-		descriptionShort = "Allows for the construction of a Secret Underground Stash.<br/>Requires- Shovel, 3x Bag of Cement and 3x Bag of Sand.";
+		descriptionShort = "Allows for the construction of a secret rock stash.<br/>Requires- Shovel, 3x Bag of Cement and 3x Bag of Sand.";
 		class Construction {
 			Object = "BP_RockStash";
 			Weapons[] = {"MeleeShovel"};
@@ -1007,9 +1007,9 @@ class CfgMagazines
 	};
 
 	class ItemBook1 : ItemTrashBase {
-		displayName = "Book (Instructional)";
+		displayName = "BreakingPoint For Dummies";
 		displayNameShort = "Book";
-		descriptionUse = "Book (Instructional)";
+		descriptionUse = "(Instructional)";
 		ammo = "BP_Book1";
 		model = "\breakingpoint\models\bp_book1.p3d";
 		picture = "\breakingpoint\textures\icons\bp_book1_ca.paa";
@@ -1017,9 +1017,9 @@ class CfgMagazines
 	};
 
 	class ItemBook2 : ItemTrashBase {
-		displayName = "Book (Gens Una Sumus)";
+		displayName = "The Necronomicon";
 		displayNameShort = "Book";
-		descriptionUse = "Book (Gens Una Sumus)";
+		descriptionUse = "(Instructional)";
 		ammo = "BP_Book2";
 		model = "\breakingpoint\models\bp_book2.p3d";
 		picture = "\breakingpoint\textures\icons\bp_book2_ca.paa";
@@ -1027,9 +1027,9 @@ class CfgMagazines
 	};
 
 	class ItemBook3 : ItemTrashBase {
-		displayName = "Book (Novel)";
+		displayName = "Fellowship of the Ring";
 		displayNameShort = "Book";
-		descriptionUse = "Book (Novel)";
+		descriptionUse = "(Novel)";
 		ammo = "BP_Book3";
 		model = "\breakingpoint\models\bp_book3.p3d";
 		picture = "\breakingpoint\textures\icons\bp_book3_ca.paa";
