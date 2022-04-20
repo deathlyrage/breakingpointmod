@@ -71,7 +71,9 @@ class CfgLoadingScreens
 		newhaven[] = 
 		{
 			"\breakingpoint_ui\loading\newhaven\loading_1.jpg",
-			"\breakingpoint_ui\loading\newhaven\loading_2.jpg"
+			"\breakingpoint_ui\loading\newhaven\loading_2.jpg",
+			"\breakingpoint_ui\loading\newhaven\loading_3.jpg",
+			"\breakingpoint_ui\loading\newhaven\loading_4.jpg"
 		};
 		
 		Bornholm[] = 
