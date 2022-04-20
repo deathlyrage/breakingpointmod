@@ -1,3 +1,9 @@
+class RscActivePicture: RscActiveText
+{
+	style=48;
+	color[]={1,1,1,0.5};
+	colorActive[]={1,1,1,1};
+};
 class RscDisplayMain : RscStandardDisplay 
 {
 	idd = 0;
@@ -120,7 +126,26 @@ class RscDisplayMain : RscStandardDisplay
 			w = 0;
 			h = 0;
 		};
-
+		class Logo: RscActivePicture
+		{
+			text="\breakingpoint_ui\menu\breakingpointlogo.paa";
+			tooltip="Join us on Discord. Link is on the DLC tab.";
+			color[]={0.89999998,0.89999998,0.89999998,1};
+			colorActive[]={1,1,1,1};
+			shadow=0;
+			x="0.5 - 	5 * 	(pixelW * pixelGrid * 2)";
+			y="safezoneY + (3 - 0.5 * 	5) * 	(pixelH * pixelGrid * 2)";
+			w="2 * 	5 * 	(pixelW * pixelGrid * 2)";
+			h="1 * 	5 * 	(pixelH * pixelGrid * 2)";
+			onButtonClick="if (scriptdone (missionnamespace getvariable ['RscDisplayMain_credits',scriptnull])) then {RscDisplayMain_credits = _this spawn (uinamespace getvariable 'bis_fnc_credits');};";
+			onSetFocus="(_this select 0) ctrlsettextcolor [1,1,1,1];";
+			onKillFocus="(_this select 0) ctrlsettextcolor [0.9,0.9,0.9,1];";
+			onLoad="(_this select 0) ctrlshow !(395180 in getDLCs 1)";
+		};
+		class LogoApex: Logo
+		{
+			onLoad="(_this select 0) ctrlshow (395180 in getDLCs 1)";
+		};
 		delete BackgroundBarRight;
 		delete BackgroundCenter;
 		delete BackgroundSpotlightRight;
@@ -132,8 +157,8 @@ class RscDisplayMain : RscStandardDisplay
 		delete InfoDLCs;
 		delete InfoDLCsOwned;
 		delete InfoVersion;
-		delete Logo;
-		delete LogoApex;
+//		delete Logo;
+//		delete LogoApex;
 		delete ProofsOfConcept;
 		delete Spotlight1;
 		delete Spotlight2;

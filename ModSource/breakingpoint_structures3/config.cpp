@@ -52708,18 +52708,6 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class Land_Hotel: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
 	class Land_MBG_Warehouse: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -52732,7 +52720,7 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class Ikarus: Land_HelipadEmpty_F
+	class Land_zavora_2: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=1;
@@ -52744,4 +52732,16 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
+	class Land_A_Office02: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};	
 };

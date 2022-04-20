@@ -27,9 +27,9 @@ class CfgTime
 	};
 	class newhaven: Base
 	{
-        date[] = {10,1,2035};
-		first[] = {8,00};
-		second[] = {14,35};
+        date[] = {10,6,2035};
+		first[] = {5,45};
+		second[] = {16,10};
 	};
 	class Esseker: Base
 	{

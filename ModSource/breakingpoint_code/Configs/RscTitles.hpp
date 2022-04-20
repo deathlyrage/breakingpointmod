@@ -1501,7 +1501,7 @@ class RscTitles
 			class Mainback : RscPicture
 			{
 				idc = 1001;
-				text = "\breakingpoint_ui\info\InfoScreen.paa";
+//				text = "\breakingpoint_ui\info\InfoScreen.paa";
 				x = 0.783594 * safezoneW + safezoneX;
 				y = 0.401 * safezoneH + safezoneY;
 				w = 0.262969 * safezoneW;
@@ -1510,175 +1510,175 @@ class RscTitles
 		};
 		class controls
 		{
-			class BP_Map: BP_InfoText2
+			class BP_Map: BP_InfoText
 			{
 				idc = 1002;
 				text = "New Haven";
-				x = 0.807500 * safezoneW + safezoneX;
-				y = 0.442 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
+				x = "0.807500 * safezoneW + safezoneX";
+				y = "0.855 * safezoneH + safezoneY";
+				w = "0.104988 * safezoneW";
+				h = "0.042 * safezoneH";
 			};
 			
-			class BP_Map2: BP_InfoText2
-			{
-				idc = 1003;
-				text = "New Haven";
-				x = 0.925000 * safezoneW + safezoneX;
-				y = 0.523 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Day: BP_InfoText
-			{
-				idc = 1004;
-				text = "35";
-				x = 0.937500 * safezoneW + safezoneX;
-				y = 0.442 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
+//			class BP_Map2: BP_InfoText2
+//			{
+//				idc = 1003;
+//				text = "New Haven";
+//				x = 0.925000 * safezoneW + safezoneX;
+//				y = 0.523 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Day: BP_InfoText
+//			{
+//				idc = 1004;
+//				text = "35";
+//				x = 0.937500 * safezoneW + safezoneX;
+//				y = 0.442 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
 			
 			class BP_Location: BP_InfoText
 			{
 				idc = 1005;
 				text = "AAC Airfield";
-				x = 0.834383 * safezoneW + safezoneX;
-				y = 0.480 * safezoneH + safezoneY;
-				w = 0.13 * safezoneW;
-				h = 0.042 * safezoneH;
+				x = "0.817500 * safezoneW + safezoneX";
+				y = "0.893 * safezoneH + safezoneY";
+				w = "0.13 * safezoneW";
+				h = "0.042 * safezoneH";
 			};
 			
-			class BP_Ranger: BP_InfoText
-			{
-				idc = 1006;
-				text = "99";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.625 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Nomad: BP_InfoText
-			{
-				idc = 1007;
-				text = "99";
-				x = 0.865000 * safezoneW + safezoneX;
-				y = 0.625 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Survivalist: BP_InfoText
-			{
-				idc = 1008;
-				text = "99";
-				x = 0.917000 * safezoneW + safezoneX;
-				y = 0.625 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Engineer: BP_InfoText
-			{
-				idc = 1009;
-				text = "99";
-				x = 0.971500 * safezoneW + safezoneX;
-				y = 0.625 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};	
-			
-			class BP_Hunter: BP_InfoText
-			{
-				idc = 1010;
-				text = "99";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.715 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Outlaw: BP_InfoText
-			{
-				idc = 1011;
-				text = "99";
-				x = 0.865000 * safezoneW + safezoneX;
-				y = 0.715 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Independent: BP_InfoText
-			{
-				idc = 1012;
-				text = "99";
-				x = 0.917000 * safezoneW + safezoneX;
-				y = 0.715 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Undead: BP_InfoText
-			{
-				idc = 1013;
-				text = "99";
-				x = 0.971500 * safezoneW + safezoneX;
-				y = 0.715 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_UndeadKilled: BP_InfoText
-			{
-				idc = 1014;
-				text = "98";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.760 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_ZombiesKilled: BP_InfoText
-			{
-				idc = 1015;
-				text = "99";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.790 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_HumansKilled: BP_InfoText
-			{
-				idc = 1016;
-				text = "99";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.8225 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Headshots: BP_InfoText
-			{
-				idc = 1017;
-				text = "99";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.855 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
-			
-			class BP_Traveled: BP_InfoText
-			{
-				idc = 1018;
-				text = "99";
-				x = 0.811500 * safezoneW + safezoneX;
-				y = 0.885 * safezoneH + safezoneY;
-				w = 0.104988 * safezoneW;
-				h = 0.042 * safezoneH;
-			};
+//			class BP_Ranger: BP_InfoText
+//			{
+//				idc = 1006;
+//				text = "99";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.625 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Nomad: BP_InfoText
+//			{
+//				idc = 1007;
+//				text = "99";
+//				x = 0.865000 * safezoneW + safezoneX;
+//				y = 0.625 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Survivalist: BP_InfoText
+//			{
+//				idc = 1008;
+//				text = "99";
+//				x = 0.917000 * safezoneW + safezoneX;
+//				y = 0.625 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Engineer: BP_InfoText
+//			{
+//				idc = 1009;
+//				text = "99";
+//				x = 0.971500 * safezoneW + safezoneX;
+//				y = 0.625 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};	
+//			
+//			class BP_Hunter: BP_InfoText
+//			{
+//				idc = 1010;
+//				text = "99";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.715 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Outlaw: BP_InfoText
+//			{
+//				idc = 1011;
+//				text = "99";
+//				x = 0.865000 * safezoneW + safezoneX;
+//				y = 0.715 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Independent: BP_InfoText
+//			{
+//				idc = 1012;
+//				text = "99";
+//				x = 0.917000 * safezoneW + safezoneX;
+//				y = 0.715 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Undead: BP_InfoText
+//			{
+//				idc = 1013;
+//				text = "99";
+//				x = 0.971500 * safezoneW + safezoneX;
+//				y = 0.715 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_UndeadKilled: BP_InfoText
+//			{
+//				idc = 1014;
+//				text = "98";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.760 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_ZombiesKilled: BP_InfoText
+//			{
+//				idc = 1015;
+//				text = "99";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.790 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_HumansKilled: BP_InfoText
+//			{
+//				idc = 1016;
+//				text = "99";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.8225 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Headshots: BP_InfoText
+//			{
+//				idc = 1017;
+//				text = "99";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.855 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
+//			
+//			class BP_Traveled: BP_InfoText
+//			{
+//				idc = 1018;
+//				text = "99";
+//				x = 0.811500 * safezoneW + safezoneX;
+//				y = 0.885 * safezoneH + safezoneY;
+//				w = 0.104988 * safezoneW;
+//				h = 0.042 * safezoneH;
+//			};
 		};
 	};
 	class RscDisplayInfoScreenStats

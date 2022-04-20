@@ -325,7 +325,8 @@ BP_Houses =
     "Land_House_Small_04_F",
     "Land_House_Small_02_F",
     "Land_Slum_03_F",
-    "Land_Slum_01_F"	
+    "Land_Slum_01_F",
+	"Land_Slum_House02_F"
 ];
 
 Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];
