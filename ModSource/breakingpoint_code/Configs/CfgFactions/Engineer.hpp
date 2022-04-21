@@ -70,14 +70,14 @@
 				class Uniform: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemBandage"};
 					items[] = {};
 				};
 				class Vest: BP_BaseGear{};
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemPainkiller","ItemPainkiller"};
+					magazines[] = {"ItemPainkiller"};
 					items[] = {};
 				};
 			};
@@ -96,7 +96,7 @@
 				class Uniform: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemBandage","ItemBandage","ItemFieldDressing"};
+					magazines[] = {"ItemBandage","ItemFieldDressing"};
 					items[] = {};
 				};
 				class Vest: BP_BaseGear
@@ -108,7 +108,7 @@
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing","ItemAntibiotic"};
+					magazines[] = {"ItemPainkiller","ItemAntibiotic"};
 					items[] = {};
 				};
 			};
@@ -127,7 +127,7 @@
 				class Uniform: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemBandage","ItemFieldDressing"};
 					items[] = {};
 				};
 				class Vest: BP_BaseGear
@@ -139,7 +139,7 @@
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","ItemFieldDressing","ItemMorphine","BlueprintChest"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","ItemMorphine","BlueprintCache1"};
 					items[] = {"Binocular"};
 				};
 			};
@@ -157,8 +157,8 @@
 					food = 10;
 					drink = 10;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
+					dressing = 15;
+					morphine = 20;
 					surgery = 50;
 					gut = 0;
 				};
@@ -167,19 +167,19 @@
 					food = 10;
 					drink = 10;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
+					dressing = 15;
+					morphine = 20;
 					surgery = 50;
 					gut = 0;
 				};
 				class Survivalist
 				{
-					food = 25;
-					drink = 25;
+					food = 10;
+					drink = 10;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
-					surgery = 75;
+					dressing = 15;
+					morphine = 20;
+					surgery = 50;
 					gut = 0;
 				};
 				class Outlaw
@@ -197,8 +197,8 @@
 					food = 10;
 					drink = 10;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
+					dressing = 15;
+					morphine = 20;
 					surgery = 50;
 					gut = 0;
 				};
@@ -214,12 +214,12 @@
 				};
 				class Undead
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = 10;
+					drink = 10;
+					bandage = 10;
+					dressing = 15;
+					morphine = 20;
+					surgery = 50;
 					gut = 0;
 				};
 			};
@@ -227,8 +227,8 @@
 			{
 				class None
 				{
-					vehicle = 50;
-					storage = 50;
+					vehicle = 0;
+					storage = 0;
 				};
 				class Ranger
 				{
@@ -247,13 +247,13 @@
 				};
 				class Outlaw
 				{
-					vehicle = 0;
+					vehicle = 50;
 					storage = 50;
 				};
 				class Hunter
 				{
-					vehicle = 100;
-					storage = 50;
+					vehicle = 0;
+					storage = 0;
 				};
 				class Engineer
 				{
@@ -337,7 +337,7 @@
 				};
 				class Undead
 				{
-					Level_0 = 0;
+					Level_0 = 50;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;

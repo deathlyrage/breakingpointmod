@@ -200,7 +200,7 @@
 					dressing = -20;
 					morphine = -25;
 					surgery = -50;
-					gut = 50;
+					gut = 300;
 				};
 				class Undead
 				{
@@ -210,7 +210,7 @@
 					dressing = 0;
 					morphine = 0;
 					surgery = 0;
-					gut = 0;
+					gut = 50;
 				};
 			};
 			class Destroy
@@ -286,9 +286,9 @@
 				class Ranger
 				{
 					Level_0 = 100;
-					Level_1 = 100;
-					Level_2 = 100;
-					Level_3 = 250;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
 				};
 				class Outlaw
 				{
@@ -300,27 +300,27 @@
 				class Hunter
 				{
 					Level_0 = 100;
-					Level_1 = 100;
-					Level_2 = 100;
-					Level_3 = 250;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
 				};
 				class Nomad
 				{
 					Level_0 = 100;
-					Level_1 = 100;
-					Level_2 = 100;
-					Level_3 = 250;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
 				};
 				class Survivalist
 				{
 					Level_0 = 100;
-					Level_1 = 100;
-					Level_2 = 100;
-					Level_3 = 250;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
 				};
 				class Engineer
 				{
-					Level_0 = 50;
+					Level_0 = 100;
 					Level_1 = 150;
 					Level_2 = 200;
 					Level_3 = 300;
@@ -329,8 +329,8 @@
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 50;
-					Level_3 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
 				};
 			};
 		};

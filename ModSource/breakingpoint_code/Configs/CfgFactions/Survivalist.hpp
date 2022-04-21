@@ -340,8 +340,8 @@
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 50;
-					Level_3 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
 				};
 			};
 		};
