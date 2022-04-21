@@ -1692,6 +1692,7 @@ class CfgObjectLoot {
 		itemType[] =	{
 			{"BP_m9","weapon"},
 			{"BP_G17","weapon"},
+			{"BP_Browning","weapon"},
             {"BP_M16OLD","weapon"},
 			{"BP_AR10","weapon"},
 			{"BP_SW45","weapon"},
@@ -1714,6 +1715,7 @@ class CfgObjectLoot {
 		itemChance[] =	{
 			0.07,	//M9
 			0.07,	//G17
+			0.07,	//BROWNING
 			0.10,	//M16
 			0.02,	//AR10
 			0.02,	//SW45
@@ -2281,6 +2283,7 @@ class CfgObjectLoot {
 			{"BP_Minimi_HG","weapon"},
 			{"BP_FNPTac45","weaponA"},
 			{"BP_G18","weapon"},
+			{"BP_SIGP226","weapon"},
 			{"BP_M4","weaponA"},
 			{"BP_FNFAL","weapon"},
 			{"BP_FNFALK","weapon"},
@@ -2307,6 +2310,7 @@ class CfgObjectLoot {
 			0.02,	//M249
 			0.01,	//FNPTAC
 			0.06,	//G18
+			0.08,	//SIGP226
 			0.10,	//M4A1
 			0.10,	//FNFAL
 			0.03,	//FNFALK

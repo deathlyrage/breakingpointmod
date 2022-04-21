@@ -82,7 +82,11 @@ class CfgVehicleSpawns
 			};
 			class BP_C_Offroad_02_unarmed_F : BaseVehicleSpawn
 			{
-				count = 6;
+				count = 3;
+			};
+			class BP_C_Offroad_03_unarmed_F : BaseVehicleSpawn
+			{
+				count = 3;
 			};
 		};
 
@@ -100,12 +104,12 @@ class CfgVehicleSpawns
 			
 			class BP_B_T_LSV_01_unarmed_F : BaseVehicleSpawn
 			{
-				count = 2;
+				count = 4;
 			};
 			
 			class BP_O_T_LSV_02_unarmed_F : BaseVehicleSpawn
 			{
-				count = 2;
+				count = 4;
 			};
 
 			class BP_Offroad_03_armed_F : BaseVehicleSpawn
@@ -125,12 +129,12 @@ class CfgVehicleSpawns
 			
 			class BP_B_T_LSV_01_armed_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 2;
 			};
 			
 			class BP_O_T_LSV_02_armed_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 2;
 			};
 		};
 	

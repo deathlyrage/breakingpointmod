@@ -542,11 +542,11 @@ class CfgBuildingLoot
 		minRoaming = 8;
 		maxRoaming = 17;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
-		lootChance = 0.85;
+		lootChance = 0.9;
 		lootPos[] = {};
 		itemType[] =	{		
 			{"BP_MX_SW","weapon"},
-			{"BP_Minimi_762","weapon"},
+			{"BP_RFB","weapon"},
 			{"BP_Minimi_HG","weapon"},
 			{"BP_MedicalboxHelicrash","object"},
 			//{"AmmoBoxSmall_556","object"},
@@ -560,7 +560,7 @@ class CfgBuildingLoot
 			//{"BP_EBR_MRCO","weapon"},
 			//{"BP_p226Tac","weaponA"},
 			{"BP_muzzle_snds_H_MG","toolbelt"},
-			{"BP_Zafir","weapon"},
+			{"BP_VS121","weapon"},
 			{"BP_7Rnd_408Chey_Mag","magazine"},
 			//{"BP_HK417_DES","weapon"},
 			{"BP_MX_GL","weapon"},
@@ -589,7 +589,7 @@ class CfgBuildingLoot
 		};
 		itemChance[] =	{
 			0.10,	//MX SW
-			0.30,	//R3F 7.62
+			0.30,	//KELTECRFB
 			0.50,	//R3F 5.56
 			0.10,	//CAJA MEDICA
 			//0.1,	//AMMO BOX 5.56
@@ -603,7 +603,7 @@ class CfgBuildingLoot
 			//0.50,	//MK18 ADR MRCO
 			//0.09,	//P226 TACTICAL
 			0.20,	//MG SUPPRESSOR
-			0.30,	//ZAFIR LMG
+			0.30,	//VS121
 			0.02, 	//408 CHEETAH
 			//0.50,	//HK417L DES
 			0.20,	//MX GL
@@ -636,7 +636,7 @@ class CfgBuildingLoot
 		minRoaming = 8;
 		maxRoaming = 17;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
-		lootChance = 0.75;
+		lootChance = 0.8;
 		lootPos[] = {};
 		itemType[] =	{		
 			{"BP_SA582","weapon"},

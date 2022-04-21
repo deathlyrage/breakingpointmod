@@ -3537,8 +3537,8 @@ class CfgVehicles
 	{
 		author = "Bohemia Interactive";
 		editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\C_Offroad_02_unarmed_F.jpg";
-		_generalMacro = "Rusted MB 4WD";
-		displayName = "Rusted MB 4WD";
+		_generalMacro = "Jeep Wrangler 4x4";
+		displayName = "Jeep Wranger 4x4";
 		scope = 2;
 		scopeCurator = 2;
 		DLC = "Expansion";
@@ -3555,6 +3555,118 @@ class CfgVehicles
 		class TransportMagazines{};
 		class TransportWeapons{};
 		armor = 50;
+		maxSpeed=200;
+		clutchStrength=20;
+		engineMOI=0.79999998;
+		enginePower=350;
+		minOmega=50;
+		maxOmega=733;
+		peakTorque=900;
+		idleRpm=400;
+		redRpm=5500;
+		class HitPoints
+		{
+			class HitEngine
+			{
+				armor = 2;
+				material = -1;
+				name = "motor";
+				visual = "motor";
+				passThrough = 0;
+			};
+			class HitFuel
+			{
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				passThrough = 0.5;
+			};
+			class HitBody
+			{
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "";
+				passThrough = 0;
+			};
+			class HitLFWheel
+			{
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			class HitRFWheel
+			{
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			class HitRF2Wheel
+			{
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			class HitLF2Wheel
+			{
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+		};
+		class EventHandlers: BP_VehicleEventHandlers{};
+	};
+	class BP_C_Offroad_03_unarmed_F: C_Offroad_02_unarmed_F
+	{
+		author = "Bohemia Interactive";
+		editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\C_Offroad_02_unarmed_F.jpg";
+		_generalMacro = "Jeep Wrangler 4x4";
+		displayName = "Jeep Wranger 4x4";
+		scope = 2;
+		scopeCurator = 2;
+		DLC = "Expansion";
+		side = 3;
+		faction = "CIV_F";
+		crew = "";
+		typicalCargo[] = {};
+		textures[] = {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa",
+			"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa",
+			"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa",
+			"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa"};
+		materials[] = {"\a3\soft_f_exp\offroad_02\data\offroad_02_ext_metal.rvmat",
+			"\a3\soft_f_exp\offroad_02\data\offroad_02_ext_chrome.rvmat",
+			"\a3\soft_f_exp\offroad_02\data\offroad_02_int_metal.rvmat",
+			"\a3\soft_f_exp\offroad_02\data\offroad_02_int_chrome.rvmat"};
+		hiddenSelectionsTextures[] = {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa",
+			"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa",
+			"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa",
+			"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa"};
+		hiddenSelectionsMaterials[] = {"\a3\soft_f_exp\offroad_02\data\offroad_02_ext_metal.rvmat",
+			"\a3\soft_f_exp\offroad_02\data\offroad_02_ext_chrome.rvmat",
+			"\a3\soft_f_exp\offroad_02\data\offroad_02_int_metal.rvmat",
+			"\a3\soft_f_exp\offroad_02\data\offroad_02_int_chrome.rvmat"};
+		class TextureSources{};
+		class TransportItems{};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		armor = 50;
+		maxSpeed=200;
+		clutchStrength=20;
+		engineMOI=0.79999998;
+		enginePower=350;
+		minOmega=50;
+		maxOmega=733;
+		peakTorque=900;
+		idleRpm=400;
+		redRpm=5500;
 		class HitPoints
 		{
 			class HitEngine
@@ -4197,7 +4309,7 @@ class CfgVehicles
 		displayName = "Rusty Pickup";
 		typicalCargo[] = {};
 		hiddenSelections[] = {"camo","camo2","camo3"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\Offroad_01_ext_base03_CO.paa","\breakingpoint_vehicles\textures\Offroad_01_ext_base03_CO.paa","\breakingpoint_vehicles\textures\Offroad_01_proxy_CO.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ui\updatedimage\Offroad_01_ext_base03_CO.paa","\breakingpoint_ui\updatedimage\Offroad_01_ext_base03_CO.paa","\breakingpoint_vehicles\textures\Offroad_01_proxy_CO.paa"};
 		hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\offroad_01_ext.rvmat","\breakingpoint_vehicles\textures\offroad_01_ext.rvmat","\breakingpoint_vehicles\textures\offroad_01_proxy.rvmat"};
 		class TransportMagazines{};
 		class TransportWeapons{};

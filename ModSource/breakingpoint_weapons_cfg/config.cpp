@@ -6427,7 +6427,146 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 	};
-	
+	class BP_Browning: Pistol_Base_F
+	{
+		scope = 2;
+		model = "\A3\Weapons_F_Beta\Pistols\ACPC2\ACPC2_F.p3d";
+		magazines[] = {"BP_16Rnd_9x21_Mag","BP_19Rnd_9x19","BP_17Rnd_9x19_SD","BP_15Rnd_9x19OVP"};
+		picture = "\breakingpoint_ui\updatedimage\browning.paa";
+		descriptionShort = "High magazine capacity, compatible with all standard capacity 9mm magazines";
+		displayName = "Browning High Power";
+		descriptionUse = "Steel Frame 9mm Pistol";
+		changeFiremodeSound[] = {};
+		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\pistols",0.3,1,50};
+		drySound[] = {"A3\sounds_f\weapons\other\dry1",0.330957,1,130};
+		inertia = 0.2;
+		aimTransitionSpeed = 1.6;
+		dexterity = 1.8;
+		initSpeed = 280;
+		recoil = "recoil_pistol_acpc2";
+		maxZeroing = 100;
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_handgun_3",0.235142,1,30};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_handgun_3",0.235142,1.1,30};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"breakingpoint_jsrs\sounds\M9_s1.wav",1.394328,1,400};
+				begin2[] = {"breakingpoint_jsrs\sounds\M9_s2.wav",1.394328,1,400};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\VSS_s1.wav",1,1,50};
+				begin2[] = {"\breakingpoint_jsrs\sounds\VSS_s2.wav",1,1,50};
+				begin3[] = {"\breakingpoint_jsrs\sounds\VSS_s3.wav",1,1,50};
+				begin4[] = {"\breakingpoint_jsrs\sounds\VSS_s4.wav",1,1,50};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+			};
+			reloadTime = 0.1;
+			dispersion = 0.00345;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 27;
+			allowedslots[] = {701,901};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"BP_m9qd","BP_gemtech9","BP_muzzle_snds_L","BP_Mk12Sup"};
+				iconScale = 0.1;
+			};
+			class CowsSlot: SlotInfo
+			{
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class PointerSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {"BP_PLight"};
+				iconScale = 0.1;
+			};
+		};
+	};
+	class BP_SIGP226: Pistol_Base_F
+	{
+		scope = 2;
+		model = "\A3\weapons_F\Pistols\Rook40\Rook40_F.p3d";
+		magazines[] = {"BP_16Rnd_9x21_Mag","BP_19Rnd_9x19","BP_17Rnd_9x19_SD","BP_15Rnd_9x19OVP"};
+		picture = "\breakingpoint_ui\updatedimage\sig.paa";
+		descriptionShort = "Standard issue US Navy Seal pistol, compatible with all standard capacity 9mm magazines";
+		displayName = "Sig P226";
+		descriptionUse = "9mm Pistol";
+		changeFiremodeSound[] = {};
+		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\pistols",0.3,1,50};
+		drySound[] = {"A3\sounds_f\weapons\other\dry1",0.330957,1,130};
+		inertia = 0.2;
+		aimTransitionSpeed = 1.6;
+		dexterity = 1.8;
+		initSpeed = 450;
+		recoil = "recoil_pistol_rook40";
+		maxZeroing = 100;
+		modes[] = {"Single"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_handgun_3",0.235142,1,30};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_handgun_3",0.235142,1.1,30};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"breakingpoint_jsrs\sounds\Glock_s1.wav",1.144328,1.1,500};
+				begin2[] = {"breakingpoint_jsrs\sounds\Glock_s2.wav",1.094328,0.9,500};
+				begin3[] = {"breakingpoint_jsrs\sounds\Glock_s1.wav",0.894328,1.2,500};
+				begin4[] = {"breakingpoint_jsrs\sounds\Glock_s2.wav",0.794328,0.8,500};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\VSS_s1.wav",1,1,50};
+				begin2[] = {"\breakingpoint_jsrs\sounds\VSS_s2.wav",1,1,50};
+				begin3[] = {"\breakingpoint_jsrs\sounds\VSS_s3.wav",1,1,50};
+				begin4[] = {"\breakingpoint_jsrs\sounds\VSS_s4.wav",1,1,50};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+			};
+			reloadTime = 0.1;
+			dispersion = 0.00435;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 27;
+			allowedslots[] = {701,901};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"BP_m9qd","BP_gemtech9","BP_muzzle_snds_L","BP_Mk12Sup"};
+				iconScale = 0.1;
+			};
+			class CowsSlot: SlotInfo
+			{
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class PointerSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {"BP_PLight"};
+				iconScale = 0.1;
+			};
+		};
+	};	
 //-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CLASS REDFINES WEAPONS RIFLES|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -19196,7 +19335,344 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			"\breakingpoint_ui\updatedimage\vss2.paa"
 		};
 	};
-
+	class BP_RFB: Rifle_Base_F_BP
+	{
+		scope = 2;
+		maxZeroing = 800;
+		model = "\A3\weapons_f\Rifles\SDAR\SDAR_F.p3d";
+		picture = "\breakingpoint_ui\updatedimage\rfb.paa";
+		displayName = "Kel-Tec RFB";
+		descriptionshort = "7.62x51mm forward ejecting bullpup";
+		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Rifles\SDAR\data\Anim\SDAR.rtm"};
+		hiddenSelections[] = {"camo","camo1"};
+		hiddenSelectionsTextures[] = {"A3\Weapons_F\Rifles\Khaybar\data\Khaybar_01_CO","A3\Weapons_F\Rifles\Khaybar\data\Khaybar_02_CO"};
+		magazines[] = {"BP_20Rnd_762x51_BPMag","BP_20Rnd_762x51_M80A1","BP_20Rnd_762x51_Mk316Mod0"};
+		reloadAction = "GestureReloadSDAR";
+		reloadSound[] = {};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\Dry_SDAR",0.39810717,1,15};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\reload_sdar",1,1,10};
+		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\firemode_SDAR",0.25118864,1,5};
+		inertia = 0.4;
+		aimTransitionSpeed = 1.4;
+		dexterity = 1.6;
+		recoil = "recoil_ebr";
+		initSpeed = -0.98;
+		modes[] = {"Single","Burst"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\closure_SDAR_01",0.5011872,1,10};
+				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\closure_SDAR_02",0.5011872,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_short_01",3.1622777,1,1400};
+				begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_short_02",3.1622777,1,1400};
+				begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_short_03",3.1622777,1,1400};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_trees",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_forest",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_interior",1.5848932,1,1400};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_meadows",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_houses",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+				beginwater1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\underwater_sdar_01",1,1,400};
+				beginwater2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\underwater_sdar_02",1,1,400};
+				beginwater3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\underwater_sdar_03",1,1,400};
+				soundBeginWater[] = {"beginwater1",0.33,"beginwater2",0.33,"beginwater3",0.34};
+			};
+			reloadTime = 0.1;
+			recoil = "recoil_single_sdar";
+			recoilProne = "recoil_single_prone_sdar";
+			dispersion = 0.00131;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 15;
+			midRangeProbab = 0.7;
+			maxRange = 35;
+			maxRangeProbab = 0.05;
+			aiRateOfFire = 2;
+			aiRateOfFireDistance = 20;
+		};
+		class Burst: Mode_Burst
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				closure1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\closure_SDAR_01",0.5011872,1,10};
+				closure2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\closure_SDAR_02",0.5011872,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_short_01",3.1622777,1,1400};
+				begin2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_short_02",3.1622777,1,1400};
+				begin3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_short_03",3.1622777,1,1400};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+				class SoundTails
+				{
+					class TailTrees
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_trees",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_forest",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailInterior
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_interior",1.5848932,1,1400};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailMeadows
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_meadows",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\SDAR_tail_houses",1,1,1400};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+				};
+				beginwater1[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\underwater_sdar_01",1,1,400};
+				beginwater2[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\underwater_sdar_02",1,1,400};
+				beginwater3[] = {"A3\Sounds_F\arsenal\weapons\Rifles\SDAR\underwater_sdar_03",1,1,400};
+				soundBeginWater[] = {"beginwater1",0.33,"beginwater2",0.33,"beginwater3",0.34};
+			};
+			soundBurst = 0;
+			burst = 3;
+			reloadTime = 0.09;
+			recoil = "recoil_burst_sdar";
+			recoilProne = "recoil_burst_prone_sdar";
+			dispersion = 0.00131;
+			minRange = 1;
+			minRangeProbab = 0.3;
+			midRange = 10;
+			midRangeProbab = 0.7;
+			maxRange = 15;
+			maxRangeProbab = 0.05;
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 10;
+		};
+		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_01",0.4466836,1,15};
+		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_02",0.4466836,1,15};
+		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_03",0.4466836,1,15};
+		bullet4[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_04",0.4466836,1,15};
+		bullet5[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Dirt_01",0.4466836,1,15};
+		bullet6[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Dirt_02",0.4466836,1,15};
+		bullet7[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Dirt_03",0.4466836,1,15};
+		bullet8[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Dirt_04",0.4466836,1,15};
+		bullet9[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_01",0.4466836,1,15};
+		bullet10[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_02",0.4466836,1,15};
+		bullet11[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_03",0.4466836,1,15};
+		bullet12[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_04",0.4466836,1,15};
+		soundBullet[] = {"bullet1",0.087,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.093,"bullet6",0.093,"bullet7",0.073,"bullet8",0.073,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
+		discreteDistance[] = {30,100,200,300,400};
+		discreteDistanceInitIndex = 0;
+		class WeaponSlotsInfo
+		{
+			mass = 160;
+			allowedSlots[] = {901};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class CowsSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class UnderBarrelSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+		};
+		distanceZoomMin = 300;
+		distanceZoomMax = 300;
+	};
+	class BP_VS121: Rifle_Base_F_BP
+	{
+		scope = 2;
+		maxZeroing = 1600;
+		displayName = "VS-121";
+		model = "\A3\Weapons_F_EPA\LongRangeRifles\DMR_01\DMR_01_F.p3d";
+		descriptionShort = "7.62x51mm bullpup sniper";
+		descriptionUse = "Russian prototype";
+		picture = "\breakingpoint_ui\updatedimage\vs121.paa";
+		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_Base_Black_co.paa","\A3\Weapons_F_EPB\Rifles\MX_Black\Data\XMX_short_Black_co.paa"};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_EPA\LongRangeRifles\DMR_01\data\Anim\dmr_01.rtm"};
+		magazines[] = {"BP_10Rnd_762x51_Mag","BP_10Rnd_762mk316_Mag","BP_10Rnd_762m80a1_Mag","BP_5Rnd_762x51_Mag","BP_5Rnd_762mk316_Mag","BP_5Rnd_762m80a1_Mag"};
+		drySound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\DMR_01_Rahim\DMR_01_dry",0.25118864,1,20};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\DMR_01_Rahim\DMR_01_reload",1,1,10};
+		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\LongRangeRifles\DMR_01_Rahim\DMR_01_firemode",0.31622776,1,5};
+		reloadAction = "GestureReloadDMR";
+		recoil = "recoil_dmr_01";
+		initSpeed = -1.02;
+		inertia = 0.5;
+		aimTransitionSpeed = 1;
+		dexterity = 1.5;
+		class WeaponSlotsInfo
+		{
+			mass = 120;
+			allowedSlots[] = {901};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"BP_muzzle_snds_B"};
+				iconScale = 0.1;
+			};
+			class CowsSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {"optic_Arco_blk_F","optic_ERCO_blk_F","optic_DMS_ghex_F","optic_SOS_khk_F","optic_LRPS","optic_LRPS_tna_F","BP_L14X","BP_M3AMRAD","BP_NXS","BP_M3A","BP_M3A2","BP_M3LR","BP_M3AN","BP_MRT","BP_PS22","BP_SOS","optic_MRCO","optic_Arco","optic_hamr","BP_optic_ACOG","BP_compm4s"};
+				iconScale = 0.1;
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {"BP_flashlight"};
+				iconScale = 0.1;
+			};
+			class UnderBarrelSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+		};
+		distanceZoomMin = 300;
+		distanceZoomMax = 300;
+		modes[] = {"Single","FullAuto"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"breakingpoint_jsrs\sounds\HK417_s1.wav",0.812538,0.85,1000};
+				begin2[] = {"breakingpoint_jsrs\sounds\HK417_s2.wav",0.812538,0.97,1000};
+				begin3[] = {"breakingpoint_jsrs\sounds\HK417_s3.wav",0.812538,1.1,1000};
+				begin4[] = {"breakingpoint_jsrs\sounds\HK417_s1.wav",0.812538,0.95,1000};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\HK417SD_s1.wav",1,1,150};
+				begin2[] = {"\breakingpoint_jsrs\sounds\HK417SD_s2.wav",1,1,150};
+				begin3[] = {"\breakingpoint_jsrs\sounds\HK417SD_s3.wav",1,0.9,150};
+				begin4[] = {"\breakingpoint_jsrs\sounds\HK417SD_s1.wav",1,0.8,150};
+				begin5[] = {"\breakingpoint_jsrs\sounds\HK417SD_s3.wav",1,1.1,150};
+				soundBegin[] = {"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+			};
+			dispersion = 0.000737;
+			soundContinuous = 0;
+			reloadTime = 0.096;
+			minRange = 500;
+			minRangeProbab = 1;
+			midRange = 750;
+			midRangeProbab = 1;
+			maxRange = 950;
+			maxRangeProbab = 1;
+			aiRateOfFire = 1e-07;
+			aiRateOfFireDistance = 950;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[] = {"StandardSound","SilencedSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"breakingpoint_jsrs\sounds\HK417_s1.wav",0.812538,0.85,1000};
+				begin2[] = {"breakingpoint_jsrs\sounds\HK417_s2.wav",0.812538,0.97,1000};
+				begin3[] = {"breakingpoint_jsrs\sounds\HK417_s3.wav",0.812538,1.1,1000};
+				begin4[] = {"breakingpoint_jsrs\sounds\HK417_s1.wav",0.812538,0.95,1000};
+				soundBegin[] = {"begin1",0.25,"begin2",0.25,"begin3",0.25,"begin4",0.25};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\HK417SD_s1.wav",1,1,150};
+				begin2[] = {"\breakingpoint_jsrs\sounds\HK417SD_s2.wav",1,1,150};
+				begin3[] = {"\breakingpoint_jsrs\sounds\HK417SD_s3.wav",1,0.9,150};
+				begin4[] = {"\breakingpoint_jsrs\sounds\HK417SD_s1.wav",1,0.8,150};
+				begin5[] = {"\breakingpoint_jsrs\sounds\HK417SD_s3.wav",1,1.1,150};
+				soundBegin[] = {"begin1",0.2,"begin2",0.2,"begin3",0.2,"begin4",0.2,"begin5",0.2};
+			};
+			dispersion = 0.000737;
+			soundContinuous = 0;
+			reloadTime = 0.096;
+			minRange = 1;
+			minRangeProbab = 1;
+			midRange = 250;
+			midRangeProbab = 1;
+			maxRange = 500;
+			maxRangeProbab = 1;
+			aiRateOfFire = 1e-06;
+			aiRateOfFireDistance = 500;
+		};
+	};
 //--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CLASS CREATION ATTACHMENTS|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
