@@ -24,6 +24,8 @@ if (_points == 0) exitWith { cutText ["<t font='Sketch' color='#ffffff' size='1'
 };
 if (_points > 0) then {
     cutText [format ["<t font='Sketch' color='#ffff00' size='3'>+%1 POINTS</t><br/>",_points], "PLAIN DOWN", -1, true, true];
+playSound "score"
 } else {
     cutText [format ["<t font='Sketch' color='#ff0000' size='3'>%1 POINTS</t><br/>",_points], "PLAIN DOWN", -1, true, true];
+playSound "minus"
 };

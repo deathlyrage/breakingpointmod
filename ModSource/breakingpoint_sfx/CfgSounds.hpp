@@ -9,6 +9,18 @@
 
 class CfgSounds 
 {
+	class minus
+	{
+		name = "minus";
+		sound[] = {"breakingpoint_sfx\player_effects\minus.ogg",0.2,1};
+		titles[] = {};
+	};
+	class score
+	{
+		name = "score";
+		sound[] = {"breakingpoint_sfx\player_effects\score.ogg",0.2,1};
+		titles[] = {};
+	};
 	//Thirsk Winter Snow Storm
 	class snowsound
     {
@@ -282,12 +294,12 @@ class CfgSounds
 	};
 	class z_refuel_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_refuel_0.ogg",0.1,1,140};
+		sound[] = {"breakingpoint_sfx\effects\action_refuel_0.ogg",0.7,1,140};
 		titles[] = {};
 	};
 	class z_repair_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_repair_0.ogg",0.2,1,140};
+		sound[] = {"breakingpoint_sfx\effects\action_repair_0.ogg",0.7,1,140};
 		titles[] = {};
 	};
 	class z_tentunpack_0 {
@@ -302,12 +314,12 @@ class CfgSounds
 	};
 	class z_drink_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_drink_0.ogg",0.1,1,140};
+		sound[] = {"breakingpoint_sfx\effects\action_drink_0.ogg",0.4,1,140};
 		titles[] = {};
 	};
 	class z_soda_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_soda_0.ogg",0.3,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_soda_0.ogg",0.5,1,150};
 		titles[] = {};
 	};
 	class z_cough_0 {
@@ -327,52 +339,52 @@ class CfgSounds
 	};
 	class z_bandage_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\bandage_0.ogg",0.3,1,150};
+		sound[] = {"breakingpoint_sfx\effects\bandage_0.ogg",0.6,1,150};
 		titles[] = {};
 	};
 	class z_gut_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_gut_0.ogg",0.1,1,170};
+		sound[] = {"breakingpoint_sfx\effects\action_gut_0.ogg",0.3,1,170};
 		titles[] = {};
 	};
 	class z_cook_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_cook_0.ogg",0.2,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_cook_0.ogg",2,1,150};
 		titles[] = {};
 	};
 	class z_cook_1 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_cook_1.ogg",0.2,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_cook_1.ogg",1,1,150};
 		titles[] = {};
 	};
 	class z_cook_2 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_cook_2.ogg",0.2,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_cook_2.ogg",1,1,150};
 		titles[] = {};
 	};
 	class z_eat_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.1,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
 		titles[] = {};
 	};
 	class z_eat_1 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.1,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
 		titles[] = {};
 	};
 	class z_eat_2 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.1,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
 		titles[] = {};
 	};
 	class z_eat_3 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.1,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
 		titles[] = {};
 	};
 	class z_fillwater_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_fillwater_0.ogg",0.1,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_fillwater_0.ogg",2,1,150};
 		titles[] = {};
 	};
 
@@ -459,23 +471,23 @@ class CfgSounds
 
 	class z_spotted_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\zombie\spotted_0.ogg",1.8,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\spotted_0.ogg",2.2,1,80};
 		titles[] = {0, ""};
 	};
 	class z_spotted_1 : z_spotted_0 {
-		sound[] = {"breakingpoint_sfx\zombie\spotted_1.ogg",1.8,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\spotted_1.ogg",2.2,1,80};
 	};
 	class z_spotted_2 : z_spotted_0 {
-		sound[] = {"breakingpoint_sfx\zombie\spotted_2.ogg",1.8,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\spotted_2.ogg",2.2,1,80};
 	};
 	class z_spotted_3 : z_spotted_0 {
-		sound[] = {"breakingpoint_sfx\zombie\spotted_3.ogg",1.8,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\spotted_3.ogg",2.2,1,80};
 	};
 	class z_spotted_4 : z_spotted_0 {
-		sound[] = {"breakingpoint_sfx\zombie\spotted_4.ogg",1.8,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\spotted_4.ogg",2.2,1,80};
 	};
 	class z_spotted_5 : z_spotted_0 {
-		sound[] = {"breakingpoint_sfx\zombie\spotted_5.ogg",1.8,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\spotted_5.ogg",2.2,1,80};
 	};
 	
 	class z_attack_0 {
