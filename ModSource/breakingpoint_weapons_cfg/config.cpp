@@ -7403,16 +7403,28 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		};
 		class GL_3GL_F: UGL_F 
 		{
-			magazines[] = {"BP_1Rnd_40mm_Flashbang", "BP_1Rnd_HE_shell", "BP_3Rnd_HE_shell", "BP_UGL_FlareWhite", "BP_UGL_FlareRed", "BP_UGL_FlareGreen"};
+			magazines[] = {"BP_1Rnd_HE_shell", "BP_3Rnd_HE_shell", "BP_1Rnd_40mm_Flashbang", "BP_UGL_FlareWhite", "BP_UGL_FlareRed", "BP_UGL_FlareGreen"};
 			displayName = "$STR_A3_cfgweapons_3gl0";
 			descriptionShort = "$STR_A3_cfgweapons_3gl1";
 			useModelOptics = 0;
 			useExternalOptic = 0;
 			cameraDir = "OP_look";
-			discreteDistance[] = {300, 450};
-			//discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75", "OP_eye_100", "OP_eye_150", "OP_eye_200", "OP_eye_250", "OP_eye_300", "OP_eye_350", "OP_eye_400"};
-			discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75"};
+			discreteDistance[]={50,75,100,150,200,250,300,350,400};
+			discreteDistanceCameraPoint[]=
+			{
+				"OP_eye_50",
+				"OP_eye_75",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200",
+				"OP_eye_250",
+				"OP_eye_300",
+				"OP_eye_350",
+				"OP_eye_400"
+			};
 			discreteDistanceInitIndex = 1;
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=4;
 		};
 		class WeaponSlotsInfo  
 		{
