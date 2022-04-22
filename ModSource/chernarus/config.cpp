@@ -1,29 +1,11 @@
-/*
-	Breaking Point Mod for Arma 3
-
-	Released under Arma Public Share Like Licence (APL-SA)
-	https://www.bistudio.com/community/licenses/arma-public-license-share-alike
-
-	Alderon Games Pty Ltd
-*/
+#define private		0
+#define protected		1
+#define public		2
 
 #define ReadAndWrite		0
 #define ReadAndCreate		1
 #define ReadOnly		2
 #define ReadOnlyVerified		3
-
-#define VSoft		0
-#define VArmor		1
-#define VAir		2
-
-#define TEast		0
-#define TWest		1
-#define TGuerrila		2
-#define TCivilian		3
-#define TSideUnknown		4
-#define TEnemy		5
-#define TFriendly		6
-#define TLogic		7
 
 class CfgPatches {
 	class Chernarus {
@@ -33,35 +15,86 @@ class CfgPatches {
 		requiredAddons[] = {"CAData", "CABuildings", "CAMisc", "CABuildings2", "CARoads2"};
 	};
 };
-
-class CfgWorlds {
-	class DefaultLighting;
-	class DayLightingBrightAlmost;
-	class DayLightingRainy;
-	class DefaultWorld {
-		class Weather;
-		class Grid;	// External class reference
-		class DefaultClutter;	// External class reference
+class CfgMaterials
+{
+	class Water;
+	class WaterRiver: Water
+	{
+		PixelShaderID="Water";
+		VertexShaderID="Water";
+		class Stage1
+		{
+			texture="A3\Map_Enoch\Data\water_nofhq.paa";
+			uvSource="texWaterAnim";
+			class uvTransform
+			{
+				aside[]={0,1,0};
+				up[]={1,0,0};
+				dir[]={0,0,1};
+				pos[]={0.30000001,0.40000001,0};
+			};
+		};
+		class Stage2
+		{
+			texture="A3\data_f\sea_foam_lco.paa";
+			uvSource="none";
+		};
+		class Stage3
+		{
+			texture="A3\Map_Enoch\Data\water2_nohq.paa";
+			uvSource="none";
+		};
 	};
-	
-	class CAWorld : DefaultWorld {};
-	
-	class Chernarus : CAWorld {
+};
+class CfgWorlds
+{
+	class DefaultLighting;
+
+	class DefaultWorld
+	{
+		class Weather
+		{
+			class Overcast;
+		};
+		class WaterExPars;
+	};
+	class CAWorld : DefaultWorld
+	{
+		class Grid
+		{
+		};
+		class DayLightingBrightAlmost;
+		class DayLightingRainy;
+		class DefaultClutter;
+		class Weather: Weather
+		{
+			class Lighting;
+			class Overcast: Overcast
+			{
+				class Weather1;
+				class Weather2;
+				class Weather3;
+				class Weather4;
+				class Weather5;
+				class Weather6;
+			};
+		};
+	};
+	class Chernarus : CAWorld	
+	{
 		access = ReadOnlyVerified;
 		worldId = 4;
 		cutscenes[] = {"ChernarusIntro1"};
 		description = "Chernarus";
 		icon = "";
 		worldName = "\ca\chernarus\chernarus.wrp";
-		author = "Ported for BreakingPoint. Updated by Donnie.";														   
-  
-		pictureMap = "";
-		pictureShot = "\ca\chernarus\data\ui_selectisland_chernarus_ca.paa";
+		author = "Ported for BreakingPoint. Updated by Donnie.";										   
+		pictureMap = "\ca\chernarus\chernarus_ca.paa";
+		pictureShot = "\ca\chernarus\ui_chernarus_ca.paa";
 		plateFormat = "ML$ - #####";
 		plateLetters = ABCDEGHIKLMNOPRSTVXZ;
 		longitude = 30;	// positive is east
 		latitude = -45;	// positive is south
-		
 		class OutsideTerrain {
 			satellite = "ca\CHERNARUS\data\s_satout_co.paa";
 			enableTerrainSynth = 1;
@@ -147,90 +180,376 @@ class CfgWorlds {
 		{
 			vehicles[] = {};
 		};
-		
-		aroundSunCoefMultiplier = 1.38;
-		aroundSunCoefExponent = 8;
+		dynLightMinBrightnessAmbientCoef = 0.5;
+		dynLightMinBrightnessAbsolute = 0.05;
+		class Sea
+		{
+			seaTexture = "a3\data_f\seatexture_co.paa";
+			seaMaterial = "#waterriver";
+			shoreMaterial = "#shore";
+			shoreFoamMaterial = "#shorefoam";
+			shoreWetMaterial = "#shorewet";
+			WaterMapScale = 20;
+			WaterGrid = 50;
+			MaxTide = 0;
+			MaxWave = 0.25;
+			SeaWaveXScale = "2.0/50";
+			SeaWaveZScale = "1.0/50";
+			SeaWaveHScale = 1;
+			SeaWaveXDuration = 5000;
+			SeaWaveZDuration = 10000;
+		};
+		class Underwater
+		{
+			noWaterFog = -0.001;
+			fullWaterFog = 0.001;
+			deepWaterFog = 60;
+			waterFogDistanceNear = -10;
+			waterFogDistance = 90;
+			waterColor[] = {0,0.04,0.03};
+			deepWaterColor[] = {0,0.001,0.009};
+			surfaceColor[] = {0,0.04,0.03};
+			deepSurfaceColor[] = {0,0.001,0.009};
+		};
+		class SeaWaterShaderPars
+		{
+			refractionMoveCoef = 0.03;
+			minWaterOpacity = 0;
+			waterOpacityDistCoef = 0.4;
+			underwaterOpacity = 0.5;
+			waterOpacityFadeStart = 60;
+			waterOpacityFadeLength = 120;
+		};
+		class WaterExPars: WaterExPars
+		{
+			fogDensity=0.25;
+			fogColor[]=
+			{
+				"0.197*0.25",
+				"0.25*0.25",
+				"0.08*0.25"
+			};
+			fogColorExtinctionSpeed[]={0.30000001,0.30000001,0.051100001};
+			ligtExtinctionSpeed[]=
+			{
+				"0.02+0.3",
+				"0.02+0.3",
+				"0.02+0.0511"
+			};
+			diffuseLigtExtinctionSpeed[]=
+			{
+				"0.82+0.3",
+				"0.52+0.3",
+				"1.32+0.0511"
+			};
+			fogGradientCoefs[]={0.34999999,1,1.7};
+			fogColorLightInfluence[]={0.80000001,0.2,1};
+			shadowIntensity=0;
+			ssReflectionStrength=0.85000002;
+			ssReflectionMaxJitter=1;
+			ssReflectionRippleInfluence=0.2;
+			ssReflectionEdgeFadingCoef=10;
+			ssReflectionDistFadingCoef=4;
+			refractionMinCoef=0.029999999;
+			refractionMaxCoef=0.14;
+			refractionMaxDist=5.0999999;
+			specularMaxIntensity=75;
+			specularPowerOvercast0=300;
+			specularPowerOvercast1=3;
+			specularNormalModifyCoef=0.001;
+			foamAroundObjectsIntensity=0.2;
+			foamAroundObjectsFadeCoef=8;
+			foamColorCoef=2;
+			foamDeformationCoef=0.02;
+			foamTextureCoef=0.2;
+			foamTimeMoveSpeed=0.2;
+			foamTimeMoveAmount=0.1;
+			shoreDarkeningMaxCoef=0.55000001;
+			shoreDarkeningOffset=0.02;
+			shoreDarkeningGradient=0.2;
+			shoreWaveTimeScale=0.80000001;
+			shoreWaveShifDerivativeOffset=-0.80000001;
+			shoreFoamIntensity=0.5;
+			shoreMaxWaveHeight=0.046;
+			shoreWetLayerReflectionIntensity=0.55000001;
+		};
+		causticsEnabled=1;
+		causticsTextureMask="A3\data_f\caustics\caustics_anim_%03d.paa";
+		causticsTextureCount=32;
+		causticsDistanceLimit=200;
+		causticsDepthLimit=80;
+		causticsTextureArea=2;
+		causticsTextureAreaDeep=156;
+		causticsTextureChangeInterval=0.039999999;
+		causticsDepthFadeCoef=0.050000001;
+		causticsTextureDepthGranularity=2.5;
+		causticsBrightnessCoef=1;
+		startFogBase=250;
+		forecastFogBase=250;
+		startFogDecay=0.017999999;
+		forecastFogDecay=0.017999999;
+		fogBeta0Min=0;
+		fogBeta0Max=0.0049999999;
+		skyColorInfluencesFogColor=0;
+		hazeDistCoef=0.1;
+		hazeFogCoef=0.98000002;
+		fogHeight=2000;
+		hazeBaseHeight=0;
+		hazeBaseBeta0=0.00012;
+		hazeDensityDecay=0.00060000003;
+		aroundSunCoefMultiplier=1.38;
+		aroundSunCoefExponent=8;
 		class HDRNewPars
 		{
-			minAperture = 1e-005;
-			maxAperture = 256;
-			apertureRatioMax = 4;
-			apertureRatioMin = 10;
-			bloomImageScale = 1;
-			bloomScale = 0.15;
-			bloomExponent = 1.3;
-			bloomLuminanceOffset = 0.75;
-			bloomLuminanceScale = 0.75;
-			bloomLuminanceExponent = 0.75;
-			tonemapMethod = 1;
-			tonemapShoulderStrength = 0.22;
-			tonemapLinearStrength = 0.12;
-			tonemapLinearAngle = 0.1;
-			tonemapToeStrength = 0.2;
-			tonemapToeNumerator = 0.022;
-			tonemapToeDenominator = 0.2;
-			tonemapLinearWhite = 11.2;
-			tonemapExposureBias = 1;
-			tonemapLinearWhiteReinhard = 2.5;
-			eyeAdaptFactorLight = 3.3;
-			eyeAdaptFactorDark = 0.25;
-			nvgApertureMin = 10;
-			nvgApertureStandard = 12.5;
-			nvgApertureMax = 16.5;
-			nvgStandardAvgLum = 10;
-			nvgLightGain = 320;
-			nvgTransition = 1;
-			nvgTransitionCoefOn = 40;
-			nvgTransitionCoefOff = 0.01;
-			nightShiftMinAperture = 0;
-			nightShiftMaxAperture = 0.002;
-			nightShiftMaxEffect = 0.6;
-			nightShiftLuminanceScale = 600;
+			minAperture=9.9999997e-006;
+			maxAperture=256;
+			apertureRatioMax=4;
+			apertureRatioMin=10;
+			bloomImageScale=1;
+			bloomScale=0.15000001;
+			bloomExponent=1.3;
+			bloomLuminanceOffset=0.75;
+			bloomLuminanceScale=0.75;
+			bloomLuminanceExponent=0.75;
+			tonemapMethod=1;
+			tonemapShoulderStrength=0.22;
+			tonemapLinearStrength=0.12;
+			tonemapLinearAngle=0.1;
+			tonemapToeStrength=0.2;
+			tonemapToeNumerator=0.022;
+			tonemapToeDenominator=0.2;
+			tonemapLinearWhite=11.2;
+			tonemapExposureBias=1;
+			tonemapLinearWhiteReinhard=2.5;
+			eyeAdaptFactorLight=3.3;
+			eyeAdaptFactorDark=0.25;
+			nvgApertureMin=10;
+			nvgApertureStandard=12.5;
+			nvgApertureMax=16.5;
+			nvgStandardAvgLum=10;
+			nvgLightGain=320;
+			nvgTransition=1;
+			nvgTransitionCoefOn=40;
+			nvgTransitionCoefOff=0.0099999998;
+			nightShiftMinAperture=0;
+			nightShiftMaxAperture=0.0020000001;
+			nightShiftMaxEffect=0.60000002;
+			nightShiftLuminanceScale=600;
 		};
 		class Lighting: DefaultLighting
 		{
-			groundReflection[] = {0.06,0.06,0.03};
-			moonObjectColorFull[] = {360,340,300,100};
-			moonHaloObjectColorFull[] = {15,17,25,50};
-			moonsetObjectColor[] = {275,250,225,1};
-			moonsetHaloObjectColor[] = {10,10,10,0.25};
+			groundReflection[]={0.059999999,0.059999999,0.029999999};
+			moonObjectColorFull[]={360,340,300,100};
+			moonHaloObjectColorFull[]={15,17,25,50};
+			moonsetObjectColor[]={275,250,225,1};
+			moonsetHaloObjectColor[]={10,10,10,0.25};
 			class ThunderBoltLight
 			{
-				diffuse[] = {2120,2170,8550};
-				ambient[] = {0.001,0.001,0.001};
-				intensity = 120000;
+				diffuse[]={2120,2170,8550};
+				ambient[]={0.001,0.001,0.001};
+				intensity=120000;
 				class Attenuation
 				{
-					start = 0;
-					constant = 0;
-					linear = 0;
-					quadratic = 1;
+					start=0;
+					constant=0;
+					linear=0;
+					quadratic=1;
 				};
 			};
-			starEmissivity = 40;
+			starEmissivity=40;
 		};
 		class DayLightingBrightAlmost: DayLightingBrightAlmost
 		{
-			deepNight[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			fullNight[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			sunMoon[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			earlySun[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			sunrise[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			earlyMorning[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			midMorning[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			morning[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			noon[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
+			deepNight[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			fullNight[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			sunMoon[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			earlySun[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			sunrise[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			earlyMorning[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			midMorning[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			morning[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			noon[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
 		};
 		class DayLightingRainy: DayLightingRainy
 		{
-			deepNight[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			fullNight[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			sunMoon[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			earlySun[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			earlyMorning[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			morning[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			lateMorning[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
-			noon[] = {-15,{0.005,0.01,0.01},{0,0.002,0.003},{0,0,0},{0,0,0},{0,0.002,0.003},{0,0.002,0.003},0};
+			deepNight[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			fullNight[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			sunMoon[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			earlySun[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			earlyMorning[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			morning[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			lateMorning[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
+			noon[]=
+			{
+				-15,
+				{0.0049999999,0.0099999998,0.0099999998},
+				{0,0.0020000001,0.003},
+				{0,0,0},
+				{0,0,0},
+				{0,0.0020000001,0.003},
+				{0,0.0020000001,0.003},
+				0
+			};
 		};
 		class Weather: Weather
 		{
@@ -1112,6 +1431,45 @@ class CfgWorlds {
 					overcast = 1;
 				};
 			};
+			class Overcast: Overcast
+			{
+				class Weather1: Weather1
+				{
+					sky="A3\Map_Enoch\Data\sky_clear_sky.paa";
+					skyR="A3\Map_Enoch\Data\sky_clear_lco.paa";
+					horizon="A3\Map_Enoch\Data\sky_clear_horizont_sky.paa";
+				};
+				class Weather2: Weather2
+				{
+					sky="A3\Map_Enoch\Data\sky_clear_sky.paa";
+					skyR="A3\Map_Enoch\Data\sky_clear_lco.paa";
+					horizon="A3\Map_Enoch\Data\sky_almostclear_horizont_sky.paa";
+				};
+				class Weather3: Weather3
+				{
+					sky="A3\Map_Enoch\Data\sky_clear_sky.paa";
+					skyR="A3\Map_Enoch\Data\sky_cloudy_lco.paa";
+					horizon="A3\Map_Enoch\Data\sky_semicloudy_horizont_sky.paa";
+				};
+				class Weather4: Weather4
+				{
+					sky="A3\Map_Enoch\Data\sky_clear_sky.paa";
+					skyR="A3\Map_Enoch\Data\sky_cloudy_lco.paa";
+					horizon="A3\Map_Enoch\Data\sky_cloudy_horizont_sky.paa";
+				};
+				class Weather5: Weather5
+				{
+					sky="A3\Map_Enoch\Data\sky_clear_sky.paa";
+					skyR="A3\Map_Enoch\Data\sky_overcast_lco.paa";
+					horizon="A3\Map_Enoch\Data\sky_mostlycloudy_horizont_sky.paa";
+				};
+				class Weather6: Weather6
+				{
+					sky="A3\Map_Enoch\Data\sky_clear_sky.paa";
+					skyR="A3\Map_Enoch\Data\sky_overcast_lco.paa";
+					horizon="A3\Map_Enoch\Data\sky_overcast_horizont_sky.paa";
+				};
+			};
 		};
 		humidityUpCoef = 0.1;
 		humidityDownCoef = 0.05;
@@ -1236,21 +1594,20 @@ class CfgWorlds {
 		skyTextureR = "A3\Map_Enoch\Data\sky_semicloudy_lco.paa";
 		terrainBlendMaxDarkenCoef = 1;
 		terrainBlendMaxBrightenCoef = 0;
-		clutterGrid = 1;
-		clutterDist = 125;
+		clutterGrid = 1.2;
+		clutterDist = 100;
 		noDetailDist = 40;
-		fullDetailDist = 15;
+		fullDetailDist = 10;
 		midDetailTexture = "ca\chernarus\data\cr_trava1_mco.paa";
 		minTreesInForestSquare = 3;
 		minRocksInRockSquare = 3;
-		
 		class clutter {
 			class GrassTall : DefaultClutter {
-				model="A3\plants_f\Clutter\c_Grass_Tall_Dead.p3d";
-				affectedByWind=1;
+				model="A3\plants_f\Clutter\c_StrGrassGreen_group.p3d";
+				affectedByWind=0.60000002;
 				swLighting=1;
-				scaleMin=0.50000002;
-				scaleMax=0.9;
+				scaleMin=0.69999999;
+				scaleMax=1;
 			};
 			
 			class StubbleClutter : DefaultClutter {
@@ -1262,11 +1619,11 @@ class CfgWorlds {
 			};
 			
 			class AutumnFlowers : DefaultClutter {
-				model = "ca\plants2\clutter\c_autumn_flowers.p3d";
-				affectedByWind = 0.4;
-				swLighting = 1;
-				scaleMin = 0.7;
-				scaleMax = 1;
+				model="A3\plants_f\Clutter\c_Flower_Low_Yellow2.p3d";
+				affectedByWind=0.40000001;
+				swLighting=1;
+				scaleMin=0.60000002;
+				scaleMax=1;
 			};
 			
 			class GrassBunch : DefaultClutter {
@@ -1286,11 +1643,11 @@ class CfgWorlds {
 			};
 			
 			class GrassCrookedGreen : DefaultClutter {
-				model = "A3\plants_f\Clutter\c_GrassGreen_GroupSoft.p3d";
-				affectedByWind = 0.3;
-				swLighting = 1;
-				scaleMin = 0.8;
-				scaleMax = 1.1;
+				model="A3\plants_f\Clutter\c_StrGrassGreen_group.p3d";
+				affectedByWind=0.60000002;
+				swLighting=1;
+				scaleMin=0.69999999;
+				scaleMax=1;
 			};
 			
 			class GrassCrookedForest : DefaultClutter {
@@ -1306,7 +1663,7 @@ class CfgWorlds {
 				affectedByWind = 0.3;
 				swLighting = 1;
 				scaleMin = 0.75;
-				scaleMax = 1.1;
+				scaleMax = 1;
 			};
 			
 			class WeedDeadSmall : DefaultClutter {
@@ -1368,10 +1725,10 @@ class CfgWorlds {
 			
 			class FernAutumnTall : DefaultClutter {
 				model = "A3\Vegetation_F_Enoch\Clutter\c_fernTall.p3d";
-				affectedByWind = 0.2;
-				swLighting = 0;
-				scaleMin = 0.7;
-				scaleMax = 1;
+				affectedByWind=0.2;
+				swLighting=0;
+				scaleMin=0.69999999;
+				scaleMax=1;
 			};
 			
 			class SmallPicea : DefaultClutter {
@@ -8527,11 +8884,19 @@ class CfgWorlds {
 		safePositionRadius = 8500;
 	};
 };
-
 class CfgWorldList {
 	class Chernarus {};
 };
-
+class CfgMissions
+{
+	class Cutscenes
+	{
+		class ChernarusIntro1
+		{
+			directory = "breakingpoint_ui\intro1.vr";
+		};
+	};
+};
 class CfgSurfaces {
 	class Default;	// External class reference
 	
