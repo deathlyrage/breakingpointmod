@@ -348,16 +348,18 @@ switch (_event) do {
 			//Handle Point Gain for Survivalist and Nomad
 			if (!_isZombie and _isAnimal) then {
 				_class = _medic getVariable ["class",0];
+				//Watchers
+				if (_class == 7) then { _pointsChange = 20; };
 				//Engineer
 				if (_class == 6) then { _pointsChange = 10; };
 				//Survivalist
-				if (_class == 5) then { _pointsChange = 15; };					
+				if (_class == 5) then { _pointsChange = 10; };					
 				//Nomad
-				if (_class == 4) then { _pointsChange = 25; };					
+				if (_class == 4) then { _pointsChange = 20; };					
 				//Hunter
 				if (_class == 3) then { _pointsChange = 10; };
 				//Outlaw
-				if (_class == 2) then { _pointsChange = 10; };
+				if (_class == 2) then { _pointsChange = 6; };
 				//Ranger
 				if (_class == 1) then { _pointsChange = 10; };
 			};
