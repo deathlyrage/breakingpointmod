@@ -63,7 +63,7 @@
 					launcher[] = {};
 					handgun[] = {};
 					clothing[] = {"BP_Undead_1"};
-					backpack[] = {};
+					backpack[] = {"BP_AssaultPack_grs"};
 					vest[] = {};
 				};
 				class Uniform: BP_BaseGear
@@ -89,7 +89,7 @@
 					launcher[] = {};
 					handgun[] = {};
 					clothing[] = {"BP_Undead_2"};
-					backpack[] = {};
+					backpack[] = {"BP_FieldPack_grs"};
 					vest[] = {};
 				};
 				class Uniform: BP_BaseGear
@@ -116,11 +116,11 @@
 				class Spawn
 				{
 					toolbelt[] = {"ItemMap"};
-					primary[] = {};
+					primary[] = {"BP_Lupara"};
 					launcher[] = {};
 					handgun[] = {};
 					clothing[] = {"BP_Undead_3"};
-					backpack[] = {};
+					backpack[] = {"BP_Bergen_grs"};
 					vest[] = {};
 				};
 				class Uniform: BP_BaseGear
@@ -138,7 +138,7 @@
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {};
+					magazines[] = {"BP_2Rnd_Slug","BP_2Rnd_Slug","BP_2Rnd_Slug","BP_2Rnd_Slug"};
 					items[] = {};
 				};
 			};
@@ -219,7 +219,7 @@
 					dressing = 0;
 					morphine = 0;
 					surgery = 0;
-					gut = 100;
+					gut = 0;
 				};
 			};
 			class Destroy

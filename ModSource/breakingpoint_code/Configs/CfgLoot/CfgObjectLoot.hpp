@@ -778,7 +778,7 @@ class CfgObjectLoot {
 			{"BP_LeeEnfield2","weaponA"},
 			{"BP_LeeEnfieldK","weapon"},
 			{"BP_LeeEnfield_old","weapon"},
-			{"BP_Kitbag_sgg","backpack"},
+			{"BP_CivilianOneGreen","backpack"},
 			{"BP_Kitbag_cbr","backpack"},
 			{"BP_Kitbag_mcamo","backpack"},
 			{"Binocular","weaponNA"},
@@ -833,7 +833,7 @@ class CfgObjectLoot {
 			0.01,	//ENFIELD SCOPED
 			0.02,   //ENFIELD BAYONET
 			0.05,	//ENFIELD OLD
-			0.08, 	//KIT SAGE
+			0.08, 	//CIVILIAN ONE BACKPACK
 			0.08, 	//KIT CBR
 			0.08,   //KIT CAMO
 			0.05,	//BINOCULARS
@@ -968,7 +968,7 @@ class CfgObjectLoot {
 			{"ItemBrick2","magazine"},
 			{"BP_Kitbag_sgg","backpack"},
 			{"BP_Kitbag_cbr","backpack"},
-			{"BP_Kitbag_mcamo","backpack"},
+			{"BP_CivilianOneRed","backpack"},
 			{"Binocular","weaponNA"},
 			{"PartWoodPile","magazine"},
 			{"ChemG","magazine"},
@@ -1032,7 +1032,7 @@ class CfgObjectLoot {
 			0.06,	//BRICK2
 			0.03, 	//KIT SAGE
 			0.02, 	//KIT CBR
-			0.01,   //KIT CAMO
+			0.01,   //CIVILIAN ONE RED BACKPACK
 			0.05,	//BINOCULARS
 			0.16,	//WOOD
 			0.05,	//CHEM
@@ -1496,7 +1496,7 @@ class CfgObjectLoot {
 			{"BP_Rhino","weapon"},
 			{"V_Rangemaster_belt_BP","vest"}, 
 			{"BP_Kitbag_sgg","backpack"},
-			{"BP_Kitbag_cbr","backpack"},
+			{"BP_CivilianOneBlue","backpack"},
 			{"BP_Kitbag_mcamo","backpack"}, 
 			{"ItemSoda1","magazine"},
 			{"ItemSoda2","magazine"},
@@ -1540,7 +1540,7 @@ class CfgObjectLoot {
 			0.01,	//RHINO
 			0.04, 	//RANGEMASTER BELT
 			0.03, 	//KIT SAGE
-			0.02, 	//KIT CBR
+			0.02, 	//CIVILIAN ONE BLUE BACKPACK
 			0.01,   //KIT CAMO
 			0.01,	//FOOD
 			0.01,	//FOOD
@@ -1622,7 +1622,7 @@ class CfgObjectLoot {
 			{"ItemPainkiller","magazine"},
 			{"SmokeShell","magazine"},
 		    {"BP_Kitbag_sgg","backpack"},
-			{"BP_Kitbag_cbr","backpack"},
+			{"BP_CivilianOneBlack","backpack"},
 			{"BP_Kitbag_mcamo","backpack"},
 		    {"BP_FieldPack_blk","backpack"},
 			{"BP_FieldPack_ocamo","backpack"},
@@ -1665,7 +1665,7 @@ class CfgObjectLoot {
 			0.15,	//PAINKILLERS
 			0.02,	//SMOKE
 			0.03, 	//KIT SAGE
-			0.02, 	//KIT CBR
+			0.02, 	//CIVILIAN ONE BLACK BACKPACK
 			0.02,   //KIT CAMO
 			0.05, 	//FIELD BLACK
 			0.05, 	//FIELD HEX
