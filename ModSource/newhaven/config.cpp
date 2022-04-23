@@ -1633,19 +1633,19 @@ class CfgWorlds
 		minRocksInRockSquare = 3;
 		class clutter {
 			class bp_grassgreen : DefaultClutter {
-				model = "ca\plants2\clutter\c_Grasscrookedforest.p3d";
-				affectedByWind = 1.0;
-				swLighting = "true";
-				scaleMin = 0.6;
-				scaleMax = 1.0;
+				model="A3\plants_f\Clutter\c_StrGrassGreen_group.p3d";
+				affectedByWind=0.60000002;
+				swLighting=1;
+				scaleMin=0.69999999;
+				scaleMax=1;
 			};
 			
 			class bp_grassbunch : DefaultClutter {
-				model = "ca\plants2\clutter\C_grassbunch.p3d";
-				affectedByWind = 1.0;
-				swLighting = "true";
-				scaleMin = 0.85;
-				scaleMax = 1.0;
+				model="A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_HI.p3d";
+				affectedByWind=0.2;
+				swLighting=1;
+				scaleMin=0.80000001;
+				scaleMax=1.3;
 			};
 			
 			class bp_grasstall : DefaultClutter {
@@ -1657,27 +1657,27 @@ class CfgWorlds
 			};
 			
 			class bp_fernsmall : DefaultClutter {
-				model = "ca\plants2\clutter\c_fern.p3d";
-				affectedByWind = 0.7;
-				swLighting = 1;
-				scaleMin = 0.85;
-				scaleMax = 1.1;
+				model="A3\Vegetation_F_Enoch\Clutter\c_fern.p3d";
+				affectedByWind=0.1;
+				swLighting=0;
+				scaleMin=0.80000001;
+				scaleMax=1.2;
 			};
 			
 			class bp_ferntall : DefaultClutter {
-				model = "ca\plants2\clutter\c_ferntall.p3d";
-				affectedByWind = 0.7;
-				swLighting = 1;
-				scaleMin = 0.85;
-				scaleMax = 1.1;
+				model="A3\Vegetation_F_Enoch\Clutter\c_fernTall.p3d";
+				affectedByWind=0.2;
+				swLighting=0;
+				scaleMin=0.69999999;
+				scaleMax=1;
 			};
 			
 			class bp_wideleafplant : DefaultClutter {
 				model = "ca\plants2\clutter\c_wideleafplant.p3d";
 				affectedByWind = 0.1;
 				swLighting = 1;
-				scaleMin = 0.85;
-				scaleMax = 1.6;
+				scaleMin = 0.65;
+				scaleMax = 1;
 			};
 			
 			class bp_weed2 : DefaultClutter {
@@ -1713,11 +1713,19 @@ class CfgWorlds
 			};
 			
 			class bp_Stubble : DefaultClutter {
-				model = "A3\vegetation_f_enoch\clutter\c_weat.p3d";
-				affectedByWind = 0.5;
-				swLighting = 0;
-				scaleMin = 0.9;
-				scaleMax = 1.3;
+				model="A3\Vegetation_F_Enoch\Clutter\c_weat.p3d";
+				affectedByWind=0.5;
+				swLighting=0;
+				scaleMin=0.89999998;
+				scaleMax=1.3;
+			};
+
+			class bp_StubbleTall : DefaultClutter {
+				model="A3\Vegetation_F_Enoch\Clutter\c_weatTall.p3d";
+				affectedByWind=0.5;
+				swLighting=0;
+				scaleMin=0.89999998;
+				scaleMax=1.3;
 			};
 			
 			class bp_GrassCrookedForest : DefaultClutter {
@@ -1889,11 +1897,11 @@ class CfgWorlds
 			};
 			
 			class bp_grassbunchsmall : DefaultClutter {
-				model = "a3\plants_f\clutter\c_Grass_Bunch_Small.p3d";
-				affectedByWind = 1.0;
-				swLighting = "true";
-				scaleMin = 0.45;
-				scaleMax = 0.75;
+				model="A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_LO.p3d";
+				affectedByWind=0.2;
+				swLighting=1;
+				scaleMin=0.64999998;
+				scaleMax=1.4;
 			};
 			
 			class bp_plantdoc : DefaultClutter {
@@ -2971,17 +2979,17 @@ class CfgSurfaces {
 class CfgSurfaceCharacters {
 	class bp_grassClutter {
 		probability[] = {0.3, 0.01, 0.5, 0.04, 0.03};
-		names[] = {"bp_GrassCrookedForest", "bp_weed3", "bp_GrassGreenGroup", "bp_Flower_BrushMedium_Blue", "bp_wideleaf"};
+		names[] = {"bp_grassgreen", "bp_weed3", "bp_GrassGreenGroup", "bp_Flower_BrushMedium_Blue", "bp_wideleaf"};
 	};
 	
 	class bp_pineforestClutter {
-		probability[] = {0.03, 0.1, 0.09, 0.2, 0.1, 0.5};
+		probability[] = {0.03, 0.1, 0.09, 0.1, 0.1, 0.5};
 		names[] = {"bp_smallpinetree", "bp_fernsmall", "bp_ferntall", "bp_wideleafplant", "bp_GrassCrookedForest", "bp_greengrass"};
 	};
 	
 	class CRStubbleClutter {
-		probability[] = {0.4};
-		names[] = {"bp_Stubble"};
+		probability[]={0.80000001,0.2};
+		names[] = {"bp_Stubble","bp_StubbleTall"};
 	};
 	
 	class bp_desertgrassClutter {
@@ -2996,6 +3004,6 @@ class CfgSurfaceCharacters {
 	
 	class bp_flatgrassClutter {
 		probability[] = {0.5, 0.02, 0.01, 0.01};
-		names[] = {"bp_grassgreen", "bp_wideleaf", "bp_fernsmall", "bp_Flower_BrushMedium_Blue"};
+		names[] = {"bp_grassgreen", "bp_wideleaf", "bp_weed3", "bp_Flower_BrushMedium_Blue"};
 	};
 };
