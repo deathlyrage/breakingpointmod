@@ -117,7 +117,7 @@ _camera spawn {
 
 _null = [] spawn {
 	while {TRUE} do {
-		playMusic "AmbientTrack04a_F";
-		sleep 190;
+		playMusic "LeadTrack06_F";
+		sleep 60;
 	};
 };

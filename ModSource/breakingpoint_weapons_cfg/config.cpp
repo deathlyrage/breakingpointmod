@@ -22513,7 +22513,7 @@ class CfgMagazines {
 	class BP_Arrow_Mag: CA_Magazine
 	{
 		scope = 2;
-		displayName = "Boarhead Bolt";
+		displayName = "Crossbow Bolt";
 		picture = "\breakingpoint_weapons\icons\m_arrow_ca.paa"; //add different pics for each type
 		mass = 1;
 		ammo = "BP_Arrow_Ball";
@@ -22522,7 +22522,7 @@ class CfgMagazines {
 		initSpeed = 325;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
-		descriptionShort = "Classic boarhead hunting bolt for PSE TAC Elite Crossbow";
+		descriptionShort = "Classic broadhead hunting bolt for PSE TAC Elite Crossbow";
 	};
 	
 	class BP_Arrow_Tranq: CA_Magazine

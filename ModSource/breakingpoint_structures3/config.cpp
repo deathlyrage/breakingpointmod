@@ -19,8 +19,10 @@ class CfgPatches
 class CfgVehicles
 {
 	class House;
+	class Static;
 	class Misc_thing;
 	class Land_Ind_Timbers;
+	class CUP_A2_Plants;
 	class Land_Barn_03_large_F;
 	class Land_Barn_03_small_F;
 	class Land_Church_05_F;
@@ -48090,68 +48092,6 @@ class CfgVehicles
 		actionEnd4="OpenDoor_4";
 	};
 //OBJECTS AND PROPS//
-	class Land_popelnice: Land_GarbageBin_03_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=0.69999999;
-		class SimpleObject
-		{
-			eden=0;
-			animate[]={};
-			hide[]={};
-			verticalOffset=0.56699997;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBin_03_F.jpg";
-		_generalMacro="Land_GarbageBin_03_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_GarbageBin_03_F0";
-		model="\A3\Props_F_Enoch\Civilian\Garbage\GarbageBin_03_F.p3d";
-		DLC="Enoch";
-		icon="iconObject_circle";
-		editorCategory="EdCat_Structures_Enoch";
-		editorSubcategory="EdSubcat_Services";
-		vehicleClass="Structures_Village";
-		destrType="DestructTree";
-		armor=100;
-		explosionShielding=4;
-		class DestructionEffects
-		{
-		};
-	};
-	class Land_popelnice_2: Land_GarbageBin_03_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=0.69999999;
-		class SimpleObject
-		{
-			eden=0;
-			animate[]={};
-			hide[]={};
-			verticalOffset=0.56699997;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBin_03_F.jpg";
-		_generalMacro="Land_GarbageBin_03_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_GarbageBin_03_F0";
-		model="\A3\Props_F_Enoch\Civilian\Garbage\GarbageBin_03_F.p3d";
-		DLC="Enoch";
-		icon="iconObject_circle";
-		editorCategory="EdCat_Structures_Enoch";
-		editorSubcategory="EdSubcat_Services";
-		vehicleClass="Structures_Village";
-		destrType="DestructTree";
-		armor=100;
-		explosionShielding=4;
-		class DestructionEffects
-		{
-		};
-	};
 	class Land_Misc_deerstand: Land_DeerStand_02_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -52744,4 +52684,228 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};	
+	class land_Objects111: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class CUP_A2_glass_cullet_01: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class CUP_A2_garbage_square3: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class CUP_A2_garbage_square5: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Can_small: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Kostelik: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_popelnice: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_popelnice_2: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Haystack: Land_Ind_Timbers
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=20.700001;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.443;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_StrawStack_01_F.jpg";
+		_generalMacro="Land_StrawStack_01_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_StrawStack_01_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Farms\StrawStack_01_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Agricultural";
+		vehicleClass="Structures_Village";
+		destrType="DestructNo";
+		cost=50000;
+		numberOfDoors=0;
+		numberOfWindows=0;
+		class DestructionEffects
+		{
+		};
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]={};
+		};
+		class AnimationSources
+		{
+		};
+		class UserActions
+		{
+		};
+	};
+	class CUP_A2_x_strawheap: CUP_A2_Plants
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=20.700001;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=1.443;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_StrawStack_01_F.jpg";
+		_generalMacro="Land_StrawStack_01_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_StrawStack_01_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Farms\StrawStack_01_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Agricultural";
+		vehicleClass="Structures_Village";
+		destrType="DestructNo";
+		cost=50000;
+		numberOfDoors=0;
+		numberOfWindows=0;
+		class DestructionEffects
+		{
+		};
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]={};
+		};
+		class AnimationSources
+		{
+		};
+		class UserActions
+		{
+		};
+	};
+	class Land_Market_stalls_01_EP1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Market_stalls_02_EP1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class CUP_A2_lavicka_1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
 };
