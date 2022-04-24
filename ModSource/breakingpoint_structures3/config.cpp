@@ -22,11 +22,16 @@ class CfgVehicles
 	class Static;
 	class Misc_thing;
 	class Land_Ind_Timbers;
-	class CUP_A2_Plants;
 	class Land_Barn_03_large_F;
 	class Land_Barn_03_small_F;
 	class Land_Church_05_F;
 	class Land_OrthodoxChurch_02_F;
+	class Land_Rail_Station_Big_F;
+	class Land_Workshop_01_F;
+	class Land_Workshop_02_grey_F;
+	class Land_Workshop_03_grey_F;
+	class Land_Workshop_04_grey_F;
+	class Land_Workshop_05_F;
 	class Land_Factory_02_F;
 	class Land_House_1B01_F;
 	class Land_House_2B04_F;
@@ -50,6 +55,7 @@ class CfgVehicles
 	class Land_House_1W11_F;
 	class Land_House_1W12_F;
 	class Land_House_1W07_F;
+	class Land_House_1W04_F;
 	class Land_HouseV2_04;
 	class Land_House_2W03_F;
 	class Land_Barracks_04_F;
@@ -62,6 +68,7 @@ class CfgVehicles
 	class Land_Hangar_F;
 	class Land_Sawmill_01_F;
 	class Land_HelipadEmpty_F;
+	class Land_StrawStack_01_F;
 	class Land_Hotel_02_F;
 	class Land_Company3_2;
 	class Land_SignB_Gov: Land_Company3_2
@@ -52696,54 +52703,6 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class CUP_A2_glass_cullet_01: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class CUP_A2_garbage_square3: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class CUP_A2_garbage_square5: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Can_small: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
 	class Land_Kostelik: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -52780,7 +52739,7 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class Haystack: Land_Ind_Timbers
+	class Haystack: Static
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=20.700001;
@@ -52797,59 +52756,13 @@ class CfgVehicles
 		_generalMacro="Land_StrawStack_01_F";
 		scope=2;
 		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_StrawStack_01_F0";
+		displayName = "$STR_MISC_HAYSTACK";
 		model="\A3\Structures_F_Enoch\Industrial\Farms\StrawStack_01_F.p3d";
 		DLC="Enoch";
 		icon="iconObject_3x2";
-		editorCategory="EdCat_Structures_Enoch";
-		editorSubcategory="EdSubcat_Agricultural";
-		vehicleClass="Structures_Village";
-		destrType="DestructNo";
-		cost=50000;
-		numberOfDoors=0;
-		numberOfWindows=0;
-		class DestructionEffects
-		{
-		};
-		class HitPoints
-		{
-		};
-		class Damage
-		{
-			tex[]={};
-			mat[]={};
-		};
-		class AnimationSources
-		{
-		};
-		class UserActions
-		{
-		};
-	};
-	class CUP_A2_x_strawheap: CUP_A2_Plants
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=20.700001;
-		class SimpleObject
-		{
-			eden=0;
-			animate[]={};
-			hide[]={};
-			verticalOffset=1.443;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_StrawStack_01_F.jpg";
-		_generalMacro="Land_StrawStack_01_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_StrawStack_01_F0";
-		model="\A3\Structures_F_Enoch\Industrial\Farms\StrawStack_01_F.p3d";
-		DLC="Enoch";
-		icon="iconObject_3x2";
-		editorCategory="EdCat_Structures_Enoch";
-		editorSubcategory="EdSubcat_Agricultural";
-		vehicleClass="Structures_Village";
+		editorCategory = "EdCat_CUP_Things";
+		editorSubcategory = "EdSubcat_CUP_Rural";
+		vehicleClass="CUP_A2_EditorObjects_Plants";
 		destrType="DestructNo";
 		cost=50000;
 		numberOfDoors=0;
@@ -52896,7 +52809,7 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class CUP_A2_lavicka_1: Land_HelipadEmpty_F
+	class Land_psi_bouda: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=1;
@@ -52907,5 +52820,2229 @@ class CfgVehicles
 		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
 		icon="iconObject_1x1";
 		accuracy=1000;
+	};
+	class Land_Shed_M02: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_rail_station_big: Land_Rail_Station_Big_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=28.139999;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_3_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_4_rot",
+					0
+				},
+				
+				{
+					"door_4_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_4_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_4_locked_rot",
+					0
+				},
+				
+				{
+					"door_4_handle_locked_rot",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=5.118;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Rail_Station_Big_F.jpg";
+		_generalMacro="Land_Rail_Station_Big_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Rail_Station_Big_F0";
+		model="\A3\Structures_F_Enoch\Infrastructure\Railways\Rail_Station_Big_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Railways";
+		vehicleClass="Structures_Village";
+		destrType="DestructDefault";
+		cost=50000;
+		numberOfDoors=3;
+		numberOfWindows=0;
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Infrastructure\Railways\Rail_Station_Big_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\rs_multi1.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\destruct_rs_multi1.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\destruct_rs_multi1.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\rs_multi2.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\destruct_rs_multi2.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\destruct_rs_multi2.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\rs_multi3.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\destruct_rs_multi3.rvmat",
+				"A3\Structures_F_Enoch\Infrastructure\Railways\Data\destruct_rs_multi3.rvmat"
+			};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_2_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_2_trigger";
+			};
+			class Door_2_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_2_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_3_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_3_trigger";
+			};
+			class Door_3_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_3_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_4_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_4_trigger";
+			};
+			class Door_4_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_4_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_2_trigger";
+				priority=11;
+				actionNamedSel="Door_2_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_2: OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_3_trigger";
+				priority=11;
+				actionNamedSel="Door_3_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_3_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_3: OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_3_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_3', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_4
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_4_trigger";
+				priority=11;
+				actionNamedSel="Door_4_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_4_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 4, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_4: OpenDoor_4
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_4_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_4', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 4, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		actionBegin2="OpenDoor_2";
+		actionEnd2="OpenDoor_2";
+		actionBegin3="OpenDoor_3";
+		actionEnd3="OpenDoor_3";
+		actionBegin4="OpenDoor_4";
+		actionEnd4="OpenDoor_4";
+	};
+	class Land_Ind_Workshop01_L: Land_Workshop_05_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=18.389999;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_3_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_4a_rot",
+					0
+				},
+				
+				{
+					"door_4a_locked_rot",
+					0
+				},
+				
+				{
+					"door_4b_rot",
+					0
+				},
+				
+				{
+					"door_4b_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.3940001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_05_F.jpg";
+		_generalMacro="Land_Workshop_05_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Workshop_05_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_05_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_2x1";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Industrial";
+		vehicleClass="Structures_Industrial";
+		armor=4000;
+		explosionShielding=65;
+		numberOfDoors=4;
+		numberOfWindows=1;
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_05_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+			class Glass_1_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_1";
+				visual="Glass_1_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_1_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+		};
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f_enoch\data\alpha\glass_int_new_ca.paa",
+				"A3\Structures_F_Enoch\data\Alpha\destruct_half_glass_int_new_ca.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_l_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_l_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_l_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_l_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_l_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_l_multi2.rvmat"
+			};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_2_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_2_trigger";
+			};
+			class Door_2_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_2_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_3_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_3_trigger";
+			};
+			class Door_3_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_3_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_4_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_4_trigger";
+			};
+			class Door_4_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_4_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Glass_1_source
+			{
+				source="Hit";
+				hitpoint="Glass_1_hitpoint";
+				raw=1;
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_2_trigger";
+				priority=11;
+				actionNamedSel="Door_2_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_2: OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_3_trigger";
+				priority=11;
+				actionNamedSel="Door_3_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_3_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_3: OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_3_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_3', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_4
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_4_trigger";
+				priority=11;
+				actionNamedSel="Door_4_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_4_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 4, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_4: OpenDoor_4
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_4_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_4', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 4, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		actionBegin2="OpenDoor_2";
+		actionEnd2="OpenDoor_2";
+		actionBegin3="OpenDoor_3";
+		actionEnd3="OpenDoor_3";
+		actionBegin4="OpenDoor_4";
+		actionEnd4="OpenDoor_4";
+	};
+	class Land_Ind_Workshop01_01: Land_Workshop_01_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=12.8;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_3_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.066;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_01_F.jpg";
+		_generalMacro="Land_Workshop_01_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Workshop_01_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_01_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_2x1";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Industrial";
+		vehicleClass="Structures_Industrial";
+		armor=4000;
+		explosionShielding=65;
+		numberOfDoors=3;
+		numberOfWindows=1;
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_01_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+			class Glass_1_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_1";
+				visual="Glass_1_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_1_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+		};
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f_enoch\data\alpha\glass_int_new_ca.paa",
+				"A3\Structures_F_Enoch\data\Alpha\destruct_half_glass_int_new_ca.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_01_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_01_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_01_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_01_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_01_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_01_multi2.rvmat"
+			};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_2_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_2_trigger";
+			};
+			class Door_2_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_2_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_3_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="GenericDoorsSound";
+				soundPosition="Door_3_trigger";
+			};
+			class Door_3_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_3_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Glass_1_source
+			{
+				source="Hit";
+				hitpoint="Glass_1_hitpoint";
+				raw=1;
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_2_trigger";
+				priority=11;
+				actionNamedSel="Door_2_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_2: OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_3_trigger";
+				priority=11;
+				actionNamedSel="Door_3_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_3_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_3: OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_3_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_3', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		actionBegin2="OpenDoor_2";
+		actionEnd2="OpenDoor_2";
+		actionBegin3="OpenDoor_3";
+		actionEnd3="OpenDoor_3";
+	};
+	class Land_Ind_Workshop01_02: Land_Workshop_02_grey_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_rot",
+					0
+				},
+				
+				{
+					"door_3_locked_rot",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.365;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_02_grey_F.jpg";
+		_generalMacro="Land_Workshop_02_grey_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Workshop_02_grey_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_02_grey_F.p3d";
+		DLC="Enoch";
+		class Damage
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_02_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_02_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_02_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_02_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_02_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_02_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_02_multi3.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_02_multi3.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_02_multi3.rvmat"
+			};
+		};
+	};
+	class Land_Ind_Workshop01_03: Land_Workshop_03_grey_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_3_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_4_rot",
+					0
+				},
+				
+				{
+					"door_4_locked_rot",
+					0
+				},
+				
+				{
+					"door_5_rot",
+					0
+				},
+				
+				{
+					"door_5_locked_rot",
+					0
+				},
+				
+				{
+					"door_6_rot",
+					0
+				},
+				
+				{
+					"door_6_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_6_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_6_locked_rot",
+					0
+				},
+				
+				{
+					"door_6_handle_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				},
+				
+				{
+					"glass_2_hide",
+					0
+				},
+				
+				{
+					"glass_2_unhide",
+					0
+				},
+				
+				{
+					"glass_3_hide",
+					0
+				},
+				
+				{
+					"glass_3_unhide",
+					0
+				},
+				
+				{
+					"glass_4_hide",
+					0
+				},
+				
+				{
+					"glass_4_unhide",
+					0
+				},
+				
+				{
+					"glass_5_hide",
+					0
+				},
+				
+				{
+					"glass_5_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.174;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_03_grey_F.jpg";
+		_generalMacro="Land_Workshop_03_grey_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Workshop_03_grey_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_03_grey_F.p3d";
+		DLC="Enoch";
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f\data\windows\window_set_ca.paa",
+				"A3\Structures_F\Data\Windows\destruct_half_window_set_CA.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_03_int1_multi.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_int1_multi.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_int1_multi.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_03_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_multi1.rvmat"
+			};
+		};
+	};
+	class Land_Ind_Workshop01_04: Land_Workshop_04_grey_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1a_rot",
+					0
+				},
+				
+				{
+					"door_1a_locked_rot",
+					0
+				},
+				
+				{
+					"door_1b_rot",
+					0
+				},
+				
+				{
+					"door_1b_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_3_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_3_locked_rot",
+					0
+				},
+				
+				{
+					"door_3_handle_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.35;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_04_grey_F.jpg";
+		_generalMacro="Land_Workshop_04_grey_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Workshop_04_grey_F0";
+		model="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_04_grey_F.p3d";
+		DLC="Enoch";
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f_enoch\data\alpha\glass_int_new_ca.paa",
+				"A3\Structures_F_Enoch\data\Alpha\destruct_half_glass_int_new_ca.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_04_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_04_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_04_multi1.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_04_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_04_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_04_multi2.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_04_multi3.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_04_multi3.rvmat",
+				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_04_multi3.rvmat"
+			};
+		};
+	};
+	class Land_HouseV_1I4: Land_House_1W04_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=19.450001;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_1_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				},
+				
+				{
+					"door_1_handle_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_1",
+					0
+				},
+				
+				{
+					"door_2_handle_rot_2",
+					0
+				},
+				
+				{
+					"door_2_locked_rot",
+					0
+				},
+				
+				{
+					"door_2_handle_locked_rot",
+					0
+				},
+				
+				{
+					"glass_1_hide",
+					0
+				},
+				
+				{
+					"glass_1_unhide",
+					0
+				},
+				
+				{
+					"glass_2_hide",
+					0
+				},
+				
+				{
+					"glass_2_unhide",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=2.6070001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_House_1W04_F.jpg";
+		_generalMacro="Land_House_1W04_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_House_1W04_F0";
+		model="\A3\Structures_F_Enoch\Civilian\Houses\House_1W04_F.p3d";
+		DLC="Enoch";
+		icon="iconObject_3x2";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Residential_Village";
+		vehicleClass="Structures_Village";
+		destrType="DestructDefault";
+		armor=1000;
+		cost=50000;
+		numberOfDoors=3;
+		numberOfWindows=2;
+		selectionDamage="DamT_1";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Civilian\Houses\House_1W04_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+			class Glass_1_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_1";
+				visual="Glass_1_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_1_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_1_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+			class Glass_2_hitpoint
+			{
+				armor=0.001;
+				material=-1;
+				name="Glass_2";
+				visual="Glass_2_hide";
+				passThrough=0;
+				radius=0.40000001;
+				convexComponent="Glass_2_hide";
+				class DestructionEffects
+				{
+					class BrokenGlass1
+					{
+						simulation="particles";
+						type="BrokenGlass1N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2
+					{
+						simulation="particles";
+						type="BrokenGlass2N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3
+					{
+						simulation="particles";
+						type="BrokenGlass3N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4
+					{
+						simulation="particles";
+						type="BrokenGlass4N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5
+					{
+						simulation="particles";
+						type="BrokenGlass5N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6
+					{
+						simulation="particles";
+						type="BrokenGlass6N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7
+					{
+						simulation="particles";
+						type="BrokenGlass7N_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass1S
+					{
+						simulation="particles";
+						type="BrokenGlass1S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass2S
+					{
+						simulation="particles";
+						type="BrokenGlass2S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass3S
+					{
+						simulation="particles";
+						type="BrokenGlass3S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass4S
+					{
+						simulation="particles";
+						type="BrokenGlass4S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass5S
+					{
+						simulation="particles";
+						type="BrokenGlass5S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass6S
+					{
+						simulation="particles";
+						type="BrokenGlass6S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+					class BrokenGlass7S
+					{
+						simulation="particles";
+						type="BrokenGlass7S_0900_0950";
+						position="Glass_2_effects";
+						intensity=0.15000001;
+						interval=1;
+						lifeTime=0.050000001;
+					};
+				};
+			};
+		};
+		class Damage
+		{
+			tex[]=
+			{
+				"a3\structures_f\data\windows\window_set_ca.paa",
+				"A3\Structures_F\Data\Windows\destruct_half_window_set_CA.paa"
+			};
+			mat[]=
+			{
+				"A3\Structures_F\Data\Windows\window_set.rvmat",
+				"A3\Structures_F\Data\Windows\destruct_half_window_set.rvmat",
+				"A3\Structures_F\Data\Windows\destruct_full_window_set.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\housev_1i4_01.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\destruct_housev_1i4_01.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\destruct_housev_1i4_01.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\housev_1i4_02.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\destruct_housev_1i4_02.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\destruct_housev_1i4_02.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\housev_1i4_int_multi.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\destruct_housev_1i4_int_multi.rvmat",
+				"A3\Structures_f_enoch\civilian\houses\data\destruct_housev_1i4_int_multi.rvmat"
+			};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="OldWoodDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_2_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="OldWoodDoorsSound";
+				soundPosition="Door_2_trigger";
+			};
+			class Door_2_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_2_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Door_3_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="OldWoodDoorsSound";
+				soundPosition="Door_3_trigger";
+			};
+			class Door_3_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_3_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+			class Glass_1_source
+			{
+				source="Hit";
+				hitpoint="Glass_1_hitpoint";
+				raw=1;
+			};
+			class Glass_2_source
+			{
+				source="Hit";
+				hitpoint="Glass_2_hitpoint";
+				raw=1;
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_2_trigger";
+				priority=11;
+				actionNamedSel="Door_2_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_2_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_2: OpenDoor_2
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_2_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_2', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 2, 0] call BIS_fnc_Door)";
+			};
+			class OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_3_trigger";
+				priority=11;
+				actionNamedSel="Door_3_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_3_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_3: OpenDoor_3
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_3_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_3', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 3, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+		actionBegin2="OpenDoor_2";
+		actionEnd2="OpenDoor_2";
+		actionBegin3="OpenDoor_3";
+		actionEnd3="OpenDoor_3";
 	};
 };

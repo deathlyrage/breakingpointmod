@@ -379,7 +379,7 @@ class CfgObjectLoot {
 		itemType[] =
 		{	
 			{"BP_ScarH","weapon"},
-			{"BP_M107_DES","weapon"},
+			{"BP_M107","weapon"},
 			{"BP_AWSM","weapon"},
 			{"BP_M24Spec","weapon"},
 			{"BP_GM6_SOS","weapon"},
@@ -437,7 +437,7 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{	
 			0.03,	//BP_ScarH
-			0.01,	//BP_M107_DES
+			0.01,	//BP_M107
 			0.01,	//BP_AWSM
 			0.03,	//BP_M24Spec
 			0.01,	//BP_GM6_SOS
@@ -472,7 +472,7 @@ class CfgObjectLoot {
 			0.03,   //BP_PS22
 			0.07,   //RANGEFINDER
 			0.05,	//Cheytac AMMO
-			0.05,	//Cheytac AMMO
+			0.02,	//Cheytac AMMO
 			0.05,	//Cheytac AMMO
 			0.05,	//Cheytac AMMO
 			0.05,	//Cheytac AMMO
