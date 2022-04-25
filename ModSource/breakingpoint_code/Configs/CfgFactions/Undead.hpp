@@ -153,72 +153,72 @@
 			{
 				class Ranger
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 00;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -10;
+					surgery = -25;
 					gut = 100;
 				};
 				class Nomad
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -10;
+					surgery = -25;
 					gut = 100;
 				};
 				class Survivalist
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -10;
+					surgery = -25;
 					gut = 100;
 				};
 				class Outlaw
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -10;
+					surgery = -25;
 					gut = 100;
 				};
 				class Hunter
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -10;
+					surgery = -25;
 					gut = 100;
 				};
 				class Engineer
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -10;
+					surgery = -25;
 					gut = 100;
 				};
 				class Undead
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = 5;
+					drink = 5;
+					bandage = 5;
+					dressing = 10;
+					morphine = 10;
+					surgery = 25;
 					gut = 0;
 				};
 			};
@@ -297,42 +297,42 @@
 					Level_0 = 100;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 150;
+					Level_3 = 200;
 				};
 				class Outlaw
 				{
 					Level_0 = 100;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 150;
+					Level_3 = 200;
 				};
 				class Hunter
 				{
 					Level_0 = 0;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 150;
+					Level_3 = 200;
 				};
 				class Nomad
 				{
 					Level_0 = 100;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 150;
+					Level_3 = 200;
 				};
 				class Survivalist
 				{
 					Level_0 = 100;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 150;
+					Level_3 = 200;
 				};
 				class Engineer
 				{
 					Level_0 = 100;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 150;
+					Level_3 = 200;
 				};
 				class Undead
 				{

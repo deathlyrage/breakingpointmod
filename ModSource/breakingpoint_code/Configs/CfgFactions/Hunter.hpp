@@ -144,8 +144,8 @@
 			{
 				class Ranger
 				{
-					food = 0;
-					drink = 0;
+					food = -10;
+					drink = -10;
 					bandage = -10;
 					dressing = -15;
 					morphine = -15;
@@ -154,8 +154,8 @@
 				};
 				class Nomad
 				{
-					food = 0;
-					drink = 0;
+					food = -10;
+					drink = -10;
 					bandage = -10;
 					dressing = -15;
 					morphine = -15;
@@ -164,8 +164,8 @@
 				};
 				class Survivalist
 				{
-					food = 0;
-					drink = 0;
+					food = -10;
+					drink = -10;
 					bandage = -10;
 					dressing = -15;
 					morphine = -15;
@@ -287,36 +287,36 @@
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Outlaw
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Hunter
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 50;
-					Level_3 = 50;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Nomad
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Survivalist
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Engineer
 				{
@@ -329,8 +329,8 @@
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 			};
 		};

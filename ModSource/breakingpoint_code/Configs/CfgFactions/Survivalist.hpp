@@ -185,13 +185,13 @@
 				};
 				class Outlaw
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
-					gut = -1000;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -25;
+					surgery = -50;
+					gut = 0;
 				};
 				class Hunter
 				{
@@ -215,12 +215,12 @@
 				};
 				class Undead
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -25;
+					surgery = -50;
 					gut = 0;
 				};
 			};

@@ -29863,7 +29863,7 @@ class CfgAmmo {
 	
 	class BP_IED: MineBase 
 	{
-		hit = 50;
+		hit = 100;
 		indirectHit = 20;
 		indirectHitRange = 20;
 		audibleFire = 50;

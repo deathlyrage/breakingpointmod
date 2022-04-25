@@ -78,7 +78,7 @@ if (!isNull _killer) then
 		_killerFactionPoints = _killer call BP_fnc_getFactionPoints;
 		
 		//None Player Kills None Player
-		if (_playerClass == 0 && {_killerClass != 0}) then { _pointsChange = 25; };
+		if (_playerClass == 0 && {_killerClass != 0}) then { _pointsChange = 50; };
 		
 		// If Player in Traitor Uniform and Doesn't Have Traitor Flag, Flag Anyway Due to Desync
 		if (!_playerTraitorFlag) then { if (_playerUniform in BP_TraitorClothing) then { _playerTraitorFlag = true; }; };

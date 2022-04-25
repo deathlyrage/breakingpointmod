@@ -19,6 +19,10 @@ class CfgPatches
 class CfgVehicles
 {
 	class House;
+	class House_EP1: House
+	{
+		class DestructionEffects;
+	};
 	class Static;
 	class Misc_thing;
 	class Land_Ind_Timbers;
@@ -46,6 +50,8 @@ class CfgVehicles
 	class Land_House_1W08_F;
 	class Land_House_1W09_F;
 	class Land_IndustrialShed_01_F;
+	class Land_Shed_12_F;
+	class Land_Shed_13_F;
 	class Land_Shed_14_F;
 	class Land_Shed_10_F;
 	class Land_Shed_11_F;
@@ -22817,7 +22823,6 @@ class CfgVehicles
 		actionBegin3 = "OpenDoor_3";
 		actionEnd3 = "OpenDoor_3";
 	};
-	class House_EP1;
 	class Land_Misc_WaterStation: House
 	{
 		author = "Bohemia Interactive";
@@ -55044,5 +55049,427 @@ class CfgVehicles
 		actionEnd2="OpenDoor_2";
 		actionBegin3="OpenDoor_3";
 		actionEnd3="OpenDoor_3";
+	};
+	class Land_Kulna: Land_Shed_12_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=9.9899998;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]=
+			{
+				
+				{
+					"door_1_rot",
+					0
+				},
+				
+				{
+					"door_1_locked_rot",
+					0
+				}
+			};
+			hide[]={};
+			verticalOffset=1.0039999;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Shed_12_F.jpg";
+		_generalMacro="Land_Shed_12_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_C_CfgVehicles_Land_Shed_12_F0";
+		model="\A3\Structures_F_Enoch\Civilian\Sheds\Shed_12_F";
+		DLC="Enoch";
+		icon="iconObject_2x1";
+		editorCategory="EdCat_Structures_Enoch";
+		editorSubcategory="EdSubcat_Residential_Village";
+		vehicleClass="Structures_Village";
+		armor=100;
+		explosionShielding=4;
+		cost=10000;
+		numberOfDoors=1;
+		numberOfWindows=0;
+		destrType="DestructBuilding";
+		class DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation="ruin";
+				type="\A3\Structures_F_Enoch\Civilian\Sheds\Shed_12_ruins_F.p3d";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+		};
+		class HitPoints
+		{
+		};
+		class Damage
+		{
+			tex[]={};
+			mat[]={};
+		};
+		class AnimationSources
+		{
+			class Door_1_sound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+				sound="OldWoodDoorsSound";
+				soundPosition="Door_1_trigger";
+			};
+			class Door_1_noSound_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=1;
+			};
+			class Door_1_locked_source
+			{
+				source="user";
+				initPhase=0;
+				animPeriod=0.80000001;
+			};
+		};
+		class UserActions
+		{
+			class OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_O_DOOR";
+				position="Door_1_trigger";
+				priority=11;
+				actionNamedSel="Door_1_action";
+				radius=1.75;
+				aiMaxRange=5.25;
+				onlyForPlayer=0;
+				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 1] call BIS_fnc_Door)";
+			};
+			class CloseDoor_1: OpenDoor_1
+			{
+				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+				displayName="$STR_DN_OUT_C_DOOR";
+				priority=11;
+				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+				statement="([this, 1, 0] call BIS_fnc_Door)";
+			};
+		};
+		actionBegin1="OpenDoor_1";
+		actionEnd1="OpenDoor_1";
+	};
+	class Barrel1: House_EP1
+	{
+		vehicleClass = "Misc";
+		armor = 50;
+		class DestructionEffects: DestructionEffects
+		{
+			class FuelStationSmk1
+			{
+				simulation = "particles";
+				type = "FuelStationSmk1";
+				position = "";
+				intensity = 0.12;
+				interval = 1;
+				lifeTime = 0.001;
+			};
+			class Light1
+			{
+				simulation = "light";
+				type = "ObjectDestructionLight";
+				position = "DestructionFire";
+				intensity = 0.001;
+				interval = 1;
+				lifeTime = 0.3;
+			};
+			class FuelFire1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "DestructionFire";
+				intensity = 0.12;
+				interval = 1;
+				lifeTime = 0.3;
+			};
+			class FuelDestr
+			{
+				simulation = "destroy";
+				type = "FuelStationDestr";
+				position = "";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+			};
+			class FuelSmoke1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "ObjectDestructionSmokeFuelS";
+				intensity = 0.12;
+				interval = 1;
+				lifeTime = 0.3;
+			};
+			class FuelSmoke2
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSmokeFuelS1_2";
+				position = "DestructionFire";
+				intensity = 0.12;
+				interval = 1;
+				lifeTime = 0.3;
+			};
+		};
+	};
+	class Land_fuel_tank_small: House_EP1
+	{
+		vehicleClass = "Misc";
+		armor = 50;
+		class DestructionEffects: DestructionEffects
+		{
+			class FuelStationSmk1
+			{
+				simulation = "particles";
+				type = "FuelStationSmk1";
+				position = "";
+				intensity = 0.13;
+				interval = 1;
+				lifeTime = 0.001;
+			};
+			class Light1
+			{
+				simulation = "light";
+				type = "ObjectDestructionLight";
+				position = "DestructionFire";
+				intensity = 0.001;
+				interval = 1;
+				lifeTime = 0.4;
+			};
+			class FuelFire1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "DestructionFire";
+				intensity = 0.13;
+				interval = 1;
+				lifeTime = 0.4;
+			};
+			class FuelDestr
+			{
+				simulation = "destroy";
+				type = "FuelStationDestr";
+				position = "";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+			};
+			class FuelSmoke1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "ObjectDestructionSmokeFuelS";
+				intensity = 0.13;
+				interval = 1;
+				lifeTime = 0.4;
+			};
+			class FuelSmoke2
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSmokeFuelS1_2";
+				position = "DestructionFire";
+				intensity = 0.13;
+				interval = 1;
+				lifeTime = 0.4;
+			};
+		};
+	};
+	class Land_Fuel_tank_stairs: House_EP1
+	{
+		vehicleClass = "Misc";
+		armor = 50;
+		class DestructionEffects: DestructionEffects
+		{
+			class FuelStationSmk1
+			{
+				simulation = "particles";
+				type = "FuelStationSmk1";
+				position = "";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.001;
+			};
+			class Light1
+			{
+				simulation = "light";
+				type = "ObjectDestructionLight";
+				position = "DestructionFire";
+				intensity = 0.001;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelFire1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "DestructionFire";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelDestr
+			{
+				simulation = "destroy";
+				type = "FuelStationDestr";
+				position = "";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+			};
+			class FuelSmoke1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "ObjectDestructionSmokeFuelS";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelSmoke2
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSmokeFuelS1_2";
+				position = "DestructionFire";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+		};
+	};
+	class Land_Ind_TankSmall2: House_EP1
+	{
+		vehicleClass = "Misc";
+		armor = 50;
+		class DestructionEffects: DestructionEffects
+		{
+			class FuelStationSmk1
+			{
+				simulation = "particles";
+				type = "FuelStationSmk1";
+				position = "";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.001;
+			};
+			class Light1
+			{
+				simulation = "light";
+				type = "ObjectDestructionLight";
+				position = "DestructionFire";
+				intensity = 0.001;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelFire1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "DestructionFire";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelDestr
+			{
+				simulation = "destroy";
+				type = "FuelStationDestr";
+				position = "";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+			};
+			class FuelSmoke1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "ObjectDestructionSmokeFuelS";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelSmoke2
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSmokeFuelS1_2";
+				position = "DestructionFire";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+		};
+	};
+	class Land_Ind_TankSmall2_EP1: House_EP1
+	{
+		vehicleClass = "Misc";
+		armor = 50;
+		class DestructionEffects: DestructionEffects
+		{
+			class FuelStationSmk1
+			{
+				simulation = "particles";
+				type = "FuelStationSmk1";
+				position = "";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.001;
+			};
+			class Light1
+			{
+				simulation = "light";
+				type = "ObjectDestructionLight";
+				position = "DestructionFire";
+				intensity = 0.001;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelFire1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "DestructionFire";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelDestr
+			{
+				simulation = "destroy";
+				type = "FuelStationDestr";
+				position = "";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+			};
+			class FuelSmoke1
+			{
+				simulation = "particles";
+				type = "FuelFire1";
+				position = "ObjectDestructionSmokeFuelS";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+			class FuelSmoke2
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSmokeFuelS1_2";
+				position = "DestructionFire";
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 0.5;
+			};
+		};
 	};
 };

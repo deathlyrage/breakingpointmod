@@ -174,12 +174,12 @@
 				};
 				class Outlaw
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = -5;
-					morphine = -10;
-					surgery = -25;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -25;
+					surgery = -50;
 					gut = 0;
 				};
 				class Hunter
@@ -204,12 +204,12 @@
 				};
 				class Undead
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -5;
+					drink = -5;
+					bandage = -5;
+					dressing = -10;
+					morphine = -25;
+					surgery = -50;
 					gut = 0;
 				};
 			};
@@ -294,15 +294,15 @@
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Hunter
 				{
 					Level_0 = 100;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Nomad
 				{
@@ -329,8 +329,8 @@
 				{
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 			};
 		};
