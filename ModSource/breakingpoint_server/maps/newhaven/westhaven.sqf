@@ -17,3 +17,8 @@ _building4 = createVehicle ["Land_School_01_F", [6263.54,4260.41,0], [], 0, "CAN
 _building4 setDir 22.232;
 _building4 setPos [6263.54,4260.41,0];
 _building4 enableDynamicSimulation true;
+
+_building5 = createVehicle ["Land_Tenement_01", [9712.78,6813.56,0.0669999], [], 0, "CAN_COLLIDE"];
+_building5 setDir 0;
+_building5 setPos [9712.78,6813.56,0.0669999];
+_building5 enableDynamicSimulation true;

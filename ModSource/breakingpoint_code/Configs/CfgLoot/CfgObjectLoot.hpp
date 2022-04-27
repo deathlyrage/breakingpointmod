@@ -1974,7 +1974,7 @@ class CfgObjectLoot {
 			{"optic_holosight","toolbelt"},
 			{"V_Rangemaster_belt_BP","vest"},
 			{"BlueprintCrate1","magazine"},
-			{"BlueprintCamoNet","magazine"},
+			{"ItemBlueprint_RockStash","magazine"},
 			{"V_HarnessOGL_brn_BP","vest"},
 			{"BP_gemtech9","toolbelt"},
 			{"ItemSurgeryKit","toolbelt"},
@@ -2032,7 +2032,7 @@ class CfgObjectLoot {
 			0.05,	//HOLO
 			0.12,	//BANDOLIER OLIVE
 			0.17,   //TENT BLUEPRINT
-			0.14,   //CAMO NET BLUEPRINT
+			0.05,   //ROCK STASH BLUEPRINT
 			0.03,   //TAC VEST
 			0.03,   //GEMTECH 9MM SUPPR
 			0.03,   //SURGERY KIT

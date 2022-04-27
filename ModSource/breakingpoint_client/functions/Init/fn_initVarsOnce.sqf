@@ -61,6 +61,7 @@ BP_NormalClothing =
 	"BP_OptOut",
 	"BP_OptOut2",
 	"BP_OptOut3",
+	"BP_OptOut4",
 	"BP_StoneGhillie",
 	"BP_TreeGhillie",
 	"BP_DirtGhillie",
@@ -74,6 +75,7 @@ BP_NormalClothing =
 	"BP_Paramilitary_Jacket_Uniform",
 	"BP_Paramilitary_Shorts_Uniform",
 	"BP_Paramilitary_Tee_Uniform",
+	"U_B_GhillieSuit_BP",
 	"BP_Wetsuit"
 ];
 

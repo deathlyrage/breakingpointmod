@@ -139,7 +139,7 @@
 				class Backpack: BP_BaseGear
 				{
 					weapons[] = {};
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","ItemMorphine","BlueprintCache1"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","ItemMorphine","BlueprintCache1","ItemBlueprint_RockStash"};
 					items[] = {"Binocular"};
 				};
 			};

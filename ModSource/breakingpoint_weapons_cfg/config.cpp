@@ -10210,6 +10210,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		initSpeed = -0.94;
 		class WeaponSlotsInfo
 		{
+			mass = 80;
 			class PointerSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
@@ -19321,7 +19322,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class CowsSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[] = {"optic_MRCO","optic_Arco_blk_F","optic_ERCO_blk_F","optic_DMS_ghex_F","optic_SOS_khk_F","optic_LRPS","optic_LRPS_tna_F","BP_L14X","BP_M3AMRAD","BP_NXS","BP_M3A","BP_M3A2","BP_M3LR","BP_M3AN","BP_MRT","BP_PS22","BP_SOS","optic_Arco","optic_hamr","BP_optic_ACOG","BP_compm4s","BP_OldComp"};
+				compatibleItems[] = {"optic_MRCO","optic_Aco","optic_Arco_blk_F","optic_ERCO_blk_F","optic_DMS_ghex_F","optic_SOS_khk_F","optic_LRPS","optic_LRPS_tna_F","BP_L14X","BP_M3AMRAD","BP_NXS","BP_M3A","BP_M3A2","BP_M3LR","BP_M3AN","BP_MRT","BP_PS22","BP_SOS","optic_Arco","optic_hamr","BP_optic_ACOG","BP_compm4s","BP_OldComp"};
 				iconScale = 0.1;
 			};
 			class PointerSlot: PointerSlot

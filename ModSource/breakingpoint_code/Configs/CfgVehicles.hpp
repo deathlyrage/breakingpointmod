@@ -223,6 +223,14 @@ class CfgVehicles
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"breakingpoint_ui\signs\sign_survivalist.paa"};
 	};
+	class BP_Sign_Engineer: Land_Billboard_F
+	{
+		scope = 2;
+		displayName = "Sign (Engineer)";
+		model = "\A3\Structures_F\Civ\InfoBoards\Billboard_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"breakingpoint_ui\signs\sign_engineer.paa"};
+	};
 	class ReammoBox;
 	class BP_Bag_Base: ReammoBox
 	{
@@ -3025,6 +3033,38 @@ class CfgVehicles
 		model = "\A3\Characters_F_EPB\Guerrilla\ig_guerrilla4_1.p3d";
 		moves = "CfgMovesZombieSdr";
 		canHideBodies = 0;
+	};
+	class BP_Optout4_F: BP_Man
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_OptOut4";
+		model = "\a3\Characters_F\Civil\ArtTShirt_01_F";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[] = {"Camo1","insignia"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ui\updatedimage\optout4.paa"};
 	};
 	class B_Heli_Light_01_F;
 	class B_Heli_Transport_01_F;

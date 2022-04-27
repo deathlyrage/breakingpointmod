@@ -1381,7 +1381,7 @@ class CfgMagazines
 		scope = 2;
 		refillable = 1;
 		sfx = "drink";
-		displayName = "Water Bottle";
+		displayName = "Canteen";
 		descriptionUse = "";
 		model = "\a3\structures_f_epa\Items\Food\Canteen_F.p3d";
 		picture = "\breakingpoint\textures\icons\bp_waterbottle_ca.paa";
@@ -1393,7 +1393,7 @@ class CfgMagazines
 		scope = 2;
 		count = 1;
 		type = 256;
-		displayName = "Water Bottle (Empty)";
+		displayName = "Canteen (Empty)";
 		model = "\a3\structures_f_epa\Items\Food\Canteen_F.p3d";
 		picture = "\breakingpoint\textures\icons\bp_waterbottle_empty_ca.paa";
 		descriptionShort = "";
@@ -1401,7 +1401,7 @@ class CfgMagazines
 	};
 
 	class WaterbotBoiled : Waterbot {
-		displayName = "Water Bottle (Boiled)";
+		displayName = "Canteen (Boiled)";
 		descriptionShort = "";
 		mass = 5;
 	 };

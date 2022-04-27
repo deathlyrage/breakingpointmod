@@ -49,7 +49,14 @@ class BP_Crate1_Survivalist : BP_Crate1 {
 	displayName = "Survivalist Military Crate";
 	hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\Crate1_survivalist_co.paa"};
 };
-
+class BP_Crate1_Engineer : BP_Crate1 {
+	displayName = "Engineer Military Crate";
+	hiddenSelectionsTextures[] = {"breakingpoint_ui\updatedimage\Crate1_engineer_co.paa"};
+};
+class BP_Crate1_Undead : BP_Crate1 {
+	displayName = "Watchers Military Crate";
+	hiddenSelectionsTextures[] = {"breakingpoint_ui\updatedimage\Crate1_undead_co.paa"};
+};
 class BP_Cache1: BP_WorldStorage
 {
 	scope = public;
@@ -82,7 +89,14 @@ class BP_Cache1_Survivalist : BP_Cache1 {
 	displayName = "Survivalist Storage Cache";
 	hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\localbasic_ranger_co.paa", "breakingpoint_classes\textures\rubasic_ranger_co.paa", "breakingpoint_classes\textures\camo_hunter_co.paa", "breakingpoint_classes\textures\camo_hunter_co.paa", "breakingpoint_classes\textures\camo_texture2_co.paa", "breakingpoint_classes\textures\camo_texture2_co.paa"}; 
 };
-
+class BP_Cache1_Engineer : BP_Cache1 {
+	displayName = "Engineer Storage Cache";
+	hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\localbasic_survivalist_co.paa", "breakingpoint_classes\textures\rubasic_survivalist_co.paa", "breakingpoint_classes\textures\camo_survivalist_co.paa", "breakingpoint_classes\textures\camo_survivalist2_co.paa", "breakingpoint_classes\textures\camo_survivalist_co.paa", "breakingpoint_classes\textures\camo_survivalist2_co.paa"};
+};
+class BP_Cache1_Undead : BP_Cache1 {
+	displayName = "Undead Storage Cache";
+	hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\localbasic_outlaw_co.paa", "breakingpoint_classes\textures\rubasic_outlaw_co.paa", "breakingpoint_classes\textures\camo_outlaw_co.paa", "breakingpoint_classes\textures\camo_texture_co.paa", "breakingpoint_classes\textures\camo_outlaw_co.paa", "breakingpoint_classes\textures\camo_texture_co.paa"}; 
+};
 class BP_Tent: BP_WorldStorage
 {
 	scope = public;

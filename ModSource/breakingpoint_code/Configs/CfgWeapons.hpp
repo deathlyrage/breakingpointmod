@@ -1124,6 +1124,22 @@ class CfgWeapons
 			mass = 10;
 		};
 	};
+	class BP_OptOut4: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Independent";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ui\updatedimage\optout4.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Optout4_F";
+			containerClass = "Supply20";
+			mass = 10;
+		};
+	};
 	class BP_Survivalist1: Uniform_Base
 	{
 		scope = 2;
