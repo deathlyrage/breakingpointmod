@@ -19,13 +19,9 @@ class CfgPatches
 class CfgVehicles
 {
 	class House;
-	class House_EP1: House
-	{
-		class DestructionEffects;
-	};
-	class Static;
 	class Misc_thing;
-	class Land_Ind_Timbers;
+	class Land_BarrelWater_F;
+	class Land_PowerGenerator_F;
 	class Land_Barn_03_large_F;
 	class Land_Barn_03_small_F;
 	class Land_Church_05_F;
@@ -38,32 +34,32 @@ class CfgVehicles
 	class Land_Workshop_05_F;
 	class Land_Factory_02_F;
 	class Land_House_1B01_F;
+	class Land_House_2B01_F;
+	class Land_House_2B02_F;
+	class Land_House_2B03_F;
 	class Land_House_2B04_F;
-	class Land_House_2W04_F;
 	class Land_House_2W01_F;
 	class Land_House_2W02_F;
-	class Land_House_2B03_F;
-	class Land_House_2B01_F;
+	class Land_House_2W03_F;
+	class Land_House_2W04_F;
+	class Land_House_1W02_F;
 	class Land_House_1W03_F;
+	class Land_House_1W04_F;
 	class Land_House_1W05_F;
 	class Land_House_1W06_F;
+	class Land_House_1W07_F;
 	class Land_House_1W08_F;
 	class Land_House_1W09_F;
-	class Land_IndustrialShed_01_F;
+	class Land_House_1W11_F;
+	class Land_House_1W12_F;
+	class Land_HouseV2_04;
+	class Land_Shed_09_F;
+	class Land_Shed_10_F;
+	class Land_Shed_11_F;
 	class Land_Shed_12_F;
 	class Land_Shed_13_F;
 	class Land_Shed_14_F;
-	class Land_Shed_10_F;
-	class Land_Shed_11_F;
-	class Land_Shed_09_F;
-	class Land_House_1W02_F;
-	class Land_House_2B02_F;
-	class Land_House_1W11_F;
-	class Land_House_1W12_F;
-	class Land_House_1W07_F;
-	class Land_House_1W04_F;
-	class Land_HouseV2_04;
-	class Land_House_2W03_F;
+	class Land_IndustrialShed_01_F;
 	class Land_Barracks_04_F;
 	class Land_PowerStation_01_F;
 	class Land_FuelStation_03_shop_F;
@@ -74,7 +70,6 @@ class CfgVehicles
 	class Land_Hangar_F;
 	class Land_Sawmill_01_F;
 	class Land_HelipadEmpty_F;
-	class Land_StrawStack_01_F;
 	class Land_Hotel_02_F;
 	class Land_Company3_2;
 	class Land_SignB_Gov: Land_Company3_2
@@ -52576,268 +52571,6 @@ class CfgVehicles
 			}
 		};
 	};
-	class Land_Dum_istan4_big: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan2_01: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_mesto_in: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Hotel: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_MBG_Killhouse_3: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan4_inverse: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan4_detaily1: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_MBG_Warehouse: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_zavora_2: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_A_Office02: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};	
-	class land_Objects111: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Kostelik: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_popelnice: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_popelnice_2: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Haystack: Static
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=20.700001;
-		class SimpleObject
-		{
-			eden=0;
-			animate[]={};
-			hide[]={};
-			verticalOffset=1.443;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_StrawStack_01_F.jpg";
-		_generalMacro="Land_StrawStack_01_F";
-		scope=2;
-		scopeCurator=2;
-		displayName = "$STR_MISC_HAYSTACK";
-		model="\A3\Structures_F_Enoch\Industrial\Farms\StrawStack_01_F.p3d";
-		DLC="Enoch";
-		icon="iconObject_3x2";
-		editorCategory = "EdCat_CUP_Things";
-		editorSubcategory = "EdSubcat_CUP_Rural";
-		vehicleClass="CUP_A2_EditorObjects_Plants";
-		destrType="DestructNo";
-		cost=50000;
-		numberOfDoors=0;
-		numberOfWindows=0;
-		class DestructionEffects
-		{
-		};
-		class HitPoints
-		{
-		};
-		class Damage
-		{
-			tex[]={};
-			mat[]={};
-		};
-		class AnimationSources
-		{
-		};
-		class UserActions
-		{
-		};
-	};
-	class Land_Market_stalls_01_EP1: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Market_stalls_02_EP1: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_psi_bouda: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Shed_M02: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
 	class Land_rail_station_big: Land_Rail_Station_Big_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -55162,317 +54895,7 @@ class CfgVehicles
 		actionBegin1="OpenDoor_1";
 		actionEnd1="OpenDoor_1";
 	};
-	class Barrel1: House_EP1
-	{
-		vehicleClass = "Misc";
-		armor = 50;
-		class DestructionEffects: DestructionEffects
-		{
-			class FuelStationSmk1
-			{
-				simulation = "particles";
-				type = "FuelStationSmk1";
-				position = "";
-				intensity = 0.12;
-				interval = 1;
-				lifeTime = 0.001;
-			};
-			class Light1
-			{
-				simulation = "light";
-				type = "ObjectDestructionLight";
-				position = "DestructionFire";
-				intensity = 0.001;
-				interval = 1;
-				lifeTime = 0.3;
-			};
-			class FuelFire1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "DestructionFire";
-				intensity = 0.12;
-				interval = 1;
-				lifeTime = 0.3;
-			};
-			class FuelDestr
-			{
-				simulation = "destroy";
-				type = "FuelStationDestr";
-				position = "";
-				intensity = 1;
-				interval = 1;
-				lifeTime = 1;
-			};
-			class FuelSmoke1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "ObjectDestructionSmokeFuelS";
-				intensity = 0.12;
-				interval = 1;
-				lifeTime = 0.3;
-			};
-			class FuelSmoke2
-			{
-				simulation = "particles";
-				type = "ObjectDestructionSmokeFuelS1_2";
-				position = "DestructionFire";
-				intensity = 0.12;
-				interval = 1;
-				lifeTime = 0.3;
-			};
-		};
-	};
-	class Land_fuel_tank_small: House_EP1
-	{
-		vehicleClass = "Misc";
-		armor = 50;
-		class DestructionEffects: DestructionEffects
-		{
-			class FuelStationSmk1
-			{
-				simulation = "particles";
-				type = "FuelStationSmk1";
-				position = "";
-				intensity = 0.13;
-				interval = 1;
-				lifeTime = 0.001;
-			};
-			class Light1
-			{
-				simulation = "light";
-				type = "ObjectDestructionLight";
-				position = "DestructionFire";
-				intensity = 0.001;
-				interval = 1;
-				lifeTime = 0.4;
-			};
-			class FuelFire1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "DestructionFire";
-				intensity = 0.13;
-				interval = 1;
-				lifeTime = 0.4;
-			};
-			class FuelDestr
-			{
-				simulation = "destroy";
-				type = "FuelStationDestr";
-				position = "";
-				intensity = 1;
-				interval = 1;
-				lifeTime = 1;
-			};
-			class FuelSmoke1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "ObjectDestructionSmokeFuelS";
-				intensity = 0.13;
-				interval = 1;
-				lifeTime = 0.4;
-			};
-			class FuelSmoke2
-			{
-				simulation = "particles";
-				type = "ObjectDestructionSmokeFuelS1_2";
-				position = "DestructionFire";
-				intensity = 0.13;
-				interval = 1;
-				lifeTime = 0.4;
-			};
-		};
-	};
-	class Land_Fuel_tank_stairs: House_EP1
-	{
-		vehicleClass = "Misc";
-		armor = 50;
-		class DestructionEffects: DestructionEffects
-		{
-			class FuelStationSmk1
-			{
-				simulation = "particles";
-				type = "FuelStationSmk1";
-				position = "";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.001;
-			};
-			class Light1
-			{
-				simulation = "light";
-				type = "ObjectDestructionLight";
-				position = "DestructionFire";
-				intensity = 0.001;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelFire1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "DestructionFire";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelDestr
-			{
-				simulation = "destroy";
-				type = "FuelStationDestr";
-				position = "";
-				intensity = 1;
-				interval = 1;
-				lifeTime = 1;
-			};
-			class FuelSmoke1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "ObjectDestructionSmokeFuelS";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelSmoke2
-			{
-				simulation = "particles";
-				type = "ObjectDestructionSmokeFuelS1_2";
-				position = "DestructionFire";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-		};
-	};
-	class Land_Ind_TankSmall2: House_EP1
-	{
-		vehicleClass = "Misc";
-		armor = 50;
-		class DestructionEffects: DestructionEffects
-		{
-			class FuelStationSmk1
-			{
-				simulation = "particles";
-				type = "FuelStationSmk1";
-				position = "";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.001;
-			};
-			class Light1
-			{
-				simulation = "light";
-				type = "ObjectDestructionLight";
-				position = "DestructionFire";
-				intensity = 0.001;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelFire1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "DestructionFire";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelDestr
-			{
-				simulation = "destroy";
-				type = "FuelStationDestr";
-				position = "";
-				intensity = 1;
-				interval = 1;
-				lifeTime = 1;
-			};
-			class FuelSmoke1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "ObjectDestructionSmokeFuelS";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelSmoke2
-			{
-				simulation = "particles";
-				type = "ObjectDestructionSmokeFuelS1_2";
-				position = "DestructionFire";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-		};
-	};
-	class Land_Ind_TankSmall2_EP1: House_EP1
-	{
-		vehicleClass = "Misc";
-		armor = 50;
-		class DestructionEffects: DestructionEffects
-		{
-			class FuelStationSmk1
-			{
-				simulation = "particles";
-				type = "FuelStationSmk1";
-				position = "";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.001;
-			};
-			class Light1
-			{
-				simulation = "light";
-				type = "ObjectDestructionLight";
-				position = "DestructionFire";
-				intensity = 0.001;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelFire1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "DestructionFire";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelDestr
-			{
-				simulation = "destroy";
-				type = "FuelStationDestr";
-				position = "";
-				intensity = 1;
-				interval = 1;
-				lifeTime = 1;
-			};
-			class FuelSmoke1
-			{
-				simulation = "particles";
-				type = "FuelFire1";
-				position = "ObjectDestructionSmokeFuelS";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-			class FuelSmoke2
-			{
-				simulation = "particles";
-				type = "ObjectDestructionSmokeFuelS1_2";
-				position = "DestructionFire";
-				intensity = 0.15;
-				interval = 1;
-				lifeTime = 0.5;
-			};
-		};
-	};
-	class ikarus: Land_HelipadEmpty_F
+	class Land_water_tank: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=1;
@@ -55484,7 +54907,7 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class land_Objects118: Land_HelipadEmpty_F
+	class Land_water_tank2: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=1;
@@ -55495,5 +54918,267 @@ class CfgVehicles
 		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
 		icon="iconObject_1x1";
 		accuracy=1000;
+	};
+	class Land_Dum_istan4_big: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_istan2_01: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_mesto_in: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Hotel: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_MBG_Killhouse_3: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_istan4_inverse: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Dum_istan4_detaily1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_MBG_Warehouse: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_zavora_2: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_A_Office02: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};	
+	class land_Objects111: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Kostelik: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_popelnice: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_popelnice_2: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Market_stalls_01_EP1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Market_stalls_02_EP1: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_psi_bouda: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Shed_M02: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_Barrel_water: Land_BarrelWater_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.405;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_BarrelWater_F.jpg";
+		_generalMacro="Land_BarrelWater_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_BarrelWater_F0";
+		model="\A3\Structures_F\Items\Vessels\BarrelWater_F.p3d";
+		icon="iconObject_circle";
+		editorSubcategory="EdSubcat_Storage";
+		vehicleClass="Container";
+	};
+	class PowerGenerator: Land_PowerGenerator_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.796;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_PowerGenerator_F.jpg";
+		_generalMacro="Land_PowerGenerator_F";
+		scope=2;
+		scopeCurator=2;
+		model="\A3\Structures_F\Ind\WindPowerPlant\PowerGenerator_F.p3d";
+		displayName="$STR_A3_CfgVehicles_Land_PowerGenerator_F0";
+		icon="iconObject_1x2";
+		editorCategory="EdCat_Structures_Altis";
+		editorSubcategory="EdSubcat_Utilities";
+		vehicleClass="Structures_Infrastructure";
+		keepHorizontalPlacement=0;
 	};
 };

@@ -82,19 +82,19 @@ class CfgVehicles
 		class transportmagazines {
 			class _xx_ItemSoda1 {
 				magazine = "ItemSoda1";
-				count = 4;
+				count = 1;
 			};
 			class _xx_ItemSoda2 {
 				magazine = "ItemSoda2";
-				count = 3;
+				count = 1;
 			};
 			class _xx_ItemSoda3 {
 				magazine = "ItemSoda3";
-				count = 3;
+				count = 1;
 			};
 			class _xx_ItemSoda4 {
 				magazine = "ItemSoda4";
-				count = 2;
+				count = 1;
 			};
 			class _xx_ItemSoda5 {
 				magazine = "ItemSoda5";

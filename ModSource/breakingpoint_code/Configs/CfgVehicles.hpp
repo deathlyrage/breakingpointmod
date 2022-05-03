@@ -1880,18 +1880,31 @@ class CfgVehicles
 		canHideBodies = 0;
 		uniformClass = "BP_SnowGhillie_Z";
 	};
-	class BP_Wetsuit: BP_Man
+	class BP_Wetsuit1_F: BP_Man
 	{
+		_generalMacro="I_diver_F";
 		scope = 2;
+		displayName = "Independent Wetsuit 1";
+		uniformClass = "BP_Wetsuit";
 		model = "\A3\characters_F\Common\diver_slotable";
 		side = 3;
+		camouflage=2;
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 0;
-		uniformClass = "BP_Wetsuit";
 		identityTypes[] = {};
+		hiddenSelections[]={"Camo1","Camo2","insignia"};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F\Common\Data\diver_suit_rus_co.paa",
+			"\A3\Characters_F\Common\Data\diver_equip_rus_co.paa"
+		};
+		hiddenUnderwaterSelections[]={"hide"};
+		shownUnderwaterSelections[]={"unhide","unhide2"};
+		hiddenUnderwaterSelectionsTextures[]={"\A3\characters_f\common\data\diver_equip_nato_co.paa","\A3\characters_f\common\data\diver_equip_nato_co.paa",
+		"\A3\characters_f\data\visors_ca.paa"};
 		class EventHandlers: BP_PlayerEventHandlers{};
 	};
-	class BP_Wetsuit_Z: BP_Wetsuit
+	class BP_Wetsuit_Z: BP_Wetsuit1_F
 	{
 		scope = 2;
 		uniformClass = "BP_Wetsuit_Z";
@@ -3065,6 +3078,211 @@ class CfgVehicles
 		nameSound = "";
 		hiddenSelections[] = {"Camo1","insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_ui\updatedimage\optout4.paa"};
+	};
+	class BP_Scientist_F: BP_Man
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Scientist_Z";
+		model="\A3\characters_F\common\coveralls";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_scientist_co.paa"};
+	};	
+	class BP_Scientist_Z: BP_Scientist_F
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Scientist_Z";
+		model="\A3\characters_F\common\coveralls";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
+	};
+	class BP_Worker_F: BP_Man
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Worker_Z";
+		model="\A3\characters_F\common\coveralls";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_dirty_co.paa"};
+	};	
+	class BP_Worker_Z: BP_Worker_F
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Worker_Z";
+		model="\A3\characters_F\common\coveralls";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
+	};
+	class BP_Medic_F: BP_Man
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Medic_Z";
+		model="\a3\Characters_F_Orange\Uniforms\C_Paramedic_01_F";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_paramedic_01_co.paa"};
+	};	
+	class BP_Medic_Z: BP_Medic_F
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Medic_Z";
+		model="\a3\Characters_F_Orange\Uniforms\C_Paramedic_01_F";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
+	};
+	class BP_Mechanic_F: BP_Man
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Mechanic_Z";
+		model="a3\Characters_F_Orange\Uniforms\C_Mechanic_01_F";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_mechanic_01_camo1_co.paa"};
+	};	
+	class BP_Mechanic_Z: BP_Mechanic_F
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Mechanic_Z";
+		model="a3\Characters_F_Orange\Uniforms\C_Mechanic_01_F";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
+	};
+	class BP_Construction_F: BP_Man
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Construction_Z";
+		model="\a3\Characters_F\Civil\c_driver_f";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_constructioncoverall_black_co"};
+	};	
+	class BP_Construction_Z: BP_Construction_F
+	{
+		scope = 2;
+		displayName = "Civilian";
+		uniformClass = "BP_Construction_Z";
+		model="\a3\Characters_F\Civil\c_driver_f";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
 	};
 	class B_Heli_Light_01_F;
 	class B_Heli_Transport_01_F;

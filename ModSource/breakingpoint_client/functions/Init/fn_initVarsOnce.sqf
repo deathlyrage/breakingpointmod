@@ -116,7 +116,12 @@ BP_ZombieClothing =
 	"BP_Guarilla_Leader_Z",
 	"BP_Guarilla_Camo_Z",
 	"BP_Ghillie_Lush_Z",
-	"BP_Wetsuit_Z"
+	"BP_Wetsuit_Z",
+	"BP_Scientist_Z",
+	"BP_Worker_Z",
+	"BP_Medic_Z",
+	"BP_Mechanic_Z",
+	"BP_Construction_Z"
 ];
 
 BP_Group = [];
@@ -646,6 +651,24 @@ BP_ObjectPreload =
 	"BPZombie_Hunter1",
 	"BPZombie_Hunter2",
 	"BPZombie_Hunter3",
+	"BPZombie_EngineerF",
+	"BPZombie_Engineer1",
+	"BPZombie_Optout",
+	"BPZombie_Optout2",
+	"BPZombie_Optout3",
+	"BPZombie_Optout4",
+	"BPZombie_Optout5",
+	"BPZombie_Optout6",
+	"BPZombie_Optout7",
+	"BPZombie_Optout8",
+	"BPZombie_Scientist",
+	"BPZombie_Worker",
+	"BPZombie_Medic",
+	"BPZombie_Mechanic",
+	"BPZombie_Construction1",
+	"BPZombie_Construction2",
+	"BPZombie_Construction3",
+	"BPZombie_Construction4",
 	//Storage Objects
 
 	//Loot Boxes

@@ -4419,5 +4419,30 @@
 		{
 			{0.09375,3.46729,-9.39278}
 		};
+	};
+	class Land_Hut01: Windmill
+	{
+		lootMin = 0;
+		lootMax = 1;
+		lootPos[] =
+		{
+			{-0.198242,1.90527,-0.3407}
+		};
+		zombiePos[] =
+		{
+		};
+	};
+	class Land_Hut03: GhostHotelAcc
+	{
+		lootMin = 0;
+		lootMax = 1;
+		lootPos[] =
+		{
+			{-0.37207,-1.44531,-1.21203},
+			{-0.264648,1.45117,-1.15642}
+		};
+		zombiePos[] =
+		{
+		};
 	};	
 	#include "CfgBuildingPosBornholm.hpp"

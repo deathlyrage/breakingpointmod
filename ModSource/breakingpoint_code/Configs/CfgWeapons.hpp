@@ -18,6 +18,7 @@ class CfgWeapons
 	class U_O_OfficerUniform_ocamo;
 	class U_Rangemaster;
 	class U_B_Wetsuit;
+	class U_I_Wetsuit;
 	class Vest_NoCamo_Base;
 	class Vest_Camo_Base;
 	class VestItem;
@@ -276,7 +277,7 @@ class CfgWeapons
 	class U_B_GhillieSuit_BP: U_B_GhillieSuit
 	{
 		scope = 2;
-		displayName = "Independent Ghillie (Tactical)";
+		displayName = "Ghillie (Tactical)";
 		picture = "\breakingpoint_ui\icons\noneicon.paa";												 
 		class ItemInfo: UniformItem
 		{
@@ -396,7 +397,7 @@ class CfgWeapons
 	class BP_Refugee_1: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Nomad level 1";
+		displayName = "Nomad Level 1";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -426,7 +427,7 @@ class CfgWeapons
 	class BP_Refugee_2: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Nomad level 2";
+		displayName = "Nomad Level 2";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -456,7 +457,7 @@ class CfgWeapons
 	class BP_Refugee_3: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Nomad level 3";
+		displayName = "Nomad Level 3";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -516,7 +517,7 @@ class CfgWeapons
 	class BP_Guardian_1: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Ranger level 1";
+		displayName = "Ranger Level 1";
 		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -546,7 +547,7 @@ class CfgWeapons
 	class BP_Guardian_2: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Ranger level 2";
+		displayName = "Ranger Level 2";
 		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -576,7 +577,7 @@ class CfgWeapons
 	class BP_Guardian_3: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Ranger level 3";
+		displayName = "Ranger Level 3";
 		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -636,7 +637,7 @@ class CfgWeapons
 	class BP_Rebel_1: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Outlaw level 1";
+		displayName = "Outlaw Level 1";
 		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -666,7 +667,7 @@ class CfgWeapons
 	class BP_Rebel_2: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Outlaw level 2";
+		displayName = "Outlaw Level 2";
 		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -696,7 +697,7 @@ class CfgWeapons
 	class BP_Rebel_3: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Outlaw level 3";
+		displayName = "Outlaw Level 3";
 		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -726,7 +727,7 @@ class CfgWeapons
 	class BP_Hunter_1: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Hunter level 1";
+		displayName = "Hunter Level 1";
 		picture = "\breakingpoint_ui\icons\HunterIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -756,7 +757,7 @@ class CfgWeapons
 	class BP_Hunter_2: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Hunter level 2";
+		displayName = "Hunter Level 2";
 		picture = "\breakingpoint_ui\icons\HunterIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -786,7 +787,7 @@ class CfgWeapons
 	class BP_Hunter_3: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Hunter level 3";
+		displayName = "Hunter Level 3";
 		picture = "\breakingpoint_ui\icons\HunterIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -816,7 +817,7 @@ class CfgWeapons
 	class BP_Survivalist_1: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Survivalist level 1";
+		displayName = "Survivalist Level 1";
 		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -846,7 +847,7 @@ class CfgWeapons
 	class BP_Survivalist_2: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Survivalist level 2";
+		displayName = "Survivalist Level 2";
 		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -876,7 +877,7 @@ class CfgWeapons
 	class BP_Survivalist_3: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Survivalist level 3";
+		displayName = "Survivalist Level 3";
 		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -951,7 +952,7 @@ class CfgWeapons
 	class BP_Engineer_1: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Engineer level 1";
+		displayName = "Engineer Level 1";
 		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -981,7 +982,7 @@ class CfgWeapons
 	class BP_Engineer_2: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Engineer level 2";
+		displayName = "Engineer Level 2";
 		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -1011,7 +1012,7 @@ class CfgWeapons
 	class BP_Engineer_3: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Engineer level 3";
+		displayName = "Engineer Level 3";
 		picture = "\breakingpoint_ui\icons\EngineerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
@@ -1283,11 +1284,11 @@ class CfgWeapons
 	{
 		scope = 2;
 		displayName = "Light Equipment Belt";
-		picture = "\A3\Characters_F_Orange\Vests\Data\UI\icon_V_LegStrapBag_coyote_CA.paa";
+		picture = "\A3\Characters_F\data\ui\icon_V_Belt_CA.paa";
 		model = "\breakingpoint_classes\models\BP_LBelt.p3d";
 		class ItemInfo: VestItem
 		{
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			uniformModel = "\breakingpoint_classes\models\BP_LBelt.p3d";
 			containerClass = "Supply40";
 			mass = 35;
@@ -1299,11 +1300,11 @@ class CfgWeapons
 	{
 		scope = 2;
 		displayName = "Medium Equipment Belt";
-		picture = "\A3\Characters_F_Orange\Vests\Data\UI\icon_V_LegStrapBag_coyote_CA.paa";
+		picture = "\A3\Characters_F\data\ui\icon_V_Belt_CA.paa";
 		model = "\breakingpoint_classes\models\BP_MBelt.p3d";
 		class ItemInfo: VestItem
 		{
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply60";
 			uniformModel = "\breakingpoint_classes\models\BP_MBelt.p3d";
 			mass = 55;
@@ -1316,11 +1317,11 @@ class CfgWeapons
 	{
 		scope = 2;
 		displayName = "Heavy Equipment Belt";
-		picture="\A3\Characters_F_Orange\Vests\Data\UI\icon_V_LegStrapBag_black_CA.paa";
+		picture = "\A3\Characters_F_Orange\Vests\Data\UI\icon_V_LegStrapBag_coyote_CA.paa";
 		model = "\breakingpoint_classes\models\BP_HBelt.p3d";
 		class ItemInfo: VestItem
 		{
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply100";
 			uniformModel = "\breakingpoint_classes\models\BP_HBelt.p3d";
 			mass = 85;
@@ -1333,27 +1334,46 @@ class CfgWeapons
 	{
 		scope = 2;
 		displayName = "Heavy Equipment Vest";
-		picture = "\A3\characters_f\Data\UI\icon_V_TacVestIR_blk_CA.paa";
+		picture = "\A3\characters_f_Beta\Data\UI\icon_V_I_Vest_01_ca.paa";
 		model = "\breakingpoint_classes\models\BP_HVest.p3d";
+		descriptionShort = "$STR_A3_SP_AL_I";
 		class ItemInfo: VestItem
 		{
 			allowedSlots[] = {};
 			containerClass = "Supply120";
 			uniformModel = "\breakingpoint_classes\models\BP_HVest.p3d";
-			mass = 95;
-			armor = "0";
-			passThrough = 1;
+			mass = 90;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 12;
+					passThrough = 0.3;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 12;
+					passThrough = 0.3;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.3;
+				};
+			};
 		};
 	};
 	class V_CPack_BP: Vest_NoCamo_Base
 	{
 		scope = 2;
 		displayName = "Heavy Vest Pouch";
-		picture = "\A3\characters_f\Data\UI\icon_V_TacVestIR_blk_CA.paa";
+		picture = "\A3\Characters_F_Orange\Vests\Data\UI\icon_V_LegStrapBag_olive_CA.paa";
 		model = "\breakingpoint_classes\models\BP_CPack.p3d";
 		class ItemInfo: VestItem
 		{
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply90";
 			uniformModel = "\breakingpoint_classes\models\BP_CPack.p3d";
 			mass = 50;
@@ -1369,7 +1389,7 @@ class CfgWeapons
 		model = "\breakingpoint_classes\models\BP_VPack.p3d";
 		class ItemInfo: VestItem
 		{
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply50";
 			uniformModel = "\breakingpoint_classes\models\BP_VPack.p3d";
 			mass = 10;
@@ -1388,7 +1408,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply80";
 			mass = 20;
 			armor = "0";
@@ -1468,7 +1488,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_belt";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply40";
 			mass = 20;
 			armor = "0";
@@ -1487,7 +1507,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
@@ -1506,7 +1526,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
@@ -1524,7 +1544,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
@@ -1543,7 +1563,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
@@ -1562,7 +1582,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
@@ -1696,7 +1716,7 @@ class CfgWeapons
 	class BP_JungleGhillie_Uniform: Uniform_Base
 	{
 		author = "Bohemia Interactive";
-		displayName = "Full Ghillie (Jungle)";
+		displayName = "Ghillie (Jungle)";
 		DLC = "Expansion";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
@@ -1714,7 +1734,7 @@ class CfgWeapons
 	class BP_Paramilitary_Jacket_Uniform: Uniform_Base
 	{
 		author = "Bohemia Interactive";
-		displayName = "Paramilitary Garb (Jacket)";
+		displayName = "Independent (Paramilitary Jacket)";
 		DLC = "Expansion";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_2_F_1_co.paa"};
@@ -1732,10 +1752,16 @@ class CfgWeapons
 	class BP_Paramilitary_Shorts_Uniform: Uniform_Base
 	{
 		author = "Bohemia Interactive";
-		displayName = "Paramilitary Garb (Shorts)";
+		displayName = "Independent (Paramilitary Tank)";
 		DLC = "Expansion";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_5_F_1_co.paa"};
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_4_F_1_co.paa"
+		};
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		scope = 2;
@@ -1743,14 +1769,14 @@ class CfgWeapons
 		{
 			containerClass = "Supply40";
 			mass = 40;
-			uniformClass = "BP_Paramilitary_Shorts";
+			uniformClass = "I_C_Soldier_Para_4_F";
 			uniformModel = "-";
 		};
 	};
 	class BP_Paramilitary_Tee_Uniform: Uniform_Base
 	{
 		author = "Bohemia Interactive";
-		displayName = "Paramilitary Garb (Tee)";
+		displayName = "Independent (Paramilitary Tee)";
 		DLC = "Expansion";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_1_F_1_co.paa"};
@@ -1860,6 +1886,7 @@ class CfgWeapons
 		{
 			containerClass = "Supply140";
 			hiddenSelections[] = {"camo"};
+			allowedSlots[] = {901};							 
 			mass = 20;
 			uniformModel = "\A3\Characters_F_Exp\Common\equip_TacChestrig.p3d";
 		};
@@ -2099,12 +2126,12 @@ class CfgWeapons
 		displayName = "Equipment Harness";
 		descriptionUse = "Equipment Harness";
 		descriptionShort = "Medium capacity, light armor";
-		picture = "\A3\characters_f\Data\UI\icon_V_HarnessO_brn_CA.paa";
-		model = "\A3\Characters_F\OPFOR\equip_o_vest01";
+		picture = "\A3\characters_f\Data\UI\icon_V_HarnessOGL_brn_CA.paa";
+		model = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
 		class ItemInfo: VestItem
 		{
-			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest01";
-			allowedSlots[] = {};
+			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
+			allowedSlots[] = {901};
 			containerClass = "Supply90";
 			mass = 40;
 			armor = "0";
@@ -2114,7 +2141,7 @@ class CfgWeapons
 	class V_HarnessO_gry_BP: V_HarnessO_brn_BP
 	{
 		scope = 2;
-		displayName = "Heavy Duty Harness";
+		displayName = "Heavy Duth Harness";
 		descriptionUse = "High Capacity Harness";
 		descriptionShort = "High capacity";
 		picture = "\A3\characters_f\Data\UI\icon_V_HarnessO_brn_CA.paa";
@@ -2141,7 +2168,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
-			allowedSlots[] = {};
+			allowedSlots[] = {901};
 			containerClass = "Supply90";
 			mass = 40;
 			armor = "0";
@@ -2161,6 +2188,7 @@ class CfgWeapons
 		{
 			uniformModel = "\A3\Characters_F\Common\equip_chestrig.p3d";
 			containerClass = "Supply80";
+			allowedSlots[] = {901};						  
 			mass = 40;
 			armor = "0";
 			passThrough = 0.95;
@@ -2515,7 +2543,7 @@ class CfgWeapons
 	class BP_Guarilla_Faded: U_BG_Guerilla3_1
 	{
 		scope = 2;
-		displayName = "Guerilla Faded";
+		displayName = "Independent (Faded)";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		class ItemInfo: UniformItem
 		{
@@ -2529,7 +2557,7 @@ class CfgWeapons
 	class BP_Guarilla_Khaki: U_BG_Guerilla3_2
 	{
 		scope = 2;
-		displayName = "Guerilla Khaki";
+		displayName = "Independent (Khaki)";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		class ItemInfo: UniformItem
 		{
@@ -2543,7 +2571,7 @@ class CfgWeapons
 	class BP_Guarilla_Leader: U_BG_leader
 	{
 		scope = 2;
-		displayName = "Guerilla Leader";
+		displayName = "Independent (Leader)";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		class ItemInfo: UniformItem
 		{
@@ -2557,7 +2585,7 @@ class CfgWeapons
 	class BP_Guarilla_Camo: U_BG_Guerilla1_1
 	{
 		scope = 2;
-		displayName = "Guerilla Khaki Camo";
+		displayName = "Independent (Guerilla Camo)";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		class ItemInfo: UniformItem
 		{
@@ -2571,7 +2599,7 @@ class CfgWeapons
 	class BP_Ghillie_Lush: U_B_FullGhillie_lsh
 	{
 		scope = 2;
-		displayName = "Marksman Ghillie";
+		displayName = "Ghillie (Marksman)";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		class ItemInfo: UniformItem
 		{
@@ -2582,18 +2610,22 @@ class CfgWeapons
 			mass = 10;
 		};
 	};
-	class BP_Wetsuit: U_B_Wetsuit
+	class BP_Wetsuit: U_I_Wetsuit
 	{
+		scope=2;
+		displayName="Independent (Wetsuit)";
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\diver_suit_rus_co.paa"};
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "BP_Wetsuit";
+			uniformClass = "BP_Wetsuit1_F";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			uniformType = "Neopren";
 			mass = 90;
-			displayName = "Wetsuit (Black)";
 		};
 	};
 	class BP_Wetsuit_Z: U_B_Wetsuit
@@ -2759,6 +2791,97 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "BP_SnowGhillie_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+//newzombies//
+	class BP_Scientist_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Scientist";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_scientist_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Scientist_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Worker_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Worker";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_dirty_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Worker_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Medic_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Medic";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_paramedic_01_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Medic_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Mechanic_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Mechanic";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_mechanic_01_camo1_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Mechanic_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Construction_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Construction";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_constructioncoverall_black_co"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Construction_Z";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 80;

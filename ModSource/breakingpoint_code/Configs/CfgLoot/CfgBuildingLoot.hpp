@@ -37,7 +37,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0;
 		lootPos[] = {};
 		itemType[] = {};
@@ -58,7 +58,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -86,7 +86,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -116,7 +116,7 @@ class CfgBuildingLoot
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieChance = 0.4;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		itemType[] = {
 			//{"BP_CardboardBox_1","object","Office"},
             {"BP_CardboardBox_2","object","Supermarket"},
@@ -141,7 +141,7 @@ class CfgBuildingLoot
 	class Office: Default {
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.10;
 		lootPos[] = {};
 		itemType[] =	{
@@ -169,7 +169,7 @@ class CfgBuildingLoot
 		zombieChance = 0.4;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Medic","BPZombie_Scientist"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
@@ -191,7 +191,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.25;
 		lootPos[] = {};
 		itemType[] =	{
@@ -215,7 +215,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.10;
 		lootPos[] = {};
 		itemType[] =	{
@@ -235,9 +235,9 @@ class CfgBuildingLoot
 	};
 	class Industrial: Default {
 		zombieChance = 0.2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Construction1","BPZombie_Construction2","BPZombie_Construction3","BPZombie_Construction4","BPZombie_Mechanic","BPZombie_EngineerF","BPZombie_Worker"};
 		minRoaming = 0;
-		maxRoaming = 1;
+		maxRoaming = 2;
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{
@@ -274,7 +274,7 @@ class CfgBuildingLoot
 	};	
 	class IndustrialSmall: Default {
 		zombieChance = 0.2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		minRoaming = 0;
 		maxRoaming = 1;
 		lootChance = 0.50;
@@ -296,7 +296,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -322,7 +322,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05; 
 		lootPos[] = {};
 		itemType[] =	{
@@ -350,7 +350,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minroaming = 5;
 		maxRoaming = 7;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -382,7 +382,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.15;
 		lootPos[] = {};
 		itemType[] =	{
@@ -402,7 +402,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 5;
 		maxRoaming = 7;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -427,7 +427,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 5;
 		maxRoaming = 7;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -450,7 +450,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 5;
 		maxRoaming = 7;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -702,7 +702,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{
@@ -760,7 +760,7 @@ class CfgBuildingLoot
 		zombieChance = 0.4;
 		minRoaming = 1;
 		maxRoaming = 4;
-		zombieClass[] = {"z_soldier_pilot"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.75;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -791,7 +791,7 @@ class CfgBuildingLoot
 		zombieChance = 0;
 		minRoaming = 0;
 		maxRoaming = 0;
-		zombieClass[] = {"z_soldier_pilot"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.85;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -807,7 +807,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 5;
 		maxRoaming = 7;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -830,7 +830,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 20;
 		maxRoaming = 20;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -862,7 +862,7 @@ class CfgBuildingLoot
 		zombieChance = 0.0;
 		minRoaming = 0;
 		maxRoaming = 0;
-		zombieClass[] = {"z_soldier_pilot"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -879,7 +879,7 @@ class CfgBuildingLoot
 		zombieChance = 1;
 		minRoaming = 10;
 		maxRoaming = 25;
-		zombieClass[] = {"z_soldier_pilot","z_soldier_heavy"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	
@@ -971,7 +971,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1001,7 +1001,7 @@ class CfgBuildingLoot
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieChance = 0.4;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		itemType[] = {
 			{"BP_CardboardBox_1","object","Supermarket"},
             {"BP_CardboardBox_2","object","Supermarket"},
@@ -1026,7 +1026,7 @@ class CfgBuildingLoot
 		zombieChance = 0.4;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Medic","BPZombie_Scientist"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1045,9 +1045,9 @@ class CfgBuildingLoot
 //A2 INDUSTRIAL	
 	class A2Industrial: Default {
 		zombieChance = 0.2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Construction1","BPZombie_Construction2","BPZombie_Construction3","BPZombie_Construction4","BPZombie_Mechanic","BPZombie_EngineerF","BPZombie_Worker"};
 		minRoaming = 0;
-		maxRoaming = 1;
+		maxRoaming = 2;
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1078,7 +1078,7 @@ class CfgBuildingLoot
 //A2 INDUSTRIAL SMALL	
 	class A2IndustrialSmall: Default {
 		zombieChance = 0.2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		minRoaming = 0;
 		maxRoaming = 1;
 		lootChance = 0.50;
@@ -1099,7 +1099,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.10;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1120,7 +1120,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1146,7 +1146,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 2;
 		maxRoaming = 5;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.25;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1167,7 +1167,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 2;
 		maxRoaming = 5;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.25;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1189,7 +1189,7 @@ class CfgBuildingLoot
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 5;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1211,7 +1211,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 1;
 		maxRoaming = 5;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1235,7 +1235,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 10;
 		maxRoaming = 20;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1261,7 +1261,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 6;
 		maxRoaming = 12;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1291,7 +1291,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 5;
 		maxRoaming = 10;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
@@ -1309,7 +1309,7 @@ class CfgBuildingLoot
 		zombieChance = 0.5;
 		minRoaming = 6;
 		maxRoaming = 12;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{

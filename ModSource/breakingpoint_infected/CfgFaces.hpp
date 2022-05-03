@@ -45,7 +45,7 @@ class CfgFaces {
 			material = "\breakingpoint\textures\custom.rvmat";
 			materialHL = "\breakingpoint\textures\custom.rvmat";
 			materialHL2 = "\breakingpoint\textures\custom.rvmat";
-			texture = "\breakingpoint_infected\textures\face\BP_Zombie_Face2.paa";
+			texture = "\breakingpoint_infected\textures\face\BP_Zombie_Face3.paa";
 			textureHL = "\breakingpoint_infected\textures\skins\BP_Zombie_Skin1.paa";
 			identityTypes[] = {"BP_Zombie3"};
 			disabled = 0;
@@ -57,8 +57,8 @@ class CfgFaces {
 			material = "\breakingpoint\textures\custom.rvmat";
 			materialHL = "\breakingpoint\textures\custom.rvmat";
 			materialHL2 = "\breakingpoint\textures\custom.rvmat";
-			texture = "\breakingpoint_infected\textures\face\BP_Zombie_Face2.paa";
-			textureHL = "\breakingpoint_infected\textures\skins\BP_Zombie_Skin1.paa";
+			texture = "\breakingpoint_infected\textures\face\BP_Zombie_Face4.paa";
+			textureHL = "\breakingpoint_infected\textures\skins\BP_Zombie_Skin2.paa";
 			identityTypes[] = {"BP_Zombie4"};
 			disabled = 0;
 		};
@@ -69,8 +69,8 @@ class CfgFaces {
 			material = "\breakingpoint\textures\custom.rvmat";
 			materialHL = "\breakingpoint\textures\custom.rvmat";
 			materialHL2 = "\breakingpoint\textures\custom.rvmat";
-			texture = "\breakingpoint_infected\textures\face\BP_Zombie_Face2.paa";
-			textureHL = "\breakingpoint_infected\textures\skins\BP_Zombie_Skin1.paa";
+			texture = "\breakingpoint_infected\textures\face\BP_Zombie_Face1.paa";
+			textureHL = "\breakingpoint_infected\textures\skins\BP_Zombie_Skin2.paa";
 			identityTypes[] = {"BP_Zombie5"};
 			disabled = 0;
 		};
