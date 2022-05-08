@@ -112,22 +112,38 @@ class CfgVehicles
 	class BP_SkeletonRemains: BP_DeadBody
 	{
 		scope = 1;
-		model = "\A3\Structures_F\Civ\Dead\HumanSkeleton_F.p3d";
+		model="\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_black_CO.paa"
+		};
 	};
 	class BP_SkeletonRemainsAI: BP_DeadBodyAI
 	{
 		scope = 1;
-		model = "\A3\Structures_F\Civ\Dead\HumanSkeleton_F.p3d";
+		model="\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_black_CO.paa"
+		};
 	};
 	class BP_GraveDirt: BP_DeadBody
 	{
 		scope = 1;
-		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_forest_F.p3d";
+		model="\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_blue_CO.paa"
+		};
 	};
 	class BP_GraveDirtAI: BP_DeadBodyAI
 	{
 		scope = 1;
-		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_forest_F.p3d";
+		model="\A3\Props_F_Orange\Humanitarian\Camps\Bodybag_01_F.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Props_F_Orange\Humanitarian\Camps\Data\Bodybag_01_blue_CO.paa"
+		};
 	};
 	class B_supplyCrate_F;
 	class BP_CarePkg: B_supplyCrate_F
@@ -777,7 +793,7 @@ class CfgVehicles
 	class BP_Carryall_Bandit: BP_Carryall_Base
 	{
 		scope = 2;
-		displayName = "MilitarySurvival (Bandit)";
+		displayName = "Military Survival (Bandit)";
 		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Tortila_cbr.paa";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_tortila_cbr_co.paa"};
 		maximumLoad = 360;
@@ -3314,6 +3330,8 @@ class CfgVehicles
 	class B_T_LSV_01_unarmed_F;
 	class C_Offroad_02_unarmed_F;
 	class C_Van_01_transport_F;
+	class C_Tractor_01_F;
+	class C_Kart_01_black_F;
 	class BP_C_Scooter_Transport_01_F: C_Scooter_Transport_01_F
 	{
 		editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\C_Scooter_Transport_01_F.jpg";
@@ -6507,6 +6525,158 @@ class CfgVehicles
 				name = "motor";
 				visual = "";
 				passThrough = 0.2;
+			};
+		};
+		class EventHandlers: BP_VehicleEventHandlers{};
+	};
+	class BP_Tractor_01_F: C_Tractor_01_F
+	{
+		author = "$STR_A3_Bohemia_Interactive";
+		_generalMacro = "Tractor";
+		displayName = "Tractor";		
+		scope = 2;
+		scopeCurator = 2;
+		DLC = "Enoch";
+		side = 3;
+		crew = "";
+		typicalCargo[] = {};
+		editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\C_Tractor_01_F.jpg";
+		class TextureSources{};
+		class TransportItems{};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		armor = 50;
+		class HitPoints
+		{
+			class HitEngine
+			{
+				armor = 2;
+				material = -1;
+				name = "motor";
+				visual = "motor";
+				passThrough = 0;
+			};
+			class HitFuel
+			{
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				passThrough = 0.5;
+			};
+			class HitBody
+			{
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "";
+				passThrough = 0;
+			};
+			class HitLFWheel
+			{
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			class HitRFWheel
+			{
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			class HitRF2Wheel
+			{
+				armor = 1;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			class HitLF2Wheel
+			{
+				armor = 1;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+		};	
+		class EventHandlers: BP_VehicleEventHandlers{};
+	};
+	class BP_Kart: C_Kart_01_black_F
+	{
+		scope = 2;
+		author = "$STR_A3_Bohemia_Interactive";
+		displayName = "Old Racing Kart";
+		side = 3;
+		faction = "CIV_F";
+		crew = "";
+		typicalCargo[] = {};
+		DLC = "Kart";
+		hiddenSelections[] = {"camo","camo2"};
+		hiddenSelectionsTextures[] = {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_black_CO.paa","\breakingpoint_ui\updatedimage\Kart_01_logos_black_CA.paa"};
+		maximumLoad = 200;
+		armor = 50;
+		class HitPoints
+		{
+			class HitBody
+			{
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0.1;
+			};
+			class HitFuel
+			{
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 1;
+			};
+			class HitLFWheel
+			{
+				armor = 1;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			class HitLF2Wheel
+			{
+				armor = 1;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			class HitRFWheel
+			{
+				armor = 1;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			class HitRF2Wheel
+			{
+				armor = 1;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			class HitEngine
+			{
+				armor = 1;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 1;
 			};
 		};
 		class EventHandlers: BP_VehicleEventHandlers{};

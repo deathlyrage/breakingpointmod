@@ -608,16 +608,16 @@ class CfgObjectLoot {
 			{"ItemCan2","magazine"},
 			{"ItemCan3","magazine"},
 			{"ItemCan4","magazine"},
-			{"ItemCan5","magazine"},
+			{"V_HeroVest_BP","vest"},
 			{"BP_Carryall_Hero","backpack"},
 			{"BP_StoneGhillie","uniform"},
 			{"BP_TreeGhillie","uniform"},
 			{"BP_DirtGhillie","uniform"},
 			{"BP_Wetsuit","uniform"},
-			{"BP_Guarilla_Faded","uniform"},
-			{"BP_Guarilla_Khaki","uniform"},
-			{"BP_Guarilla_Leader","uniform"},
-			{"BP_Guarilla_Camo","uniform"},
+			{"BP_762Muzzle","toolbelt"},
+			{"BP_R7P","toolbelt"},
+			{"BP_AFG","toolbelt"},
+			{"BP_22Sup","toolbelt"},
 			{"BP_Ghillie_Lush","uniform"},
 			{"V_RebreatherB","vest"},
 			{"BP_10Rnd_127x99","magazine"},
@@ -640,7 +640,7 @@ class CfgObjectLoot {
 			{"BP_15Rnd_9x19OVP","magazine"},
 			{"BP_7Rnd_45JHP","magazine"},
 			{"BP_15Rnd_45JHP","magazine"},
-			{"BP_muzzle_snds_H_MG","toolbelt"},
+			{"BP_Mk12Sup","toolbelt"},
 			{"BP_muzzle_snds_B","toolbelt"},
 			{"BP_muzzle_snds_H","toolbelt"},
 			{"BP_muzzle_snds_M12","toolbelt"},
@@ -667,7 +667,9 @@ class CfgObjectLoot {
 			{"BP_10Rnd_127x99_RAUF","magazine"},
 			{"BP_10Rnd_338Lapua_Mag","magazine"},
 			{"BP_10Rnd_300_Mag","magazine"},
-			{"BP_5Rnd_127x108_Mag","magazine"}
+			{"BP_5Rnd_127x108_Mag","magazine"},
+			{"BP_Carryall_Bandit","backpack"},
+			{"BP_Coyote_oli","backpack"}
 		};
 		itemChance[] =	{	
 			0.10,	//Binoculars
@@ -697,17 +699,17 @@ class CfgObjectLoot {
 			0.02,	//FOOD
 			0.02,	//FOOD
 			0.02,	//FOOD
-			0.02,	//FOOD
+			0.03,	//MERCENARY VEST
 			0.02,	//MILITARY SURVIVAL PACK
 			0.07,	//STONE GHILLIE
 			0.07,	//TREE GHILLIE
 			0.07,	//DIRT GHILLIE
 			0.07,	//RUSSIAN CLOTHING
 			0.07,	//WESTSUIT CLOTHING
-			0.07,	//Guerilla Faded
-			0.07,	//Guerilla Shit Green Sweater
-			0.07,	//Guerilla Leader
-			0.07,	//Guerilla Khaki Camo
+			0.07,	//762MUZZLEBRAKE
+			0.07,	//R7PBARREL
+			0.07,	//AFG
+			0.07,	//22SUPPRESSOR
 			0.02,   //REBREATHER
 			0.05,	//50CAL AMMO
 			0.05,   //200Rnd_556
@@ -728,7 +730,7 @@ class CfgObjectLoot {
 			0.05,   //15Rnd_9x19OVP
 			0.05,   //7Rnd_45JHP
 			0.05,   //15Rnd_45JHP
-			0.02,   //BP_muzzle_snds_H_MG
+			0.02,   //BP_Mk12Sup
 			0.02,   //BP_muzzle_snds_B
 			0.02,   //BP_muzzle_snds_H
 			0.02,   //BP_muzzle_snds_M12
@@ -754,7 +756,9 @@ class CfgObjectLoot {
 			0.01,	//Cheytac AMMO
 			0.02,	//Cheytac AMMO
 			0.02,	//Cheytac AMMO
-			0.02	//Cheytac AMMO
+			0.02,	//Cheytac AMMO
+			0.01,	//CarryallBandit
+			0.01	//COYOTEBACKPACK
 		};
 	};
 
@@ -1612,7 +1616,7 @@ class CfgObjectLoot {
 			{"BP_5Rnd_300AAC_Mag","magazine"},
 			{"ItemBandage","magazine"},
 			{"BP_8Rnd_Slug","magazine"},
-			{"BP_2Rnd_MagBuckshot","magazine"},
+			{"BP_9x39_Mag","magazine"},
 			{"BP_2Rnd_Slug","magazine"},
 			{"BP_16Rnd_9x21_Mag","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"},
@@ -1655,7 +1659,7 @@ class CfgObjectLoot {
 			0.07,	//BANDAGE
 			0.01,	//300 BLACKOUT
 			0.05,	//BENELLI SLUG
-			0.05,	//2RND MAGBUCKSHOT
+			0.05,	//VSSAMMO
 			0.05,	//2RND SLUG
 			0.09,	//9MM MAG
 			0.01,	//3006 MAG

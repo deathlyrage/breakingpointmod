@@ -498,7 +498,7 @@ class CfgBuildingLoot
 			{"BP_MXM_black","weaponA"},
 			{"BP_MXM","weapon"},
 			{"BP_MXC","weapon"},
-			{"BP_muzzle_snds_H_MG","toolbelt"},
+			{"BP_gemtech9","toolbelt"},
 			{"Rangefinder","weaponNA"},
 			{"BP_1Rnd_HE_shell","magazine"},
 			{"BP_100Rnd_127x99_box","magazine"},
@@ -547,7 +547,7 @@ class CfgBuildingLoot
 		itemType[] =	{		
 			{"BP_MX_SW","weapon"},
 			{"BP_RFB","weapon"},
-			{"BP_Minimi_HG","weapon"},
+			{"BP_762Sup2","toolbelt"},
 			{"BP_MedicalboxHelicrash","object"},
 			//{"AmmoBoxSmall_556","object"},
 			//{"AmmoBoxSmall_762","object"},
@@ -559,7 +559,7 @@ class CfgBuildingLoot
 			//{"BP_HK417M_DES","weapon"},	
 			//{"BP_EBR_MRCO","weapon"},
 			//{"BP_p226Tac","weaponA"},
-			{"BP_muzzle_snds_H_MG","toolbelt"},
+			{"BP_CZst_br","toolbelt"},
 			{"BP_VS121","weapon"},
 			{"BP_7Rnd_408Chey_Mag","magazine"},
 			//{"BP_HK417_DES","weapon"},
@@ -589,12 +589,12 @@ class CfgBuildingLoot
 		};
 		itemChance[] =	{
 			0.10,	//MX SW
-			0.30,	//KELTECRFB
-			0.50,	//R3F 5.56
+			0.20,	//KELTECRFB
+			0.10,	//7.62suppressor
 			0.10,	//CAJA MEDICA
 			//0.1,	//AMMO BOX 5.56
 			//0.05,	//AMMO BOX 7.62
-			0.70,	//TAC VEST
+			0.30,	//TAC VEST
 			0.01,	//DIRT GHILLIE
 			0.01,	//M24A2 SPECOPS
 			0.02,	//MK20 SPEC
@@ -603,12 +603,12 @@ class CfgBuildingLoot
 			//0.50,	//MK18 ADR MRCO
 			//0.09,	//P226 TACTICAL
 			0.20,	//MG SUPPRESSOR
-			0.30,	//VS121
+			0.10,	//VS121
 			0.02, 	//408 CHEETAH
 			//0.50,	//HK417L DES
 			0.20,	//MX GL
 			//0.50,	//HELMET
-			0.70,	//OLIVE BANDOLIER
+			0.20,	//OLIVE BANDOLIER
 			0.01,	//7.62 SUPPRESSOR
 			0.07,	//5.56 SUPPRESSOR
 			0.01,	//M21K
@@ -621,7 +621,7 @@ class CfgBuildingLoot
 			0.01,   //M4MK
 			0.01,   //300SUP
 			0.10,	//150 ROUND 7.62 BOX
-			0.20,	//200 ROUND 6.5 BOX
+			0.10,	//200 ROUND 6.5 BOX
 			0.01,	//762MUZZLE
 			0.06,   //SURGERY KIT
 			0.03,    //HARNESS BROWN	
@@ -641,9 +641,9 @@ class CfgBuildingLoot
 		itemType[] =	{		
 			{"BP_SA582","weapon"},
 			{"BP_FNFAL","weapon"},
-			//{"BP_EBR_MRCO","weapon"},
-			//{"BP_Mk200","weapon"},
-			{"BP_Minimi_762","weapon"},
+			{"BP_Mark14","weapon"},
+			{"BP_VS121","weapon"},
+			{"BP_NegevNG5","weapon"},
 			{"BP_Minimi_HG","weapon"},
 			{"BP_R700","weaponA"},
 			{"BP_SR25","weaponA"},
@@ -669,9 +669,9 @@ class CfgBuildingLoot
 		};
 		itemChance[] =	{
 			0.12,   //SA58
-			0.35,   //FNFAL
-			//0.15,	//EBR MRCO
-			//0.12,	//MK200
+			0.20,   //FNFAL
+			0.05,	//MARK14
+			0.07,	//VS121
 			0.08,	//MINIMI 762
 			0.15,	//MINIMI HG
 			0.09,   //R700

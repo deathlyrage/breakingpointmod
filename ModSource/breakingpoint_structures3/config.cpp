@@ -54895,6 +54895,54 @@ class CfgVehicles
 		actionBegin1="OpenDoor_1";
 		actionEnd1="OpenDoor_1";
 	};
+	class Land_Hotel: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_psi_bouda: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_A_Office02: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
+	class Land_zavora_2: Land_HelipadEmpty_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
+	};
 	class Land_water_tank: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -54955,30 +55003,6 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class Land_Hotel: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_MBG_Killhouse_3: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
 	class Land_Dum_istan4_inverse: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -54992,66 +55016,6 @@ class CfgVehicles
 		accuracy=1000;
 	};
 	class Land_Dum_istan4_detaily1: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_MBG_Warehouse: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_zavora_2: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_A_Office02: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};	
-	class land_Objects111: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Kostelik: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=1;
@@ -55111,18 +55075,6 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class Land_psi_bouda: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
 	class Land_Shed_M02: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -55135,50 +55087,16 @@ class CfgVehicles
 		icon="iconObject_1x1";
 		accuracy=1000;
 	};
-	class Land_Barrel_water: Land_BarrelWater_F
+	class Land_Stoplight02: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=0.405;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_BarrelWater_F.jpg";
-		_generalMacro="Land_BarrelWater_F";
+		mapSize=1;
+		_generalMacro="Land_HelipadEmpty_F";
 		scope=2;
 		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_BarrelWater_F0";
-		model="\A3\Structures_F\Items\Vessels\BarrelWater_F.p3d";
-		icon="iconObject_circle";
-		editorSubcategory="EdSubcat_Storage";
-		vehicleClass="Container";
-	};
-	class PowerGenerator: Land_PowerGenerator_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		class SimpleObject
-		{
-			eden=0;
-			animate[]={};
-			hide[]={};
-			verticalOffset=0.796;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_PowerGenerator_F.jpg";
-		_generalMacro="Land_PowerGenerator_F";
-		scope=2;
-		scopeCurator=2;
-		model="\A3\Structures_F\Ind\WindPowerPlant\PowerGenerator_F.p3d";
-		displayName="$STR_A3_CfgVehicles_Land_PowerGenerator_F0";
-		icon="iconObject_1x2";
-		editorCategory="EdCat_Structures_Altis";
-		editorSubcategory="EdSubcat_Utilities";
-		vehicleClass="Structures_Infrastructure";
-		keepHorizontalPlacement=0;
+		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		icon="iconObject_1x1";
+		accuracy=1000;
 	};
 };

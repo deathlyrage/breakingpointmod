@@ -880,7 +880,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	if (!_isMan && {_cursorTarget isKindOf "BP_DeadBody"} && {_canDo}) then
 	{
 		if (s_player_destroyGrave < 0) then {
-			s_player_destroyGrave = player addAction ["Destroy Grave", { deleteVehicle (_this select 3); player removeAction s_player_destroyGrave; s_player_destroyGrave = -1; },_cursorTarget, 0, false, true, "",""];
+			s_player_destroyGrave = player addAction ["Destroy Body", { deleteVehicle (_this select 3); player removeAction s_player_destroyGrave; s_player_destroyGrave = -1; },_cursorTarget, 0, false, true, "",""];
 		};
 	} else {
 		player removeAction s_player_destroyGrave;

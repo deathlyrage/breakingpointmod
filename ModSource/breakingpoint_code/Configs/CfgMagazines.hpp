@@ -398,7 +398,7 @@ class CfgMagazines
 		descriptionUse = "Fuelcan (Empty)";
 		model = "\breakingpoint\models\bp_fuelcan.p3d";
 		picture = "\breakingpoint\textures\icons\bp_fuelcan_empty_ca.paa";
-		descriptionShort = "";
+		descriptionShort = "Can be filled at gas stations or siphoned vehicles.";
 		mass = 20;
 	};
 
@@ -1009,6 +1009,7 @@ class CfgMagazines
 	class ItemBook1 : ItemTrashBase {
 		displayName = "BreakingPoint For Dummies";
 		displayNameShort = "Book";
+		descriptionShort = "Mostly for people who refuse to read.";
 		descriptionUse = "(Instructional)";
 		ammo = "BP_Book1";
 		model = "\breakingpoint\models\bp_book1.p3d";
@@ -1214,7 +1215,7 @@ class CfgMagazines
 		displayName = "Meat (Raw)";
 		model = "\breakingpoint\models\bp_meat.p3d";
 		picture = "\breakingpoint\textures\icons\bp_meat_ca.paa";
-		descriptionShort = "";
+		descriptionShort = "Can be cooked on a campfire.";
 		bloodRegen = 100;
 		mass = 10;
 	};
@@ -1235,21 +1236,21 @@ class CfgMagazines
 
 	class FoodMuttonRaw : FoodmeatRaw {
 		displayName = "Mutton (Raw)";
-		descriptionShort = "";
+		descriptionShort = "Can be cooked on a campfire.";
 		bloodRegen = 100;
 		mass = 10;
 	};
 	
 	class FoodChickenRaw : FoodmeatRaw {
 		displayName = "Chicken Leg (Raw)";
-		descriptionShort = "";
+		descriptionShort = "Can be cooked on a campfire.";
 		bloodRegen = 100;
 		mass = 10;
 	};
 	
 	class FoodRabbitRaw : FoodmeatRaw {
 		displayName = "Rabbit (Raw)";
-		descriptionShort = "";
+		descriptionShort = "Can be cooked on a campfire.";
 		bloodRegen = 400;
 		mass = 10;
 	};
@@ -1381,11 +1382,10 @@ class CfgMagazines
 		scope = 2;
 		refillable = 1;
 		sfx = "drink";
-		displayName = "Canteen";
-		descriptionUse = "";
+		displayName = "Canteen (Full)";
+		descriptionShort = "Can be boiled on a campfire.";
 		model = "\a3\structures_f_epa\Items\Food\Canteen_F.p3d";
 		picture = "\breakingpoint\textures\icons\bp_waterbottle_ca.paa";
-		descriptionShort = "";
 		mass = 5;
 	};
 	
