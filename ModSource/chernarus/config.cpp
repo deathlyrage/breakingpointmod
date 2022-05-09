@@ -138,6 +138,21 @@ class CfgWorlds
 				stepY = 10000;
 			};
 		};
+		loadingTexts[]=
+		{
+			"The Outlaws and Engineers are arch rivals. One seeks to destroy and cause anarchy, the other seeks to repair and build.",
+			"Rangers, Nomads and Survivalists have banded together and can access the global alliance faction chat channel to work together.",
+			"Hunters are the most difficult factions to trust. They live for murder. Trust them with caution.",
+			"The Undead Watchers are not to be confused with infected zombies. Watchers are just humans who wear Zombie skins and blood on their clothes so they can hide amongst the dead without being detected by zombies. They work with no one but each other and thrive on chaos.",
+			"Independents are the only faction that can change clothing options whenever they want to. They can wear any non-faction clothing that is found and have a variety of Ghillie options. They do not have access to a faction chat and tend to not be trusted.",
+			"When it comes to killing, Survivalists only score for taking down traitors or Undead Watchers.",
+			"Nomads have a much higher healing rate when they sit down. Level 3 can heal to 100%",
+			"Rangers start with natural body armor that increases with each level. At level 3 they obtain the Medical Pack, which allows for self surgery to stop bleeding.",
+			"Survivalists start with camo Ghillie at levels 2 and 3. They obtain two points for every minute they stay alive.",
+			"Engineers are the closest thing to a neutral faction in game. They can score +15 points for fixing a vehicle and they gain points for helping all factions but Outlaw with food, water and medical.",
+			"Outlaws have their own custom faction chat channel. They obtain better starting backpacks at levels 2 and 3 and can build the highest carry capacity for storage objects in game.",
+			"Hunters have increased speed at level 3 and have the highest default clothing carry capacity in game."
+		};
 		startTime = 9:20;
 		startDate = 11/10/2035;
 		startWeather = 0.25;

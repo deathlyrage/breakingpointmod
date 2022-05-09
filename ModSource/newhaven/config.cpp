@@ -7,23 +7,23 @@
 	Alderon Games Pty Ltd
 */
 
-#define ReadAndWrite		0
-#define ReadAndCreate		1
-#define ReadOnly		2
-#define ReadOnlyVerified		3
+#define READANDWRITE		0
+#define READANDCREATE		1
+#define READONLY		2
+#define READONLYVERIFIED		3
 
-#define VSoft		0
-#define VArmor		1
-#define VAir		2
+#define VSOFT		0
+#define VARMOR		1
+#define VAIR		2
 
-#define TEast		0
-#define TWest		1
-#define TGuerrila		2
-#define TCivilian		3
-#define TSideUnknown		4
-#define TEnemy		5
-#define TFriendly		6
-#define TLogic		7
+#define TEAST		0
+#define TWEST		1
+#define TGUERRILA		2
+#define TCIVILIAN		3
+#define TSIDEUNKNOWN		4
+#define TENEMY		5
+#define TFRIENDLY		6
+#define TLOGIC		7
 
 class CfgPatches {
 	class newhaven {
@@ -130,7 +130,7 @@ class CfgWorlds
 	};
 	class newhaven : CAWorld 
 	{
-		access = ReadOnlyVerified;
+		access = READONLYVERIFIED;
 		worldId = 1;
 		cutscenes[] = {"newhavenIntro1"};
 		description = "New Haven";
@@ -140,7 +140,7 @@ class CfgWorlds
 		pictureShot = "\newhaven\ui_newhaven_ca.paa";
 		plateFormat = "MH$-####";
 		plateLetters = ABCDEGHIKLMNOPRSTVXZ;
-		author = "Aussie. Made Exclusively For Breaking Point.";
+		author = "Aussie and Donnie. Made only for Breaking Point.";
 		mapSize = 10240;
 		mapZone = 35;
 		longitude = 17.352;	// positive is east
@@ -190,7 +190,22 @@ class CfgWorlds
 				stepY = -10000;
 			};
 		};
-		startTime = 11:00;
+		loadingTexts[]=
+		{
+			"The Outlaws and Engineers are arch rivals. One seeks to destroy and cause anarchy, the other seeks to repair and build.",
+			"Rangers, Nomads and Survivalists have banded together and can access the global alliance faction chat channel to work together.",
+			"Hunters are the most difficult factions to trust. They live for murder. Trust them with caution.",
+			"The Undead Watchers are not to be confused with infected zombies. Watchers are just humans who wear Zombie skins and blood on their clothes so they can hide amongst the dead without being detected by zombies. They work with no one but each other and thrive on chaos.",
+			"Independents are the only faction that can change clothing options whenever they want to. They can wear any non-faction clothing that is found and have a variety of Ghillie options. They do not have access to a faction chat and tend to not be trusted.",
+			"When it comes to killing, Survivalists only score for taking down traitors or Undead Watchers.",
+			"Nomads have a much higher healing rate when they sit down. Level 3 can heal to 100%",
+			"Rangers start with natural body armor that increases with each level. At level 3 they obtain the Medical Pack, which allows for self surgery to stop bleeding.",
+			"Survivalists start with camo Ghillie at levels 2 and 3. They obtain two points for every minute they stay alive.",
+			"Engineers are the closest thing to a neutral faction in game. They can score +15 points for fixing a vehicle and they gain points for helping all factions but Outlaw with food, water and medical.",
+			"Outlaws have their own custom faction chat channel. They obtain better starting backpacks at levels 2 and 3 and can build the highest carry capacity for storage objects in game.",
+			"Hunters have increased speed at level 3 and have the highest default clothing carry capacity in game."
+		};
+		startTime = 10:00;
 		startDate = 10/6/2035;
 		startWeather = 0.4;
 		startFog = 0.0;
@@ -2867,7 +2882,7 @@ class CfgSurfaces {
 	class Default;
 
 	class bpgrass : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "bp_dirt_*";
 		character = "bp_grassClutter";
 		soundEnviron = "grass";
@@ -2882,7 +2897,7 @@ class CfgSurfaces {
 	};
 	
 	class bpbeach : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "bp_beach_*";
 		character = "Empty";
 		soundEnviron = "sand";
@@ -2896,7 +2911,7 @@ class CfgSurfaces {
 	};
 	
 	class bppineforest : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "cr_les2_*";
 		character = "bp_pineforestClutter";
 		soundEnviron = "drygrass";
@@ -2911,7 +2926,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_wheatstubble : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "cr_strniste_*";
 		rough = 0.13;
 		dust = 0.3;
@@ -2921,7 +2936,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_ploughedground : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "cr_oranice_*";
 		rough = 0.15;
 		dust = 0.25;
@@ -2931,7 +2946,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_brownrockground : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "bp_brownrock_*";
 		character = EMPTY;
 		soundEnviron = "gravel";
@@ -2946,7 +2961,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_soilsurface : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "bp_soil_*";
 		character = "empty";
 		soundEnviron = "dirt";
@@ -2961,7 +2976,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_flatgrasssurface : Default {
-		access = ReadOnly;
+		access = READONLY;
 		files = "bp_flatgrass_*";
 		character = "bp_flatgrassClutter";
 		soundEnviron = "grass";
