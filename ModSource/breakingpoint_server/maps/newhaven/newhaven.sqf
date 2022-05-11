@@ -27,3 +27,8 @@ _building6 = createVehicle ["Land_House_2W05_F", [7176.12,2208.91,-9.53674e-007]
 _building6 setDir 270.353;
 _building6 setPos [7176.12,2208.91,-9.53674e-007];
 _building6 enableDynamicSimulation true;
+
+_building7 = createVehicle ["Land_Hotel_02_F", [6729.27,4266.27,0.200001], [], 0, "CAN_COLLIDE"];
+_building7 setDir 112.03;
+_building7 setPos [6729.27,4266.27,0.200001];
+_building7 enableDynamicSimulation true;

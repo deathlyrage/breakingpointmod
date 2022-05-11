@@ -4526,4 +4526,16 @@
 		{
 		};
 	};
+	class Land_FeedShack_01_F: Windmill
+	{
+		lootMin = 0;
+		lootMax = 1;
+		lootPos[] =
+		{
+			{3.23615,0.0805664,0.182407}
+		};
+		zombiePos[] =
+		{
+		};
+	};
 	#include "CfgBuildingPosBornholm.hpp"

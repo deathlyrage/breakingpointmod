@@ -335,7 +335,25 @@ BP_Houses =
     "Land_Slum_01_F",
 	"Land_Slum_House02_F",
 	//LIVONIA
-	"Land_House_1W04_F"
+	"Land_Camp_House_01_brown_F",
+	"Land_House_1W01_F",
+	"Land_House_1W11_F",
+	"Land_House_1W02_F",
+	"Land_House_1W03_F",
+	"Land_House_1W04_F",
+	"Land_House_1W05_F",
+	"Land_House_1W06_F",
+	"Land_House_1W07_F",
+	"Land_House_1W08_F",
+	"Land_House_1W09_F",
+	"Land_House_1W10_F",
+	"Land_House_1W12_F",
+	"Land_House_1W08_F",
+	"Land_House_2W01_F",
+	"Land_House_2W02_F",
+	"Land_House_2W03_F",
+	"Land_House_2W04_F",
+	"Land_House_2B01_F"	
 ];
 
 Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];

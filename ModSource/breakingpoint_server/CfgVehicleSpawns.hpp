@@ -24,8 +24,12 @@ class CfgVehicleSpawns
 		{
 			class BP_Old_Bicycle : BaseVehicleSpawn
 			{
-				count = 10;
-			};			
+				count = 6;
+			};
+			class BP_Kart : BaseVehicleSpawn
+			{
+				count = 4;
+			};
 		};
 		
 		class Low
@@ -37,7 +41,11 @@ class CfgVehicleSpawns
 			class BP_Van_01_transport: BaseVehicleSpawn
 			{
 				count = 2;
-			};			
+			};
+			class BP_Tractor_01_F: BaseVehicleSpawn
+			{
+				count = 2;
+			};
 			class BP_Hatchback_01_F : BaseVehicleSpawn
 			{
 				count = 5;

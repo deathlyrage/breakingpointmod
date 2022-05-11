@@ -11,7 +11,7 @@ _building2 enableDynamicSimulation true;
 _building3 = createVehicle ["Land_Barracks_05_F", [2861.39,497.528,0], [], 0, "CAN_COLLIDE"];
 _building3 setDir 89.347;
 _building3 setPos [2861.39,497.528,0];
-_building2 enableDynamicSimulation true;
+_building3 enableDynamicSimulation true;
 
 _building4 = createVehicle ["Land_Barracks_05_F", [2888.89,497.869,0], [], 0, "CAN_COLLIDE"];
 _building4 setDir 89.347;

@@ -247,6 +247,14 @@ class CfgVehicles
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"breakingpoint_ui\signs\sign_engineer.paa"};
 	};
+	class BP_Sign_Leo: Land_Billboard_F
+	{
+		scope = 2;
+		displayName = "Sign (iLeoChain)";
+		model = "\A3\Structures_F\Civ\InfoBoards\Billboard_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"breakingpoint_ui\signs\sign_leo.paa"};
+	};
 	class ReammoBox;
 	class BP_Bag_Base: ReammoBox
 	{
