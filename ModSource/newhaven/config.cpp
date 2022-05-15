@@ -140,7 +140,7 @@ class CfgWorlds
 		pictureShot = "\newhaven\ui_newhaven_ca.paa";
 		plateFormat = "MH$-####";
 		plateLetters = ABCDEGHIKLMNOPRSTVXZ;
-		author = "Aussie and Donnie. Made only for Breaking Point.";
+		author = "Aussie, updated by Donnie. Made only for Breaking Point.";
 		mapSize = 10240;
 		mapZone = 35;
 		longitude = 17.352;	// positive is east
@@ -205,7 +205,7 @@ class CfgWorlds
 			"Outlaws have their own custom faction chat channel. They obtain better starting backpacks at levels 2 and 3 and can build the highest carry capacity for storage objects in game.",
 			"Hunters have increased speed at level 3 and have the highest default clothing carry capacity in game."
 		};
-		startTime = 10:00;
+		startTime = 8:00;
 		startDate = 10/6/2035;
 		startWeather = 0.4;
 		startFog = 0.0;
