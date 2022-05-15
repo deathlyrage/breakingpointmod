@@ -35057,118 +35057,118 @@ class CfgVehicles
 		actionBegin1="OpenDoor_1";
 		actionEnd1="OpenDoor_1";
 	};
-	class Land_Shed_W03: Land_Shed_11_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=7.6399999;
-		class SimpleObject
-		{
-			eden=0;
-			animate[]=
-			{
-				
-				{
-					"door_1_rot",
-					0
-				},
-				
-				{
-					"door_1_locked_rot",
-					0
-				}
-			};
-			hide[]={};
-			verticalOffset=1.075;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Shed_11_F.jpg";
-		_generalMacro="Land_Shed_11_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_Shed_11_F0";
-		model="\A3\Structures_F_Enoch\Civilian\Sheds\Shed_11_F";
-		DLC="Enoch";
-		icon="iconObject_2x1";
-		editorCategory="EdCat_Structures_Enoch";
-		editorSubcategory="EdSubcat_Residential_Village";
-		vehicleClass="Structures_Village";
-		armor=100;
-		explosionShielding=4;
-		cost=10000;
-		numberOfDoors=1;
-		numberOfWindows=0;
-		destrType="DestructBuilding";
-		class DestructionEffects
-		{
-			class Ruin1
-			{
-				simulation="ruin";
-				type="\A3\Structures_F_Enoch\Civilian\Sheds\Shed_11_ruins_F.p3d";
-				position="";
-				intensity=1;
-				interval=1;
-				lifeTime=1;
-			};
-		};
-		class HitPoints
-		{
-		};
-		class Damage
-		{
-			tex[]={};
-			mat[]={};
-		};
-		class AnimationSources
-		{
-			class Door_1_sound_source
-			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
-				sound="OldWoodDoorsSound";
-				soundPosition="Door_1_trigger";
-			};
-			class Door_1_noSound_source
-			{
-				source="user";
-				initPhase=0;
-				animPeriod=1;
-			};
-			class Door_1_locked_source
-			{
-				source="user";
-				initPhase=0;
-				animPeriod=0.80000001;
-			};
-		};
-		class UserActions
-		{
-			class OpenDoor_1
-			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_O_DOOR";
-				position="Door_1_trigger";
-				priority=11;
-				actionNamedSel="Door_1_action";
-				radius=1.75;
-				aiMaxRange=5.25;
-				onlyForPlayer=0;
-				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 1, 1] call BIS_fnc_Door)";
-			};
-			class CloseDoor_1: OpenDoor_1
-			{
-				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
-				displayName="$STR_DN_OUT_C_DOOR";
-				priority=11;
-				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
-				statement="([this, 1, 0] call BIS_fnc_Door)";
-			};
-		};
-		actionBegin1="OpenDoor_1";
-		actionEnd1="OpenDoor_1";
-	};
+//	class Land_Shed_W03: Land_Shed_11_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=7.6399999;
+//		class SimpleObject
+//		{
+//			eden=0;
+//			animate[]=
+//			{
+//				
+//				{
+//					"door_1_rot",
+//					0
+//				},
+//				
+//				{
+//					"door_1_locked_rot",
+//					0
+//				}
+//			};
+//			hide[]={};
+//			verticalOffset=1.075;
+//			verticalOffsetWorld=0;
+//			init="''";
+//		};
+//		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Shed_11_F.jpg";
+//		_generalMacro="Land_Shed_11_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_C_CfgVehicles_Land_Shed_11_F0";
+//		model="\A3\Structures_F_Enoch\Civilian\Sheds\Shed_11_F";
+//		DLC="Enoch";
+//		icon="iconObject_2x1";
+//		editorCategory="EdCat_Structures_Enoch";
+//		editorSubcategory="EdSubcat_Residential_Village";
+//		vehicleClass="Structures_Village";
+//		armor=100;
+//		explosionShielding=4;
+//		cost=10000;
+//		numberOfDoors=1;
+//		numberOfWindows=0;
+//		destrType="DestructBuilding";
+//		class DestructionEffects
+//		{
+//			class Ruin1
+//			{
+//				simulation="ruin";
+//				type="\A3\Structures_F_Enoch\Civilian\Sheds\Shed_11_ruins_F.p3d";
+//				position="";
+//				intensity=1;
+//				interval=1;
+//				lifeTime=1;
+//			};
+//		};
+//		class HitPoints
+//		{
+//		};
+//		class Damage
+//		{
+//			tex[]={};
+//			mat[]={};
+//		};
+//		class AnimationSources
+//		{
+//			class Door_1_sound_source
+//			{
+//				source="user";
+//				initPhase=0;
+//				animPeriod=1;
+//				sound="OldWoodDoorsSound";
+//				soundPosition="Door_1_trigger";
+//			};
+//			class Door_1_noSound_source
+//			{
+//				source="user";
+//				initPhase=0;
+//				animPeriod=1;
+//			};
+//			class Door_1_locked_source
+//			{
+//				source="user";
+//				initPhase=0;
+//				animPeriod=0.80000001;
+//			};
+//		};
+//		class UserActions
+//		{
+//			class OpenDoor_1
+//			{
+//				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+//				displayName="$STR_DN_OUT_O_DOOR";
+//				position="Door_1_trigger";
+//				priority=11;
+//				actionNamedSel="Door_1_action";
+//				radius=1.75;
+//				aiMaxRange=5.25;
+//				onlyForPlayer=0;
+//				condition="((this animationSourcePhase 'Door_1_sound_source') < 0.5) && (cameraOn isKindOf 'CAManBase')";
+//				statement="([this, 1, 1] call BIS_fnc_Door)";
+//			};
+//			class CloseDoor_1: OpenDoor_1
+//			{
+//				displayNameDefault="<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='2.5' />";
+//				displayName="$STR_DN_OUT_C_DOOR";
+//				priority=11;
+//				condition="((this animationSourcePhase 'Door_1_sound_source') >= 0.5) && ((this getVariable ['bis_disabled_Door_1', 0]) != 1) && (cameraOn isKindOf 'CAManBase')";
+//				statement="([this, 1, 0] call BIS_fnc_Door)";
+//			};
+//		};
+//		actionBegin1="OpenDoor_1";
+//		actionEnd1="OpenDoor_1";
+//	};
 	class Land_Shed_W01: Land_Shed_09_F
 	{
 		author="$STR_A3_Bohemia_Interactive";

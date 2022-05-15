@@ -2251,19 +2251,19 @@
 		{
 		};
 	};
-	class Land_Shed_W03: Farm
-	{
-		lootMin = 0;
-		lootMax = 1;
-		lootPos[] =
-		{
-			{-1.23242,2.08032,-0.777777},
-			{1.20776,2.08716,-0.670959}
-		};
-		zombiePos[] =
-		{
-		};
-	};
+//	class Land_Shed_W03: Farm
+//	{
+//		lootMin = 0;
+//		lootMax = 1;
+//		lootPos[] =
+//		{
+//			{-1.23242,2.08032,-0.777777},
+//			{1.20776,2.08716,-0.670959}
+//		};
+//		zombiePos[] =
+//		{
+//		};
+//	};
 
 	class Land_Tovarna2: A2IndustrialSmall {
 	  lootMin = 2;
