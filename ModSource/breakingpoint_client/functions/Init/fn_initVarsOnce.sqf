@@ -337,7 +337,6 @@ BP_Houses =
 	//LIVONIA
 	"Land_Camp_House_01_brown_F",
 	"Land_House_1W01_F",
-	"Land_House_1W11_F",
 	"Land_House_1W02_F",
 	"Land_House_1W03_F",
 	"Land_House_1W04_F",
@@ -347,6 +346,7 @@ BP_Houses =
 	"Land_House_1W08_F",
 	"Land_House_1W09_F",
 	"Land_House_1W10_F",
+	"Land_House_1W11_F",
 	"Land_House_1W12_F",
 	"Land_House_1W08_F",
 	"Land_House_2W01_F",

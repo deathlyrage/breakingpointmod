@@ -3288,12 +3288,12 @@ class CfgWeapons
 		htMin = 7;
 		inertia = 0.6;
 		initSpeed = 900;
-		magazines[] = {"BP_30Rnd_762x39_Mag_F","BP_30Rnd_762x39_Mag_Green_F","BP_30Rnd_762x39_Mag_Tracer_F","BP_30Rnd_762x39_Mag_Tracer_Green_F"};
+		magazines[] = {"30Rnd_762x39_AK12_Mag_F"};
 		maxZeroing = 1000;
 		model = "\A3\Weapons_F_Exp\Rifles\AK12\AK12_F.p3d";
 		modes[] = {"FullAuto","Burst","Single"};
 		recoil = "recoil_ak12";
-		reloadAction = "GestureReloadAKM";
+		reloadAction = "GestureReloadEBR";
 		reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Rifle_AK12\AK12_reload",1,1,10};
 		scope = 0;
 		class Burst : Mode_Burst { //["Mode_SemiAuto"]
@@ -3444,7 +3444,7 @@ class CfgWeapons
 		cursor = "mg";
 		descriptionShort = "Light Machine Gun<br />Caliber: 5.56x45 mm";
 		dexterity = 1.3;
-		displayName = "";
+		displayName = "Mk46 Mod 1";
 		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Machineguns\SyndikatLMG\SyndikatLMG_dry",0.562341,1,10};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Machineguns\LMG_03\Data\Anim\LIM.rtm"};
 		hiddenSelections[] = {"Camo_1","Camo_2"};
@@ -3486,7 +3486,7 @@ class CfgWeapons
 			};
 		};
 		class Library {
-			libTextDesc = "The light infantry machine gun 85 is an iteration of a special purpose weapon. Combining a high fire-rate and relatively easy maintenance with high reliability, it was adopted by several armies around the world. It features standard accessory rails and 200-round box 5.56x45 mm magazines. Its weight is 7.1 kilograms which is less than its predecessors.";
+			libTextDesc = "The Mk46 Mod 1 is an iteration of a special purpose weapon. Combining a high fire-rate and relatively easy maintenance with high reliability, it was adopted by several armies around the world. It features standard accessory rails and 200-round box 5.56x45 mm magazines. Its weight is 7.1 kilograms which is less than its predecessors.";
 		};
 		class WeaponSlotsInfo  
 		{
@@ -4808,7 +4808,7 @@ class CfgWeapons
 			};
 			class MuzzleSlot : SlotInfo 
 			{
-				compatibleItems[] = {"BP_muzzle_snds_L"};
+				compatibleItems[] = {"BP_m9qd","BP_gemtech9","BP_muzzle_snds_L","BP_Mk12Sup"};
 				iconPosition[] = {0,0.45};
 				iconScale = 0.2;
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";

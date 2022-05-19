@@ -527,6 +527,15 @@ class CfgWeapons
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 4;
+					passThrough = 0.9;
+				};
+			};
 		};
 	};
 	class BP_Guardian_1_Z: Uniform_Base
@@ -557,6 +566,15 @@ class CfgWeapons
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 6;
+					passThrough = 0.9;
+				};
+			};
 		};
 	};
 	class BP_Guardian_2_Z: Uniform_Base
@@ -587,6 +605,15 @@ class CfgWeapons
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 8;
+					passThrough = 0.9;
+				};
+			};
 		};
 	};
 	class BP_Guardian_3_Z: Uniform_Base
