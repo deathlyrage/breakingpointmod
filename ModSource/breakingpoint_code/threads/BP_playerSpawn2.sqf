@@ -140,7 +140,7 @@ waitUntil
 	} else {
 
 		//Disable Chat
-		showChat false;
+//		showChat false;
 
 		//Calculate Hunger
 		if !(_inVehicle) then {
@@ -279,7 +279,7 @@ waitUntil
 	if (VoN_isOn) then {
 		if ((VoN_currentTxt == "Alliance") or (VoN_currentTxt == "Outlaw") or (VoN_currentTxt == "Hunter") or (VoN_currentTxt == "Engineer") or (VoN_currentTxt == "Watchers") or (VoN_currentTxt == localize "str_channel_group")) then 
 		{
-			cutText ["Don't use VON on Faction Specific or Global Channels.", "PLAIN DOWN"];
+			cutText ["Your faction cannot use faction voice! STOP OR YOU WILL GET KICKED!", "PLAIN DOWN"];
 			VoN_Time = VoN_Time + 1;
 			if (VoN_Time > 2) then { endMission "END1"; };
 		};

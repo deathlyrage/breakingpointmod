@@ -1717,13 +1717,13 @@ class CfgWeapons
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 8;
+					armor = 12;
 					passThrough = 0.4;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 8;
+					armor = 10;
 					passThrough = 0.4;
 				};
 				class Abdomen

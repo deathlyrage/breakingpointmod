@@ -590,7 +590,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Add To Group */
-	if (_isPlayer and !_isInMyGroup and !_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo and _sameFaction) then {
+	if (_isPlayer and !_isInMyGroup and _isAlive and _isPlayerChar and _canDo and _sameFaction) then {
 		if (s_player_groupAdd < 0) then {
 			s_player_groupAdd = player addAction ["Add To Group", { _this call BP_fnc_groupAdd; },_cursorTarget, 1, false, true, "", ""];
 		};
@@ -600,7 +600,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Take Hostage */
-	if (_isPlayer and !_isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isHostage and _hasTape and !_isUnconscious and _isPlayerChar and _canDo) then {
+	if (_isPlayer and !_isTargetHostage and _isAlive and !_isHostage and _hasTape and !_isUnconscious and _isPlayerChar and _canDo) then {
 		if (s_player_hostageAdd < 0) then {
 			s_player_hostageAdd = player addAction ["Take Hostage", { _this spawn BP_fnc_hostageAdd; },_cursorTarget, 1, false, true, "", ""];
 		};
@@ -610,7 +610,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Release Hostage */
-	if (_isPlayer and _isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isHostage and _isPlayerChar and _canDo) then {
+	if (_isPlayer and _isTargetHostage and _isAlive and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_hostageDel < 0) then {
 			s_player_hostageDel = player addAction ["Release Hostage", { _this spawn BP_fnc_hostageDel; },_cursorTarget, 0, false, true, "", ""];
 		};
@@ -620,7 +620,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Hostage Food */
-	if (_isPlayer and _isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
+	if (_isPlayer and _isTargetHostage and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_hostageFood < 0) then {
 			s_player_hostageFood = player addAction ["Give Food", { _this spawn BP_fnc_hostageFood; },_cursorTarget, 0, false, true, "", ""];
 		};
@@ -630,7 +630,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Hostage Water */
-	if (_isPlayer and _isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
+	if (_isPlayer and _isTargetHostage and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_hostageWater < 0) then {
 			s_player_hostageWater = player addAction ["Give Water", { _this spawn BP_fnc_hostageWater; },_cursorTarget, 0, false, true, "", ""];
 		};
@@ -640,7 +640,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Player Food */
-	if (_isPlayer and !_isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
+	if (_isPlayer and !_isTargetHostage and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_playerFood < 0) then {
 			s_player_playerFood = player addAction ["Give Food", { _this spawn BP_fnc_playerFood; },_cursorTarget, 0, false, true, "", ""];
 		};
@@ -650,7 +650,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Player Water */
-	if (_isPlayer and !_isTargetHostage and !_isUndead and !_targetUndead and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
+	if (_isPlayer and !_isTargetHostage and _isAlive and !_isWater and !_isHostage and _isPlayerChar and _canDo) then {
 		if (s_player_playerWater < 0) then {
 			s_player_playerWater = player addAction ["Give Water", { _this spawn BP_fnc_playerWater; },_cursorTarget, 0, false, true, "", ""];
 		};

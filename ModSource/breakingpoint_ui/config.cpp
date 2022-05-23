@@ -992,3 +992,114 @@ class CfgCommunicationMenu {
 	delete SupplyDropBase;
 	delete TransportBase;
 };
+
+class CfgVideoOptions
+{
+	class Visibility
+	{
+		minValue = 500;
+		maxValue = 10000;
+	};
+	class ObjectsVisibility
+	{
+		minValue = 500;
+		maxValue = 5000;
+	};
+	class ShadowsVisibility
+	{
+		minValue = 30;
+		maxValue = 100;
+	};
+	class PiP
+	{
+		class Disabled
+		{
+			text = "Disabled";
+			value = 0;
+		};
+		class VeryLow
+		{
+			text = "Low";
+			value = 500;
+		};
+		class Low
+		{
+			text = "Standard";
+			value = 800;
+		};
+		delete High;
+		delete Normal;
+		delete VeryHigh;
+		delete Ultra;
+	};
+	class TextureQuality
+	{
+		class VeryLow
+		{
+			text = "Very Low";
+			mipBias = 13;
+			vramNeeded = 0;
+		};
+	};
+	class TerrainQuality
+	{
+		class Low
+		{
+			terrainGrid = 25;
+			text = "Standard";
+		};
+		class Normal
+		{
+			terrainGrid = 12.5;
+			text = "High";
+		};
+		class High
+		{
+			terrainGrid = 6.25;
+			text = "Very High";
+		};
+		class VeryHigh
+		{
+			terrainGrid = 3.125;
+			text = "Ultra";
+		};
+		delete VeryLow;
+	};
+	class WaterSSReflectionsQuality
+	{
+		delete Normal;
+		delete High;
+		class Disabled
+		{
+			text = "Disabled";
+			value = 0;
+		};
+		class Low
+		{
+			text = "Standard";
+			value = 0.3;
+		};
+	};
+	class ShadowQuality
+	{
+		delete Disabled;
+	};
+	class ATOCQuality
+	{
+		class Disabled
+		{
+			grass = 0;
+			newTrees = 0;
+			oldTrees = 0;
+			other = 0;
+			text = "Disabled";
+		};
+		delete All;
+		delete Grass;
+		delete OldTreeGrass;
+		delete OldTreeNewTree;
+		delete OldTree;
+		delete NewTreeGrass;
+		delete NewTree;
+	};
+};

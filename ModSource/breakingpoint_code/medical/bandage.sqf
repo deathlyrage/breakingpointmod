@@ -24,8 +24,8 @@ if (_unit == player) then {
 	_needsFieldBandage = _unit getVariable ["med_isCardiac",false];
 };
 
-if (_needsSurgery) exitWith { cutText ["Your wounds are too severe, you need Surgery.", "PLAIN DOWN"]; };
-if (_needsFieldBandage) exitWith { cutText ["Your wounds are too severe, you need a Military Field Dressing.", "PLAIN DOWN"]; };
+if (_needsSurgery) exitWith { cutText ["<t font='Sketch' color='#FF2915' size='2'>Your wounds are too severe, you need Surgery!</t><br/>", "PLAIN DOWN", -1, true, true];};
+if (_needsFieldBandage) exitWith { cutText ["<t font='Sketch' color='#FFFFFF' size='2'>Your wounds are too severe, you need a Military Field Dressing!</t><br/>", "PLAIN DOWN", -1, true, true];};
 
 call BP_fnc_medicalRemoveMedicActions;
 

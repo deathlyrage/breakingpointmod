@@ -13390,8 +13390,8 @@ class CfgWeapons
 		scope = 2;
 		maxZeroing = 1000;
 		type = 1;
-		displayName = "M249 SAW";
-		descriptionUse = "M249 SAW";
+		displayName = "M249";
+		descriptionUse = "SAW";
 		descriptionShort = "5.56mm Light Machinegun";
 		magazines[] = {"BP_200Rnd_556x45_MINIMI", "BP_200Rnd_556x45_TRACER", "BP_556x45_Stanag", "BP_556x45_StanagSD", "BP_556x45_StanagM855A1", "BP_556x45_StanagMK262", "BP_556old_Stanag", "BP_5Rnd_223_Mag", "BP_5Rnd_223BTHP_mag", "BP_556x45_Rubber"};
 		picture = "\breakingpoint_weapons\icons\gear_m249_rifle_x_ca.paa";
