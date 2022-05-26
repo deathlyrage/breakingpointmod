@@ -34,9 +34,9 @@
 class CfgBuildingLoot 
 {
 	class Default {
-		zombieChance = 0.2;
+		zombieChance = 0.1;
 		minRoaming = 0;
-		maxRoaming = 2;
+		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0;
 		lootPos[] = {};
@@ -55,7 +55,7 @@ class CfgBuildingLoot
 		};
 	};
 	class Residential: Default {
-		zombieChance = 0.2;
+		zombieChance = 0.15;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -83,7 +83,7 @@ class CfgBuildingLoot
 		};		
 	};
 	class Residential2: Default {
-		zombieChance = 0.2;
+		zombieChance = 0.15;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -188,7 +188,7 @@ class CfgBuildingLoot
 		};		
 	};
 	class Windmill: Default {
-		zombieChance = 0.5;
+		zombieChance = 0.4;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -238,7 +238,7 @@ class CfgBuildingLoot
 		zombieClass[] = {"BPZombie_Construction1","BPZombie_Construction2","BPZombie_Construction3","BPZombie_Construction4","BPZombie_Mechanic","BPZombie_EngineerF","BPZombie_Worker"};
 		minRoaming = 0;
 		maxRoaming = 2;
-		lootChance = 0.50;
+		lootChance = 0.40;
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_CardboardBox_3","object","Generic"},
@@ -277,7 +277,7 @@ class CfgBuildingLoot
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		minRoaming = 0;
 		maxRoaming = 1;
-		lootChance = 0.50;
+		lootChance = 0.4;
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_CardboardBox_3","object","Generic"},
@@ -293,7 +293,7 @@ class CfgBuildingLoot
 		};		
 	};	
 	class MilitaryGeneral: Default {
-		zombieChance = 1;
+		zombieChance = 0.5;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -319,7 +319,7 @@ class CfgBuildingLoot
 		};		
 	};
 	class MilitarySpecial: Default {
-		zombieChance = 1;
+		zombieChance = 0.5;
 		minRoaming = 0;
 		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -347,9 +347,9 @@ class CfgBuildingLoot
 		};		
 	};	
 	class MilitaryAirfield: Default {
-		zombieChance = 1;
-		minroaming = 5;
-		maxRoaming = 7;
+		zombieChance = 0.5;
+		minroaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -379,7 +379,7 @@ class CfgBuildingLoot
 		};		
 	};
 	class MilitaryTower: Default {
-		zombieChance = 1;
+		zombieChance = 0.5;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -399,9 +399,9 @@ class CfgBuildingLoot
 		};		
 	};
 	class MilitaryRanger: Default {
-		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		zombieChance = 0.5;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -424,11 +424,11 @@ class CfgBuildingLoot
 	};
 
 	class GhostHotelAcc: Default {
-		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		zombieChance = 0.5;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
-		lootChance = 0.05;
+		lootChance = 0.07;
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_AmmoBoxNew","object","HotelAcc"},
@@ -447,11 +447,11 @@ class CfgBuildingLoot
 	};
 	
 	class GhostHotelWpn: Default {
-		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		zombieChance = 0.5;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
-		lootChance = 0.05;
+		lootChance = 0.07;
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_AmmoBoxNew","object","HotelAcc"},
@@ -473,9 +473,9 @@ class CfgBuildingLoot
 	
 //HELI CRASH TABLES		
 	class MilitarCrash: Default {
-		zombieChance = 1;
-		minRoaming = 8;
-		maxRoaming = 17;
+		zombieChance = 0.5;
+		minRoaming = 0;
+		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
 		lootChance = 1;
 		lootPos[] = {};
@@ -538,9 +538,9 @@ class CfgBuildingLoot
 		};
 	};
 	class HeliCrash: Default {
-		zombieChance = 1;
-		minRoaming = 8;
-		maxRoaming = 17;
+		zombieChance = 0.5;
+		minRoaming = 0;
+		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
 		lootChance = 0.9;
 		lootPos[] = {};
@@ -633,8 +633,8 @@ class CfgBuildingLoot
 	};
 	class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
-		minRoaming = 8;
-		maxRoaming = 17;
+		minRoaming = 0;
+		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
 		lootChance = 0.8;
 		lootPos[] = {};
@@ -758,8 +758,8 @@ class CfgBuildingLoot
 	};
 	class Castle: Default {
 		zombieChance = 0.4;
-		minRoaming = 1;
-		maxRoaming = 4;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.75;
 		lootPos[] = {};
@@ -788,9 +788,9 @@ class CfgBuildingLoot
 		};
 	};
 	class AmmoPallet4: Default {
-		zombieChance = 0;
+		zombieChance = 0.2;
 		minRoaming = 0;
-		maxRoaming = 0;
+		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.85;
 		lootPos[] = {};
@@ -805,8 +805,8 @@ class CfgBuildingLoot
 	};
 	class ApexMilBox1: Default {
 		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		minRoaming = 1;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.50;
 		lootPos[] = {};
@@ -828,8 +828,8 @@ class CfgBuildingLoot
 	
 	class ApexMilBox2: Default {
 		zombieChance = 1;
-		minRoaming = 20;
-		maxRoaming = 20;
+		minRoaming = 1;
+		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.50;
 		lootPos[] = {};
@@ -876,9 +876,9 @@ class CfgBuildingLoot
 
 	class CivilCrash: Default 
 	{
-		zombieChance = 1;
-		minRoaming = 10;
-		maxRoaming = 25;
+		zombieChance = 0.5;
+		minRoaming = 1;
+		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 1;
 		lootPos[] = {};
@@ -1144,8 +1144,8 @@ class CfgBuildingLoot
 //A2 MILITARY CASTLE	
 	class A2MilitaryCastle: Default {
 		zombieChance = 0.5;
-		minRoaming = 2;
-		maxRoaming = 5;
+		minRoaming = 1;
+		maxRoaming = 4;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.25;
 		lootPos[] = {};
@@ -1165,8 +1165,8 @@ class CfgBuildingLoot
 //A2 MILITARY DEERSTAND	
 	class A2MilitaryDeerstand: Default {
 		zombieChance = 0.5;
-		minRoaming = 2;
-		maxRoaming = 5;
+		minRoaming = 0;
+		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.25;
 		lootPos[] = {};
@@ -1188,7 +1188,7 @@ class CfgBuildingLoot
 	class A2MilitaryCamp: Default {
 		zombieChance = 0.2;
 		minRoaming = 0;
-		maxRoaming = 5;
+		maxRoaming = 3;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -1209,8 +1209,8 @@ class CfgBuildingLoot
 	};	
 	class A2MilitaryVanWreck: Default {
 		zombieChance = 0.5;
-		minRoaming = 1;
-		maxRoaming = 5;
+		minRoaming = 0;
+		maxRoaming = 3;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
@@ -1233,8 +1233,8 @@ class CfgBuildingLoot
 	};		
 	class A2MilitaryBarracks: Default {
 		zombieChance = 0.5;
-		minRoaming = 10;
-		maxRoaming = 20;
+		minRoaming = 1;
+		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
@@ -1259,8 +1259,8 @@ class CfgBuildingLoot
 	};
 	class A2MilitaryATC: Default {
 		zombieChance = 0.5;
-		minRoaming = 6;
-		maxRoaming = 12;
+		minRoaming = 0;
+		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
@@ -1289,8 +1289,8 @@ class CfgBuildingLoot
 	};	
 	class A2MilitaryRadioTower: Default {
 		zombieChance = 0.5;
-		minRoaming = 5;
-		maxRoaming = 10;
+		minRoaming = 0;
+		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
@@ -1307,8 +1307,8 @@ class CfgBuildingLoot
 	};
 	class A2MilitaryPlaneWreck: Default {
 		zombieChance = 0.5;
-		minRoaming = 6;
-		maxRoaming = 12;
+		minRoaming = 0;
+		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.20;
 		lootPos[] = {};
