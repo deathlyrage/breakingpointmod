@@ -1382,8 +1382,8 @@ class CfgMagazines
 		scope = 2;
 		refillable = 1;
 		sfx = "drink";
-		displayName = "Canteen (Full)";
-		descriptionShort = "Can be boiled on a campfire.";
+		displayName = "Canteen (Dirty)";
+		descriptionShort = "Can be boiled on a campfire to purify.";
 		model = "\a3\structures_f_epa\Items\Food\Canteen_F.p3d";
 		picture = "\breakingpoint\textures\icons\bp_waterbottle_ca.paa";
 		mass = 5;

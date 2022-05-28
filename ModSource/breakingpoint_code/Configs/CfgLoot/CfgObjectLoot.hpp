@@ -1978,7 +1978,7 @@ class CfgObjectLoot {
 			{"optic_holosight","toolbelt"},
 			{"V_Rangemaster_belt_BP","vest"},
 			{"BlueprintCrate1","magazine"},
-			{"ItemBlueprint_RockStash","magazine"},
+			{"BlueprintRockStash","magazine"},
 			{"V_HarnessOGL_brn_BP","vest"},
 			{"BP_gemtech9","toolbelt"},
 			{"ItemSurgeryKit","toolbelt"},
