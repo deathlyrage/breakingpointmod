@@ -60,7 +60,7 @@ class CfgMods
 		author = "Deathlyrage";
 		hidePicture = 1;
 		hideName = 1;
-		version = "0.32";
+		version = "0.33";
 	};
 };
 
@@ -315,5 +315,14 @@ class ImpactEffectsBlood {
 		intensity = 1;
 		interval = 1;
 		lifeTime = 0.4;
+	};
+};
+class CfgSkeletonParameters
+{
+	class OFP2_ManSkeleton
+	{
+		pivotsModel = "A3\anims_f\data\skeleton\SkeletonPivots.p3d";
+		ragdoll = "Soldier";
+		weaponBone = "";
 	};
 };

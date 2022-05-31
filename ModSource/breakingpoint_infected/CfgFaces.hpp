@@ -7,12 +7,12 @@
 	Alderon Games Pty Ltd
 */
 
-class CfgFaces {
+class CfgFaces
+{
 	class Default;	// External class reference
-
-	class Man_A3 : Default {
+	class Man_A3 : Default 
+	{
 		class Default;	// External class reference
-
 		class BP_Zombie1 : Default {
 			name = "BP_Zombie1";
 			displayname = "BP Zombie 1";

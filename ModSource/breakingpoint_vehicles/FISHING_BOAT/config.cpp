@@ -321,12 +321,6 @@ class CfgVehicles
 		{
 			tex[]={};
 			mat[]={
-				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_001.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_001_damage.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_001_destruct.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_002.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_002_damage.rvmat",
-				"breakingpoint_vehicles\FISHING_BOAT\data\fishboat_002_destruct.rvmat"
 			};
 		};
 	};
