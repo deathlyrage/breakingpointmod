@@ -53888,211 +53888,27 @@ class CfgVehicles
 	};
 	class Land_Ind_Workshop01_03: Land_Workshop_03_grey_F
 	{
-		author="$STR_A3_Bohemia_Interactive";
+		author = "$STR_A3_Bohemia_Interactive";
 		class SimpleObject
 		{
-			eden=0;
-			animate[]=
-			{
-				
-				{
-					"door_1_rot",
-					0
-				},
-				
-				{
-					"door_1_handle_rot_1",
-					0
-				},
-				
-				{
-					"door_1_handle_rot_2",
-					0
-				},
-				
-				{
-					"door_1_locked_rot",
-					0
-				},
-				
-				{
-					"door_1_handle_locked_rot",
-					0
-				},
-				
-				{
-					"door_2_rot",
-					0
-				},
-				
-				{
-					"door_2_handle_rot_1",
-					0
-				},
-				
-				{
-					"door_2_handle_rot_2",
-					0
-				},
-				
-				{
-					"door_2_locked_rot",
-					0
-				},
-				
-				{
-					"door_2_handle_locked_rot",
-					0
-				},
-				
-				{
-					"door_3_rot",
-					0
-				},
-				
-				{
-					"door_3_handle_rot_1",
-					0
-				},
-				
-				{
-					"door_3_handle_rot_2",
-					0
-				},
-				
-				{
-					"door_3_locked_rot",
-					0
-				},
-				
-				{
-					"door_3_handle_locked_rot",
-					0
-				},
-				
-				{
-					"door_4_rot",
-					0
-				},
-				
-				{
-					"door_4_locked_rot",
-					0
-				},
-				
-				{
-					"door_5_rot",
-					0
-				},
-				
-				{
-					"door_5_locked_rot",
-					0
-				},
-				
-				{
-					"door_6_rot",
-					0
-				},
-				
-				{
-					"door_6_handle_rot_1",
-					0
-				},
-				
-				{
-					"door_6_handle_rot_2",
-					0
-				},
-				
-				{
-					"door_6_locked_rot",
-					0
-				},
-				
-				{
-					"door_6_handle_locked_rot",
-					0
-				},
-				
-				{
-					"glass_1_hide",
-					0
-				},
-				
-				{
-					"glass_1_unhide",
-					0
-				},
-				
-				{
-					"glass_2_hide",
-					0
-				},
-				
-				{
-					"glass_2_unhide",
-					0
-				},
-				
-				{
-					"glass_3_hide",
-					0
-				},
-				
-				{
-					"glass_3_unhide",
-					0
-				},
-				
-				{
-					"glass_4_hide",
-					0
-				},
-				
-				{
-					"glass_4_unhide",
-					0
-				},
-				
-				{
-					"glass_5_hide",
-					0
-				},
-				
-				{
-					"glass_5_unhide",
-					0
-				}
-			};
-			hide[]={};
-			verticalOffset=1.174;
-			verticalOffsetWorld=0;
-			init="''";
+			eden = 0;
+			animate[] = {{"door_1_rot",0},{"door_1_handle_rot_1",0},{"door_1_handle_rot_2",0},{"door_1_locked_rot",0},{"door_1_handle_locked_rot",0},{"door_2_rot",0},{"door_2_handle_rot_1",0},{"door_2_handle_rot_2",0},{"door_2_locked_rot",0},{"door_2_handle_locked_rot",0},{"door_3_rot",0},{"door_3_handle_rot_1",0},{"door_3_handle_rot_2",0},{"door_3_locked_rot",0},{"door_3_handle_locked_rot",0},{"door_4_rot",0},{"door_4_locked_rot",0},{"door_5_rot",0},{"door_5_locked_rot",0},{"door_6_rot",0},{"door_6_handle_rot_1",0},{"door_6_handle_rot_2",0},{"door_6_locked_rot",0},{"door_6_handle_locked_rot",0},{"glass_1_hide",0},{"glass_1_unhide",0},{"glass_2_hide",0},{"glass_2_unhide",0},{"glass_3_hide",0},{"glass_3_unhide",0},{"glass_4_hide",0},{"glass_4_unhide",0},{"glass_5_hide",0},{"glass_5_unhide",0}};
+			hide[] = {};
+			verticalOffset = 1.174;
+			verticalOffsetWorld = 0;
+			init = "''";
 		};
-		editorPreview="\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_03_grey_F.jpg";
-		_generalMacro="Land_Workshop_03_grey_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_C_CfgVehicles_Land_Workshop_03_grey_F0";
-		model="\A3\Structures_F_Enoch\Industrial\Houses\Workshop_03_grey_F.p3d";
-		DLC="Enoch";
+		editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_Workshop_03_grey_F.jpg";
+		_generalMacro = "Land_Workshop_03_grey_F";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "$STR_A3_C_CfgVehicles_Land_Workshop_03_grey_F0";
+		model = "\A3\Structures_F_Enoch\Industrial\Houses\Workshop_03_grey_F.p3d";
+		DLC = "Enoch";
 		class Damage
 		{
-			tex[]=
-			{
-				"a3\structures_f\data\windows\window_set_ca.paa",
-				"A3\Structures_F\Data\Windows\destruct_half_window_set_CA.paa"
-			};
-			mat[]=
-			{
-				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_03_int1_multi.rvmat",
-				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_int1_multi.rvmat",
-				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_int1_multi.rvmat",
-				"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_03_multi1.rvmat",
-				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_multi1.rvmat",
-				"A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_multi1.rvmat"
-			};
+			tex[] = {"a3\structures_f\data\windows\window_set_ca.paa","A3\Structures_F\Data\Windows\destruct_half_window_set_CA.paa"};
+			mat[] = {"A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_03_int1_multi.rvmat","A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_int1_multi.rvmat","A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_int1_multi.rvmat","A3\Structures_F_Enoch\Industrial\Houses\Data\ind_workshop01_03_multi1.rvmat","A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_multi1.rvmat","A3\Structures_F_Enoch\Industrial\Houses\Data\destruct_ind_workshop01_03_multi1.rvmat"};
 		};
 	};
 	class Land_Ind_Workshop01_04: Land_Workshop_04_grey_F
