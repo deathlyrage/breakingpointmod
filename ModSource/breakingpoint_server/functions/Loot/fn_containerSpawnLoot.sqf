@@ -34,6 +34,10 @@ for "_i" from 1 to _lootMinItems do
 	_cntWeights = count _weights;
 	_index = floor(random _cntWeights);
 	_index = _weights select _index;
+    if (_index >= count _itemTypes) then {
+        diag_log format ["ERROR :: Index was greater than array bounds, index: %1, types: %2, container: %3", _index, count _itemTypes, typeof _container];
+        continue;
+    };
 	_itemType = _itemTypes select _index;
 	
 	_itemType params ["_lootClass","_lootType"];

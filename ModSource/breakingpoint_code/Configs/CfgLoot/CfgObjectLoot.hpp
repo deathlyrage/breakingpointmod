@@ -15,14 +15,14 @@ class CfgObjectLoot {
 		hangPos[] = {};
 		vehPos[] = {};
 	};
-	class MilitaryGeneral : Default {};
-	class MilitarySpecial : Default {};
-	class MilitaryAirfield : Default {};
-	class MilitaryRanger : Default {};
-	class BystricaMilitaryCastle : Default {};
-	class BystricaMilitaryDeerstand : Default {};
-	class BystricaMilitaryCivilian : Default {};
-	class BystricaMilitaryCamp : Default {};
+//	class MilitaryGeneral : Default {};
+//	class MilitarySpecial : Default {};
+//	class MilitaryAirfield : Default {};
+//	class MilitaryRanger : Default {};
+//	class BystricaMilitaryCastle : Default {};
+//	class BystricaMilitaryDeerstand : Default {};
+//	class BystricaMilitaryCivilian : Default {};
+//	class BystricaMilitaryCamp : Default {};
 	
 	class Brick: Default {
 		lootChance = 1;
