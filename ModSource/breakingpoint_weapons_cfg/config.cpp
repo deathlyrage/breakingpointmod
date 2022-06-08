@@ -1338,195 +1338,6 @@ class CfgGesturesMale
 			leftHandIKCurve[]={};
 		};
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		class BP_Jump : Default {
 			variantsPlayer[] = {};
 			variantsAI[] = {};
@@ -4859,7 +4670,7 @@ class CfgWeapons
 		descriptionUse = "Old M4 Benelli Super 90";
 		reloadAction = "GestureReloadM4SSAS";
 		magazines[] = {"BP_8Rnd_Slug", "BP_8Rnd_Buckshot", "BP_8Rnd_MagBuckshot", "BP_2Rnd_Buckshot", "BP_2Rnd_Slug", "BP_2Rnd_MagBuckshot", "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\a3\Anims_F_Enoch\Data\Anim\handanims\HunterShotgun_01.rtm"};
 		inertia = 0.200000;
 		recoil = "recoil_ebr";
 		changeFiremodeSound[] = {};
@@ -4952,7 +4763,7 @@ class CfgWeapons
 		descriptionShort = "An old Remington pump action shotgun";
 		inertia = 0.210000; //Inertiachange, increaced.
 		descriptionUse = "Old Remington 870";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\a3\Anims_F_Enoch\Data\Anim\handanims\HunterShotgun_01.rtm"};
 		class WeaponSlotsInfo  
 		{
 		    mass = 85;
@@ -9560,7 +9371,7 @@ class CfgWeapons
 		descriptionUse = "M4A1 Assault Rifle";
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\UGL\Firemode_ugl",0.41622776,1.2,7};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		reloadAction = "GestureReloadMX";
 		descriptionShort = "M4 5.56mm Assault Rifle";
 		inertia = 0.22000; //Inertiachange, increased.
@@ -10337,7 +10148,7 @@ class CfgWeapons
 		displayName = "AR15 Rifle";
 		picture = "\breakingpoint_weapons\icons\gear_m16a2_rifle_x_ca.paa";
 		descriptionShort = "A poorly maintained civilian rifle";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		inertia = 0.230000;
 		initSpeed = -0.96;
 		modes[] = {"Single"};
@@ -10420,7 +10231,7 @@ class CfgWeapons
 		model = "\breakingpoint_weapons\models\M16\BP_m16a2.p3d";
 		displayName = "M16A2";
 		descriptionShort = "5.56mm Assault Rifle";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		inertia = 0.230000;
 		initSpeed = -0.97;
@@ -10995,7 +10806,7 @@ class CfgWeapons
 		descriptionUse = "HK G36 Carbine";
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\UGL\Firemode_ugl",0.41622776,1.2,7};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		reloadAction = "GestureReloadMX";
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\reloads\new_MX.wss", 0.31, 1, 30};
 		descriptionShort = "5.56mm Assault Rifle";
@@ -11117,7 +10928,7 @@ class CfgWeapons
 		descriptionShort = "Special Purpose Rifle derived from the M16";
 		//magazines[] = {"BP_556x45_StanagMK262", "BP_556x45_Stanag", "BP_556x45_StanagSD", "BP_556x45_StanagM855A1", "BP_556old_Stanag", "BP_5Rnd_223_Mag", "BP_5Rnd_223BTHP_mag", "BP_556x45_Rubber"};
 		picture = "\breakingpoint_weapons\icons\gear_mk12spr_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		inertia = 0.300000;
 		initSpeed = -1.01;
@@ -11228,7 +11039,7 @@ class CfgWeapons
 		descriptionShort = "Heavily modified Designated Marksman variant of the M16 customized for special operations";
 		//magazines[] = {"BP_556x45_StanagMK262", "BP_556x45_Stanag", "BP_556x45_StanagSD", "BP_556x45_StanagM855A1", "BP_556old_Stanag", "BP_5Rnd_223_Mag", "BP_5Rnd_223BTHP_mag", "BP_556x45_Rubber"};
 		picture = "\breakingpoint_weapons\icons\gear_mk12mod1_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		inertia = 0.280000;
 		initSpeed = -1.03;
@@ -11332,7 +11143,7 @@ class CfgWeapons
 		picture = "\breakingpoint_weapons\icons\gear_mp5_rifle_x_ca.paa";
 		discreteDistance[] = {50, 100, 150, 200};
 		discreteDistanceInitIndex = 0;
-		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\MX_cqc.rtm"};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Smgs\SMG_02\data\Anim\SMG_02.rtm"};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\UGL\Firemode_ugl",0.41622776,1.2,7};
 		inertia = 0.150000;
 		initSpeed = -1.10;
@@ -11639,7 +11450,7 @@ class CfgWeapons
 		picture = "\breakingpoint_weapons\icons\gear_enfieldcollector_rifle_x_ca.paa";
 		discreteDistance[] = {100, 200, 300, 400, 500, 600};
 		discreteDistanceInitIndex = 1;
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_10Rnd_303_Mag", "BP_10rnd_303_JSP_Mag"};
 		inertia = 0.40000; //Inertiachange, increased.
 		recoil = "recoil_ebr";
@@ -11750,7 +11561,7 @@ class CfgWeapons
 		descriptionShort = "A well maintained collectible high power WWI bolt action rifle";
 		model = "\breakingpoint_weapons\models\LeeEnfield\BP_LeeEnfieldK.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_enfieldk_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		inertia = 0.450000;
 		muzzles[] = {"this", "Bayonet"};		
 		class Bayonet: UGL_F 
@@ -11835,7 +11646,7 @@ class CfgWeapons
 		descriptionShort = "An old, poorly maintained high power WWI bolt action rifle";
 		model = "\breakingpoint_weapons\models\LeeEnfieldOld\BP_LeeEnfield_old.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_oldenfield_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_10Rnd_303_Mag", "BP_10Rnd_303_JSP_Mag"};
 		muzzles[] = {"this", "Butt"};
 		initSpeed = -0.92;
@@ -11904,7 +11715,7 @@ class CfgWeapons
 		descriptionShort = "A well maintained WWII infantry rifle";
 		model = "\breakingpoint_weapons\models\Garand\BP_Garand.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_garand_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_8Rnd_3006_Mag", "BP_8Rnd_3006M_Mag", "BP_5Rnd_3006_Mag", "BP_5Rnd_3006M_Mag"};
 		inertia = 0.390000;
 		recoil = "recoil_dmr_01";
@@ -12015,7 +11826,7 @@ class CfgWeapons
 		descriptionShort = "A well maintained WWII infantry rifle";
 		model = "\breakingpoint_weapons\models\Garand\BP_GarandK.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_garandk_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_8Rnd_3006_Mag", "BP_8Rnd_3006M_Mag", "BP_5Rnd_3006_Mag", "BP_5Rnd_3006M_Mag"};
 		inertia = 0.450000;
 		initSpeed = -0.98;
@@ -12175,7 +11986,7 @@ class CfgWeapons
 		descriptionShort = "Russian WWII high power rifle";
 		model = "\breakingpoint_weapons\models\SVT40\BP_SVT40.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_svt40_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_762x54_SVD", "BP_762x54_7N1_10rnd", "BP_762x54_7N13_10rnd"};
 		inertia = 0.350000;
 		recoil = "recoil_dmr_01";
@@ -12286,7 +12097,7 @@ class CfgWeapons
 		descriptionShort = "A classic lever rifle chambered for .45ACP";
 		model = "\breakingpoint_weapons\models\1866\BP_1866.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_1866_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_7Rnd_45acp", "BP_7Rnd_45JHP"};
 		inertia = 0.280000;
 		recoil = "recoil_mk20";
@@ -12383,7 +12194,7 @@ class CfgWeapons
 		descriptionShort = "A classic lever rifle chambered for .45ACP";
 		model = "\breakingpoint_weapons\models\1866\BP_1866_2.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_1866c_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_7Rnd_45JHP", "BP_7Rnd_45acp"};
 		inertia = 0.280000;
 		muzzles[] = {"this", "Butt"};
@@ -12478,7 +12289,7 @@ class CfgWeapons
 		descriptionShort = "A classic lever rifle chambered for .45-70";
 		model = "\breakingpoint_weapons\models\1866\BP_1886S.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_1886s_rifle_x_ca.paa";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		magazines[] = {"BP_8Rnd_45gov"};
 		inertia = 0.250000;
 		muzzles[] = {"this", "Butt"};
@@ -12666,7 +12477,7 @@ class CfgWeapons
 		descriptionShort = "30-06 bolt-action sniper rifle with Bayonet attachment";
 		magazines[] = {"BP_5Rnd_3006M_Mag", "BP_5Rnd_3006_Mag"};
 		inertia = 0.440000;
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		muzzles[] = {"this", "Bayonet"};		
 		class WeaponSlotsInfo  
 		{
@@ -13813,7 +13624,7 @@ class CfgWeapons
 		magazines[] = {"BP_20Rnd_3006_Mag", "BP_20Rnd_3006M_Mag", "BP_5Rnd_3006_Mag", "BP_5Rnd_3006M_Mag"};
 		picture = "\breakingpoint_weapons\icons\gear_bar_rifle_x_ca.paa";
 		model = "\breakingpoint_weapons\models\BAR\BP_BAR.p3d";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\UGL\Firemode_ugl",0.41622776,1.2,7};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\reloads\new_M200", 0.286684, 1, 30};
 		reloadAction = "GestureReloadEBR";
@@ -14453,7 +14264,7 @@ class CfgWeapons
 		displayname = "Artic Warfare Super Magnum";
 		reloadAction = "GestureReloadLRR";
 		descriptionShort = "Accuracy International .338 Lapua Magnum Sniper Rifle";
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		inertia = 0.290000;
 		recoil = "recoil_m320";
 		modes[] = {"Single", "far_optic1", "far_optic2"};		
@@ -14653,7 +14464,118 @@ class CfgWeapons
 			aiRateOfFireDistance = 1700;
 		};
 	};
-	
+	class BP_MAR10: Rifle_Long_Base_F
+	{
+		scope = 2;
+		maxZeroing = 2000;
+		model = "\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\DMR_02_F.p3d";
+		dexterity = 1.68;
+		picture = "\breakingpoint_ui\updatedimage\badnews.paa";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\DMR_02_01_dazzle_CO.paa","\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\Data\DMR_02_02_dazzle_CO.paa"};
+		DLC = "Mark";
+		magazines[] = {"BP_10Rnd_338Lapua_Mag"};
+		displayname = "Bad News";
+		reloadAction = "GestureReloadMXSniper";
+		recoil = "recoil_gm6";
+		descriptionShort = ".338 Lapua Magnum Sniper";
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\data\Anim\DMR_02.rtm"};
+		inertia = 0.9;
+		aimTransitionSpeed = 0.7;
+		modes[] = {"Single","far_optic1","far_optic2"};
+		class Single: Mode_SemiAuto
+		{
+			sounds[] = {"StandardSound"};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6",0.307946,1,10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7",0.307946,1,10};
+				soundClosure[] = {"closure1",0.5,"closure2",0.5};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {"\breakingpoint_jsrs\sounds\M107_s1.wav",1.05,1,3000};
+				begin2[] = {"\breakingpoint_jsrs\sounds\M107_s2.wav",1.05,1,3000};
+				begin3[] = {"\breakingpoint_jsrs\sounds\M107_s2.wav",1.15,1,3000};
+				soundBegin[] = {"begin1",0.34,"begin2",0.33,"begin3",0.33};
+			};
+			reloadTime = 0.24;
+			dispersion = 0.00044;
+			minRange = 2;
+			minRangeProbab = 0.3;
+			midRange = 350;
+			midRangeProbab = 0.7;
+			maxRange = 500;
+			maxRangeProbab = 0.05;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 500;
+		};
+		class far_optic1: Single
+		{
+			showToPlayer = 0;
+			minRange = 300;
+			minRangeProbab = 0.05;
+			midRange = 700;
+			midRangeProbab = 0.5;
+			maxRange = 1000;
+			maxRangeProbab = 0.05;
+			aiRateOfFire = 4;
+			aiRateOfFireDistance = 600;
+		};
+		class far_optic2: far_optic1
+		{
+			minRange = 1000;
+			minRangeProbab = 1;
+			midRange = 1500;
+			midRangeProbab = 1;
+			maxRange = 1700;
+			maxRangeProbab = 1;
+			aiRateOfFire = 2.5;
+			aiRateOfFireDistance = 1700;
+		};
+		class WeaponSlotsInfo
+		{
+			mass = 185;
+			allowedSlots[] = {};
+			class MuzzleSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class CowsSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {"optic_DMS_ghex_F","optic_SOS_khk_F","optic_LRPS","optic_LRPS_tna_F","BP_L14X","BP_M3AMRAD","BP_NXS","BP_M3A","BP_M3A2","BP_M3AN","BP_MRT","BP_PS22"};
+				iconScale = 0.1;
+			};
+			class PointerSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class UnderBarrelSlot: SlotInfo
+			{
+				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[] = {"BP_Harris"};
+				iconScale = 0.1;
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName = "SniperCloud";
+				positionName = "Usti hlavne";
+				directionName = "Konec hlavne";
+			};
+		};
+		reloadMagazineSound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_02_MAR10\DMR_02_reload",1,1,10};
+		reloadSound[] = {"\breakingpoint_jsrs\sounds\L115A3Bolt",0.306234,0.8,750};
+		drySound[] = {"A3\Sounds_F_Mark\arsenal\weapons\LongRangeRifles\DMR_02_MAR10\DMR_02_Dry_01",0.25118864,1,20};
+	};	
 	class BP_M24Spec: Rifle_Base_F_BP 
 	{
 		scope = 2;
@@ -14663,7 +14585,7 @@ class CfgWeapons
 		displayName = "M24A2 SpecOps";
 		descriptionshort = "Chambered for the powerful .300 Winchester Magnum round and customized for extreme accuracy.";
 		magazines[] = {"BP_10Rnd_300_Mag", "BP_10Rnd_300M_Mag", "BP_5Rnd_300_Mag", "BP_5Rnd_300M_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		inertia = 0.3125000;
 		initSpeed = -1.03;
 		recoil = "recoil_dmr_01";
@@ -14781,7 +14703,7 @@ class CfgWeapons
 		displayName = "M24A1 Camo";
 		descriptionshort = "Marine Corps 7.62mm bolt-action sniper rifle. Customized from the Remington Model 700.";
 		magazines[] = {"BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag","BP_10Rnd_762mk316_Mag","BP_10Rnd_762x51_Mag","BP_10Rnd_762m80a1_Mag","BP_10Rnd_762Rubber_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -14919,7 +14841,7 @@ class CfgWeapons
 		displayName = "Remington Model 700";
 		descriptionshort = "Classic Remington bolt-action sniper rifle. Civilian model.";
 		magazines[] = {"BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -15284,7 +15206,7 @@ class CfgWeapons
 		displayName = "USMC M40A5";
 		descriptionshort = "Marine Corps 7.62mm bolt-action sniper rifle. Heavily customized from the Remington Model 700.";
 		magazines[] = {"BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762m80a1_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -15532,7 +15454,7 @@ class CfgWeapons
 		displayName = "Old CZ-550";
 		descriptionshort = "A poorly maintained 30-06 Hunting Rifle";
 		magazines[] = {"BP_5Rnd_3006_Mag", "BP_5Rnd_3006M_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -15669,7 +15591,7 @@ class CfgWeapons
 		displayName = "CZ-452 Varmint";
 		descriptionshort = "Compact .22LR small game Hunting/Target Rifle";
 		magazines[] = {"BP_5Rnd_22_Mag", "BP_5Rnd_762Rubber_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -15796,7 +15718,7 @@ class CfgWeapons
 		displayName = "Ruger 10/22 Carbine";
 		descriptionshort = "Compact .22LR semi-automatic Hunting/Target Rifle";
 		magazines[] = {"BP_25Rnd_22_Mag", "BP_5Rnd_22_Mag", "BP_5Rnd_762Rubber_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -15919,7 +15841,7 @@ class CfgWeapons
 		descriptionshort = "Compact 5.56 semi-automatic Rifle";
 		magazines[] = {"BP_556x45_Stanag", "BP_556x45_Stanag_Tracer", "BP_556x45_StanagSD", "BP_556x45_StanagM855A1", "BP_556x45_StanagMK262", "BP_556old_Stanag", "BP_5Rnd_223_Mag", "BP_5Rnd_223BTHP_mag", "BP_556x45_Rubber"};
 		//handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M24.rtm"};
-		handAnim[] = {};		
+		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\AFGDMR.rtm"};	
 		//soundBullet[] = {"bullet1", 0.083000, "bullet2", 0.083000, "bullet3", 0.083000, "bullet4", 0.083000, "bullet5", 0.083000, "bullet6", 0.083000, "bullet7", 0.083000, "bullet8", 0.083000, "bullet9", 0.083000, "bullet10", 0.083000, "bullet11", 0.083000, "bullet12", 0.083000};
 		inertia = 0.257000;
 		recoil = "recoil_mk20";
@@ -16000,7 +15922,7 @@ class CfgWeapons
 		displayName = "CZ-MC550";
 		descriptionshort = "30-06 Hunting Rifle with a Walnut finish";
 		magazines[] = {"BP_5Rnd_3006_Mag", "BP_5Rnd_3006M_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		inertia = 0.365000;
 		recoil = "recoil_ebr";
 		modes[] = {"Single"};		
@@ -16131,7 +16053,7 @@ class CfgWeapons
 		displayName = "CZ-HA550 Hunter";
 		descriptionshort = "Precision hand crafted Hunting Rifle designed for big game hunting";
 		magazines[] = {"BP_5Rnd_300_Mag", "BP_5Rnd_300M_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -17549,7 +17471,7 @@ class CfgWeapons
 		displayName = "FNFAL";
 		descriptionshort = "Medium range 7.62mm NATO battle rifle";
 		magazines[] = {"BP_30Rnd_762x51_BPMag", "BP_30Rnd_762x51_M80A1", "BP_30Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_BPMag", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
-		handAnim[] = {};		
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		recoil = "recoil_ebr";
 		inertia = 0.328000;
 		initSpeed = -0.98;
@@ -17696,7 +17618,7 @@ class CfgWeapons
 		picture = "\breakingpoint_weapons\icons\gear_FNFALk_rifle_x_ca.paa";
 		displayName = "FNFAL w/Bayonet";
 		descriptionshort = "Medium range 7.62mm NATO battle rifle";
-		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\Bayonette_Idle1.rtm"};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		inertia = 0.346000;
 		muzzles[] = {"this", "Bayonet"};		
 		class Bayonet: UGL_F 
@@ -18261,7 +18183,7 @@ class CfgWeapons
 		displayName = "M14 DMR";
 		descriptionshort = "M14 Designated Marksman Rifle";
 		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
-		handAnim[] = {};		
+		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\AFGDMR.rtm"};
 		inertia = 0.300000;
 		initSpeed = -1.02;
 		recoil = "recoil_ebr";
@@ -18378,7 +18300,7 @@ class CfgWeapons
 		displayName = "M14 RIS DMR";
 		descriptionshort = "M14 RIS Designated Marksman Rifle";
 		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
-		handAnim[] = {};		
+		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\AFGDMR.rtm"};	
 		inertia = 0.250000;
 		initSpeed = -1.04;
 		recoil = "recoil_ebr";
@@ -18925,7 +18847,7 @@ class CfgWeapons
 		displayName = "M25 White Feather";
 		descriptionshort = "Customized M21 Designated Marksman Rifle";
 		magazines[] = {"BP_30Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_30Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
-		handAnim[] = {};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.891251, 1, 45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02", 0.891251, 1, 45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03", 0.891251, 1, 45};
@@ -19056,7 +18978,7 @@ class CfgWeapons
 		displayName = "M25 White Feather w/Bayonet";
 		descriptionshort = "Customized M21 Designated Marksman Rifle";
 		magazines[] = {"BP_30Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_30Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
-		handAnim[] = {};		
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_06\data\Anim\DMR_06.rtm"};	
 		inertia = 0.37500;
 		muzzles[] = {"this", "Bayonet"};		
 		class Bayonet: UGL_F 
@@ -19550,7 +19472,7 @@ class CfgWeapons
 		magazines[] = {"BP_9x39_Mag"};
 		reloadAction = "GestureReloadEBR";
 		picture = "\breakingpoint_ui\updatedimage\vss_ui.paa";
-		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\AFGDMR.rtm"};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Mark\LongRangeRifles\DMR_04\data\Anim\DMR_04.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.891251,1,45};
 		bullet2[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_02",0.891251,1,45};
 		bullet3[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_03",0.891251,1,45};

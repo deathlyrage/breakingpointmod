@@ -431,7 +431,7 @@ class CfgObjectLoot {
 			{"ItemZipDisk","magazine"},
 			{"ItemCards","magazine"},
 			{"HandGrenade","magazine"},
-			{"BP_SW44","weaponA"},
+			{"BP_MAR10","weapon"},
 			{"BP_M4_300MK","weaponA"},	
 			{"BP_100Rnd_127x99_box","magazine"}
 		};
@@ -489,7 +489,7 @@ class CfgObjectLoot {
 			0.07,	//TRASH
 			0.07,	//TRASH
 			0.05,	//NADE
-			0.04,    //BP_SW44
+			0.02,    //BADNEWS
 			0.04,    //BP_M4_300MK
 			0.02    //50Cal Box
 		};
@@ -1701,7 +1701,7 @@ class CfgObjectLoot {
 			{"BP_AR10","weapon"},
 			{"BP_SW45","weapon"},
 			{"BP_SUD_AK74M","weapon"},
-			{"BP_AK74U","weapon"},
+			{"BP_arifle_AKS_F","weapon"},
 			{"BP_M4Old","weapon"},
 			{"BP_M4","weaponA"},
 			{"BP_M4K","weapon"},
@@ -1904,7 +1904,7 @@ class CfgObjectLoot {
 			{"BP_MXM","weapon"},
 			{"BP_M24DES","weaponA"},
 			{"BP_M4_300","weaponA"},
-			{"BP_AK74U","weapon"},
+			{"BP_arifle_AKS_F","weapon"},
 			{"BP_M16a4","weapon"},
 			{"BP_SUD_AK108","weaponA"},
 			{"BP_SUD_AK109","weaponA"}
@@ -1977,7 +1977,7 @@ class CfgObjectLoot {
 			{"SmokeShellRed","magazine"},
 			{"optic_holosight","toolbelt"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"BlueprintCrate1","magazine"},
+			{"BP_10Rnd_338Lapua_Mag","magazine"},
 			{"BlueprintRockStash","magazine"},
 			{"V_HarnessOGL_brn_BP","vest"},
 			{"BP_gemtech9","toolbelt"},
@@ -2035,7 +2035,7 @@ class CfgObjectLoot {
 			0.15,	//SMOKE GRENADE RED
 			0.05,	//HOLO
 			0.12,	//BANDOLIER OLIVE
-			0.17,   //TENT BLUEPRINT
+			0.04,   //338AMMO
 			0.05,   //ROCK STASH BLUEPRINT
 			0.03,   //TAC VEST
 			0.03,   //GEMTECH 9MM SUPPR
@@ -2064,12 +2064,12 @@ class CfgObjectLoot {
 			{"BP_M4OLD","weapon"},
 			{"BP_Benelli","weapon"},
 			{"BP_AKM","weapon"},
-			{"BP_AR10","weapon"},
+			{"BP_MAR10","weapon"},
 			{"BP_SVT40","weapon"},
 			{"BP_1911MDes","weapon"},
 			{"BP_M4_300","weaponA"},
 			{"BP_M4_300k","weapon"},
-			{"BP_AK74U","weapon"},
+			{"BP_arifle_AKS_F","weapon"},
 			{"BP_SVT40","weaponA"},
 			{"BP_M16OLD","weapon"},
 			{"BP_SUD_AK108","weaponA"},
@@ -2086,8 +2086,8 @@ class CfgObjectLoot {
 			0.09,	//M4A1
 			0.07,	//M4A1
 			0.15,	//BENELLI
-			0.01,	//AKM
-			0.05,	//AR10
+			0.02,	//AKM
+			0.01,	//MAR10
 			0.05,	//SVT40
 			0.01,	//1911DES
 			0.02,	//M4300
@@ -2741,7 +2741,7 @@ class CfgObjectLoot {
 			0.05,	//M9 CAMO
 			0.02,	//M9 CAMO
 			0.09,	//AK74m	
-			0.07,	//AKS74U	
+			0.02,	//AKS74U	
 			0.03,	//AK105
 			0.07,	//DM M4
 			0.02,	//DM M4

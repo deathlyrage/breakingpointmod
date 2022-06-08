@@ -1,0 +1,321 @@
+#include "outlw_magRepack\MagRepack_config.hpp"
+showGroupIndicator = 0;
+disableRandomization[] = {"All"};
+joinUnassigned = 0;
+enableDebugConsole = 0;
+allowFunctionsLog = 0;
+author = "Deathlyrage and Donnie";
+dev = "Deathlyrage";
+onLoadName = "BreakingPoint";
+respawn = "BASE";
+respawnTemplates[] = {"BP_Base","Counter"};
+respawndelay = 45;
+respawnDialog = 0;
+onLoadMission= "";
+OnLoadIntro = "Welcome to BreakingPoint!";
+OnLoadIntroTime = False;
+OnLoadMissionTime = False;
+disabledAI = true;
+disableChannels[]=
+{
+	{0,true,true},	// Global
+	{1,true,true},	// Side
+	{2,true,true},	// Command
+	{3,true,true},	// Group
+	{4,true,true}, // Vehicle
+	{5,false,false}	// Direct
+};
+enableItemsDropping = 0;
+showUAVFeed = 0;
+corpseLimit = 9999;
+onPauseScript = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";
+loadScreen = "\breakingpoint_ui\general\BP_screen_title.jpg";
+corpseManagerMode = 0;
+class CfgRemoteExecCommands {};
+class BreakingPoint
+{
+	class CfgSettings
+	{
+		class Map
+		{
+			BoundryMin[] = {0,0};
+			BoundryMax[] = {10300,10300};
+		};		   
+		class SpawnPos 
+		{
+			//Enable Spawn Selection Screen
+			enabled = false;
+			egl_laghisola[] =
+			{
+				{0,{588.148,5459.3,1.14441e-005}},
+				{0,{367.711,7217.48,1.14441e-005}},
+				{0,{1932.6,9818.99,1.14441e-005}},
+				{0,{3384.9,9875.81,1.19209e-005}},
+				{0,{5058,9606.72,1.14441e-005}},
+				{0,{7783.18,9277.91,-4.76837e-007}},
+				{0,{9397.43,8517.36,1.14441e-005}},
+				{0,{9211.35,6613.84,-9.53674e-007}},
+				{0,{9421.29,3601.31,1.14441e-005}},
+				{0,{8716.94,2347.61,1.14441e-005}},
+				{0,{7198.73,1004.64,1.04904e-005}},
+				{0,{5742.6,420.691,1.14441e-005}},
+				{0,{3624.62,563.597,1.09673e-005}},
+				{0,{1916.39,874.073,1.14441e-005}},
+				{0,{1066.12,1510.85,1.14441e-005}},
+				{0,{616.054,3266.08,1.14441e-005}},
+				{0,{8340.88,4428.96,1.14441e-005}},
+				{0,{4963.45,2524.32,1.14441e-005}},
+				{0,{2534.83,3267.98,9.53674e-007}},
+				{0,{6203.65,4576.37,1.14441e-005}},
+				{0,{669.573,232.749,1.09673e-005}},
+				{0,{9714.61,5013.53,1.09673e-005}},
+				{0,{1891.01,4859.83,1.04904e-005}}
+			};	
+		};
+		class HeliCrash 
+		{
+			//Enable Heli Crashes
+			enabled = true;
+			//Random Start Position (x,y,z) {Can Have Multible Coords}
+			randStartPos[] = {{10227.6,10229.4,200},{10231.2,8.302,200},{4287.42,10236.3,200}};
+			//Backup Waypoint (x,y) {One Point Only}
+			backupWaypoint[] = {{5016.86,5979.32}};
+			//Centre Marker (x,y) {One Point Only}
+			centreMarker[] = {{5120,5120,100}};
+			centreRadius = 1500;
+		};
+		class Debug 
+		{
+			marker = "respawn_west";
+			radius = 50;
+		};
+		class Loot 
+		{
+			//Enable or Disable Loot
+			enabled = true;
+			//Min Number Of Loot Items Per Box (Includes Weapons,Magazines,Items)
+			minItems = 2;
+			//Max Number Of Loot Items per Box (Includes Weapons,Magazines,Items)
+			maxItems = 6;
+			//Spawn Spawn Box If Under Minimum Items
+			minSpawn = false;
+			//Override All Loot Boxes with a Specific Loot Class
+			lootOverride = false;
+			lootOverrideClass = "Brick";
+			//Custom Loot Box Coords
+			customLoot[] =
+			{
+				{1,1,2,"AmmoPallet4",{9637.71,6981.06,0},0.30},
+				{1,1,2,"AmmoPallet4",{6569.56,2728.58,0.305898},0.30},
+				{1,1,2,"AmmoPallet4",{4131.33,5288.44,0},0.30},
+				{1,1,2,"AmmoPallet4",{4068.86,5376.19,0},0.30},
+				{1,1,2,"GhostHotelWpn",{228.751,2696.29,-9.53674e-007},0.40},
+				{1,1,2,"GhostHotelAcc",{239.462,2694.91,-9.53674e-007},0.40},
+				{1,1,2,"ApexMilBox2",{175.392,5590.3,0},0.40}
+			};
+		};
+		class Factions
+		{
+			//Enable or Disable Faction System
+			enabled = true;
+			disableMixedgrouping = false;
+			undeadDisabled = false;			
+			//Enable or Disable Point Gain and Loss
+			class Points
+			{
+				//Enable or Disable All Point gain or loss
+				enabled = true;
+				//Point Gain / Loss Ratios
+				// 1.00 = 100% Point Gain/Loss
+				// 0.75 = 75% Point Gain/Loss
+				// 0.25 = 25% Point Gain/Loss
+				ratio = 1;
+			};
+			//Enable or Disable Specific Classes
+			class Classes
+			{
+				none = true;
+				ranger = true;
+				outlaw = true;
+				hunter = true;
+				nomad = true;
+				survivalist = true;
+				engineer = true;
+				undead = true;
+			};
+		};
+		class Cleanup 
+		{
+			class Dead 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 2 Mins )
+				interval = 120;
+				//Distance A Player Is Nearby That Will Prevent Cleanup ( 250 Meters )
+				nearby = 250;
+				//Time of Player Body Cleanup ( 10 Mins )
+				player = 600;
+			};
+			class Sync 
+			{
+				enabled = true;
+				interval = 300; // 5 Mins
+			};
+			class Loot 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 15 Mins )
+				interval = 900;
+				//Distance A Player is Nearby That Will Prevent Cleanup ( 125 Meters )
+				nearby = 125;
+			};
+			class Entities 
+			{
+				enabled = true;
+				//Interval At Which the Cleanup Runs ( 20 Mins )
+				interval = 1200;
+				//Distance A Player Is Nearby That Will Prevent Cleanup ( 5 Meters )
+				nearby = 5;
+			};
+			class GlobalLoot 
+			{
+				enabled = true;
+				interval = 3600; // 60 Mins
+			};
+			class Restart 
+			{
+				enabled = true;
+				interval = 6900; //115 Mins
+			};
+		};
+		class Time 
+		{
+			dawn = 6;
+			dusk = 18;
+		};
+		class Zombies 
+		{
+			enabled = true;
+			maxLocal = 5; //Total Local
+			maxNearby = 5; //Total Nearby
+			maxGlobal = 40; //Total Alive
+			max = 46; // Total Alive + Dead
+			distance = 600;
+		};
+		class Animals
+		{
+			enabled = true;
+			max = 5;
+			distance = 800;
+		};
+		class Survival 
+		{
+			food = 3240; //2160 Minutes (48 hours)
+			water = 2160; //1440 Minutes (24 hours)
+			temperature = 90 / 100; //First Value = Minutes until Player reaches the coldest Point at night (without other effects! night factor expected to be -1)
+			useNewMedSurgery = 0;													 
+		};
+		class Temperature 
+		{
+			default = 36;
+			normal = 36;
+			min = 27;
+			max = 42;
+		};
+	};
+};
+class Params 
+{
+	class instance
+	{
+		title = "Instance";
+		values[] = {0};
+		texts[] = {"Unknown"};
+		default = 0;
+	};
+	class debug
+	{
+		title = "Debug";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class hc
+	{
+		title = "Headless Client";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class vip
+	{
+		title = "VIP";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class dynamicWeather
+	{
+		title = "Dynamic Weather";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class clientSimulationManager
+	{
+		title = "Client Simulation Manager";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class serverSimulationManager
+	{
+		title = "Server Simulation Manager";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class threadedCleanup
+	{
+		title = "Threaded Cleanup";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class lootMax
+	{
+		title = "Loot Max";
+		values[] = {0};
+		texts[] = {"0"};
+		default = 2000;
+	};
+	class lootServer
+	{
+		title = "Server Loot";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 1;
+	};
+	class legionOnly
+	{
+		title = "Legion Only";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+	class fastLoad
+	{
+		title = "Fast Load";
+		values[] = {0,1};
+		texts[] = {"False","True"};
+		default = 0;
+	};
+};
+class Header
+{
+	gameType = Survive;
+	minPlayers = 1;
+	maxPlayers = 90;
+};
+#include "config.cpp"
+aiKills = 1;

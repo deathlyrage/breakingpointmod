@@ -67,4 +67,16 @@ class CfgTime
 		first[] = {5,30};
 		second[] = {16,30};
 	};
+	class Tembelan: Base
+	{
+		date[] = {10,6,2035};
+		first[] = {9,0};
+		second[] = {16,30};
+	};
+	class egl_laghisola: Base
+	{
+		date[] = {10,6,2035};
+		first[] = {9,0};
+		second[] = {14,57};
+	};	
 };

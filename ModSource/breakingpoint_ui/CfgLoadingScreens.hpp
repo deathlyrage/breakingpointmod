@@ -120,6 +120,18 @@ class CfgLoadingScreens
 			"\breakingpoint_ui\loading\Malden\loading_3.jpg",
 			"\breakingpoint_ui\loading\Malden\loading_4.jpg"
 		};
+		Tembelan[] =
+		{
+			"\breakingpoint_ui\loading\Tembelan\loading_1.jpg",
+			"\breakingpoint_ui\loading\Tembelan\loading_2.jpg",
+			"\breakingpoint_ui\loading\Tembelan\loading_3.jpg"
+		};
+		egl_laghisola[] =
+		{
+			"\breakingpoint_ui\loading\egl_laghisola\loading_1.jpg",
+			"\breakingpoint_ui\loading\egl_laghisola\loading_2.jpg",
+			"\breakingpoint_ui\loading\egl_laghisola\loading_3.jpg"
+		};
 	};
 };
 
