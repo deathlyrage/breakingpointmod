@@ -197,8 +197,8 @@ class CfgLoot
 			"BP_5Rnd_3006M_Mag",
 			"BP_200Rnd_556x45_MINIMI",
 			"SmokeShell",
-			"SmokeShellRed",
-			"SmokeShellGreen",
+			//"SmokeShellRed",
+			//"SmokeShellGreen",
 			"BP_556x45_StanagSD",
 			"BP_100Rnd_762x51_MINIMI",
 			"BP_15Rnd_9x19OVP",
@@ -228,9 +228,9 @@ class CfgLoot
 			0.40,   //HAND GRENADE
 			0.05,	//30-06M
 			0.05,	//200 ROUND MINIMI 5.56 
-			0.40,	//SMOKE
-			0.40,	//SMOKE RED
-			0.40,	//SMOKE GREEN
+			0.10,	//SMOKE
+			//0.40,	//SMOKE RED
+			//0.40,	//SMOKE GREEN
 			0.10,	//STANAG SD
 			0.05,	//7.62 MINIMI
 			0.05,   //9MM OVP

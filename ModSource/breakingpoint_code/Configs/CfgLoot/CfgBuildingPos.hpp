@@ -573,12 +573,12 @@
 		zombiePos[] = {{0.330345,-0.505371,0.00143862}};
 	};
 
-	class Land_Ind_BoardsPack2 : MilitaryRanger {
-		lootMin = 0;
-		lootMax = 1;
-		lootPos[] = {{5.75,-0.523926,-0.373108}};
-		zombiePos[] = {{5.75,-0.523926,-0.373108}};
-	};
+//	class Land_Ind_BoardsPack2 : MilitaryRanger {
+//		lootMin = 0;
+//		lootMax = 1;
+//		lootPos[] = {{5.75,-0.523926,-0.373108}};
+//		zombiePos[] = {{5.75,-0.523926,-0.373108}};
+//	};
 
 	class Land_yaslisad_yellow : Residential {
 		lootMin = 1;

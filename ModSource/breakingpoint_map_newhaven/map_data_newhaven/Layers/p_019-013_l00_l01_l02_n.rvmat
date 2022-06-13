@@ -1,0 +1,127 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: newhaven\map_data_newhaven\Layers\p_019-013_l00_l01_l02_n.rvmat
+//Produced from mikero's Dos Tools Dll version 8.35
+//https://mikero.bytex.digital/Downloads
+//'now' is Mon Jun 13 00:11:43 2022 : 'file' last modified on Wed Dec 31 19:00:01 1969
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+ambient[] = {0.9,0.9,0.9,1};
+diffuse[] = {0.9,0.9,0.9,1};
+forcedDiffuse[] = {0.02,0.02,0.02,1};
+emmisive[] = {0,0,0,0};
+specular[] = {0,0,0,0};
+specularPower = 0;
+class Stage0
+{
+	texture = "newhaven\map_data_newhaven\Layers\S_019_013_lco.paa";
+	texGen = 3;
+};
+class Stage1
+{
+	texture = "newhaven\map_data_newhaven\Layers\M_019_013_lco.paa";
+	texGen = 4;
+};
+class TexGen3
+{
+	uvSource = "worldPos";
+	class uvTransform
+	{
+		aside[] = {0.0015625001,0,0};
+		up[] = {0,0,0.0015625001};
+		dir[] = {0,-0.0015625001,0};
+		pos[] = {-14.125001,6.3750005,0};
+	};
+};
+class TexGen4
+{
+	uvSource = "worldPos";
+	class uvTransform
+	{
+		aside[] = {0.0015625001,0,0};
+		up[] = {0,0,0.0015625001};
+		dir[] = {0,-0.0015625001,0};
+		pos[] = {-14.125001,6.3750005,0};
+	};
+};
+class TexGen0
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {1,0,0};
+		up[] = {0,1,0};
+		dir[] = {0,0,1};
+		pos[] = {0,0,0};
+	};
+};
+class TexGen1
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {10,0,0};
+		up[] = {0,10,0};
+		dir[] = {0,0,10};
+		pos[] = {0,0,0};
+	};
+};
+class TexGen2
+{
+	uvSource = "tex";
+	class uvTransform
+	{
+		aside[] = {10,0,0};
+		up[] = {0,10,0};
+		dir[] = {0,0,10};
+		pos[] = {0,0,0};
+	};
+};
+PixelShaderID = "Terrain7";
+VertexShaderID = "Terrain";
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1)";
+	texGen = 0;
+};
+class Stage3
+{
+	texture = "newhaven\map_data_newhaven\bp_beach_nopx.paa";
+	texGen = 1;
+};
+class Stage4
+{
+	texture = "newhaven\map_data_newhaven\bp_beach_co.paa";
+	texGen = 2;
+};
+class Stage5
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1)";
+	texGen = 0;
+};
+class Stage6
+{
+	texture = "newhaven\map_data_newhaven\bp_dirt_nopx.paa";
+	texGen = 1;
+};
+class Stage7
+{
+	texture = "newhaven\map_data_newhaven\bp_dirt_co.paa";
+	texGen = 2;
+};
+class Stage8
+{
+	texture = "newhaven\map_data_newhaven\cr_les2_mco.paa";
+	texGen = 0;
+};
+class Stage9
+{
+	texture = "newhaven\map_data_newhaven\cr_les2_detail_nopx.paa";
+	texGen = 1;
+};
+class Stage10
+{
+	texture = "newhaven\map_data_newhaven\cr_les2_detail_co.paa";
+	texGen = 2;
+};

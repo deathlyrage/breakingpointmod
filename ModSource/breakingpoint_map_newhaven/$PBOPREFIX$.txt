@@ -1,0 +1,4 @@
+//<'newhaven.pbo' properties via Mikero's dos tools, dll version 8.35>
+prefix=newhaven;
+//PboType=Arma Unknown pbo type (no config or mission).;
+//</properties>

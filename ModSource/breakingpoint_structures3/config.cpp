@@ -54711,42 +54711,6 @@ class CfgVehicles
 		actionBegin1="OpenDoor_1";
 		actionEnd1="OpenDoor_1";
 	};
-	class Land_Hotel: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_psi_bouda: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_A_Office02: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
 	class Land_zavora_2: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -54772,66 +54736,6 @@ class CfgVehicles
 		accuracy=1000;
 	};
 	class Land_water_tank2: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan4_big: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan2_01: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_mesto_in: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan4_inverse: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Dum_istan4_detaily1: Land_HelipadEmpty_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		mapSize=1;
@@ -54890,29 +54794,125 @@ class CfgVehicles
 		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
 		icon="iconObject_1x1";
 		accuracy=1000;
-	};
-	class Land_Shed_M02: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
-	class Land_Stoplight02: Land_HelipadEmpty_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=1;
-		_generalMacro="Land_HelipadEmpty_F";
-		scope=2;
-		scopeCurator=2;
-		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
-		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
-		icon="iconObject_1x1";
-		accuracy=1000;
-	};
+	};	
+//	class Land_Hotel: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_psi_bouda: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_A_Office02: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Dum_istan4_big: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Dum_istan2_01: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Dum_mesto_in: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Dum_istan4_inverse: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Dum_istan4_detaily1: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Shed_M02: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
+//	class Land_Stoplight02: Land_HelipadEmpty_F
+//	{
+//		author="$STR_A3_Bohemia_Interactive";
+//		mapSize=1;
+//		_generalMacro="Land_HelipadEmpty_F";
+//		scope=2;
+//		scopeCurator=2;
+//		displayName="$STR_A3_cfgVehicles_Land_HelipadEmpty_F0";
+//		model="\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+//		icon="iconObject_1x1";
+//		accuracy=1000;
+//	};
 };

@@ -7,48 +7,57 @@
 	Alderon Games Pty Ltd
 */
 
-#define READANDWRITE		0
-#define READANDCREATE		1
-#define READONLY		2
-#define READONLYVERIFIED		3
-
-#define VSOFT		0
-#define VARMOR		1
-#define VAIR		2
-
-#define TEAST		0
-#define TWEST		1
-#define TGUERRILA		2
-#define TCIVILIAN		3
-#define TSIDEUNKNOWN		4
-#define TENEMY		5
-#define TFRIENDLY		6
-#define TLOGIC		7
+#define _ARMA_
 
 class CfgPatches {
-	class newhaven {
-		units[] = {"newhaven"};
+	class NewHaven {
+		units[] = {"NewHaven"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Data_F", "A3_Structures_F", "A3_Map_Data", "CABuildings", "CAbuildings2", "CAstructures", "CAMisc", "CAData"};
 	};
 };
 class CfgLocationTypes {
+	class Name
+	{
+		color[] = {0.1,0.1,0.1,1};
+		textSize = 0.04;
+		font = "RobotoCondensed";
+	};
+	class Strategic: Name
+	{
+		color[] = {0.9,0,0,1};
+		Size = 16;
+		textSize = 0.05;
+		font = "RobotoCondensed";
+	};
+	class NameCityCapital : Name
+	{
+		color[] = {0,0,0,1};
+		Size = 24;
+		font = "PuristaSemiBold";
+		textSize = 0.078;
+	};
+	class CityCenter: Name
+	{
+		color[] = {0,0.8,0,1};
+		Size = 18;
+		font = "RobotoCondensedBold";
+		textSize = 0.06;
+	};
 	class Airport;	// External class reference
-	
 	class myairport : Airport {
 		name = "CMC Airport";
 		drawStyle = "icon";
 		color[] = {1, 1, 1, 1};
 		size = 32;
-		textSize = 0.04;
+		textSize = 0.06;
 		shadow = false;
 		importance = 2;
 		texture = "\newhaven\map_data_newhaven\icons\Airport32_ca.paa";
-		font = "PuristaMedium";
+		font = "PuristaSemiBold";
 	};
 	class hospital;	// External class reference
-	
 	class myhosp : hospital {
 		name = "Hospital";
 		drawStyle = "icon";
@@ -58,13 +67,13 @@ class CfgLocationTypes {
 		shadow = false;
 		importance = 2;
 		texture = "\newhaven\map_data_newhaven\icons\hosp32.paa";
-		font = "PuristaMedium";
+		font = "RobotoCondensed";
 	};
 };
 class CfgWorlds
 {
-	initWorld = "newhaven";
-	demoWorld = "newhaven";
+	initWorld = "NewHaven";
+	demoWorld = "NewHaven";
 	class DefaultWorld
 	{
 		class Weather
@@ -94,9 +103,9 @@ class CfgWorlds
 		};
 	};
 	class DefaultLighting;
-	class newhaven : CAWorld 
+	class NewHaven : CAWorld 
 	{
-		access = READONLYVERIFIED;
+		access = 3;
 		worldId = 1;
 		cutscenes[] = {"newhavenIntro1"};
 		description = "New Haven";
@@ -132,8 +141,8 @@ class CfgWorlds
 			class Zoom1 {
 				zoomMax = 0.02;
 				format = "XY";
-				formatX = 000;
-				formatY = 000;
+				formatX = "000";
+				formatY = "000";
 				stepX = 100;
 				stepY = -100;
 			};
@@ -2026,11 +2035,11 @@ class CfgWorlds
 				overcast = 0.6;
 			};
 		};
-		clutterGrid = 0.8;
+		clutterGrid = 1;
 		clutterDist = 100;
 		noDetailDist = 50;
-		fullDetailDist = 10;
-		midDetailTexture = "A3\Map_Data\middle_mco.paa";
+		fullDetailDist = 5;
+		midDetailTexture = "A3\Map_Tanoabuka\Data\L_middle_mco.paa";
 		minTreesInForestSquare = 3;
 		minRocksInRockSquare = 3;
 		class clutter {
@@ -2688,7 +2697,7 @@ class CfgWorlds
 			class MainBase {
 				name = "Central Military Complex";
 				position[] = {5420.6, 1629.3};
-				type = "airport";
+				type = "CityCenter";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -2735,7 +2744,7 @@ class CfgWorlds
 			class stronghold1 {
 				name = "Stronghold";
 				position[] = {9388.88, 937.478};
-				type = "NameLocal";
+				type = "Strategic";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -2744,7 +2753,7 @@ class CfgWorlds
 			class stronghold2 {
 				name = "Stronghold";
 				position[] = {393.44, 5951.04};
-				type = "NameLocal";
+				type = "Strategic";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -2821,7 +2830,7 @@ class CfgWorlds
 			class flinders_island {
 				name = "Flinders Island";
 				position[] = {9272.09, 3735.48};
-				type = "Namecity";
+				type = "Strategic";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -2897,7 +2906,7 @@ class CfgWorlds
 			class Swan_island {
 				name = "Swan Island";
 				position[] = {6869.44, 3080.99};
-				type = "Namecity";
+				type = "Strategic";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -2906,7 +2915,7 @@ class CfgWorlds
 			class bphill04 {
 				name = "Stoney Point";
 				position[] = {4884.04, 7964.38};
-				type = "Hill";
+				type = "Strategic";
 				radiusA = 213.55;
 				radiusB = 159.68;
 				angle = 0.0;
@@ -2933,7 +2942,7 @@ class CfgWorlds
 			class Evac_centre {
 				name = "Evac Base";
 				position[] = {9115.54, 8712.57};
-				type = "NameCityCapital";
+				type = "CityCenter";
 				radiusA = 200.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -2942,7 +2951,7 @@ class CfgWorlds
 			class checkpoint01 {
 				name = "Checkpoint";
 				position[] = {3211.67, 396.784};
-				type = "NameVillage";
+				type = "Strategic";
 				radiusA = 100.0;
 				radiusB = 100.0;
 				angle = 0.0;
@@ -2960,7 +2969,7 @@ class CfgWorlds
 			class checkpoint02 {
 				name = "Checkpoint";
 				position[] = {4229.75, 3956.27};
-				type = "NameVillage";
+				type = "Strategic";
 				radiusA = 100.0;
 				radiusB = 100.0;
 				angle = 0.0;
@@ -3014,7 +3023,7 @@ class CfgWorlds
 			class civiairport {
 				name = "Civilian Airport";
 				position[] = {3144.04, 8956.21};
-				type = "NameLocal";
+				type = "myairport";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -3105,7 +3114,7 @@ class CfgWorlds
 			class northernBase {
 				name = "Northern Supply Base";
 				position[] = {2063.68, 5061.27};
-				type = "NameLocal";
+				type = "CityCenter";
 				radiusA = 400.0;
 				radiusB = 200.0;
 				angle = 0.0;
@@ -3172,9 +3181,9 @@ class CfgWorlds
 			};
 			
 			class bass_island {
-				name = "Bass Island";
+				name = "Bass Island Airport";
 				position[] = {8224.77, 9277.71};
-				type = "NameCityCapital";
+				type = "myairport";
 				demography = CIV;
 				radiusA = 200.0;
 				radiusB = 200.0;
@@ -3253,7 +3262,7 @@ class CfgWorlds
 };
 
 class CfgWorldList {
-	class newhaven {};
+	class NewHaven {};
 };
 class CfgMissions
 {
@@ -3269,7 +3278,7 @@ class CfgSurfaces {
 	class Default;
 
 	class bpgrass : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "bp_dirt_*";
 		character = "bp_grassClutter";
 		soundEnviron = "grass";
@@ -3284,7 +3293,7 @@ class CfgSurfaces {
 	};
 	
 	class bpbeach : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "bp_beach_*";
 		character = "Empty";
 		soundEnviron = "sand";
@@ -3298,7 +3307,7 @@ class CfgSurfaces {
 	};
 	
 	class bppineforest : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "cr_les2_*";
 		character = "bp_pineforestClutter";
 		soundEnviron = "drygrass";
@@ -3313,17 +3322,17 @@ class CfgSurfaces {
 	};
 	
 	class bp_wheatstubble : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "cr_strniste_*";
 		rough = 0.13;
-		dust = 0.6;
+		dust = 0.5;
 		soundEnviron = "dirt";
 		character = "CRStubbleClutter";
 		soundHit = "soft_ground";
 	};
 	
 	class bp_ploughedground : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "cr_oranice_*";
 		rough = 0.15;
 		dust = 0.25;
@@ -3333,7 +3342,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_brownrockground : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "bp_brownrock_*";
 		character = "empty";
 		soundEnviron = "gravel";
@@ -3348,7 +3357,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_soilsurface : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "bp_soil_*";
 		character = "empty";
 		soundEnviron = "dirt";
@@ -3363,7 +3372,7 @@ class CfgSurfaces {
 	};
 	
 	class bp_flatgrasssurface : Default {
-		access = READONLY;
+//		access = READONLY;
 		files = "bp_flatgrass_*";
 		character = "bp_flatgrassClutter";
 		soundEnviron = "grass";
@@ -3390,7 +3399,7 @@ class CfgSurfaceCharacters {
 	};
 	
 	class CRStubbleClutter {
-		probability[]={0.80000001,0.2};
+		probability[]={0.70000001,0.2};
 		names[] = {"bp_Stubble","bp_StubbleTall"};
 	};
 	

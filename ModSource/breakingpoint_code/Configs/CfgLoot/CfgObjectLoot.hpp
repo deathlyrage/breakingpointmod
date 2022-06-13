@@ -1974,7 +1974,7 @@ class CfgObjectLoot {
 			{"BP_10Rnd_65x39","magazine"},
 			{"BP_7Rnd_45acp","magazine"},
 			{"BP_6Rnd_45JHP_Mag","magazine"},
-			{"SmokeShellRed","magazine"},
+			//{"SmokeShellRed","magazine"},
 			{"optic_holosight","toolbelt"},
 			{"V_Rangemaster_belt_BP","vest"},
 			{"BP_10Rnd_338Lapua_Mag","magazine"},
@@ -2032,7 +2032,7 @@ class CfgObjectLoot {
 			0.05,	//10RND GRENDEL
 			0.05,	//45 JHP
 			0.11,	//45 ACP
-			0.15,	//SMOKE GRENADE RED
+			//0.02,	//SMOKE GRENADE RED
 			0.05,	//HOLO
 			0.12,	//BANDOLIER OLIVE
 			0.04,   //338AMMO
