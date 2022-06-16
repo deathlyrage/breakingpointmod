@@ -314,12 +314,12 @@ class CfgSounds
 	};
 	class z_drink_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_drink_0.ogg",0.4,1,140};
+		sound[] = {"breakingpoint_sfx\effects\action_drink_0.ogg",0.6,1,140};
 		titles[] = {};
 	};
 	class z_soda_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_soda_0.ogg",0.5,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_soda_0.ogg",0.7,1,150};
 		titles[] = {};
 	};
 	class z_cough_0 {
@@ -364,22 +364,22 @@ class CfgSounds
 	};
 	class z_eat_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.7,1,150};
 		titles[] = {};
 	};
 	class z_eat_1 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.7,1,150};
 		titles[] = {};
 	};
 	class z_eat_2 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.7,1,150};
 		titles[] = {};
 	};
 	class z_eat_3 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.4,1,150};
+		sound[] = {"breakingpoint_sfx\effects\action_eat_0.ogg",0.7,1,150};
 		titles[] = {};
 	};
 	class z_fillwater_0 {

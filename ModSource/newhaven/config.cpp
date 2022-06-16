@@ -123,7 +123,7 @@ class CfgWorlds
 		elevationOffset = 0;
 		envTexture = "A3\Data_f\env_land_ca.tga";
 		class OutsideTerrain {
-			satellite = "newhaven\map_data_newhaven\s_satout_co.paa";
+			satellite = "A3\Map_Tanoabuka\data\s_satout_co.paa";
 			enableTerrainSynth = 0;
 			
 			class Layers {
@@ -132,8 +132,8 @@ class CfgWorlds
 					texture = "A3\Map_Data\gdt_grass_green_co.paa";
 				};
 			};
-			colorOutside[] = {0.294118, 0.333333, 0.372549, 1};
-		};	
+			colorOutside[] = {0.227451, 0.27451, 0.384314, 1};
+		};
 		class Grid : Grid {
 			offsetX = 0;
 			offsetY = 10240;
@@ -2021,22 +2021,22 @@ class CfgWorlds
 		{
 			class EnvMap1
 			{
-				texture = "A3\Map_Stratis\data\env_land_ClearSky_ca.paa";
 				overcast = 0;
+				texture = "A3\Map_Tanoabuka\data\env_land_ClearSky_ca.paa";
 			};
 			class EnvMap2
 			{
-				texture = "A3\Map_Stratis\data\env_land_SemiCloudySky_ca.paa";
 				overcast = 0.3;
+				texture = "A3\Map_Tanoabuka\data\env_land_SemiCloudySky_ca.paa";
 			};
 			class EnvMap3
 			{
-				texture = "A3\Map_Stratis\data\env_land_OvercastSky_ca.paa";
 				overcast = 0.6;
+				texture = "A3\Map_Tanoabuka\data\env_land_OvercastSky_ca.paa";
 			};
 		};
-		clutterGrid = 1;
-		clutterDist = 100;
+		clutterGrid = 1.2;
+		clutterDist = 90;
 		noDetailDist = 50;
 		fullDetailDist = 5;
 		midDetailTexture = "A3\Map_Tanoabuka\Data\L_middle_mco.paa";
