@@ -2168,7 +2168,7 @@ class CfgWeapons
 	class V_HarnessO_gry_BP: V_HarnessO_brn_BP
 	{
 		scope = 2;
-		displayName = "Heavy Duth Harness";
+		displayName = "Heavy Duty Harness";
 		descriptionUse = "High Capacity Harness";
 		descriptionShort = "High capacity";
 		picture = "\A3\characters_f\Data\UI\icon_V_HarnessO_brn_CA.paa";
