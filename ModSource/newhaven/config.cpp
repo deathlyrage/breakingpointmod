@@ -107,7 +107,7 @@ class CfgWorlds
 	{
 		access = 3;
 		worldId = 1;
-		cutscenes[] = {"newhavenIntro1"};
+		cutscenes[] = {"Intro1"};
 		description = "New Haven";
 		icon = "";
 		worldName = "\newhaven\newhaven.wrp";
@@ -180,7 +180,7 @@ class CfgWorlds
 			"Outlaws have their own custom faction chat channel. They obtain better starting backpacks at levels 2 and 3 and can build the highest carry capacity for storage objects in game.",
 			"Hunters have increased speed at level 3 and have the highest default clothing carry capacity in game."
 		};
-		startTime = 8:00;
+		startTime = 12:00;
 		startDate = 10/6/2035;
 		centerPosition[] = {5120, 5120, 700};
 		seagullPos[] = {5120, 300, 5120};
@@ -2000,7 +2000,7 @@ class CfgWorlds
 		hazeDistCoef = 0.1;
 		hazeFogCoef = 0.98;
 		hazeBaseHeight = 0;
-		hazeBaseBeta0 = 8e-05;
+		hazeBaseBeta0=7.9999998e-005;
 		hazeDensityDecay = 0.00036;
 		horizonParallaxCoef = 0.0;
 		horizonFogColorationStart = 0.8;
@@ -2035,28 +2035,29 @@ class CfgWorlds
 				texture = "A3\Map_Tanoabuka\data\env_land_OvercastSky_ca.paa";
 			};
 		};
-		clutterGrid = 1.2;
+		clutterGrid = 0.9;
 		clutterDist = 90;
-		noDetailDist = 50;
-		fullDetailDist = 5;
-		midDetailTexture = "A3\Map_Tanoabuka\Data\L_middle_mco.paa";
+		noDetailDist = 60;
+		fullDetailDist = 10;
+		midDetailTexture="A3\Map_Data\middle_mco.paa";
 		minTreesInForestSquare = 3;
 		minRocksInRockSquare = 3;
+		minObjInTownSquare=1.4;
 		class clutter {
 			class bp_grassgreen : DefaultClutter {
-				model="A3\plants_f\Clutter\c_StrGrassGreen_group.p3d";
-				affectedByWind=0.60000002;
-				swLighting=1;
-				scaleMin=0.69999999;
-				scaleMax=1;
+				model = "ca\plants2\clutter\c_Grasscrookedforest.p3d";
+				affectedByWind = 1.0;
+				swLighting = "true";
+				scaleMin = 0.6;
+				scaleMax = 1.0;
 			};
 			
 			class bp_grassbunch : DefaultClutter {
-				model="A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_HI.p3d";
-				affectedByWind=0.2;
-				swLighting=1;
-				scaleMin=0.80000001;
-				scaleMax=1.3;
+				model = "ca\plants2\clutter\C_grassbunch.p3d";
+				affectedByWind = 1.0;
+				swLighting = "true";
+				scaleMin = 0.85;
+				scaleMax = 1.0;
 			};
 			
 			class bp_grasstall : DefaultClutter {
@@ -2068,19 +2069,19 @@ class CfgWorlds
 			};
 			
 			class bp_fernsmall : DefaultClutter {
-				model="A3\Vegetation_F_Enoch\Clutter\c_fern.p3d";
-				affectedByWind=0.1;
-				swLighting=0;
-				scaleMin=0.80000001;
-				scaleMax=1.2;
+				model = "ca\plants2\clutter\c_fern.p3d";
+				affectedByWind = 0.7;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.1;
 			};
 			
 			class bp_ferntall : DefaultClutter {
-				model="A3\Vegetation_F_Enoch\Clutter\c_fernTall.p3d";
-				affectedByWind=0.2;
-				swLighting=0;
-				scaleMin=0.69999999;
-				scaleMax=1;
+				model = "ca\plants2\clutter\c_ferntall.p3d";
+				affectedByWind = 0.7;
+				swLighting = 1;
+				scaleMin = 0.85;
+				scaleMax = 1.1;
 			};
 			
 			class bp_wideleafplant : DefaultClutter {
@@ -2124,19 +2125,19 @@ class CfgWorlds
 			};
 			
 			class bp_Stubble : DefaultClutter {
-				model="A3\Vegetation_F_Enoch\Clutter\c_weat.p3d";
-				affectedByWind=0.5;
-				swLighting=0;
-				scaleMin=0.89999998;
-				scaleMax=1.3;
-			};
-
-			class bp_StubbleTall : DefaultClutter {
 				model="A3\Vegetation_F_Enoch\Clutter\c_weatTall.p3d";
 				affectedByWind=0.5;
 				swLighting=0;
-				scaleMin=0.89999998;
-				scaleMax=1.3;
+				scaleMin=0.69999998;
+				scaleMax=1.2;
+			};
+
+			class bp_StubbleTall : DefaultClutter {
+				model="A3\plants_f\Clutter\c_Grass_Tall_Dead.p3d";
+				affectedByWind=1;
+				swLighting=1;
+				scaleMin=0.60000002;
+				scaleMax=1.4;
 			};
 			
 			class bp_GrassCrookedForest : DefaultClutter {
@@ -2308,11 +2309,11 @@ class CfgWorlds
 			};
 			
 			class bp_grassbunchsmall : DefaultClutter {
-				model="A3\Vegetation_F_Exp\Clutter\Grass\c_GrassBunch_LO.p3d";
-				affectedByWind=0.2;
-				swLighting=1;
-				scaleMin=0.64999998;
-				scaleMax=1.4;
+				model = "a3\plants_f\clutter\c_Grass_Bunch_Small.p3d";
+				affectedByWind = 1.0;
+				swLighting = "true";
+				scaleMin = 0.45;
+				scaleMax = 0.75;
 			};
 			
 			class bp_plantdoc : DefaultClutter {
@@ -2429,10 +2430,10 @@ class CfgWorlds
 					
 					class Rabbit_F {
 						maxCircleCount = "(20 * (0.1 - houses)) * (1 - sea)";
-						maxWorldCount = 4;
-						cost = 5;
-						spawnCount = 1;
-						groupSpawnRadius = 10;
+						maxWorldCount = 0;
+						cost = 0;
+						spawnCount = 0;
+						groupSpawnRadius = 0;
 						maxAlt = 80;
 						minAlt = -5;
 					};
@@ -2468,10 +2469,10 @@ class CfgWorlds
 					
 					class Snake_random_F {
 						maxCircleCount = "(1 - houses) * ((2 * (1 - sea)) + (2 * (meadow)))";
-						maxWorldCount = 3;
-						cost = 5;
-						spawnCount = 1;
-						groupSpawnRadius = 5;
+						maxWorldCount = 0;
+						cost = 0;
+						spawnCount = 0;
+						groupSpawnRadius = 0;
 						maxAlt = 40;
 						minAlt = -5;
 					};
@@ -3268,9 +3269,9 @@ class CfgMissions
 {
 	class Cutscenes
 	{
-		class newhavenIntro1
+		class Intro1
 		{
-			directory = "breakingpoint_ui\intro1.vr";
+			directory = "breakingpoint_ui\malden_intro.malden";
 		};
 	};
 };
@@ -3390,11 +3391,11 @@ class CfgSurfaces {
 class CfgSurfaceCharacters {
 	class bp_grassClutter {
 		probability[] = {0.3, 0.01, 0.5, 0.04, 0.03};
-		names[] = {"bp_grassgreen", "bp_weed3", "bp_GrassGreenGroup", "bp_Flower_BrushMedium_Blue", "bp_wideleaf"};
+		names[] = {"bp_GrassCrookedForest", "bp_weed3", "bp_GrassGreenGroup", "bp_Flower_BrushMedium_Blue", "bp_wideleaf"};
 	};
 	
 	class bp_pineforestClutter {
-		probability[] = {0.03, 0.1, 0.09, 0.1, 0.1, 0.5};
+		probability[] = {0.03, 0.1, 0.09, 0.2, 0.1, 0.5};
 		names[] = {"bp_smallpinetree", "bp_fernsmall", "bp_ferntall", "bp_wideleafplant", "bp_GrassCrookedForest", "bp_greengrass"};
 	};
 	
@@ -3415,6 +3416,6 @@ class CfgSurfaceCharacters {
 	
 	class bp_flatgrassClutter {
 		probability[] = {0.5, 0.02, 0.01, 0.01};
-		names[] = {"bp_grassgreen", "bp_wideleaf", "bp_weed3", "bp_Flower_BrushMedium_Blue"};
+		names[] = {"bp_grassgreen", "bp_wideleaf", "bp_fernsmall", "bp_Flower_BrushMedium_Blue"};
 	};
 };

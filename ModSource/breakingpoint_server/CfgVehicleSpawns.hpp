@@ -9,7 +9,7 @@
 
 class CfgVehicleSpawns
 {
-	numVehicles = 75;
+	numVehicles = 65;
 	
 	class BaseVehicleSpawn
 	{
@@ -24,7 +24,7 @@ class CfgVehicleSpawns
 		{
 			class BP_Old_Bicycle : BaseVehicleSpawn
 			{
-				count = 6;
+				count = 0;
 			};
 			class BP_Kart : BaseVehicleSpawn
 			{
@@ -36,7 +36,7 @@ class CfgVehicleSpawns
 		{			
 			class BP_Quadbike_01 : BaseVehicleSpawn
 			{
-				count = 10;
+				count = 6;
 			};
 			class BP_Van_01_transport: BaseVehicleSpawn
 			{
@@ -44,7 +44,7 @@ class CfgVehicleSpawns
 			};
 			class BP_Tractor_01_F: BaseVehicleSpawn
 			{
-				count = 2;
+				count = 3;
 			};
 			class BP_Hatchback_01_F : BaseVehicleSpawn
 			{
@@ -74,27 +74,27 @@ class CfgVehicleSpawns
 			};
 			class BP_Hatchback_01_sport_F : BaseVehicleSpawn
 			{
-				count = 2;
+				count = 3;
 			};
 			class BP_Hatchback_02_sport_F : BaseVehicleSpawn
 			{
-				count = 2;
+				count = 3;
 			};
 			class BP_Van_01_Fuel_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 3;
 			};
 			class BP_Van_01_box_F: BaseVehicleSpawn
 			{
-				count = 2;
+				count = 3;
 			};
 			class BP_C_Offroad_02_unarmed_F : BaseVehicleSpawn
 			{
-				count = 3;
+				count = 4;
 			};
 			class BP_C_Offroad_03_unarmed_F : BaseVehicleSpawn
 			{
-				count = 3;
+				count = 4;
 			};
 		};
 
@@ -112,17 +112,17 @@ class CfgVehicleSpawns
 			
 			class BP_B_T_LSV_01_unarmed_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 0;
 			};
 			
 			class BP_O_T_LSV_02_unarmed_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 0;
 			};
 
 			class BP_Offroad_03_armed_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 3;
 			};
 			
 			class BP_MRAP_01 : BaseVehicleSpawn
@@ -137,18 +137,20 @@ class CfgVehicleSpawns
 			
 			class BP_B_T_LSV_01_armed_F : BaseVehicleSpawn
 			{
-				count = 2;
+				count = 0;
 			};
 			
 			class BP_O_T_LSV_02_armed_F : BaseVehicleSpawn
 			{
-				count = 2;
+				count = 0;
 			};
 		};
 	
 		class Helicopters
 		{			
 			class BP_Heli_Light_01 : BaseVehicleSpawn {};
+//			class BP_Heli_Light_01b : BaseVehicleSpawn {};
+//			class BP_Heli_Light_01c : BaseVehicleSpawn {};
 			class BP_Heli_Light_02_unarmed : BaseVehicleSpawn {};
 			class BP_Heli_Transport_01 : BaseVehicleSpawn {};
 			class BP_Heli_Transport_02 : BaseVehicleSpawn {};
@@ -158,7 +160,7 @@ class CfgVehicleSpawns
 		{			
 			class BP_C_Plane_Civil_01_F  : BaseVehicleSpawn 
 			{
-				count = 2;
+				count = 1;
 			};
 		};
 
@@ -166,7 +168,7 @@ class CfgVehicleSpawns
 		{			
 			class BP_Boat_Civil_01_police_F : BaseVehicleSpawn
 			{
-				count = 3;
+				count = 4;
 			};
 	
 			class BP_Boat_Transport_01_F : BaseVehicleSpawn
@@ -181,7 +183,7 @@ class CfgVehicleSpawns
 			
 			class BP_C_Scooter_Transport_01_F   : BaseVehicleSpawn
 			{
-				count = 10;
+				count = 3;
 			};
 		};
 	};

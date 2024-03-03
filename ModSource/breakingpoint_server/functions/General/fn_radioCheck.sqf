@@ -44,7 +44,7 @@ if (_level > 0) then {
 		[_player,false,4] call BPServer_fnc_radioManage;
 		[_player,false,5] call BPServer_fnc_radioManage;
 		[_player,false,6] call BPServer_fnc_radioManage;
-		[_player,false,7] call BPServer_fnc_radioManage;
+		[_player,true,7] call BPServer_fnc_radioManage;
 	};
 	if (_class == 4) then { //Nomad
 		[_player,true,1] call BPServer_fnc_radioManage;
@@ -68,10 +68,10 @@ if (_level > 0) then {
 		[_player,false,1] call BPServer_fnc_radioManage;
 		[_player,false,2] call BPServer_fnc_radioManage;
 		[_player,false,3] call BPServer_fnc_radioManage;
-		[_player,true,4] call BPServer_fnc_radioManage;
+		[_player,false,4] call BPServer_fnc_radioManage;
 		[_player,false,5] call BPServer_fnc_radioManage;
 		[_player,false,6] call BPServer_fnc_radioManage;
-		[_player,false,7] call BPServer_fnc_radioManage;
+		[_player,true,7] call BPServer_fnc_radioManage;
 	};
 	if (_class == 6) then { //Engineer
 		[_player,false,1] call BPServer_fnc_radioManage;

@@ -32,7 +32,8 @@ BP_hasFire = createVehicle ["BP_SmallCampfire", _location, [], 0, "CAN_COLLIDE"]
 BP_hasFire setDir _dir;
 BP_hasFire enableDynamicSimulation true;
 
-cutText ["You have created a fireplace.", "PLAIN DOWN"];
+//cutText ["You have created a fireplace.", "PLAIN DOWN"];
+cutText ["<t font='PuristaSemiBold' color='#ffffff' size='2'>You have created a fireplace.</t><br/>", "PLAIN DOWN", -1, true, true];
 
 player reveal BP_hasFire;
 

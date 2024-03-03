@@ -44,7 +44,7 @@ if (BP_Weather_Current == BP_Weather_None) then
 			if (worldName == "Bornholm") then {
 				1 setOvercast 0.4;
 			} else {
-				1 setOvercast 0;
+				1 setOvercast 0.3;
 			};
 			6200 setLightnings 0;
 			6300 setRain 0;
@@ -119,7 +119,7 @@ if (BP_Weather_Current == BP_Weather_None) then
 			6200 setRain 1;
 			6000 setLightnings 1;
 			6000 setFog [0.7, 0.03, 2];
-			5600 setGusts 1;
+			5600 setGusts 0.6;
 			5600 setWindDir _weatherWindDirection;
 			5600 setWindStr 1;
 
@@ -187,7 +187,7 @@ if (BP_Weather_Current == BP_Weather_None) then
 		{
 			["Weather Engine: |NIGHT| Random Weather #1110"] call BP_fnc_debugConsoleFormat;
 
-			1 setOvercast 0;
+			1 setOvercast 0.5;
 			6200 setRain _weatherRainFloat;
 			6200 setFog 0;
 			//5700 setFog [_weatherFogFloat, _weatherFogDensity, _weatherFogHeight];

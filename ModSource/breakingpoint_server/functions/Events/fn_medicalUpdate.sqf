@@ -355,11 +355,11 @@ switch (_event) do {
 				//Survivalist
 				if (_class == 5) then { _pointsChange = 10; };					
 				//Nomad
-				if (_class == 4) then { _pointsChange = 20; };					
+				if (_class == 4) then { _pointsChange = 15; };
 				//Hunter
 				if (_class == 3) then { _pointsChange = 10; };
 				//Outlaw
-				if (_class == 2) then { _pointsChange = 6; };
+				if (_class == 2) then { _pointsChange = 5; };
 				//Ranger
 				if (_class == 1) then { _pointsChange = 10; };
 			};

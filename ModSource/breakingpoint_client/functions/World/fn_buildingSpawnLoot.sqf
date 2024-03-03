@@ -13,7 +13,8 @@ if (isNull _building) exitWith {};
 
 _buildingPos = getPosATL _building;
 _buildingType = 	typeOf _building;
-_buildingSize = ((sizeOf _buildingType)+5);
+//_buildingSize = ((sizeOf _buildingType)+5);
+_buildingSize = (sizeOf _buildingType) / 2;
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
 if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
 {

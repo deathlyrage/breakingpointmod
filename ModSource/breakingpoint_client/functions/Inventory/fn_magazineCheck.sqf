@@ -12,7 +12,7 @@ scriptName "BP_fnc_magazineCheck";
 _currentWep = currentWeapon player;
 
 //Waypoints Can Only If You have a GPS
-if ("ItemGPS" in assignedItems player) then { 
+if ("ItemMap" in assignedItems player) then { 
 	onMapSingleClick ""; 
 	//if (BP_GPSWindID == -1 and !isStreamFriendlyUIEnabled) then {
 	//	BP_GPSWindID = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", "_this select 0 drawIcon [  '\A3\ui_f\data\map\Markers\Military\arrow2_ca.paa',  [1,0,0,1],  getPos player,  40,  40,  windDir,  '',  1,  0.03,  'TahomaB',  'right']"];

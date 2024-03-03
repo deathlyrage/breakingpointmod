@@ -577,6 +577,52 @@ class RscDisplaySpawnSelectnewhaven
 	};
 };
 
+class RscDisplaySpawnSelectChernarus
+{
+	idd = 6911;
+	enableDisplay = 1;
+	class controlsBackground {
+		class Mainback : RscPicture {
+			idc = 4080;
+			text = "\breakingpoint_ui\general\spawn_select\chernarusbackground.jpg";
+			x = 0 * safezoneW + safezoneX;
+			y = 0 * safezoneH + safezoneY;
+			w = 1 * safezoneW;
+			h = 1 * safezoneH;
+		};
+	};
+	class controls
+	{
+		class Button_West: RscActiveText
+		{
+			idc = 1200;
+			style = 48;
+			text = "\breakingpoint_ui\general\spawn_select\BP_west_button.jpg";
+			x = 0.159687 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.165 * safezoneW;
+			h = 0.099 * safezoneH;
+			color[] = { 0.5, 0.5, 0.5, 1 };
+			colorActive[] = { 1, 1, 1, 1 };
+			action = "closeDialog 0;BP_spawnLocation = 1;";
+			onMouseEnter = "ctrlSetFocus (_this select 0)";
+		};
+		class Button_East: RscActiveText
+		{
+			idc = 1201;
+			style = 48;
+			text = "\breakingpoint_ui\general\spawn_select\BP_east_button.jpg";
+			x = 0.675312 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.165 * safezoneW;
+			h = 0.099 * safezoneH;
+			color[] = { 0.5, 0.5, 0.5, 1 };
+			colorActive[] = { 1, 1, 1, 1 };
+			action = "closeDialog 0;BP_spawnLocation = 2;";
+			onMouseEnter = "ctrlSetFocus (_this select 0)";
+		};
+	};
+};
 
 class RscDisplaySpawnSelectTanoa
 {

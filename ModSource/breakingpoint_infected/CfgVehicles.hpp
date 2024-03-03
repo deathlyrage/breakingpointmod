@@ -433,29 +433,30 @@ class CfgVehicles
 //NEWZOMBIES//
 	class BPZombie_EngineerF: zZombie_Base
 	{
-		scope = 1;
-		model="\A3\characters_F\Common\pilot_f.p3d";
+		scope = 2;
+		model="\A3\characters_F\civil\c_poor";
 		hiddenSelections[]=
 		{
 			"camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\A3\Characters_F\Common\Data\pilot_suit_rus_co.paa"
+			"\breakingpoint_ui\factions\engineer_01t.paa"
 		};
 		identityTypes[] = {"BP_Zombie2"};
 	};
 	class BPZombie_Engineer1: zZombie_Base
 	{
-		scope = 1;
-		model="\A3\characters_F\Common\coveralls.p3d";
+		scope = 2;
+		model="\A3\characters_F_gamma\Guerrilla\ig_guerrilla1_1.p3d";
 		hiddenSelections[]=
 		{
-			"camo"
+			"camo1","camo2"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\A3\Characters_F\Common\Data\coveralls_sand_co.paa"
+		"\breakingpoint_ui\factions\engineer_01.paa",
+		"\A3\Characters_F_Bootcamp\Guerrilla\Data\ig_guerrilla_6_1_co.paa"
 		};
 		identityTypes[] = {"BP_Zombie1"};
 	};
@@ -467,8 +468,16 @@ class CfgVehicles
 	};
 	class BPZombie_Optout2: zZombie_Base
 	{
-		scope = 1;
-		model = "\A3\characters_F\civil\c_poor.p3d";
+		scope = 2;
+		model = "\A3\Characters_F\Common\coveralls.p3d";
+		hiddenSelections[] =
+		{
+			"camo","insignia"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"\breakingpoint_ui\updatedimage\undead_1_co.paa"
+		};
 		identityTypes[] = {"BP_Zombie4"};
 	};
 	class BPZombie_Optout3: zZombie_Base

@@ -245,7 +245,7 @@ class CfgObjectLoot {
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_JungleGhillie_Uniform","uniform"},  //Full Ghillie (Jungle)
+			{"U_B_GhillieSuit_BP","uniform"},  //Full Ghillie (Jungle)
 			{"BP_Paramilitary_Jacket_Uniform","uniform"},  //Paramilitary Garb (Jacket)
 			{"BP_Paramilitary_Shorts_Uniform","uniform"},  //Paramilitary Garb (Shorts)
 			{"BP_Paramilitary_Tee_Uniform","uniform"}, //Paramilitary Garb (Tee)
@@ -394,7 +394,7 @@ class CfgObjectLoot {
 			{"BP_Guarilla_Khaki","uniform"},
 			{"BP_Guarilla_Leader","uniform"},
 			{"BP_Guarilla_Camo","uniform"},
-			{"BP_Ghillie_Lush","uniform"},
+			{"U_B_GhillieSuit_BP","uniform"},
 			{"BP_10Rnd_127x99","magazine"},
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_30Rnd_762x51_M80A1","magazine"},
@@ -428,8 +428,8 @@ class CfgObjectLoot {
 			{"ItemMug","magazine"},
 			{"ItemPottery","magazine"},
 			{"ItemVideoTape","magazine"},
-			{"ItemZipDisk","magazine"},
-			{"ItemCards","magazine"},
+			{"BP_GhillieWL","magazine"},
+			{"BP_GhillieDes","magazine"},
 			{"HandGrenade","magazine"},
 			{"BP_MAR10","weapon"},
 			{"BP_M4_300MK","weaponA"},	
@@ -444,16 +444,16 @@ class CfgObjectLoot {
 			0.01,	//BP_LRR_F
 			0.01,	//CZECH SURVIVAL PACK
 			0.01,	//MILITARY SURVIVAL PACK
-			0.04,	//STONE GHILLIE
-			0.04,	//TREE GHILLIE
-			0.04,	//DIRT GHILLIE
+			0.02,	//STONE GHILLIE
+			0.02,	//TREE GHILLIE
+			0.02,	//DIRT GHILLIE
 			0.04,	//RUSSIAN CLOTHING
 			0.04,	//WESTSUIT CLOTHING
 			0.04,	//Guerilla Faded
 			0.04,	//Guerilla Shit Green Sweater
 			0.04,	//Guerilla Leader
 			0.04,	//Guerilla Khaki Camo
-			0.05,	//50CAL AMMO
+			0.01,	//50CAL AMMO
 			0.07,   //20Rnd_Lapua
 			0.07,   //30Rnd_M80A1
 			0.07,   //20Rnd_Mk316Mod0
@@ -486,8 +486,8 @@ class CfgObjectLoot {
 			0.07,	//TRASH
 			0.07,	//TRASH
 			0.07,	//TRASH
-			0.07,	//TRASH
-			0.07,	//TRASH
+			0.04,	//RIFLEGHILLIE
+			0.04,	//RIFLEGHILLIE
 			0.05,	//NADE
 			0.02,    //BADNEWS
 			0.04,    //BP_M4_300MK
@@ -602,8 +602,8 @@ class CfgObjectLoot {
 			{"ItemCereal2","magazine"},
 			{"ItemCereal3","magazine"},
 			{"ItemCereal4","magazine"},
-			{"ItemCereal5","magazine"},
-			{"ItemCereal6","magazine"},
+			{"BP_GhillieWL","magazine"},
+			{"BP_GhillieDes","magazine"},
 			{"ItemCan1","magazine"},
 			{"ItemCan2","magazine"},
 			{"ItemCan3","magazine"},
@@ -618,7 +618,7 @@ class CfgObjectLoot {
 			{"BP_R7P","toolbelt"},
 			{"BP_AFG","toolbelt"},
 			{"BP_22Sup","toolbelt"},
-			{"BP_Ghillie_Lush","uniform"},
+			{"U_B_GhillieSuit_BP","uniform"},
 			{"V_RebreatherB","vest"},
 			{"BP_10Rnd_127x99","magazine"},
 			{"BP_200Rnd_556x45_MINIMI","magazine"},
@@ -693,14 +693,14 @@ class CfgObjectLoot {
 			0.02,	//FOOD
 			0.02,	//FOOD
 			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
+			0.03,	//WL GHILLIE
+			0.03,	//DES GHILLIE
 			0.02,	//FOOD
 			0.02,	//FOOD
 			0.02,	//FOOD
 			0.02,	//FOOD
 			0.03,	//MERCENARY VEST
-			0.02,	//MILITARY SURVIVAL PACK
+			0.03,	//MILITARY SURVIVAL PACK
 			0.07,	//STONE GHILLIE
 			0.07,	//TREE GHILLIE
 			0.07,	//DIRT GHILLIE
@@ -771,7 +771,7 @@ class CfgObjectLoot {
 			{"ItemCan1","magazine"},
 			{"ItemWatch","toolbelt"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_Ruger","weapon"},
 			{"BP_CZst_br","toolbelt"},
 			{"BP_CZmod_br","toolbelt"},
@@ -964,7 +964,7 @@ class CfgObjectLoot {
 		itemType[] =	{
 			{"ItemWatch","toolbelt"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_flashlight","toolbelt"},
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
@@ -1180,7 +1180,7 @@ class CfgObjectLoot {
 			{"ItemSoda1","magazine"},
 			{"ItemWatch","toolbelt"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_1911","weapon"},
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
@@ -1200,7 +1200,7 @@ class CfgObjectLoot {
 			{"V_Rangemaster_belt_BP","vest"},
 			{"BP_m9","weapon"},
 			{"BP_Lupara","weapon"},
-			{"ItemGPS","toolbelt"},
+			{"V_Chestrig_blk_BP","vest"},
 			{"BlueprintHaven", "magazine"},
 			{"BP_5Rnd_762x51_Mag","magazine"},
 			{"BP_7Rnd_45acp","magazine"},
@@ -1486,7 +1486,7 @@ class CfgObjectLoot {
 		itemType[] = {
 			{"ItemWatch","toolbelt"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_1911","weapon"},
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
@@ -1939,7 +1939,7 @@ class CfgObjectLoot {
 			{"BP_CPad","toolbelt"},
 			{"BP_AFG","toolbelt"},
 			{"ItemKnife","magazine"},
-			{"ItemMap","toolbelt"}, 
+			{"ItemRadio","toolbelt"}, 
 		    {"BP_Kitbag_sgg","backpack"},
 			{"BP_Kitbag_cbr","backpack"},
 			{"BP_Kitbag_mcamo","backpack"},
@@ -2121,7 +2121,7 @@ class CfgObjectLoot {
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_545x39_HP_30rnd","magazine"},
 			{"BP_545x39_30rnd_Ball_T","magazine"},
-			{"BP_545x39_7N22","magazine"},
+			{"BP_545x39_30rnd_7N22","magazine"},
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"BP_762x54_7N1_10rnd","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"},
@@ -2185,7 +2185,6 @@ class CfgObjectLoot {
 			{"BP_CPad","toolbelt"},
 			{"BP_AFG","toolbelt"},
 			{"V_TacVest_oli_BP","vest"},
-			{"U_B_Wetsuit_BP","uniform"},
 			{"Rangefinder","weaponNA"},
 			{"BP_M3A2","toolbelt"},
 			{"BP_556x45_StanagM855A1","magazine"},
@@ -2240,11 +2239,10 @@ class CfgObjectLoot {
 			0.03,	//Guerilla Leader
 			0.03,	//Guerilla Khaki Camo	
 			0.01,	//PLATE CARRIER
-			0.08,	//ACOG
+			0.06,	//ACOG
 			0.02,	//CHEEKPIECE
 			0.03,	//AFG
 			0.05,	//TAC VEST
-			0.02,	//WETSUIT
 			0.01,	//RANGEFINDER
 			0.02,	//M3A2
 			0.05,	//STANAG M855A1
@@ -2312,7 +2310,7 @@ class CfgObjectLoot {
 			0.02,	//M4_300MK
 			0.02,	//MXSW
 			0.02,	//M249
-			0.01,	//FNPTAC
+			0.03,	//FNPTAC
 			0.06,	//G18
 			0.08,	//SIGP226
 			0.10,	//M4A1
@@ -2342,7 +2340,7 @@ class CfgObjectLoot {
 			{"BP_gemtech45","toolbelt"},
 			{"BP_gemtech9","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"ItemGPS","toolbelt"},
+			{"V_TacVest_brn_BP","vest"},
 			{"BP_Unertl32x","toolbelt"},
 			{"BP_Bergen_mcamo","backpack"},
 			{"BP_Bergen_drt","backpack"},
@@ -2362,7 +2360,7 @@ class CfgObjectLoot {
 			{"BP_Carryall_mcamo","backpack"},
 			{"BP_Carryall_blk","backpack"},					
 			{"BP_optic_ACOG","toolbelt"},
-			{"BP_NXS","toolbelt"},
+			{"BP_VX3","toolbelt"},
 			{"BP_flashlight","toolbelt"},
 			{"V_TacVest_oli_BP","vest"},
 			{"Rangefinder","weaponNA"},
@@ -2382,7 +2380,7 @@ class CfgObjectLoot {
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_10Rnd_65x47_Lapua","magazine"},
 			{"BP_10Rnd_65x39","magazine"},			
-			{"BP_545x39_7N22","magazine"},
+			{"BP_545x39_30rnd_7N22","magazine"},
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"BP_762x54_7N1_10rnd","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"},
@@ -2422,12 +2420,12 @@ class CfgObjectLoot {
 			0.02, 	//CARRYALL URBAN
             0.02,   //CARRYALL BLACK
 			0.08,	//ACOG
-			0.01,	//NXS
-			0.12,	//FLASHLIGHT ATTACHMENT
+			0.05,	//NXS
+			0.05,	//FLASHLIGHT ATTACHMENT
 			0.05,	//TAC VEST
-			0.02,	//WETSUIT
+			0.01,	//WETSUIT
 			0.01,	//RANGEFINDER
-			0.02,	//M3A2
+			0.03,	//M3A2
 			0.08,	//20RND 762BROWNING
 			0.02,	//5RND 762MK316
 			0.04,	//HAND GRENADE
@@ -2520,7 +2518,7 @@ class CfgObjectLoot {
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_CZst_br","toolbelt"},
 			{"BP_CZmod_br","toolbelt"},
 			{"BP_R7P","toolbelt"},
@@ -2648,7 +2646,7 @@ class CfgObjectLoot {
 			{"optic_mrco","toolbelt"},
 			{"ItemMorphine","magazine"},
 			{"ItemKnife","magazine"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_flashlight","toolbelt"},
 			{"ItemDuctTape","magazine"},
 			{"ItemWaterTape","magazine"},
@@ -2763,7 +2761,7 @@ class CfgObjectLoot {
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_CZmod_br","toolbelt"},
 			{"BP_5Rnd_300_Mag","magazine"},
 			{"BP_15Rnd_9x19OVP","magazine"},
@@ -2817,7 +2815,7 @@ class CfgObjectLoot {
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
 			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
+			{"BP_TreeGhillie","uniform"},
 			{"BP_CZmod_br","toolbelt"},
 			{"BP_5Rnd_300_Mag","magazine"},
 			{"BP_15Rnd_9x19OVP","magazine"},

@@ -30,19 +30,19 @@ class CfgLoadingScreens
 		General[] =
 		{
 			"\breakingpoint_ui\loading\loading_1.jpg",
-			"\breakingpoint_ui\loading\loading_2.jpg",
-			"\breakingpoint_ui\loading\loading_3.jpg",
-			"\breakingpoint_ui\loading\loading_4.jpg",
-			"\breakingpoint_ui\loading\loading_5.jpg",
-			"\breakingpoint_ui\loading\loading_6.jpg",
-			"\breakingpoint_ui\loading\loading_7.jpg",
-			"\breakingpoint_ui\loading\loading_8.jpg",
-			"\breakingpoint_ui\loading\loading_9.jpg",
-			"\breakingpoint_ui\loading\loading_10.jpg",
-			"\breakingpoint_ui\loading\loading_11.jpg",
-			"\breakingpoint_ui\loading\loading_12.jpg",
-			"\breakingpoint_ui\loading\loading_13.jpg",
-			"\breakingpoint_ui\loading\loading_14.jpg"
+			"\breakingpoint_ui\loading\loading_2.jpg"
+//			"\breakingpoint_ui\loading\loading_3.jpg",
+//			"\breakingpoint_ui\loading\loading_4.jpg",
+//			"\breakingpoint_ui\loading\loading_5.jpg",
+//			"\breakingpoint_ui\loading\loading_6.jpg",
+//			"\breakingpoint_ui\loading\loading_7.jpg",
+//			"\breakingpoint_ui\loading\loading_8.jpg",
+//			"\breakingpoint_ui\loading\loading_9.jpg",
+//			"\breakingpoint_ui\loading\loading_10.jpg",
+//			"\breakingpoint_ui\loading\loading_11.jpg",
+//			"\breakingpoint_ui\loading\loading_12.jpg",
+//			"\breakingpoint_ui\loading\loading_13.jpg",
+//			"\breakingpoint_ui\loading\loading_14.jpg"
 		};
 		Altis[] = 
 		{

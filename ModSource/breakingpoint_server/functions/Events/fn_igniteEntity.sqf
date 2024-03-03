@@ -38,8 +38,8 @@ _pointsChange = [_player,_object] call BP_fnc_getFactionKillPoints;
 
 //Don't Add Pos Points for this action
 if (_pointsChange > 0) exitWith {};
-// kill points for destorying vehicles
-if(_object isKindOf "AllVehicles") then {
+// kill points for destroying vehicles
+if((_object isKindOf "AllVehicles") && !(_object isKindOf "Man")) then {
 	// Outlaw
 	_victimClass = _player getVariable ["class",0];
 	if(_victimClass == 2)then {

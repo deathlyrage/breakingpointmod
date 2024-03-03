@@ -174,12 +174,12 @@
 				};
 				class Outlaw
 				{
-					food = 10;
-					drink = 10;
-					bandage = 10;
-					dressing = 15;
-					morphine = 25;
-					surgery = 50;
+					food = 15;
+					drink = 15;
+					bandage = 15;
+					dressing = 25;
+					morphine = 30;
+					surgery = 60;
 					gut = -500;
 				};
 				class Hunter
@@ -327,7 +327,7 @@
 				};
 				class Undead
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;

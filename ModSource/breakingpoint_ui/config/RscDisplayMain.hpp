@@ -1,13 +1,7 @@
-class RscActivePicture: RscActiveText
-{
-	style=48;
-	color[]={1,1,1,0.5};
-	colorActive[]={1,1,1,1};
-};
 class RscDisplayMain : RscStandardDisplay 
 {
 	idd = 0;
-	movingEnable = 0;
+//	movingEnable = 0;
 	//onLoad = "[""onLoad"",_this,""RscDisplayStart""] call compile preprocessfilelinenumbers ""breakingpoint_ui\scripts\RscDisplayMain.sqf""";
 	//onUnload = "[""onUnload"",_this,""RscDisplayStart""] call compile preprocessfilelinenumbers ""breakingpoint_ui\scripts\RscDisplayMain.sqf""";
 	onLoad = "[""onLoad"",_this,""RscDisplayMain"",'GUI'] call compile preprocessfilelinenumbers ""breakingpoint_ui\scripts\initDisplay.sqf""";
@@ -33,11 +27,9 @@ class RscDisplayMain : RscStandardDisplay
 		delete TileGroup;
 	};
 	
-	
-	delete Spotlight;
-	
 	class Controls 
 	{
+		delete Spotlight;				   
 		delete Button3DEditor;
 		
 		delete Exit;
@@ -47,7 +39,7 @@ class RscDisplayMain : RscStandardDisplay
 		delete TitleIconTutorials;
 		
 		//Some cancer can't be removed, hide it instead
-		class BackgroundBar : RscPicture
+		class BackgroundBar : RscText
 		{	
 			x = 0;
 			y = 0;
@@ -71,7 +63,7 @@ class RscDisplayMain : RscStandardDisplay
 			h = 0;
 		};
 		
-		class BackgroundSpotlightLeft : RscPicture
+		class BackgroundSpotlightLeft : BackgroundSpotlight
 		{
 			x = 0;
 			y = 0;
@@ -146,9 +138,30 @@ class RscDisplayMain : RscStandardDisplay
 		{
 			onLoad="(_this select 0) ctrlshow (395180 in getDLCs 1)";
 		};
-		delete BackgroundBarRight;
-		delete BackgroundCenter;
-		delete BackgroundSpotlightRight;
+		class BackgroundBarRight: BackgroundBarLeft
+		{
+			angle=0;
+			x = 0;
+			y = 0;
+			w = 0;
+			h = 0;
+		};
+//		delete BackgroundCenter;
+		class BackgroundCenter: BackgroundBar
+		{
+			colorBackground[]={0,0,0,0};
+			x = 0;
+			y = 0;
+			w = 0;
+			h = 0;
+		};
+		class BackgroundSpotlightRight: BackgroundSpotlightLeft
+		{
+			x = 0;
+			y = 0;
+			w = 0;
+			h = 0;
+		};
 		delete Footer;
 		delete GroupMultiplayer;
 		delete GroupOptions;
@@ -163,8 +176,9 @@ class RscDisplayMain : RscStandardDisplay
 		delete Spotlight1;
 		delete Spotlight2;
 		delete Spotlight3;
+		delete SpotlightPrev;
+		delete SpotlightNext;
 		delete SpotlightBase;
-		
 		delete TitleMultiplayer;
 		delete TitleOptions;
 		delete TitleSession;
@@ -594,23 +608,23 @@ class RscDisplayMain : RscStandardDisplay
 			style = 1;
 			x = "safezoneX + safezoneW - 4.9 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			shadow = false;
-			font = "PuristaLight";
+			font = "Sketch";
 			y = "23 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 			(safezoneY + safezoneH - 			(			((safezoneW / safezoneH) min 1.2) / 1.2))";
 			w = "3.9 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			sizeEx = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		
 		class VersionText : RscText {
 			style = 1;
 			x = "safezoneX + safezoneW - 12.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			shadow = false;
-			font = "PuristaLight";
+			font = "Sketch";
 			idc = 1008;
 			y = "23 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 			(safezoneY + safezoneH - 			(			((safezoneW / safezoneH) min 1.2) / 1.2))";
 			w = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			sizeEx = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
 		
 		delete ModIconsBackground;

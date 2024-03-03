@@ -55,39 +55,138 @@ class CfgMovesMaleSdr: CfgMovesBasic
 	class States
 	{
 		class LadderCivilStatic;
+		class LadderCivilDownLoop;
+		class AsswPercMrunSnonWnonDf;
+		class AsswPercMstpSnonWnonDnon;
+		class AsdvPercMrunSnonWrflDf;
+		class AsdvPercMrunSnonWnonDf;
+		class AbswPercMstpSnonWnonDnon;
 		class LadderCivilUpLoop: LadderCivilStatic
 		{
 			speed = "1.04/(2/3)";
 		};
-		class AswmPercMstpSnonWnonDnon;
-		class AsswPercMstpSnonWnonDnon;
-		class AbswPercMstpSnonWnonDnon;
-		class AdvePercMstpSnonWrflDnon;
-		class AsdvPercMstpSnonWrflDnon;
-		class AbdvPercMstpSnonWrflDnon;
-		class AswmPercMrunSnonWnonDf: AswmPercMstpSnonWnonDnon
+		class LadderRifleDownLoop: LadderCivilDownLoop
 		{
-			speed = 0.42;
+			speed = "1.04/(2/3)";
+		};
+		//WETSUIT//
+		class AsdvPercMsprSnonWrflDf: AsdvPercMrunSnonWrflDf
+		{
+			speed=0.22336;
+		};
+		class AsdvPercMsprSnonWnonDf:AsdvPercMrunSnonWnonDf
+		{
+			speed=0.22336;
+		};
+		//REGULARSWIM//
+		class AbswPercMrunSnonWnonDf: AbswPercMstpSnonWnonDnon
+		{
+			speed=0.42;
+		};
+		class AbswPercMrunSnonWnonDb: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AbswPercMrunSnonWnonDf_AbswPercMstpSnonWnonDnon: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AbswPercMrunSnonWnonDfl: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AbswPercMrunSnonWnonDfr: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AbswPercMrunSnonWnonDl: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AbswPercMrunSnonWnonDr: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		//SPRINTSWIM//
+		class AbswPercMsprSnonWnonDf: AbswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AbswPercMsprSnonWnonDFl: AbswPercMrunSnonWnonDfl
+		{
+			speed=0.42;
+		};
+		class AbswPercMsprSnonWnonDFr: AbswPercMrunSnonWnonDfr
+		{
+			speed=0.42;
+		};
+		class AsswPercMrunSnonWnonDb: AsswPercMrunSnonWnonDf
+		{
+			speed=0.42;
 		};
 		class AsswPercMrunSnonWnonDf: AsswPercMstpSnonWnonDnon
 		{
-			speed = 0.42;
+			speed=0.52;
 		};
-		class AbswPercMrunSnonWnonDf: AbswPercMstpSnonWnonDnon
+		class AsswPercMrunSnonWnonDfl: AsswPercMrunSnonWnonDf
 		{
-			speed = 0.42;
+			speed=0.42;
 		};
-		class AdvePercMrunSnonWrflDf: AdvePercMstpSnonWrflDnon
+		class AsswPercMrunSnonWnonDfr: AsswPercMrunSnonWnonDf
 		{
-			speed = 0.4;
+			speed=0.42;
 		};
-		class AsdvPercMrunSnonWrflDf: AsdvPercMstpSnonWrflDnon
+		class AsswPercMrunSnonWnonDl: AsswPercMrunSnonWnonDf
 		{
-			speed = 0.4;
+			speed=0.42;
 		};
-		class AbdvPercMrunSnonWrflDf: AbdvPercMstpSnonWrflDnon
+		class AsswPercMrunSnonWnonDr: AsswPercMrunSnonWnonDf
 		{
-			speed = 0.4;
+			speed=0.42;
+		};
+		class AsswPercMwlkSnonWnonDb: AsswPercMrunSnonWnonDb
+		{
+			speed=0.42;
+		};
+		class AsswPercMwlkSnonWnonDf: AsswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AsswPercMwlkSnonWnonDfl: AsswPercMrunSnonWnonDfl
+		{
+			speed=0.42;
+		};
+		class AsswPercMwlkSnonWnonDfr: AsswPercMrunSnonWnonDfr
+		{
+			speed=0.42;
+		};
+		class AsswPercMwlkSnonWnonDl: AsswPercMrunSnonWnonDl
+		{
+			speed=0.42;
+		};
+		class AsswPercMwlkSnonWnonDr: AsswPercMrunSnonWnonDr
+		{
+			speed=0.42;
+		};
+		class AsswPercMsprSnonWnonDf: AsswPercMrunSnonWnonDf
+		{
+			speed=0.42;
+		};
+		class AsswPercMstpSnonWnonDnon_AsswPercMrunSnonWnonDf: AsswPercMstpSnonWnonDnon
+		{
+			speed=0.64;
+		};
+		class AsswPercMstpSnonWnonDnon_goDown: AsswPercMstpSnonWnonDnon
+		{
+			speed=0.4;
+		};
+		class AsswPercMstpSnonWnonDnon_goup: AsswPercMstpSnonWnonDnon
+		{
+			speed=0.4;
+		};
+		class AsswPercMrunSnonWnonDf_AsswPercMstpSnonWnonDnon: AsswPercMrunSnonWnonDf
+		{
+			speed=0.95;
 		};
 	};
 };

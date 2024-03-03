@@ -26,12 +26,10 @@ class CfgLoot
 			"ItemGlue",
 			"ItemDuctTape",
 			"ItemWaterTape",
-			"ItemGlue",
 			"BP_AlarmClock_Black",
 			"BP_AlarmClock_Red"
 		},
 		{
-			0.9,
 			0.9,
 			0.9,
 			0.9,
@@ -252,7 +250,7 @@ class CfgLoot
 	policeman[] = {
 		{
 			"ItemBandage",
-			"FlareGreen_F",
+			"BP_6Rnd_45_Mag",
 			"BP_16Rnd_9x21_Mag",
 			"BP_6Rnd_44Mag",
 			"BP_7Rnd_45JHP" 

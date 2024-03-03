@@ -8,14 +8,14 @@
 */
 
 //Base Class
-class BP_LootBox : Thing 
+class BP_LootBox : NATO_Box_Base 
 {
 	scope = public;
 	displayName = "Loot Box";
 	mapSize = 0.7;
 	accuracy = 0.2;
 	vehicleClass = "Survival";
-	maximumLoad = 750;
+	maximumLoad = 1000;
 	transportMaxMagazines = 50;
 	transportMaxWeapons = 10;
 	transportMaxBackpacks = 3;

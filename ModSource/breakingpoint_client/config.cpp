@@ -24,7 +24,7 @@ class CfgPatches
 {
 	class breakingpoint_client 
 	{
-		units[] = {"Altis","Stratis","Bornholm","newhaven"};
+		units[] = {"Altis","Stratis","newhaven"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","A3_Map_Altis","A3_Map_Stratis","breakingpoint_infected"};
@@ -59,28 +59,11 @@ class CfgPatches
 class CfgWorlds 
 {
 	class CAWorld;
-	
-	class newhaven : CAWorld
-	{
-		class Ambient {};
-		
-		class AmbientA3 
-		{
-			maxCost = 500;
-			delete Radius440_500; //Kestrel / Seagull / Rabbit
-			delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
-			delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
-			delete Radius15_20; //FX / Wind / Paper / Pollen
-			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
-		};
-	};
-	
 	class Stratis : CAWorld 
 	{ 
+		cutscenes[] = {"Intro1"};
 		midDetailTexture = "breakingpoint\textures\midrange\mid_range_stonesharp_mco.paa";
-		
 		class Ambient {};
-		
 		class AmbientA3 
 		{
 			maxCost = 500;
@@ -91,13 +74,10 @@ class CfgWorlds
 			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
 		};
 	};
-
-	class Altis : CAWorld 
-	{
-		midDetailTexture = "breakingpoint\textures\midrange\mid_range_stone_mco.paa";
-
+	class Tembelan : CAWorld 
+	{ 
+		cutscenes[] = {"Intro1"};
 		class Ambient {};
-		
 		class AmbientA3 
 		{
 			maxCost = 500;
@@ -107,9 +87,23 @@ class CfgWorlds
 			delete Radius15_20; //FX / Wind / Paper / Pollen
 			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
 		};
-		
-		class Names
+	};
+	class Altis : CAWorld 
+	{
+		cutscenes[] = {"Intro1"};
+		midDetailTexture = "breakingpoint\textures\midrange\mid_range_stone_mco.paa";
+		class Ambient {};
+		class AmbientA3 
 		{
+			maxCost = 500;
+			delete Radius440_500; //Kestrel / Seagull / Rabbit
+			delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
+			delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
+			delete Radius15_20; //FX / Wind / Paper / Pollen
+			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
+		};
+//		class Names
+//		{
 			//class ranger {
 			//	name = "";
 			//	position[] = {16930,21850};
@@ -137,7 +131,21 @@ class CfgWorlds
 			//	radiusB = 200.0;
 			//	angle = 0.0;
 			//};
+//		};
+	};
+	class Malden: CAWorld
+	{
+		cutscenes[] = {"Intro1"};
+		class AmbientA3
+		{
+			maxCost=500;
+			delete Radius440_500;
+			delete Radius40_60;
+			delete Radius30_40;
+			delete Radius15_20;
+			delete Radius6_10;
 		};
 	};
-	
+	initWorld = "Altis";
+	demoWorld = "Altis";
 };

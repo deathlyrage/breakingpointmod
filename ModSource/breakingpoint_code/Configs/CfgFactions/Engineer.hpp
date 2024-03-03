@@ -116,13 +116,13 @@
 			{
 				class Spawn
 				{
-					toolbelt[] = {"ItemToolbox","ItemMap"};
+					toolbelt[] = {"ItemToolbox","ItemMap","ItemRadio"};
 					primary[] = {};
 					launcher[] = {"MeleeHammer2"};
 					handgun[] = {};
 					clothing[] = {"BP_Engineer_3"};
 					backpack[] = {"BP_Bergen_rgr"};
-					vest[] = {"V_BandollierB_oli_BP"};
+					vest[] = {"V_EngineerVest_BP"};
 				};
 				class Uniform: BP_BaseGear
 				{
@@ -295,14 +295,14 @@
 			{
 				class Ranger
 				{
-					Level_0 = 50;
-					Level_1 = 0;
-					Level_2 = 0;
-					Level_3 = 0;
+					Level_0 = 75;
+					Level_1 = -25;
+					Level_2 = -50;
+					Level_3 = -100;
 				};
 				class Outlaw
 				{
-					Level_0 = 50;
+					Level_0 = 175;
 					Level_1 = 150;
 					Level_2 = 200;
 					Level_3 = 300;
@@ -316,17 +316,17 @@
 				};
 				class Nomad
 				{
-					Level_0 = 50;
-					Level_1 = 0;
-					Level_2 = 0;
-					Level_3 = 0;
+					Level_0 = 75;
+					Level_1 = -25;
+					Level_2 = -50;
+					Level_3 = -100;
 				};
 				class Survivalist
 				{
-					Level_0 = 50;
-					Level_1 = 0;
-					Level_2 = 0;
-					Level_3 = 0;
+					Level_0 = 75;
+					Level_1 = -25;
+					Level_2 = -50;
+					Level_3 = -100;
 				};
 				class Engineer
 				{
@@ -337,7 +337,7 @@
 				};
 				class Undead
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;

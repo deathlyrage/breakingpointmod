@@ -296,49 +296,49 @@
 			{
 				class Ranger
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = -1000;
 					Level_2 = -2000;
 					Level_3 = -3000;
 				};
 				class Outlaw
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;
 				};
 				class Hunter
 				{
-					Level_0 = 0;
+					Level_0 = 75;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;
 				};
 				class Nomad
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = -1000;
 					Level_2 = -2000;
 					Level_3 = -3000;
 				};
 				class Survivalist
 				{
-					Level_0 = 50;
+					Level_0 = 100;
 					Level_1 = -1000;
 					Level_2 = -2000;
 					Level_3 = -4000;
 				};
 				class Engineer
 				{
-					Level_0 = 50;
-					Level_1 = 0;
-					Level_2 = 0;
-					Level_3 = 0;
+					Level_0 = 75;
+					Level_1 = -25;
+					Level_2 = -50;
+					Level_3 = -100;
 				};
 				class Undead
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 100;

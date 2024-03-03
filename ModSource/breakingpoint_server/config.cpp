@@ -48,7 +48,7 @@ class CfgBreakingPointServerSettings
 	};
 	class MixedGroupPointsGain
 	{
-		disableMixedGroupPointsGain = 1;	//turns point gain for mixed group off, point lose still on 0 = off , 1 = on
+		disableMixedGroupPointsGain = 0;	//turns point gain for mixed group off, point lose still on 0 = off , 1 = on
 	};
 	class groupLeaveTimer
 	{
@@ -60,7 +60,7 @@ class CfgBreakingPointServerSettings
 	};
 	class repairVehicle
 	{
-		repairCooldown = 900; //time in seconds for point gain on vehicle repair
+		repairCooldown = 720; //time in seconds for point gain on vehicle repair
 	};
 	class Faction
 	{
@@ -80,7 +80,7 @@ class CfgDifficultyPresets
 	{
 		class Options
 		{
-			waypoints=0;		// Waypoints Regular(3PP) (0 = never, 1 = fade out, 2 = always)
+			waypoints=2;		// Waypoints Regular(3PP) (0 = never, 1 = fade out, 2 = always)
 		};		
 	};
 	
@@ -88,7 +88,7 @@ class CfgDifficultyPresets
 	{
 		class Options
 		{
-			waypoints=0;		// Waypoints Veteran(1PP) (0 = never, 1 = fade out, 2 = always)
+			waypoints=2;		// Waypoints Veteran(1PP) (0 = never, 1 = fade out, 2 = always)
 		};
 	};
 };

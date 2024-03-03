@@ -58,7 +58,7 @@
 			{
 				class Spawn
 				{
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					primary[] = {};
 					launcher[] = {};
 					handgun[] = {};
@@ -159,7 +159,7 @@
 					dressing = -10;
 					morphine = -10;
 					surgery = -25;
-					gut = 100;
+					gut = 200;
 				};
 				class Nomad
 				{
@@ -169,7 +169,7 @@
 					dressing = -10;
 					morphine = -10;
 					surgery = -25;
-					gut = 100;
+					gut = 200;
 				};
 				class Survivalist
 				{
@@ -179,7 +179,7 @@
 					dressing = -10;
 					morphine = -10;
 					surgery = -25;
-					gut = 100;
+					gut = 200;
 				};
 				class Outlaw
 				{
@@ -189,7 +189,7 @@
 					dressing = -10;
 					morphine = -10;
 					surgery = -25;
-					gut = 100;
+					gut = 200;
 				};
 				class Hunter
 				{
@@ -199,7 +199,7 @@
 					dressing = -10;
 					morphine = -10;
 					surgery = -25;
-					gut = 100;
+					gut = 200;
 				};
 				class Engineer
 				{
@@ -209,16 +209,16 @@
 					dressing = -10;
 					morphine = -10;
 					surgery = -25;
-					gut = 100;
+					gut = 200;
 				};
 				class Undead
 				{
-					food = 5;
-					drink = 5;
-					bandage = 5;
-					dressing = 10;
-					morphine = 10;
-					surgery = 25;
+					food = 15;
+					drink = 15;
+					bandage = 15;
+					dressing = 20;
+					morphine = 30;
+					surgery = 75;
 					gut = 0;
 				};
 			};
@@ -308,7 +308,7 @@
 				};
 				class Hunter
 				{
-					Level_0 = 0;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
@@ -336,7 +336,7 @@
 				};
 				class Undead
 				{
-					Level_0 = 0;
+					Level_0 = 100;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;

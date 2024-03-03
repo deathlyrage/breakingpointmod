@@ -220,7 +220,8 @@ if (!hasInterface) exitWith {};
 		params ["_player","_hostage"];
 		
 		//Hostage Message
-		cutText ["A player has taken you hostage.", "PLAIN DOWN"];
+//		cutText ["A player has taken you hostage.", "PLAIN DOWN"];
+		cutText ["<t font='PuristaSemiBold' color='#fe0000' size='2'>A player has taken you hostage!</t><br/>", "PLAIN DOWN", -1, true, true];
 		
 		//Activate Hostage Thread...
 		uiNamespace setVariable ["BP_LastHostageTime",diag_tickTime];

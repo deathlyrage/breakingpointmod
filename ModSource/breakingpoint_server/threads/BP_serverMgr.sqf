@@ -37,7 +37,7 @@ _lastDupeCheck = diag_tickTime;
 _lastHelicrashCheck = diag_tickTime;
 _lastTimeoutCheck = diag_tickTime;
 _lastDebugCheck = diag_tickTime;
-_helicrashCount = 5;
+_helicrashCount = 3;
 
 waitUntil
 {

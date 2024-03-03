@@ -162,7 +162,8 @@ switch (_type) do {
 		
 		//Non Effective Message
 		if ((r_hit_legs > 0.4) or (r_hit_hands > 0.4)) then {
-			cutText ["Painkillers were not effective, Morphine required.", "PLAIN DOWN"];
+//			cutText ["Painkillers were not effective, Morphine required.", "PLAIN DOWN"];
+			cutText ["<t font='PuristaSemiBold' color='#ffffff' size='2'>Painkillers were not effective, Morphine required!</t><br/>", "PLAIN DOWN", -1, true, true];
 		};
 		if (r_hit_legs < 0.4) then { r_hit_legs = 0; };
 		if (r_hit_hands < 0.4) then { r_hit_hands = 0; };

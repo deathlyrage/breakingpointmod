@@ -10,15 +10,15 @@ class RscDisplayOptionsVideo
 	enableDisplay=1;
 	class ControlsBackground
 	{
-		class Mainback : RscPicture
-		{
-			idc = 2310;
-			text = "\breakingpoint_ui\loading\loading_2.jpg";
-			x = 0 * safezoneW + safezoneX;
-			y = 0 * safezoneH + safezoneY;
-			w = 1 * safezoneW;
-			h = 1 * safezoneH;
-		};
+//		class Mainback : RscPicture
+//		{
+//			idc = 2310;
+//			text = "\breakingpoint_ui\loading\loading_2.jpg";
+//			x = 0 * safezoneW + safezoneX;
+//			y = 0 * safezoneH + safezoneY;
+//			w = 1 * safezoneW;
+//			h = 1 * safezoneH;
+//		};
 		class TitleBackground: RscText
 		{
 			colorBackground[]=

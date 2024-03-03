@@ -90,6 +90,28 @@ class CfgMarkers
 	scope = 2;
 	markerClass = "draw";
 	};
+	class loc_Hospital
+	{
+	name="Hospital";
+	icon="\breakingpoint_ui\icons\hospital.paa";
+	color[]={1,1,1,1};
+	size=20;
+	shadow = 0;
+	scope = 2;
+	markerClass="Locations";
+	showEditorMarkerColor=0;
+	};
+	class loc_AirfieldBP
+	{
+	name="Airfield";
+	icon="\breakingpoint_ui\icons\airport.paa";
+	color[]={1,1,1,1};
+	size=20;
+	shadow = 0;
+	scope = 2;
+	markerClass="Locations";
+	showEditorMarkerColor=0;
+	};
 };
 class cfgScriptPaths {
 	default = "breakingpoint_ui\scripts\GUI\";
@@ -101,10 +123,12 @@ class cfgScriptPaths {
 class RscPicture;	// External class reference
 class RscStandardDisplay;	// External class reference
 class RscText;
+class RscVideo;
 class RscLineBreak;
 class RscButton;
 class RscButtonMenu;
 class RscButtonMenuOK;
+class RscButtonMenuMain;
 class RscList;
 class RscXListBox;
 class RscPictureKeepAspect;
@@ -127,6 +151,16 @@ class CA_IGUI_Title;
 class RscGearShortcutButton;
 class RscIGUIListNBox;
 class RscActiveText;
+class RscActivePicture: RscActiveText
+{
+	style=48;
+	color[]={1,1,1,0.5};
+	colorActive[]={1,1,1,1};
+};
+class RscActivePictureKeepAspect: RscActivePicture
+{
+	style="0x30 + 0x800";
+};
 class RscProgress;
 class RscProgressNotFreeze;
 class RscButtonTextOnly;
@@ -209,11 +243,11 @@ class RscGearTemplates {
 #include "config\RscDisplayMain.hpp"
 #include "config\RscDisplayMultiplayer.hpp"
 
-#include "config\RscDisplayConfigure.hpp"
+//#include "config\RscDisplayConfigure.hpp"
 #include "config\RscDisplayGameOptions.hpp"
 #include "config\RscDisplayOptionsLayout.hpp"
-#include "config\RscDisplayOptionsAudio.hpp"
-#include "config\RscDisplayOptionsVideo.hpp"
+//#include "config\RscDisplayOptionsAudio.hpp"
+//#include "config\RscDisplayOptionsVideo.hpp"
 #include "config\RscDisplayModLauncher.hpp"
 #include "config\RscDisplayNewUser.hpp"
 #include "config\RscDisplayLogin.hpp"
@@ -993,113 +1027,114 @@ class CfgCommunicationMenu {
 	delete TransportBase;
 };
 
-class CfgVideoOptions
-{
-	class Visibility
-	{
-		minValue = 500;
-		maxValue = 10000;
-	};
-	class ObjectsVisibility
-	{
-		minValue = 500;
-		maxValue = 5000;
-	};
-	class ShadowsVisibility
-	{
-		minValue = 30;
-		maxValue = 100;
-	};
-	class PiP
-	{
-		class Disabled
-		{
-			text = "Disabled";
-			value = 0;
-		};
-		class VeryLow
-		{
-			text = "Low";
-			value = 500;
-		};
-		class Low
-		{
-			text = "Standard";
-			value = 800;
-		};
-		delete High;
-		delete Normal;
-		delete VeryHigh;
-		delete Ultra;
-	};
-	class TextureQuality
-	{
-		class VeryLow
-		{
-			text = "Very Low";
-			mipBias = 13;
-			vramNeeded = 0;
-		};
-	};
-	class TerrainQuality
-	{
-		class Low
-		{
-			terrainGrid = 25;
-			text = "Standard";
-		};
-		class Normal
-		{
-			terrainGrid = 12.5;
-			text = "High";
-		};
-		class High
-		{
-			terrainGrid = 6.25;
-			text = "Very High";
-		};
-		class VeryHigh
-		{
-			terrainGrid = 3.125;
-			text = "Ultra";
-		};
-		delete VeryLow;
-	};
-	class WaterSSReflectionsQuality
-	{
-		delete Normal;
-		delete High;
-		class Disabled
-		{
-			text = "Disabled";
-			value = 0;
-		};
-		class Low
-		{
-			text = "Standard";
-			value = 0.3;
-		};
-	};
-	class ShadowQuality
-	{
-		delete Disabled;
-	};
-	class ATOCQuality
-	{
-		class Disabled
-		{
-			grass = 0;
-			newTrees = 0;
-			oldTrees = 0;
-			other = 0;
-			text = "Disabled";
-		};
-		delete All;
-		delete Grass;
-		delete OldTreeGrass;
-		delete OldTreeNewTree;
-		delete OldTree;
-		delete NewTreeGrass;
-		delete NewTree;
-	};
-};
+//Code being removed, it's no longer necessary//
+//class CfgVideoOptions
+//{
+//	class Visibility
+//	{
+//		minValue = 500;
+//		maxValue = 10000;
+//	};
+//	class ObjectsVisibility
+//	{
+//		minValue = 500;
+//		maxValue = 5000;
+//	};
+//	class ShadowsVisibility
+//	{
+//		minValue = 30;
+//		maxValue = 100;
+//	};
+//	class PiP
+//	{
+//		class Disabled
+//		{
+//			text = "Disabled";
+//			value = 0;
+//		};
+//		class VeryLow
+//		{
+//			text = "Low";
+//			value = 500;
+//		};
+//		class Low
+//		{
+//			text = "Standard";
+//			value = 800;
+//		};
+//		delete High;
+//		delete Normal;
+//		delete VeryHigh;
+//		delete Ultra;
+//	};
+//	class TextureQuality
+//	{
+//		class VeryLow
+//		{
+//			text = "Very Low";
+//			mipBias = 13;
+//			vramNeeded = 0;
+//		};
+//	};
+//	class TerrainQuality
+//	{
+//		class Low
+//		{
+//			terrainGrid = 25;
+//			text = "Standard";
+//		};
+//		class Normal
+//		{
+//			terrainGrid = 12.5;
+//			text = "High";
+//		};
+//		class High
+//		{
+//			terrainGrid = 6.25;
+//			text = "Very High";
+//		};
+//		class VeryHigh
+//		{
+//			terrainGrid = 3.125;
+//			text = "Ultra";
+//		};
+//		delete VeryLow;
+//	};
+//	class WaterSSReflectionsQuality
+//	{
+//		delete Normal;
+//		delete High;
+//		class Disabled
+//		{
+//			text = "Disabled";
+//			value = 0;
+//		};
+//		class Low
+//		{
+//			text = "Standard";
+//			value = 0.3;
+//		};
+//	};
+//	class ShadowQuality
+//	{
+//		delete Disabled;
+//	};
+//	class ATOCQuality
+//	{
+//		class Disabled
+//		{
+//			grass = 0;
+//			newTrees = 0;
+//			oldTrees = 0;
+//			other = 0;
+//			text = "Disabled";
+//		};
+//		delete All;
+//		delete Grass;
+//		delete OldTreeGrass;
+//		delete OldTreeNewTree;
+//		delete OldTree;
+//		delete NewTreeGrass;
+//		delete NewTree;
+//	};
+//};

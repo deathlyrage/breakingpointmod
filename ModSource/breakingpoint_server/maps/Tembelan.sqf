@@ -30,5 +30,5 @@ _objs = [
 	};
 	_obj enableDynamicSimulation true;
 } count _objs;
-_additions = ["Tembelan1","Tembelan2"];
+_additions = ["Tembelan1","Tembelan2","Tembelan3"];
 { call compile preprocessFileLineNumbers format ["\breakingpoint_server\maps\Tembelan\%1.sqf",_x]; } count _additions;

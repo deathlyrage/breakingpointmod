@@ -99,4 +99,11 @@ class CfgMissions
 			directory = "breakingpoint_code\MPScenarios\BP10_BreakingPoint.Bornholm";
 		};
 	};
+	class Cutscenes
+	{
+		class Intro1
+		{
+			directory = "breakingpoint_ui\malden_intro.malden";
+		};
+	};
 };

@@ -611,7 +611,7 @@ class CfgWeapons
 				{
 					hitpointName = "HitChest";
 					armor = 8;
-					passThrough = 0.9;
+					passThrough = 0.8;
 				};
 			};
 		};
@@ -792,7 +792,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Hunter2_F";
 			allowedSlots[] = {};
-			containerClass = "Supply30";
+			containerClass = "Supply40";
 			mass = 40;
 		};
 	};
@@ -970,7 +970,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "C_man_w_worker_F";
+			uniformClass = "BP_EngineerF_F";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -985,7 +985,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "I_helipilot_F";
+			uniformClass = "BP_Engineer1_F";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -1015,7 +1015,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "B_Helipilot_F";
+			uniformClass = "BP_Engineer2_F";
 			allowedSlots[] = {};
 			containerClass = "Supply40";
 			mass = 40;
@@ -1045,7 +1045,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "I_pilot_F";
+			uniformClass = "BP_Engineer3_F";
 			allowedSlots[] = {};
 			containerClass = "Supply60";
 			mass = 40;
@@ -1224,7 +1224,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Undead2_F";
 			allowedSlots[] = {};
-			containerClass = "Supply10";
+			containerClass = "Supply20";
 			mass = 40;
 		};
 	};
@@ -1234,14 +1234,14 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Watchers Level 3";
 		picture = "\breakingpoint_ui\icons\UndeadIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
 			uniformClass = "BP_Undead3_F";
 			allowedSlots[] = {};
-			containerClass = "Supply10";
-			mass = 40;
+			containerClass = "Supply30";
+			mass = 80;
 		};
 	};
 	class BP_Shemag_bandit: H_HelmetB
@@ -1263,6 +1263,496 @@ class CfgWeapons
 			hiddenSelections[] = {"camo"};
 		};
 	};
+	class BP_MilCap_Hero3: H_MilCap_ocamo
+	{
+		displayName = "Hero Medic Cap";
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap3_co.paa"};
+	};
+	class BP_MilCap_Hero1: H_MilCap_ocamo
+	{
+		displayName = "Hero Cap";
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap1_co.paa"};
+	};
+	class BP_HeroCap: H_Cap_red
+	{
+		displayName = "Hero Cap";
+		picture = "\A3\characters_f\Data\UI\icon_h_cap_blk_cmmg_ca.paa";
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap_co.paa"};
+	};
+	class BP_HeroBoonie_cam: H_HelmetB
+	{
+		displayName = "Hero Boonie Hat";
+		picture = "\A3\Characters_F\data\ui\icon_H_booniehat_mcamo_ca.paa";
+		model = "\A3\Characters_F\Common\booniehat";
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap2_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 10;
+			allowedSlots[] = {901};
+			uniformModel = "\A3\Characters_F\Common\booniehat";
+			modelSides[] = {6};
+			armor = "0";
+			passThrough = 1;
+		};
+	};
+	class BP_RogueHat: H_HelmetB
+	{
+		displayName = "Rogue Hat";
+		picture = "\A3\Characters_F\data\ui\icon_h_booniehat_desert_ca.paa";
+		model = "\breakingpoint\models\BP_roguehat.p3d";
+		class ItemInfo: ItemInfo
+		{
+			mass = 10;
+			allowedSlots[] = {901};
+			uniformModel = "\breakingpoint\models\BP_roguehat.p3d";
+			modelSides[] = {6};
+			armor = "0";
+			passThrough = 1;
+		};
+	};
+	class BP_Bandit_Bandanna: H_HelmetB
+	{
+		displayName = "$STR_A3_H_Bandanna_surfer0";
+		picture = "\A3\characters_f\Data\UI\icon_H_Bandanna_cbr_CA.paa";
+		model = "\A3\Characters_F\Civil\headgear_c_bandana1.p3d";
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_BanditBandanna_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 2;
+			allowedSlots[] = {901};
+			uniformModel = "\A3\Characters_F\Civil\headgear_c_bandana1.p3d";
+			modelSides[] = {6};
+			armor = "3*0";
+			passThrough = 1;
+		};
+	};
+	class BP_JungleGhillie_Uniform: Uniform_Base
+	{
+		author = "Bohemia Interactive";
+		displayName = "Ghillie (Jungle)";
+		DLC = "Expansion";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		scope = 2;
+		class ItemInfo: UniformItem
+		{
+			containerClass = "Supply50";
+			mass = 80;
+			uniformClass = "BP_Jungle_Ghillie";
+			uniformModel = "-";
+		};
+	};
+	class BP_Paramilitary_Jacket_Uniform: Uniform_Base
+	{
+		author = "Bohemia Interactive";
+		displayName = "Independent (Paramilitary Jacket)";
+		DLC = "Expansion";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_2_F_1_co.paa"};
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		scope = 2;
+		class ItemInfo: UniformItem
+		{
+			containerClass = "Supply40";
+			mass = 40;
+			uniformClass = "BP_Paramilitary_Jacket";
+			uniformModel = "-";
+		};
+	};
+	class BP_Paramilitary_Shorts_Uniform: Uniform_Base
+	{
+		author = "Bohemia Interactive";
+		displayName = "Independent (Paramilitary Tank)";
+		DLC = "Expansion";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_4_F_1_co.paa"
+		};
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		scope = 2;
+		class ItemInfo: UniformItem
+		{
+			containerClass = "Supply40";
+			mass = 40;
+			uniformClass = "I_C_Soldier_Para_4_F";
+			uniformModel = "-";
+		};
+	};
+	class BP_Paramilitary_Tee_Uniform: Uniform_Base
+	{
+		author = "Bohemia Interactive";
+		displayName = "Independent (Paramilitary Tee)";
+		DLC = "Expansion";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_1_F_1_co.paa"};
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		scope = 2;
+		class ItemInfo: UniformItem
+		{
+			containerClass = "Supply40";
+			mass = 40;
+			uniformClass = "BP_Paramilitary_Tee";
+			uniformModel = "-";
+		};
+	};
+	class BP_Guarilla_Faded: U_BG_Guerilla3_1
+	{
+		scope = 2;
+		displayName = "Independent (Faded)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Guarilla_Faded";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 80;
+		};
+	};
+	class BP_Guarilla_Khaki: U_BG_Guerilla3_2
+	{
+		scope = 2;
+		displayName = "Independent (Khaki)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Guarilla_Khaki";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 80;
+		};
+	};
+	class BP_Guarilla_Leader: U_BG_leader
+	{
+		scope = 2;
+		displayName = "Independent (Leader)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Guarilla_Leader";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 80;
+		};
+	};
+	class BP_Guarilla_Camo: U_BG_Guerilla1_1
+	{
+		scope = 2;
+		displayName = "Independent (Guerilla Camo)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Guarilla_Camo";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 80;
+		};
+	};
+	class BP_Ghillie_Lush: U_B_FullGhillie_lsh
+	{
+		scope = 2;
+		displayName = "Ghillie (Marksman)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Ghillie_Lush";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 10;
+		};
+	};
+	class BP_Wetsuit: U_I_Wetsuit
+	{
+		scope=2;
+		displayName="Independent (Wetsuit)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\diver_suit_rus_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Wetsuit1_F";
+			allowedSlots[] = {};
+			containerClass = "Supply10";
+			uniformType = "Neopren";
+			mass = 90;
+		};
+	};
+	class BP_Wetsuit_Z: U_B_Wetsuit
+	{
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Wetsuit_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			uniformType = "Neopren";
+			mass = 90;
+			displayName = "Wetsuit (Black)";
+		};
+	};
+	class BP_DirtGhillie: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Dirt)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_DirtGhillie";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_DirtGhillie_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Dirt)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_DirtGhillie_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_StoneGhillie: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Stone)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_StoneGhillie";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_StoneGhillie_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Stone)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_StoneGhillie_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_TreeGhillie: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Tree)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_TreeGhillie";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_TreeGhillie_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Tree)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_TreeGhillie_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_GrassGhillie: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Grass)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_GrassGhillie";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_GrassGhillie_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Grass)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_GrassGhillie_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+		};
+	};
+	class BP_SnowGhillie: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Snow)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_SnowGhillie";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_SnowGhillie_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Ghillie (Snow)";
+		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_SnowGhillie_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+//newzombies//
+	class BP_Scientist_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Scientist";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_scientist_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Scientist_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Worker_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Worker";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_dirty_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Worker_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Medic_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Medic";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_paramedic_01_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Medic_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Mechanic_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Mechanic";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_mechanic_01_camo1_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Mechanic_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+	class BP_Construction_Z: Uniform_Base
+	{
+		scope = 2;
+		displayName = "Infected Construction";
+		picture = "\breakingpoint_ui\icons\noneicon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_constructioncoverall_black_co"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "BP_Construction_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply30";
+			mass = 80;
+			hiddenSelections[] = {"Camo"};
+		};
+	};
+//VESTS//
 	class V_EngineerVest_BP: Vest_NoCamo_Base
 	{
 		scope = 2;
@@ -1441,69 +1931,6 @@ class CfgWeapons
 			armor = "0";
 			passThrough = 0.95;
 			hiddenSelections[] = {"camo"};
-		};
-	};
-	class BP_MilCap_Hero3: H_MilCap_ocamo
-	{
-		displayName = "Hero Medic Cap";
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap3_co.paa"};
-	};
-	class BP_MilCap_Hero1: H_MilCap_ocamo
-	{
-		displayName = "Hero Cap";
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap1_co.paa"};
-	};
-	class BP_HeroCap: H_Cap_red
-	{
-		displayName = "Hero Cap";
-		picture = "\A3\characters_f\Data\UI\icon_h_cap_blk_cmmg_ca.paa";
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap_co.paa"};
-	};
-	class BP_HeroBoonie_cam: H_HelmetB
-	{
-		displayName = "Hero Boonie Hat";
-		picture = "\A3\Characters_F\data\ui\icon_H_booniehat_mcamo_ca.paa";
-		model = "\A3\Characters_F\Common\booniehat";
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap2_co.paa"};
-		class ItemInfo: ItemInfo
-		{
-			mass = 10;
-			allowedSlots[] = {901};
-			uniformModel = "\A3\Characters_F\Common\booniehat";
-			modelSides[] = {6};
-			armor = "0";
-			passThrough = 1;
-		};
-	};
-	class BP_RogueHat: H_HelmetB
-	{
-		displayName = "Rogue Hat";
-		picture = "\A3\Characters_F\data\ui\icon_h_booniehat_desert_ca.paa";
-		model = "\breakingpoint\models\BP_roguehat.p3d";
-		class ItemInfo: ItemInfo
-		{
-			mass = 10;
-			allowedSlots[] = {901};
-			uniformModel = "\breakingpoint\models\BP_roguehat.p3d";
-			modelSides[] = {6};
-			armor = "0";
-			passThrough = 1;
-		};
-	};
-	class BP_Bandit_Bandanna: H_HelmetB
-	{
-		displayName = "$STR_A3_H_Bandanna_surfer0";
-		picture = "\A3\characters_f\Data\UI\icon_H_Bandanna_cbr_CA.paa";
-		model = "\A3\Characters_F\Civil\headgear_c_bandana1.p3d";
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_BanditBandanna_co.paa"};
-		class ItemInfo: ItemInfo
-		{
-			mass = 2;
-			allowedSlots[] = {901};
-			uniformModel = "\A3\Characters_F\Civil\headgear_c_bandana1.p3d";
-			modelSides[] = {6};
-			armor = "3*0";
-			passThrough = 1;
 		};
 	};
 	class V_Rangemaster_belt_BP: Vest_NoCamo_Base
@@ -1740,84 +2167,7 @@ class CfgWeapons
 			};		  
 		};
 	};
-	class BP_JungleGhillie_Uniform: Uniform_Base
-	{
-		author = "Bohemia Interactive";
-		displayName = "Ghillie (Jungle)";
-		DLC = "Expansion";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		scope = 2;
-		class ItemInfo: UniformItem
-		{
-			containerClass = "Supply60";
-			mass = 80;
-			uniformClass = "BP_Jungle_Ghillie";
-			uniformModel = "-";
-		};
-	};
-	class BP_Paramilitary_Jacket_Uniform: Uniform_Base
-	{
-		author = "Bohemia Interactive";
-		displayName = "Independent (Paramilitary Jacket)";
-		DLC = "Expansion";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_2_F_1_co.paa"};
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		scope = 2;
-		class ItemInfo: UniformItem
-		{
-			containerClass = "Supply40";
-			mass = 40;
-			uniformClass = "BP_Paramilitary_Jacket";
-			uniformModel = "-";
-		};
-	};
-	class BP_Paramilitary_Shorts_Uniform: Uniform_Base
-	{
-		author = "Bohemia Interactive";
-		displayName = "Independent (Paramilitary Tank)";
-		DLC = "Expansion";
-		hiddenSelections[]=
-		{
-			"camo"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_4_F_1_co.paa"
-		};
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		scope = 2;
-		class ItemInfo: UniformItem
-		{
-			containerClass = "Supply40";
-			mass = 40;
-			uniformClass = "I_C_Soldier_Para_4_F";
-			uniformModel = "-";
-		};
-	};
-	class BP_Paramilitary_Tee_Uniform: Uniform_Base
-	{
-		author = "Bohemia Interactive";
-		displayName = "Independent (Paramilitary Tee)";
-		DLC = "Expansion";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Para_1_F_1_co.paa"};
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		scope = 2;
-		class ItemInfo: UniformItem
-		{
-			containerClass = "Supply40";
-			mass = 40;
-			uniformClass = "BP_Paramilitary_Tee";
-			uniformModel = "-";
-		};
-	};
+	
 	class V_PlateCarrierGL_rgr;
 	class V_PlateCarrierGL_tna_BP: V_PlateCarrierGL_rgr
 	{
@@ -2567,354 +2917,175 @@ class CfgWeapons
 			};						 
 		};
 	};
-	class BP_Guarilla_Faded: U_BG_Guerilla3_1
+	class BP_V_Ballistic_A: Vest_NoCamo_Base
+	{
+		author = "Donnie";
+		scope = 2;
+		displayName = "Ballistic Vest";
+		picture="\breakingpoint_weapons_cfg\vests\ballisticvest.paa";
+		model="\A3\Characters_F\BLUFOR\equip_b_carrier_gl_rig.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F_Mark\BLUFOR\Data\carrier_gl_rig_blk_co.paa"
+		};
+		descriptionShort = "$STR_A3_SP_AL_IV";
+		class ItemInfo: VestItem
+		{
+			uniformModel="\A3\Characters_F\BLUFOR\equip_b_carrier_gl_rig.p3d";
+			containerClass = "Supply30";
+			hiddenSelections[] = {"Camo","Camo1"};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 4;
+					passThrough = 0.6;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 20;
+					passThrough = 0.4;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 20;
+					passThrough = 0.5;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 16;
+					passThrough = 0.5;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 12;
+					passThrough = 0.5;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
+	class BP_V_PlateCarrier_heavy_A: Vest_NoCamo_Base
 	{
 		scope = 2;
-		displayName = "Independent (Faded)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		class ItemInfo: UniformItem
+		author = "Donnie";
+		displayName = "Body Armor";
+		picture = "\breakingpoint_weapons_cfg\vests\bodyarmor.paa";
+		model="\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
+		descriptionShort = "$STR_A3_SP_AL_III";
+		hiddenSelections[] = {"Camo","Camo1"};
+		hiddenSelectionsTextures[]=
 		{
-			uniformModel = "-";
-			uniformClass = "BP_Guarilla_Faded";
-			allowedSlots[] = {};
+			"\breakingpoint_ui\factions\bodyarmor.paa"
+		};
+		class ItemInfo: VestItem
+		{
+			uniformModel="\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
 			containerClass = "Supply20";
-			mass = 80;
-		};
-	};
-	class BP_Guarilla_Khaki: U_BG_Guerilla3_2
-	{
-		scope = 2;
-		displayName = "Independent (Khaki)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Guarilla_Khaki";
-			allowedSlots[] = {};
-			containerClass = "Supply20";
-			mass = 80;
-		};
-	};
-	class BP_Guarilla_Leader: U_BG_leader
-	{
-		scope = 2;
-		displayName = "Independent (Leader)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Guarilla_Leader";
-			allowedSlots[] = {};
-			containerClass = "Supply20";
-			mass = 80;
-		};
-	};
-	class BP_Guarilla_Camo: U_BG_Guerilla1_1
-	{
-		scope = 2;
-		displayName = "Independent (Guerilla Camo)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Guarilla_Camo";
-			allowedSlots[] = {};
-			containerClass = "Supply20";
-			mass = 80;
-		};
-	};
-	class BP_Ghillie_Lush: U_B_FullGhillie_lsh
-	{
-		scope = 2;
-		displayName = "Ghillie (Marksman)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Ghillie_Lush";
-			allowedSlots[] = {};
-			containerClass = "Supply20";
-			mass = 10;
-		};
-	};
-	class BP_Wetsuit: U_I_Wetsuit
-	{
-		scope=2;
-		displayName="Independent (Wetsuit)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\diver_suit_rus_co.paa"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Wetsuit1_F";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			uniformType = "Neopren";
-			mass = 90;
-		};
-	};
-	class BP_Wetsuit_Z: U_B_Wetsuit
-	{
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Wetsuit_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			uniformType = "Neopren";
-			mass = 90;
-			displayName = "Wetsuit (Black)";
-		};
-	};
-	class BP_DirtGhillie: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Dirt)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_DirtGhillie";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_DirtGhillie_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Dirt)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_DirtGhillie_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_StoneGhillie: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Stone)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_StoneGhillie";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_StoneGhillie_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Stone)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_StoneGhillie_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_TreeGhillie: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Tree)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_TreeGhillie";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_TreeGhillie_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Tree)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_TreeGhillie_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_GrassGhillie: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Grass)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_GrassGhillie";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_GrassGhillie_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Grass)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_GrassGhillie_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-		};
-	};
-	class BP_SnowGhillie: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Ghillie (Snow)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_SnowGhillie";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
 			hiddenSelections[] = {"Camo"};
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 16;
+					passThrough = 0.5;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 16;
+					passThrough = 0.5;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 12;
+					passThrough = 0.5;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.5;
+				};
+			};
 		};
 	};
-	class BP_SnowGhillie_Z: Uniform_Base
+	class BP_V_FlakJacket_Base: Vest_NoCamo_Base
 	{
 		scope = 2;
-		displayName = "Ghillie (Snow)";
-		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
-		class ItemInfo: UniformItem
+		author = "Donnie";
+		displayName = "Flak Jacket";
+		picture="\A3\Characters_F_Orange\Vests\Data\UI\icon_V_Pocketed_olive_CA.paa";
+		model="\A3\Characters_F_Orange\Vests\V_Pocketed_cloth_F.p3d";
+		descriptionShort = "$STR_A3_SP_AL_II";
+		hiddenSelections[]=
 		{
-			uniformModel = "-";
-			uniformClass = "BP_SnowGhillie_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-			hiddenSelections[] = {"Camo"};
+			"camo"
 		};
-	};
-//newzombies//
-	class BP_Scientist_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Infected Scientist";
-		picture = "\breakingpoint_ui\icons\noneicon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_scientist_co.paa"};
-		class ItemInfo: UniformItem
+		hiddenSelectionsTextures[]=
 		{
-			uniformModel = "-";
-			uniformClass = "BP_Scientist_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-			hiddenSelections[] = {"Camo"};
+			"\breakingpoint_weapons_cfg\Vests\flakjacket.paa"
 		};
-	};
-	class BP_Worker_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Infected Worker";
-		picture = "\breakingpoint_ui\icons\noneicon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\A3\Characters_F\Common\Data\coveralls_dirty_co.paa"};
-		class ItemInfo: UniformItem
+		class ItemInfo: VestItem
 		{
-			uniformModel = "-";
-			uniformClass = "BP_Worker_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
+			uniformModel="\A3\Characters_F_Orange\Vests\V_Pocketed_cloth_F.p3d";
+			containerClass = "Supply60";
+			mass = 60;
 			hiddenSelections[] = {"Camo"};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 2;
+					passThrough = 0.6;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 4;
+					passThrough = 0.5;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.5;
+				};
+			};
 		};
-	};
-	class BP_Medic_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Infected Medic";
-		picture = "\breakingpoint_ui\icons\noneicon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_paramedic_01_co.paa"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Medic_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-			hiddenSelections[] = {"Camo"};
-		};
-	};
-	class BP_Mechanic_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Infected Mechanic";
-		picture = "\breakingpoint_ui\icons\noneicon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_mechanic_01_camo1_co.paa"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Mechanic_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-			hiddenSelections[] = {"Camo"};
-		};
-	};
-	class BP_Construction_Z: Uniform_Base
-	{
-		scope = 2;
-		displayName = "Infected Construction";
-		picture = "\breakingpoint_ui\icons\noneicon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
-		hiddenSelections[]={"camo"};
-		hiddenSelectionsTextures[]={"\a3\Characters_F_Orange\Uniforms\Data\c_constructioncoverall_black_co"};
-		class ItemInfo: UniformItem
-		{
-			uniformModel = "-";
-			uniformClass = "BP_Construction_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply30";
-			mass = 80;
-			hiddenSelections[] = {"Camo"};
-		};
-	};
+	};	
 	class ItemMap: ItemCore
 	{
 		model = "breakingpoint\models\bp_map.p3d";

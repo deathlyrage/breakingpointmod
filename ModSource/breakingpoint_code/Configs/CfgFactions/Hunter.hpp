@@ -184,12 +184,12 @@
 				};
 				class Hunter
 				{
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = 5;
+					drink = 5;
+					bandage = 5;
+					dressing = 10;
+					morphine = 15;
+					surgery = 25;
 					gut = 250;
 				};
 				class Engineer
@@ -285,49 +285,49 @@
 			{
 				class Ranger
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
 				};
 				class Outlaw
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
 				};
 				class Hunter
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
 				};
 				class Nomad
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
 				};
 				class Survivalist
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
 				};
 				class Engineer
 				{
-					Level_0 = 50;
-					Level_1 = 0;
-					Level_2 = 0;
-					Level_3 = 0;
+					Level_0 = 75;
+					Level_1 = 50;
+					Level_2 = 100;
+					Level_3 = 200;
 				};
 				class Undead
 				{
-					Level_0 = 50;
+					Level_0 = 75;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;

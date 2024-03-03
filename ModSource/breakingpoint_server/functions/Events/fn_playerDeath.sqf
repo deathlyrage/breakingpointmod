@@ -150,7 +150,7 @@ if (!isNull _killer) then
 	_killerUniform = (uniform _killer);
 	
 	//None Player Kills None Player
-	if (_playerClass == 0 and _killerClass != 0) then { _pointsChange = 25; };
+	if (_playerClass == 0 and _killerClass != 0) then { _pointsChange = 50; };
 	
 	// If Player in Traitor Uniform and Doesn't Have Traitor Flag, Flag Anyway Due to Desync
 	if (!_playerTraitorFlag) then { if (_playerUniform in BP_TraitorClothing) then { _playerTraitorFlag = true; }; };

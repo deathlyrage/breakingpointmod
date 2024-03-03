@@ -54,7 +54,8 @@ if !(isNull _container) then
 {
 	if (_container isKindOf "CAManBase" && {!(_container isKindOf "Animal")} && {!(_container isKindOf "zZombie_Base")}) then {
 		_restrictedInventory = true;
-		cutText ["You need to use Loot Remains Action to access the inventory of this body.","PLAIN DOWN"];
+//		cutText ["Use your scrollwheel for Loot Remains Action to access the loot of this body.","PLAIN DOWN"];
+		cutText ["<t font='EtelkaNarrowMediumPro' color='#ffffff' size='2'>Use your scrollwheel for Loot Remains Action to access the loot of this body!</t><br/>", "PLAIN DOWN", -1, true, true];
 	};
 
 	//Check if AI Grave or Not

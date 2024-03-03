@@ -157,9 +157,9 @@ waitUntil
 		_isNomad = (_factionName == "Nomad");
 		_isNomadTraitor = (_isNomad and _factionLevel < 1);
 		
-		if (r_player_blood == 12000) exitWith { cutText ["Full health reached.", "PLAIN DOWN"]; };
+		if (r_player_blood == 12000) exitWith { cutText ["<t font='PuristaSemiBold' color='#00ff00' size='2'>Full Health Reached</t><br/>", "PLAIN DOWN", -1, true, true]; };
 		
-		if ((r_player_blood > 9000) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["Maximum health regeneration reached.", "PLAIN DOWN"]; };
+		if ((r_player_blood > 9000) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["<t font='PuristaSemiBold' color='#00ff00' size='2'>Maximum Health Reached</t><br/>", "PLAIN DOWN", -1, true, true]; };
 		if ((r_action_restTime > 15) or (_isNomad)) then {
 			r_player_blood = r_player_blood + _regenRateSitting;
 			titleRsc ["Default","PLAIN",0];

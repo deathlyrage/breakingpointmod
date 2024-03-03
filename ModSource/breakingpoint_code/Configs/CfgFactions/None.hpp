@@ -23,12 +23,12 @@ class None : BP_BaseFaction
 				primary[] = {};
 				launcher[] = {};
 				handgun[] = {};
-				clothing[] = {"BP_OptOut","BP_OptOut2","BP_OptOut3","BP_Guarilla_Faded","BP_Guarilla_Camo"};
+				clothing[] = {"BP_OptOut","BP_OptOut2","BP_OptOut3"};
 				backpack[] = {};
 				vest[] = {};
 			};
 			class Uniform : BP_BaseGear {
-				magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
+				magazines[] = {"ItemPainkiller","ItemBandage"};
 			};
 			class Vest : BP_BaseGear {};
 			class Backpack : BP_BaseGear {};

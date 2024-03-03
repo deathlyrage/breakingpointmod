@@ -83,10 +83,10 @@ class CfgBuildingLoot
 		};		
 	};
 	class Residential2: Default {
-		zombieChance = 0.15;
+		zombieChance = 0;
 		minRoaming = 0;
-		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
+		maxRoaming = 0;
+		zombieClass[] = {};
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
@@ -115,7 +115,7 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		minRoaming = 0;
 		maxRoaming = 1;
-		zombieChance = 0.4;
+		zombieChance = 0.3;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		itemType[] = {
 			//{"BP_CardboardBox_1","object","Office"},
@@ -139,10 +139,11 @@ class CfgBuildingLoot
 		};		
 	};	
 	class Office: Default {
+		lootChance = 0.10;
 		minRoaming = 0;
 		maxRoaming = 1;
+		zombieChance = 0.10;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
-		lootChance = 0.10;
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_CardboardBox_1","object","Office"},
@@ -177,18 +178,18 @@ class CfgBuildingLoot
 			{"BP_Trashcan","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_WeaponCrateOld","object","Residential2"},
-			{"BP_Bag2","object","Trash"}	
+			{"BP_MedicalboxHelicrash","object","Hospital"}	
 		};
 		itemChance[] =	{
-			0.50,	//BP_CardBoardBox1
+			0.50,	//BP_MedicalBox
             0.10,	//BP_Trashcan
 			0.10,   //BP_Bag1
-			0.01,   //Weapons
-			0.10    //BP_Bag2			
+			0.05,   //Weapons
+			0.20    //Med_Bag			
 		};		
 	};
 	class Windmill: Default {
-		zombieChance = 0.4;
+		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -212,7 +213,7 @@ class CfgBuildingLoot
 		};		
 	};	
 	class Farm: Default {
-		zombieChance = 0.2;
+		zombieChance = 0.1;
 		minRoaming = 0;
 		maxRoaming = 1;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
@@ -283,7 +284,7 @@ class CfgBuildingLoot
 			{"BP_CardboardBox_3","object","Generic"},
             {"BP_Trashcan","object","Trash"},
 			{"BP_Bag1","object","Generic"},
-			{"BP_Bag2","object","Trash"}	
+			{"BP_Bag2","object","Farm"}	
 		};
 		itemChance[] =	{
 			0.05,	//BP_CardBoardBox3
@@ -473,10 +474,10 @@ class CfgBuildingLoot
 	
 //HELI CRASH TABLES		
 	class MilitarCrash: Default {
-		zombieChance = 0.5;
+		zombieChance = 0;
 		minRoaming = 0;
-		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
+		maxRoaming = 0;
+		zombieClass[] = {};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -484,7 +485,7 @@ class CfgBuildingLoot
 			{"BP_5Rnd_300_Mag","magazine"},
 			{"BP_MedicalboxHelicrash","object"},
 			{"V_TacVest_brn_BP","vest"},
-			{"BP_TreeGhillie","uniform"},
+			{"BP_SVT40","weapon"},
 			{"BP_m9tac","weaponA"},
 			{"BP_ScarH","weaponA"},
 			{"BP_MX_SW","weapon"},
@@ -493,17 +494,17 @@ class CfgBuildingLoot
 			{"V_RebreatherB","vest"},
 			{"BP_AWSM","weapon"},
 			{"BP_MK20_GL","weapon"},
-			{"BP_StoneGhillie","uniform"},
+			{"BP_R700","weaponA"},
 			{"BP_Wetsuit","uniform"},
 			{"BP_MXM_black","weaponA"},
-			{"BP_MXM","weapon"},
-			{"BP_MXC","weapon"},
+			{"BP_G36C","weapon"},
+			{"BP_Garand","weapon"},
 			{"BP_gemtech9","toolbelt"},
 			{"Rangefinder","weaponNA"},
 			{"BP_1Rnd_HE_shell","magazine"},
 			{"BP_100Rnd_127x99_box","magazine"},
-			{"BP_Minimi_762","weaponA"},
-			{"BP_M14RIS","weapon"},
+			{"BP_Crossbow","weapon"},
+			{"BP_SUD_AK109","weaponA"},
 			{"BP_SW44","weaponA"},
 			{"BP_M4_300MK","weaponA"}
 			
@@ -511,134 +512,115 @@ class CfgBuildingLoot
 		itemChance[] =	{
 			0.13,   //SURGERY KIT
 			0.05,   //.300 WINMAG
-			0.23,	//MED BOX
+			0.18,	//MED BOX
 			0.15,	//V_TacVest_camo
-			0.12,	//TREE GHILLIE
+			0.11,	//SVT40
 			0.12,	//M9TAC
 			0.06,	//SCARH
 			0.15,	//MX SW
-			0.12,	//CARRYALL
+			0.03,	//CARRYALL
 			0.12,	//ZAFIR LMG
-			0.14,	//REBREATHER
+			0.06,	//REBREATHER
 			0.02,	//AWSM
 			0.13,	//MK20 GL
-			0.11,	//STONE GHILLIE
+			0.05,	//R700
 			0.18,	//WETSUIT
-			0.12,   //MXM SpecOps
-			0.12,	//MXM
-			0.14,	//MXC
-			0.02,	//LMG SUPPRESSOR
+			0.10,   //MXM SpecOps
+			0.11,	//G36C
+			0.12,	//Garand
+			0.02,	//SUPPRESSOR
 			0.03,	//RANGEFINDERS
 			0.15,   //HE SHELL
 			0.01,   //50CAL M2 BOX
-			0.07,    //MK48 CCO
-			0.07,    //M14 RIS
+			0.07,    //Crossbow
+			0.07,    //AK109
 			0.07,    //BP_SW44
 			0.07    //BP_M4_300MK
 		};
 	};
 	class HeliCrash: Default {
-		zombieChance = 0.5;
+		zombieChance = 0;
 		minRoaming = 0;
-		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
-		lootChance = 0.9;
+		maxRoaming = 0;
+		zombieClass[] = {};
+		lootChance = 1;
 		lootPos[] = {};
-		itemType[] =	{		
+		itemType[] =	{
 			{"BP_MX_SW","weapon"},
 			{"BP_RFB","weapon"},
-			{"BP_762Sup2","toolbelt"},
 			{"BP_MedicalboxHelicrash","object"},
-			//{"AmmoBoxSmall_556","object"},
-			//{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_camo_BP","vest"},
-			{"BP_DirtGhillie","uniform"},
-			{"BP_M24Spec","weaponA"},
+            {"MeleeClub","weapon"},
+			{"BP_Garand","weapon"},
 			{"BP_MK20Spec","weaponA"},
-			{"BP_M110","weapon"},
-			//{"BP_HK417M_DES","weapon"},	
-			//{"BP_EBR_MRCO","weapon"},
-			//{"BP_p226Tac","weaponA"},
-			{"BP_CZst_br","toolbelt"},
-			{"BP_VS121","weapon"},
-			{"BP_7Rnd_408Chey_Mag","magazine"},
-			//{"BP_HK417_DES","weapon"},
+			{"BP_Uzi","weapon"},
+			{"BP_Kar98k","weapon"},
+			{"BP_VSS","weaponA"},
+			{"BP_1Rnd_HE_shell","magazine"},
 			{"BP_MX_GL","weapon"},
-			//{"H_HelmetIA","headgear"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"BP_muzzle_snds_B","toolbelt"},
-			{"BP_muzzle_snds_M","toolbelt"},
-			{"BP_M21K","weaponA"},
-			{"V_RebreatherB","vest"},
-			{"BP_M40A3","weaponA"},
+			{"BP_22Sup","toolbelt"},
+			{"ItemBandage","magazine"},
+			{"BP_SUD_AK109","weapon"},
+			{"V_Chestrig_blk_BP","vest"},
+			{"BP_Rem6","weapon"},
 			{"Rangefinder","weaponNA"},
-			//{"BP_SUD_RPK107","weapon"},
-			{"BP_MXM_black","weaponA"},
-			{"BP_FALM","weaponA"},
+			{"ItemKnife","magazine"},
+			{"BP_CPad","toolbelt"},
 			{"BP_M4_300MK","weapon"},
-			{"BP_300Sup","toolbelt"},
 			{"BP_762x51_Box_Tracer","magazine"},
 			{"BP_100Rnd_65x39","magazine"},
-			{"BP_762Muzzle","toolbelt"},
+			{"Binocular","weaponNA"},
 			{"ItemSurgeryKit","toolbelt"},
 			{"V_PlateCarrierIA2_dgtl_BP","vest"},
-			{"BP_M14RIS","weapon"},
+			{"BP_AR10_WDL","weapon"},
 			{"BP_SW44","weaponA"},
-			{"BP_M4_300MK","weaponA"},
-			{"BP_Ghillie_Lush","uniform"}
+			{"BP_MedicalboxHelicrash","object"},
+			{"U_B_GhillieSuit_BP","uniform"}
 		};
 		itemChance[] =	{
 			0.10,	//MX SW
-			0.20,	//KELTECRFB
-			0.10,	//7.62suppressor
-			0.10,	//CAJA MEDICA
-			//0.1,	//AMMO BOX 5.56
-			//0.05,	//AMMO BOX 7.62
-			0.30,	//TAC VEST
-			0.01,	//DIRT GHILLIE
-			0.01,	//M24A2 SPECOPS
-			0.02,	//MK20 SPEC
-			0.05,	//M110WL
-			//0.50,	//HK417M 16
-			//0.50,	//MK18 ADR MRCO
-			//0.09,	//P226 TACTICAL
-			0.20,	//MG SUPPRESSOR
-			0.10,	//VS121
-			0.02, 	//408 CHEETAH
-			//0.50,	//HK417L DES
-			0.20,	//MX GL
-			//0.50,	//HELMET
-			0.20,	//OLIVE BANDOLIER
-			0.01,	//7.62 SUPPRESSOR
-			0.07,	//5.56 SUPPRESSOR
-			0.01,	//M21K
-			0.10,	//REBREATHER
-			0.02,	//M40A3G
-			0.10,	//RANGEFINDERS
-			//0.50,	//RPK107
-			0.20,	//MXM SOS
-			0.02,   //FALM
-			0.01,   //M4MK
-			0.01,   //300SUP
+			0.11,	//KELTECRFB
+			0.13,	//MEDICAL PACK
+			0.12,	//TAC VEST
+			0.11,	//CLUB
+			0.10,	//Garand
+			0.06,	//MK20 SPEC
+			0.10,	//UZI
+			0.11,	//Kar98k
+			0.10,	//VSS
+			0.09, 	//1Rnd HE Shell
+			0.14,	//MX GL
+			0.13,	//RANGEMASTERBELT
+			0.08,	//22SUPPRESSOR
+			0.10,	//BANDAGE
+			0.10,	//AK109
+			0.10,	//CHESTRIG
+			0.06,	//Grendel
+			0.07,	//RANGEFINDER
+			0.10,   //KNIFE
+			0.10,   //CHEEKPAD
+			0.08,   //M4300K
 			0.10,	//150 ROUND 7.62 BOX
-			0.10,	//200 ROUND 6.5 BOX
-			0.01,	//762MUZZLE
-			0.06,   //SURGERY KIT
-			0.03,    //HARNESS BROWN	
-			0.07,    //M14 RIS
-			0.07,    //BP_SW44
-			0.07,    //BP_M4_300MK
-			0.03	//Marksmen Ghillie
+			0.10,	//100 ROUND 6.5
+			0.12,	//BINOCULAR
+			0.07,   //SURGERY KIT
+			0.03,    //PLATECARRIER
+			0.10,    //AR10
+			0.10,    //BP_SW44
+			0.02,    //MEDICALBOX
+			0.01	//Marksmen Ghillie
 		};
 	};
 	class HeliCrash_No50s: Default {
-		zombieChance = 0.4;
+		zombieChance = 0;
 		minRoaming = 0;
-		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"};
-		lootChance = 0.8;
+		maxRoaming = 0;
+		zombieClass[] = {};
+		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{		
+			{"BP_SR25","weaponA"},
 			{"BP_SA582","weapon"},
 			{"BP_FNFAL","weapon"},
 			{"BP_Mark14","weapon"},
@@ -646,15 +628,11 @@ class CfgBuildingLoot
 			{"BP_NegevNG5","weapon"},
 			{"BP_Minimi_HG","weapon"},
 			{"BP_R700","weaponA"},
-			{"BP_SR25","weaponA"},
+			{"BP_M110","weaponA"},
 			{"BP_1Rnd_HE_shell","magazine"},
-			//{"BP_m40a3G","weapon"},
 			{"BP_MedicalboxHelicrash","object"},
-			//{"AmmoBoxSmall_556","object"},
-			//{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_khk_BP","vest"},
-			{"BP_GrassGhillie","uniform"},
-			//{"BP_p226Tac","weaponA"},
+			{"BP_TreeGhillie","uniform"},
 			{"V_RebreatherB","vest"},
 			{"BP_Mk12mod1Spec","weaponA"},
 			{"BP_M21K","weaponA"},
@@ -662,47 +640,39 @@ class CfgBuildingLoot
 			{"BP_muzzle_snds_H","toolbelt"},
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_150Rnd_762x51_Box","magazine"},
-			//{"BP_G18Tac","weaponA"},
-			//{"BP_deagles","weapon"},
 			{"ItemSurgeryKit","toolbelt"},
-			{"BP_Ghillie_Lush","uniform"}
+			{"U_B_GhillieSuit_BP","uniform"}
 		};
 		itemChance[] =	{
-			0.12,   //SA58
-			0.20,   //FNFAL
+			0.05,	//SR25
+			0.10,   //SA58
+			0.10,   //FNFAL
 			0.05,	//MARK14
-			0.07,	//VS121
-			0.08,	//MINIMI 762
-			0.15,	//MINIMI HG
-			0.09,   //R700
-			0.03,	//SR25
+			0.06,	//VS121
+			0.06,	//MINIMI 762
+			0.07,	//MINIMI HG
+			0.08,   //R700
+			0.06,	//M110
 			0.04,	//HE SHELL
-			//0.01,   //M40A3 GHILLIE
-			0.10,	//MED BOX
-			//0.1,	//AmmoBoxSmall_556
-			//0.1,	//AmmoBoxSmall_762
-			0.16,	//TACTICAL VEST
-			0.01,	//GRASS GHILLIE
-			//0.02,	//P226 TACTICAL
+			0.11,	//MED BOX
+			0.10,	//TACTICAL VEST
+			0.02,	//TREE GHILLIE
 			0.03,	//REBREATHER
-			0.07,	//MK12MOD1
-			0.13,	//M21K
-			0.09,   //M24
-			0.03,	//5.56 SUPPRESSOR
+			0.09,	//MK12MOD1
+			0.08,	//M21K
+			0.06,   //M24
+			0.06,	//5.56 SUPPRESSOR
 			0.05,	//LAPUA 6.5x47MM MAG
-			0.02,   //150RND 762.51MM BOX
-			//0.03,   //G18 TACTICAL
-			//0.01,   //DEAGLE GOLD
-			0.15,   //SURGERY KIT
-			0.03	//Marksmen Ghillie
-			
+			0.05,   //150RND 762.51MM BOX
+			0.10,   //SURGERY KIT
+			0.01	//Marksmen Ghillie
 		};
 	};
 	class BodyPile: Default {
-		zombieChance = 0.2;
+		zombieChance = 0;
 		minRoaming = 0;
-		maxRoaming = 1;
-		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
+		maxRoaming = 0;
+		zombieClass[] = {};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{
@@ -737,9 +707,9 @@ class CfgBuildingLoot
 			0.11,	//BANDOLIER
 			0.10,	//MATCHES
 			0.10,	//CLUB
-			0.09,	//STONE
-			0.09,	//TREE
-			0.09,	//DIRT
+			0.03,	//STONE
+			0.03,	//TREE
+			0.03,	//DIRT
 			0.12,	//GCAMO
 			0.12,	//GLEADER
 			0.12,	//GFADED
@@ -754,6 +724,118 @@ class CfgBuildingLoot
 			0.10,	//HAMMER
 			0.10,	//PICKAXE
 			0.10	//FLASHLIGHT
+		};
+	};
+	class GarageFloor: Default {
+		zombieChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
+		zombieClass[] = {};
+		lootChance = 0.15;
+		lootPos[] = {};
+		itemType[] =	{
+			{"PartGlass","magazine"},
+			{"PartSteel","magazine"},
+			{"ItemToolbox","toolbelt"},
+			{"ItemLiquidResin","magazine"},
+			{"ItemMatchbox","magazine"},
+            {"MeleeCrowbar","weapon"},
+			{"PartEngine","magazine"},
+			{"PartWheel","magazine"},
+			{"ItemFuelhoseKit","magazine"},	
+			{"ItemBattery","magazine"},
+			{"ItemEngineCoolant","magazine"},
+			{"PartFiberGlass","magazine"},
+			{"MeleeShovel","weapon"},
+			{"ItemDuctTape","magazine"},
+			{"ItemBrick1","magazine"},
+			{"ItemFuelcanLargeEmpty","magazine"},
+			{"ItemFuelcanEmpty","magazine"},
+			{"ItemNails","magazine"},
+			{"ItemNettingMaterial","magazine"},
+			{"ItemWoodenPoles","magazine"},			
+			{"MeleeHammer","weapon"},
+			{"MeleePickaxe","weapon"},
+			{"ItemElectronics","magazine"}
+		};
+		itemChance[] =	{
+			0.08,   //TOUGHGLASSPANEL
+			0.03,   //STEEL
+			0.08,	//TOOLBOX
+			0.11,	//BANDOLIER
+			0.11,	//MATCHES
+			0.12,	//CROWBAR
+			0.07,	//ENGINE
+			0.09,	//TIRE
+			0.11,	//FUEL HOSE KIT
+			0.11,	//BATTERY
+			0.11,	//ENGINE COOLANT
+			0.09,	//FIBER GLASS
+			0.12,	//SHOVEL
+			0.13,	//DUCTTAPE
+			0.12,	//BRICK
+			0.08,	//FUELCANEMPTYLARGE
+			0.10,	//FUELCANEMPTY
+			0.13,	//NAILS
+			0.12,	//NETTING
+			0.12,	//WOODPOLES
+			0.12,	//HAMMER
+			0.12,	//PICKAXE
+			0.07	//ELECTRONICS BOARD
+		};
+	};
+	class DeerStandGround: Default {
+		zombieChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
+		zombieClass[] = {};
+		lootChance = 0.2;
+		lootPos[] = {};
+		itemType[] =	{
+			{"BP_TreeGhillie","uniform"},
+			{"ItemWatch","toolbelt"},
+			{"ItemCompass","toolbelt"},
+			{"ItemRadio","toolbelt"},
+			{"ItemKnife","magazine"},
+			{"Binocular","weaponNA"},
+			{"Rangefinder","weaponNA"},
+			{"BP_FieldPack_ocamo","backpack"},
+			{"Waterbot","magazine"},
+			{"Meleehatchet","weapon"},
+			{"BP_Crossbow","weapon"},
+			{"BP_Crossbow_DigitCamo","weaponA"},
+			{"BP_Arrow_Mag","magazine"},
+			{"BP_1866C","weapon"},
+			{"BP_Arrow_Poison","magazine"},
+			{"BP_LeeEnfield","weapon"},
+			{"BP_LeeEnfield2","weaponA"},
+			{"BP_LeeEnfield_old","weapon"},
+			{"BP_HA550","weaponA"},
+			{"BP_MC550","weaponA"},
+			{"BP_CZ550_old","weaponA"}
+		};
+		itemChance[] =	{
+			0.01,	//GHILLIE
+			0.10,	//WATCH
+			0.10,	//COMPASS
+			0.10,	//RADIO
+			0.11,	//KNIFE
+			0.12,	//BINOCULARS
+			0.02,	//RANGEFINDER
+			0.06,	//Fieldpack
+			0.10,	//Waterbottle
+			0.08,	//Hatchet
+			0.09,	//Crossbow
+			0.08,	//Crossbow camo
+			0.14,	//Bolt
+			0.10,	//1866C
+			0.03,	//POISON BOLT
+			0.11,	//ENFIELD
+			0.10,	//ENFIELD2
+			0.12,	//OLDENFIELD
+			0.06,	//HA550
+			0.06,	//MC550
+			0.09	//CZ550
 		};
 	};
 	class Castle: Default {
@@ -790,7 +872,7 @@ class CfgBuildingLoot
 	class AmmoPallet4: Default {
 		zombieChance = 0.2;
 		minRoaming = 0;
-		maxRoaming = 1;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.85;
 		lootPos[] = {};
@@ -805,7 +887,7 @@ class CfgBuildingLoot
 	};
 	class ApexMilBox1: Default {
 		zombieChance = 1;
-		minRoaming = 1;
+		minRoaming = 0;
 		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.50;
@@ -828,7 +910,7 @@ class CfgBuildingLoot
 	
 	class ApexMilBox2: Default {
 		zombieChance = 1;
-		minRoaming = 1;
+		minRoaming = 0;
 		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 0.50;
@@ -877,7 +959,7 @@ class CfgBuildingLoot
 	class CivilCrash: Default 
 	{
 		zombieChance = 0.5;
-		minRoaming = 1;
+		minRoaming = 0;
 		maxRoaming = 5;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3","BPZombie_Optout","BPZombie_Optout2","BPZombie_Optout3","BPZombie_Optout4","BPZombie_Optout5","BPZombie_Optout6","BPZombie_Optout7","BPZombie_Optout8"};
 		lootChance = 1;
@@ -886,13 +968,13 @@ class CfgBuildingLoot
 		{
 			{"Binocular","weaponNA"},
 			{"ItemKnife","magazine"},
-			{"ItemGPS","toolbelt"},
+			{"ItemRadio","toolbelt"},
 			{"BP_3Rnd_HE_shell","magazine"},					
 			{"BP_MXM","weapon"},
 			{"BP_MX_GL","weapon"},		
 			{"BP_Kitbag_sgg","backpack"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"BP_Carryall_mcamo","backpack"},   
+			{"BP_Carryall_mcamo","backpack"},
 			{"ItemMap","toolbelt"},
 			{"ItemGPS","toolbelt"},
 			{"BP_Bergen_rgr","backpack"}, 
