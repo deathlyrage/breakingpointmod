@@ -304,8 +304,8 @@ class BreakingPoint
 		class Animals
 		{
 			enabled = true;
-			max = 9;
-			distance = 900;
+			max = 8;
+			distance = 800;
 		};
 
 		class Survival 

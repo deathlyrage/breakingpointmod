@@ -39,7 +39,7 @@ class BreakingPoint
 		class Map
 		{
 			BoundryMin[] = {0,0};
-			BoundryMax[] = {10400,10400};
+			BoundryMax[] = {10500,10500};
 		};		   
 		class SpawnPos 
 		{
@@ -145,20 +145,15 @@ class BreakingPoint
 			//Custom Loot Box Coords
 			customLoot[] =
 			{
-				{1,1,2,"Industrial",{1507.78,6619.01,0.157596},0.20},
-				{1,1,2,"Industrial",{1513.05,6670.64,0.157596},0.20},
-				{1,1,2,"Industrial",{1518.29,6713.6,0.157596},0.20},
-				{1,1,2,"Industrial",{1592.46,6665.24,0.157596},0.20},
-				{1,1,2,"Industrial",{1584.49,6582.73,0.157596},0.20},
-				{1,1,2,"Industrial",{1490.42,7012.08,0.157596},0.20},
-				{1,1,2,"Industrial",{1489.5,7066.67,0.157596},0.20},
-				{1,1,2,"Industrial",{1556.31,7028.24,0.157596},0.20},
-				{1,1,2,"Industrial",{1540.4,7056.06,0.157596},0.20},
 				{1,1,2,"Industrial",{4376.76,6785.9,0.157596},0.20},
 				{1,1,2,"Industrial",{4428.64,6800.39,0.157596},0.20},
 				{1,1,2,"Industrial",{4407.85,6832.62,0.157596},0.20},
-				{1,1,2,"ApexMilBox1",{5795.92,6927.14,0.80204},0.30},
-				{1,1,2,"ApexMilBox2",{5842.84,6945.36,0.190622},0.30}
+				{1,1,2,"Industrial",{4332.33,6847.93,1.90735e-006},0.20},
+				{1,1,2,"Industrial",{4424.81,6832.36,0.00568771},0.20},
+				{1,1,2,"Industrial",{4429.29,6797.44,1.90735e-006},0.20},
+				{1,1,2,"Industrial",{4372.73,6786.76,0},0.20},
+				{1,1,2,"Industrial",{4350.67,6791.19,0},0.20},
+				{1,1,2,"Industrial",{4322.6,6812.87,0},0.20}					
 			};
 		};
 		class Factions
@@ -199,7 +194,7 @@ class BreakingPoint
 				//Interval At Which the Cleanup Runs ( 2 Mins )
 				interval = 120;
 				//Distance A Player Is Nearby That Will Prevent Cleanup ( 250 Meters )
-				nearby = 250;
+				nearby = 200;
 				//Time of Player Body Cleanup ( 10 Mins )
 				player = 600;
 			};
@@ -212,9 +207,9 @@ class BreakingPoint
 			{
 				enabled = true;
 				//Interval At Which the Cleanup Runs ( 15 Mins )
-				interval = 900;
+				interval = 960;
 				//Distance A Player is Nearby That Will Prevent Cleanup ( 125 Meters )
-				nearby = 125;
+				nearby = 100;
 			};
 			class Entities 
 			{
@@ -243,16 +238,16 @@ class BreakingPoint
 		class Zombies 
 		{
 			enabled = true;
-			maxLocal = 8; //Total Local
-			maxNearby = 8; //Total Nearby
-			maxGlobal = 50; //Total Alive
-			max = 60; // Total Alive + Dead
+			maxLocal = 14; //Total Local
+			maxNearby = 18; //Total Nearby
+			maxGlobal = 78; //Total Alive
+			max = 88; // Total Alive + Dead
 			distance = 800;
 		};
 		class Animals
 		{
 			enabled = true;
-			max = 5;
+			max = 8;
 			distance = 800;
 		};
 		class Survival 

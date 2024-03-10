@@ -3285,7 +3285,7 @@ class CfgWeapons
 			class UnderBarrelSlot : SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -3666,7 +3666,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk","bipod_02_F_blk","bipod_01_F_blk","bipod_02_F_hex","bipod_01_F_khk","bipod_01_F_mtp","bipod_03_F_oli","bipod_01_F_snd","bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -3853,7 +3853,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk","bipod_02_F_blk","bipod_01_F_blk","bipod_02_F_hex","bipod_01_F_khk","bipod_01_F_mtp","bipod_03_F_oli","bipod_01_F_snd","bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -3981,7 +3981,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk","bipod_02_F_blk","bipod_01_F_blk","bipod_02_F_hex","bipod_01_F_khk","bipod_01_F_mtp","bipod_03_F_oli","bipod_01_F_snd","bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -4468,7 +4468,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk","bipod_02_F_blk","bipod_01_F_blk","bipod_02_F_hex","bipod_01_F_khk","bipod_01_F_mtp","bipod_03_F_oli","bipod_01_F_snd","bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -6777,7 +6777,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -12909,7 +12909,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};			
         };
@@ -12919,7 +12919,7 @@ class CfgWeapons
             {"optic_ACO_grn", 0.50},
 			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10}
+			{"BP_Harris", 0.10}
         };
 	};
 	
@@ -13093,7 +13093,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};			
         };
@@ -13103,7 +13103,7 @@ class CfgWeapons
             {"optic_ACO_grn", 0.50},
 			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10}
+			{"BP_Harris", 0.10}
         };
 	};
 	class BP_NegevNG5: Rifle_Base_F_BP
@@ -13489,7 +13489,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};			
         };
@@ -13499,7 +13499,7 @@ class CfgWeapons
             {"optic_ACO_grn", 0.50},
 			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10},
+			{"BP_Harris", 0.10},
 			{"BP_AFG", 0.10}
         };
 	};
@@ -13697,7 +13697,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -13707,7 +13707,7 @@ class CfgWeapons
             {"optic_ACO_grn", 0.50},
 			{"optic_Aco", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10},
+			{"BP_Harris", 0.10},
 			{"BP_AFG", 0.10}
         };		
 	};
@@ -14347,7 +14347,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};			
 		};
@@ -17385,7 +17385,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -17532,7 +17532,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -18256,7 +18256,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -18523,7 +18523,7 @@ class CfgWeapons
 			class UnderBarrelSlot: SlotInfo 
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -22726,7 +22726,7 @@ class CfgWeapons
 	class BP_Harris: ItemCore
     {
 	    scope = 2;                                                                   
-	    displayName = "Light Bipod";  
+	    displayName = "Harris Bipod";  
 		descriptionShort = "Bipod for intermediate Rifle use";		
 		picture = "\A3\Weapons_F_Mark\Data\UI\icon_bipod_02_F_blk_ca.paa";
 	    model = "\breakingpoint_weapons\models\Harris\BP_Harris.p3d";                      
