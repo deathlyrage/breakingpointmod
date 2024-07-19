@@ -420,5 +420,5 @@ class Header
 	minPlayers = 1;
 	maxPlayers = 101;
 };
-#include "config.cpp"
+
 aiKills = 1;
